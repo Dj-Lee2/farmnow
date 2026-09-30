@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}속보 — {{ site.name }}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <div class="page-hd"><h1>속보</h1><small id="count">{{ items|length }}건</small></div>
+ <div class="two">
+  <section>
+   <div class="tabs">{% for k,v in categories %}{% if k=='all' or tab_counts[k] %}<button type="button" data-cat="{{ k }}" class="{{ 'on' if k=='all' }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div>
+   <div id="tl">
+   {% for d in days %}
+    <div class="day" data-date="{{ d.date }}">{{ d.label }}</div>
+    {% for it in d['items'] %}{% include "_item.html" %}{% endfor %}
+   {% endfor %}
+   </div>
+   <p class="empty" id="tl-empty" hidden>검색 결과 없음 · <a href="#" onclick="return clearQ()">전체 보기</a></p>
+   <button class="more" id="more" type="button" onclick="showMore()">더보기</button>
+  </section>
+  <aside>
+   <div class="card">
+    <div class="sec"><h3 style="font-size:1.143rem">오늘의 핵심</h3></div>
+    {% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}
+   </div>
+   {% if trend %}<div class="card"><div class="sec"><h3 style="font-size:1.143rem">태그</h3><small>최근 {{ trend_hours }}시간</small></div>
+    <div class="tags">{% for t in trend %}<a class="coin ev" href="news.html?tag={{ t.q|urlencode }}"><i>#</i>{{ t.label[1:] }} <span class="u">{{ t.n }}</span></a>{% endfor %}</div>
+   </div>{% endif %}
+   <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a><a href="data/items.json">JSON</a></div></div>
+  </aside>
+ </div>
+</div>
+{% endblock %}

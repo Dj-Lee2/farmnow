@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}기관발표 — {{ site.name }}{% endblock %}
+{% block content %}
+{% set rel = items|selectattr('category','in',release_cats)|list %}
+<div class="wrap page">
+ <div class="page-hd"><h1>기관발표</h1><small>{{ rel|length }}건</small></div>
+ <div class="tabs" id="orgtabs"><button type="button" class="on" onclick="setOrg('all',this)">전체<i>{{ rel|length }}</i></button>{% for sid in rel|map(attribute='source_id')|unique %}<button type="button" onclick="setOrg('{{ sid }}',this)">{{ sources_cfg[sid].name|replace('농식품부 ','') }}<i>{{ rel|selectattr('source_id','equalto',sid)|list|length }}</i></button>{% endfor %}</div>
+ <div class="two">
+  <section id="rellist">
+   {% for it in rel %}
+   <div class="rel" data-src="{{ it.source_id }}">
+    <div class="when"><b>{{ it.event_time.strftime('%H:%M') if it.time_precision=='minute' else '등록' }}</b>{{ it.event_time.strftime('%m.%d') }}</div>
+    <div><div class="h"><span class="lb {{ it.severity }}">{{ it.label }}</span><a href="n-{{ it.id }}.html">{{ it.headline }}</a></div>
+     {% if it.body %}<div class="d">{{ it.body }}</div>{% endif %}
+     {% include "_tags.html" %}
+     <div class="d">{{ it.source_name }} · <a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></div></div>
+   </div>
+   {% else %}<p class="empty">항목 없음</p>{% endfor %}
+  </section>
+  <aside>
+   <div class="card"><div class="sec"><h3 style="font-size:1.143rem">게시판</h3></div>
+    {% for sid in rel|map(attribute='source_id')|unique %}<div class="row"><a href="https://{{ (sources_cfg[sid].home_url or sources_cfg[sid].url)|hp }}" target="_blank" rel="noopener">{{ sources_cfg[sid].name }} ↗</a><b>{{ rel|selectattr('source_id','equalto',sid)|list|length }}</b></div>{% endfor %}
+   </div>
+  </aside>
+ </div>
+</div>
+{% endblock %}
+{% block scripts %}
+function setOrg(s,btn){document.querySelectorAll('#orgtabs button').forEach(function(b){b.classList.toggle('on',b===btn)});document.querySelectorAll('#rellist .rel').forEach(function(el){el.style.display=(s==='all'||el.dataset.src===s)?'':'none'});}
+{% endblock %}

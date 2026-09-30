@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ it.headline }} — {{ site.name }}{% endblock %}
+{% block hero %}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <div class="two">
+  <article class="art">
+   <div class="src"><a href="news.html">속보</a> › {{ it.source_name }}</div>
+   <h1><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</h1>
+   <div class="src">{{ it.org }} · <time datetime="{{ it.event_time.isoformat() }}">{{ it.event_time.strftime('%Y.%m.%d %H:%M') if it.time_precision=='minute' else it.event_time.strftime('%Y.%m.%d') ~ (' 조사' if it.time_source == 'survey' else ' 등록') }}</time>{% if it.extra.no %} · {{ it.extra.no }}{% endif %}{% if it.expires_at %} · {{ it.expires_at.strftime('%m.%d') }}까지{% endif %}{% if it.license != 'unknown' %} · <span class="badge">{{ license_label.get(it.license, it.license) }}</span>{% endif %}</div>
+   {% if it.body %}<p class="lead">{{ it.body }}</p>{% endif %}
+   {% include "_tags.html" %}
+   <p><a class="btn-blue" href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 보기 ↗</a>{% if it.extra.market_key %} <a class="btn-line" href="market.html?pick={{ it.extra.market_key }}" style="margin-left:8px">시세표에서 보기</a>{% endif %}</p>
+  </article>
+  <aside>
+   {% if related %}<div class="card"><div class="sec"><h3 style="font-size:1.143rem">관련 속보</h3></div>
+    {% for o in related %}<div class="t5" style="grid-template-columns:1fr"><div><a href="n-{{ o.id }}.html"><span class="lb {{ o.severity }}">{{ o.label }}</span>{{ o.headline }}</a><small>{{ o.source_name }} · {{ o|ftime }}</small></div></div>{% endfor %}
+   </div>{% endif %}
+  </aside>
+ </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class="item" id="i-{{ it.id }}" data-cat="{{ it|tab }}" data-tags="|{{ (it.tags_items + it.tags_events + it.tags_regions)|join('|') }}|" data-text="{{ (it.headline ~ ' ' ~ it.body ~ ' ' ~ (it.tags_items|join(' ')) ~ ' ' ~ (it.tags_events|join(' ')) ~ ' ' ~ (it.tags_regions|join(' ')) ~ ' ' ~ it.source_name ~ ' ' ~ it.label)|lower }}">
+ <div class="t {{ 'reg' if it.time_precision != 'minute' }}"><span>{{ it.event_time.strftime('%H:%M') if it.time_precision=='minute' else it.event_time.strftime('%m.%d') }}</span></div>
+ <div class="body">
+  <div class="h"><span class="lb {{ it.severity }}">{{ it.label }}</span><a href="n-{{ it.id }}.html">{{ it.headline }}</a></div>
+  {% if it.body %}<div class="b">{{ it.body }}</div>{% endif %}
+  {% include "_tags.html" %}
+  <div class="meta">{{ it.source_name }}{% if it.extra.no and it.category == 'weather' %} {{ it.extra.no }}{% endif %} · <time datetime="{{ it.event_time.isoformat() }}">{{ it|ftime }}</time>{% if it.expires_at %} · {{ it.expires_at.strftime('%m.%d') }}까지{% endif %}{% if it.extra.market_key %} · <a href="market.html?pick={{ it.extra.market_key }}">시세</a>{% endif %} · <a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></div>
+ </div>
+</div>

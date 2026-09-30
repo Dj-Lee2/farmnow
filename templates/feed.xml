@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"{% if base_url %} xmlns:atom="http://www.w3.org/2005/Atom"{% endif %}>
+<channel>
+<title>{{ site.name }} — {{ site.tagline }}</title>
+<link>{{ base_url ~ '/' if base_url else './' }}</link>
+<description>{{ site.tagline }}</description>
+<language>ko</language>
+<lastBuildDate>{{ now.strftime('%a, %d %b %Y %H:%M:%S +0900') }}</lastBuildDate>
+{% if base_url %}<atom:link href="{{ base_url }}/feed.xml" rel="self" type="application/rss+xml"/>
+{% endif %}{% for it in items[:100] %}<item>
+<title>[{{ it.label }}] {{ it.headline }}</title>
+<link>{{ it.url }}</link>
+<guid isPermaLink="false">{{ it.id }}</guid>
+<pubDate>{{ it.event_time.strftime('%a, %d %b %Y %H:%M:%S +0900') }}</pubDate>
+<description>{{ it.body if it.body else it.source_name }}</description>
+</item>
+{% endfor %}</channel>
+</rss>

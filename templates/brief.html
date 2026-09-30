@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}브리핑 — {{ site.name }}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <div class="page-hd"><h1>브리핑</h1><small>{{ built }} 기준 · 최근 24시간 {{ overnight.total }}건</small></div>
+ <div class="two">
+  <section class="brief">
+   <div class="kpi" style="margin-top:0">
+    <div><small>특보 발효</small><b class="{{ 'up' if active }}">{% if warn is none %}–{% else %}{{ active|length }}{% endif %}</b></div>
+    <div><small>공고·예고</small><b>{{ overnight.notice }}</b></div>
+    <div><small>기관발표</small><b>{{ overnight.release }}</b></div>
+    <div><small>급변{% if overnight.surge_day %} ({{ overnight.surge_day[5:]|replace('-', '.') }}){% endif %}</small><b>{{ overnight.surge }}</b></div>
+   </div>
+   <h3>오늘의 핵심</h3>
+   <ol>{% for it in top5 %}<li>[{{ it.label }}] {{ it.headline }} <span class="u">{{ it.source_name }} · {{ it|ftime }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ol>
+   <h3>기상특보</h3>
+   <ul>{% if warn is none %}<li>확인 불가</li>{% elif active %}{% for a in active %}<li>{{ a.kind }}: {{ a.regions }}</li>{% endfor %}{% else %}<li>발효 중인 특보 없음 <span class="u">{{ warn.as_of|fdt }} 기준</span></li>{% endif %}</ul>
+   {% if tickers.day %}<h3>시세 <span class="u">KAMIS {{ tickers.day }}</span></h3>
+   <ul>{% for r in tickers.fixed %}<li>{{ r.disp }} {{ r.cls }} {{ r.price|won }}원/{{ r.unit }} ({{ r.pct|pct }}){% if r.day != tickers.day %} <span class="u">{{ r.day[5:]|replace('-', '.') }} 조사</span>{% endif %}</li>{% endfor %}
+    {% for r in tickers.surges %}<li>[급변] {{ r.disp }} {{ r.cls }} {{ r.price|won }}원/{{ r.unit }} ({{ r.pct|pct }})</li>{% endfor %}</ul>{% endif %}
+   <h3>최근 24시간</h3>
+   <ul>{% for it in items if (now - it.event_time).total_seconds() <= 86400 %}<li>{{ it|ftime }} [{{ it.label }}] {{ it.headline }} <span class="u">{{ it.source_name }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ul>
+  </section>
+  <aside class="first"><div class="sticky">
+   <div class="card center">
+    <button class="btn-blue" type="button" id="copyBtn">텍스트 복사</button>
+    <div class="links"><a href="brief.txt" download>TXT 받기</a><a href="brief.md" download>MD 받기</a><a href="feed.xml">RSS</a></div>
+   </div>
+   {% if pest or weekly %}<div class="card"><div class="sec"><h3 style="font-size:1.143rem">이번 주 문서</h3></div>
+    {% if pest %}<div class="row"><a href="https://{{ (pest.url)|hp }}" target="_blank" rel="noopener">병해충발생정보 {{ pest.extra.no }} ↗</a><small>{{ pest.extra.period }}</small></div>{% endif %}
+    {% if weekly %}<div class="row"><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">주간농사정보 {{ weekly.extra.no }} ↗</a><small>{{ weekly.extra.period }}</small></div>{% endif %}
+   </div>{% endif %}
+   <textarea id="briefText" hidden>{{ brief_text }}</textarea>
+  </div></aside>
+ </div>
+</div>
+{% endblock %}
+{% block scripts %}
+(function(){var b=$('copyBtn'),ta=$('briefText'),done=function(ok){var o=b.textContent;b.textContent=ok?'복사됨 ✓':'복사 실패 · TXT 받기 이용';setTimeout(function(){b.textContent=o},1800)};
+ b.onclick=function(){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(ta.value).then(function(){done(true)},function(){done(false)})}
+  else{ta.hidden=false;ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.hidden=true;done(ok)}}})();
+{% endblock %}

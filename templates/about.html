@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}정보 — {{ site.name }}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <div class="page-hd"><h1>정보</h1><small>갱신 {{ built }}</small></div>
+ <div class="two">
+  <section>
+   <div class="sec"><h3>신호원</h3></div>
+   <div class="scroll-x"><table style="min-width:620px"><thead><tr><th>신호원</th><th>기관</th><th>이용조건</th><th class="n">수집</th><th class="n">게시</th><th style="padding-left:18px">마지막 성공</th></tr></thead><tbody>
+   {% for k,s in sources_cfg.items() %}{% set st = status.get(k) %}<tr><td><a href="https://{{ (s.home_url or s.url)|hp }}" target="_blank" rel="noopener">{{ s.name }} ↗</a></td><td>{{ s.org }}</td><td>{% if s.license != 'unknown' %}<span class="badge">{{ license_label.get(s.license, s.license) }}</span>{% else %}게시물별{% endif %}</td>
+    <td class="n">{% if st and st.ok %}{{ st.count }}{% elif st %}<span class="bad">{{ st.error }}</span>{% else %}–{% endif %}</td><td class="n">{{ st.published if st else '–' }}</td><td style="white-space:nowrap;padding-left:18px"><small>{{ st.last_ok|fdt if st else '–' }}</small></td></tr>{% endfor %}
+   </tbody></table></div>
+   <div class="rule"><h4>계산식</h4><ul>
+    <li>전일比(%) = (당일 − 전일) ÷ 전일 × 100, KAMIS 조사값 기준. 급변 = 절대값 {{ site.surge_threshold_pct }}% 이상, 같은 품목은 변동이 가장 큰 규격 1건</li>
+    <li>오늘의 핵심 = 심각도(경보 4·주의보 3·급변 2·그 밖 1) × 신선도(24시간 1.0, 48시간 0.6) × (1 + 0.2 × 태그 수). 해제된 특보는 제외, 가격은 1건까지</li>
+    <li>인기 태그 = 최근 24시간(부족하면 48시간·7일) 속보의 태그 빈도 2회 이상</li>
+    <li>특보 발효 = 기상청 특보 현황 통보문의 현재 발효 목록</li></ul></div>
+  </section>
+  <aside>
+   <div class="card"><div class="sec"><h3 style="font-size:1.143rem">구독</h3></div>
+    <div class="row"><a href="feed.xml">RSS 피드</a></div><div class="row"><a href="brief.txt" download>브리핑 텍스트</a></div><div class="row"><a href="data/items.json">items.json</a></div><div class="row"><a href="data/status.json">status.json</a></div></div>
+  </aside>
+ </div>
+</div>
+{% endblock %}

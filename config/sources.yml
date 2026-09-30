@@ -1,0 +1,106 @@
+# 신호원(어댑터) 선언. license는 기본값이며, 농식품부 게시물은 원문에 찍힌 공공누리 마크를 우선한다.
+# 본문 발췌는 공공누리 1·2유형·제한 없음일 때만 하고, 그 밖에는 제목·링크만 게시한다.
+site:
+  name: 팜나우
+  tagline: 농업 공공데이터 속보
+  timezone: Asia/Seoul
+  keep_days: 14            # 타임라인에 유지할 일수
+  surge_threshold_pct: 10  # [급변] 기준: 전일比 절대값 % 이상
+  stale_minutes: 180       # 마지막 갱신 뒤 이 시간이 지나면 화면에 '갱신 지연' 표시
+  base_url: "https://farmnow.tech"   # 배포 주소. 환경변수 SITE_BASE_URL·CI_PAGES_URL이 있으면 그 값을 쓴다
+
+sources:
+  - id: mafra_792
+    name: 농식품부 보도자료
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/792/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/792/artclList.do
+    license: unknown
+    category: org_release
+    label: 발표
+  - id: mafra_788
+    name: 농식품부 입법·행정예고
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/788/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/788/artclList.do
+    license: unknown
+    category: legislation
+    label: 입법예고
+  - id: mafra_790
+    name: 농식품부 물가정보
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/790/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/790/artclList.do
+    license: unknown
+    category: price
+    label: 게시
+  - id: mafra_791
+    name: 농식품부 공지·공고
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/791/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/791/artclList.do
+    license: unknown
+    category: subsidy_notice
+    label: 공고
+  - id: mafra_789
+    name: 농식품부 최근통계
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/789/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/789/artclList.do
+    license: unknown
+    category: stats
+    label: 통계 발표
+  - id: mafra_793
+    name: 농식품부 설명자료
+    org: 농림축산식품부
+    adapter: mafra_rss
+    url: https://www.mafra.go.kr/bbs/home/793/rssList.do
+    home_url: https://www.mafra.go.kr/bbs/home/793/artclList.do
+    license: unknown
+    category: org_release
+    label: 설명자료
+    excerpt: false          # 첫 문단이 언론 보도 내용 인용이라 제목만 게시
+  - id: kamis_daily
+    name: KAMIS 일별 가격
+    org: 한국농수산식품유통공사(aT)
+    adapter: kamis
+    url: https://www.kamis.or.kr/service/price/xml.do?action=dailySalesList&p_returntype=json
+    home_url: https://www.kamis.or.kr/customer/price/retail/period.do
+    license: unknown
+    category: price
+    label: 정기
+    env_key: KAMIS_KEY        # 미설정 시 테스트키(111/222) 사용
+    env_id: KAMIS_ID
+    exclude_categories: [수산물]
+    ticker_items: ["쌀/20kg", "배추/", "무/", "양파/", "파/대파", "사과/", "배/", "계란/특란30구", "돼지/삼겹살", "닭/육계"]
+  - id: nongsaro_pest
+    name: 농사로 병해충발생정보
+    org: 농촌진흥청
+    adapter: nongsaro_list
+    url: https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00200
+    license: kogl2
+    category: pest
+    label: 병해충
+  - id: nongsaro_weekly
+    name: 농사로 주간농사정보
+    org: 농촌진흥청
+    adapter: nongsaro_list
+    url: https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00199
+    license: kogl1
+    category: tech_research
+    label: 주간농사정보
+  - id: kma_warn
+    name: 기상청 기상특보
+    org: 기상청
+    adapter: kma_warn
+    url: https://apis.data.go.kr/1360000/WthrWrnInfoService/getWthrWrnMsg
+    home_url: https://www.weather.go.kr/w/special-report/overall.do
+    license: kogl1
+    category: weather
+    label: 특보
+    env_key: DATA_GO_KR_KEY   # 없으면 건너뛰고 상태에 '키 없음' 표시

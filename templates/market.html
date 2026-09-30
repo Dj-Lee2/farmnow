@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}시세 — {{ site.name }}{% endblock %}
+{% block rows %}{{ tickers.all|tojson }}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <div class="page-hd"><h1>시세</h1><small>{% if tickers.day %}KAMIS {{ tickers.day }} 조사 · {{ tickers.rows_count }}개{{ ' · 갱신 실패' if tickers.stale }}{% else %}시세 미수집{% endif %}</small></div>
+ {% if tickers.all %}
+ <div class="two">
+  <section>
+   <div class="ptab" id="mtabs"><button type="button" class="on" onclick="setM('all',this)">전체</button><button type="button" onclick="setM('소매',this)">소매</button><button type="button" onclick="setM('도매',this)">도매</button>{% for c in tickers.all|map(attribute='category')|unique %}<button type="button" onclick="setM('{{ c }}',this)">{{ c }}</button>{% endfor %}</div>
+   <div class="scroll-x"><table id="mtable" style="min-width:560px"><thead><tr><th>품목</th><th>구분</th><th class="n">현재가(원)</th><th class="n">전일比</th><th class="n">1개월比</th><th class="n">1년比</th></tr></thead><tbody>
+   {% for r in tickers.all %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}" data-cls="{{ r.cls }}" data-cat="{{ r.category }}">
+    <td style="white-space:nowrap">{{ r.disp }} <span class="u">{{ r.unit }}{% if r.day != tickers.day %} · {{ r.day[5:]|replace('-', '.') }}{% endif %}</span></td><td style="white-space:nowrap"><small>{{ r.cls }}</small></td><td class="n">{{ r.price|won }}</td>
+    <td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td>
+    {% set m = ((r.price-r.month_ago)/r.month_ago*100) if r.month_ago else none %}{% set y = ((r.price-r.year_ago)/r.year_ago*100) if r.year_ago else none %}
+    <td class="n {{ 'up' if m and m>0 else 'down' if m and m<0 else '' }}">{{ m|pct }}</td>
+    <td class="n {{ 'up' if y and y>0 else 'down' if y and y<0 else '' }}">{{ y|pct }}</td></tr>{% endfor %}
+   </tbody></table></div>
+  </section>
+  <aside class="first"><div class="sticky">
+   <div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label></div>
+   <div class="price" id="pprice"></div>
+   <div class="delta" id="pdelta"></div>
+   <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div>
+   <div class="card" style="margin-top:18px"><div class="sec"><h3 style="font-size:1.143rem">급변</h3><small>전일比 {{ tickers.threshold|int }}% 이상</small></div>
+    {% for r in tickers.surges %}<table><tbody><tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td>{{ r.disp }} <small>{{ r.cls }}</small></td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr></tbody></table>{% else %}<p class="st">없음</p>{% endfor %}
+   </div>
+  </div></aside>
+ </div>
+ {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}
+function setM(m,btn){document.querySelectorAll('#mtabs button').forEach(function(b){b.classList.toggle('on',b===btn)});document.querySelectorAll('#mtable tbody tr').forEach(function(tr){tr.style.display=(m==='all'||tr.dataset.cls===m||tr.dataset.cat===m)?'':'none'});}
+{% endblock %}

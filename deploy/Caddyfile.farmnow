@@ -1,0 +1,20 @@
+farmnow.tech {
+	encode zstd gzip
+	root * /srv/farmnow/site
+	file_server
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+	header {
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "DENY"
+	}
+	@data path /data/* /feed.xml /brief.txt /brief.md
+	header @data Cache-Control "no-cache"
+	header /*.html Cache-Control "no-cache"
+}
+www.farmnow.tech {
+	redir https://farmnow.tech{uri} permanent
+}

@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜', 53) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항', 59) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -202,6 +202,15 @@
   {{ hcard('업종별 3년간 소득이 늘었다는 임가 비율', [('버섯', K.iup_mush), ('산채·약초', K.iup_herb), ('식용 임산물 채취', K.iup_gath), ('밤', K.iup_chest), ('기타 수실류', K.iup_etc), ('감', K.iup_pers), ('관상 산림식물', K.iup_orn), ('영림·목재수확', K.iup_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('업종별 임업 지원금을 받지 않은 임가 비율', [('버섯', K.spn_mush), ('관상 산림식물', K.spn_orn), ('기타 수실류', K.spn_etc), ('영림·목재수확', K.spn_wood), ('산채·약초', K.spn_herb), ('감', K.spn_pers), ('식용 임산물 채취', K.spn_gath), ('밤', K.spn_chest)], '%', '판로·경영자금·소득지원·재해복구 등 어떤 지원금도 받지 않음 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('업종별 임업인경영자금 지원 받은 임가 비율', [('밤', K.spf_chest), ('영림·목재수확', K.spf_wood), ('산채·약초', K.spf_herb), ('관상 산림식물', K.spf_orn), ('기타 수실류', K.spf_etc), ('감', K.spf_pers)], '%', '전체 임가 중 · 버섯·식용 임산물 채취는 2025년 수혜 임가 없음 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">임가가 꼽은 가장 큰 애로 <small>업종에 종사하면서 느끼는 애로사항(하나만 응답) · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('dcl_chest', 'v34', ('노동력 부족 ' ~ '{:.1f}'.format(K.dlb_chest.vals[-1]) ~ '%') if K.dlb_chest else '밤 재배 임가', '#b0503a') }}
+  {{ card('dcl_mush', 'v35', ('판로 부족 ' ~ '{:.1f}'.format(K.dmk_mush.vals[-1]) ~ '%') if K.dmk_mush else '표고 등 버섯 재배 임가', '#b0503a') }}
+  {{ card('dmk_orn', 'v36', ('기후변화 ' ~ '{:.1f}'.format(K.dcl_orn.vals[-1]) ~ '%') if K.dcl_orn else '조경수·분재·야생화 재배 임가', '#7a6a3a') }}
+  {{ hcard('업종별 기후변화로 인한 생산량 감소를 애로로 꼽은 임가 비율', [('밤', K.dcl_chest), ('버섯', K.dcl_mush), ('기타 수실류', K.dcl_etc), ('식용 임산물 채취', K.dcl_gath), ('감', K.dcl_pers), ('산채·약초', K.dcl_herb), ('관상 산림식물', K.dcl_orn)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('업종별 노동력 부족을 애로로 꼽은 임가 비율', [('산채·약초', K.dlb_herb), ('밤', K.dlb_chest), ('감', K.dlb_pers), ('관상 산림식물', K.dlb_orn), ('식용 임산물 채취', K.dlb_gath), ('기타 수실류', K.dlb_etc), ('버섯', K.dlb_mush)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('업종별 안정적인 판로 부족을 애로로 꼽은 임가 비율', [('관상 산림식물', K.dmk_orn), ('감', K.dmk_pers), ('버섯', K.dmk_mush), ('식용 임산물 채취', K.dmk_gath), ('기타 수실류', K.dmk_etc), ('산채·약초', K.dmk_herb), ('밤', K.dmk_chest)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#1f5f8a') }}
  </div>
  </div></details>
 

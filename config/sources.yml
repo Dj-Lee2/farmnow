@@ -227,6 +227,31 @@ sources:
       - {id: mc_dryer, title: 곡물건조기, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^곡물건조기$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
       - {id: emp_agri, title: 농림어업 취업자, tbl: DT_1DA7E06S, itm: "^취업자$", want: ["^A 농업 임업 및 어업"], unit: 천명, survey: 경제활동인구조사}
       - {id: emp_all, title: 전체 취업자, tbl: DT_1DA7E06S, itm: "^취업자$", unit: 천명, survey: 경제활동인구조사}
+      # 작물별 10a당 소득(농산물생산비조사 소득분석)
+      - {id: ci_garlic_inc, title: 마늘 10a당 소득, tbl: DT_1EC0044, itm: "^10a당$", want: ["^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_garlic_rev, title: 마늘 10a당 총수입, tbl: DT_1EC0044, itm: "^10a당$", want: ["^총수입$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_onion_inc, title: 양파 10a당 소득, tbl: DT_1EC0054, itm: "^10a당$", want: ["^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_onion_rev, title: 양파 10a당 총수입, tbl: DT_1EC0054, itm: "^10a당$", want: ["^총수입$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_pepper_inc, title: 고추 10a당 소득, tbl: DT_1EC0064, itm: "^10a당$", want: ["^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_pepper_rev, title: 고추 10a당 총수입, tbl: DT_1EC0064, itm: "^10a당$", want: ["^총수입$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_bean_inc, title: 콩 10a당 소득, tbl: DT_1EC0084, itm: "^10a당$", want: ["^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: ci_bean_rev, title: 콩 10a당 총수입, tbl: DT_1EC0084, itm: "^10a당$", want: ["^총수입$"], unit: 원, survey: 농산물생산비조사}
+      # 친환경 인증(전국 행이 없어 시도 소계를 더함)
+      - {id: eco_area, title: 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: ha, survey: 친환경농산물인증현황}
+      - {id: eco_area_org, title: 유기 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["소계$|^강원특별자치도$", "^유기농산물$"], sum: true, unit: ha, survey: 친환경농산물인증현황}
+      - {id: eco_area_np, title: 무농약 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["소계$|^강원특별자치도$", "^무농약농산물$"], sum: true, unit: ha, survey: 친환경농산물인증현황}
+      - {id: eco_farms, title: 친환경 인증 농가, tbl: DT_1YL20121, periods: 6, itm: "^농가수$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: 호, survey: 친환경농산물인증현황}
+      - {id: eco_ship, title: 친환경 농산물 출하량, tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ecl_farms, title: 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: 호, survey: 친환경축산물인증현황}
+      - {id: ecl_org, title: 유기축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["소계$|^강원특별자치도$", "^유기축산물$"], sum: true, unit: 호, survey: 친환경축산물인증현황}
+      # 비료 사용량(농지 1ha당, FAO 기반 국제통계)
+      - {id: fz_kr_n, title: 질소비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^대한민국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_kr_p, title: 대한민국 인산질 비료 사용량, tbl: DT_2FA23032, itm: "^인산질$", want: ["^대한민국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_kr_k, title: 대한민국 칼리질 비료 사용량, tbl: DT_2FA23032, itm: "^칼리질$", want: ["^대한민국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_cn_n, title: 중국 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^중국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_jp_n, title: 일본 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^일본$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_nl_n, title: 네덜란드 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^네덜란드$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      - {id: fz_us_n, title: 미국 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^미국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

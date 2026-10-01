@@ -431,6 +431,48 @@ sources:
       - {id: rc_tuber, title: 귀농가구 서류 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^서류$"], unit: 가구, survey: 귀농어귀촌인통계}
       - {id: rc_grain, title: 귀농가구 맥류잡곡 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^맥류잡곡$"], unit: 가구, survey: 귀농어귀촌인통계}
       - {id: rc_flower, title: 귀농가구 화훼 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^화훼$"], unit: 가구, survey: 귀농어귀촌인통계}
+      # 도별 경지·농가, 농업총수입 구성, 농가 재무지표, 한우 비육우 규모별 순수익, 채소 재배면적
+      - {id: ad_gg, title: 도별 경지면적 gg, tbl: DT_1EB001, itm: "^경지면적$", want: ["^경기"], unit: ha, survey: 농업면적조사}
+      - {id: ad_gw, title: 도별 경지면적 gw, tbl: DT_1EB001, itm: "^경지면적$", want: ["^강원"], unit: ha, survey: 농업면적조사}
+      - {id: ad_cb, title: 도별 경지면적 cb, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(충청북도|충북)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_cn, title: 도별 경지면적 cn, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(충청남도|충남)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_jb, title: 도별 경지면적 jb, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(전라북도|전북)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_jn, title: 도별 경지면적 jn, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(전라남도|전남)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_gb, title: 도별 경지면적 gb, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(경상북도|경북)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_gn, title: 도별 경지면적 gn, tbl: DT_1EB001, itm: "^경지면적$", want: ["^(경상남도|경남)"], unit: ha, survey: 농업면적조사}
+      - {id: ad_jj, title: 도별 경지면적 jj, tbl: DT_1EB001, itm: "^경지면적$", want: ["^제주"], unit: ha, survey: 농업면적조사}
+      - {id: fd_gg, title: 도별 농가 수 gg, tbl: DT_1EA1011, itm: "^농가$", want: ["^경기"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_gw, title: 도별 농가 수 gw, tbl: DT_1EA1011, itm: "^농가$", want: ["^강원"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_cb, title: 도별 농가 수 cb, tbl: DT_1EA1011, itm: "^농가$", want: ["^(충청북도|충북)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_cn, title: 도별 농가 수 cn, tbl: DT_1EA1011, itm: "^농가$", want: ["^(충청남도|충남)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_jb, title: 도별 농가 수 jb, tbl: DT_1EA1011, itm: "^농가$", want: ["^(전라북도|전북)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_jn, title: 도별 농가 수 jn, tbl: DT_1EA1011, itm: "^농가$", want: ["^(전라남도|전남)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_gb, title: 도별 농가 수 gb, tbl: DT_1EA1011, itm: "^농가$", want: ["^(경상북도|경북)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_gn, title: 도별 농가 수 gn, tbl: DT_1EA1011, itm: "^농가$", want: ["^(경상남도|경남)"], unit: 가구, survey: 농림어업조사}
+      - {id: fd_jj, title: 도별 농가 수 jj, tbl: DT_1EA1011, itm: "^농가$", want: ["^제주"], unit: 가구, survey: 농림어업조사}
+      - {id: ar_total, title: 농업총수입, tbl: DT_1EA1502, itm: "^농업총수입$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_rice, title: 농업총수입 rice, tbl: DT_1EA1502, itm: "^미곡$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_grain, title: 농업총수입 grain, tbl: DT_1EA1502, itm: "^(맥류|잡곡|두류|서류)$", want: ["^평균$"], sum: true, survey: 농가경제조사}
+      - {id: ar_veg, title: 농업총수입 veg, tbl: DT_1EA1502, itm: "^채소$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_fruit, title: 농업총수입 fruit, tbl: DT_1EA1502, itm: "^과수$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_flower, title: 농업총수입 flower, tbl: DT_1EA1502, itm: "^화훼$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_spec, title: 농업총수입 spec, tbl: DT_1EA1502, itm: "^특작및기타$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_live, title: 농업총수입 live, tbl: DT_1EA1502, itm: "^축산수입$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ar_misc, title: 농업총수입 misc, tbl: DT_1EA1502, itm: "^농업잡수입$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fi_debt, title: 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fi_equity, title: 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fi_hour, title: 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fi_area10a, title: 10a당 농업소득, tbl: DT_1EA1401, itm: "^단위면적당\\(10a\\) 농업소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fi_va, title: 농업부가가치, tbl: DT_1EA1401, itm: "^농업부가가치$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hws_0, title: 한우 비육우 20두미만 순수익, tbl: DT_1EE0110, itm: "^20두미만$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: hws_1, title: 한우 비육우 20~49두 순수익, tbl: DT_1EE0110, itm: "^20~49두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: hws_2, title: 한우 비육우 50~99두 순수익, tbl: DT_1EE0110, itm: "^50~99두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: hws_3, title: 한우 비육우 100두이상 순수익, tbl: DT_1EE0110, itm: "^100두이상$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: va_cabbage, title: 배추 재배면적, tbl: DT_1ET0028, itm: "^배추:면적$", unit: ha, survey: 농작물생산조사}
+      - {id: va_radish, title: 무 재배면적, tbl: DT_1ET0029, itm: "^무:면적$", unit: ha, survey: 농작물생산조사}
+      - {id: va_pepper, title: 건고추 재배면적, tbl: DT_1ET0291, itm: "^건고추:면적$", unit: ha, survey: 농작물생산조사}
+      - {id: va_garlic, title: 마늘 재배면적, tbl: DT_1ET0291, itm: "^마늘:면적$", unit: ha, survey: 농작물생산조사}
+      - {id: va_onion, title: 양파 재배면적, tbl: DT_1ET0291, itm: "^양파:면적$", unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1217,6 +1217,36 @@ sources:
       - {id: ppi_apple, title: 사과 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^사과$"], unit: "2020=100", survey: 생산자물가지수}
       - {id: ppi_pear, title: 배 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^배$"], unit: "2020=100", survey: 생산자물가지수}
       - {id: ppi_milk, title: 생우유 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^생우유$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: idn_chest, title: 3년간 소득이 줄었다는 밤 임가 비율, tbl: DT_136022_9830, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_mush, title: 3년간 소득이 줄었다는 버섯 임가 비율, tbl: DT_136022_10065, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_pers, title: 3년간 소득이 줄었다는 감 임가 비율, tbl: DT_136022_10028, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_etc, title: 3년간 소득이 줄었다는 기타 수실류 임가 비율, tbl: DT_136022_10178, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_herb, title: 3년간 소득이 줄었다는 산채·약초 임가 비율, tbl: DT_136022_9940, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_orn, title: 3년간 소득이 줄었다는 관상 산림식물 임가 비율, tbl: DT_136022_9986, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_gath, title: 3년간 소득이 줄었다는 식용 임산물 채취 임가 비율, tbl: DT_136022_9876, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: idn_wood, title: 3년간 소득이 줄었다는 영림·목재수확 임가 비율, tbl: DT_136022_10095, org: "136", itm: "^값$", want: ["^줄어들고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_chest, title: 3년간 소득이 늘었다는 밤 임가 비율, tbl: DT_136022_9830, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_mush, title: 3년간 소득이 늘었다는 버섯 임가 비율, tbl: DT_136022_10065, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_pers, title: 3년간 소득이 늘었다는 감 임가 비율, tbl: DT_136022_10028, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_etc, title: 3년간 소득이 늘었다는 기타 수실류 임가 비율, tbl: DT_136022_10178, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_herb, title: 3년간 소득이 늘었다는 산채·약초 임가 비율, tbl: DT_136022_9940, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_orn, title: 3년간 소득이 늘었다는 관상 산림식물 임가 비율, tbl: DT_136022_9986, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_gath, title: 3년간 소득이 늘었다는 식용 임산물 채취 임가 비율, tbl: DT_136022_9876, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: iup_wood, title: 3년간 소득이 늘었다는 영림·목재수확 임가 비율, tbl: DT_136022_10095, org: "136", itm: "^값$", want: ["^늘어나고 있음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_chest, title: 임업 지원금을 받지 않은 밤 임가 비율, tbl: DT_136022_9844, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_mush, title: 임업 지원금을 받지 않은 버섯 임가 비율, tbl: DT_136022_10099, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_pers, title: 임업 지원금을 받지 않은 감 임가 비율, tbl: DT_136022_9918, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_etc, title: 임업 지원금을 받지 않은 기타 수실류 임가 비율, tbl: DT_136022_10190, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_herb, title: 임업 지원금을 받지 않은 산채·약초 임가 비율, tbl: DT_136022_9944, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_orn, title: 임업 지원금을 받지 않은 관상 산림식물 임가 비율, tbl: DT_136022_9997, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_gath, title: 임업 지원금을 받지 않은 식용 임산물 채취 임가 비율, tbl: DT_136022_9886, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spn_wood, title: 임업 지원금을 받지 않은 영림·목재수확 임가 비율, tbl: DT_136022_10129, org: "136", itm: "^값$", want: ["^없음$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_chest, title: 임업인경영자금 지원 받은 밤 임가 비율, tbl: DT_136022_9844, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_pers, title: 임업인경영자금 지원 받은 감 임가 비율, tbl: DT_136022_9918, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_etc, title: 임업인경영자금 지원 받은 기타 수실류 임가 비율, tbl: DT_136022_10190, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_herb, title: 임업인경영자금 지원 받은 산채·약초 임가 비율, tbl: DT_136022_9944, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_orn, title: 임업인경영자금 지원 받은 관상 산림식물 임가 비율, tbl: DT_136022_9997, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spf_wood, title: 임업인경영자금 지원 받은 영림·목재수확 임가 비율, tbl: DT_136022_10129, org: "136", itm: "^값$", want: ["^임업인경영자금 지원$", "^전체$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

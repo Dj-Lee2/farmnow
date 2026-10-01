@@ -138,3 +138,12 @@ def test_f_ratio_matches_periods():
     r = build.f_ratio(a, b)
     assert r["years"] == ["2024"] and r["vals"] == [50.0] and r["unit"] == "%" and r["tbl"] == "T"
     assert build.f_ratio(a, None) is None
+
+
+def test_pick_series_monthly_period_and_label():
+    rows = [_r("202606", "도축실적", "78467", C1_NM="당월(A)", C2_NM="소(계)"),
+            _r("202607", "도축실적", "74644", C1_NM="당월(A)", C2_NM="소(계)"),
+            _r("202607", "도축실적", "88", C1_NM="전년대비(A/C)", C2_NM="소(계)")]
+    got = kosis.pick_series(rows, "도축실적$", ["^당월", "^소\\(계\\)$"], "M")
+    assert got["years"] == ["2026.06", "2026.07"] and got["vals"] == [78467.0, 74644.0]
+    assert build.f_prd("2026.07") == "26년 7월" and build.f_prd("202602") == "26년 2분기"

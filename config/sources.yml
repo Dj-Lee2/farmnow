@@ -390,6 +390,47 @@ sources:
       - {id: cow_birth, title: 한우 번식률, tbl: DT_1EE017, itm: "^평균$", want: ["^번식률"], unit: "%", survey: 축산물생산비조사}
       - {id: ly_net, title: 산란계 수당 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^평균$"], unit: 원, survey: 축산물생산비조사}
       - {id: ly_inc, title: 산란계 수당 소득, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^소득", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      # 도축실적(월별, se: M)·규모별 순수익·귀농인 연령·귀농 작물
+      - {id: sl_cow, title: 소 도축 마릿수, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^소\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: sl_cow_yoy, title: 소 도축 전년 같은 달 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^소\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: sl_cow_cum, title: 소 올해 누적 도축, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당년누계", "^소\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: sl_cow_cumr, title: 소 누적 도축 전년 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^누계대비", "^소\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: sl_pig, title: 돼지 도축 마릿수, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^돼지\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: sl_pig_yoy, title: 돼지 도축 전년 같은 달 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^돼지\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: sl_pig_cum, title: 돼지 올해 누적 도축, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당년누계", "^돼지\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: sl_pig_cumr, title: 돼지 누적 도축 전년 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^누계대비", "^돼지\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: sl_chick, title: 닭 도축 마릿수, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^닭$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: sl_chick_yoy, title: 닭 도축 전년 같은 달 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^닭$"], unit: "%", survey: 축산물 도축실적}
+      - {id: sl_duck, title: 오리 도축 마릿수, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^오리$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: sl_duck_yoy, title: 오리 도축 전년 같은 달 대비, tbl: DT_114_2016_S0022, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^오리$"], unit: "%", survey: 축산물 도축실적}
+      - {id: pig_inc, title: 비육돈 두당 소득, tbl: DT_1EE307, itm: "^평균$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgs_0, title: 비육돈 1000두미만 순수익, tbl: DT_1EE307, itm: "^1000두미만$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgs_1, title: 비육돈 1000~1999두 순수익, tbl: DT_1EE307, itm: "^1000~1999두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgs_2, title: 비육돈 2000~2999두 순수익, tbl: DT_1EE307, itm: "^2000~2999두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgs_3, title: 비육돈 3000두이상 순수익, tbl: DT_1EE307, itm: "^3000두이상$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: dys_0, title: 젖소 50두미만 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^50두미만$"], unit: 원, survey: 축산물생산비조사}
+      - {id: dys_1, title: 젖소 50~69두 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^50~69두$"], unit: 원, survey: 축산물생산비조사}
+      - {id: dys_2, title: 젖소 70~99두 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^70~99두$"], unit: 원, survey: 축산물생산비조사}
+      - {id: dys_3, title: 젖소 100두이상 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^100두이상$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lys_0, title: 산란계 20000수 미만 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^20000수 미만$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lys_1, title: 산란계 20000~39999수 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^20000~39999수$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lys_2, title: 산란계 40000~89999수 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^40000~89999수$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lys_3, title: 산란계 90000수 이상 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^90000수 이상$"], unit: 원, survey: 축산물생산비조사}
+      - {id: rt_all, title: 귀농인 계, tbl: DT_1A02001, itm: "^귀농인수$", unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rt_u40, title: 귀농인 0 - 39세, tbl: DT_1A02001, itm: "^귀농인수$", want: ["^0 - 39세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rt_40s, title: 귀농인 40 - 49세, tbl: DT_1A02001, itm: "^귀농인수$", want: ["^40 - 49세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rt_50s, title: 귀농인 50 - 59세, tbl: DT_1A02001, itm: "^귀농인수$", want: ["^50 - 59세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rt_60s, title: 귀농인 60 - 69세, tbl: DT_1A02001, itm: "^귀농인수$", want: ["^60 - 69세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rt_70p, title: 귀농인 70세 이상, tbl: DT_1A02001, itm: "^귀농인수$", want: ["^70세 이상$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rc_all, title: 귀농가구 재배가구 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^재배가구$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_rice, title: 귀농가구 논벼 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^논벼$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_veg, title: 귀농가구 채소 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^채소$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_fruit, title: 귀농가구 과수 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^과수$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_spec, title: 귀농가구 특용 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^특용$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_bean, title: 귀농가구 두류 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^두류$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_tuber, title: 귀농가구 서류 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^서류$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_grain, title: 귀농가구 맥류잡곡 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^맥류잡곡$"], unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rc_flower, title: 귀농가구 화훼 재배, tbl: DT_1A02010, itm: "^재배가구수$", want: ["^화훼$"], unit: 가구, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

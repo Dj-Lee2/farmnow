@@ -1,4 +1,4 @@
-"""국가데이터처 KOSIS 통계표 어댑터: 연간(Y)·분기(Q) 통계(농가·경지·생산량·농가경제·가격지수·가축·소비·생산비).
+"""국가데이터처 KOSIS 통계표 어댑터: 연간(Y)·분기(Q)·월간(M) 통계(농가·경지·생산량·농가경제·가격지수·가축·소비·생산비).
 해마다 한 번 바뀌는 값이라 refresh_hours(기본 24시간)마다 한 번만 받고, 그 사이에는 data/stats.json을 그대로 쓴다.
 통계표마다 분류 구성이 달라, 설정의 itm(항목 이름)·want(분류 이름)와 맞고 나머지 분류가 모두 '계·전국'인 행만 고른다."""
 from __future__ import annotations
@@ -64,7 +64,8 @@ def pick_series(rows: list[dict], itm: str, want: list[str] | None = None, se: s
         v = _num(r.get("DT"))
         if v is None:
             continue
-        y = str(r.get("PRD_DE", ""))[:4] if se == "Y" else str(r.get("PRD_DE", ""))
+        prd = str(r.get("PRD_DE", ""))
+        y = prd[:4] if se == "Y" else f"{prd[:4]}.{prd[4:6]}" if se == "M" else prd   # 월별은 '2026.07'로 분기와 구분
         if total:
             key = tuple(labels)         # 같은 행이 두 번 오면 한 번만 더한다
             if y in best and key not in best[y][1]["seen"]:

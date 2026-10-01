@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}농업 통계 — {{ site.name }}{% endblock %}
 {% macro num(v, unit) %}{% if v is none %}–{% elif unit == '천원' %}{% if v|abs >= 1e5 %}{{ '{:,.2f}'.format(v / 1e5) }}<small>억 원</small>{% else %}{{ '{:,.0f}'.format(v / 10) }}<small>만 원</small>{% endif %}{% elif unit == '원' %}{% if v|abs >= 1e4 %}{{ '{:,.1f}'.format(v / 1e4) }}<small>만 원</small>{% else %}{{ '{:,.0f}'.format(v) }}<small>원</small>{% endif %}{% elif unit == '십억원' %}{% if v|abs >= 1000 %}{{ '{:,.1f}'.format(v / 1000) }}<small>조 원</small>{% else %}{{ '{:,.0f}'.format(v * 10) }}<small>억 원</small>{% endif %}{% elif unit == '천톤' %}{{ (v * 1000)|big }}<small>톤</small>{% elif unit == '℃' %}{{ '{:.1f}'.format(v) }}<small>℃</small>{% elif unit == 'mm' %}{{ '{:,.0f}'.format(v) }}<small>mm</small>{% elif unit == '천명' %}{{ (v * 1000)|big }}<small>명</small>{% elif unit in ('%', 'kg', 'kg/ha') %}{{ '{:,.1f}'.format(v) }}<small>{{ unit }}</small>{% elif unit in ('2020=100', '2019~21=100') %}{{ '{:,.1f}'.format(v) }}<small>{{ unit }}</small>{% else %}{{ v|big }}<small>{{ unit }}</small>{% endif %}{% endmacro %}
-{% macro delta(s) %}{% set v = s.vals %}{% if v|length > 1 and v[-2] %}{% if s.unit in ('%', '2020=100', '2019~21=100', '℃') %}{% set d = v[-1] - v[-2] %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ ('+' if d > 0 else '') ~ '{:.1f}'.format(d) }}p</em>{% else %}{% set p = (v[-1] - v[-2]) / (v[-2]|abs) * 100 %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}{% endif %}{% endmacro %}
+{% macro delta(s) %}{% set v = s.vals %}{% if v|length > 1 and v[-2] %}{% if s.unit in ('%', '2020=100', '2019~21=100', '℃') %}{% set d = (v[-1] - v[-2])|round(1) %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ ('+' if d > 0 else '') ~ '{:.1f}'.format(d) }}p</em>{% else %}{% set p = (v[-1] - v[-2]) / (v[-2]|abs) * 100 %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}{% endif %}{% endmacro %}
 {% macro link(s) %}<a href="https://{{ ('https://kosis.kr/statHtml/statHtml.do?orgId=' ~ (s.org or ('114' if s.tbl.startswith('DT_114') else '101')) ~ '&tblId=' ~ s.tbl)|hp }}" target="_blank" rel="noopener" aria-label="{{ s.title }} KOSIS 통계표"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>{% endmacro %}
 {% macro card(id, uid, note=none, col='#1c7a45') %}{% set s = kstat.get(id) %}{% if s %}{% set lab = s.years|map('prd')|list %}
  <section class="kp4 sg-c"><div class="t">{{ s.title }}{{ link(s) }}</div>
@@ -9,7 +9,7 @@
   <div class="s"><span>{{ note or (s.survey ~ ' · ' ~ ('전 분기 대비' if s.se == 'Q' else '전년 대비')) }}</span><span>{{ lab[-1] }}</span></div>
   <div class="sg-ch">{{ s.vals|mini(uid, col, lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div>
  </section>{% endif %}{% endmacro %}
-{% macro rcard(title, a, b, uid, note, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * 100) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set d = (r[-1] - r[-2]) if r|length > 1 else none %}
+{% macro rcard(title, a, b, uid, note, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * 100) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set d = ((r[-1] - r[-2])|round(1)) if r|length > 1 else none %}
  <section class="kp4 sg-c"><div class="t">{{ title }}{{ link(a) }}</div>
   <div class="v">{{ '{:.1f}'.format(r[-1]) }}<small>%</small> {% if d is not none %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ ('+' if d > 0 else '') ~ '{:.1f}'.format(d) }}p</em>{% endif %}</div>
   <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
@@ -18,7 +18,7 @@
 {% macro hcard(title, grp, unit, note, share=none, col='#7cbf95') %}{% set grp = grp|selectattr('1')|list %}{% if grp %}{% set gmax = grp|map(attribute='1')|map(attribute='vals')|map('last')|max %}{% set yr = grp|map(attribute='1')|map(attribute='years')|map('last')|min %}
  <section class="kp4 sg-c sg-w"><div class="t">{{ title }}{{ link(grp[0][1]) }}</div>
   <table class="mvt sg-bars"><tbody>{% for n, ser in grp %}{% set v = ser.vals %}{% set p = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}
-   <tr><td class="nm"><b>{{ n }}</b>{% if ser.years[-1] != yr %} <small class="sg-yr">{{ ser.years[-1]|prd }}</small>{% endif %}</td><td class="hb"><div class="hbar go" style="--c:{{ col }}"><i style="--w:{{ (100 * v[-1] / gmax)|round|int }}%"></i></div></td><td class="n">{% if unit == '십억원' %}{{ num(v[-1], unit) }}{% elif unit in ('%', 'kg/ha', '2020=100') %}{{ '{:.1f}'.format(v[-1]) }}<span class="u"> {{ unit }}</span>{% else %}{{ v[-1]|big }}<span class="u"> {{ unit }}</span>{% endif %}{% if share %} <span class="u">({{ '{:.0f}'.format(v[-1] / share * 100) }}%)</span>{% endif %}</td><td class="n {{ 'up' if p and p > 0 else 'down' if p and p < 0 else '' }}">{{ p|pct }}</td></tr>{% endfor %}
+   <tr><td class="nm"><b>{{ n }}</b>{% if ser.years[-1] != yr %} <small class="sg-yr">{{ ser.years[-1]|prd }}</small>{% endif %}</td><td class="hb"><div class="hbar go" style="--c:{{ col }}"><i style="--w:{{ (100 * v[-1] / gmax)|round|int }}%"></i></div></td><td class="n">{% if unit in ('십억원', '천원') %}{{ num(v[-1], unit) }}{% elif unit in ('%', 'kg/ha', '2020=100') %}{{ '{:.1f}'.format(v[-1]) }}<span class="u"> {{ unit }}</span>{% else %}{{ v[-1]|big }}<span class="u"> {{ unit }}</span>{% endif %}{% if share %} <span class="u">({{ '{:.0f}'.format(v[-1] / share * 100) }}%)</span>{% endif %}</td><td class="n {{ 'up' if p and p > 0 else 'down' if p and p < 0 else '' }}">{{ p|pct }}</td></tr>{% endfor %}
   </tbody></table>
   <div class="s"><span>{{ note }}</span><span>{{ yr|prd }}</span></div></section>{% endif %}{% endmacro %}
 {% macro dvcard(title, grp, note) %}{% set grp = grp|selectattr('1')|list %}{% if grp %}{% set rows = [] %}{% for n, ser in grp %}{% set v = ser.vals %}{% if v|length > 4 and v[-5] %}{% set _ = rows.append((n, ser, (v[-1] - v[-5]) / v[-5] * 100)) %}{% endif %}{% endfor %}{% set mx = [rows|map(attribute='2')|map('abs')|max, 5]|max %}
@@ -39,7 +39,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·인구·소득·자산·부채', 9) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·소득·영농형태별·도별 소득·경영비·자산·부채', 12) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -54,6 +54,13 @@
    <div class="s">{% for n, ser in parts %}<span><b class="dot m{{ loop.index }}"></b>{{ n }} {{ '{:,.0f}'.format(ser.vals[-1] / 10) }}만 ({{ '{:.0f}'.format(ser.vals[-1] / s.vals[-1] * 100) }}%)</span>{% endfor %}<span class="yr">{{ lab[-1] }}</span></div>{% endif %}
    <div class="sg-ch">{{ s.vals|mini('g4', '#1c7a45', lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}
   {{ card('agri_ratio', 'g5', '농업소득 ÷ 농업총수입') }}{{ card('disposable', 'g6') }}{{ card('spending', 'g7') }}{{ card('assets', 'g8') }}{{ card('debt', 'g9', none, '#b04a07') }}
+ </div>
+
+ <h3 class="sg-sub">농가소득 비교·농업경영비 <small>농가 평균</small></h3>
+ <div class="sg-g">
+  {{ hcard('영농형태별 농가소득', [('축산', K.it_live), ('과수', K.it_fruit), ('채소', K.it_veg), ('일반밭작물', K.it_field), ('논벼', K.it_rice), ('화훼', K.it_flower), ('특용작물', K.it_spec)], '천원', ('전체 평균 ' ~ num(K.farm_income.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.farm_income else '', none, '#1c7a45') }}
+  {{ hcard('도별 농가소득', [('제주', K.ir_jj), ('경북', K.ir_gb), ('강원', K.ir_gw), ('경남', K.ir_gn), ('경기', K.ir_gg), ('전북', K.ir_jb), ('충북', K.ir_cb), ('충남', K.ir_cn), ('전남', K.ir_jn)], '천원', '오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('농업경영비 구성', [('사료비', K.me_feed), ('감가상각비', K.me_depr), ('노무비(인건비)', K.me_labor), ('유통비·기타', K.me_dist), ('광열비', K.me_energy), ('비료비', K.me_fert), ('농약비', K.me_pest), ('종묘비', K.me_seed), ('위탁비', K.me_out), ('임차료', K.me_rent), ('보험료', K.me_ins)], '천원', ('농가당 농업경영비 ' ~ num(K.me_total.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.me_total else '', K.me_total.vals[-1] if K.me_total else none, '#b04a07') }}
  </div>
  </div></details>
 
@@ -142,11 +149,11 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·수리답·재배면적·과일·채소·쌀', 11) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·수리답·온실·재배면적·과일·채소·쌀', 14) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
-  {{ card('area', 'g13', '논+밭 · 농업면적조사') }}{{ card('util_rate', 'g14', '재배면적 ÷ 경지면적 · 이모작이면 100 초과') }}{{ card('rice', 'g15', '미곡(정곡) 생산량') }}{{ card('irr_rate', 'g32', ('수리답 ' ~ K.irr_area.vals[-1]|big ~ ' ha · 가뭄에도 물을 댈 수 있는 논') if K.irr_area else none, '#2458d6') }}{{ card('area_paddy', 'g33', '논 면적') }}{{ card('area_upland', 'g34', '밭 면적', '#b07a3a') }}
+  {{ card('area', 'g13', '논+밭 · 농업면적조사') }}{{ card('util_rate', 'g14', '재배면적 ÷ 경지면적 · 이모작이면 100 초과') }}{{ card('rice', 'g15', '미곡(정곡) 생산량') }}{{ card('irr_rate', 'g32', ('수리답 ' ~ K.irr_area.vals[-1]|big ~ ' ha · 가뭄에도 물을 댈 수 있는 논') if K.irr_area else none, '#2458d6') }}{{ card('area_paddy', 'g33', '논 면적') }}{{ card('area_upland', 'g34', '밭 면적', '#b07a3a') }}{{ card('gh_total', 'g35', ('비닐하우스 ' ~ K.gh_vinyl.vals[-1]|big ~ ' · 유리 ' ~ K.gh_glass.vals[-1]|big ~ ' · 경질판 ' ~ K.gh_hard.vals[-1]|big ~ ' ha') if K.gh_vinyl and K.gh_glass and K.gh_hard else none) }}{{ card('area_green', 'g36', '시설에서 재배한 작물 면적(이모작 포함)') }}{{ rcard('경지 중 시설작물 비중', K.area_green, K.area, 'g37', '시설작물 재배면적 ÷ 경지면적') }}
   {{ hcard('작물군별 재배면적', [('식량작물', K.area_food), ('벼', K.area_rice), ('채소', K.area_veg), ('과수', K.area_fruit), ('시설작물', K.area_green)], 'ha', '막대는 면적 크기 · 오른쪽은 전년 대비') }}
   {{ hcard('과일 생산량', [('감귤', K.fr_citrus), ('사과', K.fr_apple), ('포도', K.fr_grape), ('감', K.fr_persim), ('배', K.fr_pear), ('복숭아', K.fr_peach)], '톤', '성과수+미과수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('채소 생산량', [('배추', K.v_cabbage), ('양파', K.v_onion), ('무', K.v_radish), ('마늘', K.v_garlic), ('건고추', K.v_pepper)], '톤', '오른쪽은 전년 대비 · 연도가 다른 품목은 이름 옆에 표시', none, '#5fae7a') }}
@@ -168,7 +175,7 @@
  const sync=()=>{const all=g.every(d=>d.open);b.textContent=all?'모두 접기':'모두 펼치기';b.setAttribute('aria-pressed',all)};
  b.addEventListener('click',()=>{const o=!g.every(d=>d.open);g.forEach(d=>d.open=o);sync()});g.forEach(d=>d.addEventListener('toggle',()=>{sync();if(d.open)d.querySelectorAll('.hbar,.dv').forEach(h=>{h.classList.remove('go');requestAnimationFrame(()=>requestAnimationFrame(()=>h.classList.add('go')))})}));
  const go=()=>{const h=location.hash&&document.getElementById(location.hash.slice(1));const d=h&&h.closest('.sg-grp');if(d){d.open=true;sync();d.scrollIntoView()}};go();addEventListener('hashchange',go)})()</script>
- <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사·귀농어귀촌인통계·농산물생산비조사·경제활동인구조사·친환경농축산물인증현황·소비자물가조사), 농림축산식품부(농림업생산지수·농업기계보유현황·원유생산실적·배합사료 생산실적), 한국농어촌공사(수리답), 국제통계(비료·농약 사용량 FAO 기반, 온실가스 배출), 기상청(기온·강수량). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
+ <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사·귀농어귀촌인통계·농산물생산비조사·경제활동인구조사·친환경농축산물인증현황·소비자물가조사), 농림축산식품부(농림업생산지수·농업기계보유현황·원유생산실적·배합사료 생산실적·시설채소 온실현황), 한국농어촌공사(수리답), 국제통계(비료·농약 사용량 FAO 기반, 온실가스 배출), 기상청(기온·강수량). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
  {% else %}<p class="empty">통계 미수집</p>{% endif %}
 </div>
 {% endblock %}

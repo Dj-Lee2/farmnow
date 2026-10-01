@@ -286,6 +286,39 @@ sources:
       - {id: feed_etc, title: 배합사료 생산량(기타가축), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^기타가축$"], unit: 톤, survey: 배합사료 생산실적}
       - {id: irr_rate, title: 수리답률, tbl: DT_311001_002, org: "311", itm: "^비율$", want: ["^수리답$"], unit: "%", survey: 농업생산기반시설 현황}
       - {id: irr_area, title: 수리답 면적, tbl: DT_311001_002, org: "311", itm: "^면적$", want: ["^수리답$"], unit: ha, survey: 농업생산기반시설 현황}
+      # 영농형태별·도별 농가소득, 농업경영비 구성, 시설 온실
+      - {id: it_rice, title: 논벼 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: it_fruit, title: 과수 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: it_veg, title: 채소 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: it_spec, title: 특용작물 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: it_flower, title: 화훼 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: it_field, title: 일반밭작물 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: it_live, title: 축산 농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: ir_gg, title: 경기 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경기도$"], survey: 농가경제조사}
+      - {id: ir_gw, title: 강원 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^강원"], survey: 농가경제조사}
+      - {id: ir_cb, title: 충북 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(충청북도|충북)"], survey: 농가경제조사}
+      - {id: ir_cn, title: 충남 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(충청남도|충남)"], survey: 농가경제조사}
+      - {id: ir_jb, title: 전북 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(전라북도|전북)"], survey: 농가경제조사}
+      - {id: ir_jn, title: 전남 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(전라남도|전남)"], survey: 농가경제조사}
+      - {id: ir_gb, title: 경북 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(경상북도|경북)"], survey: 농가경제조사}
+      - {id: ir_gn, title: 경남 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^(경상남도|경남)"], survey: 농가경제조사}
+      - {id: ir_jj, title: 제주 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^제주"], survey: 농가경제조사}
+      - {id: me_total, title: 농업경영비, tbl: DT_1EA1503, itm: "^농업경영비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_feed, title: 사료비, tbl: DT_1EA1503, itm: "^사료비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_depr, title: 감가상각비, tbl: DT_1EA1503, itm: "^감가상각비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_labor, title: 노무비, tbl: DT_1EA1503, itm: "^노무비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_dist, title: 유통비용및기타경비, tbl: DT_1EA1503, itm: "^유통비용및기타경비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_energy, title: 광열비, tbl: DT_1EA1503, itm: "^광열비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_fert, title: 비료비, tbl: DT_1EA1503, itm: "^비료비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_pest, title: 농약비, tbl: DT_1EA1503, itm: "^농약비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_seed, title: 종묘비, tbl: DT_1EA1503, itm: "^종묘비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_out, title: 위탁비, tbl: DT_1EA1503, itm: "^위탁비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_rent, title: 임차료, tbl: DT_1EA1503, itm: "^임차료$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: me_ins, title: 농업부문 보험료, tbl: DT_1EA1503, itm: "^농업부문 보험료$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: gh_total, title: 시설채소 온실 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^합계$"], unit: ha, survey: 시설채소 온실현황}
+      - {id: gh_vinyl, title: 비닐하우스 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^비닐하우스$"], unit: ha, survey: 시설채소 온실현황}
+      - {id: gh_glass, title: 유리온실 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^유리온실$"], unit: ha, survey: 시설채소 온실현황}
+      - {id: gh_hard, title: 경질판온실 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^경질판온실$"], unit: ha, survey: 시설채소 온실현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

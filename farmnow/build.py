@@ -93,6 +93,17 @@ def f_prd(p) -> str:
     return f"{p[2:4]}년 {int(p[4:])}분기" if len(p) == 6 else f"{p}년"
 
 
+def f_ratio(a, b, mult: float = 100.0) -> dict | None:
+    """두 KOSIS 계열에서 같은 기간끼리 a ÷ b × mult. 막대 카드(hcard)에 바로 넣을 수 있는 계열 모양으로 돌려준다."""
+    if not a or not b:
+        return None
+    bv = dict(zip(b["years"], b["vals"]))
+    pairs = [(y, v / bv[y] * mult) for y, v in zip(a["years"], a["vals"]) if bv.get(y)]
+    if not pairs:
+        return None
+    return {**a, "years": [y for y, _ in pairs], "vals": [v for _, v in pairs], "unit": "%"}
+
+
 def f_big(v) -> str:
     """큰 수를 억·만 단위로: 201,271,652 → '2.01억', 3,153,897 → '315.4만'."""
     if v is None:
@@ -129,7 +140,7 @@ def cat_tab(it: NewsItem) -> str:
 
 def make_env() -> Environment:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html", "xml"]))
-    env.filters.update(big=f_big, prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp)
+    env.filters.update(big=f_big, prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp, ratio=f_ratio)
     env.policies["json.dumps_kwargs"] = {"ensure_ascii": False, "separators": (",", ":")}
     return env
 

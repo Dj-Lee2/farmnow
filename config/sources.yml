@@ -353,6 +353,43 @@ sources:
       - {id: fy_citrus, title: 감귤 10a당 생산량, tbl: DT_1ET0292, itm: "^감귤:10a당 생산량$", unit: kg, survey: 농작물생산조사}
       - {id: fy_peach, title: 복숭아 10a당 생산량, tbl: DT_1ET0292, itm: "^복숭아:10a당 생산량$", unit: kg, survey: 농작물생산조사}
       - {id: fy_swp, title: 단감 10a당 생산량, tbl: DT_1ET0292, itm: "^단감:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      # 농가인구 연령·가축분뇨 자원화·농업 관련 사업·오리·번식우·산란계
+      - {id: fp_all, title: 연령별 농가인구(계), tbl: DT_1EA1040, itm: "^농가인구$", unit: 명, survey: 농림어업조사}
+      - {id: fp_u40, title: 39세 이하 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(0~4세|5~9세|10~14세|15~19세|20~24세|25~29세|30~34세|35~39세)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_40s, title: 40대 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(40~44세|45~49세)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_50s, title: 50대 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(50~54세|55~59세)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_60s, title: 60대 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(60~64세|65~69세)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_70s, title: 70대 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(70~74세|75~79세)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_80p, title: 80세 이상 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(80세이상)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: fp_65, title: 65세 이상 농가인구, tbl: DT_1EA1040, itm: "^농가인구$", want: ["^(65~69세|70~74세|75~79세|80세이상)$"], sum: true, unit: 명, survey: 농림어업조사}
+      - {id: mn_hw_all, title: 한우 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^한우$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_hw_res, title: 한우 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^한우$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mn_dy_all, title: 젖소암컷 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^젖소암컷$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_dy_res, title: 젖소암컷 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^젖소암컷$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mn_pg_all, title: 돼지 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^돼지$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_pg_res, title: 돼지 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^돼지$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mn_br_all, title: 육계 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^육계$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_br_res, title: 육계 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^육계$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mn_ly_all, title: 산란계 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^산란계$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_ly_res, title: 산란계 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^산란계$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mn_dk_all, title: 오리 사육 농가(분뇨), tbl: DT_1EA1032, itm: "^가축사육농가$", want: ["^오리$"], unit: 가구, survey: 농림어업조사}
+      - {id: mn_dk_res, title: 오리 분뇨 퇴비·액비화 농가, tbl: DT_1EA1032, itm: "^(퇴비화처리|액비화 처리|퇴비 액비화 처리)$", want: ["^오리$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: biz_farms, title: 농가(사업별 표), tbl: DT_1EA1028, itm: "^농가$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_all, title: 농업 관련 사업 경영 농가, tbl: DT_1EA1028, itm: "^농업관련사업경영농가$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_shop, title: 직판장 운영 농가, tbl: DT_1EA1028, itm: "^농축산물직판장$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_direct, title: 직거래 농가, tbl: DT_1EA1028, itm: "^농축산물직거래$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_rest, title: 식당 경영 농가, tbl: DT_1EA1028, itm: "^식당경영$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_proc, title: 가공업 농가, tbl: DT_1EA1028, itm: "^농축산물가공업$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_work, title: 농기계 작업대행 농가, tbl: DT_1EA1028, itm: "^농기계작업대행$", unit: 가구, survey: 농림어업조사}
+      - {id: biz_tour, title: 농촌관광 농가, tbl: DT_1EA1028, itm: "^농촌관광사업$", unit: 가구, survey: 농림어업조사}
+      - {id: duck, title: 오리 사육 마릿수, tbl: DT_1EO111, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: duck_farms, title: 오리 농가 수, tbl: DT_1EO111, se: Q, periods: 12, itm: "^가구수$", unit: 가구, survey: 가축동향조사}
+      - {id: cow_net, title: 한우 번식우 두당 순수익, tbl: DT_1EE016, itm: "^평균$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: cow_inc, title: 한우 번식우 두당 소득, tbl: DT_1EE016, itm: "^평균$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: cow_rev, title: 한우 번식우 두당 총수입, tbl: DT_1EE016, itm: "^평균$", want: ["^총수입"], unit: 원, survey: 축산물생산비조사}
+      - {id: cow_birth, title: 한우 번식률, tbl: DT_1EE017, itm: "^평균$", want: ["^번식률"], unit: "%", survey: 축산물생산비조사}
+      - {id: ly_net, title: 산란계 수당 순수익, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^순수익", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: ly_inc, title: 산란계 수당 소득, tbl: DT_2EE311_23, itm: "^수익성$", want: ["^소득", "^평균$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

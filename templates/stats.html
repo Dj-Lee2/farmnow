@@ -73,7 +73,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·전업농·귀농·귀촌·취업자·농기계', 8) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계', 16) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -81,6 +81,20 @@
   {{ card('op_u40', 'p2', ('전체 농가의 ' ~ '{:.1f}'.format(K.op_u40.vals[-1] / K.op_total.vals[-1] * 100) ~ '% · 농림어업조사') if K.op_u40 and K.op_total else none) }}
   {{ rcard('전업농 비율', K.full_time, K.ft_total, 'p3', '농업만 하는 농가 ÷ 전체 농가') }}
   {{ hcard('영농형태별 농가', [('논벼', K.ty_rice), ('채소·산나물', K.ty_veg), ('과수', K.ty_fruit), ('식량작물', K.ty_food), ('특용작물·버섯', K.ty_spec), ('축산', K.ty_live)], '가구', '주로 짓는 농사 기준 · 괄호는 전체 농가 중 비중 · 오른쪽은 전년 대비', K.op_total.vals[-1] if K.op_total else none) }}
+ </div>
+ <h3 class="sg-sub">농가인구 연령</h3>
+ <div class="sg-g">
+  {{ rcard('농가인구 고령화율', K.fp_65, K.fp_all, 'p7', ('65세 이상 ' ~ K.fp_65.vals[-1]|big ~ ' · 전체 ' ~ K.fp_all.vals[-1]|big ~ ' 명') if K.fp_65 and K.fp_all else '', '#b04a07') }}
+  {{ card('fp_80p', 'p8', ('농가인구의 ' ~ '{:.1f}'.format(K.fp_80p.vals[-1] / K.fp_all.vals[-1] * 100) ~ '% · 농림어업조사') if K.fp_80p and K.fp_all else none, '#b04a07') }}
+  {{ rcard('39세 이하 농가인구 비중', K.fp_u40, K.fp_all, 'p9', ('39세 이하 ' ~ K.fp_u40.vals[-1]|big ~ ' 명 · 자녀 포함') if K.fp_u40 else '', '#6b8fd6') }}
+  {{ hcard('연령대별 농가인구', [('39세 이하', K.fp_u40), ('40대', K.fp_40s), ('50대', K.fp_50s), ('60대', K.fp_60s), ('70대', K.fp_70s), ('80세 이상', K.fp_80p)], '명', '괄호는 전체 농가인구 중 비중 · 오른쪽은 전년 대비', K.fp_all.vals[-1] if K.fp_all else none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">농업 관련 사업 <small>직거래·가공·식당·농촌관광 등</small></h3>
+ <div class="sg-g">
+  {{ rcard('농업 관련 사업 경영 농가 비율', K.biz_all, K.biz_farms, 'p10', ('사업 경영 농가 ' ~ K.biz_all.vals[-1]|big ~ ' 가구 ÷ 전체 농가') if K.biz_all else '') }}
+  {{ card('biz_direct', 'p11', ('사업 경영 농가의 ' ~ '{:.0f}'.format(K.biz_direct.vals[-1] / K.biz_all.vals[-1] * 100) ~ '% · 택배·온라인·꾸러미 등') if K.biz_direct and K.biz_all else none) }}
+  {{ card('biz_proc', 'p12', '농축산물을 직접 가공해 파는 농가', '#e0a03a') }}
+  {{ hcard('사업별 경영 농가', [('직거래', K.biz_direct), ('식당 경영', K.biz_rest), ('가공업', K.biz_proc), ('농기계 작업대행', K.biz_work), ('직판장', K.biz_shop), ('농촌관광', K.biz_tour)], '가구', '한 농가가 여러 사업을 할 수 있음 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">귀농·일손·농기계</h3>
  <div class="sg-g">
@@ -112,7 +126,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·축산 인증·비료·농약 사용량', 8) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·축산 인증·비료·농약 사용량·가축분뇨', 9) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -127,6 +141,10 @@
  <div class="sg-g">
   {{ hcard('질소비료 사용량', [('중국', K.fz_cn_n), ('대한민국', K.fz_kr_n), ('네덜란드', K.fz_nl_n), ('일본', K.fz_jp_n), ('미국', K.fz_us_n)], 'kg/ha', '농지 1ha당 질소(N) · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('농약 사용량', [('대한민국', K.pe_kr), ('일본', K.pe_jp), ('네덜란드', K.pe_nl), ('미국', K.pe_us), ('중국', K.pe_cn)], 'kg/ha', '농지 1ha당 농약 사용량 · 오른쪽은 전년 대비', none, '#a0605a') }}
+ </div>
+ <h3 class="sg-sub">가축분뇨 자원화 <small>농장에서 직접 퇴비·액비로 만드는 농가</small></h3>
+ <div class="sg-g">
+  {{ hcard('축종별 분뇨 퇴비·액비화 농가 비율', [('한우', K.mn_hw_res|ratio(K.mn_hw_all)), ('젖소', K.mn_dy_res|ratio(K.mn_dy_all)), ('산란계', K.mn_ly_res|ratio(K.mn_ly_all)), ('오리', K.mn_dk_res|ratio(K.mn_dk_all)), ('육계', K.mn_br_res|ratio(K.mn_br_all)), ('돼지', K.mn_pg_res|ratio(K.mn_pg_all))], '%', '축종별 사육 농가 중 비율 · 나머지는 위탁·정화 처리 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
  </div>
  </div></details>
 
@@ -173,13 +191,15 @@
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·배합사료·원유·생산비·순수익', 15) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·배합사료·원유·생산비·순수익·번식우·산란계·오리', 21) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
  <div class="sg-g" style="margin-top:16px">{{ hcard('축종별 배합사료 생산량', [('양돈용', K.feed_pig), ('양계용', K.feed_poultry), ('고기소용', K.feed_beef), ('젖소용', K.feed_dairy), ('기타', K.feed_etc)], '톤', ('전체 ' ~ K.feed_total.vals[-1]|big ~ ' 톤 · 괄호는 비중 · 오른쪽은 전년 대비') if K.feed_total else '', K.feed_total.vals[-1] if K.feed_total else none, '#a07a4a') }}</div>
  <h3 class="sg-sub">생산비·수익성·우유 <small>한 마리·우유 100ℓ 기준</small></h3>
  <div class="sg-g">{% set hn = K.hw_net %}{{ card('hw_net', 'g28', ('총수입 ' ~ num(K.hw_rev.vals[-1], '원')|striptags ~ ' · 비용 ' ~ num(K.hw_cost.vals[-1], '원')|striptags) if K.hw_rev and K.hw_cost else none, '#2458d6' if hn and hn.vals[-1] < 0 else '#1c7a45') }}{{ card('pig_net', 'g21', ('총수입 ' ~ '{:,.1f}'.format(K.pig_rev.vals[-1] / 1e4) ~ '만 · 비용 ' ~ '{:,.1f}'.format(K.pig_cost.vals[-1] / 1e4) ~ '만 원') if K.pig_rev and K.pig_cost else none) }}{{ card('dairy_net', 'g22') }}{{ card('calf_cost', 'g23', none, '#b04a07') }}{{ card('milk_cost', 'g29', ('1ℓ당 약 ' ~ '{:,.0f}'.format(K.milk_cost.vals[-1] / 100) ~ '원 · 사료비 비중 ' ~ '{:.0f}'.format(K.milk_feed.vals[-1] / K.milk_cost.vals[-1] * 100) ~ '%') if K.milk_feed else none, '#b04a07') }}{{ card('raw_milk', 'g27', '전국 원유(집유) 생산량') }}{{ card('hw_inc', 'g30', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('br_net', 'g31', ('10수당 총수입 ' ~ '{:,.0f}'.format(K.br_rev.vals[-1]) ~ '원') if K.br_rev else none) }}</div>
+ <h3 class="sg-sub">번식우·산란계·오리</h3>
+ <div class="sg-g">{% set cn = K.cow_net %}{{ card('cow_net', 'g41', ('총수입 ' ~ num(K.cow_rev.vals[-1], '원')|striptags ~ ' · 송아지 생산 농가 평균') if K.cow_rev else none, '#2458d6' if cn and cn.vals[-1] < 0 else '#1c7a45') }}{{ card('cow_inc', 'g42', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('cow_birth', 'g43', '가임 암소 중 송아지를 낳은 비율') }}{{ card('ly_net', 'g44', ('수당 소득 ' ~ '{:,.0f}'.format(K.ly_inc.vals[-1]) ~ '원 · 산란계 1마리 기준') if K.ly_inc else none) }}{{ card('ly_inc', 'g45', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('duck', 'g46', ('농가 ' ~ K.duck_farms.vals[-1]|big ~ '곳 · 계절에 따라 크게 변함') if K.duck_farms else none) }}</div>
  </div></details>
 
  <script>(()=>{const g=[...document.querySelectorAll('.sg-grp')],b=document.getElementById('sgAll');if(!b)return;

@@ -130,3 +130,11 @@ def test_f_mini_negative_values_draw_from_zero_line():
     svg = str(f_mini([100, -50, -100], "t", "#000"))
     assert "stroke-dasharray" in svg and svg.count('class="b"') == 3
     assert "-100" in svg
+
+
+def test_f_ratio_matches_periods():
+    a = {"title": "a", "tbl": "T", "years": ["2023", "2024"], "vals": [30.0, 40.0], "unit": "가구"}
+    b = {"title": "b", "tbl": "T", "years": ["2022", "2024"], "vals": [50.0, 80.0], "unit": "가구"}
+    r = build.f_ratio(a, b)
+    assert r["years"] == ["2024"] and r["vals"] == [50.0] and r["unit"] == "%" and r["tbl"] == "T"
+    assert build.f_ratio(a, None) is None

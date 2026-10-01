@@ -114,3 +114,19 @@ def test_pick_series_total_sums_matching_items():
     got = pick_series(rows, r"^(65~69세|70~74세)$", total=True)
     assert got["vals"] == [15.0]
     assert pick_series(rows, r"^계$")["vals"] == [40.0]
+
+
+def test_pick_series_total_sums_regions_when_no_national_row():
+    from farmnow.collectors.kosis import pick_series
+    rows = [{"ITM_NM": "보유수량", "C1_NM": c, "C2_NM": m, "PRD_DE": "2025", "DT": d}
+            for c, m, d in [("경기도", "콤바인", "10"), ("전라남도", "콤바인", "20"), ("가평군", "콤바인", "3"),
+                            ("경기도", "콤바인", "10"), ("경기도", "관리기", "99")]]
+    got = pick_series(rows, "^보유수량$", ["^콤바인$", "(도|특별시|광역시|특별자치시)$"], total=True)
+    assert got["vals"] == [30.0]
+
+
+def test_f_mini_negative_values_draw_from_zero_line():
+    from farmnow.build import f_mini
+    svg = str(f_mini([100, -50, -100], "t", "#000"))
+    assert "stroke-dasharray" in svg and svg.count('class="b"') == 3
+    assert "-100" in svg

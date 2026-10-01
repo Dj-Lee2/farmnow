@@ -157,8 +157,14 @@ def f_mini(vals, uid: str, col: str, labels=None, unit: str = "", w: int = 240, 
     if len(v) < 2:
         return ""
     lo, hi = min(v), max(v)
-    span = (hi - lo) or hi * 0.05
-    lo, hi = max(0, lo - span * 1.2), hi + span * 0.1
+    neg = lo < 0                    # 음수가 있으면 0 기준선 위아래로 그린다(예: 한우 순수익 적자)
+    if neg:
+        span = (max(hi, 0) - lo) or abs(lo)
+        lo, hi = lo - span * 0.05, max(hi, 0) + span * 0.05
+    else:
+        span = (hi - lo) or hi * 0.05
+        lo, hi = max(0, lo - span * 1.2), hi + span * 0.1
+    zy = h - (0 - lo) / (hi - lo) * h if neg else h
     n, gap = len(v), 6
     bw = (w - gap * (n - 1)) / n
     out = [f'<svg class="msv" viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true"><defs>'
@@ -166,12 +172,19 @@ def f_mini(vals, uid: str, col: str, labels=None, unit: str = "", w: int = 240, 
            f'<rect width="5" height="5" fill="{col}" fill-opacity=".07"/><line x1="0" y1="0" x2="0" y2="5" stroke="{col}" stroke-opacity=".25" stroke-width="1.2"/></pattern>'
            f'<linearGradient id="mg{uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{col}"/><stop offset="1" stop-color="{col}" stop-opacity=".2"/></linearGradient></defs>']
     for i, x in enumerate(v):
-        bh = max(3, (x - lo) / (hi - lo) * h)
+        if neg:
+            y1 = h - (x - lo) / (hi - lo) * h
+            top, bh = min(y1, zy), max(2, abs(zy - y1))
+        else:
+            bh = max(3, (x - lo) / (hi - lo) * h)
+            top = h - bh
         fill = f"url(#mg{uid})" if i == n - 1 else f"url(#mh{uid})"
         lab = pairs[i][1]
-        num = f"{x:,.0f}" if x >= 1000 else f"{x:,.2f}"
+        num = f"{x:,.0f}" if abs(x) >= 1000 else f"{x:,.2f}"
         tip = f"{lab} · {num}{unit}" if lab else f"{num}{unit}"
-        out.append(f'<rect class="b" data-t="{tip}" x="{i * (bw + gap):.1f}" y="{h - bh:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="3" fill="{fill}"/>')
+        out.append(f'<rect class="b" data-t="{tip}" x="{i * (bw + gap):.1f}" y="{top:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="3" fill="{fill}"/>')
+    if neg:
+        out.append(f'<line x1="0" x2="{w}" y1="{zy:.1f}" y2="{zy:.1f}" stroke="#999" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>')
     return Markup("".join(out) + "</svg>")
 
 

@@ -197,6 +197,36 @@ sources:
       - {id: v_onion, title: 양파 생산량, tbl: DT_1ET0291, itm: "^양파:생산량$", unit: 톤, survey: 농작물생산조사}
       - {id: v_garlic, title: 마늘 생산량, tbl: DT_1ET0291, itm: "^마늘:생산량$", unit: 톤, survey: 농작물생산조사}
       - {id: v_pepper, title: 건고추 생산량, tbl: DT_1ET0291, itm: "^건고추:생산량$", unit: 톤, survey: 농작물생산조사}
+      # 생산액·경영 (org 114 = 농림축산식품부)
+      - {id: pv_total, title: 농업 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^농업총계$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_crop, title: 재배업 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^재배업$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_live, title: 축산업 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^축산업$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_food, title: 식량작물 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^식량작물$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_veg, title: 채소 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^채소$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_fruit, title: 과실 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^과실$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_spec, title: 특용작물 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^특용작물$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_flower, title: 화훼류 생산액, tbl: DT_114_2014_S0003, org: "114", itm: "^생산금액$", want: ["^화훼류$"], unit: 십억원, survey: 농림업생산지수}
+      - {id: pv_idx, title: 농업생산지수, tbl: DT_114_2014_S0003, org: "114", itm: "^생산지수$", want: ["^농업총계$"], unit: "2019~21=100", survey: 농림업생산지수}
+      - {id: rice_rev, title: 논벼 10a당 총수입, tbl: DT_1EC0010, itm: "^10a당$", want: ["^총수입$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rice_cost, title: 논벼 10a당 경영비, tbl: DT_1EC0010, itm: "^10a당$", want: ["^경영비$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rice_inc, title: 논벼 10a당 소득, tbl: DT_1EC0010, itm: "^10a당$", want: ["^소득$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rice_pc, title: 논벼 10a당 생산비, tbl: DT_1EC0010, itm: "^10a당$", want: ["^생산비$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rice_net, title: 논벼 10a당 순수익, tbl: DT_1EC0010, itm: "^10a당$", want: ["^순수익$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: hw_net, title: 한우 비육우 두당 순수익, tbl: DT_1EE0110, itm: "^평균$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: hw_inc, title: 한우 비육우 두당 소득, tbl: DT_1EE0110, itm: "^평균$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: hw_rev, title: 한우 비육우 두당 총수입, tbl: DT_1EE0110, itm: "^평균$", want: ["^총수입"], unit: 원, survey: 축산물생산비조사}
+      - {id: hw_cost, title: 한우 비육우 두당 비용합계, tbl: DT_1EE0110, itm: "^평균$", want: ["^비용합계"], unit: 원, survey: 축산물생산비조사}
+      - {id: milk_cost, title: 우유 100ℓ당 생산비, tbl: DT_2EE301, itm: "^생산비$", want: ["^생산비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: milk_feed, title: 우유 100ℓ당 사료비, tbl: DT_2EE301, itm: "^생산비$", want: ["^사료비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: raw_milk, title: 원유 생산량, tbl: DT_114N_1C001, org: "114", itm: "^생산량$", unit: 톤, survey: 원유생산실적}
+      - {id: mc_tractor, title: 농용트랙터, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^농용트랙터$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: mc_combine, title: 콤바인, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^콤바인$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: mc_planter, title: 동력이앙기, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^동력이앙기$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: mc_tiller, title: 관리기, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^관리기$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: mc_drone, title: 농업용멀티콥터, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^농업용멀티콥터$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: mc_dryer, title: 곡물건조기, tbl: DT_114_2013_S0017, org: "114", periods: 6, itm: "^보유수량$", want: ["^곡물건조기$", "(도|특별시|광역시|특별자치시)$"], sum: true, unit: 대, survey: 농업기계보유현황}
+      - {id: emp_agri, title: 농림어업 취업자, tbl: DT_1DA7E06S, itm: "^취업자$", want: ["^A 농업 임업 및 어업"], unit: 천명, survey: 경제활동인구조사}
+      - {id: emp_all, title: 전체 취업자, tbl: DT_1DA7E06S, itm: "^취업자$", unit: 천명, survey: 경제활동인구조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

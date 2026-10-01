@@ -3,6 +3,8 @@
 {% set SECS = {'kr_stocks': ('국내 주식', 'kr'), 'world_stocks': ('해외 주식', 'wd'), 'kr_etfs': ('ETF', 'etf'), 'world_etfs': ('ETF', 'etf'), 'commodities': ('국제 농산물', 'cm')} %}
 {% set sl = SECS[r.sec] %}
 {% set cm = r.sec == 'commodities' %}
+{# 시가·고가·저가가 모든 날에 있어야 캔들을 그린다 #}
+{% set ohlc = r.hist|length > 1 and not (r.hist|rejectattr('o')|list or r.hist|rejectattr('h')|list or r.hist|rejectattr('l')|list) %}
 {% block content %}
 <div class="wrap page sd">
  <div class="src"><a href="stocks.html#{{ sl[1] }}">국제·증시</a> › {{ sl[0] }} › {{ r.group }}</div>
@@ -15,7 +17,8 @@
  <div class="two">
   <section class="card sd-chart">
    <div class="chd"><div class="ptab" id="per"><button type="button" data-d="30">1개월</button><button type="button" data-d="91" class="on">3개월</button><button type="button" data-d="182">6개월</button><button type="button" data-d="366">1년</button></div>
-    <div class="sd-ret" id="ret"></div></div>
+    <div class="sd-ret" id="ret"></div>
+    {% if ohlc %}<div class="ptab" id="kind" role="group" aria-label="차트 종류"><button type="button" data-k="line" class="on" aria-pressed="true">선</button><button type="button" data-k="candle" aria-pressed="false">캔들</button></div>{% endif %}</div>
    <div class="sd-plot"><svg id="pc" role="img" aria-label="{{ r.name }} 가격 추이"></svg><div class="sd-tip" id="ptip"></div></div>
    {% if not cm and r.hist and r.hist[-1].v %}<svg id="vc" class="sd-vol" aria-hidden="true"></svg>{% endif %}
   </section>
@@ -56,32 +59,45 @@
 </div>
 {% endblock %}
 {% block scripts %}
-var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')|list|tojson }},V={{ r.hist|map(attribute='v')|list|tojson }},DEC={{ 0 if r.cur in ('KRW','JPY') and not cm else 2 }},UNIT={{ r.unit|tojson }};
-(function(){var pc=$('pc');if(!pc||C.length<2)return;var vc=$('vc'),tip=$('ptip'),days=91,G=null;
+var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')|list|tojson }},V={{ r.hist|map(attribute='v')|list|tojson }},DEC={{ 0 if r.cur in ('KRW','JPY') and not cm else 2 }},UNIT={{ r.unit|tojson }}{% if ohlc %},OP={{ r.hist|map(attribute='o')|list|tojson }},HI={{ r.hist|map(attribute='h')|list|tojson }},LO={{ r.hist|map(attribute='l')|list|tojson }}{% endif %};
+(function(){var pc=$('pc');if(!pc||C.length<2)return;var vc=$('vc'),tip=$('ptip'),days=91,G=null,mode='line',AL=pc.getAttribute('aria-label'),kb=document.querySelectorAll('#kind button'),UP='#d23a32',DN='#2458d6';
  function f(v){return v==null?'–':v.toLocaleString(undefined,{minimumFractionDigits:DEC,maximumFractionDigits:DEC})}
  function sub(){var last=H[H.length-1],cut=new Date(new Date(last).getTime()-days*864e5).toISOString().slice(0,10),i=0;while(i<H.length-1&&H[i]<cut)i++;return i}
- function draw(){var i0=sub(),d=H.slice(i0),c=C.slice(i0),v=V.slice(i0),W=pc.clientWidth||700,Hh=pc.clientHeight||300,L=8,R=58,T=12,B=26,n=c.length;
-  var mn=Math.min.apply(null,c),mx=Math.max.apply(null,c),pad=(mx-mn)*0.08||mx*0.02;mn-=pad;mx+=pad;
-  var up=c[n-1]>=c[0],col=up?'#d23a32':'#2458d6',x=function(k){return L+(W-L-R)*k/(n-1)},y=function(q){return T+(Hh-T-B)*(1-(q-mn)/(mx-mn))};
-  var s='<defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+col+'" stop-opacity=".18"/><stop offset="1" stop-color="'+col+'" stop-opacity="0"/></linearGradient></defs>';
+ // 캔들 색(한국식): 종가가 시가보다 높으면 빨강, 낮으면 파랑. 같으면 전일 종가와 비교하고, 그것도 같으면 회색
+ function dir(j){var q=C[j]-OP[j];if(!q&&j)q=C[j]-C[j-1];return q>0?UP:q<0?DN:'#9a9a9a'}
+ function draw(){var i0=sub(),d=H.slice(i0),c=C.slice(i0),v=V.slice(i0),W=pc.clientWidth||700,Hh=pc.clientHeight||300,L=8,R=58,T=12,B=26,n=c.length,cnd=mode==='candle';
+  // 캔들 범위는 네 값으로 잡는다: 선물 정산가처럼 종가가 고가·저가 밖인 날도 몸통이 꼬리 밖으로 나가지 않게
+  var top=cnd?c.map(function(q,k){return Math.max(HI[i0+k],OP[i0+k],q)}):c,bot=cnd?c.map(function(q,k){return Math.min(LO[i0+k],OP[i0+k],q)}):c;
+  var mn=Math.min.apply(null,bot),mx=Math.max.apply(null,top),pad=(mx-mn)*0.08||mx*0.02;mn-=pad;mx+=pad;
+  var up=c[n-1]>=c[0],col=up?UP:DN,sl=(W-L-R)/(cnd?n:n-1),x=function(k){return L+sl*(cnd?k+.5:k)},y=function(q){return T+(Hh-T-B)*(1-(q-mn)/(mx-mn))};
+  var s=cnd?'':'<defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+col+'" stop-opacity=".18"/><stop offset="1" stop-color="'+col+'" stop-opacity="0"/></linearGradient></defs>';
   for(var g=0;g<4;g++){var q=mx-(mx-mn)*(g+0.5)/4,yy=y(q);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#f0f0f0"/><text x="'+(W-R+8)+'" y="'+(yy+4)+'" font-size="11" fill="#9a9a9a">'+f(q)+'</text>'}
-  var line=c.map(function(q,k){return (k?'L':'M')+x(k).toFixed(1)+','+y(q).toFixed(1)}).join('');
-  s+='<path d="'+line+'L'+x(n-1)+','+(Hh-B)+'L'+x(0)+','+(Hh-B)+'Z" fill="url(#ga)"/><path d="'+line+'" fill="none" stroke="'+col+'" stroke-width="1.8" stroke-linejoin="round"/>';
+  if(cnd){var bw=Math.max(1,Math.min(sl*.62,14)),cs='';
+   for(var k=0;k<n;k++){var j=i0+k,cl=dir(j),xx=x(k).toFixed(1),y1=y(Math.max(OP[j],C[j]));
+    cs+='<line x1="'+xx+'" x2="'+xx+'" y1="'+y(top[k]).toFixed(1)+'" y2="'+y(bot[k]).toFixed(1)+'" stroke="'+cl+'"/><rect x="'+(x(k)-bw/2).toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+Math.max(1,y(Math.min(OP[j],C[j]))-y1).toFixed(1)+'" fill="'+cl+'"/>'}
+   s+='<g shape-rendering="crispEdges">'+cs+'</g>'}
+  else{var line=c.map(function(q,k){return (k?'L':'M')+x(k).toFixed(1)+','+y(q).toFixed(1)}).join('');
+   s+='<path d="'+line+'L'+x(n-1)+','+(Hh-B)+'L'+x(0)+','+(Hh-B)+'Z" fill="url(#ga)"/><path d="'+line+'" fill="none" stroke="'+col+'" stroke-width="1.8" stroke-linejoin="round"/>'}
   [0,Math.round((n-1)/3),Math.round((n-1)*2/3),n-1].forEach(function(k,j){s+='<text x="'+x(k)+'" y="'+(Hh-8)+'" font-size="11" fill="#8a8a8a" text-anchor="'+(j==0?'start':j==3?'end':'middle')+'">'+d[k].slice(2).replace(/-/g,'.')+'</text>'});
-  var imx=c.indexOf(Math.max.apply(null,c)),imn=c.indexOf(Math.min.apply(null,c));
-  s+='<text x="'+x(imx)+'" y="'+(y(c[imx])-6)+'" font-size="11" fill="#d23a32" text-anchor="middle">최고 '+f(c[imx])+'</text><text x="'+x(imn)+'" y="'+(y(c[imn])+14)+'" font-size="11" fill="#2458d6" text-anchor="middle">최저 '+f(c[imn])+'</text>';
-  s+='<g id="xh" opacity="0"><line id="xl" y1="'+T+'" y2="'+(Hh-B)+'" stroke="#1d1d1f" stroke-dasharray="3 3" stroke-width="1"/><circle id="xd" r="4" fill="'+col+'" stroke="#fff" stroke-width="2"/></g>';
-  pc.setAttribute('viewBox','0 0 '+W+' '+Hh);pc.innerHTML=s;
+  // 기간 최고·최저(캔들은 고가·저가 기준). 양 끝이면 글자가 축 밖으로 나가지 않게 정렬을 바꾼다
+  var imx=top.indexOf(Math.max.apply(null,top)),imn=bot.indexOf(Math.min.apply(null,bot)),an=function(k){return x(k)<L+40?'start':x(k)>W-R-40?'end':'middle'};
+  s+='<text x="'+x(imx)+'" y="'+(y(top[imx])-6)+'" font-size="11" fill="'+UP+'" text-anchor="'+an(imx)+'">최고 '+f(top[imx])+'</text><text x="'+x(imn)+'" y="'+(y(bot[imn])+14)+'" font-size="11" fill="'+DN+'" text-anchor="'+an(imn)+'">최저 '+f(bot[imn])+'</text>';
+  s+='<g id="xh" opacity="0"><line id="xl" y1="'+T+'" y2="'+(Hh-B)+'" stroke="#1d1d1f" stroke-dasharray="3 3" stroke-width="1"/>'+(cnd?'':'<circle id="xd" r="4" fill="'+col+'" stroke="#fff" stroke-width="2"/>')+'</g>';
+  pc.setAttribute('viewBox','0 0 '+W+' '+Hh);pc.setAttribute('aria-label',AL+(cnd?' (캔들: 시가·고가·저가·종가)':''));pc.innerHTML=s;
   var ch=(c[n-1]-c[0])/c[0]*100;$('ret').innerHTML=['1개월','3개월','6개월','1년'][[30,91,182,366].indexOf(days)]+' <b class="'+(ch>0?'up':ch<0?'down':'')+'">'+(ch>0?'+':'')+ch.toFixed(2)+'%</b>';
-  if(vc){var vm=Math.max.apply(null,v.map(function(q){return q||0}))||1,VW=vc.clientWidth||W,VH=vc.clientHeight||60,bw=Math.max(1,(VW-L-R)/n-1),vs='';
-   v.forEach(function(q,k){var h=(q||0)/vm*(VH-4);vs+='<rect x="'+(L+(VW-L-R)*k/(n-1)-bw/2).toFixed(1)+'" y="'+(VH-h).toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+(k&&c[k]<c[k-1]?'#9fb5ef':'#efa6a2')+'"/>'});
+  if(vc){var vm=Math.max.apply(null,v.map(function(q){return q||0}))||1,VW=vc.clientWidth||W,VH=vc.clientHeight||60,vsl=(VW-L-R)/(cnd?n:n-1),vbw=cnd?Math.max(1,Math.min(vsl*.62,14)):Math.max(1,(VW-L-R)/n-1),vs='';
+   v.forEach(function(q,k){var h=(q||0)/vm*(VH-4),dn=cnd?dir(i0+k)===DN:k&&c[k]<c[k-1];vs+='<rect x="'+(L+vsl*(cnd?k+.5:k)-vbw/2).toFixed(1)+'" y="'+(VH-h).toFixed(1)+'" width="'+vbw.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+(dn?'#9fb5ef':'#efa6a2')+'"/>'});
    vc.setAttribute('viewBox','0 0 '+VW+' '+VH);vc.innerHTML=vs}
-  G={i0:i0,n:n,x:x,y:y,W:W,L:L,R:R}}
- function hover(e){if(!G)return;var b=pc.getBoundingClientRect(),px=(e.clientX-b.left)*G.W/b.width,k=Math.round((px-G.L)/(G.W-G.L-G.R)*(G.n-1));k=Math.max(0,Math.min(G.n-1,k));var j=G.i0+k,xx=G.x(k),yy=G.y(C[j]);
-  $('xl').setAttribute('x1',xx);$('xl').setAttribute('x2',xx);$('xd').setAttribute('cx',xx);$('xd').setAttribute('cy',yy);$('xh').setAttribute('opacity',1);
-  var p=j?(C[j]-C[j-1])/C[j-1]*100:null;tip.innerHTML='<b>'+H[j].replace(/-/g,'.')+'</b> '+f(C[j])+(p==null?'':' <span class="'+(p>0?'up':p<0?'down':'')+'">'+(p>0?'+':'')+p.toFixed(2)+'%</span>')+(V[j]?' · 거래량 '+Number(V[j]).toLocaleString():'');
-  tip.classList.add('on');var tw=tip.offsetWidth,tx=xx/G.W*b.width-tw/2;tip.style.translate=Math.max(0,Math.min(b.width-tw,tx))+'px 0'}
+  G={i0:i0,n:n,x:x,y:y,W:W,L:L,sl:sl,cnd:cnd}}
+ function hover(e){if(!G)return;var b=pc.getBoundingClientRect(),px=(e.clientX-b.left)*G.W/b.width,u=(px-G.L)/G.sl,k=G.cnd?Math.floor(u):Math.round(u);k=Math.max(0,Math.min(G.n-1,k));var j=G.i0+k,xx=G.x(k);
+  $('xl').setAttribute('x1',xx);$('xl').setAttribute('x2',xx);if(!G.cnd){$('xd').setAttribute('cx',xx);$('xd').setAttribute('cy',G.y(C[j]))}$('xh').setAttribute('opacity',1);
+  var p=j?(C[j]-C[j-1])/C[j-1]*100:null;tip.innerHTML='<b>'+H[j].replace(/-/g,'.')+'</b> '+f(C[j])+(p==null?'':' <span class="'+(p>0?'up':p<0?'down':'')+'">'+(p>0?'+':'')+p.toFixed(2)+'%</span>')+(V[j]?' · 거래량 '+Number(V[j]).toLocaleString():'')+(G.cnd?'<br>시 '+f(OP[j])+' · 고 '+f(HI[j])+' · 저 '+f(LO[j]):'');
+  tip.classList.toggle('k2',G.cnd);tip.classList.add('on');var tw=tip.offsetWidth,tx=xx/G.W*b.width-tw/2;tip.style.translate=Math.max(0,Math.min(b.width-tw,tx))+'px 0'}
  function out(){if($('xh'))$('xh').setAttribute('opacity',0);tip.classList.remove('on')}
+ // 선/캔들 선택은 다른 종목 페이지에서도 이어지게 기억한다
+ function setKind(k){mode=k;kb.forEach(function(o){var on=o.dataset.k===k;o.classList.toggle('on',on);o.setAttribute('aria-pressed',on)})}
+ if(kb.length){try{if(localStorage.getItem('chart')==='candle')setKind('candle')}catch(e){}
+  kb.forEach(function(bt){bt.onclick=function(){setKind(bt.dataset.k);try{localStorage.setItem('chart',mode)}catch(e){}out();draw()}})}
  pc.addEventListener('pointermove',hover);pc.addEventListener('pointerdown',hover);pc.addEventListener('pointerleave',out);
  document.querySelectorAll('#per button').forEach(function(bt){bt.onclick=function(){days=+bt.dataset.d;document.querySelectorAll('#per button').forEach(function(o){o.classList.toggle('on',o===bt)});out();draw()}});
  if(C.length<70){document.querySelector('#per button[data-d="366"]').click()}else draw();

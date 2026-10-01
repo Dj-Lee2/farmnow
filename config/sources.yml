@@ -1085,6 +1085,42 @@ sources:
       - {id: fag_pers_50, title: 감 경영주 50대 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
       - {id: fag_pers_60, title: 감 경영주 60대 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
       - {id: fag_pers_70, title: 감 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_walnut1, title: 호두 재배규모 0.1~0.3ha 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^0.1-0.3ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_walnut2, title: 호두 재배규모 0.3~0.5ha 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^0.3-0.5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_walnut3, title: 호두 재배규모 0.5~1ha 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^0.5-1ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_walnut4, title: 호두 재배규모 1ha 이상 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^1ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_walnut_ful, title: 호두 전업 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_walnut_par, title: 호두 겸업 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_walnut_lead, title: 호두 선도 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_walnut_oth, title: 호두 선도 외 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_walnut_u50, title: 호두 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_walnut_50, title: 호두 경영주 50대 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_walnut_60, title: 호두 경영주 60대 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_walnut_70, title: 호두 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_omija1, title: 오미자 재배규모 0.1~0.3ha 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^0.1-0.3ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_omija2, title: 오미자 재배규모 0.3~0.5ha 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^0.3-0.5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_omija3, title: 오미자 재배규모 0.5~1ha 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^0.5-1ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_omija4, title: 오미자 재배규모 1ha 이상 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^1ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_omija_ful, title: 오미자 전업 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_omija_par, title: 오미자 겸업 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_omija_lead, title: 오미자 선도 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_omija_oth, title: 오미자 선도 외 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_omija_u50, title: 오미자 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_omija_50, title: 오미자 경영주 50대 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_omija_60, title: 오미자 경영주 60대 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_omija_70, title: 오미자 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_bokbun1, title: 복분자딸기 재배규모 0.1~0.3ha 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^0.1-0.3ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_bokbun2, title: 복분자딸기 재배규모 0.3~0.5ha 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^0.3-0.5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_bokbun3, title: 복분자딸기 재배규모 0.5~1ha 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^0.5-1ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_bokbun4, title: 복분자딸기 재배규모 1ha 이상 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^1ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_bokbun_ful, title: 복분자딸기 전업 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_bokbun_par, title: 복분자딸기 겸업 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_bokbun_lead, title: 복분자딸기 선도 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_bokbun_oth, title: 복분자딸기 선도 외 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_bokbun_u50, title: 복분자딸기 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_bokbun_50, title: 복분자딸기 경영주 50대 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_bokbun_60, title: 복분자딸기 경영주 60대 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_bokbun_70, title: 복분자딸기 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

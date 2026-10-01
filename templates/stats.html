@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령별 소득', 33) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령별 소득(감·대추·밤·호두·오미자·복분자딸기)', 41) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -173,6 +173,17 @@
   {{ card('fty_chest_ful', 'v21', ('겸업 임가 ' ~ num(K.fty_chest_par.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_chest.vals[-1], '원')|striptags) if K.fty_chest_par and K.fin_chest else none, '#7a6a3a') }}
   {{ hcard('재배 규모별 임산물 1ha당 소득', [('감 0.1~0.5ha', K.fsz_pers1), ('감 0.5~1ha', K.fsz_pers2), ('감 1ha 이상', K.fsz_pers3), ('대추 0.1~0.3ha', K.fsz_jujube1), ('대추 0.3~0.5ha', K.fsz_jujube2), ('대추 0.5~1ha', K.fsz_jujube3), ('대추 1ha 이상', K.fsz_jujube4), ('밤 1~2ha', K.fsz_chest1), ('밤 2~3ha', K.fsz_chest2), ('밤 3~5ha', K.fsz_chest3), ('밤 5ha 이상', K.fsz_chest4)], '원', '임가의 재배 면적 구간별 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('경영주 연령별 임산물 1ha당 소득', [('감 50대 미만', K.fag_pers_u50), ('감 50대', K.fag_pers_50), ('감 60대', K.fag_pers_60), ('감 70대 이상', K.fag_pers_70), ('대추 50대 미만', K.fag_jujube_u50), ('대추 50대', K.fag_jujube_50), ('대추 60대', K.fag_jujube_60), ('대추 70대 이상', K.fag_jujube_70), ('밤 50대 미만', K.fag_chest_u50), ('밤 50대', K.fag_chest_50), ('밤 60대', K.fag_chest_60), ('밤 70대 이상', K.fag_chest_70)], '원', '경영주 나이대별 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+ </div>
+ <h3 class="sg-sub">임산물 임가 유형별 소득 <small>1ha당 · 호두·오미자·복분자딸기 · 산림청 임산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('fty_walnut_lead', 'v22', ('선도 외 임가 ' ~ num(K.fty_walnut_oth.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_walnut.vals[-1], '원')|striptags) if K.fty_walnut_oth and K.fin_walnut else none, '#7a6a3a') }}
+  {{ card('fty_omija_lead', 'v23', ('선도 외 임가 ' ~ num(K.fty_omija_oth.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_omija.vals[-1], '원')|striptags) if K.fty_omija_oth and K.fin_omija else none, '#7a6a3a') }}
+  {{ card('fty_bokbun_lead', 'v24', ('선도 외 임가 ' ~ num(K.fty_bokbun_oth.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_bokbun.vals[-1], '원')|striptags) if K.fty_bokbun_oth and K.fin_bokbun else none, '#7a6a3a') }}
+  {{ card('fty_walnut_ful', 'v25', ('겸업 임가 ' ~ num(K.fty_walnut_par.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_walnut.vals[-1], '원')|striptags) if K.fty_walnut_par and K.fin_walnut else none, '#7a6a3a') }}
+  {{ card('fty_omija_ful', 'v26', ('겸업 임가 ' ~ num(K.fty_omija_par.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_omija.vals[-1], '원')|striptags) if K.fty_omija_par and K.fin_omija else none, '#7a6a3a') }}
+  {{ card('fty_bokbun_ful', 'v27', ('겸업 임가 ' ~ num(K.fty_bokbun_par.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fin_bokbun.vals[-1], '원')|striptags) if K.fty_bokbun_par and K.fin_bokbun else none, '#7a6a3a') }}
+  {{ hcard('재배 규모별 호두·오미자·복분자딸기 1ha당 소득', [('호두 0.1~0.3ha', K.fsz_walnut1), ('호두 0.3~0.5ha', K.fsz_walnut2), ('호두 0.5~1ha', K.fsz_walnut3), ('호두 1ha 이상', K.fsz_walnut4), ('오미자 0.1~0.3ha', K.fsz_omija1), ('오미자 0.3~0.5ha', K.fsz_omija2), ('오미자 0.5~1ha', K.fsz_omija3), ('오미자 1ha 이상', K.fsz_omija4), ('복분자딸기 0.1~0.3ha', K.fsz_bokbun1), ('복분자딸기 0.3~0.5ha', K.fsz_bokbun2), ('복분자딸기 0.5~1ha', K.fsz_bokbun3), ('복분자딸기 1ha 이상', K.fsz_bokbun4)], '원', '임가의 재배 면적 구간별 · 음수는 경영비가 조수입보다 많음 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('경영주 연령별 호두·오미자·복분자딸기 1ha당 소득', [('호두 50대 미만', K.fag_walnut_u50), ('호두 50대', K.fag_walnut_50), ('호두 60대', K.fag_walnut_60), ('호두 70대 이상', K.fag_walnut_70), ('오미자 50대 미만', K.fag_omija_u50), ('오미자 50대', K.fag_omija_50), ('오미자 60대', K.fag_omija_60), ('오미자 70대 이상', K.fag_omija_70), ('복분자딸기 50대 미만', K.fag_bokbun_u50), ('복분자딸기 50대', K.fag_bokbun_50), ('복분자딸기 60대', K.fag_bokbun_60), ('복분자딸기 70대 이상', K.fag_bokbun_70)], '원', '경영주 나이대별 · 음수는 경영비가 조수입보다 많음 · 오른쪽은 전년 대비', none, '#b07a3a') }}
  </div>
  </div></details>
 

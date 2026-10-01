@@ -597,6 +597,42 @@ sources:
       - {id: dsf_fence, title: 축사 방역시설 외부 울타리 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^외부 울타리$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: dsf_net, title: 축사 방역시설 방조·방충망 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^방조 및 방충망$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: dsf_ante, title: 축사 방역시설 전실 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^전실$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: cfo_gar, title: 마늘 10a당 유기질비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfo_oni, title: 양파 10a당 유기질비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfo_pep, title: 고추 10a당 유기질비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfo_soy, title: 콩 10a당 유기질비료, tbl: DT_1EC0083, itm: "^10a당$", want: ["^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfi_gar, title: 마늘 10a당 무기질비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfi_oni, title: 양파 10a당 무기질비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfi_pep, title: 고추 10a당 무기질비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfi_soy, title: 콩 10a당 무기질비료, tbl: DT_1EC0083, itm: "^10a당$", want: ["^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfn_gar, title: 마늘 10a당 질소질비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfn_oni, title: 양파 10a당 질소질비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfn_pep, title: 고추 10a당 질소질비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfn_soy, title: 콩 10a당 질소질비료, tbl: DT_1EC0083, itm: "^10a당$", want: ["^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: cfl_gar, title: 마늘 10a당 노동시간, tbl: DT_1EC0043, itm: "^10a당$", want: ["^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: cfl_oni, title: 양파 10a당 노동시간, tbl: DT_1EC0053, itm: "^10a당$", want: ["^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: cfl_pep, title: 고추 10a당 노동시간, tbl: DT_1EC0063, itm: "^10a당$", want: ["^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: cfl_soy, title: 콩 10a당 노동시간, tbl: DT_1EC0083, itm: "^10a당$", want: ["^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszo_s05, title: 논벼 0.5ha미만 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s1, title: 논벼 0.5~1ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s15, title: 논벼 1~1.5ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s2, title: 논벼 1.5~2ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s25, title: 논벼 2~2.5ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s3, title: 논벼 2.5~3ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s5, title: 논벼 3~5ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s7, title: 논벼 5~7ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s10, title: 논벼 7~10ha 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszo_s10p, title: 논벼 10ha이상 농가 10a당 유기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^10\\.0ha이상$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s05, title: 논벼 0.5ha미만 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s1, title: 논벼 0.5~1ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s15, title: 논벼 1~1.5ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s2, title: 논벼 1.5~2ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s25, title: 논벼 2~2.5ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s3, title: 논벼 2.5~3ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s5, title: 논벼 3~5ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s7, title: 논벼 5~7ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s10, title: 논벼 7~10ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rszi_s10p, title: 논벼 10ha이상 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^10\\.0ha이상$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

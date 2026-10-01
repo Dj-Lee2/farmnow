@@ -1289,6 +1289,44 @@ sources:
       - {id: pvt_up_jjb, title: 5년간 병해충 발생이 늘어나고 있다는 대추 임가 비율, tbl: DT_136022_10175, org: "136", itm: "^값$", want: ["^늘어나고 있다$", "^대추재배업$"], unit: "%", survey: 임업경영실태조사}
       - {id: pvt_up_wal, title: 5년간 병해충 발생이 늘어나고 있다는 호두 임가 비율, tbl: DT_136022_10175, org: "136", itm: "^값$", want: ["^늘어나고 있다$", "^호두재배업$"], unit: "%", survey: 임업경영실태조사}
       - {id: pvt_up_oth, title: 5년간 병해충 발생이 늘어나고 있다는 기타 유실수 임가 비율, tbl: DT_136022_10175, org: "136", itm: "^값$", want: ["^늘어나고 있다$", "^기타유실수$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ppi_barley, title: 보리쌀 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^보리쌀$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_ptt, title: 감자 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^감자$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_swp, title: 고구마 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^고구마$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_spn, title: 시금치 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^시금치$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_let, title: 상추 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^상추$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_chv, title: 부추 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^부추$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_wml, title: 수박 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^수박$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_omel, title: 참외 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^참외$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_cuc, title: 오이 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^오이$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pmk, title: 호박 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^호박$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_tom, title: 토마토 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^토마토$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_stb, title: 딸기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^딸기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_ppk, title: 파프리카 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^파프리카$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_rad, title: 무 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^무$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_gpep, title: 풋고추 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^풋고추$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_rpep, title: 건고추 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^건고추$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_wel, title: 파 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^파$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_gngr, title: 생강 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^생강$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_mush, title: 버섯 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^버섯$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pim, title: 피망 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^피망$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pch, title: 복숭아 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^복숭아$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_grp, title: 포도 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^포도$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_tang, title: 감귤 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^감귤$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pers, title: 감 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^감$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_cflw, title: 절화류 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^절화류$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pflw, title: 분화류 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^분화류$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_gsg, title: 인삼 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^인삼$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_herbm, title: 한약재료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^한약재료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_sesa, title: 참깨 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^참깨$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_peri, title: 들깨 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^들깨$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_beef, title: 쇠고기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^쇠고기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pork, title: 돼지고기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^돼지고기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_chkm, title: 닭고기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^닭고기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_duck, title: 오리고기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^오리고기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_egg, title: 달걀 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^달걀$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_honey, title: 벌꿀 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^벌꿀$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_wvg, title: 산나물 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^산나물$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_chest, title: 밤 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^밤$"], unit: "2020=100", survey: 생산자물가지수}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

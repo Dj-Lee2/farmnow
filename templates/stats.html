@@ -409,7 +409,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가·곡물·먹거리 수입물가·국산 농산물 생산자물가', 21) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가·곡물·먹거리 수입물가·국산 농산물 생산자물가·축산물·채소·과일·특용작물 생산자물가', 28) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">가격 <small>분기</small></h3>
  <div class="sg-g">
@@ -443,6 +443,16 @@
   {{ hcard('축산물·과일 수입물가', [('닭고기', K.ipi_poul), ('쇠고기', K.ipi_beef), ('과일', K.ipi_frt), ('돼지고기', K.ipi_pork)], '2020=100', '원화 기준 수입 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
   {{ hcard('국산 농산물 생산자물가', [('사과', K.ppi_apple), ('마늘', K.ppi_gar), ('배', K.ppi_pear), ('쌀', K.ppi_rice), ('생우유', K.ppi_milk), ('콩', K.ppi_soy), ('배추', K.ppi_cab), ('양파', K.ppi_onion)], '2020=100', '국내 생산자 출하 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#d23a32') }}
   {{ hcard('시설·축산 자재 생산자물가', [('플라스틱파이프', K.ppi_pipe), ('폴리염화비닐필름(PVC)', K.ppi_pvc), ('폴리에틸렌필름(PE)', K.ppi_pe), ('사료첨가제', K.ppi_fadd)], '2020=100', '하우스 파이프·피복·멀칭 필름 원자재 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">국산 농축산물 생산자물가 · 품목별 <small>월별 · 한국은행 생산자물가지수 · 2020=100 · 제철이 아닌 달은 직전 값이 이어짐</small></h3>
+ <div class="sg-g">
+  {{ card('ppi_egg', 'pf10', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_egg.vals[-1] / K.ppi_egg.vals[-13] - 1) * 100) ~ '%') if K.ppi_egg and K.ppi_egg.vals|length > 12 and K.ppi_egg.vals[-13] else none), '#d23a32') }}
+  {{ card('ppi_beef', 'pf11', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_beef.vals[-1] / K.ppi_beef.vals[-13] - 1) * 100) ~ '%') if K.ppi_beef and K.ppi_beef.vals|length > 12 and K.ppi_beef.vals[-13] else none), '#d23a32') }}
+  {{ card('ppi_pork', 'pf12', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_pork.vals[-1] / K.ppi_pork.vals[-13] - 1) * 100) ~ '%') if K.ppi_pork and K.ppi_pork.vals|length > 12 and K.ppi_pork.vals[-13] else none), '#d23a32') }}
+  {{ hcard('축산물 생산자물가', [('달걀', K.ppi_egg), ('닭고기', K.ppi_chkm), ('돼지고기', K.ppi_pork), ('벌꿀', K.ppi_honey), ('쇠고기', K.ppi_beef), ('오리고기', K.ppi_duck)], '2020=100', '농가 출하 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#d23a32') }}
+  {{ hcard('채소 생산자물가', [('시금치', K.ppi_spn), ('상추', K.ppi_let), ('수박', K.ppi_wml), ('부추', K.ppi_chv), ('건고추', K.ppi_rpep), ('무', K.ppi_rad), ('파', K.ppi_wel), ('버섯', K.ppi_mush), ('호박', K.ppi_pmk), ('토마토', K.ppi_tom), ('참외', K.ppi_omel), ('생강', K.ppi_gngr), ('피망', K.ppi_pim), ('딸기', K.ppi_stb), ('파프리카', K.ppi_ppk), ('풋고추', K.ppi_gpep), ('오이', K.ppi_cuc)], '2020=100', '농가 출하 가격 · 2020=100 · 잎채소는 여름철 등락이 큼 · 오른쪽은 전월 대비', none, '#d23a32') }}
+  {{ hcard('식량·과일 생산자물가', [('감귤', K.ppi_tang), ('보리쌀', K.ppi_barley), ('포도', K.ppi_grp), ('감자', K.ppi_ptt), ('복숭아', K.ppi_pch), ('감', K.ppi_pers), ('고구마', K.ppi_swp)], '2020=100', '농가 출하 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#d23a32') }}
+  {{ hcard('특용작물·화훼·임산물 생산자물가', [('산나물', K.ppi_wvg), ('인삼', K.ppi_gsg), ('들깨', K.ppi_peri), ('절화류', K.ppi_cflw), ('참깨', K.ppi_sesa), ('한약재료', K.ppi_herbm), ('분화류', K.ppi_pflw), ('밤', K.ppi_chest)], '2020=100', '농가 출하 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#d23a32') }}
  </div>
  </div></details>
 

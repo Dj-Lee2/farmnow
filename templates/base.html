@@ -401,9 +401,26 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 @media(max-width:760px){.stc-c{flex-basis:86%}.stc-tr{gap:10px}.kp4.stc-c .s span:first-child{display:inline}}
 @media(prefers-reduced-motion:reduce){.stc-tr{transition:none}}
 /* 통계 탭 */
-.sg-nav{display:flex;gap:6px;flex-wrap:wrap;margin:-2px 0 6px;position:sticky;top:72px;z-index:5;padding:8px 0;background:var(--bg)}
-.sg-nav a{padding:6px 12px;border-radius:999px;background:var(--card);font-size:0.875rem;color:#444;box-shadow:0 0 0 1px oklch(0 0 0 / 0.05)}
-@media(hover:hover) and (pointer:fine){.sg-nav a:hover{color:var(--ink);box-shadow:0 0 0 1px oklch(0 0 0 / 0.12)}}
+.sg-bar{display:flex;justify-content:flex-end;margin:-6px 0 10px}
+.sg-all{font:inherit;font-size:0.875rem;padding:6px 14px;border-radius:999px;border:0;background:var(--card);color:#444;box-shadow:0 0 0 1px oklch(0 0 0 / 0.06);cursor:pointer;transition:transform .16s ease-out,box-shadow .16s}
+.sg-all:active{transform:scale(0.97)}
+.sg-grp{background:var(--card);border-radius:14px;box-shadow:0 0 0 1px oklch(0 0 0 / 0.05);margin-bottom:12px;scroll-margin-top:90px}
+.sg-grp>summary{list-style:none;display:grid;grid-template-columns:minmax(180px,1fr) auto 18px;align-items:center;gap:20px;padding:18px 22px;cursor:pointer;border-radius:14px;-webkit-tap-highlight-color:transparent}
+.sg-grp>summary::-webkit-details-marker{display:none}
+.sg-grp>summary:focus-visible{outline:2px solid #1c7a45;outline-offset:2px}
+.sg-tt b{display:block;font-size:1.125rem;font-weight:500;color:var(--ink)}.sg-tt small{font-size:0.8125rem;color:var(--mute)}
+.sg-ks{display:flex;gap:28px}
+.sg-k{display:flex;flex-direction:column;min-width:108px}.sg-k small{font-size:0.75rem;color:var(--mute)}
+.sg-k b{font-size:1.125rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}.sg-k b small{font-size:0.75rem;color:var(--mute);margin-left:2px}
+.sg-k em{font-style:normal;font-size:0.75rem;font-variant-numeric:tabular-nums}
+.sg-cv{color:var(--mute);transition:transform .22s cubic-bezier(.23,1,.32,1)}
+.sg-grp[open]>summary .sg-cv{transform:rotate(180deg)}
+.sg-grp[open]>summary{border-bottom:1px solid oklch(0 0 0 / 0.06);border-radius:14px 14px 0 0}
+@media(hover:hover) and (pointer:fine){.sg-grp>summary:hover .sg-cv{color:var(--ink)}.sg-grp:not([open])>summary:hover{background:oklch(0 0 0 / 0.015)}.sg-all:hover{color:var(--ink)}}
+.sg-body{padding:4px 18px 18px;background:var(--bg);border-radius:0 0 14px 14px}
+.sg-grp[open] .sg-body{animation:sgIn .26s cubic-bezier(.23,1,.32,1)}
+@keyframes sgIn{from{opacity:0;transform:translateY(-6px)}}
+.sg-sub{font-size:1rem;font-weight:500;color:var(--ink);margin:16px 0 10px}.sg-sub small{font-size:0.75rem;color:var(--mute);margin-left:6px;font-weight:400}
 .sg-h{font-size:1.25rem;font-weight:400;color:var(--ink);margin:26px 0 12px;scroll-margin-top:130px}.sg-h small{font-size:0.8125rem;color:var(--mute);margin-left:6px}
 .sg-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .kp4.sg-c .s{flex-wrap:wrap;gap:4px 12px;white-space:normal}.kp4.sg-c .s span{overflow:visible}.sg-c .s span:last-child{margin-left:auto}
@@ -411,9 +428,9 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 .sg-ch{margin-top:auto;padding-top:6px}.sg-ch svg.msv{height:96px}
 .sg-ax{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--mute);margin-top:4px}
 .sg-bars td{padding:7px 2px}.sg-bars td.hb{width:55%}
-.sg-src{margin-top:22px}
+.sg-src{margin-top:18px}
 @media(max-width:1100px){.sg-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.sg-g{grid-template-columns:minmax(0,1fr);gap:10px}.sg-ch svg.msv{height:64px}.sg-c.sg-w{grid-column:auto}.sg-nav{top:118px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.sg-nav a{white-space:nowrap}.kp4.sg-c .s span:first-child{display:inline}.sg-h{scroll-margin-top:170px}}
+@media(max-width:760px){.sg-g{grid-template-columns:minmax(0,1fr);gap:10px}.sg-ch svg.msv{height:64px}.sg-c.sg-w{grid-column:auto}.sg-grp>summary{grid-template-columns:1fr 18px;gap:12px;padding:16px}.sg-ks{grid-column:1/-1;grid-row:2;gap:14px;justify-content:space-between}.sg-k{min-width:0}.sg-k b{font-size:1rem}.sg-body{padding:2px 10px 12px}.kp4.sg-c .s span:first-child{display:inline}.sg-h{scroll-margin-top:170px}}
 @media(prefers-reduced-motion:reduce){.tk.run .tk-tr,html.js .dash>.card,.price.flip span{animation:none}.pill .roll.sw{translate:none;filter:none}.btn-blue:active,.btn-line:active,.ico:active,.more:active,.pnav button:active,.ptab button:active,.tabs button:active,.hot a:active,.coin:active,.pill .lens:active,.hd nav a:active{scale:none}html.js .tk{overflow-x:auto}.rot{display:none}td.bar{transition:none}html.js .bc i.on,html.js .dbars i,html.js .kpis>.kp4{animation:none}#svg .tip,#svg .bk .lift,svg.msv rect.b{transition:none}.mvt tr.pick:hover .hbar i{animation:none}.hbar i{transition:none}html.js .hbar:not(.go) i{width:var(--w)}.pnav .pp svg{transition:none}html.js .dv:not(.go) i{transform:none}.dv i{transition:none}}
 /* 공통 버튼 효과음: 기존 머리글 안에서 켜기·끄기 */
 .header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}

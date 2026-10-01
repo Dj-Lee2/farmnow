@@ -9,19 +9,25 @@
   <div class="s"><span>{{ note or (s.survey ~ ' · ' ~ ('전 분기 대비' if s.se == 'Q' else '전년 대비')) }}</span><span>{{ lab[-1] }}</span></div>
   <div class="sg-ch">{{ s.vals|mini(uid, col, lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div>
  </section>{% endif %}{% endmacro %}
+{% macro kv(label, s, v=none, d=none) %}{% if s %}<span class="sg-k"><small>{{ label }}</small><b>{% if v is not none %}{{ v }}{% else %}{{ num(s.vals[-1], s.unit) }}{% endif %}</b>{% if d is not none %}{{ d }}{% else %}{{ delta(s) }}{% endif %}</span>{% endif %}{% endmacro %}
+{% macro head(id, title, desc, n) %}<summary><span class="sg-tt"><b>{{ title }}</b><small>{{ desc }} · 카드 {{ n }}장</small></span><span class="sg-ks">{{ caller() }}</span><svg class="sg-cv" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>{% endmacro %}
 {% block content %}
 {% set K = kstat %}
 <div class="wrap page sg">
  <div class="page-hd"><h1>농업 통계</h1><small>국가데이터처 KOSIS{% if kstat_at %} · {{ kstat_at }} 수집{% endif %}</small></div>
  {% if K %}
- <nav class="sg-nav" aria-label="통계 분야"><a href="#s-farm">농가</a><a href="#s-econ">농가경제</a><a href="#s-price">가격</a><a href="#s-land">생산·면적</a><a href="#s-live">축산</a><a href="#s-cost">생산비·수익성</a><a href="#s-cons">소비</a></nav>
+{% set hh = [] %}{% if K.farm_pop and K.farms %}{% for y in K.farms.years %}{% if y in K.farm_pop.years %}{% set _ = hh.append(K.farm_pop.vals[K.farm_pop.years.index(y)] / K.farms.vals[loop.index0]) %}{% endif %}{% endfor %}{% endif %}
+{% set tr = [] %}{% set tl = [] %}{% if K.sell_idx and K.buy_idx %}{% for p in K.sell_idx.years %}{% if p in K.buy_idx.years %}{% set b = K.buy_idx.vals[K.buy_idx.years.index(p)] %}{% if b %}{% set _ = tr.append(K.sell_idx.vals[loop.index0] / b * 100) %}{% set _ = tl.append(p|prd) %}{% endif %}{% endif %}{% endfor %}{% endif %}{% set trd = (tr[-1] - tr[-2]) if tr|length > 1 else none %}
+{% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
+ <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <h2 class="sg-h" id="s-farm">농가</h2>
- <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if K.farm_pop and K.farms %}{% set hh = [] %}{% for y in K.farms.years %}{% if y in K.farm_pop.years %}{% set _ = hh.append(K.farm_pop.vals[K.farm_pop.years.index(y)] / K.farms.vals[loop.index0]) %}{% endif %}{% endfor %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·인구·소득·자산·부채', 9) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <div class="sg-body">
+ <h3 class="sg-sub">농가</h3>
+ <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
   <section class="kp4 sg-c"><div class="t">농가당 가구원 수{{ link(K.farm_pop) }}</div><div class="v">{{ '{:.2f}'.format(hh[-1]) }}<small>명</small></div><div class="s"><span>농가인구 ÷ 농가 수</span><span>{{ K.farms.years[-1]|prd }}</span></div>
    <div class="sg-ch">{{ hh|mini('g3', '#1c7a45', K.farms.years|map('prd')|list, '명') }}<div class="sg-ax"><span>{{ K.farms.years[0]|prd }}</span><span>{{ K.farms.years[-1]|prd }}</span></div></div></section>{% endif %}</div>
-
- <h2 class="sg-h" id="s-econ">농가경제 <small>농가 평균</small></h2>
+ <h3 class="sg-sub">농가경제 <small>농가 평균</small></h3>
  <div class="sg-g">
   {% if K.farm_income %}{% set parts = [('농업소득', K.agri_income), ('농외소득', K.nonagri_income), ('이전소득', K.transfer_income)]|selectattr('1')|list %}{% set s = K.farm_income %}{% set lab = s.years|map('prd')|list %}
   <section class="kp4 sg-c"><div class="t">농가소득과 구성{{ link(s) }}</div>
@@ -31,17 +37,23 @@
    <div class="sg-ch">{{ s.vals|mini('g4', '#1c7a45', lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}
   {{ card('agri_ratio', 'g5', '농업소득 ÷ 농업총수입') }}{{ card('disposable', 'g6') }}{{ card('spending', 'g7') }}{{ card('assets', 'g8') }}{{ card('debt', 'g9', none, '#b04a07') }}
  </div>
+ </div></details>
 
- <h2 class="sg-h" id="s-price">가격 <small>분기</small></h2>
+ <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·판매·구입가격지수', 3) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
+ <div class="sg-body">
+ <h3 class="sg-sub">가격 <small>분기</small></h3>
  <div class="sg-g">
-  {% if K.sell_idx and K.buy_idx %}{% set tr = [] %}{% set tl = [] %}{% for p in K.sell_idx.years %}{% if p in K.buy_idx.years %}{% set b = K.buy_idx.vals[K.buy_idx.years.index(p)] %}{% if b %}{% set _ = tr.append(K.sell_idx.vals[loop.index0] / b * 100) %}{% set _ = tl.append(p|prd) %}{% endif %}{% endif %}{% endfor %}{% set d = (tr[-1] - tr[-2]) if tr|length > 1 else none %}
+  {% if tr %}{% set d = trd %}
   <section class="kp4 sg-c"><div class="t">농가 교역조건{{ link(K.sell_idx) }}</div><div class="v">{{ '{:.1f}'.format(tr[-1]) }} <em class="{{ 'up' if d and d > 0 else 'down' if d and d < 0 else '' }}">{{ ('+' if d and d > 0 else '') ~ ('{:.1f}'.format(d) if d is not none else '–') }}p</em></div>
    <div class="s"><span>판매가격지수 ÷ 구입가격지수 × 100 · {{ '100 미만이면 사는 값이 더 올랐음' if tr[-1] < 100 else '100 초과면 파는 값이 더 올랐음' }}</span><span>{{ tl[-1] }}</span></div>
    <div class="sg-ch">{{ tr|mini('g10', '#2458d6' if tr[-1] < 100 else '#d23a32', tl, '') }}<div class="sg-ax"><span>{{ tl[0] }}</span><span>{{ tl[-1] }}</span></div></div></section>{% endif %}
   {{ card('sell_idx', 'g11', '농산물을 팔 때 받는 값', '#d23a32') }}{{ card('buy_idx', 'g12', '비료·사료·인건비 등 사는 값', '#b04a07') }}
  </div>
+ </div></details>
 
- <h2 class="sg-h" id="s-land">생산·면적</h2>
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지면적·재배면적·쌀 생산과 소비', 6) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <div class="sg-body">
+ <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
   {{ card('area', 'g13', ('논 ' ~ K.area_paddy.vals[-1]|big ~ ' · 밭 ' ~ K.area_upland.vals[-1]|big ~ ' 헥타르') if K.area_paddy and K.area_upland else none) }}{{ card('util_rate', 'g14', '재배면적 ÷ 경지면적 · 이모작이면 100 초과') }}{{ card('rice', 'g15', '미곡(정곡) 생산량') }}
   {% set grp = [('식량작물', K.area_food), ('벼', K.area_rice), ('채소', K.area_veg), ('과수', K.area_fruit), ('시설작물', K.area_green)]|selectattr('1')|list %}
@@ -52,16 +64,22 @@
    </tbody></table>
    <div class="s"><span>막대는 면적 크기 · 오른쪽은 전년 대비</span><span>{{ grp[0][1].years[-1]|prd }}</span></div></section>{% endif %}
  </div>
-
- <h2 class="sg-h" id="s-live">축산 <small>분기</small></h2>
- <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
-
- <h2 class="sg-h" id="s-cost">생산비·수익성 <small>한 마리 기준</small></h2>
- <div class="sg-g">{{ card('pig_net', 'g21', ('총수입 ' ~ '{:,.1f}'.format(K.pig_rev.vals[-1] / 1e4) ~ '만 · 비용 ' ~ '{:,.1f}'.format(K.pig_cost.vals[-1] / 1e4) ~ '만 원') if K.pig_rev and K.pig_cost else none) }}{{ card('dairy_net', 'g22') }}{{ card('calf_cost', 'g23', none, '#b04a07') }}</div>
-
- <h2 class="sg-h" id="s-cons">소비 <small>1인당 연간</small></h2>
+ <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
+ </div></details>
 
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·계란·생산비·순수익', 8) %}{{ kv('한우', K.hanwoo) }}{{ kv('닭', K.chicken) }}{{ kv('비육돈 순수익', K.pig_net) }}{% endcall %}
+ <div class="sg-body">
+ <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
+ <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
+ <h3 class="sg-sub">생산비·수익성 <small>한 마리 기준</small></h3>
+ <div class="sg-g">{{ card('pig_net', 'g21', ('총수입 ' ~ '{:,.1f}'.format(K.pig_rev.vals[-1] / 1e4) ~ '만 · 비용 ' ~ '{:,.1f}'.format(K.pig_cost.vals[-1] / 1e4) ~ '만 원') if K.pig_rev and K.pig_cost else none) }}{{ card('dairy_net', 'g22') }}{{ card('calf_cost', 'g23', none, '#b04a07') }}</div>
+ </div></details>
+
+ <script>(()=>{const g=[...document.querySelectorAll('.sg-grp')],b=document.getElementById('sgAll');if(!b)return;
+ const sync=()=>{const all=g.every(d=>d.open);b.textContent=all?'모두 접기':'모두 펼치기';b.setAttribute('aria-pressed',all)};
+ b.addEventListener('click',()=>{const o=!g.every(d=>d.open);g.forEach(d=>d.open=o);sync()});g.forEach(d=>d.addEventListener('toggle',sync));
+ const h=location.hash&&document.getElementById(location.hash.slice(1));if(h){const d=h.closest('.sg-grp');if(d){d.open=true;sync();d.scrollIntoView()}}})()</script>
  <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
  {% else %}<p class="empty">통계 미수집</p>{% endif %}
 </div>

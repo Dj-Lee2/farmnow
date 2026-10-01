@@ -99,3 +99,8 @@ def test_pick_series_quarterly_keeps_full_period():
 def test_f_prd():
     from farmnow.build import f_prd
     assert f_prd("2025") == "2025년" and f_prd("202602") == "26년 2분기"
+
+
+def test_f_big():
+    from farmnow.build import f_big
+    assert f_big(201271652) == "2.01억" and f_big(3153897) == "315.4만" and f_big(72389) == "72,389"

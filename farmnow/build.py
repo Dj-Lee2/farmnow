@@ -22,7 +22,7 @@ SITE = ROOT / "site"
 DATA = ROOT / "data"
 WEEKDAY = "월화수목금토일"
 NAV = [("index.html", "홈"), ("news.html", "속보"), ("releases.html", "기관발표"), ("market.html", "시세"), ("stocks.html", "국제·증시"),
-       ("alerts.html", "발령"), ("brief.html", "브리핑"), ("about.html", "정보")]
+       ("stats.html", "통계"), ("alerts.html", "발령"), ("brief.html", "브리핑"), ("about.html", "정보")]
 CATEGORIES = [("all", "전체"), ("weather", "특보"), ("price", "가격"), ("legislation", "정책·법령"),
               ("subsidy_notice", "공고"), ("org_release", "보도·설명"), ("pest", "병해충"), ("tech_research", "기술")]
 TAB_OF = {"stats": "org_release"}          # 탭이 따로 없는 카테고리가 속할 탭
@@ -93,6 +93,15 @@ def f_prd(p) -> str:
     return f"{p[2:4]}년 {int(p[4:])}분기" if len(p) == 6 else f"{p}년"
 
 
+def f_big(v) -> str:
+    """큰 수를 억·만 단위로: 201,271,652 → '2.01억', 3,153,897 → '315.4만'."""
+    if v is None:
+        return "–"
+    if abs(v) >= 1e8:
+        return f"{v / 1e8:,.2f}억"
+    return f"{v / 1e4:,.1f}만" if abs(v) >= 1e5 else f"{v:,.0f}"
+
+
 def f_man(v) -> str:
     """큰 통계값은 만 단위: 974,000 → '97.4만'."""
     if v is None:
@@ -120,7 +129,7 @@ def cat_tab(it: NewsItem) -> str:
 
 def make_env() -> Environment:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html", "xml"]))
-    env.filters.update(prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp)
+    env.filters.update(big=f_big, prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp)
     env.policies["json.dumps_kwargs"] = {"ensure_ascii": False, "separators": (",", ":")}
     return env
 
@@ -257,8 +266,11 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         stocks["movers"] = sorted(sec.get("kr_stocks", []) + sec.get("world_stocks", []), key=lambda r: -abs(r["pct"]))
     pstat = price_stats(tickers)
     stp = DATA / "stats.json"
-    kstat = json.loads(stp.read_text(encoding="utf-8")).get("series", {}) if stp.exists() else {}
-    nav = [n for n in NAV if n[0] != "stocks.html" or stocks]   # 시세를 한 번도 받지 못했으면 메뉴에서 뺀다
+    kraw = json.loads(stp.read_text(encoding="utf-8")) if stp.exists() else {}
+    kstat = kraw.get("series", {})
+    kstat_at = kraw.get("fetched_at", "")[5:10].replace("-", ".") if kraw.get("fetched_at") else ""
+    # 시세·통계를 한 번도 받지 못했으면 그 메뉴는 뺀다
+    nav = [n for n in NAV if (n[0] != "stocks.html" or stocks) and (n[0] != "stats.html" or kstat)]
 
     active = warn["active"] if warn else []
     active_kinds = None if warn is None else set().union(*[warning_kinds(a["kind"]) for a in active]) if active else set()
@@ -300,7 +312,7 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         pest=_current(pests, now), weekly=_current(weeklies, now), pests=pests,
         latest_by_board=latest_by_board, status=status, failed=failed, orgs=orgs,
         sources_cfg={s["id"]: s for s in cfg["sources"]}, shown_ids={s["id"] for s in shown}, base_url=base_url,
-        release_cats=RELEASE_CATS, pstat=pstat, kstat=kstat,
+        release_cats=RELEASE_CATS, pstat=pstat, kstat=kstat, kstat_at=kstat_at,
         top5_js=[{"h": it.headline, "u": f"n-{it.id}.html"} for it in t5],
     )
     SITE.mkdir(exist_ok=True)

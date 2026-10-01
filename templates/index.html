@@ -52,7 +52,7 @@
  </div>
 
  {% if pstat or kstat %}
- <div class="sec st-h" id="stats"><h3>농업 통계</h3><small>{{ '국가데이터처 KOSIS · ' if kstat }}aT KAMIS</small></div>
+ <div class="sec st-h" id="stats"><h3>농업 통계</h3><small>{{ '국가데이터처 KOSIS · ' if kstat }}aT KAMIS</small>{% if kstat %}<a class="go" href="./stats.html">전체 통계 →</a>{% endif %}</div>
  {% set ks = ['farms', 'farm_pop', 'area', 'rice']|select('in', kstat)|list %}
  {% if ks %}<div class="kpis st4">
   {% for sid in ks %}{% set s = kstat[sid] %}{% if sid == 'area' and kstat.area_paddy and kstat.area_upland %}{% set sub = '논 ' ~ kstat.area_paddy.vals[-1]|man ~ ' · 밭 ' ~ kstat.area_upland.vals[-1]|man %}{% else %}{% set sub = none %}{% endif %}

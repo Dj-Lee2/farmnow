@@ -137,6 +137,24 @@ sources:
       - {id: pig_net, title: 비육돈 두당 순수익, tbl: DT_1EE307, itm: "^평균$", want: ["^순수익"], survey: 축산물생산비조사}
       - {id: pig_rev, title: 비육돈 두당 총수입, tbl: DT_1EE307, itm: "^평균$", want: ["^총수입"], survey: 축산물생산비조사}
       - {id: pig_cost, title: 비육돈 두당 비용, tbl: DT_1EE307, itm: "^평균$", want: ["^비용합계"], survey: 축산물생산비조사}
+      # 통계 탭(stats.html) 전용
+      - {id: disposable, title: 농가처분가능소득, tbl: DT_1EA1201, itm: "^농가처분가능소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: spending, title: 가계지출, tbl: DT_1EA1201, itm: "^가계지출", want: ["^평균$"], survey: 농가경제조사}
+      - {id: assets, title: 농가자산, tbl: DT_1EA1201, itm: "^자산$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: debt, title: 농가부채, tbl: DT_1EA1201, itm: "^부채$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: agri_ratio, title: 농업소득률, tbl: DT_1EA1201, itm: "^농업소득률$", want: ["^평균$"], unit: "%", survey: 농가경제조사}
+      - {id: util_rate, title: 경지이용률, tbl: DT_1ET0040, itm: "^전체 경지이용률$", unit: "%", survey: 농작물생산조사}
+      - {id: area_rice, title: 벼 재배면적, tbl: DT_1ET0040, itm: "^벼$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: area_food, title: 식량작물 재배면적, tbl: DT_1ET0040, itm: "^식량작물$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: area_veg, title: 채소 재배면적, tbl: DT_1ET0040, itm: "^채소$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: area_fruit, title: 과수 재배면적, tbl: DT_1ET0040, itm: "^과수$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: area_green, title: 시설작물 재배면적, tbl: DT_1ET0040, itm: "^시설작물$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: beef, title: 육우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^육우:마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: chicken, title: 닭 사육 마릿수, tbl: DT_1EO061, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: eggs, title: 하루 평균 계란 생산량, tbl: DT_1EO091, se: Q, periods: 12, itm: "^생산량$", unit: 개, survey: 가축동향조사}
+      - {id: calf_cost, title: 송아지 두당 생산비, tbl: DT_1EE014, itm: "^평균$", want: ["^생산비$"], survey: 축산물생산비조사}
+      - {id: dairy_net, title: 젖소 두당 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^평균$"], survey: 축산물생산비조사}
+      - {id: grain_cons, title: 1인당 양곡 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^양곡계$"], survey: 양곡소비량조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -283,7 +283,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·저수지·양배수장·농업용수 개발', 47) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·저수지·양배수장·농업용수 개발·기반정비 사업비', 57) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -330,6 +330,19 @@
   {{ hcard('시설 종류별 준공 면적', [('양배수장', K.awd_pp_ha), ('보', K.awd_weir_ha), ('저수지', K.awd_rsv_ha), ('관정', K.awd_well_ha)], 'ha', '괄호는 전체 준공 면적 중 비중 · 오른쪽은 전년 대비', K.awd_ha.vals[-1] if K.awd_ha else none, '#5b8bd9') }}
   {{ hcard('시설 종류별 준공 사업비', [('양배수장', K.awd_pp_c), ('저수지', K.awd_rsv_c), ('보', K.awd_weir_c), ('관정', K.awd_well_c)], '천원', '괄호는 전체 사업비 중 비중 · 오른쪽은 전년 대비', K.awd_cost.vals[-1] if K.awd_cost else none, '#5b8bd9') }}
   {{ hcard('도별 농업용수개발 준공 면적', [('전남', K.awd_jn), ('강원', K.awd_gw), ('충남', K.awd_cn), ('경남', K.awd_gn), ('경기', K.awd_gg), ('경북', K.awd_gb), ('충북', K.awd_cb), ('전북', K.awd_jb)], 'ha', '괄호는 전국 준공 면적 중 비중 · 해마다 끝나는 사업이 달라 등락이 큼 · 오른쪽은 전년 대비', K.awd_ha.vals[-1] if K.awd_ha else none, '#5b8bd9') }}
+</div>
+<h3 class="sg-sub">농업생산기반정비 사업비 <small>한국농어촌공사 농업생산기반정비사업 통계 · 그해 집행한 사업비</small></h3>
+<div class="sg-g">
+  {{ card('pbi_total', 'g82', ('국고 ' ~ num(K.pbi_nat.vals[-1], '천원')|striptags ~ ' · 지방비 ' ~ num(K.pbi_loc.vals[-1], '천원')|striptags) if K.pbi_nat and K.pbi_loc else none, '#2458d6') }}
+  {{ rcard('정비 사업비 중 국고 비중', K.pbi_nat, K.pbi_total, 'g83', '국고보조금 ÷ 집행 사업비', '#2458d6') }}
+  {{ card('pbi_loc', 'g84', '시·도와 시·군이 부담한 사업비', '#2458d6') }}
+  {{ card('pbi_imp', 'g85', '경지정리·배수개선·노후 수리시설 개보수 등', '#2458d6') }}
+  {{ card('pbi_wat', 'g86', '저수지·양배수장·관정 등 용수원 개발과 관리', '#2458d6') }}
+  {{ rcard('정비 사업비 중 용수개발 비중', K.pbi_wat, K.pbi_total, 'g87', '농촌용수개발사업 ÷ 집행 사업비', '#2458d6') }}
+  {{ hcard('사업별 기반정비 사업비', [('기반개량', K.pbi_imp), ('농촌용수개발', K.pbi_wat), ('농지확대개발', K.pbi_ext)], '천원', '괄호는 전체 집행 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_total.vals[-1] if K.pbi_total else none, '#5b8bd9') }}
+  {{ hcard('농촌용수개발 종류별 사업비', [('다목적(중규모)', K.rud_mid), ('기타 사업', K.rux_all), ('소규모', K.rud_sm), ('관리자동화', K.rud_au), ('지표수 보강', K.rud_sf), ('한발 대비', K.rud_dr)], '천원', '괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
+  {{ hcard('도별 농촌용수개발 사업비', [('전남', K.rup_jn), ('경남', K.rup_gn), ('경북', K.rup_gb), ('전북', K.rup_jb), ('충남', K.rup_cn), ('경기', K.rup_gg), ('충북', K.rup_cb), ('강원', K.rup_gw)], '천원', '기타 사업 제외 5종 합 · 괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
+  {{ hcard('농촌용수 기타 사업 내역', [('용수이용체계 재편', K.rux_reorg), ('용수 수질조사·개선', K.rux_wq), ('대형 치수능력 증대', K.rux_flood), ('제주 용수 광역화', K.rux_jj), ('지하수 자원관리', K.rux_gw), ('임진강 용수공급', K.rux_imj)], '천원', '괄호는 기타 사업비 중 비중 · 오른쪽은 전년 대비', K.rux_all.vals[-1] if K.rux_all else none, '#5b8bd9') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

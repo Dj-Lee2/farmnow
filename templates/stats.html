@@ -381,7 +381,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가', 14) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가·곡물·먹거리 수입물가·국산 농산물 생산자물가', 21) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">가격 <small>분기</small></h3>
  <div class="sg-g">
@@ -405,6 +405,16 @@
   {{ card('ipi_nh3', 'pf6', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_nh3.vals[-1] / K.ipi_nh3.vals[-13] - 1) * 100) ~ '%') if K.ipi_nh3 and K.ipi_nh3.vals|length > 12 and K.ipi_nh3.vals[-13] else none), '#b04a07') }}
   {{ hcard('농자재 생산자물가 · 품목별', [('복합비료', K.ppi_cfert), ('제초제', K.ppi_herb), ('돼지 배합사료', K.ppi_fpig), ('닭 배합사료', K.ppi_fchk), ('소 배합사료', K.ppi_fcow), ('농업용 살균제', K.ppi_fun), ('유기질비료', K.ppi_ofert), ('농업용 건조기', K.ppi_dry), ('농업용 살충제', K.ppi_ins), ('농업용 콤바인', K.ppi_comb), ('농업용 트랙터', K.ppi_trac)], '2020=100', '국내 공장 출고 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
   {{ hcard('비료 원료·사료작물 수입물가', [('암모니아', K.ipi_nh3), ('칼리질비료', K.ipi_pot), ('인광석(천연인산칼슘)', K.ipi_phos), ('요소', K.ipi_urea), ('사료작물', K.ipi_fdc)], '2020=100', '원화 기준 수입 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">곡물·먹거리 수입물가와 국산 생산자물가 <small>월별 · 한국은행 · 2020=100</small></h3>
+ <div class="sg-g">
+  {{ card('ipi_corn', 'pf7', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_corn.vals[-1] / K.ipi_corn.vals[-13] - 1) * 100) ~ '%') if K.ipi_corn and K.ipi_corn.vals|length > 12 and K.ipi_corn.vals[-13] else none), '#b04a07') }}
+  {{ card('ipi_sbm', 'pf8', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_sbm.vals[-1] / K.ipi_sbm.vals[-13] - 1) * 100) ~ '%') if K.ipi_sbm and K.ipi_sbm.vals|length > 12 and K.ipi_sbm.vals[-13] else none), '#b04a07') }}
+  {{ card('ppi_pe', 'pf9', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_pe.vals[-1] / K.ppi_pe.vals[-13] - 1) * 100) ~ '%') if K.ppi_pe and K.ppi_pe.vals|length > 12 and K.ppi_pe.vals[-13] else none), '#b04a07') }}
+  {{ hcard('곡물·사료 원료 수입물가', [('밀', K.ipi_wht), ('옥수수', K.ipi_corn), ('콩', K.ipi_soy), ('대두박', K.ipi_sbm), ('쌀', K.ipi_rice), ('원당', K.ipi_sug), ('식물성유박', K.ipi_oilc)], '2020=100', '원화 기준 수입 가격 · 2020=100 · 대두박·유박은 사료와 유기질비료 원료 · 오른쪽은 전월 대비', none, '#b04a07') }}
+  {{ hcard('축산물·과일 수입물가', [('닭고기', K.ipi_poul), ('쇠고기', K.ipi_beef), ('과일', K.ipi_frt), ('돼지고기', K.ipi_pork)], '2020=100', '원화 기준 수입 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
+  {{ hcard('국산 농산물 생산자물가', [('사과', K.ppi_apple), ('마늘', K.ppi_gar), ('배', K.ppi_pear), ('쌀', K.ppi_rice), ('생우유', K.ppi_milk), ('콩', K.ppi_soy), ('배추', K.ppi_cab), ('양파', K.ppi_onion)], '2020=100', '국내 생산자 출하 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#d23a32') }}
+  {{ hcard('시설·축산 자재 생산자물가', [('플라스틱파이프', K.ppi_pipe), ('폴리염화비닐필름(PVC)', K.ppi_pvc), ('폴리에틸렌필름(PE)', K.ppi_pe), ('사료첨가제', K.ppi_fadd)], '2020=100', '하우스 파이프·피복·멀칭 필름 원자재 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
  </div>
  </div></details>
 

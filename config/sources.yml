@@ -1194,6 +1194,29 @@ sources:
       - {id: ipi_nh3, title: 암모니아 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^암모니아$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
       - {id: ipi_phos, title: 인광석(천연인산칼슘) 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^천연인산칼슘$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
       - {id: ipi_fdc, title: 사료작물 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^사료작물$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_rice, title: 쌀 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^쌀$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_wht, title: 밀 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^밀$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_corn, title: 옥수수 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^옥수수$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_soy, title: 콩 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^콩$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_sbm, title: 대두박 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^대두박$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_oilc, title: 식물성유박 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^식물성유박$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_sug, title: 원당 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^원당$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_frt, title: 과일 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^과일$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_beef, title: 쇠고기 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^쇠고기$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_pork, title: 돼지고기 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^돼지고기$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_poul, title: 닭고기 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^닭고기$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ppi_fadd, title: 사료첨가제 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^사료첨가제$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pe, title: 폴리에틸렌필름(PE) 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^폴리에틸렌필름$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pvc, title: 폴리염화비닐필름(PVC) 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^폴리염화비닐필름$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pipe, title: 플라스틱파이프 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^플라스틱파이프$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_rice, title: 쌀 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^쌀$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_soy, title: 콩 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^콩$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_gar, title: 마늘 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^마늘$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_onion, title: 양파 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^양파$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_cab, title: 배추 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^배추$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_apple, title: 사과 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^사과$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_pear, title: 배 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^배$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_milk, title: 생우유 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^생우유$"], unit: "2020=100", survey: 생산자물가지수}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

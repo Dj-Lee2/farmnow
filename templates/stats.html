@@ -139,7 +139,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·비료·농약 사용량·가축분뇨', 10) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼 비료 투입·비료·농약 사용량·유기농 국제 비교·가축분뇨', 17) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -154,10 +154,20 @@
  <div class="sg-g">
   {{ hcard('도별 친환경 인증 면적', [('전남', K.ecr_jn), ('경기', K.ecr_gg), ('전북', K.ecr_jb), ('경남', K.ecr_gn), ('충남', K.ecr_cn), ('경북', K.ecr_gb), ('강원', K.ecr_gw), ('충북', K.ecr_cb), ('제주', K.ecr_jj)], 'ha', '괄호는 전국 인증 면적 중 비율 · 오른쪽은 전년 대비', K.eco_area.vals[-1] if K.eco_area else none, '#1c7a45') }}
  </div>
+ <h3 class="sg-sub">논벼 비료 투입량 <small>10a(300평)당 · 농산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('rf_org', 'e7', ('퇴비 등 유기질 · 무기질비료의 ' ~ '{:.1f}'.format(K.rf_org.vals[-1] / K.rf_inorg.vals[-1]) ~ '배') if K.rf_org and K.rf_inorg and K.rf_inorg.vals[-1] else '퇴비 등 유기질 비료', '#7a6a3a') }}
+  {{ card('rf_inorg', 'e8', ('복합비료 ' ~ '{:.1f}'.format(K.rf_cmp.vals[-1]) ~ ' kg 포함 · 실물 무게') if K.rf_cmp else '화학비료 실물 무게', '#b04a07') }}
+  {{ card('rf_soil', 'e9', '석회·규산 등 토양개량제', '#b07a3a') }}
+  {{ hcard('논벼 무기질비료 구성', [('복합비료', K.rf_cmp), ('토양개량제', K.rf_soil), ('질소질', K.rf_n), ('기타 무기질', K.rf_etc), ('인산질', K.rf_p), ('가리질', K.rf_k)], 'kg', '10a당 실물 무게 · 괄호는 무기질비료 중 비중 · 오른쪽은 전년 대비', K.rf_inorg.vals[-1] if K.rf_inorg else none, '#b04a07') }}
+  {{ hcard('도별 논벼 유기질비료 투입량', [('경기', K.rfo_gg), ('충북', K.rfo_cb), ('강원', K.rfo_gw), ('충남', K.rfo_cn), ('경남', K.rfo_gn), ('전북', K.rfo_jb), ('전남', K.rfo_jn), ('경북', K.rfo_gb)], 'kg', '10a당 퇴비 등 유기질비료 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('도별 논벼 무기질비료 투입량', [('강원', K.rfi_gw), ('충북', K.rfi_cb), ('전남', K.rfi_jn), ('충남', K.rfi_cn), ('전북', K.rfi_jb), ('경북', K.rfi_gb), ('경남', K.rfi_gn), ('경기', K.rfi_gg)], 'kg', '10a당 화학비료 실물 무게 · 오른쪽은 전년 대비', none, '#b04a07') }}
+ </div>
  <h3 class="sg-sub">비료·농약 국제 비교 <small>농지 1ha당 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">
   {{ hcard('질소비료 사용량', [('중국', K.fz_cn_n), ('대한민국', K.fz_kr_n), ('네덜란드', K.fz_nl_n), ('일본', K.fz_jp_n), ('미국', K.fz_us_n)], 'kg/ha', '농지 1ha당 질소(N) · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('농약 사용량', [('대한민국', K.pe_kr), ('일본', K.pe_jp), ('네덜란드', K.pe_nl), ('미국', K.pe_us), ('중국', K.pe_cn)], 'kg/ha', '농지 1ha당 농약 사용량 · 오른쪽은 전년 대비', none, '#a0605a') }}
+  {{ hcard('유기농 면적 점유율', [('오스트리아', K.og_at), ('이탈리아', K.og_it), ('독일', K.og_de), ('프랑스', K.og_fr), ('네덜란드', K.og_nl), ('대한민국', K.og_kr), ('중국', K.og_cn), ('미국', K.og_us), ('일본', K.og_jp)], '%', '농업면적 중 유기농 면적 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">가축분뇨 자원화 <small>농장에서 직접 퇴비·액비로 만드는 농가</small></h3>
  <div class="sg-g">

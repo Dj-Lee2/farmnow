@@ -501,6 +501,39 @@ sources:
       - {id: wq_dk, title: 덴마크 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^덴마크$"], unit: "%", survey: 국제통계(담수 취수)}
       - {id: wq_nl, title: 네덜란드 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(담수 취수)}
       - {id: wq_de, title: 독일 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^독일$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: rf_inorg, title: 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_n, title: 논벼 10a당 질소질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_p, title: 논벼 10a당 인산질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^인산질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_k, title: 논벼 10a당 가리질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^가리질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_cmp, title: 논벼 10a당 복합비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_soil, title: 논벼 10a당 토양개량제, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_etc, title: 논벼 10a당 기타 무기질, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^기타무기질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rf_org, title: 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^전국평균$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_gg, title: 경기 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경기도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_gw, title: 강원 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(강원)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_cb, title: 충북 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(충청북도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_cn, title: 충남 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(충청남도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_jb, title: 전북 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(전라북도|전북특별자치도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_jn, title: 전남 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(전라남도|전남광주통합특별시)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_gb, title: 경북 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경상북도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfo_gn, title: 경남 논벼 10a당 유기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경상남도)", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_gg, title: 경기 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경기도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_gw, title: 강원 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(강원)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_cb, title: 충북 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(충청북도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_cn, title: 충남 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(충청남도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_jb, title: 전북 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(전라북도|전북특별자치도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_jn, title: 전남 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(전라남도|전남광주통합특별시)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_gb, title: 경북 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경상북도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rfi_gn, title: 경남 논벼 10a당 무기질비료, tbl: DT_1EC0007, itm: "^10a당$", want: ["^(경상남도)", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: og_at, title: 오스트리아 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^오스트리아$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_it, title: 이탈리아 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^이탈리아$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_de, title: 독일 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^독일$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_fr, title: 프랑스 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_nl, title: 네덜란드 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_kr, title: 대한민국 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^(한국|대한민국)$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_cn, title: 중국 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^중국$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_us, title: 미국 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^미국$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: og_jp, title: 일본 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^일본$"], unit: "%", survey: 국제통계(유기농업)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

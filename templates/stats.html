@@ -147,7 +147,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 73) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 75) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -224,6 +224,8 @@
   {{ card('stw_10a', 'e35', '10a(300평)당 볏짚 생산량', '#b08a2e') }}
   {{ card('stw_area', 'e36', '볏짚 생산 기준 논벼 면적', '#b08a2e') }}
   {{ hcard('영농폐비닐 종류별 발생량', [('멀칭용 LDPE', K.vny_mulch), ('HDPE', K.vny_hdpe), ('하우스용 LDPE', K.vny_house), ('기타(PVC·EVA·PO)', K.vny_etc)], '톤', '괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.vny_gen.vals[-1] if K.vny_gen else none, '#7a6a3a') }}
+  {{ hcard('권역별 영농폐비닐 발생량', [('경북·대구', K.vnr_gb), ('전남·광주', K.vnr_jn), ('경남·부산·울산', K.vnr_gn), ('충남·대전·세종', K.vnr_cn), ('전북', K.vnr_jb), ('경기·서울·인천', K.vnr_sgg), ('충북', K.vnr_cb), ('강원', K.vnr_gw), ('제주', K.vnr_jj)], '톤', '괄호는 전국 발생량 중 비중 · 오른쪽은 전년 대비', K.vny_gen.vals[-1] if K.vny_gen else none, '#7a6a3a') }}
+  {{ hcard('권역별 폐농약용기 발생량', [('경북·대구', K.pcr_gb), ('전남·광주', K.pcr_jn), ('경남·부산·울산', K.pcr_gn), ('충남·대전·세종', K.pcr_cn), ('전북', K.pcr_jb), ('경기·서울·인천', K.pcr_sgg), ('충북', K.pcr_cb), ('강원', K.pcr_gw), ('제주', K.pcr_jj)], '개', '빈 농약병·봉지 · 괄호는 전국 발생량 중 비중 · 오른쪽은 전년 대비', K.pcn_gen.vals[-1] if K.pcn_gen else none, '#a0605a') }}
  </div>
  <h3 class="sg-sub">가축분뇨 자원화 <small>퇴비·액비 처리와 농경지 살포</small></h3>
  <div class="sg-g">
@@ -305,7 +307,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·저수지·양배수장·농업용수 개발·기반정비 사업비', 57) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비', 65) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -326,6 +328,17 @@
   {{ hcard('노지 과수 재배면적', [('사과', K.orc_apple), ('복숭아', K.orc_peach), ('감귤', K.orc_citrus), ('떫은감', K.orc_astp), ('포도', K.orc_grape), ('단감', K.orc_swp), ('배', K.orc_pear), ('자두', K.orc_plum), ('매실', K.orc_maesil)], 'ha', '성과수+미과수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('도별 사과 재배면적', [('경북', K.oap_gb), ('경남', K.oap_gn), ('충북', K.oap_cb), ('강원', K.oap_gw), ('전북', K.oap_jb), ('충남', K.oap_cn), ('대구', K.oap_dg), ('경기', K.oap_gg)], 'ha', '괄호는 전국 사과 면적 중 비중 · 오른쪽은 전년 대비', K.orc_apple.vals[-1] if K.orc_apple else none, '#c0392b') }}
   {{ hcard('시설 채소 재배면적', [('수박', K.fac_melon), ('토마토', K.fac_tomato), ('딸기', K.fac_straw), ('참외', K.fac_kmelon), ('오이', K.fac_cuc), ('풋고추', K.fac_pepper), ('상추', K.fac_lettuce), ('호박', K.fac_pumpkin)], 'ha', '비닐하우스·유리온실 등 시설 재배 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">시설재배 농가 <small>농림어업조사 · 시설 종류별 보유 농가 수(여러 시설을 가진 농가는 각각 셈)</small></h3>
+ <div class="sg-g">
+  {{ card('fhs_total', 'fh1', '비닐하우스·온실·육묘장·버섯재배사 등 시설에서 재배하는 농가', '#5fae7a') }}
+  {{ card('fhs_single', 'fh2', ('한 동짜리 비닐하우스 · 자동화 ' ~ K.fhs_single_a.vals[-1]|big ~ '가구 포함') if K.fhs_single_a else '한 동짜리 비닐하우스', '#5fae7a') }}
+  {{ card('fhs_multi', 'fh3', ('여러 동을 이은 비닐하우스 · 자동화 ' ~ K.fhs_multi_a.vals[-1]|big ~ '가구 포함') if K.fhs_multi_a else '여러 동을 이은 비닐하우스', '#3a8a5a') }}
+  {{ rcard('단동 하우스 자동화 비율', K.fhs_single_a, K.fhs_single, 'fh4', '단동 비닐하우스 농가 중 환기·관수 등 자동화 시설을 갖춘 비율', '#5fae7a') }}
+  {{ rcard('연동 하우스 자동화 비율', K.fhs_multi_a, K.fhs_multi, 'fh5', '연동 비닐하우스 농가 중 자동화 시설을 갖춘 비율', '#3a8a5a') }}
+  {{ card('fhs_nursery', 'fh6', ('모종을 기르는 육묘 시설 · 자동화 ' ~ K.fhs_nursery_a.vals[-1]|big ~ '가구 포함') if K.fhs_nursery_a else '모종을 기르는 육묘 시설', '#b08a2e') }}
+  {{ hcard('시설 종류별 보유 농가', [('단동 비닐하우스', K.fhs_single), ('연동 비닐하우스', K.fhs_multi), ('육묘장', K.fhs_nursery), ('버섯재배사', K.fhs_mush), ('기타 시설', K.fhs_etc), ('유리온실', K.fhs_glass)], '가구', '괄호는 시설재배 농가 중 비율(중복 보유라 합이 100%를 넘음) · 오른쪽은 전년 대비', K.fhs_total.vals[-1] if K.fhs_total else none, '#5fae7a') }}
+  {{ hcard('자동화 시설 보유 농가', [('단동 비닐하우스', K.fhs_single_a), ('연동 비닐하우스', K.fhs_multi_a), ('버섯재배사', K.fhs_mush_a), ('육묘장', K.fhs_nursery_a), ('유리온실', K.fhs_glass_a)], '가구', '환기·관수·온도 조절 등을 자동으로 하는 시설 · 오른쪽은 전년 대비', none, '#3a8a5a') }}
  </div>
  <h3 class="sg-sub">농업용수 시설 <small>한국농어촌공사 농업생산기반시설 현황 · 저수지·양배수장</small></h3>
  <div class="sg-g">

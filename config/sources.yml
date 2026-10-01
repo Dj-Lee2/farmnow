@@ -892,6 +892,36 @@ sources:
       - {id: mcp_3m, title: 돼지 분뇨 3개월 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^3개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mcp_6m, title: 돼지 분뇨 6개월 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^6개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mcp_loop, title: 돼지 분뇨 상시 수거(액비 순환 등) 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^상시\\(액비 순환 등\\)$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: fhs_total, title: 시설재배 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^시설재배있는 농가$"}
+      - {id: fhs_single, title: 단동 비닐하우스 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^단동 비닐하우스$"}
+      - {id: fhs_single_a, title: 자동화 단동 비닐하우스 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^단동 비닐하우스\\(자동화\\)$"}
+      - {id: fhs_multi, title: 연동 비닐하우스 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^연동 비닐하우스$"}
+      - {id: fhs_multi_a, title: 자동화 연동 비닐하우스 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^연동 비닐하우스\\(자동화\\)$"}
+      - {id: fhs_glass, title: 유리온실 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^유리온실$"}
+      - {id: fhs_glass_a, title: 자동화 유리온실 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^유리온실\\(자동화\\)$"}
+      - {id: fhs_nursery, title: 육묘장 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^육묘장$"}
+      - {id: fhs_nursery_a, title: 자동화 육묘장 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^육묘장\\(자동화\\)$"}
+      - {id: fhs_mush, title: 버섯재배사 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^버섯재배사$"}
+      - {id: fhs_mush_a, title: 자동화 버섯재배사 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^버섯재배사\\(자동화\\)$"}
+      - {id: fhs_etc, title: 기타 재배시설 보유 농가, tbl: DT_1EA1048, periods: 5, unit: 가구, survey: 농림어업조사, itm: "^기타$"}
+      - {id: vnr_sgg, title: 서울인천경기 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^서울인천경기$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_gw, title: 강원 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^강원$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_cb, title: 충북 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^충북$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_cn, title: 대전세종충남 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^대전세종충남$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_jb, title: 전북 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^전북$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_jn, title: 광주전남 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^광주전남$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_gb, title: 대구경북 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^대구 경북$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_gn, title: 부산울산경남 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^부산 울산 경남$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vnr_jj, title: 제주 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^제주$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: pcr_sgg, title: 서울인천경기 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^서울 인천 경기$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_gw, title: 강원 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^강원$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_cb, title: 충북 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^충북$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_cn, title: 대전세종충남 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^대전 세종 충남$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_jb, title: 전북 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^전북$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_jn, title: 광주전남 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^광주 전남$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_gb, title: 대구경북 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^대구 경북$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_gn, title: 부산울산경남 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^부산 울산 경남$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcr_jj, title: 제주 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^제주$"], unit: 개, survey: 영농폐기물 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

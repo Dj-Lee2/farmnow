@@ -473,6 +473,34 @@ sources:
       - {id: va_pepper, title: 건고추 재배면적, tbl: DT_1ET0291, itm: "^건고추:면적$", unit: ha, survey: 농작물생산조사}
       - {id: va_garlic, title: 마늘 재배면적, tbl: DT_1ET0291, itm: "^마늘:면적$", unit: ha, survey: 농작물생산조사}
       - {id: va_onion, title: 양파 재배면적, tbl: DT_1ET0291, itm: "^양파:면적$", unit: ha, survey: 농작물생산조사}
+      - {id: ecr_gg, title: 경기 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^경기도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_gw, title: 강원 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^강원(도|특별자치도)( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_cb, title: 충북 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^충청북도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_cn, title: 충남 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^충청남도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_jb, title: 전북 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^(전라북도|전북특별자치도)( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_jn, title: 전남 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^(전라남도|전남광주통합특별시)( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_gb, title: 경북 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^경상북도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_gn, title: 경남 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^경상남도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: ecr_jj, title: 제주 친환경 인증 면적, tbl: DT_1YL20121, periods: 6, itm: "^면적$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: ha, survey: 친환경농산물인증현황}
+      - {id: sb_total, title: 농축산물 판매 농가(전체), tbl: DT_1EA1023, itm: "^계$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_coop, title: 농협 판매 농가, tbl: DT_1EA1023, itm: "^농협$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_direct, title: 소비자 직접판매 농가, tbl: DT_1EA1023, itm: "^소비자직접판매$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_collect, title: 수집상 판매 농가, tbl: DT_1EA1023, itm: "^수집상$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_whole, title: 도매시장 판매 농가, tbl: DT_1EA1023, itm: "^도매시장$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_auction, title: 산지공판장 판매 농가, tbl: DT_1EA1023, itm: "^산지공판장$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_corp, title: 농업법인 판매 농가, tbl: DT_1EA1023, itm: "^농업법인$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_mart, title: 대형유통업체 판매 농가, tbl: DT_1EA1023, itm: "^대형유통업체$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_eco, title: 친환경 전문유통 판매 농가, tbl: DT_1EA1023, itm: "^친환경농산물전문유통업체$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_proc, title: 가공업체 판매 농가, tbl: DT_1EA1023, itm: "^농축산물가공업체$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_retail, title: 소매상 판매 농가, tbl: DT_1EA1023, itm: "^농축산물소매상$", unit: 가구, survey: 농림어업조사}
+      - {id: sb_none, title: 판매 없는 농가, tbl: DT_1EA1023, itm: "^판매없음$", unit: 가구, survey: 농림어업조사}
+      - {id: wq_kr, title: 대한민국 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^(한국|대한민국)$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_mx, title: 멕시코 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^멕시코$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_tr, title: 튀르키예 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^튀르키예$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_gr, title: 그리스 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^그리스$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_dk, title: 덴마크 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^덴마크$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_nl, title: 네덜란드 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(담수 취수)}
+      - {id: wq_de, title: 독일 관개용 취수 비율, tbl: DT_2OEEG035, itm: "^관개$", want: ["^독일$"], unit: "%", survey: 국제통계(담수 취수)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -46,13 +46,17 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비', 23) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비', 24) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
   <section class="kp4 sg-c"><div class="t">농가당 가구원 수{{ link(K.farm_pop) }}</div><div class="v">{{ '{:.2f}'.format(hh[-1]) }}<small>명</small></div><div class="s"><span>농가인구 ÷ 농가 수</span><span>{{ K.farms.years[-1]|prd }}</span></div>
    <div class="sg-ch">{{ hh|mini('g3', '#1c7a45', K.farms.years|map('prd')|list, '명') }}<div class="sg-ax"><span>{{ K.farms.years[0]|prd }}</span><span>{{ K.farms.years[-1]|prd }}</span></div></div></section>{% endif %}
   {{ hcard('도별 농가 수', [('경북', K.fd_gb), ('전남', K.fd_jn), ('충남', K.fd_cn), ('전북', K.fd_jb), ('경기', K.fd_gg), ('경남', K.fd_gn), ('강원', K.fd_gw), ('충북', K.fd_cb), ('제주', K.fd_jj)], '가구', ('괄호는 전국 농가 중 비중 · 특별시·광역시 제외 · 오른쪽은 전년 대비') if K.farms else '', K.farms.vals[-1] if K.farms else none) }}</div>
+ <h3 class="sg-sub">판매처 <small>농축산물을 가장 많이 판 곳 · 농가 수</small></h3>
+ <div class="sg-g">
+  {{ hcard('주 판매처별 농가', [('농협', K.sb_coop), ('소비자 직접판매', K.sb_direct), ('수집상', K.sb_collect), ('산지공판장', K.sb_auction), ('도매시장', K.sb_whole), ('가공업체', K.sb_proc), ('소매상', K.sb_retail), ('농업법인', K.sb_corp), ('친환경 전문유통', K.sb_eco), ('대형유통업체', K.sb_mart), ('판매 없음', K.sb_none)], '가구', '괄호는 전체 농가 중 비율 · 오른쪽은 전년 대비', K.sb_total.vals[-1] if K.sb_total else none, '#3a8f6a') }}
+ </div>
  <h3 class="sg-sub">농가경제 <small>농가 평균</small></h3>
  <div class="sg-g">
   {% if K.farm_income %}{% set parts = [('농업소득', K.agri_income), ('농외소득', K.nonagri_income), ('이전소득', K.transfer_income)]|selectattr('1')|list %}{% set s = K.farm_income %}{% set lab = s.years|map('prd')|list %}
@@ -135,7 +139,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·축산 인증·비료·농약 사용량·가축분뇨', 9) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·비료·농약 사용량·가축분뇨', 10) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -145,6 +149,10 @@
   {{ card('eco_ship', 'e4', '인증 농산물 출하량 · 유기+무농약') }}
   {{ card('ecl_farms', 'e5', ('유기축산 ' ~ K.ecl_org.vals[-1]|big ~ '호 · 나머지는 무항생제') if K.ecl_org else none) }}
   {{ card('fz_kr_n', 'e6', ('1ha당 · ' ~ '인산 ' ~ '{:.1f}'.format(K.fz_kr_p.vals[-1]) ~ ' · 칼리 ' ~ '{:.1f}'.format(K.fz_kr_k.vals[-1]) ~ ' kg/ha') if K.fz_kr_p and K.fz_kr_k else none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">도별 친환경 인증 면적 <small>유기+무농약</small></h3>
+ <div class="sg-g">
+  {{ hcard('도별 친환경 인증 면적', [('전남', K.ecr_jn), ('경기', K.ecr_gg), ('전북', K.ecr_jb), ('경남', K.ecr_gn), ('충남', K.ecr_cn), ('경북', K.ecr_gb), ('강원', K.ecr_gw), ('충북', K.ecr_cb), ('제주', K.ecr_jj)], 'ha', '괄호는 전국 인증 면적 중 비율 · 오른쪽은 전년 대비', K.eco_area.vals[-1] if K.eco_area else none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">비료·농약 국제 비교 <small>농지 1ha당 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">
@@ -157,7 +165,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·온실가스', '기온·강수량·농업 온실가스 배출', 4) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·온실가스', '기온·강수량·농업 온실가스 배출·관개용수', 5) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -166,6 +174,7 @@
   {{ card('ghg_agri', 'c3', ('CO₂ 환산 · 국가 전체 ' ~ (K.ghg_total.vals[-1] * 1000)|big ~ '톤의 ' ~ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) ~ '%') if K.ghg_total else none, '#7a6a3a') }}
   {% set ky = [] %}{% set kv2 = [] %}{% if K.ghg_agri and K.ghg_total %}{% for y in K.ghg_agri.years %}{% if y in K.ghg_total.years %}{% set _ = ky.append(y) %}{% set _ = kv2.append(K.ghg_agri.vals[loop.index0] / K.ghg_total.vals[K.ghg_total.years.index(y)] * 100) %}{% endif %}{% endfor %}{% endif %}{% set ksh = {'tbl': K.ghg_agri.tbl, 'years': ky, 'vals': kv2} if ky else K.gs_kr %}
   {{ hcard('전체 배출 중 농업 비중 국제 비교', [('뉴질랜드', K.gs_nz), ('네덜란드', K.gs_nl), ('OECD 평균', K.gs_oecd), ('대한민국', ksh), ('일본', K.gs_jp)], '%', '벼논 메탄·가축 장내발효·분뇨·비료 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('물 쓰임 중 농업 관개 비중 국제 비교', [('그리스', K.wq_gr), ('튀르키예', K.wq_tr), ('멕시코', K.wq_mx), ('대한민국', K.wq_kr), ('덴마크', K.wq_dk), ('네덜란드', K.wq_nl), ('독일', K.wq_de)], '%', '전체 담수 취수량 중 농업 관개용 비율 · 오른쪽은 전년 대비', none, '#2458d6') }}
  </div>
  </div></details>
 

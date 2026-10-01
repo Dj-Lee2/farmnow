@@ -633,6 +633,37 @@ sources:
       - {id: rszi_s7, title: 논벼 5~7ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
       - {id: rszi_s10, title: 논벼 7~10ha 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
       - {id: rszi_s10p, title: 논벼 10ha이상 농가 10a당 무기질비료, tbl: DT_1EC0008, itm: "^10a당$", want: ["^10\\.0ha이상$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: smt_cd_pd, title: 논 토양 카드뮴 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^카드뮴 Cd$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_cd_fd, title: 밭 토양 카드뮴 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^카드뮴 Cd$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_cd_or, title: 과수원 토양 카드뮴 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^카드뮴 Cd$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_cu_pd, title: 논 토양 구리 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^구리 Cu$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_cu_fd, title: 밭 토양 구리 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^구리 Cu$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_cu_or, title: 과수원 토양 구리 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^구리 Cu$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_as_pd, title: 논 토양 비소 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^비소 As$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_as_fd, title: 밭 토양 비소 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^비소 As$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_as_or, title: 과수원 토양 비소 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^비소 As$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_pb_pd, title: 논 토양 납 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^납 Pb$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_pb_fd, title: 밭 토양 납 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^납 Pb$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_pb_or, title: 과수원 토양 납 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^납 Pb$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_zn_pd, title: 논 토양 아연 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^아연 Zn$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_zn_fd, title: 밭 토양 아연 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^아연 Zn$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_zn_or, title: 과수원 토양 아연 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^아연 Zn$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_ni_pd, title: 논 토양 니켈 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^니켈 Ni$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_ni_fd, title: 밭 토양 니켈 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^니켈 Ni$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_ni_or, title: 과수원 토양 니켈 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^니켈 Ni$"], unit: mg/kg, survey: 토양측정망}
+      - {id: smt_ph_pd, title: 논 토양 산도(pH) 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^답$", "^수소이온농도 pH$"], unit: pH, survey: 토양측정망}
+      - {id: smt_ph_fd, title: 밭 토양 산도(pH) 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^전$", "^수소이온농도 pH$"], unit: pH, survey: 토양측정망}
+      - {id: smt_ph_or, title: 과수원 토양 산도(pH) 평균, tbl: DT_106N_20_0200007, org: "106", periods: 10, itm: "오염도", want: ["^과수원$", "^수소이온농도 pH$"], unit: pH, survey: 토양측정망}
+      - {id: dro_kr, title: 대한민국 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^한국$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_cap, title: 수도권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^수도권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_gn, title: 경남권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^경남권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_gb, title: 경북권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^경북권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_jl, title: 전라권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^전라권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_cc, title: 충청권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^충청권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_gw, title: 강원권 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^강원권$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_jj, title: 제주 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^제주$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_jp, title: 일본 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^일본$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: dro_cn, title: 중국 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^\\[비회원국\\]중국$"], unit: "%", survey: 국제통계(가뭄 노출)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

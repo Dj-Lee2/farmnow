@@ -1050,6 +1050,41 @@ sources:
       - {id: ffm_hut, title: 헛개나무 1ha당 복합비료 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: ffc_oga, title: 오갈피 1ha당 퇴구비 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: ffm_oga, title: 오갈피 1ha당 복합비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fsz_chest1, title: 밤 재배규모 1~2ha 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^1-2ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_chest2, title: 밤 재배규모 2~3ha 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^2-3ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_chest3, title: 밤 재배규모 3~5ha 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^3-5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_chest4, title: 밤 재배규모 5ha 이상 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^5ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_chest_ful, title: 밤 전업 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_chest_par, title: 밤 겸업 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_chest_lead, title: 밤 선도 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_chest_oth, title: 밤 선도 외 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_chest_u50, title: 밤 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_chest_50, title: 밤 경영주 50대 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_chest_60, title: 밤 경영주 60대 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_chest_70, title: 밤 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_jujube1, title: 대추 재배규모 0.1~0.3ha 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^0.1-0.3ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_jujube2, title: 대추 재배규모 0.3~0.5ha 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^0.3-0.5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_jujube3, title: 대추 재배규모 0.5~1ha 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^0.5-1ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_jujube4, title: 대추 재배규모 1ha 이상 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^1ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_jujube_ful, title: 대추 전업 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_jujube_par, title: 대추 겸업 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_jujube_lead, title: 대추 선도 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_jujube_oth, title: 대추 선도 외 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_jujube_u50, title: 대추 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_jujube_50, title: 대추 경영주 50대 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_jujube_60, title: 대추 경영주 60대 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_jujube_70, title: 대추 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_pers1, title: 감 재배규모 0.1~0.5ha 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^0.1-0.5ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_pers2, title: 감 재배규모 0.5~1ha 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^0.5-1ha$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fsz_pers3, title: 감 재배규모 1ha 이상 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^1ha 이상$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_pers_ful, title: 감 전업 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^전업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_pers_par, title: 감 겸업 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^겸업$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_pers_lead, title: 감 선도 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^선도임가$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fty_pers_oth, title: 감 선도 외 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^이외$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_pers_u50, title: 감 경영주 50대 미만 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^50대 미만$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_pers_50, title: 감 경영주 50대 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^50대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_pers_60, title: 감 경영주 60대 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^60대$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fag_pers_70, title: 감 경영주 70대 이상 임가 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^70대 이상$"], unit: 원, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

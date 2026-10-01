@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득', 8) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간', 13) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -136,6 +136,14 @@
  <h3 class="sg-sub">작물별 소득 <small>10a(300평)당 · 전국 평균</small></h3>
  <div class="sg-g">
   {{ hcard('작물별 10a당 소득', [('마늘', K.ci_garlic_inc), ('고추', K.ci_pepper_inc), ('양파', K.ci_onion_inc), ('논벼', K.rice_inc), ('콩', K.ci_bean_inc)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">논벼 작업별 노동 시간 <small>10a(300평)당 · 자가+고용 · 농산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('rwk_direct', 'v7', ('모내기·관리·수확 등 직접 일한 시간 · 간접노동 ' ~ '{:.1f}'.format(K.rwk_indirect.vals[-1]) ~ '시간 별도') if K.rwk_indirect else '모내기·관리·수확 등 직접 일한 시간', '#2458d6') }}
+  {{ card('rwk_weed', 'v8', ('김매기·제초제 살포 · 방제는 ' ~ '{:.1f}'.format(K.rwk_pest.vals[-1]) ~ '시간') if K.rwk_pest else '김매기·제초제 살포', '#2458d6') }}
+  {{ card('rwk_fert', 'v9', '밑거름·웃거름 주는 데 든 시간', '#2458d6') }}
+  {{ hcard('논벼 작업별 노동 시간', [('본논 관리', K.rwk_mgmt), ('제초', K.rwk_weed), ('모내기', K.rwk_trans), ('본논 준비', K.rwk_prep), ('묘상 작업', K.rwk_seed), ('수확', K.rwk_harv), ('비료 주기', K.rwk_fert), ('방제', K.rwk_pest), ('운반', K.rwk_haul), ('건조', K.rwk_dry)], '시간', '10a당 · 괄호는 직접노동 중 비중 · 오른쪽은 전년 대비', K.rwk_direct.vals[-1] if K.rwk_direct else none, '#2458d6') }}
+  {{ hcard('도별 논벼 비료 주기 노동 시간', [('경기', K.rwf_gg), ('강원', K.rwf_gw), ('충북', K.rwf_cb), ('충남', K.rwf_cn), ('전북', K.rwf_jb), ('전남', K.rwf_jn), ('경북', K.rwf_gb), ('경남', K.rwf_gn)], '시간', ('10a당 · 전국 평균 ' ~ '{:.2f}'.format(K.rwk_fert.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_fert else '10a당 · 오른쪽은 전년 대비', none, '#5fae7a') }}
  </div>
  </div></details>
 
@@ -292,7 +300,7 @@
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·번식우·산란계·오리', 32) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우 100kg당 생산비 구성·번식우·산란계·오리', 37) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -305,6 +313,14 @@
   {{ hcard('비육돈 사육 규모별 두당 순수익', [('1,000두 미만', K.pgs_0), ('1,000~1,999두', K.pgs_1), ('2,000~2,999두', K.pgs_2), ('3,000두 이상', K.pgs_3)], '원', ('평균 ' ~ num(K.pig_net.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.pig_net else '', none, '#c77b30') }}
   {{ hcard('젖소 사육 규모별 두당 순수익', [('50두 미만', K.dys_0), ('50~69두', K.dys_1), ('70~99두', K.dys_2), ('100두 이상', K.dys_3)], '원', ('평균 ' ~ num(K.dairy_net.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.dairy_net else '', none, '#1c7a45') }}
   {{ hcard('산란계 사육 규모별 수당 순수익', [('2만 수 미만', K.lys_0), ('2만~4만 수', K.lys_1), ('4만~9만 수', K.lys_2), ('9만 수 이상', K.lys_3)], '원', ('평균 ' ~ '{:,.0f}'.format(K.ly_net.vals[-1]) ~ '원 · 파란 막대는 적자 · 오른쪽은 전년 대비') if K.ly_net else '', none, '#e0a03a') }}
+ </div>
+ <h3 class="sg-sub">한우 비육우 생산비 구성 <small>생체 100kg당 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('hwk_cost', 'g63', ('경영비 ' ~ num(K.hwk_op.vals[-1], '원')|striptags ~ ' + 자가노동·자본·토지 용역비') if K.hwk_op else none, '#b04a07') }}
+  {{ card('hwk_feed', 'g64', ('생산비 중 ' ~ '{:.0f}'.format(K.hwk_feed.vals[-1] / K.hwk_cost.vals[-1] * 100) ~ '% · 농후사료·조사료·TMR') if K.hwk_cost else '농후사료·조사료·TMR', '#b04a07') }}
+  {{ card('hwk_calf', 'g65', ('밑소(송아지) 값 · 생산비 중 ' ~ '{:.0f}'.format(K.hwk_calf.vals[-1] / K.hwk_cost.vals[-1] * 100) ~ '%') if K.hwk_cost else '밑소(송아지) 값', '#c77b30') }}
+  {{ hcard('한우 비육우 생체 100kg당 비목별 생산비', [('가축비', K.hwk_calf), ('농후사료', K.hwk_conc), ('TMR사료', K.hwk_tmr), ('자가노동비', K.hwk_own), ('조사료', K.hwk_rough), ('고용노동비', K.hwk_hire), ('방역치료비', K.hwk_vet), ('분뇨처리비', K.hwk_manure)], '원', '괄호는 생산비 중 비중 · 오른쪽은 전년 대비', K.hwk_cost.vals[-1] if K.hwk_cost else none, '#c77b30') }}
+  {{ hcard('한우 비육우 사육 규모별 생체 100kg당 생산비', [('20두 미만', K.hwk_s0), ('20~49두', K.hwk_s1), ('50~99두', K.hwk_s2), ('100두 이상', K.hwk_s3)], '원', ('평균 ' ~ num(K.hwk_cost.vals[-1], '원')|striptags ~ ' · 규모가 클수록 낮음 · 오른쪽은 전년 대비') if K.hwk_cost else '', none, '#b04a07') }}
  </div>
  <h3 class="sg-sub">도축 실적 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('sl_cow', 'g48', '한우·육우·젖소 합계 · 축산물 도축실적', '#c77b30', yoy(K.sl_cow_yoy)) }}{{ card('sl_pig', 'g49', '축산물 도축실적', '#c77b30', yoy(K.sl_pig_yoy)) }}{{ card('sl_chick', 'g50', '축산물 도축실적', '#c77b30', yoy(K.sl_chick_yoy)) }}{{ card('sl_duck', 'g51', '축산물 도축실적', '#c77b30', yoy(K.sl_duck_yoy)) }}{% for k, uid in [('cow', 'g52'), ('pig', 'g53')] %}{% set c = K['sl_' ~ k ~ '_cum'] %}{% set r = K['sl_' ~ k ~ '_cumr'] %}{% if c and r %}{% set lab = r.years|map('prd')|list %}

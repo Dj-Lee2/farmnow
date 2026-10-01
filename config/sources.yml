@@ -690,6 +690,42 @@ sources:
       - {id: rszl_s7, title: 논벼 5~7ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
       - {id: rszl_s10, title: 논벼 7~10ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
       - {id: rszl_s10p, title: 논벼 10ha이상 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^10\\.0ha이상$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      # 논벼 작업별 노동 투입 시간(DT_1EC0113), 한우 비육우 생체 100kg당 생산비(DT_1EE118)
+      - {id: rwk_seed, title: 논벼 10a당 묘상 작업 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^묘상작업$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_prep, title: 논벼 10a당 본논 준비 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^본논준비$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_trans, title: 논벼 10a당 모내기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^이식$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_mgmt, title: 논벼 10a당 본논 관리 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^본논관리$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_fert, title: 논벼 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_weed, title: 논벼 10a당 제초 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_pest, title: 논벼 10a당 방제 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_harv, title: 논벼 10a당 수확 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^수확$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_haul, title: 논벼 10a당 운반 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^운반$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_dry, title: 논벼 10a당 건조 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^건조$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_direct, title: 논벼 10a당 직접노동 합계 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^직접노동$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwk_indirect, title: 논벼 10a당 간접노동(생산관리) 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전국평균$", "^간접노동\\(생산관리\\)$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_gg, title: 논벼 경기 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^경기", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_gw, title: 논벼 강원 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^강원", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_cb, title: 논벼 충북 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^충청북", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_cn, title: 논벼 충남 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^충청남", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_jb, title: 논벼 전북 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전라북|^전북", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_jn, title: 논벼 전남 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^전라남|^전남", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_gb, title: 논벼 경북 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^경상북", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rwf_gn, title: 논벼 경남 10a당 비료 주기 노동 시간, tbl: DT_1EC0113, itm: "^노동력 투입시간", want: ["^경상남", "^비료주기$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: hwk_cost, title: 한우 비육우 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_op, title: 한우 비육우 생체 100kg당 경영비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^경영비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_calf, title: 한우 비육우 생체 100kg당 가축비(송아지값), tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_feed, title: 한우 비육우 생체 100kg당 사료비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_conc, title: 한우 비육우 생체 100kg당 농후사료비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^농후사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_rough, title: 한우 비육우 생체 100kg당 조사료비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^조사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_tmr, title: 한우 비육우 생체 100kg당 TMR사료비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^TMR사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_vet, title: 한우 비육우 생체 100kg당 방역치료비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_manure, title: 한우 비육우 생체 100kg당 분뇨처리비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_own, title: 한우 비육우 생체 100kg당 자가노동비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^자가노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_hire, title: 한우 비육우 생체 100kg당 고용노동비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^평균$", "^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_s0, title: 한우 비육우 20두 미만 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^20두미만$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_s1, title: 한우 비육우 20~49두 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^20~49두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_s2, title: 한우 비육우 50~99두 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^50~99두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwk_s3, title: 한우 비육우 100두 이상 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^100두이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -980,6 +980,43 @@ sources:
       - {id: ffm_rasp, title: 산딸기 1ha당 복합비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: ffm_corn, title: 산수유 1ha당 복합비료 투입량, tbl: DT_136033_11252, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: ffm_goji, title: 구기자 1ha당 복합비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fin_chest, title: 밤 1ha당 소득, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_jujube, title: 대추 1ha당 소득, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_pers, title: 감 1ha당 소득, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_walnut, title: 호두 1ha당 소득, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_omija, title: 오미자 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_bokbun, title: 복분자딸기 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_rasp, title: 산딸기 1ha당 소득, tbl: DT_136033_11296, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_corn, title: 산수유 1ha당 소득, tbl: DT_136033_11259, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_goji, title: 구기자 1ha당 소득, tbl: DT_136033_11247, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_hut, title: 헛개나무 1ha당 소득, tbl: DT_136033_11323, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fin_oga, title: 오갈피 1ha당 소득, tbl: DT_136033_11310, org: "136", itm: "^값$", want: ["^소득$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_chest, title: 밤 1ha당 경영비, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_jujube, title: 대추 1ha당 경영비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_pers, title: 감 1ha당 경영비, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_walnut, title: 호두 1ha당 경영비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_omija, title: 오미자 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_bokbun, title: 복분자딸기 1ha당 경영비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_rasp, title: 산딸기 1ha당 경영비, tbl: DT_136033_11296, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_corn, title: 산수유 1ha당 경영비, tbl: DT_136033_11259, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_goji, title: 구기자 1ha당 경영비, tbl: DT_136033_11247, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_hut, title: 헛개나무 1ha당 경영비, tbl: DT_136033_11323, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fmc_oga, title: 오갈피 1ha당 경영비, tbl: DT_136033_11310, org: "136", itm: "^값$", want: ["^경영비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_chest, title: 밤 1ha당 생산비, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_jujube, title: 대추 1ha당 생산비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_pers, title: 감 1ha당 생산비, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_walnut, title: 호두 1ha당 생산비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_omija, title: 오미자 1ha당 생산비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_bokbun, title: 복분자딸기 1ha당 생산비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_rasp, title: 산딸기 1ha당 생산비, tbl: DT_136033_11296, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_corn, title: 산수유 1ha당 생산비, tbl: DT_136033_11259, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_goji, title: 구기자 1ha당 생산비, tbl: DT_136033_11247, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_hut, title: 헛개나무 1ha당 생산비, tbl: DT_136033_11323, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fpc_oga, title: 오갈피 1ha당 생산비, tbl: DT_136033_11310, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: ffc_hut, title: 헛개나무 1ha당 퇴구비 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_hut, title: 헛개나무 1ha당 복합비료 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_oga, title: 오갈피 1ha당 퇴구비 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_oga, title: 오갈피 1ha당 복합비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간', 13) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비', 19) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -144,6 +144,15 @@
   {{ card('rwk_fert', 'v9', '밑거름·웃거름 주는 데 든 시간', '#2458d6') }}
   {{ hcard('논벼 작업별 노동 시간', [('본논 관리', K.rwk_mgmt), ('제초', K.rwk_weed), ('모내기', K.rwk_trans), ('본논 준비', K.rwk_prep), ('묘상 작업', K.rwk_seed), ('수확', K.rwk_harv), ('비료 주기', K.rwk_fert), ('방제', K.rwk_pest), ('운반', K.rwk_haul), ('건조', K.rwk_dry)], '시간', '10a당 · 괄호는 직접노동 중 비중 · 오른쪽은 전년 대비', K.rwk_direct.vals[-1] if K.rwk_direct else none, '#2458d6') }}
   {{ hcard('도별 논벼 비료 주기 노동 시간', [('경기', K.rwf_gg), ('강원', K.rwf_gw), ('충북', K.rwf_cb), ('충남', K.rwf_cn), ('전북', K.rwf_jb), ('전남', K.rwf_jn), ('경북', K.rwf_gb), ('경남', K.rwf_gn)], '시간', ('10a당 · 전국 평균 ' ~ '{:.2f}'.format(K.rwk_fert.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_fert else '10a당 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">임산물 소득 <small>1ha당 · 전국 평균 · 산림청 임산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('fin_rasp', 'v10', ('경영비 ' ~ num(K.fmc_rasp.vals[-1], '원')|striptags ~ ' · 자가노동·토지 포함 생산비 ' ~ num(K.fpc_rasp.vals[-1], '원')|striptags) if K.fmc_rasp and K.fpc_rasp else '소득 = 조수입 − 경영비', '#7a6a3a') }}
+  {{ card('fin_pers', 'v11', ('경영비 ' ~ num(K.fmc_pers.vals[-1], '원')|striptags ~ ' · 자가노동·토지 포함 생산비 ' ~ num(K.fpc_pers.vals[-1], '원')|striptags) if K.fmc_pers and K.fpc_pers else '소득 = 조수입 − 경영비', '#7a6a3a') }}
+  {{ card('fin_jujube', 'v12', ('경영비 ' ~ num(K.fmc_jujube.vals[-1], '원')|striptags ~ ' · 자가노동·토지 포함 생산비 ' ~ num(K.fpc_jujube.vals[-1], '원')|striptags) if K.fmc_jujube and K.fpc_jujube else '소득 = 조수입 − 경영비', '#7a6a3a') }}
+  {{ hcard('임산물별 1ha당 소득', [('산딸기', K.fin_rasp), ('감', K.fin_pers), ('대추', K.fin_jujube), ('구기자', K.fin_goji), ('복분자딸기', K.fin_bokbun), ('호두', K.fin_walnut), ('산수유', K.fin_corn), ('오미자', K.fin_omija), ('오갈피', K.fin_oga), ('밤', K.fin_chest), ('헛개나무', K.fin_hut)], '원', '소득 = 조수입 − 경영비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('임산물별 1ha당 경영비', [('복분자딸기', K.fmc_bokbun), ('구기자', K.fmc_goji), ('오미자', K.fmc_omija), ('산딸기', K.fmc_rasp), ('대추', K.fmc_jujube), ('감', K.fmc_pers), ('오갈피', K.fmc_oga), ('산수유', K.fmc_corn), ('헛개나무', K.fmc_hut), ('호두', K.fmc_walnut), ('밤', K.fmc_chest)], '원', '비료·농약·고용노동 등 실제 쓴 돈 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+  {{ hcard('임산물별 1ha당 생산비', [('산딸기', K.fpc_rasp), ('구기자', K.fpc_goji), ('복분자딸기', K.fpc_bokbun), ('대추', K.fpc_jujube), ('오미자', K.fpc_omija), ('감', K.fpc_pers), ('산수유', K.fpc_corn), ('오갈피', K.fpc_oga), ('헛개나무', K.fpc_hut), ('호두', K.fpc_walnut), ('밤', K.fpc_chest)], '원', '경영비에 자가노동·자기 토지·자본 비용을 더한 값 · 오른쪽은 전년 대비', none, '#a0605a') }}
  </div>
  </div></details>
 
@@ -218,8 +227,8 @@
   {{ card('ffc_chest', 'e46', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_chest.vals[-1]) ~ 'kg') if K.ffm_chest else '퇴비 등 퇴구비', '#7a6a3a') }}
   {{ card('ffc_pers', 'e47', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_pers.vals[-1]) ~ 'kg') if K.ffm_pers else '퇴비 등 퇴구비', '#7a6a3a') }}
   {{ card('ffc_omija', 'e48', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_omija.vals[-1]) ~ 'kg') if K.ffm_omija else '퇴비 등 퇴구비', '#7a6a3a') }}
-  {{ hcard('임산물별 퇴구비 투입량', [('복분자딸기', K.ffc_bokbun), ('산수유', K.ffc_corn), ('구기자', K.ffc_goji), ('감', K.ffc_pers), ('오미자', K.ffc_omija), ('호두', K.ffc_walnut), ('대추', K.ffc_jujube), ('산딸기', K.ffc_rasp), ('밤', K.ffc_chest)], 'kg', '1ha당 퇴비 등 퇴구비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
-  {{ hcard('임산물별 복합비료 투입량', [('산딸기', K.ffm_rasp), ('산수유', K.ffm_corn), ('감', K.ffm_pers), ('호두', K.ffm_walnut), ('오미자', K.ffm_omija), ('대추', K.ffm_jujube), ('복분자딸기', K.ffm_bokbun), ('구기자', K.ffm_goji), ('밤', K.ffm_chest)], 'kg', '1ha당 복합비료 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+  {{ hcard('임산물별 퇴구비 투입량', [('복분자딸기', K.ffc_bokbun), ('산수유', K.ffc_corn), ('구기자', K.ffc_goji), ('감', K.ffc_pers), ('오미자', K.ffc_omija), ('호두', K.ffc_walnut), ('대추', K.ffc_jujube), ('산딸기', K.ffc_rasp), ('오갈피', K.ffc_oga), ('헛개나무', K.ffc_hut), ('밤', K.ffc_chest)], 'kg', '1ha당 퇴비 등 퇴구비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('임산물별 복합비료 투입량', [('산딸기', K.ffm_rasp), ('산수유', K.ffm_corn), ('감', K.ffm_pers), ('호두', K.ffm_walnut), ('오미자', K.ffm_omija), ('대추', K.ffm_jujube), ('복분자딸기', K.ffm_bokbun), ('구기자', K.ffm_goji), ('밤', K.ffm_chest), ('헛개나무', K.ffm_hut), ('오갈피', K.ffm_oga)], 'kg', '1ha당 복합비료 · 오른쪽은 전년 대비', none, '#b07a3a') }}
  </div>
  <h3 class="sg-sub">농약 판매량 <small>대한민국 · 유효성분 기준 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">

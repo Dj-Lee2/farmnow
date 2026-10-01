@@ -147,7 +147,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·가축분뇨 처리·수거·살포·축사 악취저감·방역시설', 48) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·가축분뇨 처리·수거·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 57) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -193,6 +193,10 @@
   {{ hcard('경영주 연령별 논벼 토양개량제 투입량', [('40대', K.ops_40), ('50대', K.ops_50), ('60대', K.ops_60), ('70대 이상', K.ops_70)], 'kg', '10a당 석회·규산 등 · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('경영주 연령별 논벼 노동 투입 시간', [('40대', K.opl_40), ('50대', K.opl_50), ('60대', K.opl_60), ('70대 이상', K.opl_70)], '시간', '10a당 자가+고용 노동 시간 · 오른쪽은 전년 대비', none, '#2458d6') }}
   {{ hcard('재배 규모별 논벼 노동 투입 시간', [('0.5ha 미만', K.rszl_s05), ('0.5~1ha', K.rszl_s1), ('1~1.5ha', K.rszl_s15), ('1.5~2ha', K.rszl_s2), ('2~2.5ha', K.rszl_s25), ('2.5~3ha', K.rszl_s3), ('3~5ha', K.rszl_s5), ('5~7ha', K.rszl_s7), ('7~10ha', K.rszl_s10), ('10ha 이상', K.rszl_s10p)], '시간', '10a당 자가+고용 노동 시간 · 오른쪽은 전년 대비', none, '#2458d6') }}
+  {{ hcard('재배 규모별 논벼 제초 노동 시간', [('0.5ha 미만', K.lsw_s05), ('0.5~1ha', K.lsw_s1), ('1~1.5ha', K.lsw_s15), ('1.5~2ha', K.lsw_s2), ('2~2.5ha', K.lsw_s25), ('2.5~3ha', K.lsw_s3), ('3~5ha', K.lsw_s5), ('5~7ha', K.lsw_s7), ('7~10ha', K.lsw_s10), ('10ha 이상', K.lsw_s10p)], '시간', ('10a당 김매기·제초제 살포 · 전국 평균 ' ~ '{:.1f}'.format(K.rwk_weed.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_weed else '10a당 김매기·제초제 살포 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('재배 규모별 논벼 방제 노동 시간', [('0.5ha 미만', K.lsp_s05), ('0.5~1ha', K.lsp_s1), ('1~1.5ha', K.lsp_s15), ('1.5~2ha', K.lsp_s2), ('2~2.5ha', K.lsp_s25), ('2.5~3ha', K.lsp_s3), ('3~5ha', K.lsp_s5), ('5~7ha', K.lsp_s7), ('7~10ha', K.lsp_s10), ('10ha 이상', K.lsp_s10p)], '시간', ('10a당 병해충 약제 살포 · 전국 평균 ' ~ '{:.1f}'.format(K.rwk_pest.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_pest else '10a당 병해충 약제 살포 · 오른쪽은 전년 대비', none, '#a0605a') }}
+  {{ hcard('경영주 연령별 논벼 제초 노동 시간', [('40대', K.law_40), ('50대', K.law_50), ('60대', K.law_60), ('70대 이상', K.law_70)], '시간', ('10a당 김매기·제초제 살포 · 전국 평균 ' ~ '{:.1f}'.format(K.rwk_weed.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_weed else '10a당 김매기·제초제 살포 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('경영주 연령별 논벼 방제 노동 시간', [('40대', K.lap_40), ('50대', K.lap_50), ('60대', K.lap_60), ('70대 이상', K.lap_70)], '시간', ('10a당 병해충 약제 살포 · 전국 평균 ' ~ '{:.1f}'.format(K.rwk_pest.vals[-1]) ~ '시간 · 오른쪽은 전년 대비') if K.rwk_pest else '10a당 병해충 약제 살포 · 오른쪽은 전년 대비', none, '#a0605a') }}
  </div>
  <h3 class="sg-sub">비료·농약 국제 비교 <small>농지 1ha당 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">
@@ -216,13 +220,18 @@
   {{ hcard('축종별 분뇨 퇴비·액비화 농가 비율', [('한우', K.mn_hw_res|ratio(K.mn_hw_all)), ('젖소', K.mn_dy_res|ratio(K.mn_dy_all)), ('산란계', K.mn_ly_res|ratio(K.mn_ly_all)), ('오리', K.mn_dk_res|ratio(K.mn_dk_all)), ('육계', K.mn_br_res|ratio(K.mn_br_all)), ('돼지', K.mn_pg_res|ratio(K.mn_pg_all))], '%', '축종별 사육 농가 중 비율 · 나머지는 위탁·정화 처리 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('축사 분뇨 수거 방식', [('바닥식 깔짚', K.mcol_litter), ('바닥식 깔짚 없음', K.mcol_floor), ('틈새식 슬러리', K.mcol_slurry), ('틈새식 기계식', K.mcol_slat), ('기타', K.mcol_etc)], '가구', '7개 축종 사육 농가 합산 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcol_all.vals[-1] if K.mcol_all else none, '#7a6a3a') }}
  </div>
- <h3 class="sg-sub">축사 악취저감·방역시설 <small>가축분뇨처리통계 · 설치 농장 수(여러 개 설치 시 각각 셈)</small></h3>
+ <h3 class="sg-sub">축사·처리시설 악취저감·방역시설 <small>가축분뇨처리통계 · 설치 농장 수(여러 개 설치 시 각각 셈)</small></h3>
  <div class="sg-g">
   {{ card('odf_none', 'e16', '축사에 악취저감 장비·시설을 하나도 두지 않은 농장', '#7a6a3a') }}
   {{ card('odf_fogin', 'e17', ('가장 흔한 악취저감 시설 · 외부 안개분무 ' ~ K.odf_fogout.vals[-1]|big ~ '호') if K.odf_fogout else '가장 흔한 악취저감 시설', '#5a7a3a') }}
   {{ card('dsf_foot', 'e18', ('가장 흔한 방역시설 · 석회 살포 ' ~ K.dsf_lime.vals[-1]|big ~ '호') if K.dsf_lime else '가장 흔한 방역시설', '#2458d6') }}
+  {{ card('mfo_none', 'e25', '퇴비사·액비조 등 분뇨 처리시설에 악취저감 장비가 없는 농장', '#7a6a3a') }}
+  {{ card('mfo_fogin', 'e26', ('처리시설 악취저감 1위 · 외부 안개분무 ' ~ K.mfo_fogout.vals[-1]|big ~ '호') if K.mfo_fogout else '분뇨 처리시설 악취저감 1위', '#5a7a3a') }}
+  {{ card('mfn_hw', 'e27', ('처리시설 악취저감 없음 중 한·육우 · 돼지는 ' ~ K.mfn_pg.vals[-1]|big ~ '호') if K.mfn_pg else '처리시설 악취저감 없음 중 한·육우', '#7a6a3a') }}
   {{ hcard('축사 악취저감 시설 종류', [('내부 안개분무', K.odf_fogin), ('외부 안개분무', K.odf_fogout), ('바이오 커튼', K.odf_bioc), ('액비순환시스템', K.odf_liq)], '호', '설치 농장 수 · 오른쪽은 전년 대비', none, '#5a7a3a') }}
   {{ hcard('축사 소독·방역시설 종류', [('발판 소독조', K.dsf_foot), ('석회 살포', K.dsf_lime), ('차량 소독기', K.dsf_car), ('외부 울타리', K.dsf_fence), ('방조·방충망', K.dsf_net), ('전실', K.dsf_ante)], '호', '6개 축종 합계 · 설치 농장 수 · 오른쪽은 전년 대비', none, '#2458d6') }}
+  {{ hcard('분뇨 처리시설 악취저감 시설 종류', [('내부 안개분무', K.mfo_fogin), ('외부 안개분무', K.mfo_fogout), ('바이오 커튼', K.mfo_bioc)], '호', '퇴비사·액비조 등 처리시설 기준 설치 농장 수 · 오른쪽은 전년 대비', none, '#5a7a3a') }}
+  {{ hcard('축종별 처리시설 악취저감 시설 없는 농장', [('한·육우', K.mfn_hw), ('닭', K.mfn_ck), ('젖소', K.mfn_dy), ('돼지', K.mfn_pg), ('오리', K.mfn_dk)], '호', '괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.mfo_none.vals[-1] if K.mfo_none else none, '#7a6a3a') }}
  </div>
  </div></details>
 

@@ -726,6 +726,44 @@ sources:
       - {id: hwk_s1, title: 한우 비육우 20~49두 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^20~49두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
       - {id: hwk_s2, title: 한우 비육우 50~99두 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^50~99두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
       - {id: hwk_s3, title: 한우 비육우 100두 이상 생체 100kg당 생산비, tbl: DT_1EE118, itm: "^생체100kg당 생산비$", want: ["^100두이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      # 재배규모·경영주 연령별 논벼 제초·방제 노동(DT_1EC0118/0119), 가축분뇨 처리시설 악취저감(DT_114059_011)
+      - {id: lsw_s05, title: 논벼 0.5ha미만 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^0\\.5ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s1, title: 논벼 0.5~1ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^0\\.5-1\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s15, title: 논벼 1~1.5ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^1\\.0-1\\.5ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s2, title: 논벼 1.5~2ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^1\\.5-2\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s25, title: 논벼 2~2.5ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^2\\.0-2\\.5ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s3, title: 논벼 2.5~3ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^2\\.5-3\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s5, title: 논벼 3~5ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^3\\.0-5\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s7, title: 논벼 5~7ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^5\\.0-7\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s10, title: 논벼 7~10ha 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^7\\.0-10\\.0ha미만$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsw_s10p, title: 논벼 10ha이상 농가 10a당 제초 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^10\\.0ha이상$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s05, title: 논벼 0.5ha미만 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^0\\.5ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s1, title: 논벼 0.5~1ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^0\\.5-1\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s15, title: 논벼 1~1.5ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^1\\.0-1\\.5ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s2, title: 논벼 1.5~2ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^1\\.5-2\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s25, title: 논벼 2~2.5ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^2\\.0-2\\.5ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s3, title: 논벼 2.5~3ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^2\\.5-3\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s5, title: 논벼 3~5ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^3\\.0-5\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s7, title: 논벼 5~7ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^5\\.0-7\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s10, title: 논벼 7~10ha 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^7\\.0-10\\.0ha미만$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lsp_s10p, title: 논벼 10ha이상 농가 10a당 방제 노동 시간, tbl: DT_1EC0118, itm: "^노동력 투입시간", want: ["^10\\.0ha이상$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: law_40, title: 경영주 40대 논벼 10a당 제초 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^40대$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: law_50, title: 경영주 50대 논벼 10a당 제초 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^50대$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: law_60, title: 경영주 60대 논벼 10a당 제초 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^60대$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: law_70, title: 경영주 70대 이상 논벼 10a당 제초 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^70대이상$", "^제초$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lap_40, title: 경영주 40대 논벼 10a당 방제 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^40대$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lap_50, title: 경영주 50대 논벼 10a당 방제 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^50대$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lap_60, title: 경영주 60대 논벼 10a당 방제 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^60대$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: lap_70, title: 경영주 70대 이상 논벼 10a당 방제 노동 시간, tbl: DT_1EC0119, itm: "^노동력 투입시간", want: ["^70대이상$", "^방제$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: mfo_fogin, title: 가축분뇨 처리시설 악취저감 내부 안개분무 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^\\[내부\\]안개분무$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfo_fogout, title: 가축분뇨 처리시설 악취저감 외부 안개분무 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^\\[외부\\]안개분무$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfo_bioc, title: 가축분뇨 처리시설 악취저감 바이오 커튼 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^바이오 커튼$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfo_none, title: 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfn_hw, title: 한·육우 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^한·육우$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfn_dy, title: 젖소 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^젖소$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfn_pg, title: 돼지 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^돼지$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfn_ck, title: 닭 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^닭$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mfn_dk, title: 오리 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^오리$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

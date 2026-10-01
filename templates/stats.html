@@ -139,7 +139,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼 비료 투입·비료·농약 사용량·유기농 국제 비교·가축분뇨', 17) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼 비료 투입·비료·농약 사용량·유기농 국제 비교·가축분뇨 처리·수거·살포', 21) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -169,9 +169,13 @@
   {{ hcard('농약 사용량', [('대한민국', K.pe_kr), ('일본', K.pe_jp), ('네덜란드', K.pe_nl), ('미국', K.pe_us), ('중국', K.pe_cn)], 'kg/ha', '농지 1ha당 농약 사용량 · 오른쪽은 전년 대비', none, '#a0605a') }}
   {{ hcard('유기농 면적 점유율', [('오스트리아', K.og_at), ('이탈리아', K.og_it), ('독일', K.og_de), ('프랑스', K.og_fr), ('네덜란드', K.og_nl), ('대한민국', K.og_kr), ('중국', K.og_cn), ('미국', K.og_us), ('일본', K.og_jp)], '%', '농업면적 중 유기농 면적 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
- <h3 class="sg-sub">가축분뇨 자원화 <small>농장에서 직접 퇴비·액비로 만드는 농가</small></h3>
+ <h3 class="sg-sub">가축분뇨 자원화 <small>퇴비·액비 처리와 농경지 살포</small></h3>
  <div class="sg-g">
+  {{ card('cp_comp_all', 'e10', ('농장에서 만든 퇴비를 논밭에 뿌린 양 · 다른 시군 살포 ' ~ K.cp_comp_out.vals[-1]|big ~ '천톤') if K.cp_comp_out else '농장에서 만든 퇴비를 논밭에 뿌린 양', '#7a6a3a') }}
+  {{ card('cp_liq_all', 'e11', ('돼지 분뇨 액비 · 다른 시군 살포 ' ~ K.cp_liq_out.vals[-1]|big ~ '천톤') if K.cp_liq_out else '돼지 분뇨 액비', '#5a7a3a') }}
+  {{ rcard('퇴비 관외 살포 비중', K.cp_comp_out, K.cp_comp_all, 'e12', '농장이 있는 시군 밖 농경지에 뿌린 퇴비 비율', '#7a6a3a') }}
   {{ hcard('축종별 분뇨 퇴비·액비화 농가 비율', [('한우', K.mn_hw_res|ratio(K.mn_hw_all)), ('젖소', K.mn_dy_res|ratio(K.mn_dy_all)), ('산란계', K.mn_ly_res|ratio(K.mn_ly_all)), ('오리', K.mn_dk_res|ratio(K.mn_dk_all)), ('육계', K.mn_br_res|ratio(K.mn_br_all)), ('돼지', K.mn_pg_res|ratio(K.mn_pg_all))], '%', '축종별 사육 농가 중 비율 · 나머지는 위탁·정화 처리 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('축사 분뇨 수거 방식', [('바닥식 깔짚', K.mcol_litter), ('바닥식 깔짚 없음', K.mcol_floor), ('틈새식 슬러리', K.mcol_slurry), ('틈새식 기계식', K.mcol_slat), ('기타', K.mcol_etc)], '가구', '7개 축종 사육 농가 합산 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcol_all.vals[-1] if K.mcol_all else none, '#7a6a3a') }}
  </div>
  </div></details>
 
@@ -204,7 +208,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소', 21) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적', 27) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -216,6 +220,15 @@
   {{ hcard('과일 10a당 생산량', [('감귤', K.fy_citrus), ('배', K.fy_pear), ('포도', K.fy_grape), ('사과', K.fy_apple), ('단감', K.fy_swp), ('복숭아', K.fy_peach)], 'kg', '성과수 기준 단수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('채소 생산량', [('배추', K.v_cabbage), ('양파', K.v_onion), ('무', K.v_radish), ('마늘', K.v_garlic), ('건고추', K.v_pepper)], '톤', '오른쪽은 전년 대비 · 연도가 다른 품목은 이름 옆에 표시', none, '#5fae7a') }}
   {{ hcard('채소 재배면적', [('배추', K.va_cabbage), ('건고추', K.va_pepper), ('마늘', K.va_garlic), ('무', K.va_radish), ('양파', K.va_onion)], 'ha', '오른쪽은 전년 대비 · 연도가 다른 품목은 이름 옆에 표시', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">과수·시설작물 재배면적 <small>농작물생산조사</small></h3>
+ <div class="sg-g">
+  {{ card('orc_total', 'g60', '노지에서 기르는 과수 전체', '#e0a03a') }}
+  {{ card('orc_apple', 'g61', ('어린 나무(미과수) ' ~ K.orc_apple_young.vals[-1]|big ~ ' ha 포함') if K.orc_apple_young else none, '#c0392b') }}
+  {{ rcard('사과 중 미과수 비중', K.orc_apple_young, K.orc_apple, 'g62', '아직 수확 전인 어린 나무 면적 ÷ 사과 재배면적 · 높을수록 새로 심은 과원이 많음', '#c0392b') }}
+  {{ hcard('노지 과수 재배면적', [('사과', K.orc_apple), ('복숭아', K.orc_peach), ('감귤', K.orc_citrus), ('떫은감', K.orc_astp), ('포도', K.orc_grape), ('단감', K.orc_swp), ('배', K.orc_pear), ('자두', K.orc_plum), ('매실', K.orc_maesil)], 'ha', '성과수+미과수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('도별 사과 재배면적', [('경북', K.oap_gb), ('경남', K.oap_gn), ('충북', K.oap_cb), ('강원', K.oap_gw), ('전북', K.oap_jb), ('충남', K.oap_cn), ('대구', K.oap_dg), ('경기', K.oap_gg)], 'ha', '괄호는 전국 사과 면적 중 비중 · 오른쪽은 전년 대비', K.orc_apple.vals[-1] if K.orc_apple else none, '#c0392b') }}
+  {{ hcard('시설 채소 재배면적', [('수박', K.fac_melon), ('토마토', K.fac_tomato), ('딸기', K.fac_straw), ('참외', K.fac_kmelon), ('오이', K.fac_cuc), ('풋고추', K.fac_pepper), ('상추', K.fac_lettuce), ('호박', K.fac_pumpkin)], 'ha', '비닐하우스·유리온실 등 시설 재배 · 오른쪽은 전년 대비', none, '#5fae7a') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

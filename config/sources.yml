@@ -534,6 +534,45 @@ sources:
       - {id: og_cn, title: 중국 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^중국$"], unit: "%", survey: 국제통계(유기농업)}
       - {id: og_us, title: 미국 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^미국$"], unit: "%", survey: 국제통계(유기농업)}
       - {id: og_jp, title: 일본 유기농 면적 점유율, tbl: DT_2FA23034, itm: "^유기농 농업면적 점유율$", want: ["^일본$"], unit: "%", survey: 국제통계(유기농업)}
+      - {id: orc_total, title: 노지 과수 재배면적, tbl: DT_1ET0014, itm: "^합계$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_apple, title: 사과 재배면적, tbl: DT_1ET0014, itm: "^●\\s*사과$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_pear, title: 배 재배면적, tbl: DT_1ET0014, itm: "^●\\s*배$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_peach, title: 복숭아 재배면적, tbl: DT_1ET0014, itm: "^●\\s*복숭아$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_grape, title: 포도 재배면적, tbl: DT_1ET0014, itm: "^●\\s*포도$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_citrus, title: 감귤 재배면적, tbl: DT_1ET0014, itm: "^●\\s*감귤$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_swp, title: 단감 재배면적, tbl: DT_1ET0014, itm: "^●\\s*단감$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_astp, title: 떫은감 재배면적, tbl: DT_1ET0014, itm: "^●\\s*떫은감$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_plum, title: 자두 재배면적, tbl: DT_1ET0014, itm: "^●\\s*자두$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_maesil, title: 매실 재배면적, tbl: DT_1ET0014, itm: "^●\\s*매실$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_apple_young, title: 사과 미과수 재배면적, tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", unit: ha, survey: 농작물생산조사}
+      - {id: oap_gb, title: 사과 재배면적(gb), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_gn, title: 사과 재배면적(gn), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_cb, title: 사과 재배면적(cb), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_jb, title: 사과 재배면적(jb), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_gw, title: 사과 재배면적(gw), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_gg, title: 사과 재배면적(gg), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_cn, title: 사과 재배면적(cn), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oap_dg, title: 사과 재배면적(dg), tbl: DT_1ET0014, itm: "^●\\s*사과$", want: ["^대구광역시$"], unit: ha, survey: 농작물생산조사}
+      - {id: fac_straw, title: 시설 딸기 재배면적, tbl: DT_1ET0017, itm: "^딸기$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_tomato, title: 시설 토마토 재배면적, tbl: DT_1ET0017, itm: "^토마토$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_melon, title: 시설 수박 재배면적, tbl: DT_1ET0017, itm: "^수박$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_kmelon, title: 시설 참외 재배면적, tbl: DT_1ET0017, itm: "^참외$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_cuc, title: 시설 오이 재배면적, tbl: DT_1ET0017, itm: "^오이$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_pepper, title: 시설 풋고추 재배면적, tbl: DT_1ET0017, itm: "^풋고추$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_lettuce, title: 시설 상추 재배면적, tbl: DT_1ET0017, itm: "^상추$", unit: ha, survey: 농작물생산조사}
+      - {id: fac_pumpkin, title: 시설 호박 재배면적, tbl: DT_1ET0017, itm: "^호박$", unit: ha, survey: 농작물생산조사}
+      - {id: mcol_all, title: 분뇨 수거방법 가축사육농가 농가(축종 합산), tbl: DT_1EA1033, itm: "^가축사육농가$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mcol_slat, title: 분뇨 수거방법 틈새식-기계식 농가(축종 합산), tbl: DT_1EA1033, itm: "^틈새식-기계식$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mcol_slurry, title: 분뇨 수거방법 틈새식-슬러리 농가(축종 합산), tbl: DT_1EA1033, itm: "^틈새식-슬러리$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mcol_litter, title: 분뇨 수거방법 바닥식-깔짚 농가(축종 합산), tbl: DT_1EA1033, itm: "^바닥식-깔짚$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mcol_floor, title: 분뇨 수거방법 바닥식-깔짚없음 농가(축종 합산), tbl: DT_1EA1033, itm: "^바닥식-깔짚없음$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: mcol_etc, title: 분뇨 수거방법 기타 농가(축종 합산), tbl: DT_1EA1033, itm: "^기타$", want: ["^(한우|육우\\(젖소수컷포함\\)|젖소암컷|돼지|육계|산란계|오리)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: cp_comp_all, title: 가축분뇨 퇴비 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^(관내|관외)$", want: ["^퇴비$"], sum: true, unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: cp_comp_in, title: 가축분뇨 퇴비 관내 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관내$", want: ["^퇴비$"], unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: cp_comp_out, title: 가축분뇨 퇴비 관외 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관외$", want: ["^퇴비$"], unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: cp_liq_all, title: 가축분뇨 액비 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^(관내|관외)$", want: ["^액비\\(돼지\\)$"], sum: true, unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: cp_liq_in, title: 가축분뇨 액비 관내 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관내$", want: ["^액비\\(돼지\\)$"], unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: cp_liq_out, title: 가축분뇨 액비 관외 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관외$", want: ["^액비\\(돼지\\)$"], unit: 천톤, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

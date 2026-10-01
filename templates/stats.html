@@ -139,7 +139,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼 비료 투입·비료·농약 사용량·유기농 국제 비교·가축분뇨 처리·수거·살포', 21) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼 비료 투입·비료·농약 사용량·농약 판매량·유기농 국제 비교·가축분뇨 처리·수거·살포·축사 악취저감·방역시설', 31) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -168,6 +168,14 @@
   {{ hcard('질소비료 사용량', [('중국', K.fz_cn_n), ('대한민국', K.fz_kr_n), ('네덜란드', K.fz_nl_n), ('일본', K.fz_jp_n), ('미국', K.fz_us_n)], 'kg/ha', '농지 1ha당 질소(N) · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('농약 사용량', [('대한민국', K.pe_kr), ('일본', K.pe_jp), ('네덜란드', K.pe_nl), ('미국', K.pe_us), ('중국', K.pe_cn)], 'kg/ha', '농지 1ha당 농약 사용량 · 오른쪽은 전년 대비', none, '#a0605a') }}
   {{ hcard('유기농 면적 점유율', [('오스트리아', K.og_at), ('이탈리아', K.og_it), ('독일', K.og_de), ('프랑스', K.og_fr), ('네덜란드', K.og_nl), ('대한민국', K.og_kr), ('중국', K.og_cn), ('미국', K.og_us), ('일본', K.og_jp)], '%', '농업면적 중 유기농 면적 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('나라별 농약 판매량', [('인도네시아', K.psn_id), ('베트남', K.psn_vn), ('멕시코', K.psn_mx), ('프랑스', K.psn_fr), ('일본', K.psn_jp), ('독일', K.psn_de), ('이탈리아', K.psn_it), ('대한민국', K.psn_kr)], '톤', '한 해 판매된 농약 유효성분 무게 · 나라 크기 차이 그대로 · 오른쪽은 전년 대비', none, '#a0605a') }}
+ </div>
+ <h3 class="sg-sub">농약 판매량 <small>대한민국 · 유효성분 기준 · FAO 기반 국제통계</small></h3>
+ <div class="sg-g">
+  {{ card('pst_all', 'e13', ('살충제 ' ~ K.pst_ins.vals[-1]|big ~ ' · 살균제 ' ~ K.pst_fun.vals[-1]|big ~ ' · 제초제 ' ~ K.pst_her.vals[-1]|big ~ ' 톤') if K.pst_ins and K.pst_fun and K.pst_her else '한 해 판매된 농약 유효성분 무게', '#a0605a') }}
+  {{ rcard('농약 중 제초제 비중', K.pst_her, K.pst_all, 'e14', '판매된 농약 유효성분 중 제초제 비율', '#a0605a') }}
+  {{ rcard('농약 중 살균제 비중', K.pst_fun, K.pst_all, 'e15', '판매된 농약 유효성분 중 살균제 비율', '#a0605a') }}
+  {{ hcard('농약 종류별 판매량', [('살균제', K.pst_fun), ('살충제', K.pst_ins), ('제초제', K.pst_her), ('기타', K.pst_etc)], '톤', '유효성분 무게 · 괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.pst_all.vals[-1] if K.pst_all else none, '#a0605a') }}
  </div>
  <h3 class="sg-sub">가축분뇨 자원화 <small>퇴비·액비 처리와 농경지 살포</small></h3>
  <div class="sg-g">
@@ -176,6 +184,14 @@
   {{ rcard('퇴비 관외 살포 비중', K.cp_comp_out, K.cp_comp_all, 'e12', '농장이 있는 시군 밖 농경지에 뿌린 퇴비 비율', '#7a6a3a') }}
   {{ hcard('축종별 분뇨 퇴비·액비화 농가 비율', [('한우', K.mn_hw_res|ratio(K.mn_hw_all)), ('젖소', K.mn_dy_res|ratio(K.mn_dy_all)), ('산란계', K.mn_ly_res|ratio(K.mn_ly_all)), ('오리', K.mn_dk_res|ratio(K.mn_dk_all)), ('육계', K.mn_br_res|ratio(K.mn_br_all)), ('돼지', K.mn_pg_res|ratio(K.mn_pg_all))], '%', '축종별 사육 농가 중 비율 · 나머지는 위탁·정화 처리 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('축사 분뇨 수거 방식', [('바닥식 깔짚', K.mcol_litter), ('바닥식 깔짚 없음', K.mcol_floor), ('틈새식 슬러리', K.mcol_slurry), ('틈새식 기계식', K.mcol_slat), ('기타', K.mcol_etc)], '가구', '7개 축종 사육 농가 합산 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcol_all.vals[-1] if K.mcol_all else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">축사 악취저감·방역시설 <small>가축분뇨처리통계 · 설치 농장 수(여러 개 설치 시 각각 셈)</small></h3>
+ <div class="sg-g">
+  {{ card('odf_none', 'e16', '축사에 악취저감 장비·시설을 하나도 두지 않은 농장', '#7a6a3a') }}
+  {{ card('odf_fogin', 'e17', ('가장 흔한 악취저감 시설 · 외부 안개분무 ' ~ K.odf_fogout.vals[-1]|big ~ '호') if K.odf_fogout else '가장 흔한 악취저감 시설', '#5a7a3a') }}
+  {{ card('dsf_foot', 'e18', ('가장 흔한 방역시설 · 석회 살포 ' ~ K.dsf_lime.vals[-1]|big ~ '호') if K.dsf_lime else '가장 흔한 방역시설', '#2458d6') }}
+  {{ hcard('축사 악취저감 시설 종류', [('내부 안개분무', K.odf_fogin), ('외부 안개분무', K.odf_fogout), ('바이오 커튼', K.odf_bioc), ('액비순환시스템', K.odf_liq)], '호', '설치 농장 수 · 오른쪽은 전년 대비', none, '#5a7a3a') }}
+  {{ hcard('축사 소독·방역시설 종류', [('발판 소독조', K.dsf_foot), ('석회 살포', K.dsf_lime), ('차량 소독기', K.dsf_car), ('외부 울타리', K.dsf_fence), ('방조·방충망', K.dsf_net), ('전실', K.dsf_ante)], '호', '6개 축종 합계 · 설치 농장 수 · 오른쪽은 전년 대비', none, '#2458d6') }}
  </div>
  </div></details>
 

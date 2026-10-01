@@ -573,6 +573,30 @@ sources:
       - {id: cp_liq_all, title: 가축분뇨 액비 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^(관내|관외)$", want: ["^액비\\(돼지\\)$"], sum: true, unit: 천톤, survey: 가축분뇨처리통계}
       - {id: cp_liq_in, title: 가축분뇨 액비 관내 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관내$", want: ["^액비\\(돼지\\)$"], unit: 천톤, survey: 가축분뇨처리통계}
       - {id: cp_liq_out, title: 가축분뇨 액비 관외 농경지 살포량, tbl: DT_114059_009, org: "114", itm: "^관외$", want: ["^액비\\(돼지\\)$"], unit: 천톤, survey: 가축분뇨처리통계}
+      - {id: pst_all, title: 대한민국 농약 판매량(전체), tbl: DT_2KAAF05, itm: "^전체$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: pst_ins, title: 대한민국 농약 판매량(살충제), tbl: DT_2KAAF05, itm: "^살충제$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: pst_fun, title: 대한민국 농약 판매량(살균제), tbl: DT_2KAAF05, itm: "^살균제$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: pst_her, title: 대한민국 농약 판매량(제초제), tbl: DT_2KAAF05, itm: "^제초제$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: pst_etc, title: 대한민국 농약 판매량(기타), tbl: DT_2KAAF05, itm: "^기타$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_kr, title: 대한민국 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_jp, title: 일본 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^일본$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_vn, title: 베트남 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^베트남$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_id, title: 인도네시아 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^인도네시아$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_fr, title: 프랑스 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^프랑스$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_de, title: 독일 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^독일$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_it, title: 이탈리아 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^이탈리아$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: psn_mx, title: 멕시코 농약 판매량, tbl: DT_2KAAF05, itm: "^전체$", want: ["^멕시코$"], unit: 톤, survey: 국제통계(농약 판매)}
+      - {id: odf_fogin, title: 축사 악취저감 시설 내부 안개분무 농장, tbl: DT_114059_010, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^\\[내부\\]안개분무$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: odf_fogout, title: 축사 악취저감 시설 외부 안개분무 농장, tbl: DT_114059_010, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^\\[외부\\]안개분무$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: odf_bioc, title: 축사 악취저감 시설 바이오 커튼 농장, tbl: DT_114059_010, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^바이오 커튼$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: odf_liq, title: 축사 악취저감 시설 액비순환시스템 농장, tbl: DT_114059_010, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^액비순환시스템$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: odf_none, title: 축사 악취저감 시설 없음 농장, tbl: DT_114059_010, org: "114", itm: "^농장 내 축사", want: ["^전체$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_foot, title: 축사 방역시설 발판 소독조 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^발판 소독조$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_lime, title: 축사 방역시설 석회살포 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^석회살포$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_car, title: 축사 방역시설 차량 소독기 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^차량 소독기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_fence, title: 축사 방역시설 외부 울타리 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^외부 울타리$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_net, title: 축사 방역시설 방조·방충망 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^방조 및 방충망$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: dsf_ante, title: 축사 방역시설 전실 설치 농장, tbl: DT_114059_013, org: "114", itm: "^소독 및 방역시설", want: ["^전실$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

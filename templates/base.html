@@ -385,6 +385,21 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 .sd-src{margin-top:14px}.sd-src a{color:var(--mute)}.sd-src a:hover{color:var(--ink)}
 @media(max-width:1100px){.mksum{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.mksum{gap:10px}.mks{padding:12px 14px}.mks b{font-size:1.25rem}dl.kv{grid-template-columns:1fr}#pc{height:240px}.sd-px b{font-size:1.75rem}.tg{grid-template-columns:1fr 1fr}.sd-more{grid-template-columns:minmax(0,1fr)}}
+/* 홈 통계 카드 띠: 가로 한 줄, 한 장씩 자동으로 넘어간다 */
+.stc{margin-top:16px}.stc-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.stc-hd h4{margin:0;font-size:1rem;font-weight:500;color:var(--ink)}
+.stc-vp{overflow:hidden;border-radius:var(--r)}
+.stc-tr{display:flex;gap:16px;transition:transform 520ms cubic-bezier(0.65,0,0.35,1);will-change:transform}
+.stc-c{flex:0 0 calc((100% - 32px) / 3)}
+.stc-c .t small{font-size:0.8125rem;color:var(--mute);margin-left:6px;margin-right:auto}
+.stc-c .s{flex-wrap:wrap;gap:4px 12px}.stc-c .s .yr{margin-left:auto}
+.stc-c .hint{margin:0 0 8px;font-size:0.8125rem;color:#555}
+.stc-c .mix{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:2px;margin:-2px 0 8px}
+.mix .m1,.dot.m1{background:#1c7a45}.mix .m2,.dot.m2{background:#7cbf95}.mix .m3,.dot.m3{background:#c9e3d2}
+.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;vertical-align:0}
+.stc-dots{display:flex;justify-content:center;gap:6px;margin-top:12px}.stc-dots i{width:6px;height:6px;border-radius:3px;background:#d6d6d6;transition:width 200ms ease-out,background-color 200ms ease-out}.stc-dots i.on{width:18px;background:var(--ink)}
+@media(max-width:1100px){.stc-c{flex-basis:calc((100% - 16px) / 2)}}
+@media(max-width:760px){.stc-c{flex-basis:86%}.stc-tr{gap:10px}.kp4.stc-c .s span:first-child{display:inline}}
+@media(prefers-reduced-motion:reduce){.stc-tr{transition:none}}
 @media(prefers-reduced-motion:reduce){.tk.run .tk-tr,html.js .dash>.card,.price.flip span{animation:none}.pill .roll.sw{translate:none;filter:none}.btn-blue:active,.btn-line:active,.ico:active,.more:active,.pnav button:active,.ptab button:active,.tabs button:active,.hot a:active,.coin:active,.pill .lens:active,.hd nav a:active{scale:none}html.js .tk{overflow-x:auto}.rot{display:none}td.bar{transition:none}html.js .bc i.on,html.js .dbars i,html.js .kpis>.kp4{animation:none}#svg .tip,#svg .bk .lift,svg.msv rect.b{transition:none}.mvt tr.pick:hover .hbar i{animation:none}.hbar i{transition:none}html.js .hbar:not(.go) i{width:var(--w)}.pnav .pp svg{transition:none}html.js .dv:not(.go) i{transform:none}.dv i{transition:none}}
 /* 공통 버튼 효과음: 기존 머리글 안에서 켜기·끄기 */
 .header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -568,6 +583,24 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.querySelector
  sv.querySelectorAll('rect.b').forEach(function(r){r.addEventListener('pointerenter',function(){var cb=card.getBoundingClientRect(),rb=r.getBoundingClientRect();tip.textContent=r.dataset.t;tip.classList.add('on');
   var w=tip.offsetWidth,x=Math.min(Math.max(rb.left-cb.left+rb.width/2-w/2,8),cb.width-w-8);tip.style.translate=x+'px '+(rb.top-cb.top-30)+'px'})});
  sv.addEventListener('pointerleave',function(){tip.classList.remove('on')})});
+/* 통계 카드 띠: 보이는 장수만큼 앞쪽 카드를 뒤에 복제해 끝없이 한 장씩 넘긴다 */
+(function(){var tr=$('stcTr');if(!tr)return;var vp=tr.parentNode,cards=[].slice.call(tr.children),n=cards.length;if(n<2)return;
+ var dots=$('stcDots'),pb=$('cPause'),idx=0,timer=0,on=!RM,hov=false,busy=false;
+ function per(){var w=cards[0].getBoundingClientRect().width,g=parseFloat(getComputedStyle(tr).columnGap)||16;return {step:w+g,vis:Math.max(1,Math.round((vp.clientWidth+g)/(w+g)))}}
+ cards.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.querySelectorAll('a').forEach(function(a){a.tabIndex=-1});k.querySelectorAll('[id]').forEach(function(e){e.removeAttribute('id')});tr.appendChild(k)});
+ for(var i=0;i<n;i++){dots.appendChild(document.createElement('i'))}
+ function paint(anim){var p=per();if(!anim)tr.style.transition='none';tr.style.transform='translateX('+(-idx*p.step)+'px)';if(!anim){void tr.offsetWidth;tr.style.transition=''}
+  [].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===idx%n)})}
+ function go(d){if(busy)return;var p=per();if(d<0&&idx===0){idx=n;paint(false)}idx+=d;busy=true;paint(true);
+  setTimeout(function(){busy=false;if(idx>=n){idx-=n;paint(false)}},RM?0:540)}
+ function sync(){if(pb){pb.setAttribute('aria-pressed',!on);pb.setAttribute('aria-label',on?'카드 자동 넘김 멈춤':'카드 자동 넘김 다시 시작');pb.title=pb.getAttribute('aria-label')}}
+ function tick(){clearTimeout(timer);if(on)timer=setTimeout(function(){if(!hov&&!document.hidden)go(1);tick()},4500)}
+ $('cPrev').onclick=function(){on=false;sync();clearTimeout(timer);go(-1)};$('cNext').onclick=function(){on=false;sync();clearTimeout(timer);go(1)};
+ if(pb)pb.onclick=function(){on=!on;sync();if(on){go(1)}tick()};
+ vp.addEventListener('mouseenter',function(){hov=true});vp.addEventListener('mouseleave',function(){hov=false});vp.addEventListener('focusin',function(){hov=true});vp.addEventListener('focusout',function(){hov=false});
+ var sx=null;vp.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});vp.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>40){on=false;sync();clearTimeout(timer);go(dx<0?1:-1)}});
+ var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){paint(false)},150)});
+ sync();paint(false);tick()})();
 /* 가로 막대: 처음 보일 때와 탭을 바꿀 때 차오른다 */
 function hbars(){document.querySelectorAll('.hbar,.dv').forEach(function(h){var c=h.closest('.kp4,.card');if(h.offsetParent&&!(c&&c._out))h.classList.add('go')})}setTimeout(hbars,120);
 /* 그래프 다시 움직이기: 카드가 스크롤로 화면 밖에 완전히 나갔다가 20% 이상 다시 보이면 처음처럼 움직인다 */

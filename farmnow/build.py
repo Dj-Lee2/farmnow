@@ -87,6 +87,12 @@ def f_won(v) -> str:
     return f"{v:,.0f}" if v is not None else "–"
 
 
+def f_prd(p) -> str:
+    """KOSIS 기간 표기: '2025' → '2025년', '202602'(분기) → '26년 2분기'."""
+    p = str(p or "")
+    return f"{p[2:4]}년 {int(p[4:])}분기" if len(p) == 6 else f"{p}년"
+
+
 def f_man(v) -> str:
     """큰 통계값은 만 단위: 974,000 → '97.4만'."""
     if v is None:
@@ -114,7 +120,7 @@ def cat_tab(it: NewsItem) -> str:
 
 def make_env() -> Environment:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html", "xml"]))
-    env.filters.update(mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp)
+    env.filters.update(prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp)
     env.policies["json.dumps_kwargs"] = {"ensure_ascii": False, "separators": (",", ":")}
     return env
 

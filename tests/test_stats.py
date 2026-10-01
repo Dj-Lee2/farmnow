@@ -57,7 +57,7 @@ def test_collect_fetches_and_keeps_prev_on_partial_failure(tmp_path, monkeypatch
     prev = {"fetched_at": (now_kst() - timedelta(days=3)).isoformat(), "series": {"rice": {"vals": [9.0], "years": ["2023"]}}}
     (tmp_path / "stats.json").write_text(json.dumps(prev), encoding="utf-8")
 
-    def fake(key, tbl, org="101", years=10, max_dims=4):
+    def fake(key, tbl, org="101", years=10, max_dims=4, se="Y"):
         if tbl == "B":
             raise RuntimeError("KOSIS B err=30")
         return [_r("2024", "농가", "974,245", "가구", C1_NM="전국")]
@@ -85,3 +85,17 @@ def test_price_stats_year_over_year():
 
 def test_f_man():
     assert build.f_man(974245) == "97.4만" and build.f_man(514) == "514" and build.f_man(None) == "–"
+
+
+def test_pick_series_quarterly_keeps_full_period():
+    from farmnow.collectors.kosis import pick_series
+    rows = [{"ITM_NM": "농가판매가격지수", "C1_NM": "총지수", "PRD_DE": "202601", "DT": "123.1"},
+            {"ITM_NM": "농가판매가격지수", "C1_NM": "총지수", "PRD_DE": "202602", "DT": "124.4"},
+            {"ITM_NM": "농가판매가격지수", "C1_NM": "곡물", "PRD_DE": "202602", "DT": "99"}]
+    got = pick_series(rows, "^농가판매가격지수$", ["^총지수$"], se="Q")
+    assert got["years"] == ["202601", "202602"] and got["vals"] == [123.1, 124.4]
+
+
+def test_f_prd():
+    from farmnow.build import f_prd
+    assert f_prd("2025") == "2025년" and f_prd("202602") == "26년 2분기"

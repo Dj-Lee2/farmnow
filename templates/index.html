@@ -59,6 +59,44 @@
   {{ scard(s, 'st' ~ loop.index, sub) }}
   {% endfor %}
  </div>
+{% set K = kstat %}{% set tot_ok = K.sell_idx and K.buy_idx %}
+ {% if K.farm_income or tot_ok or K.hanwoo or K.rice_cons or K.pig_net %}
+ <div class="stc" id="stc" aria-roledescription="carousel" aria-label="농가경제·축산·소비 통계">
+  <div class="stc-hd"><h4>농가경제·축산·소비</h4><span class="pnav"><button type="button" id="cPrev" aria-label="이전 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="cPause" class="pp" aria-pressed="false" aria-label="카드 자동 넘김 멈춤" title="카드 자동 넘김 멈춤"><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button><button type="button" id="cNext" aria-label="다음 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span></div>
+  <div class="stc-vp"><div class="stc-tr" id="stcTr">
+  {% if K.farm_income %}{% set v = K.farm_income.vals %}{% set yp = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}
+   <section class="kp4 stc-c"><div class="t">농가소득 <small>농가 평균</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.farm_income.tbl, '농가소득 KOSIS 통계표') }}</div>
+    <div class="v">{{ '{:,.0f}'.format(v[-1] / 10) }}<small>만 원</small> <em class="{{ 'up' if yp and yp>0 else 'down' if yp and yp<0 else '' }}">{{ yp|pct }}</em></div>
+    {% set parts = [('농업', K.agri_income), ('농외', K.nonagri_income), ('이전', K.transfer_income)]|selectattr('1')|list %}
+    {% if parts %}<div class="mix" aria-hidden="true">{% for n, ser in parts %}<i class="m{{ loop.index }}" style="flex:{{ ser.vals[-1] }}"></i>{% endfor %}</div>
+    <div class="s">{% for n, ser in parts %}<span><b class="dot m{{ loop.index }}"></b>{{ n }} {{ '{:,.0f}'.format(ser.vals[-1] / 10) }}만</span>{% endfor %}<span class="yr">{{ K.farm_income.years[-1]|prd }}</span></div>{% endif %}
+    {{ v|mini('cf', '#1c7a45', K.farm_income.years, '천 원') }}</section>{% endif %}
+  {% if tot_ok %}{% set sy = K.sell_idx.years %}{% set tr = [] %}{% set tl = [] %}{% for p in sy %}{% if p in K.buy_idx.years %}{% set b = K.buy_idx.vals[K.buy_idx.years.index(p)] %}{% if b %}{% set _ = tr.append(K.sell_idx.vals[loop.index0] / b * 100) %}{% set _ = tl.append(p|prd) %}{% endif %}{% endif %}{% endfor %}
+   {% set d = (tr[-1] - tr[-2]) if tr|length > 1 else none %}
+   <section class="kp4 stc-c"><div class="t">농가 교역조건 <small>판매÷구입×100</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.sell_idx.tbl, '농가판매가격지수 KOSIS 통계표') }}</div>
+    <div class="v">{{ '{:,.1f}'.format(tr[-1]) }} <em class="{{ 'up' if d and d>0 else 'down' if d and d<0 else '' }}">{{ ('+' if d and d > 0 else '') ~ ('{:.1f}'.format(d) if d is not none else '–') }}p</em></div>
+    <div class="s"><span>판매 {{ K.sell_idx.vals[-1] }} · 구입 {{ K.buy_idx.vals[-1] }} <small>(2020=100)</small></span><span class="yr">{{ sy[-1]|prd }}</span></div>
+    <p class="hint">{{ '100 미만 · 사는 값이 더 올랐음' if tr[-1] < 100 else '100 초과 · 파는 값이 더 올랐음' }}</p>
+    {{ tr|mini('ct', '#2458d6' if tr[-1] < 100 else '#d23a32', tl, '') }}</section>{% endif %}
+  {% if K.hanwoo %}{% set v = K.hanwoo.vals %}{% set yp = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}
+   <section class="kp4 stc-c"><div class="t">한우 사육 마릿수 <small>전국</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.hanwoo.tbl, '가축동향 KOSIS 통계표') }}</div>
+    <div class="v">{{ v[-1]|man }}<small>마리</small> <em class="{{ 'up' if yp and yp>0 else 'down' if yp and yp<0 else '' }}">{{ yp|pct }}</em></div>
+    <div class="s"><span>{% if K.hanwoo_farms %}농장 {{ K.hanwoo_farms.vals[-1]|man }}{% endif %}{% if K.dairy %} · 젖소 {{ K.dairy.vals[-1]|man }} 마리{% endif %}</span><span class="yr">{{ K.hanwoo.years[-1]|prd }}</span></div>
+    {{ v|mini('ch', '#1c7a45', K.hanwoo.years|map('prd')|list, '마리') }}</section>{% endif %}
+  {% if K.rice_cons %}{% set v = K.rice_cons.vals %}{% set yp = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}{% set y0 = ((v[-1] - v[0]) / v[0] * 100) if v|length > 1 and v[0] else none %}
+   <section class="kp4 stc-c"><div class="t">1인당 쌀 소비량 <small>연간</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.rice_cons.tbl, '양곡소비량 KOSIS 통계표') }}</div>
+    <div class="v">{{ v[-1] }}<small>kg</small> <em class="{{ 'up' if yp and yp>0 else 'down' if yp and yp<0 else '' }}">{{ yp|pct }}</em></div>
+    <div class="s"><span>하루 {{ '{:,.0f}'.format(v[-1] * 1000 / 365) }}g · {{ K.rice_cons.years[0] }}년 대비 {{ y0|pct }}</span><span class="yr">{{ K.rice_cons.years[-1]|prd }}</span></div>
+    {{ v|mini('cr', '#1c7a45', K.rice_cons.years, 'kg') }}</section>{% endif %}
+  {% if K.pig_net %}{% set v = K.pig_net.vals %}{% set d = (v[-1] - v[-2]) if v|length > 1 else none %}
+   <section class="kp4 stc-c"><div class="t">비육돈 한 마리 순수익 <small>평균</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.pig_net.tbl, '축산물생산비 KOSIS 통계표') }}</div>
+    <div class="v">{{ '{:,.1f}'.format(v[-1] / 1e4) }}<small>만 원</small> <em class="{{ 'up' if d and d>0 else 'down' if d and d<0 else '' }}">{{ ('+' if d and d > 0 else '') ~ ('{:,.1f}'.format(d / 1e4) if d is not none else '–') }}만</em></div>
+    <div class="s"><span>{% if K.pig_rev %}총수입 {{ '{:,.1f}'.format(K.pig_rev.vals[-1] / 1e4) }}만{% endif %}{% if K.pig_cost %} · 비용 {{ '{:,.1f}'.format(K.pig_cost.vals[-1] / 1e4) }}만{% endif %}</span><span class="yr">{{ K.pig_net.years[-1]|prd }}</span></div>
+    {% if v|min > 0 %}{{ v|mini('cp', '#1c7a45', K.pig_net.years, '원') }}{% endif %}</section>{% endif %}
+  </div></div>
+  <div class="stc-dots" id="stcDots" aria-hidden="true"></div>
+ </div>
+ {% endif %}
  <p class="lg st-src">출처: 국가데이터처 KOSIS {% set sv = [] %}{% for sid in ks %}{% if kstat[sid].survey and kstat[sid].survey not in sv %}{% set _ = sv.append(kstat[sid].survey) %}{% endif %}{% endfor %}{{ sv|join('·') }} · 전년 대비 등락 · 막대는 {{ kstat[ks[0]].years|length }}년 추이</p>{% endif %}
  {% if pstat %}{% set am = [pstat.cats|map(attribute='pct')|map('abs')|max, 5]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}
  {% set mv = pstat.risers[:3] + pstat.fallers[:3] %}{% set am2 = [mv|map(attribute='yoy')|map('abs')|max if mv else 5, 5]|max %}{% set mx2 = [5, 10, 20, 30, 40, 50, 60, 80, 100]|select('ge', am2)|first or 100 %}

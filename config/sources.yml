@@ -123,6 +123,20 @@ sources:
       - {id: area_paddy, title: 논 면적, tbl: DT_1EB001, itm: "논|면적", want: ["^논"], survey: 농업면적조사}
       - {id: area_upland, title: 밭 면적, tbl: DT_1EB001, itm: "밭|면적", want: ["^밭"], survey: 농업면적조사}
       - {id: rice, title: 쌀 생산량, tbl: DT_1ET0021, itm: "생산량", want: ["^(미곡|쌀|논벼)"], survey: 농작물생산조사}
+      # 농가경제·교역조건·가축·소비·생산비(홈 통계 카드 띠). se: Q는 분기 통계, periods는 받을 기간 수
+      - {id: farm_income, title: 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^평균$"], survey: 농가경제조사}
+      - {id: agri_income, title: 농업소득, tbl: DT_1EA1201, itm: "^농업소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nonagri_income, title: 농외소득, tbl: DT_1EA1201, itm: "^농외소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: transfer_income, title: 이전소득, tbl: DT_1EA1201, itm: "^이전소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: sell_idx, title: 농가판매가격지수, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^총지수$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: buy_idx, title: 농가구입가격지수, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^총지수$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: hanwoo, title: 한우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^한우:마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: hanwoo_farms, title: 한우 농장 수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^한우:농장수$", unit: 농장, survey: 가축동향조사}
+      - {id: dairy, title: 젖소 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^젖소:마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: rice_cons, title: 1인당 쌀 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^쌀$"], survey: 양곡소비량조사}
+      - {id: pig_net, title: 비육돈 두당 순수익, tbl: DT_1EE307, itm: "^평균$", want: ["^순수익"], survey: 축산물생산비조사}
+      - {id: pig_rev, title: 비육돈 두당 총수입, tbl: DT_1EE307, itm: "^평균$", want: ["^총수입"], survey: 축산물생산비조사}
+      - {id: pig_cost, title: 비육돈 두당 비용, tbl: DT_1EE307, itm: "^평균$", want: ["^비용합계"], survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

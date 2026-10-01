@@ -104,3 +104,13 @@ def test_f_prd():
 def test_f_big():
     from farmnow.build import f_big
     assert f_big(201271652) == "2.01억" and f_big(3153897) == "315.4만" and f_big(72389) == "72,389"
+
+
+def test_pick_series_total_sums_matching_items():
+    from farmnow.collectors.kosis import pick_series
+    rows = [{"ITM_NM": n, "C1_NM": c, "PRD_DE": "2024", "DT": d, "UNIT_NM": "가구"}
+            for n, c, d in [("65~69세", "전국", "10"), ("70~74세", "전국", "5"), ("70~74세", "전국", "5"),
+                            ("65~69세", "경기도", "3"), ("계", "전국", "40")]]
+    got = pick_series(rows, r"^(65~69세|70~74세)$", total=True)
+    assert got["vals"] == [15.0]
+    assert pick_series(rows, r"^계$")["vals"] == [40.0]

@@ -155,6 +155,48 @@ sources:
       - {id: calf_cost, title: 송아지 두당 생산비, tbl: DT_1EE014, itm: "^평균$", want: ["^생산비$"], survey: 축산물생산비조사}
       - {id: dairy_net, title: 젖소 두당 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^평균$"], survey: 축산물생산비조사}
       - {id: grain_cons, title: 1인당 양곡 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^양곡계$"], survey: 양곡소비량조사}
+      # 농업인·귀농 (sum: 맞는 항목을 모두 더함)
+      - {id: op_total, title: 경영주 연령별 농가, tbl: DT_1EA1019, itm: "^계$", unit: 가구, survey: 농림어업조사}
+      - {id: op_65, title: 65세 이상 경영주 농가, tbl: DT_1EA1019, itm: "^(65~69세|70~74세|75~79세|80세이상)$", sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: op_u40, title: 40세 미만 경영주 농가, tbl: DT_1EA1019, itm: "^(20세미만|20~24세|25~29세|30~34세|35~39세)$", sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: full_time, title: 전업농가, tbl: DT_1EA1013, itm: "^전업$", unit: 가구, survey: 농림어업조사}
+      - {id: ft_total, title: 전겸업별 농가, tbl: DT_1EA1013, itm: "^농가$", unit: 가구, survey: 농림어업조사}
+      - {id: returnee, title: 귀농가구, tbl: DT_1A02009, itm: "^가구수$", unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: ty_rice, title: 논벼 농가, tbl: DT_1EA1018, itm: "^논벼$", unit: 가구, survey: 농림어업조사}
+      - {id: ty_food, title: 식량작물 농가, tbl: DT_1EA1018, itm: "^식량작물$", unit: 가구, survey: 농림어업조사}
+      - {id: ty_veg, title: 채소·산나물 농가, tbl: DT_1EA1018, itm: "^채소·산나물$", unit: 가구, survey: 농림어업조사}
+      - {id: ty_fruit, title: 과수 농가, tbl: DT_1EA1018, itm: "^과수$", unit: 가구, survey: 농림어업조사}
+      - {id: ty_spec, title: 특용작물·버섯 농가, tbl: DT_1EA1018, itm: "^특용작물·버섯$", unit: 가구, survey: 농림어업조사}
+      - {id: ty_live, title: 축산 농가, tbl: DT_1EA1018, itm: "^축산$", unit: 가구, survey: 농림어업조사}
+      - {id: pig, title: 돼지 사육 마릿수, tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: pig_farms, title: 돼지 농장 수, tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", unit: 농장, survey: 가축동향조사}
+      # 가격지수 부문별
+      - {id: b_seed, title: 종자종묘, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^종자종묘$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_fert, title: 비료비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^비료비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_pest, title: 농약비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^농약비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_feed, title: 사료비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^사료비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_mat, title: 영농자재비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^영농자재비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_labor, title: 노무비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^노무비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_energy, title: 영농광열비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^영농광열비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_rent, title: 임차료, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^임차료$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: b_mach, title: 기계구입비, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^기계구입비$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: s_grain, title: 곡물, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^곡물$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: s_veg, title: 채소, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^채소$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: s_fruit, title: 과수, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^과수$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: s_live, title: 축산물, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^축산물$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      - {id: s_spec, title: 특용작물, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^특용작물$"], unit: "2020=100", survey: 농가판매및구입가격조사}
+      # 과일·채소 생산량
+      - {id: fr_apple, title: 사과 생산량, tbl: DT_1ET0292, itm: "^사과:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: fr_pear, title: 배 생산량, tbl: DT_1ET0292, itm: "^배:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: fr_grape, title: 포도 생산량, tbl: DT_1ET0292, itm: "^포도:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: fr_citrus, title: 감귤 생산량, tbl: DT_1ET0292, itm: "^감귤:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: fr_peach, title: 복숭아 생산량, tbl: DT_1ET0292, itm: "^복숭아:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: fr_persim, title: 감 생산량, tbl: DT_1ET0292, itm: "^감:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: v_cabbage, title: 배추 생산량, tbl: DT_1ET0028, itm: "^배추:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: v_radish, title: 무 생산량, tbl: DT_1ET0029, itm: "^무:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: v_onion, title: 양파 생산량, tbl: DT_1ET0291, itm: "^양파:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: v_garlic, title: 마늘 생산량, tbl: DT_1ET0291, itm: "^마늘:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: v_pepper, title: 건고추 생산량, tbl: DT_1ET0291, itm: "^건고추:생산량$", unit: 톤, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

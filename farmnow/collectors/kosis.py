@@ -44,9 +44,10 @@ def fetch_table(key: str, tbl: str, org: str = "101", years: int = 10, max_dims:
     raise RuntimeError(f"KOSIS {tbl} err={last.get('err') if last else '?'} {(last or {}).get('errMsg', '')}"[:120])
 
 
-def pick_series(rows: list[dict], itm: str, want: list[str] | None = None, se: str = "Y") -> dict:
+def pick_series(rows: list[dict], itm: str, want: list[str] | None = None, se: str = "Y", total: bool = False) -> dict:
     """연도별 값 하나씩. 항목 이름은 itm과, want의 각 정규식은 항목·분류 이름 중 하나와 맞아야 하고
-    want에 걸리지 않은 분류는 모두 '계·전국' 같은 합계여야 한다. 한 해에 여러 행이 맞으면 항목 이름이 가장 짧은 행."""
+    want에 걸리지 않은 분류는 모두 '계·전국' 같은 합계여야 한다. 한 해에 여러 행이 맞으면 항목 이름이 가장 짧은 행,
+    total이면 맞는 항목들의 합(예: 65~69세+70~74세+…)."""
     want_re = [re.compile(w) for w in (want or [])]
     itm_re = re.compile(itm)
     best: dict[str, tuple[int, dict]] = {}
@@ -64,6 +65,13 @@ def pick_series(rows: list[dict], itm: str, want: list[str] | None = None, se: s
         if v is None:
             continue
         y = str(r.get("PRD_DE", ""))[:4] if se == "Y" else str(r.get("PRD_DE", ""))
+        if total:
+            if y in best and name not in best[y][1]["seen"]:
+                best[y][1]["v"] += v
+                best[y][1]["seen"].add(name)
+            elif y not in best:
+                best[y] = (0, {"v": v, "unit": r.get("UNIT_NM") or "", "tbl_nm": r.get("TBL_NM") or "", "seen": {name}})
+            continue
         if y not in best or len(name) < best[y][0]:
             best[y] = (len(name), {"v": v, "unit": r.get("UNIT_NM") or "", "tbl_nm": r.get("TBL_NM") or ""})
     years = sorted(best)
@@ -112,7 +120,7 @@ def collect(src: dict, data_dir: Path) -> tuple[list, dict]:
             tk = (s["tbl"], se)
             if tk not in tables:
                 tables[tk] = fetch_table(key, s["tbl"], s.get("org", "101"), s.get("periods", src.get("years", 10)), se=se)
-            got = pick_series(tables[tk], s["itm"], s.get("want"), se)
+            got = pick_series(tables[tk], s["itm"], s.get("want"), se, s.get("sum", False))
             if not got:
                 raise RuntimeError(f"맞는 행 없음 ({_labels_sample(tables[tk])})")
             out[s["id"]] = {"title": s["title"], "tbl": s["tbl"], "survey": s.get("survey", ""), "se": se,

@@ -664,6 +664,32 @@ sources:
       - {id: dro_jj, title: 제주 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^제주$"], unit: "%", survey: 국제통계(가뭄 노출)}
       - {id: dro_jp, title: 일본 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^일본$"], unit: "%", survey: 국제통계(가뭄 노출)}
       - {id: dro_cn, title: 중국 경작지 토양수분 이상치, tbl: DT_2OEEG011, periods: 10, itm: "^경작지 토양 수분 이상치$", want: ["^\\[비회원국\\]중국$"], unit: "%", survey: 국제통계(가뭄 노출)}
+      - {id: opo_40, title: 경영주 40대 논벼 10a당 유기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opo_50, title: 경영주 50대 논벼 10a당 유기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opo_60, title: 경영주 60대 논벼 10a당 유기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opo_70, title: 경영주 70대 이상 논벼 10a당 유기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^유기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opi_40, title: 경영주 40대 논벼 10a당 무기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opi_50, title: 경영주 50대 논벼 10a당 무기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opi_60, title: 경영주 60대 논벼 10a당 무기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opi_70, title: 경영주 70대 이상 논벼 10a당 무기질비료, tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^무기질비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: ops_40, title: 경영주 40대 논벼 10a당 토양개량제, tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: ops_50, title: 경영주 50대 논벼 10a당 토양개량제, tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: ops_60, title: 경영주 60대 논벼 10a당 토양개량제, tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: ops_70, title: 경영주 70대 이상 논벼 10a당 토양개량제, tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: opl_40, title: 경영주 40대 논벼 10a당 노동 투입 시간, tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: opl_50, title: 경영주 50대 논벼 10a당 노동 투입 시간, tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: opl_60, title: 경영주 60대 논벼 10a당 노동 투입 시간, tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: opl_70, title: 경영주 70대 이상 논벼 10a당 노동 투입 시간, tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s05, title: 논벼 0.5ha미만 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s1, title: 논벼 0.5~1ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s15, title: 논벼 1~1.5ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s2, title: 논벼 1.5~2ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s25, title: 논벼 2~2.5ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s3, title: 논벼 2.5~3ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s5, title: 논벼 3~5ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s7, title: 논벼 5~7ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s10, title: 논벼 7~10ha 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: rszl_s10p, title: 논벼 10ha이상 농가 10a당 노동 투입 시간, tbl: DT_1EC0008, itm: "^10a당$", want: ["^10\\.0ha이상$", "^노동력투입시간$"], unit: 시간, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

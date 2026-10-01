@@ -252,6 +252,23 @@ sources:
       - {id: fz_jp_n, title: 일본 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^일본$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
       - {id: fz_nl_n, title: 네덜란드 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^네덜란드$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
       - {id: fz_us_n, title: 미국 질소질 비료 사용량, tbl: DT_2FA23032, itm: "^질소질$", want: ["^미국$", "^농지 면적당 사용량$"], unit: kg/ha, survey: 국제통계(비료 사용량)}
+      # 농약 사용량(농지 1ha당)·온실가스·기후
+      - {id: pe_kr, title: 대한민국 농약 사용량, tbl: DT_2FA23031, itm: "^농지 면적당 사용량$", want: ["^대한민국$"], unit: kg/ha, survey: 국제통계(농약 사용량)}
+      - {id: pe_jp, title: 일본 농약 사용량, tbl: DT_2FA23031, itm: "^농지 면적당 사용량$", want: ["^일본$"], unit: kg/ha, survey: 국제통계(농약 사용량)}
+      - {id: pe_cn, title: 중국 농약 사용량, tbl: DT_2FA23031, itm: "^농지 면적당 사용량$", want: ["^중국$"], unit: kg/ha, survey: 국제통계(농약 사용량)}
+      - {id: pe_nl, title: 네덜란드 농약 사용량, tbl: DT_2FA23031, itm: "^농지 면적당 사용량$", want: ["^네덜란드$"], unit: kg/ha, survey: 국제통계(농약 사용량)}
+      - {id: pe_us, title: 미국 농약 사용량, tbl: DT_2FA23031, itm: "^농지 면적당 사용량$", want: ["^미국$"], unit: kg/ha, survey: 국제통계(농약 사용량)}
+      - {id: ghg_agri, title: 농업 온실가스 배출량, tbl: DT_2KAAD37, itm: "^배출원별 온실가스 배출량$", want: ["^(한국|대한민국)$", "^농업$"], unit: 천톤, survey: 국제통계(온실가스)}
+      - {id: ghg_total, title: 국가 온실가스 배출량, tbl: DT_2KAAD37, itm: "^배출원별 온실가스 배출량$", want: ["^(한국|대한민국)$", "^(기타|농업|산업 공정 및 제품 사용|에너지|폐기물)$"], sum: true, unit: 천톤, survey: 국제통계(온실가스)}
+      - {id: gs_kr, title: 농업 배출 비중, tbl: DT_2OEEG002, itm: "^3\\. 농업$", want: ["^(한국|대한민국)$"], unit: "%", survey: 국제통계(온실가스)}
+      - {id: gs_jp, title: 농업 배출 비중, tbl: DT_2OEEG002, itm: "^3\\. 농업$", want: ["^일본$"], unit: "%", survey: 국제통계(온실가스)}
+      - {id: gs_nl, title: 농업 배출 비중, tbl: DT_2OEEG002, itm: "^3\\. 농업$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(온실가스)}
+      - {id: gs_nz, title: 농업 배출 비중, tbl: DT_2OEEG002, itm: "^3\\. 농업$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(온실가스)}
+      - {id: gs_oecd, title: 농업 배출 비중, tbl: DT_2OEEG002, itm: "^3\\. 농업$", want: ["^OECD$"], unit: "%", survey: 국제통계(온실가스)}
+      - {id: temp, title: 연평균 기온, tbl: DT_1YL9801, itm: "^기온$", want: ["^전국"], unit: ℃, survey: 기상청 관측(시도)}
+      - {id: rain, title: 연강수량, tbl: DT_1YL9901, itm: "강수량", want: ["^전국"], unit: mm, survey: 기상청 관측(시도)}
+      - {id: br_net, title: 육계 10수당 순수익, tbl: DT_2EE316, itm: "^수익성$", want: ["^순수익", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: br_rev, title: 육계 10수당 총수입, tbl: DT_2EE316, itm: "^수익성$", want: ["^총수입", "^평균$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

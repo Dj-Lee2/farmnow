@@ -368,7 +368,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·관개용수·농경지 토양 산도·중금속·경작지 가뭄 노출', 18) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·관개용수·농경지 토양 산도·중금속·경작지 가뭄 노출·임가 자연재해·병해충 피해', 24) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -397,6 +397,15 @@
   {{ card('dro_jp', 'dr2', 'OECD 국제통계 · 전년 대비', '#2458d6') }}
   {{ card('dro_cn', 'dr3', 'OECD 국제통계 · 전년 대비', '#2458d6') }}
   {{ hcard('권역별 경작지 토양수분 이상치', [('수도권', K.dro_cap), ('충청권', K.dro_cc), ('강원권', K.dro_gw), ('전라권', K.dro_jl), ('경북권', K.dro_gb), ('경남권', K.dro_gn), ('제주', K.dro_jj)], '%', '장기 평균 대비 % · 파란 막대는 평년보다 건조 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">임가 자연재해·병해충 피해 <small>기타 수실류(잣·대추·호두 등)·관상 산림식물(조경수·분재·야생화) · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('ndf_heat', 'cf1', ('병해충 ' ~ '{:.1f}'.format(K.ndf_pest.vals[-1]) ~ '% · 피해 없음 ' ~ '{:.1f}'.format(K.ndf_none.vals[-1]) ~ '%') if K.ndf_pest and K.ndf_none else '기타 수실류 재배 임가', '#d23a32') }}
+  {{ card('ndo_heat', 'cf2', ('피해 없음 ' ~ '{:.1f}'.format(K.ndo_none.vals[-1]) ~ '% · 1·2순위 합') if K.ndo_none else '조경수·분재·야생화 재배 임가', '#d23a32') }}
+  {{ card('pvt_up', 'cf3', ('줄어든다 ' ~ '{:.1f}'.format(K.pvt_down.vals[-1]) ~ '% · 그대로 ' ~ '{:.1f}'.format(K.pvt_keep.vals[-1]) ~ '%') if K.pvt_down and K.pvt_keep else '기타 수실류 재배 임가', '#7a6a3a') }}
+  {{ hcard('기타 수실류 임가가 꼽은 가장 큰 자연재해 피해', [('병해충', K.ndf_pest), ('고온', K.ndf_heat), ('냉해', K.ndf_cold), ('가뭄', K.ndf_drt), ('피해 없음', K.ndf_none), ('동해', K.ndf_frz)], '%', '전체 임가 중 · 하나만 응답 · 오른쪽은 전년 대비', none, '#d23a32') }}
+  {{ hcard('관상 산림식물 임가의 자연재해 피해', [('피해 없음', K.ndo_none), ('고온', K.ndo_heat), ('가뭄', K.ndo_drt), ('냉해', K.ndo_cold), ('수해', K.ndo_flood), ('병해충', K.ndo_pest), ('동해', K.ndo_frz), ('태풍', K.ndo_typh)], '%', '전체 임가 중 · 1순위+2순위 응답이라 합이 100%를 넘음 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('5년간 병해충 발생이 늘어나고 있다는 임가 비율', [('대추', K.pvt_up_jjb), ('잣', K.pvt_up_pine), ('기타 수실류 전체', K.pvt_up), ('기타 유실수', K.pvt_up_oth), ('호두', K.pvt_up_wal)], '%', '기타 수실류 세부 업종별 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
  </div>
  </div></details>
 

@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항', 59) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항', 64) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -192,6 +192,14 @@
   {{ card('frg_omija_jb', 'v30', ('강원 오미자 ' ~ num(K.frg_omija_gw.vals[-1], '원')|striptags ~ ' · 음수는 경영비가 조수입보다 많음') if K.frg_omija_gw else '음수는 경영비가 조수입보다 많음', '#7a6a3a') }}
   {{ hcard('도별 감·대추·밤 1ha당 소득', [('감 전남', K.frg_pers_jn), ('감 경북', K.frg_pers_gb), ('감 경남', K.frg_pers_gn), ('대추 경기', K.frg_jujube_gg), ('대추 충북', K.frg_jujube_cb), ('대추 충남', K.frg_jujube_cn), ('대추 경북', K.frg_jujube_gb), ('밤 충남', K.frg_chest_cn), ('밤 전남', K.frg_chest_jn), ('밤 경남', K.frg_chest_gn)], '원', '조사 임가가 많은 주산지 도 · 특광역시·기타 지역 제외 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('도별 호두·오미자·복분자딸기 1ha당 소득', [('호두 충북', K.frg_walnut_cb), ('호두 충남', K.frg_walnut_cn), ('호두 전북', K.frg_walnut_jb), ('호두 경북', K.frg_walnut_gb), ('오미자 강원', K.frg_omija_gw), ('오미자 전북', K.frg_omija_jb), ('오미자 경북', K.frg_omija_gb), ('오미자 경남', K.frg_omija_gn), ('복분자딸기 전북', K.frg_bokbun_jb), ('복분자딸기 전남', K.frg_bokbun_jn)], '원', '조사 임가가 많은 주산지 도 · 특광역시·기타 지역 제외 · 음수는 경영비가 조수입보다 많음 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">임산물 주산지 도별 경영비 <small>1ha당 · 감·대추·밤·호두·오미자·복분자딸기 · 산림청 임산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('frc_jujube_gb', 'v37', ('충북 대추 ' ~ num(K.frc_jujube_cb.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fmc_jujube.vals[-1], '원')|striptags) if K.frc_jujube_cb and K.fmc_jujube else none, '#7a6a3a') }}
+  {{ card('frc_omija_gb', 'v38', ('강원 오미자 ' ~ num(K.frc_omija_gw.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fmc_omija.vals[-1], '원')|striptags) if K.frc_omija_gw and K.fmc_omija else none, '#7a6a3a') }}
+  {{ card('frc_bokbun_jb', 'v39', ('전남 복분자딸기 ' ~ num(K.frc_bokbun_jn.vals[-1], '원')|striptags ~ ' · 전체 평균 ' ~ num(K.fmc_bokbun.vals[-1], '원')|striptags) if K.frc_bokbun_jn and K.fmc_bokbun else none, '#7a6a3a') }}
+  {{ hcard('도별 감·대추·밤 1ha당 경영비', [('감 전남', K.frc_pers_jn), ('감 경북', K.frc_pers_gb), ('감 경남', K.frc_pers_gn), ('대추 경기', K.frc_jujube_gg), ('대추 충북', K.frc_jujube_cb), ('대추 충남', K.frc_jujube_cn), ('대추 경북', K.frc_jujube_gb), ('밤 충남', K.frc_chest_cn), ('밤 전남', K.frc_chest_jn), ('밤 경남', K.frc_chest_gn)], '원', '경영비는 현금 지출 비용(자가노동 등 제외) · 특광역시·기타 지역 제외 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('도별 호두·오미자·복분자딸기 1ha당 경영비', [('호두 충북', K.frc_walnut_cb), ('호두 충남', K.frc_walnut_cn), ('호두 전북', K.frc_walnut_jb), ('호두 경북', K.frc_walnut_gb), ('오미자 강원', K.frc_omija_gw), ('오미자 전북', K.frc_omija_jb), ('오미자 경북', K.frc_omija_gb), ('오미자 경남', K.frc_omija_gn), ('복분자딸기 전북', K.frc_bokbun_jb), ('복분자딸기 전남', K.frc_bokbun_jn)], '원', '경영비는 현금 지출 비용(자가노동 등 제외) · 특광역시·기타 지역 제외 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
  </div>
  <h3 class="sg-sub">임가 소득 변화·지원금 수혜 <small>최근 3년 소득 변화 체감·임업 관련 지원금(복수 응답) · 산림청 임업경영실태조사</small></h3>
  <div class="sg-g">

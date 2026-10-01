@@ -1327,6 +1327,26 @@ sources:
       - {id: ppi_honey, title: 벌꿀 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^벌꿀$"], unit: "2020=100", survey: 생산자물가지수}
       - {id: ppi_wvg, title: 산나물 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^산나물$"], unit: "2020=100", survey: 생산자물가지수}
       - {id: ppi_chest, title: 밤 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^밤$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: frc_pers_jn, title: 전라남도 감 임가 1ha당 경영비, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^경영비$", "^전라남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_pers_gb, title: 경상북도 감 임가 1ha당 경영비, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^경영비$", "^경상북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_pers_gn, title: 경상남도 감 임가 1ha당 경영비, tbl: DT_136033_9583, org: "136", itm: "^값$", want: ["^경영비$", "^경상남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_jujube_gg, title: 경기도 대추 임가 1ha당 경영비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^경영비$", "^경기도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_jujube_cb, title: 충청북도 대추 임가 1ha당 경영비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^경영비$", "^충청북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_jujube_cn, title: 충청남도 대추 임가 1ha당 경영비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^경영비$", "^충청남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_jujube_gb, title: 경상북도 대추 임가 1ha당 경영비, tbl: DT_136033_9567, org: "136", itm: "^값$", want: ["^경영비$", "^경상북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_chest_cn, title: 충청남도 밤 임가 1ha당 경영비, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^경영비$", "^충청남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_chest_jn, title: 전라남도 밤 임가 1ha당 경영비, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^경영비$", "^전라남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_chest_gn, title: 경상남도 밤 임가 1ha당 경영비, tbl: DT_136033_9561, org: "136", itm: "^값$", want: ["^경영비$", "^경상남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_walnut_cb, title: 충청북도 호두 임가 1ha당 경영비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^경영비$", "^충청북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_walnut_cn, title: 충청남도 호두 임가 1ha당 경영비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^경영비$", "^충청남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_walnut_jb, title: 전북특별자치도 호두 임가 1ha당 경영비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^경영비$", "^전북특별자치도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_walnut_gb, title: 경상북도 호두 임가 1ha당 경영비, tbl: DT_136033_9538, org: "136", itm: "^값$", want: ["^경영비$", "^경상북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_omija_gw, title: 강원특별자치도 오미자 임가 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^강원특별자치도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_omija_jb, title: 전북특별자치도 오미자 임가 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^전북특별자치도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_omija_gb, title: 경상북도 오미자 임가 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^경상북도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_omija_gn, title: 경상남도 오미자 임가 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^경상남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_bokbun_jb, title: 전북특별자치도 복분자딸기 임가 1ha당 경영비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^경영비$", "^전북특별자치도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: frc_bokbun_jn, title: 전라남도 복분자딸기 임가 1ha당 경영비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^경영비$", "^전라남도$"], unit: 원, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

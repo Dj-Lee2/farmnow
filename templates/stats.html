@@ -147,7 +147,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 75) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동', 80) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -256,6 +256,14 @@
   {{ hcard('축사 소독·방역시설 종류', [('발판 소독조', K.dsf_foot), ('석회 살포', K.dsf_lime), ('차량 소독기', K.dsf_car), ('외부 울타리', K.dsf_fence), ('방조·방충망', K.dsf_net), ('전실', K.dsf_ante)], '호', '6개 축종 합계 · 설치 농장 수 · 오른쪽은 전년 대비', none, '#2458d6') }}
   {{ hcard('분뇨 처리시설 악취저감 시설 종류', [('내부 안개분무', K.mfo_fogin), ('외부 안개분무', K.mfo_fogout), ('바이오 커튼', K.mfo_bioc)], '호', '퇴비사·액비조 등 처리시설 기준 설치 농장 수 · 오른쪽은 전년 대비', none, '#5a7a3a') }}
   {{ hcard('축종별 처리시설 악취저감 시설 없는 농장', [('한·육우', K.mfn_hw), ('닭', K.mfn_ck), ('젖소', K.mfn_dy), ('돼지', K.mfn_pg), ('오리', K.mfn_dk)], '호', '괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.mfo_none.vals[-1] if K.mfo_none else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">농장 내 가축분뇨 처리시설 용량 <small>가축분뇨처리통계 · 농장이 직접 갖춘 시설</small></h3>
+ <div class="sg-g">
+  {{ card('mcap_comp', 'e40', '분뇨를 퇴비로 만드는 시설(퇴비사 등) 용량', '#7a6a3a') }}
+  {{ card('mcap_cst', 'e41', '다 만든 퇴비를 쌓아두는 저장 시설 용량', '#7a6a3a') }}
+  {{ card('mcap_lst', 'e42', ('다 만든 액비를 담아두는 저장조 용량 · 액비화시설 ' ~ K.mcap_liq.vals[-1]|big ~ 'm³') if K.mcap_liq else '다 만든 액비를 담아두는 저장조 용량', '#5a7a3a') }}
+  {{ hcard('처리시설 종류별 용량', [('퇴비화시설', K.mcap_comp), ('퇴비저장 시설', K.mcap_cst), ('액비저장시설', K.mcap_lst), ('정화시설', K.mcap_pur), ('액비화시설', K.mcap_liq)], 'm³', '농장 내 시설 용량 합계 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('도별 농장 내 퇴비화시설 용량', [('경북', K.mcr_gb), ('전남', K.mcr_jn), ('충남', K.mcr_cn), ('충북', K.mcr_cb), ('전북', K.mcr_jb), ('특·광역시', K.mcr_metro), ('경기', K.mcr_gg), ('경남', K.mcr_gn), ('강원', K.mcr_gw), ('제주', K.mcr_jj)], 'm³', '괄호는 전국 퇴비화시설 용량 중 비중 · 오른쪽은 전년 대비', K.mcap_comp.vals[-1] if K.mcap_comp else none, '#7a6a3a') }}
  </div>
  </div></details>
 
@@ -383,7 +391,7 @@
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우 100kg당 생산비 구성·번식우·산란계·오리', 37) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·번식우·산란계·오리', 42) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -404,6 +412,14 @@
   {{ card('hwk_calf', 'g65', ('밑소(송아지) 값 · 생산비 중 ' ~ '{:.0f}'.format(K.hwk_calf.vals[-1] / K.hwk_cost.vals[-1] * 100) ~ '%') if K.hwk_cost else '밑소(송아지) 값', '#c77b30') }}
   {{ hcard('한우 비육우 생체 100kg당 비목별 생산비', [('가축비', K.hwk_calf), ('농후사료', K.hwk_conc), ('TMR사료', K.hwk_tmr), ('자가노동비', K.hwk_own), ('조사료', K.hwk_rough), ('고용노동비', K.hwk_hire), ('방역치료비', K.hwk_vet), ('분뇨처리비', K.hwk_manure)], '원', '괄호는 생산비 중 비중 · 오른쪽은 전년 대비', K.hwk_cost.vals[-1] if K.hwk_cost else none, '#c77b30') }}
   {{ hcard('한우 비육우 사육 규모별 생체 100kg당 생산비', [('20두 미만', K.hwk_s0), ('20~49두', K.hwk_s1), ('50~99두', K.hwk_s2), ('100두 이상', K.hwk_s3)], '원', ('평균 ' ~ num(K.hwk_cost.vals[-1], '원')|striptags ~ ' · 규모가 클수록 낮음 · 오른쪽은 전년 대비') if K.hwk_cost else '', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">비육돈 생산비 구성 <small>생체 100kg당 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('pgk_cost', 'g88', ('경영비 ' ~ num(K.pgk_op.vals[-1], '원')|striptags ~ ' + 자가노동·자본·토지 용역비') if K.pgk_op else none, '#b04a07') }}
+  {{ card('pgk_feed', 'g89', ('생산비 중 ' ~ '{:.0f}'.format(K.pgk_feed.vals[-1] / K.pgk_cost.vals[-1] * 100) ~ '% · 배합사료값') if K.pgk_cost else '배합사료값', '#b04a07') }}
+  {{ card('pgk_stock', 'g90', ('자돈(새끼 돼지) 값 · 생산비 중 ' ~ '{:.0f}'.format(K.pgk_stock.vals[-1] / K.pgk_cost.vals[-1] * 100) ~ '%') if K.pgk_cost else '자돈(새끼 돼지) 값', '#c77b30') }}
+  {{ hcard('비육돈 생체 100kg당 비목별 생산비', [('사료비', K.pgk_feed), ('가축비', K.pgk_stock), ('고용노동비', K.pgk_hire), ('분뇨처리비', K.pgk_manure), ('방역치료비', K.pgk_vet), ('수도광열비', K.pgk_fuel), ('자가노동비', K.pgk_own), ('감가상각비', K.pgk_dep)], '원', '괄호는 생산비 중 비중 · 오른쪽은 전년 대비', K.pgk_cost.vals[-1] if K.pgk_cost else none, '#c77b30') }}
+  {{ hcard('비육돈 사육 규모별 생체 100kg당 생산비', [('1,000두 미만', K.pgk_s0), ('1,000~1,999두', K.pgk_s1), ('2,000~2,999두', K.pgk_s2), ('3,000두 이상', K.pgk_s3)], '원', ('평균 ' ~ num(K.pgk_cost.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.pgk_cost else '', none, '#b04a07') }}
  </div>
  <h3 class="sg-sub">도축 실적 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('sl_cow', 'g48', '한우·육우·젖소 합계 · 축산물 도축실적', '#c77b30', yoy(K.sl_cow_yoy)) }}{{ card('sl_pig', 'g49', '축산물 도축실적', '#c77b30', yoy(K.sl_pig_yoy)) }}{{ card('sl_chick', 'g50', '축산물 도축실적', '#c77b30', yoy(K.sl_chick_yoy)) }}{{ card('sl_duck', 'g51', '축산물 도축실적', '#c77b30', yoy(K.sl_duck_yoy)) }}{% for k, uid in [('cow', 'g52'), ('pig', 'g53')] %}{% set c = K['sl_' ~ k ~ '_cum'] %}{% set r = K['sl_' ~ k ~ '_cumr'] %}{% if c and r %}{% set lab = r.years|map('prd')|list %}

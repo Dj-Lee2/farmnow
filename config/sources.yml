@@ -922,6 +922,36 @@ sources:
       - {id: pcr_gb, title: 대구경북 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^대구 경북$"], unit: 개, survey: 영농폐기물 통계}
       - {id: pcr_gn, title: 부산울산경남 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^부산 울산 경남$"], unit: 개, survey: 영농폐기물 통계}
       - {id: pcr_jj, title: 제주 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^제주$"], unit: 개, survey: 영농폐기물 통계}
+      # 비육돈 생체 100kg당 생산비 구성(DT_1EE305), 농장 내 가축분뇨 처리시설 종류별 용량(DT_114059_002)
+      - {id: pgk_cost, title: 비육돈 생체 100kg당 생산비, tbl: DT_1EE305, itm: "^평균$", want: ["^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_op, title: 비육돈 생체 100kg당 경영비, tbl: DT_1EE305, itm: "^평균$", want: ["^경영비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_stock, title: 비육돈 생체 100kg당 가축비(자돈값), tbl: DT_1EE305, itm: "^평균$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_feed, title: 비육돈 생체 100kg당 사료비, tbl: DT_1EE305, itm: "^평균$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_vet, title: 비육돈 생체 100kg당 방역치료비, tbl: DT_1EE305, itm: "^평균$", want: ["^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_manure, title: 비육돈 생체 100kg당 분뇨처리비, tbl: DT_1EE305, itm: "^평균$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_own, title: 비육돈 생체 100kg당 자가노동비, tbl: DT_1EE305, itm: "^평균$", want: ["^자가노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_hire, title: 비육돈 생체 100kg당 고용노동비, tbl: DT_1EE305, itm: "^평균$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_fuel, title: 비육돈 생체 100kg당 수도광열비, tbl: DT_1EE305, itm: "^평균$", want: ["^수도광열비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_dep, title: 비육돈 생체 100kg당 감가상각비, tbl: DT_1EE305, itm: "^평균$", want: ["^감가상각비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_s0, title: 비육돈 1,000두 미만 생체 100kg당 생산비, tbl: DT_1EE305, itm: "^1000두미만$", want: ["^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_s1, title: 비육돈 1,000~1,999두 생체 100kg당 생산비, tbl: DT_1EE305, itm: "^1000~1999두$", want: ["^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_s2, title: 비육돈 2,000~2,999두 생체 100kg당 생산비, tbl: DT_1EE305, itm: "^2000~2999두$", want: ["^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: pgk_s3, title: 비육돈 3,000두 이상 생체 100kg당 생산비, tbl: DT_1EE305, itm: "^3000두이상$", want: ["^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mcap_comp, title: 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^합계$"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcap_liq, title: 농장 내 가축분뇨 액비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^액비화시설$", "^합계$"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcap_pur, title: 농장 내 가축분뇨 정화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^정화시설$", "^합계$"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcap_cst, title: 농장 내 가축분뇨 퇴비저장 시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비저장 시설$", "^합계$"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcap_lst, title: 농장 내 가축분뇨 액비저장시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^액비저장시설$", "^합계$"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_metro, title: 특·광역시 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(특·광역시)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_gg, title: 경기도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(경기도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_gw, title: 강원 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(강원)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_cb, title: 충청북도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(충청북도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_cn, title: 충청남도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(충청남도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_jb, title: 전북 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(전북|전라북도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_jn, title: 전라남도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(전라남도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_gb, title: 경상북도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(경상북도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_gn, title: 경상남도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(경상남도)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: mcr_jj, title: 제주 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(제주)"], unit: m³, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

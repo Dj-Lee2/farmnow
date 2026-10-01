@@ -1141,6 +1141,32 @@ sources:
       - {id: frg_omija_gn, title: 경상남도 오미자 임가 1ha당 소득, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^소득$", "^경상남도$"], unit: 원, survey: 임산물생산비조사}
       - {id: frg_bokbun_jb, title: 전북특별자치도 복분자딸기 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^전북특별자치도$"], unit: 원, survey: 임산물생산비조사}
       - {id: frg_bokbun_jn, title: 전라남도 복분자딸기 임가 1ha당 소득, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^소득$", "^전라남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: ctf_chest, title: 공식인증 받은 밤 임가 비율, tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_ful, title: 공식인증 받은 밤 전업 임가 비율, tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_par, title: 공식인증 받은 밤 겸업 임가 비율, tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^겸업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_pers, title: 공식인증 받은 감 임가 비율, tbl: DT_136022_10134, org: "136", itm: "^값$", want: ["^받았다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_pers_ful, title: 공식인증 받은 감 전업 임가 비율, tbl: DT_136022_10134, org: "136", itm: "^값$", want: ["^받았다$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_pers_par, title: 공식인증 받은 감 겸업 임가 비율, tbl: DT_136022_10134, org: "136", itm: "^값$", want: ["^받았다$", "^겸업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush, title: 공식인증 받은 버섯 임가 비율, tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_ful, title: 공식인증 받은 버섯 전업 임가 비율, tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_par, title: 공식인증 받은 버섯 겸업 임가 비율, tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^겸업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_etc, title: 공식인증 받은 기타 수실류 임가 비율, tbl: DT_136022_10186, org: "136", itm: "^값$", want: ["^받았다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_etc_ful, title: 공식인증 받은 기타 수실류 전업 임가 비율, tbl: DT_136022_10186, org: "136", itm: "^값$", want: ["^받았다$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_etc_par, title: 공식인증 받은 기타 수실류 겸업 임가 비율, tbl: DT_136022_10186, org: "136", itm: "^값$", want: ["^받았다$", "^겸업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_s1, title: 공식인증 받은 밤 임가 비율(2ha 미만), tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^2ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_s2, title: 공식인증 받은 밤 임가 비율(2~4ha 미만), tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^2~4ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_s3, title: 공식인증 받은 밤 임가 비율(4~8ha 미만), tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^4~8ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_chest_s4, title: 공식인증 받은 밤 임가 비율(8ha 이상), tbl: DT_136022_9840, org: "136", itm: "^값$", want: ["^받았다$", "^8ha 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_s1, title: 공식인증 받은 버섯 임가 비율(2ha 미만), tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^2ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_s2, title: 공식인증 받은 버섯 임가 비율(2~5ha 미만), tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^2~5ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_s3, title: 공식인증 받은 버섯 임가 비율(5~10ha 미만), tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^5~10ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctf_mush_s4, title: 공식인증 받은 버섯 임가 비율(10ha 이상), tbl: DT_136022_10084, org: "136", itm: "^값$", want: ["^받았다$", "^10ha 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_chest_eco, title: 인증 받은 밤 임가 중 친환경 인증 비율, tbl: DT_136022_9841, org: "136", itm: "^값$", want: ["^친환경 인증$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_mush_eco, title: 인증 받은 버섯 임가 중 친환경 인증 비율, tbl: DT_136022_10086, org: "136", itm: "^값$", want: ["^친환경 인증$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_chest_gap, title: 인증 받은 밤 임가 중 GAP 비율, tbl: DT_136022_9841, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_pers_gap, title: 인증 받은 감 임가 중 GAP 비율, tbl: DT_136022_9949, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_mush_gap, title: 인증 받은 버섯 임가 중 GAP 비율, tbl: DT_136022_10086, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ctk_etc_gap, title: 인증 받은 기타 수실류 임가 중 GAP 비율, tbl: DT_136022_10187, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

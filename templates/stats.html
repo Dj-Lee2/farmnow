@@ -195,7 +195,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입', 90) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·임가 친환경·GAP 인증', 96) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -268,6 +268,15 @@
   {{ card('ffc_omija', 'e48', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_omija.vals[-1]) ~ 'kg') if K.ffm_omija else '퇴비 등 퇴구비', '#7a6a3a') }}
   {{ hcard('임산물별 퇴구비 투입량', [('복분자딸기', K.ffc_bokbun), ('산수유', K.ffc_corn), ('구기자', K.ffc_goji), ('감', K.ffc_pers), ('오미자', K.ffc_omija), ('호두', K.ffc_walnut), ('대추', K.ffc_jujube), ('산딸기', K.ffc_rasp), ('오갈피', K.ffc_oga), ('헛개나무', K.ffc_hut), ('밤', K.ffc_chest)], 'kg', '1ha당 퇴비 등 퇴구비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('임산물별 복합비료 투입량', [('산딸기', K.ffm_rasp), ('산수유', K.ffm_corn), ('감', K.ffm_pers), ('호두', K.ffm_walnut), ('오미자', K.ffm_omija), ('대추', K.ffm_jujube), ('복분자딸기', K.ffm_bokbun), ('구기자', K.ffm_goji), ('밤', K.ffm_chest), ('헛개나무', K.ffm_hut), ('오갈피', K.ffm_oga)], 'kg', '1ha당 복합비료 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+ </div>
+ <h3 class="sg-sub">임가 친환경·GAP 인증 <small>공식인증을 받은 임가 비율 · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('ctf_mush', 'e49', ('인증 임가 중 친환경 인증 ' ~ '{:.1f}'.format(K.ctk_mush_eco.vals[-1]) ~ '% · 전업 ' ~ '{:.1f}'.format(K.ctf_mush_ful.vals[-1]) ~ '%') if K.ctk_mush_eco and K.ctf_mush_ful else '표고 등 버섯 재배 임가', '#1c7a45') }}
+  {{ card('ctf_chest', 'e50', ('인증 임가 중 친환경 인증 ' ~ '{:.1f}'.format(K.ctk_chest_eco.vals[-1]) ~ '% · GAP ' ~ '{:.1f}'.format(K.ctk_chest_gap.vals[-1]) ~ '%') if K.ctk_chest_eco and K.ctk_chest_gap else '밤 재배 임가', '#1c7a45') }}
+  {{ card('ctf_etc', 'e51', ('인증 임가 중 GAP ' ~ '{:.1f}'.format(K.ctk_etc_gap.vals[-1]) ~ '% · 감 임가는 ' ~ '{:.1f}'.format(K.ctf_pers.vals[-1]) ~ '%') if K.ctk_etc_gap and K.ctf_pers else '대추·호두 등 기타 산림수실류 임가', '#1c7a45') }}
+  {{ hcard('업종·영농형태별 공식인증 받은 임가 비율', [('버섯 전업', K.ctf_mush_ful), ('버섯 겸업', K.ctf_mush_par), ('밤 전업', K.ctf_chest_ful), ('밤 겸업', K.ctf_chest_par), ('기타 수실류 전업', K.ctf_etc_ful), ('기타 수실류 겸업', K.ctf_etc_par), ('감 전업', K.ctf_pers_ful), ('감 겸업', K.ctf_pers_par)], '%', '친환경·GAP·지리적 표시·품질 인증 중 하나 이상 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('소유 산림 규모별 공식인증 받은 임가 비율', [('밤 2ha 미만', K.ctf_chest_s1), ('밤 2~4ha', K.ctf_chest_s2), ('밤 4~8ha', K.ctf_chest_s3), ('밤 8ha 이상', K.ctf_chest_s4), ('버섯 2ha 미만', K.ctf_mush_s1), ('버섯 2~5ha', K.ctf_mush_s2), ('버섯 5~10ha', K.ctf_mush_s3), ('버섯 10ha 이상', K.ctf_mush_s4)], '%', '산림 미소유 임가 제외 · 표본이 작은 구간은 해마다 등락이 큼 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('인증 받은 임가가 가진 인증 종류', [('버섯 친환경 인증', K.ctk_mush_eco), ('밤 친환경 인증', K.ctk_chest_eco), ('감 GAP', K.ctk_pers_gap), ('기타 수실류 GAP', K.ctk_etc_gap), ('밤 GAP', K.ctk_chest_gap), ('버섯 GAP', K.ctk_mush_gap)], '%', '공식인증 받은 임가 중 비율(복수 응답) · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">농약 판매량 <small>대한민국 · 유효성분 기준 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">

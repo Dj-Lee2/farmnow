@@ -269,6 +269,23 @@ sources:
       - {id: rain, title: 연강수량, tbl: DT_1YL9901, itm: "강수량", want: ["^전국"], unit: mm, survey: 기상청 관측(시도)}
       - {id: br_net, title: 육계 10수당 순수익, tbl: DT_2EE316, itm: "^수익성$", want: ["^순수익", "^평균$"], unit: 원, survey: 축산물생산비조사}
       - {id: br_rev, title: 육계 10수당 총수입, tbl: DT_2EE316, itm: "^수익성$", want: ["^총수입", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      # 소비자물가·귀촌·배합사료·수리답
+      - {id: cpi_all, title: 소비자물가 총지수, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^총지수$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_agri, title: 소비자물가 농축수산물, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^농축수산물$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_crop, title: 소비자물가 농산물, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^농산물$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_grain, title: 소비자물가 곡물, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^곡물$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_veg, title: 소비자물가 채소, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_fruit, title: 소비자물가 과실, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^과실$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cpi_live, title: 소비자물가 축산물, tbl: DT_1J22002, itm: "^소비자물가지수$", want: ["^축산물$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: rural_in, title: 귀촌가구, tbl: DT_1A02021, itm: "^가구수$", unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: feed_total, title: 배합사료 생산량(합계), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: feed_pig, title: 배합사료 생산량(양돈용), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^양돈용$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: feed_poultry, title: 배합사료 생산량(양계용), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^양계용$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: feed_beef, title: 배합사료 생산량(고기소용), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^고기소용$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: feed_dairy, title: 배합사료 생산량(젖소용), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^젖소용$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: feed_etc, title: 배합사료 생산량(기타가축), tbl: DT_114N_1B001, org: "114", itm: "^생산량$", want: ["^기타가축$"], unit: 톤, survey: 배합사료 생산실적}
+      - {id: irr_rate, title: 수리답률, tbl: DT_311001_002, org: "311", itm: "^비율$", want: ["^수리답$"], unit: "%", survey: 농업생산기반시설 현황}
+      - {id: irr_area, title: 수리답 면적, tbl: DT_311001_002, org: "311", itm: "^면적$", want: ["^수리답$"], unit: ha, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1,64 +1,142 @@
 {% extends "base.html" %}
 {% block rows %}{{ tickers.all|tojson }}{% endblock %}
+{% macro kcard(title, href, price, unit, pct, sub, basis, vals, uid, labels=none, tunit='') %}{% set col = '#d23a32' if pct > 0 else '#2458d6' if pct < 0 else '#8a90a0' %}<section class="kp4"><div class="t">{{ title }}{{ go(href, title ~ ' 자세히') }}</div>
+   <div class="v">{{ price }}<small>{{ unit }}</small> <em class="{{ 'up' if pct>0 else 'down' if pct<0 else '' }}">{{ pct|pct }}</em></div>
+   <div class="s"><span>{{ sub }}</span><span>{{ basis }}</span></div>{{ vals|mini(uid, col, labels, tunit) }}</section>{% endmacro %}
+{% macro go(href, label) %}<a href="{{ href }}" aria-label="{{ label }}"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>{% endmacro %}
+{% macro dv(pct, mx, th=none) %}<div class="dv" aria-hidden="true">{% if th and th < mx %}<span class="th" style="left:{{ 50 - 50 * th / mx }}%"></span><span class="th" style="left:{{ 50 + 50 * th / mx }}%"></span>{% endif %}<i class="{{ 'p' if pct > 0 else 'n' }}" style="--w:{{ [50 * (pct|abs) / mx, 50]|min }}%"></i></div>{% endmacro %}
+{% macro dax(mx) %}<div class="dax"><span>-{{ mx }}%</span><span>0</span><span>+{{ mx }}%</span></div>{% endmacro %}
+{% macro spark(r) %}{% set pts = r.spark|spark %}{% if pts %}<svg class="spark" viewBox="0 0 84 26" aria-hidden="true"><polyline points="{{ pts }}" fill="none" stroke="{{ r.spark|sparkc }}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>{% endif %}{% endmacro %}
+{% macro scard(s, uid, sub=none) %}{% set v = s.vals %}{% set yp = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}{% set y0 = ((v[-1] - v[0]) / v[0] * 100) if v|length > 1 and v[0] else none %}<section class="kp4"><div class="t">{{ s.title }}{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ s.tbl, s.title ~ ' KOSIS 통계표') }}</div>
+   <div class="v">{{ v[-1]|man }}<small>{{ s.unit }}</small> <em class="{{ 'up' if yp and yp>0 else 'down' if yp and yp<0 else '' }}">{{ yp|pct }}</em></div>
+   <div class="s"><span>{{ sub or (s.years[0] ~ '년 대비 ' ~ y0|pct) }}</span><span>{{ s.years[-1] }}년</span></div>{{ v|mini(uid, '#1c7a45', s.years, s.unit) }}</section>{% endmacro %}
 {% block content %}
-<div class="wrap grid">
- <section class="col-left">
-  <div class="sec"><h3>속보</h3><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
-  <div>
-  {% for d in home_days %}
-   <div class="day" data-date="{{ d.date }}">{{ d.label }}</div>
-   {% for it in d['items'] %}{% include "_item.html" %}{% endfor %}
-  {% else %}<p class="empty">수집된 항목이 없습니다.</p>{% endfor %}
-  </div>
-  <a class="more" href="news.html">속보 전체 보기</a>
- </section>
+{% set NICE = [1, 2, 3, 5, 10, 15, 20, 30, 50, 100] %}
+{% set S = stocks.sections if stocks else {} %}
+{% set cm = S.commodities or [] %}
+{% set cm_up = cm|selectattr('pct', 'gt', 0)|list|length %}
+<div class="wrap home">
+ {% set fx = stocks.usdkrw if stocks else none %}
+ {% set corn = (cm|selectattr('code', 'equalto', 'Ccv1')|first) if cm else none %}
+ <div class="kpis dash">
+  {% for r in tickers.fixed[:2] %}{% set m = ((r.price - r.month_ago) / r.month_ago * 100) if r.month_ago else none %}
+  {{ kcard(r.disp ~ ' ' ~ r.cls, 'market.html?pick=' ~ r.key, r.price|won, '원/' ~ r.unit, r.pct, '1개월 ' ~ m|pct ~ ' · 1년 ' ~ (((r.price - r.year_ago) / r.year_ago * 100) if r.year_ago else none)|pct, r.day[5:]|replace('-', '.') ~ ' 조사', [r.year_ago, r.month_ago, r.prev, r.price], 'k' ~ loop.index, ['1년 전', '1개월 전', '전일', '당일'], '원') }}
+  {% endfor %}
+  {% if corn %}{% set c0 = corn.spark[0] %}{{ kcard('국제 옥수수 선물', 'stocks.html#cm', corn|px, corn.unit, corn.pct, '10일 ' ~ (((corn.price - c0) / c0 * 100) if c0 else none)|pct, corn.day[5:]|replace('-', '.') ~ ' 종가', corn.spark, 'kc', corn.sdays, '') }}{% endif %}
+  {% if fx %}{% set f0 = fx.spark[0] %}{{ kcard('원/달러 환율', 'stocks.html', '{:,.1f}'.format(fx.price), '원', fx.pct, '10일 ' ~ (((fx.price - f0) / f0 * 100) if f0 else none)|pct, fx.day[5:]|replace('-', '.') ~ ' 고시', fx.spark, 'kf', fx.sdays, '원') }}{% endif %}
+ </div>
 
- <section class="col-mid">
-  {% if tickers.all %}
-  <div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label><span class="price" id="pprice"></span></div>
-  <div class="delta" id="pdelta"></div>
-  <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div>
-  {% else %}<p class="empty" style="padding-left:0">시세 미수집</p>{% endif %}
-  <div class="kpi">
-   <a class="kp" href="market.html"><small>조사 품목·규격</small><b>{{ tickers.rows_count or '–' }}</b></a>
-   <a class="kp" href="market.html"><small>전일比 {{ tickers.threshold|int }}% 이상</small><b class="{{ 'up' if tickers.surge_count }}">{{ tickers.surge_count }}개</b></a>
-   <a class="kp" href="alerts.html"><small>특보 발효</small><b class="{{ 'up' if active }}">{% if warn is none %}–{% else %}{{ active|length }}건{% endif %}</b></a>
-  </div>
+ <div class="row2">
+  <section class="card c-chart">
+   <div class="chd"><div class="sec"><h3>국내 농산물 가격 비교</h3><small>KAMIS 조사값</small></div>
+    <div class="tools">{% if tickers.all %}<span class="pnav"><button type="button" id="pPrev" aria-label="이전 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="pPause" class="pp" aria-pressed="false" aria-label="자동 넘김 멈춤" title="자동 넘김 멈춤"><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button><button type="button" id="pNext" aria-label="다음 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span>{% endif %}<a class="sq" href="market.html" aria-label="시세표"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 3h4M3 3v4M13 13H9M13 13V9M3 3l4 4M13 13 9 9"/></svg></a></div></div>
+   {% if tickers.all %}
+   <div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label></div>
+   <div class="rot" id="rot" aria-hidden="true"><i></i></div>
+   <div class="price" id="pprice"></div>
+   <div class="delta" id="pdelta"></div>
+   <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div>
+   {% else %}<p class="empty">시세 미수집</p>{% endif %}
+  </section>
 
-  <div class="alerts">
-   <div class="sec"><h3>발령</h3><a class="go" href="alerts.html">전체 →</a></div>
-   {% if warn is none %}<div class="row"><span>기상특보</span><b>확인 불가</b></div>
-   {% elif active %}{% for a in active[:4] %}<div class="row"><span>{{ a.kind }}<br><small>{{ a.regions }}</small></span><b class="up">발효 중</b></div>{% endfor %}
-   {% else %}<div class="row"><span>기상특보<br><small>{{ warn.as_of|fdt }} 기준</small></span><b>발효 없음</b></div>{% endif %}
-   {% if pest %}<div class="row"><span>병해충발생정보 {{ pest.extra.no }}<br><small><a href="n-{{ pest.id }}.html">{{ pest.extra.period }}</a>{% if pest.expires_at and pest.expires_at < now %} · 기간 종료{% endif %}</small></span><b><a href="https://{{ (pest.url)|hp }}" target="_blank" rel="noopener">문서 ↗</a></b></div>{% endif %}
-   {% if weekly %}<div class="row"><span>주간농사정보 {{ weekly.extra.no }}<br><small><a href="n-{{ weekly.id }}.html">{{ weekly.extra.period }}</a></small></span><b><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">문서 ↗</a></b></div>{% endif %}
-   <div class="row"><span>공고·입법예고<br><small>최근 24시간</small></span><b>{{ overnight.notice }}건</b></div>
-  </div>
- </section>
-
- <aside class="col-right">
-  <div class="card center">
-   <p>최근 24시간 {{ overnight.total }}건<br><small style="font-weight:500;color:#555">특보 {{ overnight.weather }} · 공고·예고 {{ overnight.notice }} · 기관발표 {{ overnight.release }} · 가격 {{ overnight.price }}{% if overnight.pest %} · 병해충 {{ overnight.pest }}{% endif %}</small></p>
-   <a class="btn-blue" href="brief.html">브리핑 보기</a>
-   <div class="links"><a href="feed.xml">RSS</a><a href="brief.txt" download>텍스트 받기</a><a href="about.html">신호원 {{ status|length - failed|length }}/{{ status|length }}</a></div>
-  </div>
-  <div class="card">
-   <div class="sec"><h3 style="font-size:1.143rem">오늘의 핵심</h3></div>
-   {% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}
-  </div>
-  {% if tickers.top10 %}<div class="card{{ ' stale' if tickers.stale }}">
+  <section class="card c-move{{ ' stale' if tickers.stale }}">
+   <div class="chd"><div class="sec"><h3>많이 움직인 품목</h3><small>전일 대비</small></div></div>
    <div class="ptab"><button class="on" type="button" onclick="setP('all',this)">전체</button><button type="button" onclick="setP('retail',this)">소매</button><button type="button" onclick="setP('whole',this)">도매</button></div>
-   <div class="scroll-x"><table><thead><tr><th>품목</th><th class="n">현재가</th><th class="n">전일比</th></tr></thead>
-   {% for key,rows in (('all',tickers.top10),('retail',tickers.top10_retail),('whole',tickers.top10_whole)) %}<tbody data-ptab="{{ key }}"{% if key != 'all' %} hidden{% endif %}>
-   {% for r in rows %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td><span class="rk">{{ loop.index }}</span>{{ r.disp }} <small>{{ r.cls }}</small></td><td class="n">{{ r.price|won }}<span class="u">/{{ r.unit }}</span></td><td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
-   </tbody>{% endfor %}</table></div>
-  </div>{% endif %}
-  {% if failed %}<p class="st"><span class="bad">수집 실패</span> {{ failed|join(', ') }}</p>{% endif %}
- </aside>
-</div>
+   <table class="mvt">
+   {% for key,rows in (('all',tickers.top10),('retail',tickers.top10_retail),('whole',tickers.top10_whole)) %}{% set am = [rows|map(attribute='pct')|map('abs')|max if rows else 1, tickers.threshold or 10]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}<tbody data-ptab="{{ key }}"{% if key != 'all' %} hidden{% endif %}>
+   {% for r in rows[:8] %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm"><b>{{ r.disp }}</b> <small>{{ r.cls }} · {{ r.price|won }}원/{{ r.unit }}</small></td><td class="hb">{{ dv(r.pct, mx, tickers.threshold) }}</td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
+   <tr class="ax"><td></td><td class="hb">{{ dax(mx) }}</td><td></td></tr>
+   </tbody>{% endfor %}</table>
+   <p class="lg"><i class="lg-th"></i>급변 기준 ±{{ tickers.threshold|int }}%</p>
+  </section>
+ </div>
 
-<div class="wrap news">
- <div class="sec"><h3>기관 발표</h3><a class="go" href="releases.html">전체 →</a></div>
- <div class="cards">{% for it in latest_by_board %}<a class="ncard" href="n-{{ it.id }}.html"><div><span class="org">{{ it.source_name }}</span><div class="h">{{ it.headline }}</div></div><span class="d">{{ it|ftime }}</span></a>{% endfor %}</div>
+ {% if pstat or kstat %}
+ <div class="sec st-h" id="stats"><h3>농업 통계</h3><small>{{ '국가데이터처 KOSIS · ' if kstat }}aT KAMIS</small></div>
+ {% set ks = ['farms', 'farm_pop', 'area', 'rice']|select('in', kstat)|list %}
+ {% if ks %}<div class="kpis st4">
+  {% for sid in ks %}{% set s = kstat[sid] %}{% if sid == 'area' and kstat.area_paddy and kstat.area_upland %}{% set sub = '논 ' ~ kstat.area_paddy.vals[-1]|man ~ ' · 밭 ' ~ kstat.area_upland.vals[-1]|man %}{% else %}{% set sub = none %}{% endif %}
+  {{ scard(s, 'st' ~ loop.index, sub) }}
+  {% endfor %}
+ </div>
+ <p class="lg st-src">출처: 국가데이터처 KOSIS {% set sv = [] %}{% for sid in ks %}{% if kstat[sid].survey and kstat[sid].survey not in sv %}{% set _ = sv.append(kstat[sid].survey) %}{% endif %}{% endfor %}{{ sv|join('·') }} · 전년 대비 등락 · 막대는 {{ kstat[ks[0]].years|length }}년 추이</p>{% endif %}
+ {% if pstat %}{% set am = [pstat.cats|map(attribute='pct')|map('abs')|max, 5]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}
+ {% set mv = pstat.risers[:3] + pstat.fallers[:3] %}{% set am2 = [mv|map(attribute='yoy')|map('abs')|max if mv else 5, 5]|max %}{% set mx2 = [5, 10, 20, 30, 40, 50, 60, 80, 100]|select('ge', am2)|first or 100 %}
+ <div class="row2 st2">
+  <section class="card">
+   <div class="sec"><h3>부류별 소매가, 1년 전 대비</h3><small>품목 평균</small><a class="go" href="market.html">시세표 →</a></div>
+   <table class="mvt"><tbody>
+   {% for c in pstat.cats %}<tr><td class="nm"><b>{{ c.name }}</b> <small>{{ c.n }}개 품목·규격</small></td><td class="hb">{{ dv(c.pct, mx) }}</td><td class="n {{ 'up' if c.pct>0 else 'down' if c.pct<0 else '' }}">{{ c.pct|pct }}</td></tr>{% endfor %}
+   <tr class="ax"><td></td><td class="hb">{{ dax(mx) }}</td><td></td></tr>
+   </tbody></table>
+   <div class="sum-b"><span>조사 <b>{{ pstat.n }}</b>개 품목·규격</span><span>1년 전보다 오름 <b class="up">{{ pstat.up }}</b></span><span>내림 <b class="down">{{ pstat.down }}</b></span></div>
+   <p class="lg">출처: aT KAMIS 일별 소매가격 · {{ pstat.day[5:]|replace('-', '.') }} 조사와 1년 전 같은 날 비교</p>
+  </section>
+  <section class="card">
+   <div class="sec"><h3>1년 전보다 많이 오른·내린 품목</h3><small>소매</small></div>
+   <table class="mvt"><tbody>
+   {% for r in mv %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm"><b>{{ r.disp }}</b> <small>{{ r.price|won }}원/{{ r.unit }} · 1년 전 {{ r.year_ago|won }}원</small></td><td class="hb">{{ dv(r.yoy, mx2) }}</td><td class="n {{ 'up' if r.yoy>0 else 'down' }}">{{ r.yoy|pct }}</td></tr>{% endfor %}
+   <tr class="ax"><td></td><td class="hb">{{ dax(mx2) }}</td><td></td></tr>
+   </tbody></table>
+   <p class="lg">출처: aT KAMIS · 같은 품목은 변동이 가장 큰 규격 1건</p>
+  </section>
+ </div>{% endif %}
+ {% endif %}
+
+ <div class="row3">
+  <section class="card">
+   <div class="sec"><h3>오늘의 핵심</h3><a class="go" href="brief.html">브리핑 →</a></div>
+   <div class="t5l">{% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}</div>
+  </section>
+
+  <section class="card c-sum">
+   <div class="sec"><h3>발령·문서</h3><a class="go" href="alerts.html">전체 →</a></div>
+   <div class="alerts">
+    {% if warn is none %}<div class="row"><span>기상특보</span><b>확인 불가</b></div>
+    {% elif active %}{% for a in active[:3] %}<div class="row"><span>{{ a.kind }}<br><small>{{ a.regions }}</small></span><b class="up">발효 중</b></div>{% endfor %}
+    {% else %}<div class="row"><span>기상특보<br><small>{{ warn.as_of|fdt }} 기준</small></span><b>발효 없음</b></div>{% endif %}
+    {% if pest %}<div class="row"><span>병해충발생정보 {{ pest.extra.no }}<br><small><a href="n-{{ pest.id }}.html">{{ pest.extra.period }}</a>{% if pest.expires_at and pest.expires_at < now %} · 기간 종료{% endif %}</small></span><b><a href="https://{{ (pest.url)|hp }}" target="_blank" rel="noopener">문서 ↗</a></b></div>{% endif %}
+    {% if weekly %}<div class="row"><span>주간농사정보 {{ weekly.extra.no }}<br><small><a href="n-{{ weekly.id }}.html">{{ weekly.extra.period }}</a></small></span><b><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">문서 ↗</a></b></div>{% endif %}
+   </div>
+   <div class="sum-b"><span>특보 <b>{{ overnight.weather }}</b></span><span>공고·예고 <b>{{ overnight.notice }}</b></span><span>기관발표 <b>{{ overnight.release }}</b></span><span>가격 <b>{{ overnight.price }}</b></span></div>
+   <a class="btn-blue" href="brief.html">브리핑 보기</a>
+  </section>
+
+  <section class="card{{ ' stale' if stocks and stocks.stale }}">
+   <div class="sec"><h3>국제 농산물</h3><small>전일 대비</small><a class="go" href="stocks.html#cm">전체 →</a></div>
+   {% if cm %}{% set am = [cm|map(attribute='pct')|map('abs')|max, 0.5]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}
+   <table class="mvt cmt"><tbody>
+   {% for r in cm|sort(attribute='pct', reverse=true) %}<tr><td class="nm" title="{{ r|px }} {{ r.unit }}"><b>{{ r.name }}</b> <small>{{ r|px }}</small></td><td class="hb">{{ dv(r.pct, mx) }}</td><td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
+   <tr class="ax"><td></td><td class="hb">{{ dax(mx) }}</td><td></td></tr>
+   </tbody></table>
+   {% else %}<p class="st">시세 미수집</p>{% endif %}
+  </section>
+ </div>
+
+ <div class="body2">
+  <section class="card feed">
+   <div class="sec" style="margin:14px 0 2px"><h3>속보</h3><small>최신 {{ home_days|sum(attribute='items', start=[])|length }}건</small><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
+   {% set ns = namespace(n=0) %}
+   {% for d in home_days %}
+    <div class="day{{ ' xm' if ns.n >= 8 }}" data-date="{{ d.date }}">{{ d.label }}</div>
+    {% for it in d['items'] %}{% set ns.n = ns.n + 1 %}{% set xm = ns.n > 8 %}{% include "_item.html" %}{% endfor %}
+   {% else %}<p class="empty">수집된 항목이 없습니다.</p>{% endfor %}
+   <a class="more" href="news.html">속보 전체 보기</a>
+  </section>
+
+  <aside class="side">
+   {% if stocks %}<div class="card{{ ' stale' if stocks.stale }}">
+    <div class="sec"><h3>농업 관련주·ETF</h3><a class="go" href="stocks.html#kr">전체 →</a></div>
+    <table class="stk"><tbody>
+    {% for r in (stocks.movers[:5] + (S.kr_etfs or [])[:1] + (S.world_etfs or [])[:1]) %}<tr><td class="nm"><b class="sn">{{ r.name }}</b> <small>{{ '원' if r.cur == 'KRW' else '달러' }}</small></td><td class="sp">{{ spark(r) }}</td><td class="n">{{ r|px }}</td><td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
+    </tbody></table>
+   </div>{% endif %}
+   {% if latest_by_board %}<div class="card">
+    <div class="sec"><h3>기관 발표</h3><a class="go" href="releases.html">전체 →</a></div>
+    <div class="org-l">{% for it in latest_by_board %}<a href="n-{{ it.id }}.html"><span class="org">{{ it.source_name }}</span><div class="h">{{ it.headline }}</div><span class="d">{{ it|ftime }}</span></a>{% endfor %}</div>
+   </div>{% endif %}
+   {% if failed %}<p class="st"><span class="bad">수집 실패</span> {{ failed|join(', ') }}</p>{% endif %}
+  </aside>
+ </div>
 </div>
 {% endblock %}

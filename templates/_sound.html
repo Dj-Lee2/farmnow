@@ -1,0 +1,122 @@
+<script>
+/* 팜나우 버튼 소리: 외부 음원 없이 Web Audio로 짧은 팝을 합성한다. */
+(function () {
+  "use strict";
+  var toggle = document.getElementById("soundToggle");
+  var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!toggle || !AudioContextClass) return;
+
+  var STORAGE_KEY = "farmnow:button-sound:v1";
+  var enabled = readPreference();
+  var context = null;
+  var master = null;
+  var activePops = 0;
+  var generation = 0;
+  var controls = 'button, [role="button"], [role="tab"], input[type="button"], input[type="submit"], input[type="reset"], a.btn-line, a.btn-blue, a.more, a.sq, .hd nav a, .logo';
+
+  function readPreference() {
+    try { return localStorage.getItem(STORAGE_KEY) !== "off"; }
+    catch (_) { return true; }
+  }
+
+  function updateToggle() {
+    toggle.setAttribute("aria-pressed", String(enabled));
+    toggle.title = enabled ? "버튼 소리 끄기" : "버튼 소리 켜기";
+    toggle.dataset.soundState = enabled ? "on" : "off";
+  }
+
+  function setEnabled(value, persist) {
+    enabled = value;
+    generation++;
+    if (master && context.state !== "closed") {
+      master.gain.cancelScheduledValues(context.currentTime);
+      master.gain.setValueAtTime(master.gain.value, context.currentTime);
+      master.gain.linearRampToValueAtTime(enabled ? 1 : 0, context.currentTime + 0.004);
+    }
+    updateToggle();
+    if (persist) {
+      try { localStorage.setItem(STORAGE_KEY, enabled ? "on" : "off"); }
+      catch (_) { /* 저장소를 사용할 수 없어도 이번 탭의 음소거는 유지한다. */ }
+    }
+  }
+
+  // 데모와 같은 사인파 하강: 1100 → 350 → 170 Hz, 0.12초.
+  function synthesize() {
+    if (!enabled || context.state !== "running" || activePops >= 3) return;
+    var when = context.currentTime;
+    activePops++;
+    function voice(frequencies, peak, duration, onEnd) {
+      var oscillator = context.createOscillator();
+      var envelope = context.createGain();
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(frequencies[0][1], when);
+      frequencies.slice(1).forEach(function (point) {
+        oscillator.frequency.exponentialRampToValueAtTime(point[1], when + point[0]);
+      });
+      envelope.gain.setValueAtTime(0, when);
+      envelope.gain.linearRampToValueAtTime(peak, when + 0.002);
+      envelope.gain.exponentialRampToValueAtTime(peak * 0.0001, when + duration - 0.01);
+      envelope.gain.linearRampToValueAtTime(0, when + duration);
+      oscillator.connect(envelope).connect(master);
+      oscillator.onended = function () {
+        oscillator.disconnect();
+        envelope.disconnect();
+        if (onEnd) onEnd();
+      };
+      oscillator.start(when);
+      oscillator.stop(when + duration);
+    }
+    voice([[0, 1100], [0.028, 350], [0.10, 170]], 0.28, 0.12, function () { activePops--; });
+    voice([[0, 2200], [0.02, 650]], 0.0336, 0.04);
+  }
+
+  function play() {
+    if (!enabled) return;
+    try {
+      if (!context || context.state === "closed") {
+        context = new AudioContextClass();
+        master = context.createGain();
+        master.gain.value = 1;
+        master.connect(context.destination);
+        activePops = 0;
+      }
+      if (context.state === "running") {
+        synthesize();
+      } else {
+        var requestedAt = performance.now();
+        var requestedGeneration = generation;
+        context.resume().then(function () {
+          // 권한 대기 뒤 엉뚱한 시점이나 음소거 이후에 소리를 재생하지 않는다.
+          if (enabled && generation === requestedGeneration && performance.now() - requestedAt < 250) {
+            try { synthesize(); } catch (_) { /* 소리가 실패해도 본래 버튼은 동작한다. */ }
+          }
+        }).catch(function () {});
+      }
+    } catch (_) { /* 오디오 사용 불가 상황은 검색·탭·상세 기능을 막지 않는다. */ }
+  }
+
+  // capture는 기존 버튼의 화면 재생성보다 먼저 실행된다.
+  // click 한 종류만 사용하므로 마우스·터치·Enter·Space가 중복 재생되지 않는다.
+  document.addEventListener("click", function (event) {
+    // 초기 차트 설정 등의 코드상 .click()에는 소리를 내지 않는다.
+    if (!event.isTrusted) return;
+    if (event.button !== undefined && event.button !== 0) return;
+    var target = event.target instanceof Element ? event.target : event.target.parentElement;
+    if (!target) return;
+    var control = target.closest(controls);
+    if (!control || control.closest('[inert], [aria-disabled="true"], [data-sound="off"]') || control.matches(":disabled")) return;
+    if (control === toggle) {
+      setEnabled(!enabled, true);
+      if (enabled) play();
+    } else {
+      play();
+    }
+  }, true);
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === STORAGE_KEY || event.key === null) setEnabled(readPreference(), false);
+  });
+  updateToggle();
+  toggle.hidden = false;
+}());
+</script>

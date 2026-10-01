@@ -10,7 +10,7 @@ from pathlib import Path
 
 import yaml
 
-from .collectors import kamis, kma_warn, mafra_rss, nongsaro_list
+from .collectors import kamis, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
 from .model import NewsItem, gate
 from .rules import tag
 from .util import now_kst
@@ -64,6 +64,8 @@ def run(build: bool = True) -> int:
 
     status: dict[str, dict] = {}
     tickers: dict = {}
+    stocks: dict = {}
+    stats: dict = {}
     warn = None
     fresh: list[NewsItem] = []
     for src in cfg["sources"]:
@@ -75,6 +77,10 @@ def run(build: bool = True) -> int:
                 got, tickers = kamis.collect(src, cfg["site"]["surge_threshold_pct"])
             elif src["adapter"] == "nongsaro_list":
                 got = nongsaro_list.collect(src)
+            elif src["adapter"] == "naver_market":
+                got, stocks = naver_market.collect(src)
+            elif src["adapter"] == "kosis":
+                got, stats = kosis.collect(src, DATA)
             elif src["adapter"] == "kma_warn":
                 got, warn = kma_warn.collect(src)
             else:
@@ -122,6 +128,10 @@ def run(build: bool = True) -> int:
         warn = dict(prev_state["warn"], stale=True)
     if tickers:
         _write(DATA / "tickers.json", tickers)
+    if stocks:
+        _write(DATA / "stocks.json", stocks)
+    if stats:
+        _write(DATA / "stats.json", stats)
     _write(DATA / "items.json", kept)
     _write(DATA / "status.json", {"built_at": now.isoformat(), "sources": status, "warn": warn,
                                   "rejected": Counter(w for _, w in rejected)})

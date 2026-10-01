@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}국제·증시 — {{ site.name }}{% endblock %}
+{% macro tbl(rows, first, show_group=true, show_code=true, tabs_id='', show_per=true) %}
+ {% if tabs_id %}<div class="ptab" id="{{ tabs_id }}"><button type="button" class="on" onclick="setG('{{ tabs_id }}','all',this)">전체 <i>{{ rows|length }}</i></button>{% for g in rows|map(attribute='group')|unique %}<button type="button" onclick="setG('{{ tabs_id }}','{{ g }}',this)">{{ g }}</button>{% endfor %}</div>{% endif %}
+ {% set cm = rows and rows[0].sec == 'commodities' %}
+ <div class="scroll-x"><table class="stk mk"{% if tabs_id %} data-tabs="{{ tabs_id }}"{% endif %}><thead><tr><th>{{ first }}</th>{% if show_group %}<th class="hs">분류</th>{% endif %}<th class="n">현재가</th><th class="n hs">전일 대비</th><th class="n">등락률</th>
+ {% if cm %}<th class="n hm">1개월</th><th class="n hm">1년</th>{% else %}<th class="n hm">거래량</th><th class="n hm">시가총액</th>{% if show_per %}<th class="n hm">PER</th>{% endif %}{% endif %}<th class="hm">52주 범위</th><th class="sp">최근 10일</th></tr></thead><tbody>
+ {% for r in rows %}{% include "_stockrow.html" %}{% endfor %}
+ </tbody></table></div>
+{% endmacro %}
+{% macro summ(title, rows, href) %}{% set up = rows|selectattr('pct', 'gt', 0)|list|length %}{% set dn = rows|selectattr('pct', 'lt', 0)|list|length %}{% set avg = ((rows|sum(attribute='pct')) / (rows|length)) if rows else 0 %}
+ <a class="mks" href="{{ href }}"><span class="k">{{ title }}</span><b class="{{ 'up' if avg>0 else 'down' if avg<0 else '' }}">{{ avg|pct }}</b><span class="d">평균 · <em class="up">상승 {{ up }}</em> · <em class="down">하락 {{ dn }}</em> · 보합 {{ rows|length - up - dn }}</span>
+ <span class="ud" aria-hidden="true"><i class="u1" style="flex:{{ up }}"></i><i class="u0" style="flex:{{ rows|length - up - dn }}"></i><i class="d1" style="flex:{{ dn }}"></i></span></a>{% endmacro %}
+{% block content %}
+{% set S = stocks.sections if stocks else {} %}
+<div class="wrap page">
+ <div class="page-hd"><h1>국제·증시</h1><small>{% if stocks %}{{ stocks.day[5:]|replace('-', '.') }} 기준{{ ' · 갱신 실패' if stocks.stale }}{% else %}시세 미수집{% endif %}</small></div>
+ {% if stocks %}
+ <div class="mksum">
+  {{ summ('국제 농산물', S.commodities or [], '#cm') }}
+  {{ summ('국내 농업 관련주', S.kr_stocks or [], '#kr') }}
+  {{ summ('해외 농업 관련주', S.world_stocks or [], '#wd') }}
+  {% if stocks.usdkrw %}{% set fx = stocks.usdkrw %}<div class="mks"><span class="k">원/달러 환율</span><b>{{ '{:,.1f}'.format(fx.price) }}<small>원</small></b><span class="d"><em class="{{ 'up' if fx.pct>0 else 'down' if fx.pct<0 else '' }}">{{ fx|chg }} {{ fx.pct|pct }}</em> · {{ fx.day[5:]|replace('-', '.') }}</span>{{ fx.spark|mini('fx', '#d23a32' if fx.pct > 0 else '#2458d6', fx.sdays, '원') }}</div>{% endif %}
+ </div>
+ <div class="tabs" id="mtab"><button type="button" class="on" data-s="cm">국제 농산물</button><button type="button" data-s="kr">국내 주식</button><button type="button" data-s="wd">해외 주식</button><button type="button" data-s="etf">ETF</button></div>
+ <div class="two">
+  <section>
+   <div data-sec="cm"><div class="sec"><h3>국제 농산물 선물</h3></div>{{ tbl(S.commodities or [], '품목', true, false, 'g_cm') }}</div>
+   <div data-sec="kr"><div class="sec"><h3>국내 농업 관련주</h3><small>원</small></div>{{ tbl(S.kr_stocks or [], '종목', true, true, 'g_kr') }}</div>
+   <div data-sec="wd"><div class="sec"><h3>해외 농업 관련주</h3><small>달러 · 구보다는 엔</small></div>{{ tbl(S.world_stocks or [], '종목', true, true, 'g_wd') }}</div>
+   <div data-sec="etf"><div class="sec"><h3>국내 ETF</h3><small>원</small></div>{{ tbl(S.kr_etfs or [], '종목', false, true, '', false) }}
+    <div class="sec" style="margin-top:22px"><h3>해외 ETF</h3><small>달러</small></div>{{ tbl(S.world_etfs or [], '종목', false, true, '', false) }}</div>
+  </section>
+  <aside>
+   {% set all = (S.kr_stocks or []) + (S.world_stocks or []) %}
+   <div class="card"><div class="sec"><h3>상승 상위</h3></div>
+    {% for r in (all|sort(attribute='pct', reverse=true))[:6] %}<a class="row" href="{{ r.slug }}"><span>{{ r.name }} <small>{{ r.group }}</small></span><b class="{{ 'up' if r.pct>0 else '' }}">{{ r.pct|pct }}</b></a>{% endfor %}
+   </div>
+   <div class="card"><div class="sec"><h3>하락 상위</h3></div>
+    {% for r in (all|sort(attribute='pct'))[:6] %}<a class="row" href="{{ r.slug }}"><span>{{ r.name }} <small>{{ r.group }}</small></span><b class="{{ 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</b></a>{% endfor %}
+   </div>
+   <div class="card"><div class="sec"><h3>분류별 평균</h3><small>국내·해외 주식</small></div>
+    {% for g in all|map(attribute='group')|unique %}{% set rs = all|selectattr('group','equalto',g)|list %}{% set avg = (rs|sum(attribute='pct')) / (rs|length) %}<div class="row"><span>{{ g }} <small>{{ rs|length }}종목</small></span><b class="{{ 'up' if avg>0 else 'down' if avg<0 else '' }}">{{ avg|pct }}</b></div>{% endfor %}
+   </div>
+  </aside>
+ </div>
+ {% endif %}
+</div>
+{% endblock %}
+{% block scripts %}
+function setG(t,g,btn){document.querySelectorAll('#'+t+' button').forEach(function(b){b.classList.toggle('on',b===btn)});document.querySelectorAll('table[data-tabs="'+t+'"] tbody tr').forEach(function(tr){tr.style.display=(g==='all'||tr.dataset.g===g)?'':'none'});}
+(function(){var bs=document.querySelectorAll('#mtab button');if(!bs.length)return;
+ function show(s){bs.forEach(function(b){b.classList.toggle('on',b.dataset.s===s)});document.querySelectorAll('[data-sec]').forEach(function(d){d.hidden=d.dataset.sec!==s});if(history.replaceState)history.replaceState(null,'','stocks.html#'+s)}
+ bs.forEach(function(b){b.onclick=function(){show(b.dataset.s)}});function fromHash(){var h=location.hash.slice(1);show(['cm','kr','wd','etf'].indexOf(h)>=0?h:'cm')}fromHash();window.addEventListener('hashchange',fromHash)})();
+document.querySelectorAll('tr.go-row').forEach(function(tr){tr.addEventListener('click',function(e){if(e.target.closest('a'))return;location.href=tr.dataset.href})});
+{% endblock %}

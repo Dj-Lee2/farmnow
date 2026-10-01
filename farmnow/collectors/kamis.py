@@ -107,7 +107,7 @@ def collect(src: dict, threshold_pct: float = 10.0) -> tuple[list[NewsItem], dic
         items.append(NewsItem(
             source_id=src["id"], source_name=src["name"], org=src["org"],
             url=WHOLE_URL if r["cls"] == "도매" else RETAIL_URL,
-            headline=f"{r['disp']} {r['cls']} {r['price']:,.0f}원/{r['unit']}, 전일比 {r['pct']:+.1f}%",
+            headline=f"{r['disp']} {r['cls']} {r['price']:,.0f}원/{r['unit']}, 전일 대비 {r['pct']:+.1f}%",
             event_time=rday, time_precision="date", fetched_at=fetched,
             category="price", label="급변", license=src.get("license", "unknown"), severity="advisory",
             body=(f"aT KAMIS {rday.month}월 {rday.day}일 조사에 따르면 {r['disp']}({r['unit']}) {r['cls']} 평균가는 "

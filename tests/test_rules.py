@@ -1,3 +1,4 @@
+import json
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -285,3 +286,81 @@ def test_build_ignores_items_of_removed_sources_and_hides_stale_warning(tmp_path
     home = (tmp_path / "site" / "index.html").read_text(encoding="utf-8")
     assert "확인 불가" in home and "발효 중" not in home
     assert not list((tmp_path / "site").glob(f"n-{NewsItem.from_dict(ghost).id}.html"))
+
+
+def test_hangul_only_strips_hanja():
+    from farmnow.util import hangul_only
+    assert hangul_only("강화 소재 소(牛) 농장") == "강화 소재 소 농장"
+    assert hangul_only("농식품으로 정(情)을 나누다") == "농식품으로 정을 나누다"
+    assert hangul_only("전일比 -18.5%") == "전일 대비 -18.5%"
+    assert hangul_only("韓牛 수급") == " 수급"
+
+
+def test_naver_market_collect_signs_and_sections(monkeypatch):
+    from farmnow.collectors import naver_market as nm
+    monkeypatch.setattr(nm, "PAUSE", 0)
+
+    class R:
+        def __init__(self, j, code=200): self._j, self.status_code = j, code
+        def json(self): return self._j
+    kr = [{"localTradedAt": "2026-09-30", "closePrice": "6,080", "compareToPreviousClosePrice": "20", "compareToPreviousPrice": {"name": "FALLING"}, "fluctuationsRatio": "-0.33", "accumulatedTradingVolume": "1000"},
+          {"localTradedAt": "2026-09-29", "closePrice": "6,100", "compareToPreviousClosePrice": "0", "fluctuationsRatio": "0"}]
+    wd = [{"localTradedAt": "2026-09-29T16:00:00-04:00", "closePrice": "680.50", "compareToPreviousClosePrice": "-9.09", "fluctuationsRatio": "-1.32"}]
+    cm = {"result": [{"localTradedAt": "2026-09-29T16:00:00-05:00", "closePrice": "522.00", "fluctuations": "-1.00", "fluctuationsType": {"name": "FALLING"}, "fluctuationsRatio": "-0.19"}]}
+    fx = {"result": [{"localTradedAt": "2026-09-30", "closePrice": "1,354.70", "fluctuations": "1.20", "fluctuationsType": {"name": "RISING"}, "fluctuationsRatio": "0.09"}]}
+    def fake(url, params=None, headers=None, timeout=None):
+        if "marketIndex/prices" in url: return R(fx if params.get("category") == "exchange" else cm)
+        if "api.stock.naver.com" in url: return R(wd) if "/DE/" in url else R({"code": "StockConflict"}, 409)
+        return R(kr)
+    monkeypatch.setattr(nm.requests, "get", fake)
+    src = {"kr_stocks": [{"name": "남해화학", "code": "025860", "group": "비료"}],
+           "world_stocks": [{"name": "디어", "code": "DE", "group": "농기계"}, {"name": "없음", "code": "ZZZ", "group": "농기계"}],
+           "commodities": [{"name": "옥수수", "code": "Ccv1", "unit": "USc/BSH", "group": "곡물"}]}
+    items, d = nm.collect(src)
+    k, w, c = d["sections"]["kr_stocks"][0], d["sections"]["world_stocks"][0], d["sections"]["commodities"][0]
+    assert items == [] and k["chg"] == -20.0 and k["spark"] == [6100.0, 6080.0] and k["cur"] == "KRW"
+    assert (w["price"], w["chg"], w["day"], w["cur"]) == (680.5, -9.09, "2026-09-29", "USD")
+    assert (c["chg"], c["unit"]) == (-1.0, "센트/부셸") and d["usdkrw"]["price"] == 1354.7
+    assert len(d["missing"]) == 1 and d["day"] == "2026-09-30"
+
+
+
+def test_market_detail_parse_and_enrich(monkeypatch, tmp_path):
+    from farmnow.collectors import naver_market as nm
+    from farmnow import build
+    monkeypatch.setattr(nm, "PAUSE", 0)
+
+    class R:
+        def __init__(self, j): self._j, self.status_code = j, 200
+        def json(self): return self._j
+    kr_int = {"totalInfos": [{"key": "시총", "value": "1,189억"}, {"key": "PER", "value": "9.17배"}, {"key": "52주 최고", "value": "8,980"},
+                             {"key": "52주 최저", "value": "6,400"}, {"key": "EPS", "value": "N/A"}],
+              "dealTrendInfos": [{"bizdate": "20260930", "closePrice": "7,420", "compareToPreviousClosePrice": "370",
+                                  "compareToPreviousPrice": {"name": "RISING"}, "foreignerPureBuyQuant": "+19,699"}]}
+    chart = [{"localDate": "20250930", "closePrice": 8800.0, "accumulatedTradingVolume": 100},
+             {"localDate": "20260929", "closePrice": 7050.0, "accumulatedTradingVolume": 90}]
+    news = [{"items": [{"titleFull": "종자사업 통합", "officeName": "뉴시스", "datetime": "202609301402", "mobileNewsUrl": "https://n.news.naver.com/x"}]}]
+    cm_rows = [{"localTradedAt": "2026-09-29T16:00:00-05:00", "closePrice": "522.00"}, {"localTradedAt": "2026-08-29T16:00:00-05:00", "closePrice": "537.00"}]
+    def fake(url, params=None, headers=None, timeout=None):
+        if "integration" in url: return R(kr_int)
+        if "/chart/domestic/" in url: return R(chart)
+        if "/news/stock/" in url: return R(news)
+        if "productDetail" in url: return R({"result": {"stockExchangeType": {"nameKor": "시카고상품거래소"}, "month": "26.12.", "unit": "USc/BSH"}})
+        if "marketIndex/prices" in url: return R({"result": cm_rows})
+        raise AssertionError(url)
+    monkeypatch.setattr(nm.requests, "get", fake)
+    now = datetime(2026, 9, 30, 18, 0, tzinfo=NOW.tzinfo)
+    d = nm.fetch_detail("kr_stocks", {"code": "054050", "name": "NH농우바이오", "group": "종자"}, now)
+    assert [i["k"] for i in d["infos"]] == ["시총", "PER", "52주 최고", "52주 최저"]   # N/A는 뺀다
+    assert d["hist"][0] == {"d": "2025-09-30", "c": 8800.0, "o": None, "h": None, "l": None, "v": 100}
+    assert d["trend"][0]["d"] == "09.30" and d["news"][0]["dt"] == "09.30"
+    c = nm.fetch_detail("commodities", {"code": "Ccv1", "name": "옥수수", "group": "곡물"}, now)
+    assert c["unit"] == "센트/부셸" and [h["d"] for h in c["hist"]] == ["2026-08-29", "2026-09-29"]
+
+    mdir = tmp_path / "market"; mdir.mkdir()
+    (mdir / "054050.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+    monkeypatch.setattr(build, "DATA", tmp_path)
+    st = build.enrich_market({"sections": {"kr_stocks": [{"code": "054050", "name": "NH농우바이오", "group": "종자", "cur": "KRW", "price": 7420.0, "pct": 5.25, "chg": 370.0, "spark": [7050.0, 7420.0], "day": "2026-09-30"}]}}, now)
+    r = st["sections"]["kr_stocks"][0]
+    assert r["slug"] == "s-054050.html" and r["cap"] == "1,189억" and r["per"] == "9.17배"
+    assert (r["hi52"], r["lo52"], r["pos52"]) == (8980.0, 6400.0, 40) and r["r1y"] == round((7420 - 8800) / 8800 * 100, 2)

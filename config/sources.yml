@@ -5,7 +5,7 @@ site:
   tagline: 농업 공공데이터 속보
   timezone: Asia/Seoul
   keep_days: 14            # 타임라인에 유지할 일수
-  surge_threshold_pct: 10  # [급변] 기준: 전일比 절대값 % 이상
+  surge_threshold_pct: 10  # [급변] 기준: 전일 대비 절대값 % 이상
   stale_minutes: 180       # 마지막 갱신 뒤 이 시간이 지나면 화면에 '갱신 지연' 표시
   base_url: "https://farmnow.tech"   # 배포 주소. 환경변수 SITE_BASE_URL·CI_PAGES_URL이 있으면 그 값을 쓴다
 
@@ -104,3 +104,126 @@ sources:
     category: weather
     label: 특보
     env_key: DATA_GO_KR_KEY   # 없으면 건너뛰고 상태에 '키 없음' 표시
+  - id: kosis_agri
+    name: KOSIS 농업 통계
+    org: 국가데이터처
+    adapter: kosis
+    url: https://kosis.kr/openapi/Param/statisticsParameterData.do
+    home_url: https://kosis.kr/statisticsList/statisticsListIndex.do?vwcd=MT_ZTITLE&menuId=M_01_01
+    license: unknown
+    category: stats
+    label: 통계
+    env_key: KOSIS_API_KEY     # kosis.kr 오픈API 인증키. 없으면 건너뛰고 홈 통계에서 KOSIS 칸만 뺀다
+    years: 10
+    refresh_hours: 24          # 연간 통계라 하루 한 번만 받는다
+    series:                    # itm=항목 이름, want=꼭 들어가야 할 분류 이름(나머지 분류는 계·전국)
+      - {id: farms, title: 농가 수, tbl: DT_1EA1011, itm: "^농가(?!인구)|농가수|가구", survey: 농림어업조사}
+      - {id: farm_pop, title: 농가인구, tbl: DT_1EA1011, itm: "농가인구|인구", survey: 농림어업조사}
+      - {id: area, title: 경지면적, tbl: DT_1EB001, itm: "면적|^계$|^합계$", survey: 농업면적조사}
+      - {id: area_paddy, title: 논 면적, tbl: DT_1EB001, itm: "논|면적", want: ["^논"], survey: 농업면적조사}
+      - {id: area_upland, title: 밭 면적, tbl: DT_1EB001, itm: "밭|면적", want: ["^밭"], survey: 농업면적조사}
+      - {id: rice, title: 쌀 생산량, tbl: DT_1ET0021, itm: "생산량", want: ["^(미곡|쌀|논벼)"], survey: 농작물생산조사}
+  - id: naver_market
+    name: 네이버 증권 시세
+    org: 네이버 증권
+    adapter: naver_market
+    url: https://m.stock.naver.com/
+    home_url: https://m.stock.naver.com/
+    license: quote
+    category: market
+    label: 증시
+    kr_stocks:
+      - {name: NH농우바이오, code: "054050", group: 종자}
+      - {name: 아시아종묘, code: "154030", group: 종자}
+      - {name: 조비, code: "001550", group: 비료}
+      - {name: 남해화학, code: "025860", group: 비료}
+      - {name: 효성오앤비, code: "097870", group: 비료}
+      - {name: 누보, code: "332290", group: 비료}
+      - {name: 경농, code: "002100", group: 작물보호}
+      - {name: SB성보, code: "003080", group: 작물보호}
+      - {name: 동방아그로, code: "007590", group: 작물보호}
+      - {name: 대동, code: "000490", group: 농기계}
+      - {name: TYM, code: "002900", group: 농기계}
+      - {name: 대동기어, code: "008830", group: 농기계}
+      - {name: 그린플러스, code: "186230", group: 스마트팜}
+      - {name: 팜스코, code: "036580", group: 사료}
+      - {name: 이지바이오, code: "353810", group: 사료}
+      - {name: 한일사료, code: "005860", group: 사료}
+      - {name: 우성, code: "006980", group: 사료}
+      - {name: 대한제당, code: "001790", group: 사료}
+      - {name: 고려산업, code: "002140", group: 사료}
+      - {name: 팜스토리, code: "027710", group: 사료}
+      - {name: 하림, code: "136480", group: 축산}
+      - {name: 하림지주, code: "003380", group: 축산}
+      - {name: 선진, code: "136490", group: 축산}
+      - {name: 마니커, code: "027740", group: 축산}
+      - {name: 정다운, code: "208140", group: 축산}
+      - {name: 체리부로, code: "066360", group: 축산}
+      - {name: 우리손에프앤지, code: "073560", group: 축산}
+      - {name: 이글벳, code: "044960", group: 동물약품}
+      - {name: 대성미생물, code: "036480", group: 동물약품}
+      - {name: CJ제일제당, code: "097950", group: 식품·곡물}
+      - {name: 대상, code: "001680", group: 식품·곡물}
+      - {name: 사조동아원, code: "008040", group: 식품·곡물}
+      - {name: 대한제분, code: "001130", group: 식품·곡물}
+      - {name: 삼양사, code: "145990", group: 식품·곡물}
+      - {name: 풀무원, code: "017810", group: 식품·곡물}
+    world_stocks:
+      - {name: 디어(존디어), code: DE, group: 농기계}
+      - {name: 애그코, code: AGCO.K, group: 농기계}
+      - {name: CNH 인더스트리얼, code: CNH, group: 농기계}
+      - {name: 구보다, code: 6326.T, group: 농기계, cur: JPY}
+      - {name: 린지(관개), code: LNN, group: 농기계}
+      - {name: 타이탄 머시너리, code: TITN.O, group: 농기계}
+      - {name: 뉴트리엔, code: NTR, group: 비료}
+      - {name: 모자이크, code: MOS, group: 비료}
+      - {name: CF 인더스트리스, code: CF, group: 비료}
+      - {name: ICL, code: ICL, group: 비료}
+      - {name: SQM, code: SQM, group: 비료}
+      - {name: 인트레피드 포타시, code: IPI, group: 비료}
+      - {name: 코르테바, code: CTVA.K, group: 종자·작물보호}
+      - {name: FMC, code: FMC, group: 종자·작물보호}
+      - {name: 아메리칸 뱅가드, code: AVD, group: 종자·작물보호}
+      - {name: 바이오케레스, code: BIOX.O, group: 종자·작물보호}
+      - {name: 스코츠 미러클그로, code: SMG, group: 종자·작물보호}
+      - {name: ADM, code: ADM, group: 곡물·식품}
+      - {name: 번지, code: BG, group: 곡물·식품}
+      - {name: 앤더슨스, code: ANDE.O, group: 곡물·식품}
+      - {name: 달링 인그리디언츠, code: DAR, group: 곡물·식품}
+      - {name: 타이슨 푸드, code: TSN, group: 축산·식품}
+      - {name: 호멜 푸즈, code: HRL, group: 축산·식품}
+      - {name: 필그림스 프라이드, code: PPC.O, group: 축산·식품}
+      - {name: 칼 메인 푸즈, code: CALM.O, group: 축산·식품}
+      - {name: 조에티스, code: ZTS, group: 동물약품}
+      - {name: 니오젠, code: NEOG.O, group: 동물약품}
+      - {name: 알리코, code: ALCO.O, group: 농장·유통}
+      - {name: 리모네이라, code: LMNR.O, group: 농장·유통}
+      - {name: 트랙터 서플라이, code: TSCO.O, group: 농장·유통}
+    kr_etfs:
+      - {name: KODEX 3대농산물선물(H), code: "271060", group: 국내}
+      - {name: TIGER 농산물선물Enhanced(H), code: "137610", group: 국내}
+      - {name: KODEX 콩선물(H), code: "138920", group: 국내}
+    world_etfs:
+      - {name: 인베스코 농산물(DBA), code: DBA, group: 해외}
+      - {name: 반에크 농업기업(MOO), code: MOO, group: 해외}
+      - {name: 아이셰어즈 농업생산자(VEGI), code: VEGI.K, group: 해외}
+      - {name: 튜크리움 옥수수(CORN), code: CORN.K, group: 해외}
+      - {name: 튜크리움 밀(WEAT), code: WEAT.K, group: 해외}
+      - {name: 튜크리움 대두(SOYB), code: SOYB.K, group: 해외}
+      - {name: 튜크리움 농산물(TAGS), code: TAGS.K, group: 해외}
+      - {name: 글로벌X 농업기술(KROP), code: KROP.O, group: 해외}
+    commodities:
+      - {name: 옥수수, code: Ccv1, unit: USc/BSH, group: 곡물}
+      - {name: 밀, code: Wcv1, unit: USc/BSH, group: 곡물}
+      - {name: 대두, code: Scv1, unit: USc/BSH, group: 곡물}
+      - {name: 쌀(현미), code: RRcv1, unit: USD/CWT, group: 곡물}
+      - {name: 대두박, code: SMcv1, unit: USD/TONS, group: 곡물}
+      - {name: 대두유, code: BOcv1, unit: USc/LBS, group: 곡물}
+      - {name: 설탕, code: SBcv1, unit: USc/LBS, group: 기호·섬유}
+      - {name: 커피, code: KCcv1, unit: USc/LBS, group: 기호·섬유}
+      - {name: 코코아, code: CCcv1, unit: USD/TONNE, group: 기호·섬유}
+      - {name: 면화, code: CTcv1, unit: USc/LBS, group: 기호·섬유}
+      - {name: 오렌지주스, code: OJcv1, unit: USc/LBS, group: 기호·섬유}
+      - {name: 생우, code: LCcv1, unit: USc/LBS, group: 축산}
+      - {name: 비육우, code: FCcv1, unit: USc/LBS, group: 축산}
+      - {name: 돈육, code: LHcv1, unit: USc/LBS, group: 축산}

@@ -23,7 +23,7 @@
    {% if trend %}<div class="card"><div class="sec"><h3 style="font-size:1.143rem">태그</h3><small>최근 {{ trend_hours }}시간</small></div>
     <div class="tags">{% for t in trend %}<a class="coin ev" href="news.html?tag={{ t.q|urlencode }}"><i>#</i>{{ t.label[1:] }} <span class="u">{{ t.n }}</span></a>{% endfor %}</div>
    </div>{% endif %}
-   <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a><a href="data/items.json">JSON</a></div></div>
+   <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a></div></div>
   </aside>
  </div>
 </div>

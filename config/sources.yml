@@ -764,6 +764,47 @@ sources:
       - {id: mfn_pg, title: 돼지 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^돼지$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mfn_ck, title: 닭 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^닭$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mfn_dk, title: 오리 가축분뇨 처리시설 악취저감 시설 없음 농장, tbl: DT_114059_011, org: "114", itm: "^농장 내 축사", want: ["^오리$", "^없음$"], unit: 호, survey: 가축분뇨처리통계}
+      # 농업용수 시설: 저수지 규모·도별, 양배수장 종류·동력·도별(한국농어촌공사)
+      - {id: rsv_n, title: 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_cap, title: 농업용 저수지 총저수량, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^총저수량$"], unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: rsv_eff, title: 농업용 저수지 유효저수량, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^유효저수량$"], unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: rsv_b1, title: "총저수량 10만㎥ 미만 저수지 수", tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^100미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_b2, title: "총저수량 10만~50만㎥ 저수지 수", tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(~200미만|~300미만|~500미만)$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_b3, title: "총저수량 50만~100만㎥ 저수지 수", tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^~1000미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_b4, title: "총저수량 100만~500만㎥ 저수지 수", tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(~1500미만|~2000미만|~3000미만|~5000미만)$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_b5, title: "총저수량 500만㎥ 이상 저수지 수", tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(~10000미만|~20000미만|~25000미만|~30000미만|~40000미만|~50000미만|50000이상)$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_gg, title: 경기 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^경기도$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_gw, title: 강원 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^강원", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_cb, title: 충북 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(충청북도|충북)$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_cn, title: 충남 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(충청남도|충남)$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_jb, title: 전북 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^(전라북도|전북특별자치도)$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_jn, title: 전남 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^전라남도$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_gb, title: 경북 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^경상북도$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_gn, title: 경남 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^경상남도$", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: rsv_jj, title: 제주 농업용 저수지 수, tbl: DT_311001_009, org: "311", periods: 3, itm: "^저수량 규모별 개소수$", want: ["^제주", "^총 저수량 규모별$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_n, title: 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_kw, title: 양배수장 총 동력, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^동력$"], unit: kW, survey: 농업생산기반시설 현황}
+      - {id: pps_krc, title: 한국농어촌공사 관할 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^규모별 시설수$", "^공사관할$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_up, title: 양수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^규모별 시설수$", "^양수장$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_upkw, title: 양수장 동력, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^동력$", "^양수장$"], unit: kW, survey: 농업생산기반시설 현황}
+      - {id: pps_ud, title: 양·배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^규모별 시설수$", "^양·배수장$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_udkw, title: 양·배수장 동력, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^동력$", "^양·배수장$"], unit: kW, survey: 농업생산기반시설 현황}
+      - {id: pps_dn, title: 배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^규모별 시설수$", "^배수장$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_dnkw, title: 배수장 동력, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^동력$", "^배수장$"], unit: kW, survey: 농업생산기반시설 현황}
+      - {id: pps_b1, title: "동력 38kW 미만 양배수장 수", tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^38kw미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_b2, title: "동력 38~100kW 양배수장 수", tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^~ 100kw미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_b3, title: "동력 100~500kW 양배수장 수", tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^~ (200|500)kw미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_b4, title: "동력 500~2,000kW 양배수장 수", tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^~ (1000|2000)kw미만$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_b5, title: "동력 2,000kW 이상 양배수장 수", tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^(~ 3000kw미만|3000kw이상)$"], sum: true, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_gg, title: 경기 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^경기도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_gw, title: 강원 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^강원", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_cb, title: 충북 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^(충청북도|충북)$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_cn, title: 충남 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^(충청남도|충남)$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_jb, title: 전북 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^(전라북도|전북특별자치도)$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_jn, title: 전남 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^전라남도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_gb, title: 경북 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^경상북도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_gn, title: 경남 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^경상남도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: pps_jj, title: 제주 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^제주", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

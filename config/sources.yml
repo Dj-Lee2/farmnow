@@ -858,6 +858,40 @@ sources:
       - {id: rux_wq, title: "농촌용수 기타사업 농업용수수질조사 개선 사업비", tbl: DT_311001_020, org: "311", periods: 5, itm: "^농촌용수 개발사업\\(기타\\)$", want: ["^농업용수수질조사 개선$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
       - {id: rux_imj, title: "농촌용수 기타사업 임진강수계농촌용수공급 사업비", tbl: DT_311001_020, org: "311", periods: 5, itm: "^농촌용수 개발사업\\(기타\\)$", want: ["^임진강수계농촌용수공급$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
       - {id: rux_jj, title: "농촌용수 기타사업 제주농업용통합광역화 사업비", tbl: DT_311001_020, org: "311", periods: 5, itm: "^농촌용수 개발사업\\(기타\\)$", want: ["^제주농업용통합광역화$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: vny_gen, title: 영농폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^계$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_col, title: 영농폐비닐 수거량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^수거량$", want: ["^계$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_rec, title: 영농폐비닐 재활용량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^재활용량$", want: ["^계$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_house, title: 하우스용 LDPE 폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^하우스용 LDPE$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_mulch, title: 멀칭용 LDPE 폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^멀칭용 LDPE$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_hdpe, title: HDPE 폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^HDPE$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: vny_etc, title: 기타(PVC·EVA·PO) 폐비닐 발생량, tbl: DT_AGRI01, org: "392", periods: 5, itm: "^발생량$", want: ["^기타\\(PVC EVA PO\\)$"], unit: 톤, survey: 영농폐기물 통계}
+      - {id: pcn_gen, title: 영농폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^계$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcn_col, title: 영농폐농약용기 수거량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^수거량$", want: ["^계$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcn_rec, title: 영농폐농약용기 재활용량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^재활용량$", want: ["^계$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcn_plastic, title: 플라스틱 폐농약용기 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^플라스틱$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: pcn_bag, title: 농약봉지류 발생량, tbl: DT_AGRI02, org: "392", periods: 5, itm: "^발생량$", want: ["^농약봉지류$"], unit: 개, survey: 영농폐기물 통계}
+      - {id: stw_area, title: 볏짚 생산 논벼 면적, tbl: DT_1ET0032, periods: 10, itm: "^면적$", want: ["^계$"], unit: ha, survey: 농작물생산조사}
+      - {id: stw_10a, title: 논벼 10a당 볏짚 생산량, tbl: DT_1ET0032, periods: 10, itm: "^10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: stw_prod, title: 논벼 볏짚 생산량, tbl: DT_1ET0032, periods: 10, itm: "^생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: mch_all, title: 한·육우 분뇨 수거주기 조사 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mch_1m, title: 한·육우 분뇨 1개월 미만마다 수거 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^1개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mch_3m, title: 한·육우 분뇨 1~3개월마다 수거 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^1~3개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mch_6m, title: 한·육우 분뇨 3~6개월마다 수거 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^3~6개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mch_12m, title: 한·육우 분뇨 6~12개월마다 수거 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^6~12개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mch_1y, title: 한·육우 분뇨 1년 이상 간격 수거 농장, tbl: DT_114059_003, org: "114", periods: 5, itm: "농장수$", want: ["^1년 이상$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_all, title: 젖소 분뇨 수거주기 조사 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_1m, title: 젖소 분뇨 1개월 미만마다 수거 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^1개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_3m, title: 젖소 분뇨 1~3개월마다 수거 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^1~3개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_6m, title: 젖소 분뇨 3~6개월마다 수거 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^3~6개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_12m, title: 젖소 분뇨 6~12개월마다 수거 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^6~12개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcd_1y, title: 젖소 분뇨 1년 이상 간격 수거 농장, tbl: DT_114059_004, org: "114", periods: 5, itm: "농장수$", want: ["^1년 이상$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_all, title: 돼지 분뇨 수거주기 조사 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_day, title: 돼지 분뇨 매일 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^매일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_2w, title: 돼지 분뇨 2주 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^2주 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_1m, title: 돼지 분뇨 1개월 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^1개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_3m, title: 돼지 분뇨 3개월 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^3개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_6m, title: 돼지 분뇨 6개월 미만마다 수거 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^6개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcp_loop, title: 돼지 분뇨 상시 수거(액비 순환 등) 농장, tbl: DT_114059_005, org: "114", periods: 5, itm: "농장수$", want: ["^상시\\(액비 순환 등\\)$"], unit: 호, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -147,7 +147,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·가축분뇨 처리·수거·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 57) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·논벼 제초·방제 노동', 73) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -212,6 +212,19 @@
   {{ rcard('농약 중 살균제 비중', K.pst_fun, K.pst_all, 'e15', '판매된 농약 유효성분 중 살균제 비율', '#a0605a') }}
   {{ hcard('농약 종류별 판매량', [('살균제', K.pst_fun), ('살충제', K.pst_ins), ('제초제', K.pst_her), ('기타', K.pst_etc)], '톤', '유효성분 무게 · 괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.pst_all.vals[-1] if K.pst_all else none, '#a0605a') }}
  </div>
+ <h3 class="sg-sub">영농폐기물·볏짚 <small>한국환경공단 영농폐기물 통계 · 농작물생산조사</small></h3>
+ <div class="sg-g">
+  {{ card('vny_gen', 'e28', ('한 해 나온 영농 폐비닐 · 수거 ' ~ K.vny_col.vals[-1]|big ~ '톤') if K.vny_col else '한 해 나온 영농 폐비닐', '#7a6a3a') }}
+  {{ rcard('영농폐비닐 수거율', K.vny_col, K.vny_gen, 'e29', '발생량 중 수거된 비율 · 나머지는 소각·방치 우려', '#7a6a3a') }}
+  {{ card('vny_rec', 'e30', '재활용 처리량 · 전년 수거분 이월 포함', '#5a7a3a') }}
+  {{ card('pcn_gen', 'e31', ('빈 농약병·봉지 · 플라스틱 ' ~ K.pcn_plastic.vals[-1]|big ~ '개') if K.pcn_plastic else '빈 농약병·봉지', '#a0605a') }}
+  {{ card('pcn_col', 'e32', '수거된 빈 농약병·봉지 · 전년 발생분 수거 포함', '#a0605a') }}
+  {{ rcard('폐농약용기 중 봉지류 비중', K.pcn_bag, K.pcn_gen, 'e33', '발생한 농약 용기 중 봉지류 비율 · 나머지는 플라스틱 병', '#a0605a') }}
+  {{ card('stw_prod', 'e34', '논벼에서 나오는 볏짚 · 사료·퇴비·토양 환원 자원', '#b08a2e') }}
+  {{ card('stw_10a', 'e35', '10a(300평)당 볏짚 생산량', '#b08a2e') }}
+  {{ card('stw_area', 'e36', '볏짚 생산 기준 논벼 면적', '#b08a2e') }}
+  {{ hcard('영농폐비닐 종류별 발생량', [('멀칭용 LDPE', K.vny_mulch), ('HDPE', K.vny_hdpe), ('하우스용 LDPE', K.vny_house), ('기타(PVC·EVA·PO)', K.vny_etc)], '톤', '괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.vny_gen.vals[-1] if K.vny_gen else none, '#7a6a3a') }}
+ </div>
  <h3 class="sg-sub">가축분뇨 자원화 <small>퇴비·액비 처리와 농경지 살포</small></h3>
  <div class="sg-g">
   {{ card('cp_comp_all', 'e10', ('농장에서 만든 퇴비를 논밭에 뿌린 양 · 다른 시군 살포 ' ~ K.cp_comp_out.vals[-1]|big ~ '천톤') if K.cp_comp_out else '농장에서 만든 퇴비를 논밭에 뿌린 양', '#7a6a3a') }}
@@ -219,6 +232,15 @@
   {{ rcard('퇴비 관외 살포 비중', K.cp_comp_out, K.cp_comp_all, 'e12', '농장이 있는 시군 밖 농경지에 뿌린 퇴비 비율', '#7a6a3a') }}
   {{ hcard('축종별 분뇨 퇴비·액비화 농가 비율', [('한우', K.mn_hw_res|ratio(K.mn_hw_all)), ('젖소', K.mn_dy_res|ratio(K.mn_dy_all)), ('산란계', K.mn_ly_res|ratio(K.mn_ly_all)), ('오리', K.mn_dk_res|ratio(K.mn_dk_all)), ('육계', K.mn_br_res|ratio(K.mn_br_all)), ('돼지', K.mn_pg_res|ratio(K.mn_pg_all))], '%', '축종별 사육 농가 중 비율 · 나머지는 위탁·정화 처리 등 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('축사 분뇨 수거 방식', [('바닥식 깔짚', K.mcol_litter), ('바닥식 깔짚 없음', K.mcol_floor), ('틈새식 슬러리', K.mcol_slurry), ('틈새식 기계식', K.mcol_slat), ('기타', K.mcol_etc)], '가구', '7개 축종 사육 농가 합산 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcol_all.vals[-1] if K.mcol_all else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">축종별 분뇨 수거 주기 <small>가축분뇨처리통계 · 축사에서 분뇨를 치우는 간격별 농장 수</small></h3>
+ <div class="sg-g">
+  {{ rcard('한·육우 1년 이상 간격 수거 비중', K.mch_1y, K.mch_all, 'e37', ('한·육우 농장 ' ~ K.mch_all.vals[-1]|big ~ '호 중 분뇨를 1년 이상 쌓아두는 비율') if K.mch_all else '분뇨를 1년 이상 쌓아두는 비율', '#7a6a3a') }}
+  {{ rcard('젖소 1년 이상 간격 수거 비중', K.mcd_1y, K.mcd_all, 'e38', ('젖소 농장 ' ~ K.mcd_all.vals[-1]|big ~ '호 중 분뇨를 1년 이상 쌓아두는 비율') if K.mcd_all else '분뇨를 1년 이상 쌓아두는 비율', '#5a7a3a') }}
+  {{ rcard('돼지 분뇨 매일 수거 비중', K.mcp_day, K.mcp_all, 'e39', ('돼지 농장 ' ~ K.mcp_all.vals[-1]|big ~ '호 중 매일 치우는 비율') if K.mcp_all else '매일 치우는 비율', '#a0605a') }}
+  {{ hcard('한·육우 분뇨 수거 주기', [('1개월 미만', K.mch_1m), ('1~3개월', K.mch_3m), ('3~6개월', K.mch_6m), ('6~12개월', K.mch_12m), ('1년 이상', K.mch_1y)], '호', '농장 수 · 괄호는 비율 · 오른쪽은 전년 대비', K.mch_all.vals[-1] if K.mch_all else none, '#7a6a3a') }}
+  {{ hcard('젖소 분뇨 수거 주기', [('1개월 미만', K.mcd_1m), ('1~3개월', K.mcd_3m), ('3~6개월', K.mcd_6m), ('6~12개월', K.mcd_12m), ('1년 이상', K.mcd_1y)], '호', '농장 수 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcd_all.vals[-1] if K.mcd_all else none, '#5a7a3a') }}
+  {{ hcard('돼지 분뇨 수거 주기', [('매일', K.mcp_day), ('2주 미만', K.mcp_2w), ('1개월 미만', K.mcp_1m), ('3개월 미만', K.mcp_3m), ('6개월 미만', K.mcp_6m), ('상시(액비 순환 등)', K.mcp_loop)], '호', '농장 수 · 괄호는 비율 · 오른쪽은 전년 대비', K.mcp_all.vals[-1] if K.mcp_all else none, '#a0605a') }}
  </div>
  <h3 class="sg-sub">축사·처리시설 악취저감·방역시설 <small>가축분뇨처리통계 · 설치 농장 수(여러 개 설치 시 각각 셈)</small></h3>
  <div class="sg-g">

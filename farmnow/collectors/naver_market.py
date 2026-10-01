@@ -215,6 +215,6 @@ def refresh_details(src: dict, now: datetime, budget: int = DETAIL_BUDGET) -> di
         try:
             p.write_text(json.dumps(fetch_detail(sec, s, now), ensure_ascii=False), encoding="utf-8")
             done += 1
-        except (requests.RequestException, RuntimeError, ValueError, KeyError) as e:
+        except (requests.RequestException, RuntimeError, ValueError, KeyError, AttributeError, TypeError) as e:
             fail.append(f"{s['code']}({type(e).__name__})")
     return {"refreshed": done, "pending": max(0, len(todo) - budget), "failed": fail}

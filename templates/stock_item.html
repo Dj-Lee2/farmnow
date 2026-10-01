@@ -35,7 +35,7 @@
     {% if r.pos52 is not none %}<div class="r52 big" title="52주 범위"><i style="left:{{ [[r.pos52, 0]|max, 100]|min }}%"></i></div><div class="r52l"><span>52주 최저</span><span>52주 최고</span></div>{% endif %}
    </div>
    {% if peers %}<div class="card"><div class="sec"><h3>같은 분류</h3><small>{{ r.group }}</small></div>
-    {% for o in peers[:8] %}<a class="row" href="{{ o.slug }}"><span>{{ o.name }}</span><b><span class="pp">{{ o|px }}</span> <span class="{{ 'up' if o.pct>0 else 'down' if o.pct<0 else '' }}">{{ o.pct|pct }}</span></b></a>{% endfor %}
+    {% for o in peers[:8] %}<a class="row" href="./{{ o.slug }}"><span>{{ o.name }}</span><b><span class="pp">{{ o|px }}</span> <span class="{{ 'up' if o.pct>0 else 'down' if o.pct<0 else '' }}">{{ o.pct|pct }}</span></b></a>{% endfor %}
    </div>{% endif %}
   </aside>
  </div>
@@ -50,9 +50,9 @@
    {% if r.target %}<div class="tg"><div><span>목표주가 평균</span><b>{{ r.target.mean }}</b></div><div><span>최고</span><b>{{ r.target.high }}</b></div><div><span>최저</span><b>{{ r.target.low }}</b></div><div><span>투자의견</span><b>{{ r.target.rec }}<small> / 5</small></b></div></div>{% endif %}
    {% if r.summary %}<p class="sm">{{ r.summary }}</p>{% endif %}</section>{% endif %}
   {% if r.news %}<section class="card"><div class="sec"><h3>관련 뉴스</h3></div>
-   {% for n in r.news %}<a class="nw" href="{{ n.u }}" target="_blank" rel="noopener"><span class="t">{{ n.t }}</span><span class="d">{{ n.src }} · {{ n.dt }}</span></a>{% endfor %}</section>{% endif %}
+   {% for n in r.news %}<a class="nw" href="https://{{ (n.u)|hp }}" target="_blank" rel="noopener"><span class="t">{{ n.t }}</span><span class="d">{{ n.src }} · {{ n.dt }}</span></a>{% endfor %}</section>{% endif %}
  </div>
- {% if r.url %}<p class="st sd-src"><a href="{{ r.url }}" target="_blank" rel="noopener">네이버 증권에서 보기 ↗</a></p>{% endif %}
+ {% if r.url %}<p class="st sd-src"><a href="https://{{ (r.url)|hp }}" target="_blank" rel="noopener">네이버 증권에서 보기 ↗</a></p>{% endif %}
 </div>
 {% endblock %}
 {% block scripts %}

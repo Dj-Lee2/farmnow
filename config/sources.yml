@@ -1167,6 +1167,33 @@ sources:
       - {id: ctk_pers_gap, title: 인증 받은 감 임가 중 GAP 비율, tbl: DT_136022_9949, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
       - {id: ctk_mush_gap, title: 인증 받은 버섯 임가 중 GAP 비율, tbl: DT_136022_10086, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
       - {id: ctk_etc_gap, title: 인증 받은 기타 수실류 임가 중 GAP 비율, tbl: DT_136022_10187, org: "136", itm: "^값$", want: ["^GAP", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      # 비료·농약 월별 생산·출하(광업제조업동향조사)·농자재 생산자·수입물가(한국은행, org 301)
+      - {id: fmp_prod, title: 복합비료 생산량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별생산량$", want: ["^복합비료$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: fmp_ship, title: 복합비료 출하량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별출하량$", want: ["^복합비료$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: fmp_stock, title: 복합비료 재고량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별재고량$", want: ["^복합비료$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: fmp_dom, title: 복합비료 내수 출하량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별내수량$", want: ["^복합비료$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: fmp_exp, title: 복합비료 수출량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별수출량$", want: ["^복합비료$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: pmp_prod, title: 농약 생산량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별생산량$", want: ["^농약$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: pmp_ship, title: 농약 출하량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별출하량$", want: ["^농약$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: pmp_stock, title: 농약 재고량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별재고량$", want: ["^농약$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: pmp_dom, title: 농약 내수 출하량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별내수량$", want: ["^농약$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: pmp_exp, title: 농약 수출량, tbl: DT_1F02012, se: M, periods: 24, itm: "^품목별수출량$", want: ["^농약$"], unit: 톤, survey: 광업제조업동향조사}
+      - {id: ppi_cfert, title: 복합비료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^복합비료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_ofert, title: 유기질비료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^유기질비료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_ins, title: 농업용 살충제 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^농업용살충제$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_fun, title: 농업용 살균제 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^농업용살균제$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_herb, title: 제초제 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^제초제$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_fcow, title: 소 배합사료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^양우용배합사료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_fpig, title: 돼지 배합사료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^양돈용배합사료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_fchk, title: 닭 배합사료 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^양계용배합사료$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_trac, title: 농업용 트랙터 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^농업용트랙터$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_comb, title: 농업용 콤바인 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^농업용콤바인$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ppi_dry, title: 농업용 건조기 생산자물가, tbl: DT_404Y016, org: "301", se: M, periods: 24, itm: "^생산자물가지수", want: ["^농업용건조기$"], unit: "2020=100", survey: 생산자물가지수}
+      - {id: ipi_urea, title: 요소 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^요소$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_pot, title: 칼리질비료 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^칼리질비료$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_nh3, title: 암모니아 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^암모니아$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_phos, title: 인광석(천연인산칼슘) 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^천연인산칼슘$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
+      - {id: ipi_fdc, title: 사료작물 수입물가, tbl: DT_401Y017, org: "301", se: M, periods: 24, itm: "^수입물가지수", want: ["^사료작물$", "^원화기준$"], unit: "2020=100", survey: 수입물가지수}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

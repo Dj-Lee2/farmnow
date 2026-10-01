@@ -195,7 +195,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·임가 친환경·GAP 인증', 96) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출', 102) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -277,6 +277,15 @@
   {{ hcard('업종·영농형태별 공식인증 받은 임가 비율', [('버섯 전업', K.ctf_mush_ful), ('버섯 겸업', K.ctf_mush_par), ('밤 전업', K.ctf_chest_ful), ('밤 겸업', K.ctf_chest_par), ('기타 수실류 전업', K.ctf_etc_ful), ('기타 수실류 겸업', K.ctf_etc_par), ('감 전업', K.ctf_pers_ful), ('감 겸업', K.ctf_pers_par)], '%', '친환경·GAP·지리적 표시·품질 인증 중 하나 이상 · 오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('소유 산림 규모별 공식인증 받은 임가 비율', [('밤 2ha 미만', K.ctf_chest_s1), ('밤 2~4ha', K.ctf_chest_s2), ('밤 4~8ha', K.ctf_chest_s3), ('밤 8ha 이상', K.ctf_chest_s4), ('버섯 2ha 미만', K.ctf_mush_s1), ('버섯 2~5ha', K.ctf_mush_s2), ('버섯 5~10ha', K.ctf_mush_s3), ('버섯 10ha 이상', K.ctf_mush_s4)], '%', '산림 미소유 임가 제외 · 표본이 작은 구간은 해마다 등락이 큼 · 오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('인증 받은 임가가 가진 인증 종류', [('버섯 친환경 인증', K.ctk_mush_eco), ('밤 친환경 인증', K.ctk_chest_eco), ('감 GAP', K.ctk_pers_gap), ('기타 수실류 GAP', K.ctk_etc_gap), ('밤 GAP', K.ctk_chest_gap), ('버섯 GAP', K.ctk_mush_gap)], '%', '공식인증 받은 임가 중 비율(복수 응답) · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">비료·농약 공장 생산·출하 <small>월별 · 국가데이터처 광업제조업동향조사</small></h3>
+ <div class="sg-g">
+  {{ card('fmp_prod', 'pm1', ('출하 ' ~ K.fmp_ship.vals[-1]|big ~ ' · 재고 ' ~ K.fmp_stock.vals[-1]|big ~ ' 톤') if K.fmp_ship and K.fmp_stock else '복합비료 공장 생산량', '#1c7a45') }}
+  {{ card('fmp_dom', 'pm2', ('수출 ' ~ K.fmp_exp.vals[-1]|big ~ ' 톤 · 출하 = 내수 + 수출') if K.fmp_exp else '국내로 나간 복합비료', '#1c7a45') }}
+  {{ rcard('복합비료 출하 중 수출 비중', K.fmp_exp, K.fmp_ship, 'pm3', '공장에서 나간 복합비료 중 해외로 간 비율', '#1c7a45') }}
+  {{ card('pmp_prod', 'pm4', ('출하 ' ~ K.pmp_ship.vals[-1]|big ~ ' · 재고 ' ~ K.pmp_stock.vals[-1]|big ~ ' 톤') if K.pmp_ship and K.pmp_stock else '농약 공장 생산량', '#a0605a') }}
+  {{ card('pmp_dom', 'pm5', ('수출 ' ~ K.pmp_exp.vals[-1]|big ~ ' 톤 · 출하 = 내수 + 수출') if K.pmp_exp else '국내로 나간 농약', '#a0605a') }}
+  {{ rcard('농약 출하 중 수출 비중', K.pmp_exp, K.pmp_ship, 'pm6', '공장에서 나간 농약 중 해외로 간 비율', '#a0605a') }}
  </div>
  <h3 class="sg-sub">농약 판매량 <small>대한민국 · 유효성분 기준 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">
@@ -372,7 +381,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가', 6) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가', 14) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">가격 <small>분기</small></h3>
  <div class="sg-g">
@@ -385,6 +394,17 @@
   {{ dvcard('농가가 사는 값 · 부문별 1년 전 대비', [('종자종묘', K.b_seed), ('비료', K.b_fert), ('농약', K.b_pest), ('사료', K.b_feed), ('영농자재', K.b_mat), ('인건비', K.b_labor), ('전기·연료', K.b_energy), ('임차료', K.b_rent), ('농기계', K.b_mach)], '막대는 1년 전 같은 분기 대비 · 회색 숫자는 지수(2020=100)') }}
   {{ dvcard('농가가 파는 값 · 부문별 1년 전 대비', [('곡물', K.s_grain), ('채소', K.s_veg), ('과수', K.s_fruit), ('축산물', K.s_live), ('특용작물', K.s_spec)], '막대는 1년 전 같은 분기 대비 · 회색 숫자는 지수(2020=100)') }}
   {{ hcard('소비자물가 · 먹거리', [('과실', K.cpi_fruit), ('농산물', K.cpi_crop), ('농축수산물', K.cpi_agri), ('축산물', K.cpi_live), ('채소', K.cpi_veg), ('곡물', K.cpi_grain), ('전체 물가', K.cpi_all)], '2020=100', '소비자가 사는 값 · 2020=100 · 오른쪽은 전년 대비', none, '#c77b30') }}
+ </div>
+ <h3 class="sg-sub">농자재 물가 <small>월별 · 한국은행 생산자물가지수·수입물가지수(원화 기준) · 2020=100</small></h3>
+ <div class="sg-g">
+  {{ card('ppi_cfert', 'pf1', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_cfert.vals[-1] / K.ppi_cfert.vals[-13] - 1) * 100) ~ '%') if K.ppi_cfert and K.ppi_cfert.vals|length > 12 and K.ppi_cfert.vals[-13] else none), '#b04a07') }}
+  {{ card('ppi_ofert', 'pf2', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_ofert.vals[-1] / K.ppi_ofert.vals[-13] - 1) * 100) ~ '%') if K.ppi_ofert and K.ppi_ofert.vals|length > 12 and K.ppi_ofert.vals[-13] else none), '#b04a07') }}
+  {{ card('ppi_herb', 'pf3', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ppi_herb.vals[-1] / K.ppi_herb.vals[-13] - 1) * 100) ~ '%') if K.ppi_herb and K.ppi_herb.vals|length > 12 and K.ppi_herb.vals[-13] else none), '#b04a07') }}
+  {{ card('ipi_urea', 'pf4', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_urea.vals[-1] / K.ipi_urea.vals[-13] - 1) * 100) ~ '%') if K.ipi_urea and K.ipi_urea.vals|length > 12 and K.ipi_urea.vals[-13] else none), '#b04a07') }}
+  {{ card('ipi_pot', 'pf5', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_pot.vals[-1] / K.ipi_pot.vals[-13] - 1) * 100) ~ '%') if K.ipi_pot and K.ipi_pot.vals|length > 12 and K.ipi_pot.vals[-13] else none), '#b04a07') }}
+  {{ card('ipi_nh3', 'pf6', (('1년 전보다 ' ~ '{:+.1f}'.format((K.ipi_nh3.vals[-1] / K.ipi_nh3.vals[-13] - 1) * 100) ~ '%') if K.ipi_nh3 and K.ipi_nh3.vals|length > 12 and K.ipi_nh3.vals[-13] else none), '#b04a07') }}
+  {{ hcard('농자재 생산자물가 · 품목별', [('복합비료', K.ppi_cfert), ('제초제', K.ppi_herb), ('돼지 배합사료', K.ppi_fpig), ('닭 배합사료', K.ppi_fchk), ('소 배합사료', K.ppi_fcow), ('농업용 살균제', K.ppi_fun), ('유기질비료', K.ppi_ofert), ('농업용 건조기', K.ppi_dry), ('농업용 살충제', K.ppi_ins), ('농업용 콤바인', K.ppi_comb), ('농업용 트랙터', K.ppi_trac)], '2020=100', '국내 공장 출고 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
+  {{ hcard('비료 원료·사료작물 수입물가', [('암모니아', K.ipi_nh3), ('칼리질비료', K.ipi_pot), ('인광석(천연인산칼슘)', K.ipi_phos), ('요소', K.ipi_urea), ('사료작물', K.ipi_fdc)], '2020=100', '원화 기준 수입 가격 · 2020=100 · 오른쪽은 전월 대비', none, '#b04a07') }}
  </div>
  </div></details>
 

@@ -147,7 +147,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동', 80) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입', 90) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -203,7 +203,23 @@
   {{ hcard('질소비료 사용량', [('중국', K.fz_cn_n), ('대한민국', K.fz_kr_n), ('네덜란드', K.fz_nl_n), ('일본', K.fz_jp_n), ('미국', K.fz_us_n)], 'kg/ha', '농지 1ha당 질소(N) · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('농약 사용량', [('대한민국', K.pe_kr), ('일본', K.pe_jp), ('네덜란드', K.pe_nl), ('미국', K.pe_us), ('중국', K.pe_cn)], 'kg/ha', '농지 1ha당 농약 사용량 · 오른쪽은 전년 대비', none, '#a0605a') }}
   {{ hcard('유기농 면적 점유율', [('오스트리아', K.og_at), ('이탈리아', K.og_it), ('독일', K.og_de), ('프랑스', K.og_fr), ('네덜란드', K.og_nl), ('대한민국', K.og_kr), ('중국', K.og_cn), ('미국', K.og_us), ('일본', K.og_jp)], '%', '농업면적 중 유기농 면적 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('나라별 비료 생산량', [('중국', K.fpn_cn), ('러시아', K.fpn_ru), ('인도', K.fpn_in), ('캐나다', K.fpn_ca), ('모로코', K.fpn_ma), ('대한민국', K.fpr_all), ('일본', K.fpn_jp)], '톤', '질소·인산·칼리 성분 무게 합 · 나라 크기 차이 그대로 · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('나라별 농약 판매량', [('인도네시아', K.psn_id), ('베트남', K.psn_vn), ('멕시코', K.psn_mx), ('프랑스', K.psn_fr), ('일본', K.psn_jp), ('독일', K.psn_de), ('이탈리아', K.psn_it), ('대한민국', K.psn_kr)], '톤', '한 해 판매된 농약 유효성분 무게 · 나라 크기 차이 그대로 · 오른쪽은 전년 대비', none, '#a0605a') }}
+ </div>
+ <h3 class="sg-sub">비료 생산량 <small>대한민국 · 성분 기준 · FAO 기반 국제통계</small></h3>
+ <div class="sg-g">
+  {{ card('fpr_all', 'e43', ('질소 ' ~ K.fpr_n.vals[-1]|big ~ ' · 인산 ' ~ K.fpr_p.vals[-1]|big ~ ' · 칼리 ' ~ K.fpr_k.vals[-1]|big ~ ' 톤') if K.fpr_n and K.fpr_p and K.fpr_k else '한 해 생산된 비료 성분 무게', '#b07a3a') }}
+  {{ rcard('비료 생산 중 질소질 비중', K.fpr_n, K.fpr_all, 'e44', '생산된 비료 성분 중 질소(N) 비율', '#b07a3a') }}
+  {{ rcard('비료 생산 중 인산질 비중', K.fpr_p, K.fpr_all, 'e45', '생산된 비료 성분 중 인산(P₂O₅) 비율', '#b07a3a') }}
+  {{ hcard('비료 종류별 생산량', [('질소질', K.fpr_n), ('인산질', K.fpr_p), ('칼리질', K.fpr_k)], '톤', '성분 무게 · 괄호는 전체 중 비율 · 오른쪽은 전년 대비', K.fpr_all.vals[-1] if K.fpr_all else none, '#b07a3a') }}
+ </div>
+ <h3 class="sg-sub">임산물 비료 투입량 <small>1ha당 · 전국 평균 · 산림청 임산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('ffc_chest', 'e46', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_chest.vals[-1]) ~ 'kg') if K.ffm_chest else '퇴비 등 퇴구비', '#7a6a3a') }}
+  {{ card('ffc_pers', 'e47', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_pers.vals[-1]) ~ 'kg') if K.ffm_pers else '퇴비 등 퇴구비', '#7a6a3a') }}
+  {{ card('ffc_omija', 'e48', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_omija.vals[-1]) ~ 'kg') if K.ffm_omija else '퇴비 등 퇴구비', '#7a6a3a') }}
+  {{ hcard('임산물별 퇴구비 투입량', [('복분자딸기', K.ffc_bokbun), ('산수유', K.ffc_corn), ('구기자', K.ffc_goji), ('감', K.ffc_pers), ('오미자', K.ffc_omija), ('호두', K.ffc_walnut), ('대추', K.ffc_jujube), ('산딸기', K.ffc_rasp), ('밤', K.ffc_chest)], 'kg', '1ha당 퇴비 등 퇴구비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('임산물별 복합비료 투입량', [('산딸기', K.ffm_rasp), ('산수유', K.ffm_corn), ('감', K.ffm_pers), ('호두', K.ffm_walnut), ('오미자', K.ffm_omija), ('대추', K.ffm_jujube), ('복분자딸기', K.ffm_bokbun), ('구기자', K.ffm_goji), ('밤', K.ffm_chest)], 'kg', '1ha당 복합비료 · 오른쪽은 전년 대비', none, '#b07a3a') }}
  </div>
  <h3 class="sg-sub">농약 판매량 <small>대한민국 · 유효성분 기준 · FAO 기반 국제통계</small></h3>
  <div class="sg-g">

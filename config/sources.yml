@@ -952,6 +952,34 @@ sources:
       - {id: mcr_gb, title: 경상북도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(경상북도)"], unit: m³, survey: 가축분뇨처리통계}
       - {id: mcr_gn, title: 경상남도 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(경상남도)"], unit: m³, survey: 가축분뇨처리통계}
       - {id: mcr_jj, title: 제주 농장 내 가축분뇨 퇴비화시설 용량, tbl: DT_114059_002, org: "114", itm: "^농장 내 가축분뇨 처리시설 종류별 용량$", want: ["^퇴비화시설$", "^(제주)"], unit: m³, survey: 가축분뇨처리통계}
+      - {id: fpr_all, title: 대한민국 비료 생산량(전체), tbl: DT_2KAA419, itm: "^전체$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpr_n, title: 대한민국 비료 생산량(질소질), tbl: DT_2KAA419, itm: "^질소질$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpr_p, title: 대한민국 비료 생산량(인산질), tbl: DT_2KAA419, itm: "^인산질$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpr_k, title: 대한민국 비료 생산량(칼리질), tbl: DT_2KAA419, itm: "^칼리질$", want: ["^(한국|대한민국)$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_cn, title: 중국 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^중국$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_in, title: 인도 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^인도$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_ru, title: 러시아 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^러시아$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_ca, title: 캐나다 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^캐나다$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_ma, title: 모로코 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^모로코$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: fpn_jp, title: 일본 비료 생산량, tbl: DT_2KAA419, itm: "^전체$", want: ["^일본$"], unit: 톤, survey: 국제통계(비료 생산)}
+      - {id: ffc_chest, title: 밤 1ha당 퇴구비 투입량, tbl: DT_136033_9558, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_jujube, title: 대추 1ha당 퇴구비 투입량, tbl: DT_136033_9537, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_pers, title: 감 1ha당 퇴구비 투입량, tbl: DT_136033_9579, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_walnut, title: 호두 1ha당 퇴구비 투입량, tbl: DT_136033_9572, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_omija, title: 오미자 1ha당 퇴구비 투입량, tbl: DT_136033_11238, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_bokbun, title: 복분자딸기 1ha당 퇴구비 투입량, tbl: DT_136033_11275, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_rasp, title: 산딸기 1ha당 퇴구비 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_corn, title: 산수유 1ha당 퇴구비 투입량, tbl: DT_136033_11252, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffc_goji, title: 구기자 1ha당 퇴구비 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_chest, title: 밤 1ha당 복합비료 투입량, tbl: DT_136033_9558, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_jujube, title: 대추 1ha당 복합비료 투입량, tbl: DT_136033_9537, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_pers, title: 감 1ha당 복합비료 투입량, tbl: DT_136033_9579, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_walnut, title: 호두 1ha당 복합비료 투입량, tbl: DT_136033_9572, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_omija, title: 오미자 1ha당 복합비료 투입량, tbl: DT_136033_11238, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_bokbun, title: 복분자딸기 1ha당 복합비료 투입량, tbl: DT_136033_11275, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_rasp, title: 산딸기 1ha당 복합비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_corn, title: 산수유 1ha당 복합비료 투입량, tbl: DT_136033_11252, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: ffm_goji, title: 구기자 1ha당 복합비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

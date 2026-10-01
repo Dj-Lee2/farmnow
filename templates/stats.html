@@ -118,7 +118,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비', 19) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간', 25) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -153,6 +153,15 @@
   {{ hcard('임산물별 1ha당 소득', [('산딸기', K.fin_rasp), ('감', K.fin_pers), ('대추', K.fin_jujube), ('구기자', K.fin_goji), ('복분자딸기', K.fin_bokbun), ('호두', K.fin_walnut), ('산수유', K.fin_corn), ('오미자', K.fin_omija), ('오갈피', K.fin_oga), ('밤', K.fin_chest), ('헛개나무', K.fin_hut)], '원', '소득 = 조수입 − 경영비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('임산물별 1ha당 경영비', [('복분자딸기', K.fmc_bokbun), ('구기자', K.fmc_goji), ('오미자', K.fmc_omija), ('산딸기', K.fmc_rasp), ('대추', K.fmc_jujube), ('감', K.fmc_pers), ('오갈피', K.fmc_oga), ('산수유', K.fmc_corn), ('헛개나무', K.fmc_hut), ('호두', K.fmc_walnut), ('밤', K.fmc_chest)], '원', '비료·농약·고용노동 등 실제 쓴 돈 · 오른쪽은 전년 대비', none, '#b07a3a') }}
   {{ hcard('임산물별 1ha당 생산비', [('산딸기', K.fpc_rasp), ('구기자', K.fpc_goji), ('복분자딸기', K.fpc_bokbun), ('대추', K.fpc_jujube), ('오미자', K.fpc_omija), ('감', K.fpc_pers), ('산수유', K.fpc_corn), ('오갈피', K.fpc_oga), ('헛개나무', K.fpc_hut), ('호두', K.fpc_walnut), ('밤', K.fpc_chest)], '원', '경영비에 자가노동·자기 토지·자본 비용을 더한 값 · 오른쪽은 전년 대비', none, '#a0605a') }}
+ </div>
+ <h3 class="sg-sub">임산물 노동 시간 <small>1ha당 · 자가+고용 · 작업유형별 합 · 산림청 임산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('flb_rasp', 'v13', ('1ha당 일손이 가장 많이 드는 임산물 · 수확·운반만 ' ~ num(K.fhv_rasp.vals[-1], '시간')|striptags) if K.fhv_rasp else '1ha당 일손이 가장 많이 드는 임산물', '#2458d6') }}
+  {{ card('flb_chest', 'v14', ('가장 적게 드는 임산물 · 비료 주기 ' ~ num(K.fsv_chest.vals[-1], '시간')|striptags) if K.fsv_chest else '가장 적게 드는 임산물', '#2458d6') }}
+  {{ rcard('감 노동 중 수확·운반 비중', K.fhv_pers, K.flb_pers, 'v15', '1ha당 수확·운반 시간 ÷ 전체 노동 시간', '#2458d6') }}
+  {{ hcard('임산물별 1ha당 노동 시간', [('산딸기', K.flb_rasp), ('구기자', K.flb_goji), ('복분자딸기', K.flb_bokbun), ('대추', K.flb_jujube), ('오미자', K.flb_omija), ('감', K.flb_pers), ('산수유', K.flb_corn), ('오갈피', K.flb_oga), ('호두', K.flb_walnut), ('헛개나무', K.flb_hut), ('밤', K.flb_chest)], '시간', '접목·시비·제초·전정·수확·선별·출하 등 작업 합 · 오른쪽은 전년 대비', none, '#2458d6') }}
+  {{ hcard('임산물별 1ha당 수확·운반 노동 시간', [('산딸기', K.fhv_rasp), ('복분자딸기', K.fhv_bokbun), ('감', K.fhv_pers), ('대추', K.fhv_jujube), ('오미자', K.fhv_omija), ('구기자', K.fhv_goji), ('호두', K.fhv_walnut), ('오갈피', K.fhv_oga), ('산수유', K.fhv_corn), ('헛개나무', K.fhv_hut), ('밤', K.fhv_chest)], '시간', '수확해 옮기는 데 든 시간 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('임산물별 1ha당 비료 주기 노동 시간', [('산딸기', K.fsv_rasp), ('복분자딸기', K.fsv_bokbun), ('구기자', K.fsv_goji), ('오미자', K.fsv_omija), ('산수유', K.fsv_corn), ('호두', K.fsv_walnut), ('감', K.fsv_pers), ('대추', K.fsv_jujube), ('헛개나무', K.fsv_hut), ('오갈피', K.fsv_oga), ('밤', K.fsv_chest)], '시간', '밑거름·웃거름 주는 데 든 시간 · 오른쪽은 전년 대비', none, '#5fae7a') }}
  </div>
  </div></details>
 

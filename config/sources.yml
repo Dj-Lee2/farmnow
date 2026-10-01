@@ -1012,6 +1012,39 @@ sources:
       - {id: fpc_corn, title: 산수유 1ha당 생산비, tbl: DT_136033_11259, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
       - {id: fpc_goji, title: 구기자 1ha당 생산비, tbl: DT_136033_11247, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
       - {id: fpc_hut, title: 헛개나무 1ha당 생산비, tbl: DT_136033_11323, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
+      - {id: flb_chest, title: 밤 1ha당 노동 시간, tbl: DT_136033_9560, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_jujube, title: 대추 1ha당 노동 시간, tbl: DT_136033_9566, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_walnut, title: 호두 1ha당 노동 시간, tbl: DT_136033_9574, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_pers, title: 감 1ha당 노동 시간, tbl: DT_136033_9582, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_omija, title: 오미자 1ha당 노동 시간, tbl: DT_136033_11240, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_goji, title: 구기자 1ha당 노동 시간, tbl: DT_136033_11245, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_corn, title: 산수유 1ha당 노동 시간, tbl: DT_136033_11256, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_bokbun, title: 복분자딸기 1ha당 노동 시간, tbl: DT_136033_11277, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_rasp, title: 산딸기 1ha당 노동 시간, tbl: DT_136033_11293, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_oga, title: 오갈피 1ha당 노동 시간, tbl: DT_136033_11308, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: flb_hut, title: 헛개나무 1ha당 노동 시간, tbl: DT_136033_11318, org: "136", itm: "^값$", want: [".", "^(소계|전국평균)$"], sum: true, unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_chest, title: 밤 1ha당 수확·운반 노동 시간, tbl: DT_136033_9560, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_jujube, title: 대추 1ha당 수확·운반 노동 시간, tbl: DT_136033_9566, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_walnut, title: 호두 1ha당 수확·운반 노동 시간, tbl: DT_136033_9574, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_pers, title: 감 1ha당 수확·운반 노동 시간, tbl: DT_136033_9582, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_omija, title: 오미자 1ha당 수확·운반 노동 시간, tbl: DT_136033_11240, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_goji, title: 구기자 1ha당 수확·운반 노동 시간, tbl: DT_136033_11245, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_corn, title: 산수유 1ha당 수확·운반 노동 시간, tbl: DT_136033_11256, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_bokbun, title: 복분자딸기 1ha당 수확·운반 노동 시간, tbl: DT_136033_11277, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_rasp, title: 산딸기 1ha당 수확·운반 노동 시간, tbl: DT_136033_11293, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_oga, title: 오갈피 1ha당 수확·운반 노동 시간, tbl: DT_136033_11308, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fhv_hut, title: 헛개나무 1ha당 수확·운반 노동 시간, tbl: DT_136033_11318, org: "136", itm: "^값$", want: ["^수확 및 운반$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_chest, title: 밤 1ha당 비료 주기 노동 시간, tbl: DT_136033_9560, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_jujube, title: 대추 1ha당 비료 주기 노동 시간, tbl: DT_136033_9566, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_walnut, title: 호두 1ha당 비료 주기 노동 시간, tbl: DT_136033_9574, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_pers, title: 감 1ha당 비료 주기 노동 시간, tbl: DT_136033_9582, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_omija, title: 오미자 1ha당 비료 주기 노동 시간, tbl: DT_136033_11240, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_goji, title: 구기자 1ha당 비료 주기 노동 시간, tbl: DT_136033_11245, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_corn, title: 산수유 1ha당 비료 주기 노동 시간, tbl: DT_136033_11256, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_bokbun, title: 복분자딸기 1ha당 비료 주기 노동 시간, tbl: DT_136033_11277, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_rasp, title: 산딸기 1ha당 비료 주기 노동 시간, tbl: DT_136033_11293, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_oga, title: 오갈피 1ha당 비료 주기 노동 시간, tbl: DT_136033_11308, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
+      - {id: fsv_hut, title: 헛개나무 1ha당 비료 주기 노동 시간, tbl: DT_136033_11318, org: "136", itm: "^값$", want: ["^시비$", "^(소계|전국평균)$"], unit: 시간, survey: 임산물생산비조사}
       - {id: fpc_oga, title: 오갈피 1ha당 생산비, tbl: DT_136033_11310, org: "136", itm: "^값$", want: ["^생산비$", "^(소계|전국평균)$"], unit: 원, survey: 임산물생산비조사}
       - {id: ffc_hut, title: 헛개나무 1ha당 퇴구비 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^퇴구비$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: ffm_hut, title: 헛개나무 1ha당 복합비료 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^복합$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}

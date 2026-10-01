@@ -11,7 +11,7 @@
 
 1. 시작 전에 GitHub main을 `git pull --ff-only`로 받는다.
 2. 고친 뒤 `python -m pytest -q tests`를 통과시키고 커밋한다. 메시지는 짧은 제목 한 줄, AI 표기(Co-Authored-By 등)는 넣지 않는다.
-3. GitHub과 GitLab 양쪽에 push한다. GitLab은 올릴 때 보안 검사(Semgrep `p/security-audit`·OSV·Trivy)를 하며 걸리면 push 전체가 거부된다.
+3. GitLab을 먼저 push하고, 통과하면 GitHub에 push한다. GitLab은 올릴 때 보안 검사(Gitleaks·Semgrep `p/security-audit`·OSV·Trivy)를 하며 걸리면 push 전체가 거부된다. 거부되면 고쳐서 커밋한 뒤 다시 GitLab부터 올린다.
    - 템플릿 링크: 사이트 안은 `href="./{{ x }}"`, 외부는 `href="https://{{ x|hp }}"`, 같은 쪽은 `href="#{{ x }}"`. `href="{{ x }}"`는 검사에 걸린다.
    - 해시는 SHA-256, `requirements.txt`는 하위 의존성까지 `==`로 고정한다.
 4. 서버 반영: 서버 폴더에서 `git pull --ff-only` 후 다음 갱신(30분 이내)을 기다리거나 `deploy/update.sh`를 실행한다.

@@ -319,6 +319,40 @@ sources:
       - {id: gh_vinyl, title: 비닐하우스 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^비닐하우스$"], unit: ha, survey: 시설채소 온실현황}
       - {id: gh_glass, title: 유리온실 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^유리온실$"], unit: ha, survey: 시설채소 온실현황}
       - {id: gh_hard, title: 경질판온실 면적, tbl: DT_114018_010, org: "114", itm: "^면적$", want: ["^경질판온실$"], unit: ha, survey: 시설채소 온실현황}
+      # 연령·경지규모·주부업별 농가소득, 도별 쌀, 단수
+      - {id: ia_u50, title: 50세 미만 경영주 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: ia_50s, title: 50 - 59세 경영주 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: ia_60s, title: 60 - 69세 경영주 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: ia_70p, title: 70세 이상 경영주 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: is_a, title: 경지 0.5ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-0\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: is_b, title: 경지 0.5-1.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_c, title: 경지 1.0-1.5ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: is_d, title: 경지 1.5-2.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_e, title: 경지 2.0-3.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_f, title: 경지 3.0-5.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_g, title: 경지 5.0-7.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_h, title: 경지 7.0-10.0ha 미만 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: is_i, title: 경지 10.0ha 이상 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^경지규모-10\\.0ha 이상$"], survey: 농가경제조사}
+      - {id: ij_pro, title: 전문농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^주·부업별-전문$"], survey: 농가경제조사}
+      - {id: ij_gen, title: 일반농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^주·부업별-일반$"], survey: 농가경제조사}
+      - {id: ij_side, title: 부업농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^주·부업별-부업$"], survey: 농가경제조사}
+      - {id: ij_self, title: 자급농가 농가소득, tbl: DT_1EA1201, itm: "^농가소득", want: ["^주·부업별-자급$"], survey: 농가경제조사}
+      - {id: rice_area, title: 미곡 재배면적, tbl: DT_1ET0021, itm: "^미곡:면적$", unit: 헥타르, survey: 농작물생산조사}
+      - {id: food_total, title: 식량작물 생산량, tbl: DT_1ET0021, itm: "^합계:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: rp_jn, title: 전남 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(전라남도|전남)"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_cn, title: 충남 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(충청남도|충남)"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_jb, title: 전북 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(전라북도|전북)"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_gb, title: 경북 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(경상북도|경북)"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_gg, title: 경기 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^경기도$"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_gn, title: 경남 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(경상남도|경남)"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_gw, title: 강원 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: rp_cb, title: 충북 쌀 생산량, tbl: DT_1ET0021, itm: "^미곡:생산량$", want: ["^(충청북도|충북)"], unit: 톤, survey: 농작물생산조사}
+      - {id: fy_apple, title: 사과 10a당 생산량, tbl: DT_1ET0292, itm: "^사과:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: fy_pear, title: 배 10a당 생산량, tbl: DT_1ET0292, itm: "^배:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: fy_grape, title: 포도 10a당 생산량, tbl: DT_1ET0292, itm: "^포도:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: fy_citrus, title: 감귤 10a당 생산량, tbl: DT_1ET0292, itm: "^감귤:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: fy_peach, title: 복숭아 10a당 생산량, tbl: DT_1ET0292, itm: "^복숭아:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: fy_swp, title: 단감 10a당 생산량, tbl: DT_1ET0292, itm: "^단감:10a당 생산량$", unit: kg, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

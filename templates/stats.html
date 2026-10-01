@@ -15,6 +15,12 @@
   <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
   <div class="sg-ch">{{ r|mini(uid, col, rl, '%') }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
  </section>{% endif %}{% endif %}{% endmacro %}
+{% macro qcard(title, a, b, uid, note, mult, unit, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * mult) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set p = ((r[-1] - r[-2]) / r[-2] * 100) if r|length > 1 and r[-2] else none %}
+ <section class="kp4 sg-c"><div class="t">{{ title }}{{ link(a) }}</div>
+  <div class="v">{{ '{:,.0f}'.format(r[-1]) }}<small>{{ unit }}</small> {% if p is not none %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}</div>
+  <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
+  <div class="sg-ch">{{ r|mini(uid, col, rl, unit) }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
+ </section>{% endif %}{% endif %}{% endmacro %}
 {% macro hcard(title, grp, unit, note, share=none, col='#7cbf95') %}{% set grp = grp|selectattr('1')|list %}{% if grp %}{% set gmax = grp|map(attribute='1')|map(attribute='vals')|map('last')|max %}{% set yr = grp|map(attribute='1')|map(attribute='years')|map('last')|min %}
  <section class="kp4 sg-c sg-w"><div class="t">{{ title }}{{ link(grp[0][1]) }}</div>
   <table class="mvt sg-bars"><tbody>{% for n, ser in grp %}{% set v = ser.vals %}{% set p = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}
@@ -39,7 +45,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·소득·영농형태별·도별 소득·경영비·자산·부채', 12) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·소득·형태·지역·연령·규모별 소득·경영비·부채', 15) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -61,6 +67,9 @@
   {{ hcard('영농형태별 농가소득', [('축산', K.it_live), ('과수', K.it_fruit), ('채소', K.it_veg), ('일반밭작물', K.it_field), ('논벼', K.it_rice), ('화훼', K.it_flower), ('특용작물', K.it_spec)], '천원', ('전체 평균 ' ~ num(K.farm_income.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.farm_income else '', none, '#1c7a45') }}
   {{ hcard('도별 농가소득', [('제주', K.ir_jj), ('경북', K.ir_gb), ('강원', K.ir_gw), ('경남', K.ir_gn), ('경기', K.ir_gg), ('전북', K.ir_jb), ('충북', K.ir_cb), ('충남', K.ir_cn), ('전남', K.ir_jn)], '천원', '오른쪽은 전년 대비', none, '#5fae7a') }}
   {{ hcard('농업경영비 구성', [('사료비', K.me_feed), ('감가상각비', K.me_depr), ('노무비(인건비)', K.me_labor), ('유통비·기타', K.me_dist), ('광열비', K.me_energy), ('비료비', K.me_fert), ('농약비', K.me_pest), ('종묘비', K.me_seed), ('위탁비', K.me_out), ('임차료', K.me_rent), ('보험료', K.me_ins)], '천원', ('농가당 농업경영비 ' ~ num(K.me_total.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.me_total else '', K.me_total.vals[-1] if K.me_total else none, '#b04a07') }}
+  {{ hcard('경영주 연령별 농가소득', [('50세 미만', K.ia_u50), ('50~59세', K.ia_50s), ('60~69세', K.ia_60s), ('70세 이상', K.ia_70p)], '천원', '오른쪽은 전년 대비', none, '#6b8fd6') }}
+  {{ hcard('경지규모별 농가소득', [('0.5ha 미만', K.is_a), ('0.5~1ha', K.is_b), ('1~1.5ha', K.is_c), ('1.5~2ha', K.is_d), ('2~3ha', K.is_e), ('3~5ha', K.is_f), ('5~7ha', K.is_g), ('7~10ha', K.is_h), ('10ha 이상', K.is_i)], '천원', '경지 규모가 클수록 소득이 높지만 10ha 이상에서는 다시 낮아짐 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('주·부업별 농가소득', [('전문농가', K.ij_pro), ('부업농가', K.ij_side), ('자급농가', K.ij_self), ('일반농가', K.ij_gen)], '천원', '농업 비중·판매 규모에 따른 구분 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  </div></details>
 
@@ -149,13 +158,15 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·수리답·온실·재배면적·과일·채소·쌀', 14) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·수리답·온실·재배면적·쌀·과일·채소', 19) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
-  {{ card('area', 'g13', '논+밭 · 농업면적조사') }}{{ card('util_rate', 'g14', '재배면적 ÷ 경지면적 · 이모작이면 100 초과') }}{{ card('rice', 'g15', '미곡(정곡) 생산량') }}{{ card('irr_rate', 'g32', ('수리답 ' ~ K.irr_area.vals[-1]|big ~ ' ha · 가뭄에도 물을 댈 수 있는 논') if K.irr_area else none, '#2458d6') }}{{ card('area_paddy', 'g33', '논 면적') }}{{ card('area_upland', 'g34', '밭 면적', '#b07a3a') }}{{ card('gh_total', 'g35', ('비닐하우스 ' ~ K.gh_vinyl.vals[-1]|big ~ ' · 유리 ' ~ K.gh_glass.vals[-1]|big ~ ' · 경질판 ' ~ K.gh_hard.vals[-1]|big ~ ' ha') if K.gh_vinyl and K.gh_glass and K.gh_hard else none) }}{{ card('area_green', 'g36', '시설에서 재배한 작물 면적(이모작 포함)') }}{{ rcard('경지 중 시설작물 비중', K.area_green, K.area, 'g37', '시설작물 재배면적 ÷ 경지면적') }}
+  {{ card('area', 'g13', '논+밭 · 농업면적조사') }}{{ card('util_rate', 'g14', '재배면적 ÷ 경지면적 · 이모작이면 100 초과') }}{{ card('rice', 'g15', '미곡(정곡) 생산량') }}{{ card('irr_rate', 'g32', ('수리답 ' ~ K.irr_area.vals[-1]|big ~ ' ha · 가뭄에도 물을 댈 수 있는 논') if K.irr_area else none, '#2458d6') }}{{ card('area_paddy', 'g33', '논 면적') }}{{ card('area_upland', 'g34', '밭 면적', '#b07a3a') }}{{ card('gh_total', 'g35', ('비닐하우스 ' ~ K.gh_vinyl.vals[-1]|big ~ ' · 유리 ' ~ K.gh_glass.vals[-1]|big ~ ' · 경질판 ' ~ K.gh_hard.vals[-1]|big ~ ' ha') if K.gh_vinyl and K.gh_glass and K.gh_hard else none) }}{{ card('area_green', 'g36', '시설에서 재배한 작물 면적(이모작 포함)') }}{{ rcard('경지 중 시설작물 비중', K.area_green, K.area, 'g37', '시설작물 재배면적 ÷ 경지면적') }}{{ qcard('쌀 10a당 생산량', K.rice, K.rice_area, 'g38', '쌀 생산량 ÷ 벼 재배면적 · 정곡 기준', 100, 'kg') }}{{ card('rice_area', 'g39', '미곡(벼) 재배면적') }}{{ card('food_total', 'g40', '미곡·맥류·잡곡·두류·서류 합계(정곡)') }}
   {{ hcard('작물군별 재배면적', [('식량작물', K.area_food), ('벼', K.area_rice), ('채소', K.area_veg), ('과수', K.area_fruit), ('시설작물', K.area_green)], 'ha', '막대는 면적 크기 · 오른쪽은 전년 대비') }}
+  {{ hcard('도별 쌀 생산량', [('충남', K.rp_cn), ('전남', K.rp_jn), ('전북', K.rp_jb), ('경북', K.rp_gb), ('경기', K.rp_gg), ('경남', K.rp_gn), ('충북', K.rp_cb), ('강원', K.rp_gw)], '톤', '정곡 기준 · 오른쪽은 전년 대비', none, '#c9a227') }}
   {{ hcard('과일 생산량', [('감귤', K.fr_citrus), ('사과', K.fr_apple), ('포도', K.fr_grape), ('감', K.fr_persim), ('배', K.fr_pear), ('복숭아', K.fr_peach)], '톤', '성과수+미과수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('과일 10a당 생산량', [('감귤', K.fy_citrus), ('배', K.fy_pear), ('포도', K.fy_grape), ('사과', K.fy_apple), ('단감', K.fy_swp), ('복숭아', K.fy_peach)], 'kg', '성과수 기준 단수 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('채소 생산량', [('배추', K.v_cabbage), ('양파', K.v_onion), ('무', K.v_radish), ('마늘', K.v_garlic), ('건고추', K.v_pepper)], '톤', '오른쪽은 전년 대비 · 연도가 다른 품목은 이름 옆에 표시', none, '#5fae7a') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>

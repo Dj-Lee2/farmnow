@@ -283,7 +283,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·저수지·양배수장', 37) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·저수지·양배수장·농업용수 개발', 47) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -317,6 +317,17 @@
   {{ hcard('총저수량 규모별 저수지 수', [('10만㎥ 미만', K.rsv_b1), ('10만~50만㎥', K.rsv_b2), ('50만~100만㎥', K.rsv_b3), ('100만~500만㎥', K.rsv_b4), ('500만㎥ 이상', K.rsv_b5)], '곳', '괄호는 전국 저수지 중 비중 · 오른쪽은 전년 대비', K.rsv_n.vals[-1] if K.rsv_n else none, '#5b8bd9') }}
   {{ hcard('도별 양배수장 수', [('경북', K.pps_gb), ('경남', K.pps_gn), ('전남', K.pps_jn), ('충남', K.pps_cn), ('전북', K.pps_jb), ('경기', K.pps_gg), ('충북', K.pps_cb), ('강원', K.pps_gw), ('제주', K.pps_jj)], '곳', '양수장+배수장+양·배수장 · 괄호는 전국 중 비중 · 오른쪽은 전년 대비', K.pps_n.vals[-1] if K.pps_n else none, '#5b8bd9') }}
   {{ hcard('동력 규모별 양배수장 수', [('38kW 미만', K.pps_b1), ('38~100kW', K.pps_b2), ('100~500kW', K.pps_b3), ('500~2,000kW', K.pps_b4), ('2,000kW 이상', K.pps_b5)], '곳', '괄호는 전국 양배수장 중 비중 · 오른쪽은 전년 대비', K.pps_n.vals[-1] if K.pps_n else none, '#5b8bd9') }}
+<h3 class="sg-sub">농업용수 개발사업 준공 <small>한국농어촌공사 농업생산기반정비사업 통계 · 그해 끝난 사업</small></h3>
+  {{ card('awd_n', 'g76', ('저수지 ' ~ K.awd_rsv_n.vals[-1]|big ~ ' · 양배수장 ' ~ K.awd_pp_n.vals[-1]|big ~ ' · 보 ' ~ K.awd_weir_n.vals[-1]|big ~ ' · 관정 ' ~ K.awd_well_n.vals[-1]|big ~ '곳') if K.awd_rsv_n and K.awd_pp_n and K.awd_weir_n and K.awd_well_n else none, '#2458d6') }}
+  {{ card('awd_ha', 'g77', ('새로 물을 대는 ' ~ K.awd_new.vals[-1]|big ~ 'ha · 보강 ' ~ K.awd_rf.vals[-1]|big ~ 'ha') if K.awd_new and K.awd_rf else none, '#2458d6') }}
+  {{ card('awd_cost', 'g78', ('국고 ' ~ num(K.awd_nat.vals[-1], '천원')|striptags ~ ' · 지방비 ' ~ num(K.awd_loc.vals[-1], '천원')|striptags) if K.awd_nat and K.awd_loc else none, '#2458d6') }}
+  {{ card('awd_new', 'g79', '용수가 없던 논밭에 새로 물을 대게 된 면적', '#2458d6') }}
+  {{ rcard('준공 면적 중 보강 비중', K.awd_rf, K.awd_ha, 'g80', '기존 시설을 고쳐 물 공급을 늘린 면적 ÷ 준공 면적', '#2458d6') }}
+  {{ rcard('준공 사업비 중 국고 비중', K.awd_nat, K.awd_cost, 'g81', '국고보조금 ÷ 사업비 · 나머지는 지방비', '#2458d6') }}
+  {{ hcard('시설 종류별 준공 수', [('관정', K.awd_well_n), ('보', K.awd_weir_n), ('양배수장', K.awd_pp_n), ('저수지', K.awd_rsv_n)], '곳', '괄호는 전체 준공 시설 중 비중 · 오른쪽은 전년 대비', K.awd_n.vals[-1] if K.awd_n else none, '#5b8bd9') }}
+  {{ hcard('시설 종류별 준공 면적', [('양배수장', K.awd_pp_ha), ('보', K.awd_weir_ha), ('저수지', K.awd_rsv_ha), ('관정', K.awd_well_ha)], 'ha', '괄호는 전체 준공 면적 중 비중 · 오른쪽은 전년 대비', K.awd_ha.vals[-1] if K.awd_ha else none, '#5b8bd9') }}
+  {{ hcard('시설 종류별 준공 사업비', [('양배수장', K.awd_pp_c), ('저수지', K.awd_rsv_c), ('보', K.awd_weir_c), ('관정', K.awd_well_c)], '천원', '괄호는 전체 사업비 중 비중 · 오른쪽은 전년 대비', K.awd_cost.vals[-1] if K.awd_cost else none, '#5b8bd9') }}
+  {{ hcard('도별 농업용수개발 준공 면적', [('전남', K.awd_jn), ('강원', K.awd_gw), ('충남', K.awd_cn), ('경남', K.awd_gn), ('경기', K.awd_gg), ('경북', K.awd_gb), ('충북', K.awd_cb), ('전북', K.awd_jb)], 'ha', '괄호는 전국 준공 면적 중 비중 · 해마다 끝나는 사업이 달라 등락이 큼 · 오른쪽은 전년 대비', K.awd_ha.vals[-1] if K.awd_ha else none, '#5b8bd9') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

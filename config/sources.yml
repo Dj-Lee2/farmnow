@@ -805,6 +805,33 @@ sources:
       - {id: pps_gb, title: 경북 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^경상북도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
       - {id: pps_gn, title: 경남 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^경상남도$", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
       - {id: pps_jj, title: 제주 양배수장 수, tbl: DT_311001_011, org: "311", itm: "^양\\(배\\)수장 동력규모별 시설수$", want: ["^제주", "^규모별 시설수$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: awd_n, title: "농업용수개발사업 준공 시설 수", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^시설수$"], unit: 곳, survey: 농업생산기반정비사업 통계}
+      - {id: awd_ha, title: "농업용수개발사업 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_new, title: "농업용수개발 신규 수혜 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^신규$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_rf, title: "농업용수개발 보강 수혜 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^보강$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_cost, title: "농업용수개발 준공 사업비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^사업비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_nat, title: "농업용수개발 국고보조금", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^국고보조금$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_loc, title: "농업용수개발 지방비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^지방비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_rsv_n, title: "준공 저수지 수", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^저수지$", "^시설수$"], unit: 곳, survey: 농업생산기반정비사업 통계}
+      - {id: awd_pp_n, title: "준공 양배수장 수", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^양\\(배수\\)장$", "^시설수$"], unit: 곳, survey: 농업생산기반정비사업 통계}
+      - {id: awd_weir_n, title: "준공 보 수", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^보$", "^시설수$"], unit: 곳, survey: 농업생산기반정비사업 통계}
+      - {id: awd_well_n, title: "준공 관정 수", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^관정$", "^시설수$"], unit: 곳, survey: 농업생산기반정비사업 통계}
+      - {id: awd_rsv_ha, title: "저수지 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^저수지$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_pp_ha, title: "양배수장 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^양\\(배수\\)장$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_weir_ha, title: "보 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^보$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_well_ha, title: "관정 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^관정$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_rsv_c, title: "저수지 준공 사업비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^저수지$", "^사업비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_pp_c, title: "양배수장 준공 사업비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^양\\(배수\\)장$", "^사업비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_weir_c, title: "보 준공 사업비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^보$", "^사업비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_well_c, title: "관정 준공 사업비", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^관정$", "^사업비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: awd_gg, title: "경기 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^경기도$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_gw, title: "강원 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^강원", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_cb, title: "충북 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^(충청북도|충북)$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_cn, title: "충남 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^(충청남도|충남)$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_jb, title: "전북 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^(전라북도|전북특별자치도)$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_jn, title: "전남 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^전라남도$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_gb, title: "경북 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^경상북도$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: awd_gn, title: "경남 농업용수개발 준공 면적", tbl: DT_311001_026, org: "311", periods: 5, itm: "^농업용수개발사업 준공 현황$", want: ["^경상남도$", "^준공면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

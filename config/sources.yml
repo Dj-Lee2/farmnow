@@ -2284,6 +2284,35 @@ sources:
       - {id: fiu_w_g, title: 경지 5~7ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
       - {id: fiu_w_h, title: 경지 7~10ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
       - {id: fiu_w_i, title: 경지 10ha 이상 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-10\\.0ha 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_pd_pro, title: 주·부업별 전문농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^주·부업별-전문$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_pd_gen, title: 주·부업별 일반농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^주·부업별-일반$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_pd_sub, title: 주·부업별 부업농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^주·부업별-부업$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_pd_self, title: 주·부업별 자급농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^주·부업별-자급$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_ph_pro, title: 주·부업별 전문농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^주·부업별-전문$"], survey: 농가경제조사}
+      - {id: fiv_ph_gen, title: 주·부업별 일반농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^주·부업별-일반$"], survey: 농가경제조사}
+      - {id: fiv_ph_sub, title: 주·부업별 부업농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^주·부업별-부업$"], survey: 농가경제조사}
+      - {id: fiv_ph_self, title: 주·부업별 자급농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^주·부업별-자급$"], survey: 농가경제조사}
+      - {id: fiv_w_rice, title: 논벼 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-논벼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_fruit, title: 과수 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-과수$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_veg, title: 채소 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-채소$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_spec, title: 특용작물 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-특용작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_flower, title: 화훼 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-화훼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_field, title: 일반밭작물 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-일반밭작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_w_live, title: 축산 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^영농형태-축산$"], unit: "%", survey: 농가경제조사}
+      - {id: fiv_lp_rice, title: 논벼 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fiv_lp_fruit, title: 과수 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fiv_lp_veg, title: 채소 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fiv_lp_spec, title: 특용작물 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fiv_lp_flower, title: 화훼 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fiv_lp_field, title: 일반밭작물 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fiv_lp_live, title: 축산 농가 노동생산성(1시간당 농업부가가치), tbl: DT_1EA1401, itm: "^노동생산성$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fiv_tp_rice, title: 논벼 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fiv_tp_fruit, title: 과수 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fiv_tp_veg, title: 채소 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fiv_tp_spec, title: 특용작물 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fiv_tp_flower, title: 화훼 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fiv_tp_field, title: 일반밭작물 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fiv_tp_live, title: 축산 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-축산$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

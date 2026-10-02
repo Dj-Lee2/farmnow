@@ -2343,6 +2343,42 @@ sources:
       - {id: fiw_hh_flower, title: 화훼 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
       - {id: fiw_hh_field, title: 일반밭작물 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
       - {id: fiw_hh_live, title: 축산 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fiy_li_avg, title: 농가 평균 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ki_avg, title: 농가 평균 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fiy_eq_rice, title: 논벼 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-논벼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_fruit, title: 과수 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-과수$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_veg, title: 채소 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-채소$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_spec, title: 특용작물 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-특용작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_flower, title: 화훼 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-화훼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_field, title: 일반밭작물 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-일반밭작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_eq_live, title: 축산 농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^영농형태-축산$"], unit: "%", survey: 농가경제조사}
+      - {id: fiy_ls_a, title: 경지 0.5ha 미만 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-0\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_b, title: 경지 0.5~1ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_c, title: 경지 1~1.5ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_d, title: 경지 1.5~2ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_e, title: 경지 2~3ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_f, title: 경지 3~5ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_g, title: 경지 5~7ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_h, title: 경지 7~10ha 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ls_i, title: 경지 10ha 이상 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^경지규모-10\\.0ha 이상$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiy_ks_a, title: 경지 0.5ha 미만 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-0\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_b, title: 경지 0.5~1ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_c, title: 경지 1~1.5ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_d, title: 경지 1.5~2ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_e, title: 경지 2~3ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_f, title: 경지 3~5ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_g, title: 경지 5~7ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_h, title: 경지 7~10ha 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_ks_i, title: 경지 10ha 이상 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^경지규모-10\\.0ha 이상$"], survey: 농가경제조사}
+      - {id: fiy_hs_a, title: 경지 0.5ha 미만 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-0\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_b, title: 경지 0.5~1ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_c, title: 경지 1~1.5ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_d, title: 경지 1.5~2ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_e, title: 경지 2~3ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_f, title: 경지 3~5ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_g, title: 경지 5~7ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_h, title: 경지 7~10ha 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fiy_hs_i, title: 경지 10ha 이상 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경지규모-10\\.0ha 이상$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원', 102) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원', 109) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -186,6 +186,16 @@
   {{ hcard('영농형태별 자본집약도', [('논벼', K.fiw_ki_rice), ('과수', K.fiw_ki_fruit), ('채소', K.fiw_ki_veg), ('특용작물', K.fiw_ki_spec), ('화훼', K.fiw_ki_flower), ('일반밭작물', K.fiw_ki_field), ('축산', K.fiw_ki_live)], '천원', '경지 10a당 농업자본 · 자본집약도 ÷ 노동집약도 = 노동 1시간당 자본 · 오른쪽은 전년 대비', none, '#c0763a') }}
   {{ hcard('경지규모별 부채비율', [('0.5ha 미만', K.fiw_ds_a), ('0.5~1ha', K.fiw_ds_b), ('1~1.5ha', K.fiw_ds_c), ('1.5~2ha', K.fiw_ds_d), ('2~3ha', K.fiw_ds_e), ('3~5ha', K.fiw_ds_f), ('5~7ha', K.fiw_ds_g), ('7~10ha', K.fiw_ds_h), ('10ha 이상', K.fiw_ds_i)], '%', ('부채 ÷ 자기자본 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_debt.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fi_debt else '', none, '#b04a07') }}
   {{ hcard('영농형태별 가구원', [('논벼', K.fiw_hh_rice), ('과수', K.fiw_hh_fruit), ('채소', K.fiw_hh_veg), ('특용작물', K.fiw_hh_spec), ('화훼', K.fiw_hh_flower), ('일반밭작물', K.fiw_hh_field), ('축산', K.fiw_hh_live)], '명', ('표본농가 평균 가구원 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_mem.vals[-1]) ~ '명 · 오른쪽은 전년 대비') if K.fgs_mem else '', none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">경지규모별 노동·자본 투입과 영농형태별 자기자본비율 <small>농가 평균 · 10a당 노동시간·10a당 농업자본·자기자본비율·가구원 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('fiy_li_avg', 'gi1', '농가 평균 경지 10a당 농업노동시간 · 노동집약도', '#3a8f6a') }}
+  {{ card('fiy_ki_avg', 'gi2', '농가 평균 경지 10a당 농업자본 · 자본집약도', '#c0763a') }}
+  {{ card('fiy_eq_live', 'gi3', '축산 농가 자기자본비율 · 영농형태 중 가장 낮음', '#b04a07') }}
+  {{ hcard('경지규모별 노동집약도', [('0.5ha 미만', K.fiy_ls_a), ('0.5~1ha', K.fiy_ls_b), ('1~1.5ha', K.fiy_ls_c), ('1.5~2ha', K.fiy_ls_d), ('2~3ha', K.fiy_ls_e), ('3~5ha', K.fiy_ls_f), ('5~7ha', K.fiy_ls_g), ('7~10ha', K.fiy_ls_h), ('10ha 이상', K.fiy_ls_i)], '시간', '경지 10a당 농업노동시간 · 규모가 클수록 줄어 10ha 이상은 0.5ha 미만의 약 10분의 1 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('경지규모별 자본집약도', [('0.5ha 미만', K.fiy_ks_a), ('0.5~1ha', K.fiy_ks_b), ('1~1.5ha', K.fiy_ks_c), ('1.5~2ha', K.fiy_ks_d), ('2~3ha', K.fiy_ks_e), ('3~5ha', K.fiy_ks_f), ('5~7ha', K.fiy_ks_g), ('7~10ha', K.fiy_ks_h), ('10ha 이상', K.fiy_ks_i)], '천원', '경지 10a당 농업자본 · 작은 농가일수록 땅 대비 자본이 큼 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('영농형태별 자기자본비율', [('논벼', K.fiy_eq_rice), ('과수', K.fiy_eq_fruit), ('채소', K.fiy_eq_veg), ('특용작물', K.fiy_eq_spec), ('화훼', K.fiy_eq_flower), ('일반밭작물', K.fiy_eq_field), ('축산', K.fiy_eq_live)], '%', ('자기자본 ÷ 자산 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_equity.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fi_equity else '', none, '#b04a07') }}
+  {{ hcard('경지규모별 가구원', [('0.5ha 미만', K.fiy_hs_a), ('0.5~1ha', K.fiy_hs_b), ('1~1.5ha', K.fiy_hs_c), ('1.5~2ha', K.fiy_hs_d), ('2~3ha', K.fiy_hs_e), ('3~5ha', K.fiy_hs_f), ('5~7ha', K.fiy_hs_g), ('7~10ha', K.fiy_hs_h), ('10ha 이상', K.fiy_hs_i)], '명', ('표본농가 평균 가구원 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_mem.vals[-1]) ~ '명 · 규모와 상관없이 2.2~2.5명 · 오른쪽은 전년 대비') if K.fgs_mem else '', none, '#6b8fd6') }}
  </div>
  </div></details>
 

@@ -3120,6 +3120,42 @@ sources:
       - {id: inj_hh_all, title: 업무상 손상 치료비로 인한 가계 압박 응답 건수, tbl: DT_14303_E1437, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["가계 압박"], unit: 건, survey: 농업인 업무상 손상조사}
       - {id: inj_sc_bad, title: 업무상 손상 농업활동 규모 축소 피해가 심한 건수, tbl: DT_14303_E1437, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["규모 축소", "심함$"], sum: true, unit: 건, survey: 농업인 업무상 손상조사}
       - {id: inj_sc_all, title: 업무상 손상 농업활동 규모 축소 응답 건수, tbl: DT_14303_E1437, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["규모 축소"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: mbuy_til, title: 경운기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^경운기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_trac, title: 트랙터 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^트랙터$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_cult, title: 관리기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^관리기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_wpl, title: 보행이앙기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^보행이앙기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_rpl, title: 승용이앙기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^승용이앙기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_comb, title: 콤바인 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^콤바인$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_gdry, title: 곡물건조기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^곡물건조기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_adry, title: 농산물건조기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^농산물건조기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mbuy_ss, title: SS기 교체 구입 계획 비율, tbl: DT_143004N_007, org: "143", se: F, periods: 5, itm: "^비율$", want: ["^SS기$", "^구입$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: trac_days, title: 트랙터 한 해 이용일수, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용일수$", "^계$"], unit: 일/년, survey: 농업기계 이용실태조사}
+      - {id: trac_hrs, title: 트랙터 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_haul, title: 트랙터 운반 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^운반$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_level, title: 트랙터 정지 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^정지$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_loader, title: 트랙터 로더 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^로더$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_till, title: 트랙터 경운 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^경운$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_flat, title: 트랙터 균평 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^균평$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_fert, title: 트랙터 비료살포 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^비료살포$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: th_comp, title: 트랙터 퇴비살포 작업 한 해 이용시간, tbl: DT_143004N_011, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^퇴비살포$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: cult_hrs, title: 관리기 한 해 이용시간, tbl: DT_143004N_013, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: rpl_hrs, title: 승용이앙기 한 해 이용시간, tbl: DT_143004N_015, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^승용$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: comb_hrs, title: 콤바인 한 해 이용시간, tbl: DT_143004N_016, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: gdry_hrs, title: 곡물건조기 한 해 이용시간, tbl: DT_143004N_017, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: gdry_cnt, title: 곡물건조기 한 해 건조횟수, tbl: DT_143004N_017, org: "143", se: F, periods: 5, itm: "^이용실적$", want: ["^건조횟수$", "^계$"], unit: 회/년, survey: 농업기계 이용실태조사}
+      - {id: mc_inj_y, title: 농업기계 관련 업무상 손상건수, tbl: DT_14303_E1901, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^예$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: mc_inj_all, title: 농업기계 관련 여부 응답 업무상 손상건수, tbl: DT_14303_E1901, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: noise_y, title: 작업 중 소음에 노출된 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^노출됨$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: noise_all, title: 소음 노출 여부 응답 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^노출 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ear_always, title: 소음 노출 농업인 귀마개 항상 착용함, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^항상 착용함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ear_mostly, title: 소음 노출 농업인 귀마개 거의 착용함, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^거의 착용함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ear_some, title: 소음 노출 농업인 귀마개 가끔 착용함, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^가끔 착용함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ear_never, title: 소음 노출 농업인 귀마개 거의 착용하지 않음, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^거의 착용하지 않음$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nt_h0, title: 하루 소음 노출 2시간 미만 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2시간 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nt_h2, title: 하루 소음 노출 2~4시간 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2~4시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nt_h4, title: 하루 소음 노출 4~6시간 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^4~6시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nt_h6, title: 하루 소음 노출 6~8시간 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nt_h8, title: 하루 소음 노출 8시간 이상 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^8시간 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

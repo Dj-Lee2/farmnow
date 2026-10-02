@@ -2838,6 +2838,41 @@ sources:
       - {id: cnq_4, title: 출자자 6~9인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^6~9인$"], sum: true, unit: 개, survey: 농업법인조사}
       - {id: cnq_5, title: 출자자 10~49인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^10~49인$"], sum: true, unit: 개, survey: 농업법인조사}
       - {id: cnq_6, title: 출자자 50인 이상 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^50인 이상$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cbr_seoul, title: 서울 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^서울특별시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_busan, title: 부산 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^부산광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_daegu, title: 대구 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^대구광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_incheon, title: 인천 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^인천광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_gwangju, title: 광주 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^광주광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_daejeon, title: 대전 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^대전광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_ulsan, title: 울산 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^울산광역시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_sejong, title: 세종 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^세종특별자치시$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_gg, title: 경기 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^경기도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_gw, title: 강원 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^강원", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_cb, title: 충북 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^충청북도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_cn, title: 충남 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^충청남도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_jb, title: 전북 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^(전북|전라북도)", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_jn, title: 전남 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^전라남도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_gb, title: 경북 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^경상북도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_gn, title: 경남 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^경상남도$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cbr_jj, title: 제주 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^제주", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cop_1, title: 운영 3년 이하 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^3년 이하$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cop_2, title: 운영 4~7년 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^4~7년$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cop_3, title: 운영 8~12년 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^8~12년$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cop_4, title: 운영 13년 이상 농업법인 수, tbl: DT_1E5201B, org: "114", itm: "^법인특성별 법인수$", want: ["^13년 이상$", "^계$"], unit: 개, survey: 농업법인조사}
+      - {id: cew_crop, title: 작물재배업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^작물재배업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_live, title: 축산업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^축산업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_proc, title: 농축산물 가공업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^농축산물가공업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_dist, title: 농축산물 유통업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^농축산물유통업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_svc, title: 농업서비스업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^농업서비스업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_tour, title: 농어촌관광휴양 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^농어촌관광휴양사업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cew_etc, title: 기타사업 농업법인 종사자, tbl: DT_1E5207C, org: "114", itm: "^법인특성 및 연령별 종사자수$", want: ["^기타사업$", "^(20대 이하|30대|40대|50대|60대|70대 이상)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: crh_crop, title: 작물재배업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^작물재배업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_live, title: 축산업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^축산업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_proc, title: 농축산물 가공업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농축산물가공업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_dist, title: 농축산물 유통업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농축산물유통업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_svc, title: 농업서비스업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농업서비스업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_tour, title: 농어촌관광휴양 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농어촌관광휴양사업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: crh_etc, title: 기타사업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^기타사업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1959,6 +1959,41 @@ sources:
       - {id: cnw_time, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 시간이 없어서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^시간이 없어서$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cnw_use, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 내용이 도움 안 돼서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^내용이 도움이"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cnw_fit, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 적합한 과정이 없어서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^적합한 과정"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfd_inc, title: 분야별 귀농 생활 만족 이상 가구소득, tbl: DT_114055_A052, org: "114", itm: "^귀농 생활 만족도$", want: ["^가구소득$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfd_nat, title: 분야별 귀농 생활 만족 이상 자연환경, tbl: DT_114055_A052, org: "114", itm: "^귀농 생활 만족도$", want: ["^자연환경$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfd_house, title: 분야별 귀농 생활 만족 이상 주거환경, tbl: DT_114055_A052, org: "114", itm: "^귀농 생활 만족도$", want: ["^주거환경$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfd_hlth, title: 분야별 귀농 생활 만족 이상 건강증진, tbl: DT_114055_A052, org: "114", itm: "^귀농 생활 만족도$", want: ["^건강증진$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfd_job, title: 분야별 귀농 생활 만족 이상 직업, tbl: DT_114055_A052, org: "114", itm: "^귀농 생활 만족도$", want: ["^직업$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rexp_pre, title: 귀농 가구 월 평균 생활비 귀농 전, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^귀농 전$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rexp_post, title: 귀농 가구 월 평균 생활비 귀농 후, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^귀농 후$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rexp_food, title: 귀농 가구 생활비 가장 많이 드는 항목 1순위 식비, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^식비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rexp_house, title: 귀농 가구 생활비 가장 많이 드는 항목 1순위 주거·광열·수도·전기, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^주거 및 광열"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rexp_hlth, title: 귀농 가구 생활비 가장 많이 드는 항목 1순위 건강·의료, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^건강 및 의료"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rexp_edu, title: 귀농 가구 생활비 가장 많이 드는 항목 1순위 교육비, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^교육비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rexp_trn, title: 귀농 가구 생활비 가장 많이 드는 항목 1순위 교통통신비, tbl: DT_114055_A031, org: "114", itm: "^월 평균 생활비$", want: ["^교통통신비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cin_before, title: 귀촌 가구 평균 소득 귀촌 직전 해, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^귀촌 직전 년도$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cin_first, title: 귀촌 가구 평균 소득 귀촌 첫해, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^귀촌 첫해$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cin_now, title: 귀촌 가구 평균 소득 현재, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^현재$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cin_farm, title: 귀촌 첫해 농업소득, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^농업소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cin_trans, title: 귀촌 첫해 이전소득, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^이전소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cin_irr, title: 귀촌 첫해 비경상소득, tbl: DT_114055_B017, org: "114", itm: "^평균 가구총소득$", want: ["^비경상소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: csf_avg, title: 귀촌 정착자금 평균, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^평균$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: csf_ret, title: 귀촌 정착자금 조달 1순위 퇴직금, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^퇴직금$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csf_sav, title: 귀촌 정착자금 조달 1순위 본인·배우자 저축, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^본인 및 배우자의 저축액$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csf_ast, title: 귀촌 정착자금 조달 1순위 자산처분, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^자산처분$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csf_fam, title: 귀촌 정착자금 조달 1순위 상속·가족 도움, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^상속 또는 가족의 도움$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csf_loan, title: 귀촌 정착자금 조달 1순위 금융권 대출, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^금융권 대출$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csu_land, title: 귀촌 정착자금 사용 1순위 토지 구입, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^토지구입"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csu_biz, title: 귀촌 정착자금 사용 1순위 창업비용, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^창업비용$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csu_live, title: 귀촌 정착자금 사용 1순위 생활비, tbl: DT_114055_B051, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^생활비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfm_rk, title: 귀농 형태 농촌 출생 후 연고지 이주, tbl: DT_114055_A002, org: "114", itm: "^귀농의 형태$", want: ["^농촌에서 태어나.*후 연고지 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfm_rn, title: 귀농 형태 농촌 출생 후 비연고지 이주, tbl: DT_114055_A002, org: "114", itm: "^귀농의 형태$", want: ["^농촌에서 태어나.*후 비연고지 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfm_uk, title: 귀농 형태 도시 출생 연고지 이주, tbl: DT_114055_A002, org: "114", itm: "^귀농의 형태$", want: ["^도시에서 태어나 연고지로 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfm_un, title: 귀농 형태 도시 출생 비연고지 이주, tbl: DT_114055_A002, org: "114", itm: "^귀농의 형태$", want: ["^도시에서 태어나 연고지가 아닌"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfm_rk, title: 귀촌 형태 농촌 출생 후 연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^농촌에서 태어나.*후 연고지 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfm_rn, title: 귀촌 형태 농촌 출생 후 비연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^농촌에서 태어나.*후 연고지가 아닌"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfm_uk, title: 귀촌 형태 도시 출생 연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^도시에서 태어나 연고지 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfm_un, title: 귀촌 형태 도시 출생 비연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^도시에서 태어나 연고지가 아닌"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

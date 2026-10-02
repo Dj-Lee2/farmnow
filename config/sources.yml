@@ -3406,6 +3406,45 @@ sources:
       - {id: mzs_ginh, title: 인삼 수확 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^인삼$", "^수확$"], unit: "%", survey: 농업기계 이용실태조사}
       - {id: mzs_sesp, title: 참깨 파종·정식 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^참깨$", "^파종·정식$"], unit: "%", survey: 농업기계 이용실태조사}
       - {id: mzs_ginp, title: 인삼 파종·정식 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^인삼$", "^파종·정식$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: lt_swp, title: "고구마 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^고구마$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_spot, title: "봄감자 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^봄감자$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_wht, title: "밀 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^밀$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_ses, title: "참깨 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^참깨$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_per, title: "들깨 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^들깨$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_gin, title: "인삼(4년근) 노동투입 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^인삼\\(4년근\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_gin_hire, title: "인삼(4년근) 고용노동 시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^인삼\\(4년근\\)$", "^합계$", "^고용노동$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_swp_cmp, title: "고구마 퇴비·밑거름 주기 노동시간", tbl: DT_143002_E006, org: "143", periods: 3, itm: "^노동투입표$", want: ["^고구마$", "^퇴비 및 밑거름 주기$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_acab, title: "노지 가을배추 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지가을배추$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_hcab, title: "노지 고랭지배추 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지고랭지배추$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_arad, title: "노지 가을무 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지가을무$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_wel, title: "노지 대파 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지대파$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_gng, title: "노지 생강 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지생강$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_car, title: "노지 당근 노동투입 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지당근$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_hcab_hire, title: "노지 고랭지배추 고용노동 시간", tbl: DT_143002_E007, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지고랭지배추$", "^고용노동$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_stb, title: "시설딸기 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설딸기$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_stbh, title: "시설딸기(수경) 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설딸기\\(수경\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_tom, title: "시설토마토 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설토마토$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_tomh, title: "시설토마토(수경) 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설토마토\\(수경\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_pap, title: "시설 파프리카 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설착색단고추\\(파프리카\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_cuc, title: "시설오이 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설오이$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_stb_hire, title: "시설딸기 고용노동 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설딸기$", "^고용노동$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl, title: "사과 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_pear, title: "배 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^배$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_pch, title: "복숭아 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^복숭아$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_grp, title: "노지포도 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지포도$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_ctr, title: "노지감귤 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^노지감귤$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_prs, title: "단감 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^단감$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl_hire, title: "사과 고용노동 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^고용노동$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl_fem, title: "사과 여성 노동시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^합계$", "^여자$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl_org, title: "사과 퇴비 등 유기자재 주기 노동시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^퇴비 등 유기자재 주기$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl_thin, title: "사과 열매 솎기 노동시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^열매 솎기\\(적과\\)$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_apl_harv, title: "사과 수확 노동시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^수확$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_rose, title: "시설장미 노동투입 시간", tbl: DT_143002_E010, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설장미$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: wd_n, title: "농업인·농작업 근로자 재해보험 대상 인원", tbl: DT_118006_006, org: "118", periods: 3, itm: "^총 인원수$", want: ["^농업인 및 농작업근로자$"], unit: 명, survey: 업무상 재해 발생현황}
+      - {id: wd_all, title: "농업인·농작업 근로자 업무상 재해자", tbl: DT_118006_006, org: "118", periods: 3, itm: "^재해자 총계\\(장해자 포함\\)$", want: ["^농업인 및 농작업근로자$"], unit: 명, survey: 업무상 재해 발생현황}
+      - {id: wd_inj, title: "농업인·농작업 근로자 업무상 부상자", tbl: DT_118006_006, org: "118", periods: 3, itm: "^부상자수\\(장해자 포함\\)$", want: ["^농업인 및 농작업근로자$"], unit: 명, survey: 업무상 재해 발생현황}
+      - {id: wd_dis, title: "농업인·농작업 근로자 업무상 질병자", tbl: DT_118006_006, org: "118", periods: 3, itm: "^질병자수\\(장해자 포함\\)$", want: ["^농업인 및 농작업근로자$"], unit: 명, survey: 업무상 재해 발생현황}
+      - {id: wd_dead, title: "농업인·농작업 근로자 업무상 사망자", tbl: DT_118006_006, org: "118", periods: 3, itm: "^사망자수$", want: ["^농업인 및 농작업근로자$"], unit: 명, survey: 업무상 재해 발생현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

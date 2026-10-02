@@ -3271,6 +3271,45 @@ sources:
       - {id: dsp_m3, title: 한 해 유기분진 노출 기간 3~5개월 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^3~5개월$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: dsp_m6, title: 한 해 유기분진 노출 기간 6~8개월 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8개월$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: dsp_m9, title: 한 해 유기분진 노출 기간 9개월 이상 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^9개월 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: inj_mo_all, title: 업무상 손상 건수(발생 월 기준), tbl: DT_14303_E1422, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_mo_spr, title: 봄(3~5월) 업무상 손상 건수, tbl: DT_14303_E1422, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^(3월|4월|5월)$"], sum: true, unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_mo_sum, title: 여름(6~8월) 업무상 손상 건수, tbl: DT_14303_E1422, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^(6월|7월|8월)$"], sum: true, unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_mo_aut, title: 가을(9~11월) 업무상 손상 건수, tbl: DT_14303_E1422, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^(9월|10월|11월)$"], sum: true, unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_mo_win, title: 겨울(12~2월) 업무상 손상 건수, tbl: DT_14303_E1422, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^(12월|1월|2월)$"], sum: true, unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_all, title: 업무상 손상 건수(발생 시간 기준), tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_7, title: 7~9시 업무상 손상 건수, tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^7~9시$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_10, title: 10~12시 업무상 손상 건수, tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^10~12시$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_13, title: 13~15시 업무상 손상 건수, tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^13~15시$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_16, title: 16~18시 업무상 손상 건수, tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^16~18시$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_hr_19, title: 19~6시 업무상 손상 건수, tbl: DT_14303_E1423, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^19~6시$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_all, title: 업무상 손상 건수(날씨 기준), tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_clear, title: 맑은 날 업무상 손상 건수, tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^맑음$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_rain, title: 비 오는 날 업무상 손상 건수, tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^비$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_heat, title: 더위(폭염) 때 업무상 손상 건수, tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^더위\\(폭염\\)$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_wind, title: 바람 부는 날 업무상 손상 건수, tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^바람$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_wx_cold, title: 추위(한파) 때 업무상 손상 건수, tbl: DT_14303_E1424, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^추위\\(한파\\)$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_all, title: 업무상 손상 건수(장소 기준), tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_paddy, title: 논에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^논$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_field, title: 밭에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^밭$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_orch, title: 과수원에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^과수원$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_gh, title: 시설에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^시설$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_barn, title: 축사에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^축사$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_home, title: 집에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^집$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_pl_road, title: 농로·도로에서 일어난 업무상 손상 건수, tbl: DT_14303_E1425, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농도\\(농로\\)/도로$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_all, title: 업무상 손상 건수(휴업 일수 기준), tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_1, title: 휴업 1~4일 미만 업무상 손상 건수, tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^1~4일 미만$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_4, title: 휴업 4~7일 미만 업무상 손상 건수, tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^4~7일 미만$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_7, title: 휴업 7~14일 미만 업무상 손상 건수, tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^7~14일 미만$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_14, title: 휴업 14~30일 미만 업무상 손상 건수, tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^14~30일 미만$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rs_30, title: 휴업 30일 이상 업무상 손상 건수, tbl: DT_14303_E1432, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^30일 이상$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: dis_c_paddy, title: 논 작목 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^논$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_c_field, title: 밭 작목 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^밭$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_c_orch, title: 과수 작목 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^과수$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_c_gh, title: 시설 작목 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^시설$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_c_live, title: 축산 작목 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^축산$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_w_full, title: 전업농 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^전업농$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_w_main, title: 주업 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^주업$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_w_side, title: 부업 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^부업$"], unit: "%", survey: 농업인 업무상 질병조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

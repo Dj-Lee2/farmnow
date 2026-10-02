@@ -2700,6 +2700,47 @@ sources:
       - {id: pul_l2, title: 육성계 2만~4만 수 농가 100수당 노동시간, tbl: DT_2EE313_23, itm: "^사육현황$", want: ["^노동력투하량", "^20000~39999수$"], unit: 시간, survey: 축산물생산비조사}
       - {id: pul_l3, title: 육성계 4만~9만 수 농가 100수당 노동시간, tbl: DT_2EE313_23, itm: "^사육현황$", want: ["^노동력투하량", "^40000~89999수$"], unit: 시간, survey: 축산물생산비조사}
       - {id: pul_l4, title: 육성계 9만 수 이상 농가 100수당 노동시간, tbl: DT_2EE313_23, itm: "^사육현황$", want: ["^노동력투하량", "^90000수 이상$"], unit: 시간, survey: 축산물생산비조사}
+      # 축산 농가 고용 근로자(DT_114059_001), 축종·규모별 연간 전력 사용량(DT_114059_015), 농업법인 출자금(DT_1E5204)·출자자수(DT_1E5202)
+      - {id: lbw_all, title: 축산 농가 고용 근로자(전체), tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^전국$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_for, title: 축산 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^전국$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_reg, title: 축산 농가 상시근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^전국$", "^상시근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_tmp, title: 축산 농가 기간근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^전국$", "^기간근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_hw, title: 한·육우 농가 고용 근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^한·육우$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_dy, title: 젖소 농가 고용 근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^젖소$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_pg, title: 돼지 농가 고용 근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^돼지$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_ck, title: 닭 농가 고용 근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^닭$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_dk, title: 오리 농가 고용 근로자, tbl: DT_114059_001, org: "114", itm: "^합계$", want: ["^오리$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_f_hw, title: 한·육우 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^한·육우$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_f_dy, title: 젖소 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^젖소$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_f_pg, title: 돼지 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^돼지$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_f_ck, title: 닭 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^닭$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: lbw_f_dk, title: 오리 농가 외국인 근로자, tbl: DT_114059_001, org: "114", itm: "^외국인$", want: ["^오리$", "^전체근로자$"], unit: 명, survey: 가축분뇨처리통계}
+      - {id: ele_hw, title: 한·육우 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^한·육우$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_dy, title: 젖소 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^젖소$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_pg, title: 돼지 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^돼지$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_ly, title: 산란계 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^닭[(]산란계[)]$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_br, title: 육계 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^닭[(]육계[)]$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_bd, title: 종오리 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^종오리$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_md, title: 육용오리 농가 호당 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^육용오리$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_p1, title: 돼지 1천 두 미만 농가 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^1천두 미만$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_p2, title: 돼지 1천~5천 두 농가 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^1~5천두 미만$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_p3, title: 돼지 5천~1만 두 농가 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^5~10천두 미만$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: ele_p4, title: 돼지 1만 두 이상 농가 연간 전력 사용량, tbl: DT_114059_015, org: "114", itm: "^평균 전력 소비량$", want: ["^10천두 이상$"], unit: kWh, survey: 가축분뇨처리통계}
+      - {id: inv_n, title: 출자 받은 농업법인 수, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^출자 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: inv_amt, title: 농업법인 출자금(전체), tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^출자금형태별 출자금$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_cash, title: 농업법인 현금 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^현금출자$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_kind, title: 농업법인 현물 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^현물출자$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_far, title: 농업인이 낸 농업법인 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^농업인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_non, title: 비농업인이 낸 농업법인 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^비농업인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_grp, title: 농업생산자단체가 낸 농업법인 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^농업생산자단체$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_etc, title: 기타법인이 낸 농업법인 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^기타법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: inv_per, title: 농업법인 법인당 출자금, tbl: DT_1E5204, org: "114", itm: "^출자금$", want: ["^법인당 출자금$"], unit: 백만원, survey: 농업법인조사}
+      - {id: own_all, title: 농업법인 출자자 수(전체), tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^출자자유형별 출자자수$"], unit: 명, survey: 농업법인조사}
+      - {id: own_far, title: 농업법인 농업인 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^농업인$"], unit: 명, survey: 농업법인조사}
+      - {id: own_non, title: 농업법인 비농업인 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^비농업인$"], unit: 명, survey: 농업법인조사}
+      - {id: own_grp, title: 농업법인 생산자 단체 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^생산자 단체$"], unit: 개, survey: 농업법인조사}
+      - {id: own_etc, title: 농업법인 기타법인 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^기타법인$"], unit: 개, survey: 농업법인조사}
+      - {id: own_per, title: 농업법인 법인당 출자자 수, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^법인당 출자자수$"], unit: 명, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

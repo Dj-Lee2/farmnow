@@ -2313,6 +2313,36 @@ sources:
       - {id: fiv_tp_flower, title: 화훼 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
       - {id: fiv_tp_field, title: 일반밭작물 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
       - {id: fiv_tp_live, title: 축산 농가 토지생산성(10a당 농업부가가치), tbl: DT_1EA1401, itm: "^토지생산성$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fiw_li_rice, title: 논벼 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-논벼$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_fruit, title: 과수 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-과수$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_veg, title: 채소 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-채소$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_spec, title: 특용작물 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-특용작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_flower, title: 화훼 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-화훼$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_field, title: 일반밭작물 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-일반밭작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_li_live, title: 축산 농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^영농형태-축산$"], unit: 시간, survey: 농가경제조사}
+      - {id: fiw_ki_rice, title: 논벼 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fiw_ki_fruit, title: 과수 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fiw_ki_veg, title: 채소 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fiw_ki_spec, title: 특용작물 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fiw_ki_flower, title: 화훼 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fiw_ki_field, title: 일반밭작물 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fiw_ki_live, title: 축산 농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fiw_ds_a, title: 경지 0.5ha 미만 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-0\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_b, title: 경지 0.5~1ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_c, title: 경지 1~1.5ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_d, title: 경지 1.5~2ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_e, title: 경지 2~3ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_f, title: 경지 3~5ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_g, title: 경지 5~7ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_h, title: 경지 7~10ha 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_ds_i, title: 경지 10ha 이상 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^경지규모-10\\.0ha 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fiw_hh_rice, title: 논벼 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fiw_hh_fruit, title: 과수 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fiw_hh_veg, title: 채소 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fiw_hh_spec, title: 특용작물 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fiw_hh_flower, title: 화훼 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fiw_hh_field, title: 일반밭작물 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fiw_hh_live, title: 축산 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^영농형태-축산$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

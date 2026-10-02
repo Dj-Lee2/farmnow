@@ -2407,6 +2407,38 @@ sources:
       - {id: fiz_ms_g, title: 경지 5~7ha 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
       - {id: fiz_ms_h, title: 경지 7~10ha 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
       - {id: fiz_ms_i, title: 경지 10ha 이상 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경지규모-10\\.0ha 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_avg, title: 농가 평균 고정비율(고정자산 ÷ 자기자본), tbl: DT_1EA1401, itm: "^고정비율$", want: ["^평균$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_kc_avg, title: 농가 평균 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fja_fx_rice, title: 논벼 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-논벼$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_fruit, title: 과수 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-과수$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_veg, title: 채소 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-채소$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_spec, title: 특용작물 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-특용작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_flower, title: 화훼 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-화훼$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_field, title: 일반밭작물 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-일반밭작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fx_live, title: 축산 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^영농형태-축산$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_kc_rice, title: 논벼 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fja_kc_fruit, title: 과수 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fja_kc_veg, title: 채소 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fja_kc_spec, title: 특용작물 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fja_kc_flower, title: 화훼 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fja_kc_field, title: 일반밭작물 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fja_kc_live, title: 축산 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fja_fa_a, title: 경영주 50세 미만 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^경영주연령-50세 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fa_b, title: 경영주 50대 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^경영주연령-50 - 59세$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fa_c, title: 경영주 60대 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^경영주연령-60 - 69세$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_fa_d, title: 경영주 70세 이상 농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^경영주연령-70세 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_kca_a, title: 경영주 50세 미만 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: fja_kca_b, title: 경영주 50대 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: fja_kca_c, title: 경영주 60대 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: fja_kca_d, title: 경영주 70세 이상 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: fja_ma_a, title: 경영주 50세 미만 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경영주연령-50세 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_ma_b, title: 경영주 50대 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경영주연령-50 - 59세$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_ma_c, title: 경영주 60대 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경영주연령-60 - 69세$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_ma_d, title: 경영주 70세 이상 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^경영주연령-70세 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fja_ka_a, title: 경영주 50세 미만 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: fja_ka_b, title: 경영주 50대 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: fja_ka_c, title: 경영주 60대 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: fja_ka_d, title: 경영주 70세 이상 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

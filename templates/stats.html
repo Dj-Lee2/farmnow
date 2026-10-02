@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율', 117) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성', 126) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -207,6 +207,18 @@
   {{ hcard('경영주 연령별 부채비율', [('50세 미만', K.fiz_da_a), ('50대', K.fiz_da_b), ('60대', K.fiz_da_c), ('70세 이상', K.fiz_da_d)], '%', ('부채 ÷ 자기자본 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_debt.vals[-1]) ~ '% · 젊을수록 높음 · 오른쪽은 전년 대비') if K.fi_debt else '', none, '#b04a07') }}
   {{ hcard('영농형태별 자본생산성', [('논벼', K.fiz_kp_rice), ('과수', K.fiz_kp_fruit), ('채소', K.fiz_kp_veg), ('특용작물', K.fiz_kp_spec), ('화훼', K.fiz_kp_flower), ('일반밭작물', K.fiz_kp_field), ('축산', K.fiz_kp_live)], '천원', ('농업자본 100만원당 농업부가가치 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_kpr.vals[-1]) ~ '천원 · 오른쪽은 전년 대비') if K.fiu_kpr else '', none, '#c0763a') }}
   {{ hcard('경지규모별 농기구자본비율', [('0.5ha 미만', K.fiz_ms_a), ('0.5~1ha', K.fiz_ms_b), ('1~1.5ha', K.fiz_ms_c), ('1.5~2ha', K.fiz_ms_d), ('2~3ha', K.fiz_ms_e), ('3~5ha', K.fiz_ms_f), ('5~7ha', K.fiz_ms_g), ('7~10ha', K.fiz_ms_h), ('10ha 이상', K.fiz_ms_i)], '%', ('농업자본 중 농기구 비중 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_mach.vals[-1]) ~ '% · 10ha 이상이 가장 높음 · 오른쪽은 전년 대비') if K.fiu_mach else '', none, '#3a8f6a') }}
+ </div>
+ <h3 class="sg-sub">고정비율·자본구성도와 연령별 자본 효율 <small>농가 평균 · 고정자산 ÷ 자기자본·노동 1시간당 농업자본·농기구자본비율·자본 100만원당 부가가치 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('fja_fx_avg', 'gk1', '농가 평균 고정비율 · 고정자산 ÷ 자기자본 × 100', '#b04a07') }}
+  {{ card('fja_kc_avg', 'gk2', '농가 평균 자본구성도 · 노동 1시간당 농업자본', '#c0763a') }}
+  {{ card('fja_fx_a', 'gk3', '경영주 50세 미만 농가 고정비율 · 100% 넘음 = 고정자산이 자기자본보다 큼', '#b04a07') }}
+  {{ hcard('영농형태별 고정비율', [('논벼', K.fja_fx_rice), ('과수', K.fja_fx_fruit), ('채소', K.fja_fx_veg), ('특용작물', K.fja_fx_spec), ('화훼', K.fja_fx_flower), ('일반밭작물', K.fja_fx_field), ('축산', K.fja_fx_live)], '%', ('고정자산 ÷ 자기자본 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fja_fx_avg.vals[-1]) ~ '% · 낮을수록 자기자본에 여유 · 오른쪽은 전년 대비') if K.fja_fx_avg else '', none, '#b04a07') }}
+  {{ hcard('영농형태별 자본구성도', [('논벼', K.fja_kc_rice), ('과수', K.fja_kc_fruit), ('채소', K.fja_kc_veg), ('특용작물', K.fja_kc_spec), ('화훼', K.fja_kc_flower), ('일반밭작물', K.fja_kc_field), ('축산', K.fja_kc_live)], '천원', ('노동 1시간당 농업자본 · 전체 평균 ' ~ '{:.1f}'.format(K.fja_kc_avg.vals[-1]) ~ '천원 · 축산이 가장 큼 · 오른쪽은 전년 대비') if K.fja_kc_avg else '', none, '#c0763a') }}
+  {{ hcard('경영주 연령별 고정비율', [('50세 미만', K.fja_fa_a), ('50대', K.fja_fa_b), ('60대', K.fja_fa_c), ('70세 이상', K.fja_fa_d)], '%', '고정자산 ÷ 자기자본 × 100 · 젊을수록 높음 · 오른쪽은 전년 대비', none, '#b04a07') }}
+  {{ hcard('경영주 연령별 자본구성도', [('50세 미만', K.fja_kca_a), ('50대', K.fja_kca_b), ('60대', K.fja_kca_c), ('70세 이상', K.fja_kca_d)], '천원', '노동 1시간당 농업자본 · 50세 미만이 가장 큼 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('경영주 연령별 농기구자본비율', [('50세 미만', K.fja_ma_a), ('50대', K.fja_ma_b), ('60대', K.fja_ma_c), ('70세 이상', K.fja_ma_d)], '%', ('농업자본 중 농기구 비중 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_mach.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fiu_mach else '', none, '#3a8f6a') }}
+  {{ hcard('경영주 연령별 자본생산성', [('50세 미만', K.fja_ka_a), ('50대', K.fja_ka_b), ('60대', K.fja_ka_c), ('70세 이상', K.fja_ka_d)], '천원', ('농업자본 100만원당 농업부가가치 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_kpr.vals[-1]) ~ '천원 · 오른쪽은 전년 대비') if K.fiu_kpr else '', none, '#c0763a') }}
  </div>
  </div></details>
 

@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비', 24) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금', 37) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -81,6 +81,22 @@
   {{ hcard('경영주 연령별 농가소득', [('50세 미만', K.ia_u50), ('50~59세', K.ia_50s), ('60~69세', K.ia_60s), ('70세 이상', K.ia_70p)], '천원', '오른쪽은 전년 대비', none, '#6b8fd6') }}
   {{ hcard('경지규모별 농가소득', [('0.5ha 미만', K.is_a), ('0.5~1ha', K.is_b), ('1~1.5ha', K.is_c), ('1.5~2ha', K.is_d), ('2~3ha', K.is_e), ('3~5ha', K.is_f), ('5~7ha', K.is_g), ('7~10ha', K.is_h), ('10ha 이상', K.is_i)], '천원', '경지 규모가 클수록 소득이 높지만 10ha 이상에서는 다시 낮아짐 · 오른쪽은 전년 대비', none, '#5fae7a') }}
   {{ hcard('주·부업별 농가소득', [('전문농가', K.ij_pro), ('부업농가', K.ij_side), ('자급농가', K.ij_self), ('일반농가', K.ij_gen)], '천원', '농업 비중·판매 규모에 따른 구분 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">농지 임차·부채·보조금 <small>농가 평균 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('lrf_tenant', 'g94', ('자작+임차 ' ~ '{:.1f}'.format(K.lrf_mixed.vals[-1]) ~ '% · 순수 임차 ' ~ '{:.1f}'.format(K.lrf_pure.vals[-1]) ~ '%') if K.lrf_mixed and K.lrf_pure else '농지를 빌려 짓는 농가 비율', '#3a8f6a') }}
+  {{ card('lrl_ratio', 'g95', '경지면적 중 빌린 농지 비율', '#3a8f6a') }}
+  {{ card('lrl_rent', 'g96', ('무상 임차 제외 ' ~ '{:.1f}'.format(K.lrl_rentx.vals[-1]) ~ '% · 농지 가치 대비 임차료') if K.lrl_rentx else '농지 가치 대비 임차료', '#b04a07') }}
+  {{ card('fdb_agri', 'g97', ('농가부채의 ' ~ '{:.0f}'.format(K.fdb_agri.vals[-1] / K.debt.vals[-1] * 100) ~ '% · 영농에 쓴 빚') if K.debt else '영농에 쓴 빚', '#b04a07') }}
+  {{ card('ftr_agri', 'g98', ('이전소득의 ' ~ '{:.0f}'.format(K.ftr_agri.vals[-1] / K.transfer_income.vals[-1] * 100) ~ '% · 직불금 등') if K.transfer_income else '직불금 등', '#1c7a45') }}
+  {{ card('ftr_opub', 'g99', '기초연금·국민연금 등 농업 외 공적 지원', '#6b8fd6') }}
+  {{ hcard('농지 소유·임차 형태별 농가', [('자작농가', K.lrf_own), ('자작+임차농가', K.lrf_mixed), ('순수 임차농가', K.lrf_pure), ('경지 없는 농가', K.lrf_none)], '%', '전체 농가 중 비율 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('농지 종류별 임차료율', [('일모작 논', K.lrl_p1), ('이모작 논', K.lrl_p2), ('밭', K.lrl_field), ('전체', K.lrl_rent), ('전체(무상 임차 제외)', K.lrl_rentx)], '%', '농지 가치 대비 1년 임차료 · 논·밭은 무상 임차 포함 · 오른쪽은 전년 대비', none, '#b04a07') }}
+  {{ hcard('용도별 농가부채', [('농업용', K.fdb_agri), ('겸업용', K.fdb_side), ('가계용', K.fdb_home), ('기타용', K.fdb_etc)], '천원', ('농가당 부채 ' ~ num(K.debt.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.debt else '', K.debt.vals[-1] if K.debt else none, '#b04a07') }}
+  {{ hcard('빌린 곳별 농가부채', [('금융기관', K.fdb_bank), ('개인 등', K.fdb_priv)], '천원', '괄호는 비중 · 오른쪽은 전년 대비', K.debt.vals[-1] if K.debt else none, '#c0763a') }}
+  {{ hcard('영농형태별 농가부채', [('축산', K.fdb_t_live), ('화훼', K.fdb_t_flower), ('과수', K.fdb_t_fruit), ('채소', K.fdb_t_veg), ('특용작물', K.fdb_t_spec), ('일반밭작물', K.fdb_t_field), ('논벼', K.fdb_t_rice)], '천원', ('전체 평균 ' ~ num(K.debt.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.debt else '', none, '#b04a07') }}
+  {{ hcard('이전소득 구성', [('기타 공적보조금', K.ftr_opub), ('농업보조금', K.ftr_agri), ('사적보조금', K.ftr_priv)], '천원', ('농가당 이전소득 ' ~ num(K.transfer_income.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.transfer_income else '', K.transfer_income.vals[-1] if K.transfer_income else none, '#1c7a45') }}
+  {{ hcard('영농형태별 농업보조금', [('축산', K.ftr_t_live), ('화훼', K.ftr_t_flower), ('과수', K.ftr_t_fruit), ('채소', K.ftr_t_veg), ('특용작물', K.ftr_t_spec), ('일반밭작물', K.ftr_t_field), ('논벼', K.ftr_t_rice)], '천원', ('전체 평균 ' ~ num(K.ftr_agri.vals[-1], '천원')|striptags ~ ' · 직불금 등 · 오른쪽은 전년 대비') if K.ftr_agri else '', none, '#5fae7a') }}
  </div>
  </div></details>
 

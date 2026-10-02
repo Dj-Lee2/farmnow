@@ -2070,6 +2070,41 @@ sources:
       - {id: cehp_mid, title: 귀촌 가구 교육이 실제 생활에 보통, tbl: DT_114055_B061, org: "114", itm: "^귀농귀촌교육의 실제 농촌생활 도움 정도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cet_garden, title: 귀농귀촌교육에서 강화할 내용 텃밭 가꾸기, tbl: DT_114055_B063, org: "114", itm: "^귀농귀촌교육에서 강화되어야 한다고 생각하는 교육내용$", want: ["^텃밭 가꾸기$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cet_farm, title: 귀농귀촌교육에서 강화할 내용 영농교육, tbl: DT_114055_B063, org: "114", itm: "^귀농귀촌교육에서 강화되어야 한다고 생각하는 교육내용$", want: ["^영농교육$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: lrf_tenant, title: 임차농가 비율, tbl: DT_1EQ001, itm: "^임차농가 비율$", want: ["^임차농가$"], unit: "%", survey: 농가경제조사}
+      - {id: lrf_mixed, title: 자작+임차 농가 비율, tbl: DT_1EQ001, itm: "^임차농가 비율$", want: ["^자작[+]임차농가$"], unit: "%", survey: 농가경제조사}
+      - {id: lrf_pure, title: 순수 임차농가 비율, tbl: DT_1EQ001, itm: "^임차농가 비율$", want: ["^순수임차농가$"], unit: "%", survey: 농가경제조사}
+      - {id: lrf_own, title: 자작농가 비율, tbl: DT_1EQ001, itm: "^임차농가 비율$", want: ["^자작농가$"], unit: "%", survey: 농가경제조사}
+      - {id: lrf_none, title: 경지 없는 농가 비율, tbl: DT_1EQ001, itm: "^임차농가 비율$", want: ["^경지없는농가$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_ratio, title: 임차농지 비율, tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^임차농지비율$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_rent, title: 임차료율, tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^임차료율$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_rentx, title: 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^임차료율[(]무상임차지 제외[)]$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_p1, title: 일모작 논 임차료율, tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^일모작논$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_p2, title: 이모작 논 임차료율, tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^이모작논$"], unit: "%", survey: 농가경제조사}
+      - {id: lrl_field, title: 밭 임차료율, tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: ["^밭$"], unit: "%", survey: 농가경제조사}
+      - {id: fdb_agri, title: 농가 농업용 부채, tbl: DT_1EA1611, itm: "^농업용-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_home, title: 농가 가계용 부채, tbl: DT_1EA1611, itm: "^가계용-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_side, title: 농가 겸업용 부채, tbl: DT_1EA1611, itm: "^겸업용-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_etc, title: 농가 기타용 부채, tbl: DT_1EA1611, itm: "^기타용-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_bank, title: 농가 금융기관 부채, tbl: DT_1EA1611, itm: "^금융기관-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_priv, title: 농가 개인 등 부채, tbl: DT_1EA1611, itm: "^개인 등-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fdb_t_rice, title: 논벼 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fdb_t_fruit, title: 과수 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fdb_t_veg, title: 채소 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fdb_t_spec, title: 특용작물 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fdb_t_flower, title: 화훼 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fdb_t_field, title: 일반밭작물 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fdb_t_live, title: 축산 농가 부채, tbl: DT_1EA1611, itm: "^부채-연도말$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: ftr_pub, title: 농가 공적보조금, tbl: DT_1EA1508, itm: "^공적보조금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ftr_agri, title: 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ftr_opub, title: 농가 기타 공적보조금, tbl: DT_1EA1508, itm: "^기타공적보조금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ftr_priv, title: 농가 사적보조금, tbl: DT_1EA1508, itm: "^사적보조금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ftr_t_rice, title: 논벼 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: ftr_t_fruit, title: 과수 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: ftr_t_veg, title: 채소 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: ftr_t_spec, title: 특용작물 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: ftr_t_flower, title: 화훼 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: ftr_t_field, title: 일반밭작물 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: ftr_t_live, title: 축산 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-축산$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1493,6 +1493,42 @@ sources:
       - {id: dsl_ddk, title: 더덕 생물 직접 판매 비율, tbl: DT_136036_11617, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
       - {id: dsl_drj, title: 도라지 생물 직접 판매 비율, tbl: DT_136036_11627, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
       - {id: dsl_dur, title: 두릅 생물 직접 판매 비율, tbl: DT_136036_11556, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: fbo_ddk, title: 더덕 1ha당 유기질 비료비, tbl: DT_136036_11615, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_drj, title: 도라지 1ha당 유기질 비료비, tbl: DT_136036_11625, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_sanm, title: 산마늘 1ha당 유기질 비료비, tbl: DT_136036_11557, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_frn, title: 고사리 1ha당 유기질 비료비, tbl: DT_136036_11540, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_gdr, title: 곤드레 1ha당 유기질 비료비, tbl: DT_136036_11581, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_dur, title: 두릅 1ha당 유기질 비료비, tbl: DT_136036_11550, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_dok, title: 독활 1ha당 유기질 비료비, tbl: DT_136036_11547, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_cnm, title: 참나물 1ha당 유기질 비료비, tbl: DT_136036_11584, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_cha, title: 참취 1ha당 유기질 비료비, tbl: DT_136036_11574, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_gom, title: 곰취 1ha당 유기질 비료비, tbl: DT_136036_11618, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_ma, title: 마 1ha당 유기질 비료비, tbl: DT_136036_11602, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbo_wch, title: 원추리 1ha당 유기질 비료비, tbl: DT_136036_11567, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_ddk, title: 더덕 1ha당 무기질 비료비, tbl: DT_136036_11615, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_drj, title: 도라지 1ha당 무기질 비료비, tbl: DT_136036_11625, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_sanm, title: 산마늘 1ha당 무기질 비료비, tbl: DT_136036_11557, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_frn, title: 고사리 1ha당 무기질 비료비, tbl: DT_136036_11540, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_gdr, title: 곤드레 1ha당 무기질 비료비, tbl: DT_136036_11581, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_dur, title: 두릅 1ha당 무기질 비료비, tbl: DT_136036_11550, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_dok, title: 독활 1ha당 무기질 비료비, tbl: DT_136036_11547, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_cnm, title: 참나물 1ha당 무기질 비료비, tbl: DT_136036_11584, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_cha, title: 참취 1ha당 무기질 비료비, tbl: DT_136036_11574, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_gom, title: 곰취 1ha당 무기질 비료비, tbl: DT_136036_11618, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_ma, title: 마 1ha당 무기질 비료비, tbl: DT_136036_11602, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbi_wch, title: 원추리 1ha당 무기질 비료비, tbl: DT_136036_11567, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_ddk, title: 더덕 1ha당 농약비, tbl: DT_136036_11615, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_drj, title: 도라지 1ha당 농약비, tbl: DT_136036_11625, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_sanm, title: 산마늘 1ha당 농약비, tbl: DT_136036_11557, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_frn, title: 고사리 1ha당 농약비, tbl: DT_136036_11540, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_gdr, title: 곤드레 1ha당 농약비, tbl: DT_136036_11581, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_dur, title: 두릅 1ha당 농약비, tbl: DT_136036_11550, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_dok, title: 독활 1ha당 농약비, tbl: DT_136036_11547, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_cnm, title: 참나물 1ha당 농약비, tbl: DT_136036_11584, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_cha, title: 참취 1ha당 농약비, tbl: DT_136036_11574, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_gom, title: 곰취 1ha당 농약비, tbl: DT_136036_11618, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_ma, title: 마 1ha당 농약비, tbl: DT_136036_11602, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fbp_wch, title: 원추리 1ha당 농약비, tbl: DT_136036_11567, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1994,6 +1994,30 @@ sources:
       - {id: cfm_rn, title: 귀촌 형태 농촌 출생 후 비연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^농촌에서 태어나.*후 연고지가 아닌"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cfm_uk, title: 귀촌 형태 도시 출생 연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^도시에서 태어나 연고지 이주$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cfm_un, title: 귀촌 형태 도시 출생 비연고지 이주, tbl: DT_114055_B002, org: "114", itm: "^귀촌의 형태$", want: ["^도시에서 태어나 연고지가 아닌"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpr_mon, title: 귀농 준비 평균 기간, tbl: DT_114055_A045, org: "114", itm: "^귀농 준비$", want: ["^평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: rpr_area, title: 귀농 준비 1순위 정착지역 탐색, tbl: DT_114055_A045, org: "114", itm: "^귀농 준비$", want: ["^정착지역 탐색$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpr_land, title: 귀농 준비 1순위 주거·농지 탐색, tbl: DT_114055_A045, org: "114", itm: "^귀농 준비$", want: ["^주거·농지 탐색$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpr_fund, title: 귀농 준비 1순위 자금 조달, tbl: DT_114055_A045, org: "114", itm: "^귀농 준비$", want: ["^자금 조달$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpr_edu, title: 귀농 준비 1순위 귀농 교육, tbl: DT_114055_A045, org: "114", itm: "^귀농 준비$", want: ["^귀농 교육"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpr_mon, title: 귀촌 준비 평균 기간, tbl: DT_114055_B050, org: "114", itm: "^귀촌 준비$", want: ["^평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: cpr_area, title: 귀촌 준비 1순위 정착지역 탐색, tbl: DT_114055_B050, org: "114", itm: "^귀촌 준비$", want: ["^정착지역 탐색$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpr_house, title: 귀촌 준비 1순위 주거지 확보, tbl: DT_114055_B050, org: "114", itm: "^귀촌 준비$", want: ["^주거지 확보$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpr_fund, title: 귀촌 준비 1순위 자금 조달, tbl: DT_114055_B050, org: "114", itm: "^귀촌 준비$", want: ["^자금 조달$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpr_job, title: 귀촌 준비 1순위 생계유지수단, tbl: DT_114055_B050, org: "114", itm: "^귀촌 준비$", want: ["^생계유지수단"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdp_yes, title: 귀농 전 보유주택 처분함, tbl: DT_114055_A009, org: "114", itm: "^귀농 전 보유주택 처분$", want: ["^예$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdp_no, title: 귀농 전 보유주택 처분 안 함, tbl: DT_114055_A009, org: "114", itm: "^귀농 전 보유주택 처분$", want: ["^아니오$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdp_pre, title: 귀농 보유주택 처분 시기 귀농 이전, tbl: DT_114055_A009, org: "114", itm: "^귀농 전 보유주택 처분$", want: ["^귀농 이전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdp_6m, title: 귀농 보유주택 처분 시기 귀농 후 6개월 이내, tbl: DT_114055_A009, org: "114", itm: "^귀농 전 보유주택 처분$", want: ["^귀농 후 6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdp_yes, title: 귀촌 전 보유주택 처분함, tbl: DT_114055_B010, org: "114", itm: "^귀촌 전 보유주택 처분$", want: ["^예$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdp_no, title: 귀촌 전 보유주택 처분 안 함, tbl: DT_114055_B010, org: "114", itm: "^귀촌 전 보유주택 처분$", want: ["^아니오$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdp_pre, title: 귀촌 보유주택 처분 시기 귀촌 이전, tbl: DT_114055_B010, org: "114", itm: "^귀촌 전 보유주택 처분$", want: ["^귀촌 이전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdp_6m, title: 귀촌 보유주택 처분 시기 귀촌 후 6개월 이내, tbl: DT_114055_B010, org: "114", itm: "^귀촌 전 보유주택 처분$", want: ["^귀촌 후 6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhw_pre, title: 귀농 전에 거주주택 마련, tbl: DT_114055_A0082, org: "114", itm: "^거주주택 마련 시기$", want: ["^귀농 전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chw_pre, title: 귀촌 전에 거주주택 마련, tbl: DT_114055_B0092, org: "114", itm: "^거주주택 마련 시기$", want: ["^귀촌 전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfs_sup, title: 귀촌 준비 때 가족 지지 이상, tbl: DT_114055_B053, org: "114", itm: "^귀촌 준비 당시 가족들의 지지정도$", want: ["^(지지|적극지지)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfs_opp, title: 귀촌 준비 때 가족 반대 이상, tbl: DT_114055_B053, org: "114", itm: "^귀촌 준비 당시 가족들의 지지정도$", want: ["^(반대|매우 반대)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cps_sat, title: 귀촌 준비과정 만족 이상, tbl: DT_114055_B055, org: "114", itm: "^귀촌 준비과정에 대한 만족도$", want: ["^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cps_mid, title: 귀촌 준비과정 보통, tbl: DT_114055_B055, org: "114", itm: "^귀촌 준비과정에 대한 만족도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -2517,6 +2517,47 @@ sources:
       - {id: fjc_hf_full, title: 전업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-전업$"], survey: 농가경제조사}
       - {id: fjc_hf_s1, title: 1종겸업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-1종겸업$"], survey: 농가경제조사}
       - {id: fjc_hf_s2, title: 2종겸업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-2종겸업$"], survey: 농가경제조사}
+      # 밭작물 10a당 생산비 중 비료·농약·노동비(DT_1EC0042/0052/0062/0082), 계란·육계 생산비 구성(DT_2EE309_23, DT_2EE314)
+      - {id: cpc_tot_gar, title: 마늘 10a당 생산비, tbl: DT_1EC0042, itm: "^10a당$", want: ["^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_fer_gar, title: 마늘 10a당 비료비, tbl: DT_1EC0042, itm: "^10a당$", want: ["^비료비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_org_gar, title: 마늘 10a당 유기질 비료비, tbl: DT_1EC0042, itm: "^10a당$", want: ["^유기질$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_pes_gar, title: 마늘 10a당 농약비, tbl: DT_1EC0042, itm: "^10a당$", want: ["^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_lab_gar, title: 마늘 10a당 노동비, tbl: DT_1EC0042, itm: "^10a당$", want: ["^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_tot_oni, title: 양파 10a당 생산비, tbl: DT_1EC0052, itm: "^10a당$", want: ["^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_fer_oni, title: 양파 10a당 비료비, tbl: DT_1EC0052, itm: "^10a당$", want: ["^비료비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_org_oni, title: 양파 10a당 유기질 비료비, tbl: DT_1EC0052, itm: "^10a당$", want: ["^유기질$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_pes_oni, title: 양파 10a당 농약비, tbl: DT_1EC0052, itm: "^10a당$", want: ["^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_lab_oni, title: 양파 10a당 노동비, tbl: DT_1EC0052, itm: "^10a당$", want: ["^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_tot_pep, title: 고추 10a당 생산비, tbl: DT_1EC0062, itm: "^10a당$", want: ["^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_fer_pep, title: 고추 10a당 비료비, tbl: DT_1EC0062, itm: "^10a당$", want: ["^비료비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_org_pep, title: 고추 10a당 유기질 비료비, tbl: DT_1EC0062, itm: "^10a당$", want: ["^유기질$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_pes_pep, title: 고추 10a당 농약비, tbl: DT_1EC0062, itm: "^10a당$", want: ["^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_lab_pep, title: 고추 10a당 노동비, tbl: DT_1EC0062, itm: "^10a당$", want: ["^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_tot_soy, title: 콩 10a당 생산비, tbl: DT_1EC0082, itm: "^10a당$", want: ["^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_fer_soy, title: 콩 10a당 비료비, tbl: DT_1EC0082, itm: "^10a당$", want: ["^비료비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_org_soy, title: 콩 10a당 유기질 비료비, tbl: DT_1EC0082, itm: "^10a당$", want: ["^유기질$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_pes_soy, title: 콩 10a당 농약비, tbl: DT_1EC0082, itm: "^10a당$", want: ["^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cpc_lab_soy, title: 콩 10a당 노동비, tbl: DT_1EC0082, itm: "^10a당$", want: ["^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: egk_cost, title: 계란 100개당 생산비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_op, title: 계란 100개당 경영비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^경영비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_stock, title: 계란 100개당 가축비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_feed, title: 계란 100개당 사료비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_vet, title: 계란 100개당 방역치료비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_manure, title: 계란 100개당 분뇨처리비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^평균$", "^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_s1, title: 산란계 2만 수 미만 농가 계란 100개당 생산비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^20000수 미만$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_s2, title: 산란계 2만~4만 수 농가 계란 100개당 생산비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^20000~39999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_s3, title: 산란계 4만~9만 수 농가 계란 100개당 생산비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^40000~89999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: egk_s4, title: 산란계 9만 수 이상 농가 계란 100개당 생산비, tbl: DT_2EE309_23, itm: "^생산비$", want: ["^90000수 이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_cost, title: 육계 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_op, title: 육계 생체 10kg당 경영비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^경영비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_stock, title: 육계 생체 10kg당 가축비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_feed, title: 육계 생체 10kg당 사료비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_vet, title: 육계 생체 10kg당 방역치료비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_manure, title: 육계 생체 10kg당 분뇨처리비, tbl: DT_2EE314, itm: "^생산비$", want: ["^평균$", "^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_s1, title: 육계 3만 수 미만 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^30000수 미만$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_s2, title: 육계 3만~5만 수 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^30000~49999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_s3, title: 육계 5만~7만 수 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^50000~69999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brk_s4, title: 육계 7만 수 이상 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^70000수 이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

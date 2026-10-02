@@ -1854,6 +1854,39 @@ sources:
       - {id: cat_post, title: 귀촌 후에 농지를 확보한 가구, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 후$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cat_prem, title: 귀촌 전 농지 확보 평균 시기(귀촌 몇 개월 전), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 전 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
       - {id: cat_postm, title: 귀촌 후 농지 확보 평균 시기(귀촌 몇 개월 후), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 후 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: cre_farm, title: 귀촌 이유 1순위 농사를 짓기 위해, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^농사를 짓기 위해서"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_calm, title: 귀촌 이유 1순위 정서적으로 여유로운 생활, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^정서적으로 여유로운"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_nat, title: 귀촌 이유 1순위 자연환경이 좋아서, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^자연환경이 좋아서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_health, title: 귀촌 이유 1순위 본인·가족 건강, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^본인이나 가족의 건강"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_family, title: 귀촌 이유 1순위 가족·친지와 가까이, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^가족 및 친지와 가까운"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_house, title: 귀촌 이유 1순위 저렴한 집값, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^저렴한 집값"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cre_job, title: 귀촌 이유 1순위 농산업 외 직장 취업, tbl: DT_114055_B003, org: "114", itm: "^귀촌의 이유$", want: ["^1순위$", "^농산업 분야 외 직장 취업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rho_own, title: 귀농 가구 현재 주택 자가, tbl: DT_114055_A007, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^자가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rho_rent, title: 귀농 가구 현재 주택 임차(전세·월세), tbl: DT_114055_A007, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^임차"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rho_vac, title: 귀농 가구 현재 주택 마을 내 빈집, tbl: DT_114055_A007, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^마을 내 빈집"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rho_tmp, title: 귀농 가구 현재 주택 임시거주, tbl: DT_114055_A007, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^임시거주"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rho_fown, title: 귀농 후 처음 거주 주택 자가, tbl: DT_114055_A007, org: "114", itm: "^주택 점유형태$", want: ["^귀농 후 처음 거주$", "^자가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cho_own, title: 귀촌 가구 현재 주택 자가, tbl: DT_114055_B008, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^자가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cho_rent, title: 귀촌 가구 현재 주택 임차(전세·월세), tbl: DT_114055_B008, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^임차"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cho_vac, title: 귀촌 가구 현재 주택 마을 내 빈집, tbl: DT_114055_B008, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^마을 내 빈집"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cho_tmp, title: 귀촌 가구 현재 주택 임시거주, tbl: DT_114055_B008, org: "114", itm: "^주택 점유형태$", want: ["^현재 거주$", "^임시거주"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cho_fown, title: 귀촌 후 처음 거주 주택 자가, tbl: DT_114055_B008, org: "114", itm: "^주택 점유형태$", want: ["^귀촌 후 처음 거주$", "^자가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhd_hard, title: 귀농 시 주택 마련 어려움 이상, tbl: DT_114055_A008, org: "114", itm: "^귀농 시 주택 마련의 어려움 정도$", want: ["^(매우 어려움|어려움)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhd_mid, title: 귀농 시 주택 마련 보통, tbl: DT_114055_A008, org: "114", itm: "^귀농 시 주택 마련의 어려움 정도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhd_easy, title: 귀농 시 주택 마련 쉬움 이상, tbl: DT_114055_A008, org: "114", itm: "^귀농 시 주택 마련의 어려움 정도$", want: ["^(쉬움|매우 쉬움)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chd_hard, title: 귀촌 시 주택 마련 어려움 이상, tbl: DT_114055_B009, org: "114", itm: "^귀촌 시 주택 마련의 어려움 정도$", want: ["^(매우 어려움|어려움)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chd_mid, title: 귀촌 시 주택 마련 보통, tbl: DT_114055_B009, org: "114", itm: "^귀촌 시 주택 마련의 어려움 정도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chd_easy, title: 귀촌 시 주택 마련 쉬움 이상, tbl: DT_114055_B009, org: "114", itm: "^귀촌 시 주택 마련의 어려움 정도$", want: ["^(쉬움|매우 쉬움)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhs_now, title: 귀농 가구 현재 주택 만족 이상, tbl: DT_114055_A010, org: "114", itm: "^주택 만족도$", want: ["^현재 거주$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhs_first, title: 귀농 후 처음 거주 주택 만족 이상, tbl: DT_114055_A010, org: "114", itm: "^주택 만족도$", want: ["^귀농 후 처음 거주$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chs_now, title: 귀촌 가구 현재 주택 만족 이상, tbl: DT_114055_B011, org: "114", itm: "^주택 만족도$", want: ["^현재 거주$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chs_first, title: 귀촌 후 처음 거주 주택 만족 이상, tbl: DT_114055_B011, org: "114", itm: "^주택 만족도$", want: ["^귀촌 후 처음 거주$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rht_det, title: 귀농 가구 현재 단독주택 거주, tbl: DT_114055_A006, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rht_apt, title: 귀농 가구 현재 아파트 거주, tbl: DT_114055_A006, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^아파트$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rht_wdet, title: 귀농 가구 향후 단독주택 거주 희망, tbl: DT_114055_A006, org: "114", itm: "^주택 종류$", want: ["^향후 거주 희망$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cht_det, title: 귀촌 가구 현재 단독주택 거주, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cht_apt, title: 귀촌 가구 현재 아파트 거주, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^아파트$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cht_wdet, title: 귀촌 가구 향후 단독주택 거주 희망, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^향후 거주 희망$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

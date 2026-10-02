@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보', 143) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족', 152) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -294,6 +294,18 @@
   {{ hcard('귀촌 가구 농지 정보를 얻은 곳', [('지인(친척·친구)', K.cai_friend), ('이장', K.cai_head), ('지자체(지원센터 등)', K.cai_loc)], '%', '지역 농협·단체·기타 각 3% 안팎 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('귀촌 가구 농지 확보 어려움', [('어려움 없었음', K.cad_none), ('농지 정보 부족', K.cad_info), ('농지가격 비쌈', K.cad_cost), ('마음에 드는 농지 부족', K.cad_lack)], '%', '오른쪽은 전년 대비', none, '#b0503a') }}
   {{ hcard('귀촌 전·후 농지 확보 시기', [('귀촌 전 확보', K.cat_pre), ('귀촌 후 확보', K.cat_post)], '%', '2025년 귀촌 후 확보가 처음으로 절반을 넘음 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">귀촌 이유와 귀농·귀촌 가구의 주거 <small>농식품부 귀농귀촌실태조사 · 응답 가구(각 3,000명) 중 비율</small></h3>
+ <div class="sg-g">
+  {{ card('cho_rent', 'p73', ('자가 ' ~ '{:.1f}'.format(K.cho_own.vals[-1]) ~ '% · 귀농 가구 임차 ' ~ '{:.1f}'.format(K.rho_rent.vals[-1]) ~ '%') if K.cho_own and K.rho_rent else '전세·월세', '#b0503a') }}
+  {{ card('rhs_now', 'p74', ('귀촌 가구 ' ~ '{:.1f}'.format(K.chs_now.vals[-1]) ~ '% · 2023년 귀농 ' ~ '{:.1f}'.format(K.rhs_now.vals[0]) ~ '%') if K.chs_now else '만족 + 매우 만족', '#3a8f6a') }}
+  {{ card('cre_job', 'p75', ('2023년 ' ~ '{:.1f}'.format(K.cre_job.vals[0]) ~ '% · 자연환경 ' ~ '{:.1f}'.format(K.cre_nat.vals[-1]) ~ '%') if K.cre_nat else '1순위 응답', '#7a5cc2') }}
+  {{ hcard('귀촌 이유(1순위)', [('농산업 외 직장 취업', K.cre_job), ('자연환경이 좋아서', K.cre_nat), ('정서적 여유', K.cre_calm), ('가족·친지와 가까이', K.cre_family), ('저렴한 집값', K.cre_house), ('본인·가족 건강', K.cre_health), ('농사를 짓기 위해', K.cre_farm)], '%', '비싼 도시생활비 5.3%·택지 개발 5.1% 등 나머지 각 5% 안팎 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+  {{ hcard('귀농 가구 주택 점유 형태', [('현재 자가', K.rho_own), ('처음 거주 자가', K.rho_fown), ('현재 임차(전·월세)', K.rho_rent), ('현재 마을 내 빈집', K.rho_vac), ('현재 임시거주', K.rho_tmp)], '%', '임시거주 = 귀농인의 집·체류형 지원센터 등 · 2025년 기타 10.2% · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀촌 가구 주택 점유 형태', [('현재 임차(전·월세)', K.cho_rent), ('현재 자가', K.cho_own), ('처음 거주 자가', K.cho_fown), ('현재 마을 내 빈집', K.cho_vac), ('현재 임시거주', K.cho_tmp)], '%', '2025년 임차가 자가를 넘음 · 기타 4.5% · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('주택 마련 어려움 정도', [('귀농 · 어려움 이상', K.rhd_hard), ('귀농 · 보통', K.rhd_mid), ('귀농 · 쉬움 이상', K.rhd_easy), ('귀촌 · 어려움 이상', K.chd_hard), ('귀촌 · 보통', K.chd_mid), ('귀촌 · 쉬움 이상', K.chd_easy)], '%', '귀농·귀촌할 때 집을 구한 경험 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('주택 만족(만족 이상)', [('귀농 · 현재 주택', K.rhs_now), ('귀농 · 처음 주택', K.rhs_first), ('귀촌 · 현재 주택', K.chs_now), ('귀촌 · 처음 주택', K.chs_first)], '%', '만족 + 매우 만족 · 3년 연속 하락, 2025년 보통이 크게 늘어남 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('주택 종류', [('귀농 · 현재 단독주택', K.rht_det), ('귀농 · 희망 단독주택', K.rht_wdet), ('귀농 · 현재 아파트', K.rht_apt), ('귀촌 · 현재 아파트', K.cht_apt), ('귀촌 · 현재 단독주택', K.cht_det), ('귀촌 · 희망 단독주택', K.cht_wdet)], '%', '단독주택은 농가주택 포함 · 희망은 앞으로 살고 싶은 주택 · 오른쪽은 전년 대비', none, '#5fae7a') }}
  </div>
  </div></details>
 

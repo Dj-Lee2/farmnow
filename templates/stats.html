@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족', 152) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책', 162) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -306,6 +306,19 @@
   {{ hcard('주택 마련 어려움 정도', [('귀농 · 어려움 이상', K.rhd_hard), ('귀농 · 보통', K.rhd_mid), ('귀농 · 쉬움 이상', K.rhd_easy), ('귀촌 · 어려움 이상', K.chd_hard), ('귀촌 · 보통', K.chd_mid), ('귀촌 · 쉬움 이상', K.chd_easy)], '%', '귀농·귀촌할 때 집을 구한 경험 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('주택 만족(만족 이상)', [('귀농 · 현재 주택', K.rhs_now), ('귀농 · 처음 주택', K.rhs_first), ('귀촌 · 현재 주택', K.chs_now), ('귀촌 · 처음 주택', K.chs_first)], '%', '만족 + 매우 만족 · 3년 연속 하락, 2025년 보통이 크게 늘어남 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
   {{ hcard('주택 종류', [('귀농 · 현재 단독주택', K.rht_det), ('귀농 · 희망 단독주택', K.rht_wdet), ('귀농 · 현재 아파트', K.rht_apt), ('귀촌 · 현재 아파트', K.cht_apt), ('귀촌 · 현재 단독주택', K.cht_det), ('귀촌 · 희망 단독주택', K.cht_wdet)], '%', '단독주택은 농가주택 포함 · 희망은 앞으로 살고 싶은 주택 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">거주지 선택 이유·귀촌 생활비·귀촌 정책 <small>농식품부 귀농귀촌실태조사 · 응답 가구(각 3,000명) 중 비율 · 정책 도움 정도는 수혜 가구 중</small></h3>
+ <div class="sg-g">
+  {{ card('rsl_kin', 'p76', ('귀촌 가구 ' ~ '{:.1f}'.format(K.csl_kin.vals[-1]) ~ '% · 이전 거주지 근처 ' ~ '{:.1f}'.format(K.rsl_near.vals[-1]) ~ '%') if K.csl_kin and K.rsl_near else '1순위 응답', '#1c7a45') }}
+  {{ card('cexp_post', 'p77', ('귀촌 전 ' ~ '{:.0f}'.format(K.cexp_pre.vals[-1]) ~ '만원에서 ' ~ '{:.0f}'.format(K.cexp_pre.vals[-1] - K.cexp_post.vals[-1]) ~ '만원 줄어듦') if K.cexp_pre else '월 평균', '#e0a03a') }}
+  {{ card('cpb_tax', 'p78', ('2023년 ' ~ '{:.1f}'.format(K.cpb_tax.vals[0]) ~ '% · 수혜 가구 중 도움 됨 이상 ' ~ '{:.1f}'.format(K.cph_tax.vals[-1]) ~ '%') if K.cph_tax else '세제 지원 수혜', '#3a8f6a') }}
+  {{ hcard('귀농 가구 거주지 선택 이유', [('연고지(가족·지인)', K.rsl_kin), ('이전 거주지 근처', K.rsl_near), ('주거지 확보 쉬움', K.rsl_house), ('귀농정책이 좋아서', K.rsl_policy), ('땅값이 저렴해서', K.rsl_land), ('자연환경 우수', K.rsl_nat)], '%', '1순위 · 2025년 생활환경 보기가 교통·의료문화로 나뉘어 뺌 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀촌 가구 거주지 선택 이유', [('연고지(가족·지인)', K.csl_kin), ('이전 거주지 근처', K.csl_near), ('주거지 확보 쉬움', K.csl_house), ('생활비가 적어서', K.csl_cost), ('자연환경 우수', K.csl_nat), ('귀촌정책이 좋아서', K.csl_policy)], '%', '1순위 · 직장 관련 보기는 2025년 직장 인근 이동(17.3%)으로 바뀌어 뺌 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('귀촌 가구 월 평균 생활비', [('귀촌 전', K.cexp_pre), ('귀촌 후', K.cexp_post)], '만원', '같은 가구에 물은 귀촌 전·후 · 오른쪽은 전년 조사 대비', none, '#e0a03a') }}
+  {{ hcard('귀촌 후 생활비가 가장 많이 드는 항목', [('식비', K.cexp_food), ('주거·광열·수도·전기', K.cexp_house), ('교육비', K.cexp_edu), ('건강·의료', K.cexp_hlth), ('문화·여가', K.cexp_cult)], '%', '1순위 · 교통통신 2.0%·기타 0.5% · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+  {{ hcard('귀촌 가구 정책 수혜 비율', [('세제 지원', K.cpb_tax), ('지자체 정착자금', K.cpb_fund), ('지자체 관계형성', K.cpb_rel), ('지자체 정보제공', K.cpb_info), ('지자체 생활 지원', K.cpb_life), ('주택·농업시설 자금', K.cpb_house), ('지자체 영농시설·기계', K.cpb_fac), ('귀농귀촌종합센터', K.cpb_ctr), ('체류형 지원', K.cpb_stay), ('청년농 영농정착', K.cpb_young)], '%', '정책마다 받은 적 있는 가구 비율 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('귀촌 정책 도움 됨 이상', [('지자체 정착자금', K.cph_fund), ('세제 지원', K.cph_tax), ('지자체 정보제공', K.cph_info)], '%', '도움 됨 + 매우 도움 됨 · 수혜 가구 중(2025년 172·411·105명) · 나머지 정책은 수혜 가구가 적어 뺌 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('귀촌 정착에 가장 필요한 정책', [('농지·주택·일자리 정보', K.cnp_info), ('농지·농업시설 자금·임대', K.cnp_farm), ('귀농귀촌 교육', K.cnp_edu), ('세제 지원', K.cnp_tax), ('생활 관련 지원', K.cnp_life), ('관계 형성 지원', K.cnp_rel)], '%', '1순위 · 2025년 새 보기 주택 구입·임대·수리 자금(22.0%)이 생겨 정보 제공이 줄어듦 · 오른쪽은 전년 대비', none, '#b0503a') }}
  </div>
  </div></details>
 

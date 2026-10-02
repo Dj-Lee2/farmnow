@@ -1887,6 +1887,44 @@ sources:
       - {id: cht_det, title: 귀촌 가구 현재 단독주택 거주, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cht_apt, title: 귀촌 가구 현재 아파트 거주, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^현재 거주$", "^아파트$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cht_wdet, title: 귀촌 가구 향후 단독주택 거주 희망, tbl: DT_114055_B007, org: "114", itm: "^주택 종류$", want: ["^향후 거주 희망$", "^단독주택"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_near, title: 귀농 가구 거주지 선택 이유 1순위 이전에 살던 곳 근처, tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^이전에 살던 곳"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_kin, title: 귀농 가구 거주지 선택 이유 1순위 연고지(가족·친지·지인), tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^부모 자녀 친척"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_house, title: 귀농 가구 거주지 선택 이유 1순위 주거지 확보가 쉬워서, tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^주거지 확보"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_policy, title: 귀농 가구 거주지 선택 이유 1순위 귀농정책이 잘 되어 있어서, tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^귀농정책이"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_nat, title: 귀농 가구 거주지 선택 이유 1순위 자연환경이 우수해서, tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^타 지역에 비해 자연환경"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsl_land, title: 귀농 가구 거주지 선택 이유 1순위 땅값이 저렴해서, tbl: DT_114055_A005, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^땅값이"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_near, title: 귀촌 가구 거주지 선택 이유 1순위 이전에 살던 곳 근처, tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^이전에 살던 곳"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_kin, title: 귀촌 가구 거주지 선택 이유 1순위 연고지(가족·친지·지인), tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^부모 자녀 친척"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_house, title: 귀촌 가구 거주지 선택 이유 1순위 주거지 확보가 쉬워서, tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^주거지 확보"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_cost, title: 귀촌 가구 거주지 선택 이유 1순위 생활비가 적게 들어서, tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^생활비가 적게"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_nat, title: 귀촌 가구 거주지 선택 이유 1순위 자연환경이 우수해서, tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^타 지역에 비해 자연환경"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csl_policy, title: 귀촌 가구 거주지 선택 이유 1순위 귀촌정책이 잘 되어 있어서, tbl: DT_114055_B006, org: "114", itm: "^현재 거주지 선택이유$", want: ["^1순위$", "^귀촌정책이"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cexp_pre, title: 귀촌 가구 월 평균 생활비 귀촌 전, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^귀촌 전$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cexp_post, title: 귀촌 가구 월 평균 생활비 귀촌 후, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^귀촌 후$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cexp_food, title: 귀촌 가구 생활비 가장 많이 드는 항목 1순위 식비, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^식비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cexp_house, title: 귀촌 가구 생활비 가장 많이 드는 항목 1순위 주거·광열·수도·전기, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^주거 및 광열"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cexp_hlth, title: 귀촌 가구 생활비 가장 많이 드는 항목 1순위 건강·의료, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^건강 및 의료"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cexp_cult, title: 귀촌 가구 생활비 가장 많이 드는 항목 1순위 문화·여가, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^문화 및 여가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cexp_edu, title: 귀촌 가구 생활비 가장 많이 드는 항목 1순위 교육비, tbl: DT_114055_B020, org: "114", itm: "^월 평균 생활비$", want: ["^교육비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_ctr, title: 귀촌 정책 수혜 비율 귀농귀촌종합센터 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^귀농귀촌종합센터", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_house, title: 귀촌 정책 수혜 비율 주택·농업시설 자금지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^주택 및 농업시설", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_young, title: 귀촌 정책 수혜 비율 청년농업인 영농정착지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^청년농업인", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_stay, title: 귀촌 정책 수혜 비율 체류형 귀농귀촌 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^체류형", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_tax, title: 귀촌 정책 수혜 비율 세제 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^세제 지원", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_info, title: 귀촌 정책 수혜 비율 지자체 정보제공, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^정보제공", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_fund, title: 귀촌 정책 수혜 비율 지자체 정착자금 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^정착자금", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_fac, title: 귀촌 정책 수혜 비율 지자체 영농시설·기계 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^영농시설", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_life, title: 귀촌 정책 수혜 비율 지자체 생활 관련 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^생활 관련", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cpb_rel, title: 귀촌 정책 수혜 비율 지자체 관계형성 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^관계형성", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cph_tax, title: 귀촌 정책 도움 됨 이상 비율 세제 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^세제 지원", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cph_info, title: 귀촌 정책 도움 됨 이상 비율 지자체 정보제공, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^정보제공", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cph_fund, title: 귀촌 정책 도움 됨 이상 비율 지자체 정착자금 지원, tbl: DT_114055_B065, org: "114", itm: "^귀농귀촌 정책", want: ["^정착자금", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_info, title: 귀촌 정착에 가장 필요한 정책 농지·주택·일자리 정보 제공, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^농지/주택/일자리"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_farm, title: 귀촌 정착에 가장 필요한 정책 농지·농업시설 자금 및 임대지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^농지/농업시설"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_edu, title: 귀촌 정착에 가장 필요한 정책 귀농귀촌 교육, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^귀농귀촌 교육$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_tax, title: 귀촌 정착에 가장 필요한 정책 세제 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^세제 지원$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_life, title: 귀촌 정착에 가장 필요한 정책 생활 관련 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^생활 관련 지원"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnp_rel, title: 귀촌 정착에 가장 필요한 정책 관계 형성 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^관계 형성 지원"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

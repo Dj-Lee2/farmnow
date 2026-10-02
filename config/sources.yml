@@ -3627,6 +3627,31 @@ sources:
       - {id: flr_cash, title: "임차료 현금 지불 필지 비율", tbl: DT_114062_010, org: "114", periods: 2, itm: "^임차료 지불 형태$", want: ["^현금$"], unit: "%", survey: 농지임대차실태조사}
       - {id: flr_krc, title: "한국농어촌공사를 통한 임차 계약 비율", tbl: DT_114062_008, org: "114", periods: 2, itm: "^계약 형태$", want: ["^한국농어촌공사를 통한 계약$"], unit: "%", survey: 농지임대차실태조사}
       - {id: flr_size_avg, title: "임차 필지 평균 계약면적", tbl: DT_114062_006, org: "114", periods: 2, itm: "^임차 계약면적$", want: ["^평균$"], unit: ㎡, survey: 농지임대차실태조사}
+      - {id: flr_crop_rice, title: "임차 농지 대표작물: 쌀(미곡류)", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^쌀\\(미곡류\\)$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_food, title: "임차 농지 대표작물: 식량작물", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^식량작물$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_svg, title: "임차 농지 대표작물: 시설채소", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^시설채소$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_ovg, title: "임차 농지 대표작물: 노지채소", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^노지채소$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_spc, title: "임차 농지 대표작물: 특용·약용", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^특용·약용$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_frt, title: "임차 농지 대표작물: 과수", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^과수$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_fdr, title: "임차 농지 대표작물: 사료작물", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^사료작물$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_crop_etc, title: "임차 농지 대표작물: 기타", tbl: DT_114062_001, org: "114", periods: 2, itm: "^대표작물 분류$", want: ["^기타$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_multi_all, title: "임차 농지 다모작 비율", tbl: DT_114062_002, org: "114", periods: 2, itm: "^다모작 여부$", want: ["^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_multi_pad, title: "논 임차 농지 다모작 비율", tbl: DT_114062_002, org: "114", periods: 2, itm: "^다모작 여부$", want: ["^논$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_multi_fld, title: "밭 임차 농지 다모작 비율", tbl: DT_114062_002, org: "114", periods: 2, itm: "^다모작 여부$", want: ["^밭$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_gh_all, title: "임차 농지 시설재배 비율", tbl: DT_114062_003, org: "114", periods: 2, itm: "^시설재배여부$", want: ["^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_gh_fld, title: "밭 임차 농지 시설재배 비율", tbl: DT_114062_003, org: "114", periods: 2, itm: "^시설재배여부$", want: ["^밭$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_exp_all, title: "임차 농업인 평균 영농경력", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^평균$"], unit: 년, survey: 농지임대차실태조사}
+      - {id: flr_exp_pad, title: "논 임차 농업인 평균 영농경력", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^논$", "^평균$"], unit: 년, survey: 농지임대차실태조사}
+      - {id: flr_exp_fld, title: "밭 임차 농업인 평균 영농경력", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^밭$", "^평균$"], unit: 년, survey: 농지임대차실태조사}
+      - {id: flr_exp_orc, title: "과수원 임차 농업인 평균 영농경력", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^과수$", "^평균$"], unit: 년, survey: 농지임대차실태조사}
+      - {id: flr_exp_1, title: "영농경력 10년 미만 임차 농업인 비율", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^10년 미만$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_exp_2, title: "영농경력 10~20년 임차 농업인 비율", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^10년~20년 미만$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_exp_3, title: "영농경력 20~30년 임차 농업인 비율", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^20년~30년 미만$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_exp_4, title: "영농경력 30년 이상 임차 농업인 비율", tbl: DT_114062_014, org: "114", periods: 2, itm: "^영농경력$", want: ["^30년 이상$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_full_all, title: "임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_full_pad, title: "논 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^논$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_full_fld, title: "밭 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^밭$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_full_orc, title: "과수원 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^과수$", "^예$"], unit: "%", survey: 농지임대차실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

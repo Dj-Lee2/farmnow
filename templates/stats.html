@@ -1283,7 +1283,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간', 84) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력', 94) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1379,6 +1379,19 @@
   {{ hcard('농지 종류·필지 크기별 연간 임차료(㎡당)', [('과수원', K.flr_rent_orc), ('1,000㎡ 미만 필지', K.flr_rent_s1), ('논', K.flr_rent_pad), ('3,000㎡ 이상 필지', K.flr_rent_s4), ('밭', K.flr_rent_fld)], '원/㎡', '작은 필지일수록 ㎡당 임차료가 비쌈 · 오른쪽은 1년 전 대비', none, '#b07a3a') }}
   {{ hcard('1년 전보다 임차료가 오른 필지 비율', [('논', K.flr_up_pad), ('전체', K.flr_up_all), ('밭', K.flr_up_fld), ('과수원', K.flr_up_orc)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#b0503a') }}
   {{ hcard('임차료가 바뀐 이유', [('농산물 수익성 변화', K.flr_why_inc), ('농지 가격 변동', K.flr_why_land), ('임대차 수요 변동', K.flr_why_dem)], '%', '임차료가 오르거나 내린 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#1f5f8a') }}
+ </div>
+ <h3 class="sg-sub">빌려 쓰는 농지에서 짓는 작물과 임차 농업인 <small>임차 필지 기준 · 농림축산식품부 농지임대차실태조사 · 오른쪽은 1년 전 대비</small></h3>
+ <div class="sg-g">
+  {{ card('flr_crop_rice', 'g106', ('식량작물 ' ~ '{:.1f}'.format(K.flr_crop_food.vals[-1]) ~ '% · 노지채소 ' ~ '{:.1f}'.format(K.flr_crop_ovg.vals[-1]) ~ '%') if K.flr_crop_food and K.flr_crop_ovg else '임차 필지 대표작물이 벼인 비율', '#7a6a3a') }}
+  {{ card('flr_multi_all', 'g107', ('논 ' ~ '{:.1f}'.format(K.flr_multi_pad.vals[-1]) ~ '% · 밭 ' ~ '{:.1f}'.format(K.flr_multi_fld.vals[-1]) ~ '%') if K.flr_multi_pad and K.flr_multi_fld else '한 해 두 번 이상 짓는 임차 필지', '#1c7a45') }}
+  {{ card('flr_gh_all', 'g108', ('밭만 보면 ' ~ '{:.1f}'.format(K.flr_gh_fld.vals[-1]) ~ '%') if K.flr_gh_fld else '하우스 등 시설을 쓰는 임차 필지', '#2458d6') }}
+  {{ card('flr_exp_all', 'g109', ('30년 이상 ' ~ '{:.1f}'.format(K.flr_exp_4.vals[-1]) ~ '% · 10년 미만 ' ~ '{:.1f}'.format(K.flr_exp_1.vals[-1]) ~ '%') if K.flr_exp_4 and K.flr_exp_1 else '농지를 빌린 농업인의 평균 영농경력', '#1f5f8a') }}
+  {{ card('flr_full_all', 'g110', ('논 ' ~ '{:.1f}'.format(K.flr_full_pad.vals[-1]) ~ '% · 과수원 ' ~ '{:.1f}'.format(K.flr_full_orc.vals[-1]) ~ '%') if K.flr_full_pad and K.flr_full_orc else '농사만 짓는 임차 농업인', '#b0503a') }}
+  {{ card('flr_crop_svg', 'g111', ('특용·약용 ' ~ '{:.1f}'.format(K.flr_crop_spc.vals[-1]) ~ '% · 사료작물 ' ~ '{:.1f}'.format(K.flr_crop_fdr.vals[-1]) ~ '%') if K.flr_crop_spc and K.flr_crop_fdr else '대표작물이 시설채소인 임차 필지', '#b07a3a') }}
+  {{ hcard('임차 필지의 대표작물', [('쌀(벼)', K.flr_crop_rice), ('노지채소', K.flr_crop_ovg), ('식량작물', K.flr_crop_food), ('과수', K.flr_crop_frt), ('특용·약용', K.flr_crop_spc), ('시설채소', K.flr_crop_svg), ('사료작물', K.flr_crop_fdr), ('기타', K.flr_crop_etc)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#7a6a3a') }}
+  {{ hcard('임차 농업인의 영농경력', [('30년 이상', K.flr_exp_4), ('10~20년', K.flr_exp_2), ('20~30년', K.flr_exp_3), ('10년 미만', K.flr_exp_1)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#1f5f8a') }}
+  {{ hcard('농지 종류별 임차 농업인 평균 영농경력', [('논', K.flr_exp_pad), ('전체', K.flr_exp_all), ('밭', K.flr_exp_fld), ('과수원', K.flr_exp_orc)], '년', '오른쪽은 1년 전 대비', none, '#1f5f8a') }}
+  {{ hcard('농지 종류별 다모작·전업 비율', [('밭 다모작', K.flr_multi_fld), ('논 다모작', K.flr_multi_pad), ('밭 시설재배', K.flr_gh_fld), ('논 전업', K.flr_full_pad), ('밭 전업', K.flr_full_fld), ('과수원 전업', K.flr_full_orc)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

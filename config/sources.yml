@@ -2216,6 +2216,44 @@ sources:
       - {id: fis_full, title: 전업농가 농업소득, tbl: DT_1EA1501, itm: "^농업소득$", want: ["^전·겸업별-전업$"], survey: 농가경제조사}
       - {id: fis_s1, title: 1종겸업농가 농업소득, tbl: DT_1EA1501, itm: "^농업소득$", want: ["^전·겸업별-1종겸업$"], survey: 농가경제조사}
       - {id: fis_s2, title: 2종겸업농가 농업소득, tbl: DT_1EA1501, itm: "^농업소득$", want: ["^전·겸업별-2종겸업$"], survey: 농가경제조사}
+      - {id: fit_d_rice, title: 논벼 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-논벼$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_fruit, title: 과수 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-과수$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_veg, title: 채소 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-채소$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_spec, title: 특용작물 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-특용작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_flower, title: 화훼 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-화훼$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_field, title: 일반밭작물 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-일반밭작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_live, title: 축산 농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^영농형태-축산$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_full, title: 전업농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^전·겸업별-전업$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_s1, title: 1종겸업농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^전·겸업별-1종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_d_s2, title: 2종겸업농가 부채비율, tbl: DT_1EA1401, itm: "^부채비율$", want: ["^전·겸업별-2종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_ra_a, title: 경영주 50세 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경영주연령-50세 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_ra_b, title: 경영주 50~59세 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경영주연령-50 - 59세$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_ra_c, title: 경영주 60~69세 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경영주연령-60 - 69세$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_ra_d, title: 경영주 70세 이상 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경영주연령-70세 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_ha_a, title: 경영주 50세 미만 농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: fit_ha_b, title: 경영주 50~59세 농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: fit_ha_c, title: 경영주 60~69세 농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: fit_ha_d, title: 경영주 70세 이상 농가 농업노동 1시간당 농업소득, tbl: DT_1EA1401, itm: "^농업노동 1시간당 농업소득$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: fit_rs_a, title: 경지 0.5ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-0\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_b, title: 경지 0.5-1.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_c, title: 경지 1.0-1.5ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_d, title: 경지 1.5-2.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_e, title: 경지 2.0-3.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_f, title: 경지 3.0-5.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_g, title: 경지 5.0-7.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_h, title: 경지 7.0-10.0ha 미만 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fit_rs_i, title: 경지 10.0ha 이상 농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^경지규모-10\\.0ha 이상$"], unit: "%", survey: 농가경제조사}
+      - {id: fnr_t_rice, title: 논벼 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fnr_t_fruit, title: 과수 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fnr_t_veg, title: 채소 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fnr_t_spec, title: 특용작물 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fnr_t_flower, title: 화훼 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fnr_t_field, title: 일반밭작물 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fnr_t_live, title: 축산 농가 비경상소득, tbl: DT_1EA1509, itm: "^비경상소득$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fgs_a_a, title: 경영주 50세 미만 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: fgs_a_b, title: 경영주 50~59세 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: fgs_a_c, title: 경영주 60~69세 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: fgs_a_d, title: 경영주 70세 이상 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

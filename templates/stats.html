@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비', 71) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적', 80) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -143,6 +143,18 @@
   {{ hcard('영농형태별 노동 1시간당 농업소득', [('논벼', K.fit_h_rice), ('과수', K.fit_h_fruit), ('채소', K.fit_h_veg), ('특용작물', K.fit_h_spec), ('화훼', K.fit_h_flower), ('일반밭작물', K.fit_h_field), ('축산', K.fit_h_live)], '천원', ('가족 농업노동 1시간당 · 전체 평균 ' ~ num(K.fi_hour.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.fi_hour else '', none, '#5fae7a') }}
   {{ hcard('경지규모별 노동 1시간당 농업소득', [('0.5ha 미만', K.fit_s_a), ('0.5~1ha', K.fit_s_b), ('1~1.5ha', K.fit_s_c), ('1.5~2ha', K.fit_s_d), ('2~3ha', K.fit_s_e), ('3~5ha', K.fit_s_f), ('5~7ha', K.fit_s_g), ('7~10ha', K.fit_s_h), ('10ha 이상', K.fit_s_i)], '천원', '7~10ha에서 가장 높고 10ha 이상에서는 다시 낮아짐 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
   {{ hcard('영농형태별 농업경영비', [('논벼', K.fic_rice), ('과수', K.fic_fruit), ('채소', K.fic_veg), ('특용작물', K.fic_spec), ('화훼', K.fic_flower), ('일반밭작물', K.fic_field), ('축산', K.fic_live)], '천원', '농가당 1년 농업경영비 · 비료·농약·사료·감가상각 등 · 오른쪽은 전년 대비', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">영농형태·연령·규모별 재무와 비경상소득 <small>농가 평균 · 부채비율·농업소득률·비경상소득·경지면적 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('fit_d_full', 'ge1', '전업농가 부채비율 · 부채 ÷ 자기자본', '#1c7a45') }}
+  {{ card('fit_d_s1', 'ge2', '1종겸업농가 부채비율', '#3a8f6a') }}
+  {{ card('fit_d_s2', 'ge3', '2종겸업농가 부채비율 · 겸업 비중이 클수록 높음', '#b04a07') }}
+  {{ hcard('영농형태별 부채비율', [('논벼', K.fit_d_rice), ('과수', K.fit_d_fruit), ('채소', K.fit_d_veg), ('특용작물', K.fit_d_spec), ('화훼', K.fit_d_flower), ('일반밭작물', K.fit_d_field), ('축산', K.fit_d_live)], '%', ('부채 ÷ 자기자본 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_debt.vals[-1]) ~ '% · 축산·화훼가 높고 논벼가 가장 낮음 · 오른쪽은 전년 대비') if K.fi_debt else '', none, '#b04a07') }}
+  {{ hcard('경영주 연령별 농업소득률', [('50세 미만', K.fit_ra_a), ('50~59세', K.fit_ra_b), ('60~69세', K.fit_ra_c), ('70세 이상', K.fit_ra_d)], '%', '농업소득 ÷ 농업총수입 · 표본에 따라 해마다 등락이 큼 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('경영주 연령별 노동 1시간당 농업소득', [('50세 미만', K.fit_ha_a), ('50~59세', K.fit_ha_b), ('60~69세', K.fit_ha_c), ('70세 이상', K.fit_ha_d)], '천원', '가족 농업노동 1시간당 · 70세 이상이 가장 낮음 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('경지규모별 농업소득률', [('0.5ha 미만', K.fit_rs_a), ('0.5~1ha', K.fit_rs_b), ('1~1.5ha', K.fit_rs_c), ('1.5~2ha', K.fit_rs_d), ('2~3ha', K.fit_rs_e), ('3~5ha', K.fit_rs_f), ('5~7ha', K.fit_rs_g), ('7~10ha', K.fit_rs_h), ('10ha 이상', K.fit_rs_i)], '%', '농업소득 ÷ 농업총수입 · 규모가 크다고 소득률이 높지는 않음 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
+  {{ hcard('영농형태별 비경상소득', [('논벼', K.fnr_t_rice), ('과수', K.fnr_t_fruit), ('채소', K.fnr_t_veg), ('특용작물', K.fnr_t_spec), ('화훼', K.fnr_t_flower), ('일반밭작물', K.fnr_t_field), ('축산', K.fnr_t_live)], '천원', '경조수입·보상금 등 일시적 소득 · 농가당 1년 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('경영주 연령별 경지면적', [('50세 미만', K.fgs_a_a), ('50~59세', K.fgs_a_b), ('60~69세', K.fgs_a_c), ('70세 이상', K.fgs_a_d)], '㎡', ('전체 평균 ' ~ num(K.fgs_area.vals[-1], '㎡')|striptags ~ ' · 70세 이상 농가가 가장 작음 · 오른쪽은 전년 대비') if K.fgs_area else '', none, '#3a8f6a') }}
  </div>
  </div></details>
 

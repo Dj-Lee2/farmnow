@@ -3347,6 +3347,38 @@ sources:
       - {id: inj_tl_box, title: 운반상자 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^운반상자$"], unit: 건, survey: 농업인 업무상 손상조사}
       - {id: inj_tl_homi, title: 호미·모종삽 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^호미/모종삽$"], unit: 건, survey: 농업인 업무상 손상조사}
       - {id: inj_tl_sickle, title: 낫 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^낫$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_rt_all, title: 농업인 업무상 손상 발생률, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^총계$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_p_all, title: 업무상 손상을 입은 농업인, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^업무상 손상자 수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: inj_n_all, title: 업무상 손상조사 대상 농업인, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: inj_yr_5, title: 농업 종사기간 5년 미만 농업인 업무상 손상 발생률, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^5년 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_yr_10, title: 농업 종사기간 5~10년 농업인 업무상 손상 발생률, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^5~10년 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_yr_10p, title: 농업 종사기간 10년 이상 농업인 업무상 손상 발생률, tbl: DT_14303_E1404, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^10년 이상$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ac_1, title: 지난 1년 농업활동 1~2개월 농업인 업무상 손상 발생률, tbl: DT_14303_E1405, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^1~2개월$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ac_3, title: 지난 1년 농업활동 3~5개월 농업인 업무상 손상 발생률, tbl: DT_14303_E1405, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^3~5개월$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ac_6, title: 지난 1년 농업활동 6~8개월 농업인 업무상 손상 발생률, tbl: DT_14303_E1405, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^6~8개월$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ac_9, title: 지난 1년 농업활동 9개월 이상 농업인 업무상 손상 발생률, tbl: DT_14303_E1405, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^9개월 이상$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_in_1, title: 소득 1000만원 미만 농업인 업무상 손상 발생률, tbl: DT_14303_E1408, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^1000만원 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_in_2, title: 소득 1000~2000만원 농업인 업무상 손상 발생률, tbl: DT_14303_E1408, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^1000~2000만원 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_in_5, title: 소득 2000~5000만원 농업인 업무상 손상 발생률, tbl: DT_14303_E1408, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^2000~5000만원 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_in_5p, title: 소득 5000만원 이상 농업인 업무상 손상 발생률, tbl: DT_14303_E1408, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^5000만원 이상$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_lm_none, title: 신체 제한이 없는 농업인 업무상 손상 발생률, tbl: DT_14303_E1409, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^제한 없음$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_lm_some, title: 신체가 조금 제한된 농업인 업무상 손상 발생률, tbl: DT_14303_E1409, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^조금 제한$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_lm_mid, title: 신체가 중간 정도 제한된 농업인 업무상 손상 발생률, tbl: DT_14303_E1409, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^중간정도 제한$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_lm_heavy, title: 신체가 많이 제한된 농업인 업무상 손상 발생률, tbl: DT_14303_E1409, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^많은 제한$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_tq_all, title: 업무상 손상 건수(농기구 관련 여부 기준), tbl: DT_14303_E1902, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tq_yes, title: 농기구와 관련된 업무상 손상 건수, tbl: DT_14303_E1902, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^예$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tx_all, title: 업무상 손상 건수(치료 여부 기준), tbl: DT_14303_E1904, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tx_yes, title: 치료를 받은 업무상 손상 건수, tbl: DT_14303_E1904, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^예$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: pe_n_all, title: 농약 사용 여부 응답 농업인, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: pe_n_yes, title: 농약을 사용하는 농업인, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^사용함$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: pe_n_no, title: 농약을 사용하지 않는 농업인, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^사용 안함$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_all, title: 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^총계$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_no, title: 농약을 쓰지 않는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^사용 안함$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_yes, title: 농약을 쓰는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^사용함$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_main, title: 농약을 주로 직접 뿌리는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^주로 직접 살포함$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_aux, title: 농약 살포를 보조하는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^보조 살포$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_mix, title: 농약을 상황에 따라 직접·보조 살포하는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^상황에 따라"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_pe_out, title: 농약 살포를 남·대행·무인살포에 맡기는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^다른 사람 또는 대행"], unit: "%", survey: 농업인 업무상 질병조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

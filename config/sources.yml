@@ -2254,6 +2254,36 @@ sources:
       - {id: fgs_a_b, title: 경영주 50~59세 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
       - {id: fgs_a_c, title: 경영주 60~69세 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
       - {id: fgs_a_d, title: 경영주 70세 이상 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: fiu_kap, title: 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fiu_mach, title: 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^평균$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_kpr, title: 농업자본 100만원당 농업부가가치(자본생산성), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fiu_m_rice, title: 논벼 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-논벼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_fruit, title: 과수 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-과수$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_veg, title: 채소 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-채소$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_spec, title: 특용작물 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-특용작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_flower, title: 화훼 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-화훼$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_field, title: 일반밭작물 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-일반밭작물$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_m_live, title: 축산 농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^영농형태-축산$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_k_rice, title: 논벼 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fiu_k_fruit, title: 과수 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fiu_k_veg, title: 채소 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fiu_k_spec, title: 특용작물 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fiu_k_flower, title: 화훼 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fiu_k_field, title: 일반밭작물 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fiu_k_live, title: 축산 농가 농업자본 100만원당 농업소득, tbl: DT_1EA1401, itm: "^단위자본당\\(100만원\\) 농업소득$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: fiu_p_pro, title: 주·부업별 전문농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^주·부업별-전문$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_p_gen, title: 주·부업별 일반농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^주·부업별-일반$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_p_sub, title: 주·부업별 부업농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^주·부업별-부업$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_p_self, title: 주·부업별 자급농가 농업소득률, tbl: DT_1EA1401, itm: "^농업소득률$", want: ["^주·부업별-자급$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_a, title: 경지 0.5ha 미만 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-0\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_b, title: 경지 0.5~1ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_c, title: 경지 1~1.5ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_d, title: 경지 1.5~2ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_e, title: 경지 2~3ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_f, title: 경지 3~5ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_g, title: 경지 5~7ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_h, title: 경지 7~10ha 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: "%", survey: 농가경제조사}
+      - {id: fiu_w_i, title: 경지 10ha 이상 농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^경지규모-10\\.0ha 이상$"], unit: "%", survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

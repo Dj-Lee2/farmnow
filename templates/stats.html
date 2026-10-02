@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적', 80) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률', 87) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -155,6 +155,16 @@
   {{ hcard('경지규모별 농업소득률', [('0.5ha 미만', K.fit_rs_a), ('0.5~1ha', K.fit_rs_b), ('1~1.5ha', K.fit_rs_c), ('1.5~2ha', K.fit_rs_d), ('2~3ha', K.fit_rs_e), ('3~5ha', K.fit_rs_f), ('5~7ha', K.fit_rs_g), ('7~10ha', K.fit_rs_h), ('10ha 이상', K.fit_rs_i)], '%', '농업소득 ÷ 농업총수입 · 규모가 크다고 소득률이 높지는 않음 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
   {{ hcard('영농형태별 비경상소득', [('논벼', K.fnr_t_rice), ('과수', K.fnr_t_fruit), ('채소', K.fnr_t_veg), ('특용작물', K.fnr_t_spec), ('화훼', K.fnr_t_flower), ('일반밭작물', K.fnr_t_field), ('축산', K.fnr_t_live)], '천원', '경조수입·보상금 등 일시적 소득 · 농가당 1년 · 오른쪽은 전년 대비', none, '#c0763a') }}
   {{ hcard('경영주 연령별 경지면적', [('50세 미만', K.fgs_a_a), ('50~59세', K.fgs_a_b), ('60~69세', K.fgs_a_c), ('70세 이상', K.fgs_a_d)], '㎡', ('전체 평균 ' ~ num(K.fgs_area.vals[-1], '㎡')|striptags ~ ' · 70세 이상 농가가 가장 작음 · 오른쪽은 전년 대비') if K.fgs_area else '', none, '#3a8f6a') }}
+ </div>
+ <h3 class="sg-sub">농업자본 효율·농기구 비중·규모별 농업취업률 <small>농가 평균 · 자본 100만원당 소득·부가가치·농기구자본비율·주·부업별 소득률 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('fiu_kap', 'gf1', '농업에 투입한 자본 100만원당 농업소득', '#1c7a45') }}
+  {{ card('fiu_kpr', 'gf2', '자본 100만원당 농업부가가치 · 자본생산성', '#3a8f6a') }}
+  {{ card('fiu_mach', 'gf3', '농업자본 가운데 농기구 비중', '#6b8fd6') }}
+  {{ hcard('영농형태별 농기구자본비율', [('논벼', K.fiu_m_rice), ('과수', K.fiu_m_fruit), ('채소', K.fiu_m_veg), ('특용작물', K.fiu_m_spec), ('화훼', K.fiu_m_flower), ('일반밭작물', K.fiu_m_field), ('축산', K.fiu_m_live)], '%', '농업자본 가운데 농기구 비중 · 논벼·밭작물이 높고 축산이 가장 낮음 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
+  {{ hcard('영농형태별 자본 100만원당 농업소득', [('논벼', K.fiu_k_rice), ('과수', K.fiu_k_fruit), ('채소', K.fiu_k_veg), ('특용작물', K.fiu_k_spec), ('화훼', K.fiu_k_flower), ('일반밭작물', K.fiu_k_field), ('축산', K.fiu_k_live)], '천원', ('전체 평균 ' ~ num(K.fiu_kap.vals[-1], '천원')|striptags ~ ' · 표본이 작은 특용작물·화훼는 해마다 등락이 큼 · 오른쪽은 전년 대비') if K.fiu_kap else '', none, '#1c7a45') }}
+  {{ hcard('주·부업별 농업소득률', [('전문농가', K.fiu_p_pro), ('일반농가', K.fiu_p_gen), ('부업농가', K.fiu_p_sub), ('자급농가', K.fiu_p_self)], '%', '농업소득 ÷ 농업총수입 · 판매 규모가 작은 자급농가는 소득이 음수 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('경지규모별 농업취업률', [('0.5ha 미만', K.fiu_w_a), ('0.5~1ha', K.fiu_w_b), ('1~1.5ha', K.fiu_w_c), ('1.5~2ha', K.fiu_w_d), ('2~3ha', K.fiu_w_e), ('3~5ha', K.fiu_w_f), ('5~7ha', K.fiu_w_g), ('7~10ha', K.fiu_w_h), ('10ha 이상', K.fiu_w_i)], '%', ('가구원 중 농업에 종사하는 비율 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_rate.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fgs_rate else '', none, '#5fae7a') }}
  </div>
  </div></details>
 

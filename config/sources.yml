@@ -2143,6 +2143,39 @@ sources:
       - {id: nbi_agrw, title: 농가 농업노임, tbl: DT_1EA1506, itm: "^농업노임$", want: ["^평균$"], survey: 농가경제조사}
       - {id: nbi_rent, title: 농가 농지임대 수입, tbl: DT_1EA1506, itm: "^농지임대$", want: ["^평균$"], survey: 농가경제조사}
       - {id: nbi_cap, title: 농가 기타 자본수입, tbl: DT_1EA1506, itm: "^기타자본수입$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hnc_pub, title: 농가 공적 비소비지출, tbl: DT_1EA1511, itm: "^공적비소비지출계$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hnc_tax, title: 농가 조세·부담금, tbl: DT_1EA1511, itm: "^조세및부담금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hnc_pen, title: 농가 공적연금 납부금, tbl: DT_1EA1511, itm: "^공적연금납부금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hnc_ins, title: 농가 사회보험 납부금, tbl: DT_1EA1511, itm: "^사회보험납부금$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hnc_priv, title: 농가 사적 비소비지출, tbl: DT_1EA1511, itm: "^사적비소비지출계$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hct_rice, title: 논벼 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: hct_fruit, title: 과수 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: hct_veg, title: 채소 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: hct_spec, title: 특용작물 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: hct_flower, title: 화훼 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: hct_field, title: 일반밭작물 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: hct_live, title: 축산 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: hca_u50, title: 경영주 50세 미만 농가 가계지출, tbl: DT_1EA1511, itm: "^가계지출$", want: ["^경영주연령-50세 미만$"], survey: 농가경제조사}
+      - {id: hca_50s, title: 경영주 50대 농가 가계지출, tbl: DT_1EA1511, itm: "^가계지출$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
+      - {id: hca_60s, title: 경영주 60대 농가 가계지출, tbl: DT_1EA1511, itm: "^가계지출$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
+      - {id: hca_70p, title: 경영주 70세 이상 농가 가계지출, tbl: DT_1EA1511, itm: "^가계지출$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: fgs_mem, title: 표본농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_work, title: 표본농가 영농종사자, tbl: DT_1EA1101, itm: "^영농종사자$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_nonw, title: 표본농가 비영농종사자, tbl: DT_1EA1101, itm: "^비영농종사자$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_rate, title: 표본농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_area, title: 표본농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_paddy, title: 표본농가 논 면적, tbl: DT_1EA1101, itm: "^경지면적-논$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_field, title: 표본농가 밭 면적, tbl: DT_1EA1101, itm: "^경지면적-밭$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_pc, title: 가구원 1인당 경지면적, tbl: DT_1EA1101, itm: "^가구원1인당 경지면적$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_big, title: 표본농가 대동물 사육, tbl: DT_1EA1101, itm: "^사육가축-대동물$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_small, title: 표본농가 소동물 사육, tbl: DT_1EA1101, itm: "^사육가축-소동물$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: fgs_t_rice, title: 논벼 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: fgs_t_fruit, title: 과수 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: fgs_t_veg, title: 채소 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: fgs_t_spec, title: 특용작물 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: fgs_t_flower, title: 화훼 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: fgs_t_field, title: 일반밭작물 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: fgs_t_live, title: 축산 농가 경지면적, tbl: DT_1EA1101, itm: "^경지면적$", want: ["^영농형태-축산$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1347,6 +1347,46 @@ sources:
       - {id: frc_omija_gn, title: 경상남도 오미자 임가 1ha당 경영비, tbl: DT_136033_11241, org: "136", itm: "^값$", want: ["^경영비$", "^경상남도$"], unit: 원, survey: 임산물생산비조사}
       - {id: frc_bokbun_jb, title: 전북특별자치도 복분자딸기 임가 1ha당 경영비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^경영비$", "^전북특별자치도$"], unit: 원, survey: 임산물생산비조사}
       - {id: frc_bokbun_jn, title: 전라남도 복분자딸기 임가 1ha당 경영비, tbl: DT_136033_11224, org: "136", itm: "^값$", want: ["^경영비$", "^전라남도$"], unit: 원, survey: 임산물생산비조사}
+      - {id: fyh_kr, title: 전국 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^전국$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_gg, title: 경기 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^경기도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_gw, title: 강원 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^강원(도|특별자치도)$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_cb, title: 충북 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^충청북도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_cn, title: 충남 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^충청남도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_jb, title: 전북 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^전(라북도|북특별자치도)$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_jn, title: 전남 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^전라남도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_gb, title: 경북 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^경상북도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_gn, title: 경남 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^경상남도$"], unit: 가구, survey: 임업조사}
+      - {id: fyh_jj, title: 제주 임가, tbl: DT_1FA7001, periods: 6, itm: "^임업가구$", want: ["^제주특별자치도$"], unit: 가구, survey: 임업조사}
+      - {id: fyp_all, title: 임가인구, tbl: DT_1FA7001, periods: 6, itm: "^임가인구$", want: ["^전국$"], unit: 명, survey: 임업조사}
+      - {id: fyt_non, title: 비재배임업만 경영하는 임가, tbl: DT_1FA7002, periods: 6, itm: "^임업가구$", want: ["^비재배임업만 경영$"], unit: 가구, survey: 임업조사}
+      - {id: fyt_both, title: 비재배·재배임업을 함께 경영하는 임가, tbl: DT_1FA7002, periods: 6, itm: "^임업가구$", want: ["^비재배 및 재배임업 경영$"], unit: 가구, survey: 임업조사}
+      - {id: fyt_cult, title: 재배임업만 경영하는 임가, tbl: DT_1FA7002, periods: 6, itm: "^임업가구$", want: ["^재배임업만 경영$"], unit: 가구, survey: 임업조사}
+      - {id: fya_u40, title: 40세 미만 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^(20세미만|20~29세|30~39세)$"], sum: true, unit: 가구, survey: 임업조사}
+      - {id: fya_40s, title: 40대 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^40~49세$"], unit: 가구, survey: 임업조사}
+      - {id: fya_50s, title: 50대 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^50~59세$"], unit: 가구, survey: 임업조사}
+      - {id: fya_6064, title: 60~64세 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^60~64세$"], unit: 가구, survey: 임업조사}
+      - {id: fya_6569, title: 65~69세 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^65~69세$"], unit: 가구, survey: 임업조사}
+      - {id: fya_70p, title: 70세 이상 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^70세이상$"], unit: 가구, survey: 임업조사}
+      - {id: fya_fem, title: 여성 경영주 임가, tbl: DT_1FA7005, periods: 6, itm: "^임업가구$", want: ["^여자$"], unit: 가구, survey: 임업조사}
+      - {id: fys_total, title: 임산물 판매 임가(전체), tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^계$"], unit: 가구, survey: 임업조사}
+      - {id: fys_whole, title: 도매시장 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^도매시장$"], unit: 가구, survey: 임업조사}
+      - {id: fys_auct, title: 산지공판장 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^산지공판장$"], unit: 가구, survey: 임업조사}
+      - {id: fys_coop, title: 농협 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^농협$"], unit: 가구, survey: 임업조사}
+      - {id: fys_coll, title: 수집상 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^수집상$"], unit: 가구, survey: 임업조사}
+      - {id: fys_direct, title: 소비자 직접판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^소비자직접판매$"], unit: 가구, survey: 임업조사}
+      - {id: fys_proc, title: 임산물가공업체 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^임산물가공업체$"], unit: 가구, survey: 임업조사}
+      - {id: fys_retail, title: 임산물소매상 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^임산물소매상$"], unit: 가구, survey: 임업조사}
+      - {id: fys_fcoop, title: 산림조합 판매 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^산림조합$"], unit: 가구, survey: 임업조사}
+      - {id: fys_none, title: 임산물 판매 없는 임가, tbl: DT_1FA7015, periods: 6, itm: "^임업가구$", want: ["^판매없음$"], unit: 가구, survey: 임업조사}
+      - {id: fyc_herb, title: 산나물 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^산나물$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_med, title: 약용작물 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^약용작물$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_orn, title: 관상작물 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^관상작물$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_shii, title: 표고버섯 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^표고버섯$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_pers, title: 떫은감 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^떫은감$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_chest, title: 밤 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^밤$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_juj, title: 대추 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^대추$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_nut, title: 호두·잣·은행 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^호두 잣 은행$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyc_rasp, title: 복분자·산딸기 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^복분자·산딸기$", want: [], unit: 가구, survey: 임업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

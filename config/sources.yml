@@ -2477,6 +2477,46 @@ sources:
       - {id: fjb_ha_b, title: 경영주 50대 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경영주연령-50 - 59세$"], survey: 농가경제조사}
       - {id: fjb_ha_c, title: 경영주 60대 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경영주연령-60 - 69세$"], survey: 농가경제조사}
       - {id: fjb_ha_d, title: 경영주 70세 이상 농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^경영주연령-70세 이상$"], survey: 농가경제조사}
+      - {id: fjc_li_full, title: 전업농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^전·겸업별-전업$"], unit: 시간, survey: 농가경제조사}
+      - {id: fjc_li_s1, title: 1종겸업농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^전·겸업별-1종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: fjc_li_s2, title: 2종겸업농가 노동집약도(10a당 농업노동시간), tbl: DT_1EA1401, itm: "^노동집약도$", want: ["^전·겸업별-2종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: fjc_ki_full, title: 전업농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^전·겸업별-전업$"], survey: 농가경제조사}
+      - {id: fjc_ki_s1, title: 1종겸업농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^전·겸업별-1종겸업$"], survey: 농가경제조사}
+      - {id: fjc_ki_s2, title: 2종겸업농가 자본집약도(10a당 농업자본), tbl: DT_1EA1401, itm: "^자본집약도$", want: ["^전·겸업별-2종겸업$"], survey: 농가경제조사}
+      - {id: fjc_eq_full, title: 전업농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^전·겸업별-전업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_eq_s1, title: 1종겸업농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^전·겸업별-1종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_eq_s2, title: 2종겸업농가 자기자본비율, tbl: DT_1EA1401, itm: "^자기자본비율$", want: ["^전·겸업별-2종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_ma_full, title: 전업농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^전·겸업별-전업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_ma_s1, title: 1종겸업농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^전·겸업별-1종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_ma_s2, title: 2종겸업농가 농기구자본비율, tbl: DT_1EA1401, itm: "^농기구자본비율$", want: ["^전·겸업별-2종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_kcs_a, title: 경지 0.5ha 미만 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-0\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_b, title: 경지 0.5~1ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_c, title: 경지 1~1.5ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_d, title: 경지 1.5~2ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_e, title: 경지 2~3ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_f, title: 경지 3~5ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_g, title: 경지 5~7ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_h, title: 경지 7~10ha 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kcs_i, title: 경지 10ha 이상 농가 자본구성도(노동 1시간당 농업자본), tbl: DT_1EA1401, itm: "^자본구성도$", want: ["^경지규모-10\\.0ha 이상$"], survey: 농가경제조사}
+      - {id: fjc_kps_a, title: 경지 0.5ha 미만 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-0\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_b, title: 경지 0.5~1ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_c, title: 경지 1~1.5ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_d, title: 경지 1.5~2ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_e, title: 경지 2~3ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_f, title: 경지 3~5ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_g, title: 경지 5~7ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_h, title: 경지 7~10ha 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], survey: 농가경제조사}
+      - {id: fjc_kps_i, title: 경지 10ha 이상 농가 자본생산성(농업자본 100만원당 농업부가가치), tbl: DT_1EA1401, itm: "^자본생산성$", want: ["^경지규모-10\\.0ha 이상$"], survey: 농가경제조사}
+      - {id: fjc_pf_pro, title: 주·부업별 전문농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^주·부업별-전문$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_pf_gen, title: 주·부업별 일반농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^주·부업별-일반$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_pf_sub, title: 주·부업별 부업농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^주·부업별-부업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_pf_self, title: 주·부업별 자급농가 고정비율, tbl: DT_1EA1401, itm: "^고정비율$", want: ["^주·부업별-자급$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_wf_full, title: 전업농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^전·겸업별-전업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_wf_s1, title: 1종겸업농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^전·겸업별-1종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_wf_s2, title: 2종겸업농가 농업취업률, tbl: DT_1EA1101, itm: "^농업취업률$", want: ["^전·겸업별-2종겸업$"], unit: "%", survey: 농가경제조사}
+      - {id: fjc_hf_full, title: 전업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-전업$"], survey: 농가경제조사}
+      - {id: fjc_hf_s1, title: 1종겸업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-1종겸업$"], survey: 농가경제조사}
+      - {id: fjc_hf_s2, title: 2종겸업농가 가구원, tbl: DT_1EA1101, itm: "^가구원$", want: ["^전·겸업별-2종겸업$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

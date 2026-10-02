@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원', 137) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성', 149) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -233,6 +233,21 @@
   {{ hcard('경지규모별 자기자본비율', [('0.5ha 미만', K.fjb_es_a), ('0.5~1ha', K.fjb_es_b), ('1~1.5ha', K.fjb_es_c), ('1.5~2ha', K.fjb_es_d), ('2~3ha', K.fjb_es_e), ('3~5ha', K.fjb_es_f), ('5~7ha', K.fjb_es_g), ('7~10ha', K.fjb_es_h), ('10ha 이상', K.fjb_es_i)], '%', ('자기자본 ÷ 자산 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_equity.vals[-1]) ~ '% · 10ha 이상이 가장 낮음 · 오른쪽은 전년 대비') if K.fi_equity else '', none, '#3a8f6a') }}
   {{ hcard('경영주 연령별 농업취업률', [('50세 미만', K.fjb_wa_a), ('50대', K.fjb_wa_b), ('60대', K.fjb_wa_c), ('70세 이상', K.fjb_wa_d)], '%', ('가구원 중 농업에 종사하는 비율 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_rate.vals[-1]) ~ '% · 나이가 많을수록 높음 · 오른쪽은 전년 대비') if K.fgs_rate else '', none, '#6b8fd6') }}
   {{ hcard('경영주 연령별 가구원', [('50세 미만', K.fjb_ha_a), ('50대', K.fjb_ha_b), ('60대', K.fjb_ha_c), ('70세 이상', K.fjb_ha_d)], '명', ('표본농가 평균 가구원 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_mem.vals[-1]) ~ '명 · 50세 미만 3.4명, 70세 이상 2.1명 · 오른쪽은 전년 대비') if K.fgs_mem else '', none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">전·겸업별 노동·자본 투입과 재무, 규모별 자본 효율, 주·부업별 고정비율 <small>농가 평균 · 10a당 노동시간·10a당 농업자본·자기자본비율·농기구자본비율·노동 1시간당 농업자본·자본 100만원당 부가가치·농업취업률·가구원 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('fjc_kps_a', 'gm1', '경지 0.5ha 미만 농가 자본생산성 · 농업자본 100만원당 농업부가가치, 규모 중 가장 낮음', '#c0763a') }}
+  {{ card('fjc_li_s1', 'gm2', '1종겸업농가 노동집약도 · 10a당 농업노동시간, 전업·2종겸업보다 적음', '#3a8f6a') }}
+  {{ card('fjc_pf_self', 'gm3', '자급농가 고정비율 · 고정자산 ÷ 자기자본 × 100, 주·부업 중 가장 낮음', '#b04a07') }}
+  {{ hcard('전·겸업별 노동집약도', [('전업', K.fjc_li_full), ('1종겸업', K.fjc_li_s1), ('2종겸업', K.fjc_li_s2)], '시간', '경지 10a당 농업노동시간 · 1종겸업이 가장 적음 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('전·겸업별 자본집약도', [('전업', K.fjc_ki_full), ('1종겸업', K.fjc_ki_s1), ('2종겸업', K.fjc_ki_s2)], '천원', '경지 10a당 농업자본 · 전업농가가 가장 큼 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('전·겸업별 자기자본비율', [('전업', K.fjc_eq_full), ('1종겸업', K.fjc_eq_s1), ('2종겸업', K.fjc_eq_s2)], '%', ('자기자본 ÷ 자산 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fi_equity.vals[-1]) ~ '% · 2종겸업이 가장 낮음 · 오른쪽은 전년 대비') if K.fi_equity else '', none, '#3a8f6a') }}
+  {{ hcard('전·겸업별 농기구자본비율', [('전업', K.fjc_ma_full), ('1종겸업', K.fjc_ma_s1), ('2종겸업', K.fjc_ma_s2)], '%', ('농업자본 중 농기구 비중 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_mach.vals[-1]) ~ '% · 전업농가가 가장 낮음 · 오른쪽은 전년 대비') if K.fiu_mach else '', none, '#3a8f6a') }}
+  {{ hcard('주·부업별 고정비율', [('전문', K.fjc_pf_pro), ('일반', K.fjc_pf_gen), ('부업', K.fjc_pf_sub), ('자급', K.fjc_pf_self)], '%', ('고정자산 ÷ 자기자본 × 100 · 전체 평균 ' ~ '{:.1f}'.format(K.fja_fx_avg.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fja_fx_avg else '', none, '#b04a07') }}
+  {{ hcard('전·겸업별 농업취업률', [('전업', K.fjc_wf_full), ('1종겸업', K.fjc_wf_s1), ('2종겸업', K.fjc_wf_s2)], '%', ('가구원 중 농업에 종사하는 비율 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_rate.vals[-1]) ~ '% · 오른쪽은 전년 대비') if K.fgs_rate else '', none, '#6b8fd6') }}
+  {{ hcard('전·겸업별 가구원', [('전업', K.fjc_hf_full), ('1종겸업', K.fjc_hf_s1), ('2종겸업', K.fjc_hf_s2)], '명', ('표본농가 평균 가구원 · 전체 평균 ' ~ '{:.1f}'.format(K.fgs_mem.vals[-1]) ~ '명 · 겸업농가일수록 많음 · 오른쪽은 전년 대비') if K.fgs_mem else '', none, '#6b8fd6') }}
+  {{ hcard('경지규모별 자본구성도', [('0.5ha 미만', K.fjc_kcs_a), ('0.5~1ha', K.fjc_kcs_b), ('1~1.5ha', K.fjc_kcs_c), ('1.5~2ha', K.fjc_kcs_d), ('2~3ha', K.fjc_kcs_e), ('3~5ha', K.fjc_kcs_f), ('5~7ha', K.fjc_kcs_g), ('7~10ha', K.fjc_kcs_h), ('10ha 이상', K.fjc_kcs_i)], '천원', ('노동 1시간당 농업자본 · 전체 평균 ' ~ '{:.1f}'.format(K.fja_kc_avg.vals[-1]) ~ '천원 · 규모가 클수록 커짐 · 오른쪽은 전년 대비') if K.fja_kc_avg else '', none, '#c0763a') }}
+  {{ hcard('경지규모별 자본생산성', [('0.5ha 미만', K.fjc_kps_a), ('0.5~1ha', K.fjc_kps_b), ('1~1.5ha', K.fjc_kps_c), ('1.5~2ha', K.fjc_kps_d), ('2~3ha', K.fjc_kps_e), ('3~5ha', K.fjc_kps_f), ('5~7ha', K.fjc_kps_g), ('7~10ha', K.fjc_kps_h), ('10ha 이상', K.fjc_kps_i)], '천원', ('농업자본 100만원당 농업부가가치 · 전체 평균 ' ~ '{:.1f}'.format(K.fiu_kpr.vals[-1]) ~ '천원 · 0.5ha 미만이 가장 낮음 · 오른쪽은 전년 대비') if K.fiu_kpr else '', none, '#c0763a') }}
  </div>
  </div></details>
 

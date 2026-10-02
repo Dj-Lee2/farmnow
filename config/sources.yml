@@ -2105,6 +2105,44 @@ sources:
       - {id: ftr_t_flower, title: 화훼 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
       - {id: ftr_t_field, title: 일반밭작물 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
       - {id: ftr_t_live, title: 축산 농가 농업보조금, tbl: DT_1EA1508, itm: "^농업보조금$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: ast_fixed, title: 농가 고정자산, tbl: DT_1EA1601, itm: "^고정자산-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_land, title: 농가 토지 자산(평가액), tbl: DT_1EA1601, itm: "^토지-연도말[(]평가액[)]$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_bldg, title: 농가 건물 자산(평가액), tbl: DT_1EA1601, itm: "^건물-연도말[(]평가액[)]$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_struct, title: 농가 구축물 자산, tbl: DT_1EA1601, itm: "^구축물-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_mach, title: 농가 기계·기구·비품 자산, tbl: DT_1EA1601, itm: "^기계·기구·비품-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_anim, title: 농가 대동물 자산, tbl: DT_1EA1601, itm: "^대동물-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_plant, title: 농가 대식물 자산, tbl: DT_1EA1601, itm: "^대식물-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_cur, title: 농가 유동자산, tbl: DT_1EA1602, itm: "^유동자산[(]재고및당좌[)]-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_fin, title: 농가 예금 등 금융자산, tbl: DT_1EA1602, itm: "^예금 등 금융자산-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_stock, title: 농가 재고자산, tbl: DT_1EA1602, itm: "^재고자산-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_mat, title: 농가 농업생산자재 재고, tbl: DT_1EA1602, itm: "^농업생산자재-연도말$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: ast_t_rice, title: 논벼 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-논벼$"], survey: 농가경제조사}
+      - {id: ast_t_fruit, title: 과수 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-과수$"], survey: 농가경제조사}
+      - {id: ast_t_veg, title: 채소 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-채소$"], survey: 농가경제조사}
+      - {id: ast_t_spec, title: 특용작물 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-특용작물$"], survey: 농가경제조사}
+      - {id: ast_t_flower, title: 화훼 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-화훼$"], survey: 농가경제조사}
+      - {id: ast_t_field, title: 일반밭작물 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-일반밭작물$"], survey: 농가경제조사}
+      - {id: ast_t_live, title: 축산 농가 자산, tbl: DT_1EA1601, itm: "^자산[(]고정[+]유동[)]-연도말$", want: ["^영농형태-축산$"], survey: 농가경제조사}
+      - {id: hex_food, title: 농가 식료품·비주류음료 지출, tbl: DT_1EA1511, itm: "^식료품및비주류음료$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_alc, title: 농가 주류·담배 지출, tbl: DT_1EA1511, itm: "^주류및담배$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_cloth, title: 농가 의류·신발 지출, tbl: DT_1EA1511, itm: "^의류및신발$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_house, title: 농가 주거·수도광열 지출, tbl: DT_1EA1511, itm: "^주거및수도광열$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_goods, title: 농가 가정용품·가사서비스 지출, tbl: DT_1EA1511, itm: "^가정용품및가사서비스$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_health, title: 농가 보건 지출, tbl: DT_1EA1511, itm: "^보건$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_trans, title: 농가 교통 지출, tbl: DT_1EA1511, itm: "^교통$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_comm, title: 농가 통신 지출, tbl: DT_1EA1511, itm: "^통신$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_cult, title: 농가 오락·문화 지출, tbl: DT_1EA1511, itm: "^오락_문화$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_edu, title: 농가 교육 지출, tbl: DT_1EA1511, itm: "^교육$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_eat, title: 농가 음식·숙박 지출, tbl: DT_1EA1511, itm: "^음식_숙박$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_etc, title: 농가 기타 상품·서비스 지출, tbl: DT_1EA1511, itm: "^기타상품및서비스$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_depr, title: 농가 감가상각비(가계), tbl: DT_1EA1511, itm: "^감가상각비$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_cons, title: 농가 소비지출, tbl: DT_1EA1511, itm: "^소비지출$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: hex_ncons, title: 농가 비소비지출, tbl: DT_1EA1511, itm: "^비소비지출$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nbi_total, title: 농가 사업외수입, tbl: DT_1EA1506, itm: "^사업외수입$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nbi_offw, title: 농가 농외노임, tbl: DT_1EA1506, itm: "^농외노임$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nbi_agrw, title: 농가 농업노임, tbl: DT_1EA1506, itm: "^농업노임$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nbi_rent, title: 농가 농지임대 수입, tbl: DT_1EA1506, itm: "^농지임대$", want: ["^평균$"], survey: 농가경제조사}
+      - {id: nbi_cap, title: 농가 기타 자본수입, tbl: DT_1EA1506, itm: "^기타자본수입$", want: ["^평균$"], survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

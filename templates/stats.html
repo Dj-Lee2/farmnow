@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금', 37) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입', 47) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -97,6 +97,19 @@
   {{ hcard('영농형태별 농가부채', [('축산', K.fdb_t_live), ('화훼', K.fdb_t_flower), ('과수', K.fdb_t_fruit), ('채소', K.fdb_t_veg), ('특용작물', K.fdb_t_spec), ('일반밭작물', K.fdb_t_field), ('논벼', K.fdb_t_rice)], '천원', ('전체 평균 ' ~ num(K.debt.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.debt else '', none, '#b04a07') }}
   {{ hcard('이전소득 구성', [('기타 공적보조금', K.ftr_opub), ('농업보조금', K.ftr_agri), ('사적보조금', K.ftr_priv)], '천원', ('농가당 이전소득 ' ~ num(K.transfer_income.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.transfer_income else '', K.transfer_income.vals[-1] if K.transfer_income else none, '#1c7a45') }}
   {{ hcard('영농형태별 농업보조금', [('축산', K.ftr_t_live), ('화훼', K.ftr_t_flower), ('과수', K.ftr_t_fruit), ('채소', K.ftr_t_veg), ('특용작물', K.ftr_t_spec), ('일반밭작물', K.ftr_t_field), ('논벼', K.ftr_t_rice)], '천원', ('전체 평균 ' ~ num(K.ftr_agri.vals[-1], '천원')|striptags ~ ' · 직불금 등 · 오른쪽은 전년 대비') if K.ftr_agri else '', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">농가 자산·가계지출·사업외수입 <small>농가 평균 · 연도말 자산 · 농가경제조사</small></h3>
+ <div class="sg-g">
+  {{ card('ast_land', 'ga1', ('농가자산의 ' ~ '{:.0f}'.format(K.ast_land.vals[-1] / K.assets.vals[-1] * 100) ~ '% · 평가액') if K.assets and K.ast_land else '토지 평가액', '#3a8f6a') }}
+  {{ card('ast_fin', 'ga2', ('농가자산의 ' ~ '{:.0f}'.format(K.ast_fin.vals[-1] / K.assets.vals[-1] * 100) ~ '% · 예금·적금·보험 등') if K.assets and K.ast_fin else '예금·적금·보험 등', '#6b8fd6') }}
+  {{ card('ast_mach', 'ga3', '농기계·기구·비품 평가액', '#c0763a') }}
+  {{ card('hex_cons', 'ga4', ('가계지출의 ' ~ '{:.0f}'.format(K.hex_cons.vals[-1] / K.spending.vals[-1] * 100) ~ '% · 나머지는 세금·보험료 등') if K.spending and K.hex_cons else '가계지출 중 소비', '#b04a07') }}
+  {{ card('hex_health', 'ga5', ('소비지출의 ' ~ '{:.1f}'.format(K.hex_health.vals[-1] / K.hex_cons.vals[-1] * 100) ~ '% · 의료비·약값') if K.hex_cons and K.hex_health else '의료비·약값', '#b04a07') }}
+  {{ card('nbi_total', 'ga6', ('농외노임 ' ~ '{:.0f}'.format(K.nbi_offw.vals[-1] / K.nbi_total.vals[-1] * 100) ~ '% · 품삯·임대료 등 사업 밖 수입') if K.nbi_offw and K.nbi_total else '품삯·임대료 등 사업 밖 수입', '#1c7a45') }}
+  {{ hcard('농가 자산 구성', [('토지', K.ast_land), ('건물', K.ast_bldg), ('예금 등 금융자산', K.ast_fin), ('기계·기구·비품', K.ast_mach), ('대동물', K.ast_anim), ('대식물', K.ast_plant), ('재고자산', K.ast_stock), ('구축물', K.ast_struct)], '천원', ('농가당 자산 ' ~ num(K.assets.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 무형자산·현금 등은 뺌 · 오른쪽은 전년 대비') if K.assets else '', K.assets.vals[-1] if K.assets else none, '#3a8f6a') }}
+  {{ hcard('영농형태별 농가 자산', [('축산', K.ast_t_live), ('화훼', K.ast_t_flower), ('특용작물', K.ast_t_spec), ('과수', K.ast_t_fruit), ('논벼', K.ast_t_rice), ('채소', K.ast_t_veg), ('일반밭작물', K.ast_t_field)], '천원', ('전체 평균 ' ~ num(K.assets.vals[-1], '천원')|striptags ~ ' · 표본이 작은 화훼·특용작물은 해마다 등락이 큼 · 오른쪽은 전년 대비') if K.assets else '', none, '#3a8f6a') }}
+  {{ hcard('농가 소비지출 구성', [('식료품·비주류음료', K.hex_food), ('기타 상품·서비스', K.hex_etc), ('주택·내구재 감가상각', K.hex_depr), ('보건', K.hex_health), ('주거·수도광열', K.hex_house), ('음식·숙박', K.hex_eat), ('교통', K.hex_trans), ('오락·문화', K.hex_cult), ('통신', K.hex_comm), ('의류·신발', K.hex_cloth), ('주류·담배', K.hex_alc), ('가정용품·가사서비스', K.hex_goods), ('교육', K.hex_edu)], '천원', ('농가당 소비지출 ' ~ num(K.hex_cons.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.hex_cons else '', K.hex_cons.vals[-1] if K.hex_cons else none, '#b04a07') }}
+  {{ hcard('농가 사업외수입 구성', [('농외노임', K.nbi_offw), ('기타 자본수입', K.nbi_cap), ('농지 임대', K.nbi_rent), ('농업노임', K.nbi_agrw)], '천원', '노임은 남의 일을 해 주고 받은 품삯 · 괄호는 비중 · 오른쪽은 전년 대비', K.nbi_total.vals[-1] if K.nbi_total else none, '#1c7a45') }}
  </div>
  </div></details>
 

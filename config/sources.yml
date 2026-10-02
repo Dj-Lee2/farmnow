@@ -2896,6 +2896,33 @@ sources:
       - {id: ghm_ch4_man, title: 가축 분뇨처리 메탄 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400049$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
       - {id: ghm_n2o_man, title: 가축 분뇨처리 아산화질소 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400077$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
       - {id: ghm_co2_agri, title: 농업 이산화탄소(CO₂) 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400143$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: smx_cd_pd, title: 논 토양 카드뮴 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^카드뮴 Cd$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cd_fd, title: 밭 토양 카드뮴 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^카드뮴 Cd$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cd_or, title: 과수원 토양 카드뮴 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^카드뮴 Cd$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cu_pd, title: 논 토양 구리 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^구리 Cu$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cu_fd, title: 밭 토양 구리 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^구리 Cu$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cu_or, title: 과수원 토양 구리 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^구리 Cu$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_as_pd, title: 논 토양 비소 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^비소 As$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_as_fd, title: 밭 토양 비소 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^비소 As$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_as_or, title: 과수원 토양 비소 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^비소 As$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_pb_pd, title: 논 토양 납 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^납 Pb$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_pb_fd, title: 밭 토양 납 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^납 Pb$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_pb_or, title: 과수원 토양 납 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^납 Pb$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_zn_pd, title: 논 토양 아연 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^아연 Zn$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_zn_fd, title: 밭 토양 아연 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^아연 Zn$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_zn_or, title: 과수원 토양 아연 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^아연 Zn$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_ni_pd, title: 논 토양 니켈 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^니켈 Ni$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_ni_fd, title: 밭 토양 니켈 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^니켈 Ni$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_ni_or, title: 과수원 토양 니켈 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^니켈 Ni$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_hg_pd, title: 논 토양 수은 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^수은 Hg$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_hg_fd, title: 밭 토양 수은 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^수은 Hg$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_hg_or, title: 과수원 토양 수은 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^수은 Hg$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cr_pd, title: 논 토양 6가크롬 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^6가크롬 Cr6[+]$"], codes: {C1: "4200011$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cr_fd, title: 밭 토양 6가크롬 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^6가크롬 Cr6[+]$"], codes: {C1: "4200015$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_cr_or, title: 과수원 토양 6가크롬 최고값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최고$", "^6가크롬 Cr6[+]$"], codes: {C1: "4200019$"}, unit: mg/kg, survey: 토양측정망}
+      - {id: smx_ph_pd, title: 논 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200010$"}, unit: pH, survey: 토양측정망}
+      - {id: smx_ph_fd, title: 밭 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200014$"}, unit: pH, survey: 토양측정망}
+      - {id: smx_ph_or, title: 과수원 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200018$"}, unit: pH, survey: 토양측정망}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

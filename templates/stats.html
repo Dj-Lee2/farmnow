@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로', 58) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로', 68) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -173,6 +173,22 @@
   {{ card('rsr_direct', 'p32', '인터넷 등 소비자 직거래 · 로컬푸드매장 ' ~ K.rsr_local.vals[-1] ~ '%' if K.rsr_local else none, '#e0a03a') }}
   {{ card('rsr_none', 'p33', '판매 없이 자가소비 등 · 2023년 ' ~ K.rsr_none.vals[0] ~ '%' if K.rsr_none else none, '#b0503a') }}
   {{ hcard('귀농 가구 농산물 주 판매경로', [('판매하지 않음(자가소비 등)', K.rsr_none), ('지역 농협', K.rsr_nh), ('소비자 직거래(인터넷 등)', K.rsr_direct), ('영농 법인·영농 조합', K.rsr_corp), ('농산물 공판장', K.rsr_whs), ('로컬푸드매장', K.rsr_local)], '%', '대형마트 수의매매·밭떼기·기타는 합쳐 5% 안팎 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">임산물 판매대금 결제방법 <small>판매하는 임가 중 비율 · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('pyc_chest', 'p34', ('후불 ' ~ '{:.1f}'.format(K.pyl_chest.vals[-1]) ~ '% · 대부분 1개월 안에 현금으로') if K.pyl_chest else '밤 재배 임가', '#e0a03a') }}
+  {{ card('pyc_mush', 'p35', ('후불 ' ~ '{:.1f}'.format(K.pyl_mush.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.pyl_mush.vals[-2]) ~ '%') if K.pyl_mush else '버섯 재배 임가', '#7a5cc2') }}
+  {{ card('pyl_orn', 'p36', ('1개월 이내 현금 ' ~ '{:.1f}'.format(K.pyc_orn.vals[-1]) ~ '% · 조경수 거래는 외상 비중이 큼') if K.pyc_orn else '관상 산림식물 재배 임가', '#b0503a') }}
+  {{ hcard('업종별 1개월 이내 현금 결제 비율', [('버섯', K.pyc_mush), ('식용 임산물 채취', K.pyc_gath), ('기타 수실류', K.pyc_etc), ('산채·약초', K.pyc_herb), ('감', K.pyc_pers), ('밤', K.pyc_chest), ('관상 산림식물', K.pyc_orn)], '%', '선도금·기타는 1% 미만 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('업종별 후불(어음·1개월 이후 현금) 비율', [('관상 산림식물', K.pyl_orn), ('밤', K.pyl_chest), ('산채·약초', K.pyl_herb), ('감', K.pyl_pers), ('기타 수실류', K.pyl_etc), ('버섯', K.pyl_mush), ('식용 임산물 채취', K.pyl_gath)], '%', '오른쪽은 전년 대비', none, '#b0503a') }}
+ </div>
+ <h3 class="sg-sub">귀농 준비 정보 습득 경로 <small>농식품부 귀농귀촌실태조사 · 1순위 응답 · 제공기관은 기관에서 정보를 얻은 가구 중 비율</small></h3>
+ <div class="sg-g">
+  {{ card('rif_family', 'p37', ('인터넷·SNS·유튜브 ' ~ '{:.1f}'.format(K.rif_net.vals[-1]) ~ '% · 가장 많은 경로') if K.rif_net else '가족 또는 지인', '#e0a03a') }}
+  {{ card('rif_ctr', 'p38', '정보 제공기관 1순위 · 귀농귀촌종합센터', '#1c7a45') }}
+  {{ card('rif_rda', 'p39', ('지방자치단체 ' ~ '{:.1f}'.format(K.rif_gov.vals[-1]) ~ '% · 농진청·도 농업기술원·시군 농업기술센터') if K.rif_gov else '농촌진흥청·농업기술센터', '#3a8f6a') }}
+  {{ hcard('귀농 준비 정보 습득 경로', [('가족 또는 지인', K.rif_family), ('정부 귀농귀촌종합센터 등 관련 기관', K.rif_ctr2), ('인터넷(카페·블로그)·SNS·유튜브', K.rif_net), ('TV·신문 등 대중매체', K.rif_tv), ('귀농귀촌 교육', K.rif_edu)], '%', '서적·박람회·기타는 합쳐 1% 남짓 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('귀농 정보 제공기관', [('귀농귀촌종합센터', K.rif_ctr), ('농촌진흥청·농업기술원·농업기술센터', K.rif_rda), ('지방자치단체(시·군)', K.rif_gov)], '%', '대학·민간 기관·기타는 합쳐 2% 안팎 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  </div></details>
 

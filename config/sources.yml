@@ -2970,6 +2970,37 @@ sources:
       - {id: lrl_p1x, title: 일모작 논 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^301$"}, unit: "%", survey: 농가경제조사}
       - {id: lrl_p2x, title: 이모작 논 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^302$"}, unit: "%", survey: 농가경제조사}
       - {id: lrl_fdx, title: 밭 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^303$"}, unit: "%", survey: 농가경제조사}
+      - {id: fog_chest, title: 밤 1ha당 유기질 비료 투입량, tbl: DT_136033_9558, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.29$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_jujube, title: 대추 1ha당 유기질 비료 투입량, tbl: DT_136033_9537, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_pers, title: 감 1ha당 유기질 비료 투입량, tbl: DT_136033_9579, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.28$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_walnut, title: 호두 1ha당 유기질 비료 투입량, tbl: DT_136033_9572, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_omija, title: 오미자 1ha당 유기질 비료 투입량, tbl: DT_136033_11238, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_bokbun, title: 복분자딸기 1ha당 유기질 비료 투입량, tbl: DT_136033_11275, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_rasp, title: 산딸기 1ha당 유기질 비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_corn, title: 산수유 1ha당 유기질 비료 투입량, tbl: DT_136033_11252, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_goji, title: 구기자 1ha당 유기질 비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_hut, title: 헛개나무 1ha당 유기질 비료 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fog_oga, title: 오갈피 1ha당 유기질 비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.26$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_chest, title: 밤 1ha당 무기질 비료 투입량, tbl: DT_136033_9558, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.28$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_jujube, title: 대추 1ha당 무기질 비료 투입량, tbl: DT_136033_9537, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.24$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_pers, title: 감 1ha당 무기질 비료 투입량, tbl: DT_136033_9579, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.27$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_walnut, title: 호두 1ha당 무기질 비료 투입량, tbl: DT_136033_9572, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_omija, title: 오미자 1ha당 무기질 비료 투입량, tbl: DT_136033_11238, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_bokbun, title: 복분자딸기 1ha당 무기질 비료 투입량, tbl: DT_136033_11275, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_rasp, title: 산딸기 1ha당 무기질 비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_corn, title: 산수유 1ha당 무기질 비료 투입량, tbl: DT_136033_11252, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_goji, title: 구기자 1ha당 무기질 비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_hut, title: 헛개나무 1ha당 무기질 비료 투입량, tbl: DT_136033_11317, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fmi_oga, title: 오갈피 1ha당 무기질 비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^(소계|전국평균)$"], codes: {C2: "\\.25$"}, unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_chest, title: 밤 1ha당 질소질 비료 투입량, tbl: DT_136033_9558, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_jujube, title: 대추 1ha당 질소질 비료 투입량, tbl: DT_136033_9537, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_pers, title: 감 1ha당 질소질 비료 투입량, tbl: DT_136033_9579, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_walnut, title: 호두 1ha당 질소질 비료 투입량, tbl: DT_136033_9572, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_omija, title: 오미자 1ha당 질소질 비료 투입량, tbl: DT_136033_11238, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_bokbun, title: 복분자딸기 1ha당 질소질 비료 투입량, tbl: DT_136033_11275, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_rasp, title: 산딸기 1ha당 질소질 비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_goji, title: 구기자 1ha당 질소질 비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: fnn_oga, title: 오갈피 1ha당 질소질 비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

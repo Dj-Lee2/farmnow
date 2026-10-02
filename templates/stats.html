@@ -762,7 +762,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비', 116) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비', 122) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -846,6 +846,12 @@
   {{ card('ffc_omija', 'e48', ('퇴비 등 퇴구비 · 복합비료 ' ~ '{:,.0f}'.format(K.ffm_omija.vals[-1]) ~ 'kg') if K.ffm_omija else '퇴비 등 퇴구비', '#7a6a3a') }}
   {{ hcard('임산물별 퇴구비 투입량', [('복분자딸기', K.ffc_bokbun), ('산수유', K.ffc_corn), ('구기자', K.ffc_goji), ('감', K.ffc_pers), ('오미자', K.ffc_omija), ('호두', K.ffc_walnut), ('대추', K.ffc_jujube), ('산딸기', K.ffc_rasp), ('오갈피', K.ffc_oga), ('헛개나무', K.ffc_hut), ('밤', K.ffc_chest)], 'kg', '1ha당 퇴비 등 퇴구비 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('임산물별 복합비료 투입량', [('산딸기', K.ffm_rasp), ('산수유', K.ffm_corn), ('감', K.ffm_pers), ('호두', K.ffm_walnut), ('오미자', K.ffm_omija), ('대추', K.ffm_jujube), ('복분자딸기', K.ffm_bokbun), ('구기자', K.ffm_goji), ('밤', K.ffm_chest), ('헛개나무', K.ffm_hut), ('오갈피', K.ffm_oga)], 'kg', '1ha당 복합비료 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+  {{ card('fog_bokbun', 'e58', ('퇴비·가축분 등 유기질 합 · 무기질 ' ~ '{:,.0f}'.format(K.fmi_bokbun.vals[-1]) ~ 'kg') if K.fmi_bokbun else '퇴비·가축분 등 유기질 합', '#7a6a3a') }}
+  {{ card('fog_rasp', 'e59', ('퇴비·가축분 등 유기질 합 · 무기질 ' ~ '{:,.0f}'.format(K.fmi_rasp.vals[-1]) ~ 'kg') if K.fmi_rasp else '퇴비·가축분 등 유기질 합', '#7a6a3a') }}
+  {{ card('fog_chest', 'e60', ('퇴비·가축분 등 유기질 합 · 무기질 ' ~ '{:,.0f}'.format(K.fmi_chest.vals[-1]) ~ 'kg') if K.fmi_chest else '퇴비·가축분 등 유기질 합', '#7a6a3a') }}
+  {{ hcard('임산물별 유기질 비료 투입량', [('복분자딸기', K.fog_bokbun), ('산딸기', K.fog_rasp), ('구기자', K.fog_goji), ('산수유', K.fog_corn), ('감', K.fog_pers), ('오미자', K.fog_omija), ('오갈피', K.fog_oga), ('대추', K.fog_jujube), ('호두', K.fog_walnut), ('헛개나무', K.fog_hut), ('밤', K.fog_chest)], 'kg', '1ha당 퇴구비·계분·우분·돈분·기타 합 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('임산물별 무기질 비료 투입량', [('복분자딸기', K.fmi_bokbun), ('산딸기', K.fmi_rasp), ('산수유', K.fmi_corn), ('감', K.fmi_pers), ('오미자', K.fmi_omija), ('호두', K.fmi_walnut), ('대추', K.fmi_jujube), ('구기자', K.fmi_goji), ('밤', K.fmi_chest), ('헛개나무', K.fmi_hut), ('오갈피', K.fmi_oga)], 'kg', '1ha당 질소·인산·가리·복합·토양개량제 등 실물 무게 합 · 오른쪽은 전년 대비', none, '#b04a07') }}
+  {{ hcard('임산물별 질소질 비료 투입량', [('오미자', K.fnn_omija), ('산딸기', K.fnn_rasp), ('대추', K.fnn_jujube), ('호두', K.fnn_walnut), ('감', K.fnn_pers), ('구기자', K.fnn_goji), ('복분자딸기', K.fnn_bokbun), ('밤', K.fnn_chest), ('오갈피', K.fnn_oga)], 'kg', '1ha당 요소 등 단비 질소질(복합비료 제외) · 오른쪽은 전년 대비', none, '#b07a3a') }}
  </div>
  <h3 class="sg-sub">산나물·약초 비료·농약비 <small>1ha당 · 전국 평균 · 산림청 임산물생산조사</small></h3>
  <div class="sg-g">

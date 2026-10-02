@@ -1750,6 +1750,37 @@ sources:
       - {id: rjw_crf, title: 귀농 후 근로소득 직업 기능원 및 관련기능 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^기능원"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rjw_sale, title: 귀농 후 근로소득 직업 판매 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^판매 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rjw_mch, title: 귀농 후 근로소득 직업 장치·기계 조작 및 조립 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^장치"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rinv_land0, title: 귀농 농지 초기 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^농지$", "^초기 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rinv_land1, title: 귀농 농지 추가 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^농지$", "^추가 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rinv_fac0, title: 귀농 시설 초기 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^시설$", "^초기 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rinv_fac1, title: 귀농 시설 추가 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^시설$", "^추가 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rinv_live0, title: 귀농 가축 초기 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^가축$", "^초기 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rinv_live1, title: 귀농 가축 추가 투자액(평균), tbl: DT_114055_A022, org: "114", itm: "^평균$", want: ["^가축$", "^추가 투자액$"], unit: 만원, survey: 귀농귀촌실태조사}
+      - {id: rnp_info, title: 귀농 정착에 가장 필요한 정책 농지·주택·일자리 정보 제공, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^농지/주택/일자리"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnp_farm, title: 귀농 정착에 가장 필요한 정책 농지·농업시설 자금 및 임대지원, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^농지/농업시설"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnp_house, title: 귀농 정착에 가장 필요한 정책 주택 구입·임대 자금지원, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^주택구입"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnp_edu, title: 귀농 정착에 가장 필요한 정책 귀농귀촌 교육, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^귀농 귀촌 교육$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnp_tax, title: 귀농 정착에 가장 필요한 정책 세제 지원, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^세제 지원$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnp_life, title: 귀농 정착에 가장 필요한 정책 생활 관련 지원, tbl: DT_114055_A060, org: "114", itm: "^성공적인", want: ["^1순위$", "^생활 관련 지원"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfs_inh, title: 귀농 처음 농사 시작 형태 토지 승계·부모와 함께 경영, tbl: DT_114055_A014, org: "114", itm: "^처음 농사", want: ["^1순위$", "^토지를 승계"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfs_buy, title: 귀농 처음 농사 시작 형태 농지 구입, tbl: DT_114055_A014, org: "114", itm: "^처음 농사", want: ["^1순위$", "^농지를 구입"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfs_rent, title: 귀농 처음 농사 시작 형태 농지 임차, tbl: DT_114055_A014, org: "114", itm: "^처음 농사", want: ["^1순위$", "^농지를 임차"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfs_gdn, title: 귀농 처음 농사 시작 형태 텃밭 가꾸는 정도, tbl: DT_114055_A014, org: "114", itm: "^처음 농사", want: ["^1순위$", "^텃밭"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_ctr, title: 귀농 정책 수혜 비율 귀농귀촌종합센터 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^귀농귀촌종합센터", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_house, title: 귀농 정책 수혜 비율 주택·농업시설 자금지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^주택 및 농업시설", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_young, title: 귀농 정책 수혜 비율 청년농업인 영농정착지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^청년농업인", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_stay, title: 귀농 정책 수혜 비율 체류형 귀농귀촌 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^체류형", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_tax, title: 귀농 정책 수혜 비율 세제 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^세제 지원", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_info, title: 귀농 정책 수혜 비율 지자체 정보제공, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정보제공", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_fund, title: 귀농 정책 수혜 비율 지자체 정착자금 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정착자금", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_fac, title: 귀농 정책 수혜 비율 지자체 영농시설·기계 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^영농시설", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_life, title: 귀농 정책 수혜 비율 지자체 생활 관련 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^생활 관련", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpb_rel, title: 귀농 정책 수혜 비율 지자체 관계형성 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^관계형성", "^수혜$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rph_ctr, title: 귀농 정책 도움 됨 이상 비율 귀농귀촌종합센터 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^귀농귀촌종합센터", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rph_tax, title: 귀농 정책 도움 됨 이상 비율 세제 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^세제 지원", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rph_info, title: 귀농 정책 도움 됨 이상 비율 지자체 정보제공, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정보제공", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rph_fund, title: 귀농 정책 도움 됨 이상 비율 지자체 정착자금 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정착자금", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rph_fac, title: 귀농 정책 도움 됨 이상 비율 지자체 영농시설·기계 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^영농시설", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

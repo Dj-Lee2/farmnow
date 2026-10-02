@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업', 107) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도', 117) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -246,6 +246,19 @@
   {{ card('rjw_lab', 'p57', ('서비스 ' ~ '{:.1f}'.format(K.rjw_svc.vals[-1]) ~ '% · 사무 ' ~ '{:.1f}'.format(K.rjw_off.vals[-1]) ~ '%') if K.rjw_svc and K.rjw_off else '근로소득 가구 중', '#b0503a') }}
   {{ hcard('귀농 교육을 받은 기관', [('지자체(농업기술센터)', K.red_loc), ('농촌진흥청·농업기술원', K.red_rda), ('귀농귀촌종합센터 등', K.red_ctr), ('민간 교육기관', K.red_priv), ('농업계 대학·고교', K.red_univ)], '%', '기타 1% 미만 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
   {{ hcard('귀농 후 근로소득을 얻은 직업', [('단순노무', K.rjw_lab), ('서비스', K.rjw_svc), ('사무', K.rjw_off), ('기능원', K.rjw_crf), ('판매', K.rjw_sale), ('장치·기계 조작', K.rjw_mch)], '%', '여러 직업 응답 포함(합 100% 넘음) · 관리자·전문가 각 2% 안팎 · 오른쪽은 전년 대비', none, '#b0503a') }}
+ </div>
+ <h3 class="sg-sub">귀농 투자액·정착 정책 <small>농식품부 귀농귀촌실태조사 · 투자액은 응답 가구 평균, 정책은 1순위 응답 비율</small></h3>
+ <div class="sg-g">
+  {{ card('rinv_land0', 'p58', ('귀농 뒤 추가 투자 ' ~ K.rinv_land1.vals[-1]|big ~ '만 원') if K.rinv_land1 else '농지 초기 투자액', '#1c7a45') }}
+  {{ card('rinv_fac0', 'p59', ('귀농 뒤 추가 투자 ' ~ K.rinv_fac1.vals[-1]|big ~ '만 원') if K.rinv_fac1 else '시설 초기 투자액', '#e0a03a') }}
+  {{ card('rinv_live0', 'p60', ('귀농 뒤 추가 투자 ' ~ K.rinv_live1.vals[-1]|big ~ '만 원') if K.rinv_live1 else '가축 초기 투자액', '#b0503a') }}
+  {{ card('rnp_info', 'p61', ('농지·시설 자금 ' ~ '{:.1f}'.format(K.rnp_farm.vals[-1]) ~ '% · 세제 지원 ' ~ '{:.1f}'.format(K.rnp_tax.vals[-1]) ~ '%') if K.rnp_farm and K.rnp_tax else '1순위 응답', '#3a8f6a') }}
+  {{ card('rfs_inh', 'p62', ('농지 구입 ' ~ '{:.1f}'.format(K.rfs_buy.vals[-1]) ~ '% · 임차 ' ~ '{:.1f}'.format(K.rfs_rent.vals[-1]) ~ '%') if K.rfs_buy and K.rfs_rent else '1순위 응답', '#1c7a45') }}
+  {{ card('rpb_ctr', 'p63', ('받은 가구 중 도움 됨 이상 ' ~ '{:.1f}'.format(K.rph_ctr.vals[-1]) ~ '%') if K.rph_ctr else '응답 가구 중', '#7a5cc2') }}
+  {{ hcard('성공적인 귀농 정착에 가장 필요한 정책', [('농지·주택·일자리 정보', K.rnp_info), ('농지·시설 자금·임대', K.rnp_farm), ('주택 구입·임대 자금', K.rnp_house), ('귀농귀촌 교육', K.rnp_edu), ('세제 지원', K.rnp_tax), ('생활 관련 지원', K.rnp_life)], '%', '1순위 응답 · 홍보·인턴십·체류형·관계형성·상담은 각 2% 안팎 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('처음 농사를 시작한 형태', [('토지 승계·부모와 경영', K.rfs_inh), ('농지 구입', K.rfs_buy), ('농지 임차', K.rfs_rent), ('텃밭 정도로 시작', K.rfs_gdn)], '%', '1순위 응답 · 실습·동업·일용 노동은 각 1% 미만 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀농 정책을 받은 가구 비율', [('귀농귀촌종합센터', K.rpb_ctr), ('세제 지원', K.rpb_tax), ('지자체 시설·기계', K.rpb_fac), ('지자체 정착자금', K.rpb_fund), ('지자체 정보제공', K.rpb_info), ('주택·농업시설 자금', K.rpb_house), ('청년농 영농정착', K.rpb_young), ('지자체 관계형성', K.rpb_rel), ('체류형 지원', K.rpb_stay), ('지자체 생활 지원', K.rpb_life)], '%', '응답 가구 전체 중 · 지자체 정보제공은 2023년 37.0%에서 크게 줄어듦 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+  {{ hcard('받은 가구 중 도움 됨 이상', [('지자체 시설·기계', K.rph_fac), ('지자체 정착자금', K.rph_fund), ('귀농귀촌종합센터', K.rph_ctr), ('지자체 정보제공', K.rph_info), ('세제 지원', K.rph_tax)], '%', '도움 됨 + 매우 도움 됨 · 오른쪽은 전년 대비', none, '#e0a03a') }}
  </div>
  </div></details>
 

@@ -1718,6 +1718,38 @@ sources:
       - {id: rjb_job, title: 귀농 후 겸업 농외소득 종류 일반 직장 취업(정규직), tbl: DT_114055_A072, org: "114", itm: "^겸업소득 항목$", want: ["^일반 직장 취업"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rjb_temp, title: 귀농 후 겸업 농외소득 종류 임시직, tbl: DT_114055_A072, org: "114", itm: "^겸업소득 항목$", want: ["^임시직"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rjb_day, title: 귀농 후 겸업 농외소득 종류 비농업 부문 일용직, tbl: DT_114055_A072, org: "114", itm: "^겸업소득 항목$", want: ["^비농업 부문 일용직"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: ras_bank, title: 귀농 농지 확보 방법 농지은행, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^농지은행$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: ras_deal, title: 귀농 농지 확보 방법 개인 거래(부동산중개 포함), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^개인 거래"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: ras_inh, title: 귀농 농지 확보 방법 승계(상속·공동경작), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^승계"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rai_friend, title: 귀농 농지 정보 얻은 곳 지인(친척·친구 등), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^지인"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rai_head, title: 귀농 농지 정보 얻은 곳 이장, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^이장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rai_loc, title: 귀농 농지 정보 얻은 곳 지자체(귀농귀촌지원센터 등), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^지자체"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rai_nh, title: 귀농 농지 정보 얻은 곳 지역 농협, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^지역 농협$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rad_none, title: 귀농 농지 확보 어려움 없었음, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^어려움 없었음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rad_info, title: 귀농 농지 확보 어려움 농지 정보 부족, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^농지에 대한 정보가 부족해서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rad_cost, title: 귀농 농지 확보 어려움 농지가격이 비쌈(자금 부족), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^농지가격이 비싸서"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rat_pre, title: 귀농 전에 농지를 확보한 가구, tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^귀농 전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rat_prem, title: 귀농 전 농지 확보 평균 시기(귀농 몇 개월 전), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^귀농 전 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: rat_postm, title: 귀농 후 농지 확보 평균 시기(귀농 몇 개월 후), tbl: DT_114055_A021, org: "114", itm: "^농지 확보$", want: ["^귀농 후 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: rex_no, title: 향후 영농규모 확대 계획 없음, tbl: DT_114055_A026, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rex_wait, title: 향후 영농규모 확대 영농상황 보고 판단, tbl: DT_114055_A026, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^아직까진 계획이 없으나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rex_fund, title: 향후 영농규모 확대 계획 있으나 자금부족 등으로 보류, tbl: DT_114055_A026, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^계획은 있으나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rex_act, title: 향후 영농규모 적극 확대, tbl: DT_114055_A026, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^적극적으로"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rld_paddy, title: 귀농 가구 논 보유 비율, tbl: DT_114055_A018, org: "114", itm: "^임차 및 자작$", want: ["^논$", "^보유$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rld_field, title: 귀농 가구 밭 보유 비율, tbl: DT_114055_A018, org: "114", itm: "^임차 및 자작$", want: ["^밭$", "^보유$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rld_orch, title: 귀농 가구 과수원 보유 비율, tbl: DT_114055_A018, org: "114", itm: "^임차 및 자작$", want: ["^과수원$", "^보유$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_ctr, title: 귀농 교육 받은 기관 귀농귀촌종합센터 등, tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^귀농귀촌종합센터"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_rda, title: 귀농 교육 받은 기관 농촌진흥청·농업기술원, tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^농촌진흥청"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_loc, title: 귀농 교육 받은 기관 지자체(농업기술센터), tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^지방자치"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_univ, title: 귀농 교육 받은 기관 농업계 대학·고등학교, tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^농업계 대학"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_priv, title: 귀농 교육 받은 기관 민간 교육기관, tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^민간 교육기관$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: red_hrs, title: 귀농 교육 평균 교육시간, tbl: DT_114055_A055, org: "114", itm: "^귀농귀촌 교육/인턴십 이수$", want: ["^평균 교육시간$"], unit: 시간, survey: 귀농귀촌실태조사}
+      - {id: rjw_lab, title: 귀농 후 근로소득 직업 단순노무 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^단순노무"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjw_svc, title: 귀농 후 근로소득 직업 서비스 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^서비스 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjw_off, title: 귀농 후 근로소득 직업 사무 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^사무 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjw_crf, title: 귀농 후 근로소득 직업 기능원 및 관련기능 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^기능원"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjw_sale, title: 귀농 후 근로소득 직업 판매 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^판매 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjw_mch, title: 귀농 후 근로소득 직업 장치·기계 조작 및 조립 종사자, tbl: DT_114055_A073, org: "114", itm: "^근로소득 직무$", want: ["^장치"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -6,7 +6,7 @@
 {% macro card(id, uid, note=none, col='#1c7a45', dv=none) %}{% set s = kstat.get(id) %}{% if s %}{% set lab = s.years|map('prd')|list %}
  <section class="kp4 sg-c"><div class="t">{{ s.title }}{{ link(s) }}</div>
   <div class="v">{{ num(s.vals[-1], s.unit) }} {{ dv if dv is not none else delta(s) }}</div>
-  <div class="s"><span>{{ note or (s.survey ~ ' · ' ~ ('전 분기 대비' if s.se == 'Q' else '전월 대비' if s.se == 'M' else '전년 대비')) }}</span><span>{{ lab[-1] }}</span></div>
+  <div class="s"><span>{{ note or (s.survey ~ ' · ' ~ ('전 분기 대비' if s.se == 'Q' else '전월 대비' if s.se == 'M' else '2년 전 대비' if s.se == 'F' else '전년 대비')) }}</span><span>{{ lab[-1] }}</span></div>
   <div class="sg-ch">{{ s.vals|mini(uid, col, lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div>
  </section>{% endif %}{% endmacro %}
 {% macro rcard(title, a, b, uid, note, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * 100) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set d = ((r[-1] - r[-2])|round(1) + 0.0) if r|length > 1 else none %}
@@ -344,7 +344,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점', 207) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점·농업인 업무상 손상·질병', 219) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -639,6 +639,21 @@
   {{ hcard('귀농 가구가 주민과 주고받는 도움', [('인간적인 교류', K.rnh_human), ('영농기술·장비 도움', K.rnh_farm), ('정보 교류', K.rnh_info), ('이웃에게 경제적 도움', K.rnh_econ), ('마을 일·모임 참여', K.rnh_vil)], '%', '1순위 · 마을 공동시설 이용 1.2%·기타 0.2% · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('귀농 가구가 본 교육 개선점', [('다양한 교육 콘텐츠', K.rei_cont), ('수준별 강좌', K.rei_lvl), ('현장 실습 연계', K.rei_field), ('지리적 접근성', K.rei_near), ('강사 전문성', K.rei_pro), ('교육 시간대 다양화', K.rei_time)], '%', '귀농 가구 3,000명 · 교육 비용 지원 6.7%·온라인 교육 2.6% · 오른쪽은 전년 대비', none, '#3a8f6a') }}
   {{ hcard('귀촌 가구가 본 교육 개선점', [('다양한 교육 콘텐츠', K.cei_cont), ('수준별 강좌', K.cei_lvl), ('현장 실습 연계', K.cei_field), ('지리적 접근성', K.cei_near), ('강사 전문성', K.cei_pro), ('교육 시간대 다양화', K.cei_time)], '%', '귀촌 가구 3,000명 · 교육 비용 지원 7.3%·온라인 교육 5.8% · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">농업인 업무상 손상·질병 <small>농촌진흥청 농업인 업무상 손상조사(홀수 해)·질병조사(짝수 해) · 2년마다 조사 · 손상 발생률은 농업인 100명당 1년간 업무상 손상자 · 유병률은 업무상 질병자 비율 · 오른쪽 변화는 직전 조사(2년 전) 대비</small></h3>
+ <div class="sg-g">
+  {{ card('inj_rate', 'p94', ('업무상 손상 농업인 ' ~ K.inj_n.vals[-1]|big ~ '명 · ' ~ K.inj_rate.years[0] ~ '년 ' ~ '{:.1f}'.format(K.inj_rate.vals[0]) ~ '%') if K.inj_n else none, '#b0503a') }}
+  {{ card('inj_n', 'p95', ('손상 건수 ' ~ K.inj_t_all.vals[-1]|big ~ '건 · 2년 전 대비') if K.inj_t_all else none, '#c0763a') }}
+  {{ rcard('업무상 손상 중 넘어짐(전도) 비중', K.inj_t_slip, K.inj_t_all, 'p96', ('넘어짐 ' ~ K.inj_t_slip.vals[-1]|big ~ '건 · 손상 형태 1위') if K.inj_t_slip else '', '#e0a03a') }}
+  {{ card('dis_rate', 'p97', ('업무상 질병 농업인 ' ~ K.dis_n.vals[-1]|big ~ '명 · ' ~ K.dis_rate.years[0] ~ '년 ' ~ '{:.1f}'.format(K.dis_rate.vals[0]) ~ '%') if K.dis_n else none, '#7a5cc2') }}
+  {{ card('dis_n', 'p98', none, '#5c6bc2') }}
+  {{ rcard('업무상 질병자 중 근골격계 질환', K.dis_k_msk, K.dis_n, 'p99', ('근골격계 ' ~ K.dis_k_msk.vals[-1]|big ~ '명 · 허리·어깨·무릎 등') if K.dis_k_msk else '', '#3a8f6a') }}
+  {{ hcard('성별·연령별 업무상 손상 발생률', [('남자', K.inj_s_m), ('여자', K.inj_s_f), ('50세 미만', K.inj_a_u50), ('50대', K.inj_a_a50), ('60대', K.inj_a_a60), ('70세 이상', K.inj_a_a70)], '%', '농업인 100명당 손상자 · 나이가 많을수록 높음 · 오른쪽은 2년 전 대비', none, '#b0503a') }}
+  {{ hcard('농업기계·농약 사용 여부별 손상 발생률', [('농업기계 사용', K.inj_mc_y), ('농업기계 사용 안 함', K.inj_mc_n), ('농약 사용', K.inj_ps_y), ('농약 사용 안 함', K.inj_ps_n)], '%', '농약 사용은 직접 살포·보조 살포·대행 맡김 합 · 오른쪽은 2년 전 대비', none, '#c0763a') }}
+  {{ hcard('도별 업무상 손상 발생률', [('충청북도', K.inj_r_cb), ('제주특별자치도', K.inj_r_jj), ('전라남도', K.inj_r_jn), ('경상남도', K.inj_r_gn), ('경상북도', K.inj_r_gb), ('전북특별자치도', K.inj_r_jb), ('경기도', K.inj_r_gg), ('강원특별자치도', K.inj_r_gw), ('충청남도', K.inj_r_cn)], '%', '9개 도 농업인 · 오른쪽은 2년 전 대비', none, '#e0a03a') }}
+  {{ hcard('업무상 손상 발생 형태', [('넘어짐(전도)', K.inj_t_slip), ('추락', K.inj_t_fall), ('무리한 힘·동작', K.inj_t_strain), ('충돌·접촉', K.inj_t_hit), ('승용 농기계 단독 운전사고', K.inj_t_mach), ('끼임·감김(협착)', K.inj_t_pinch), ('낙하·비래', K.inj_t_drop)], '건', '괄호는 전체 손상 건수 중 비중 · 이상온도·동물·교통사고 등 나머지 · 오른쪽은 2년 전 대비', K.inj_t_all.vals[-1] if K.inj_t_all else none, '#b0503a') }}
+  {{ hcard('농업기계별 손상 비율', [('경운기', K.inj_mm_til), ('예취기', K.inj_mm_mow), ('트랙터', K.inj_mm_trac), ('관리기', K.inj_mm_cult)], '%', '농업기계 관련 손상 중 · 기타 기계 38.2%(2025) · 오른쪽은 2년 전 대비', none, '#7a5cc2') }}
+  {{ hcard('농작업 관련 질병 종류', [('근골격계 질환', K.dis_k_msk), ('온열질환', K.dis_k_heat), ('피부 질환', K.dis_k_skin), ('순환기계 질환', K.dis_k_circ), ('호흡기계 질환', K.dis_k_resp)], '명', '괄호는 업무상 질병자 중 비중 · 온열질환은 2년 새 2배 이상 · 오른쪽은 2년 전 대비', K.dis_n.vals[-1] if K.dis_n else none, '#3a8f6a') }}
  </div>
  </div></details>
 

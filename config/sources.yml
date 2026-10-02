@@ -3001,6 +3001,46 @@ sources:
       - {id: fnn_rasp, title: 산딸기 1ha당 질소질 비료 투입량, tbl: DT_136033_11290, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: fnn_goji, title: 구기자 1ha당 질소질 비료 투입량, tbl: DT_136033_11218, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
       - {id: fnn_oga, title: 오갈피 1ha당 질소질 비료 투입량, tbl: DT_136033_11307, org: "136", itm: "^값$", want: ["^질소질$", "^(소계|전국평균)$"], unit: kg, survey: 임산물생산비조사}
+      - {id: inj_rate, title: 농업인 업무상 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: [], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_n, title: 업무상 손상 농업인 수, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상자 수$", want: [], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: inj_s_m, title: 남자 농업인 업무상 손상 발생률, tbl: DT_14303_E1402, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^남자$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_s_f, title: 여자 농업인 업무상 손상 발생률, tbl: DT_14303_E1402, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^여자$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_a_u50, title: 50세 미만 농업인 업무상 손상 발생률, tbl: DT_14303_E1403, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^50세 미만$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_a_a50, title: 50대 농업인 업무상 손상 발생률, tbl: DT_14303_E1403, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^50대$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_a_a60, title: 60대 농업인 업무상 손상 발생률, tbl: DT_14303_E1403, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^60대$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_a_a70, title: 70세 이상 농업인 업무상 손상 발생률, tbl: DT_14303_E1403, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^70세 이상$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_mc_y, title: 농업기계 사용 농업인 손상 발생률, tbl: DT_14303_E1406, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^사용함$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_mc_n, title: 농업기계 사용 안 함 농업인 손상 발생률, tbl: DT_14303_E1406, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^사용 안함$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ps_y, title: 농약 사용 농업인 손상 발생률, tbl: DT_14303_E1407, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^사용함$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_ps_n, title: 농약 사용 안 함 농업인 손상 발생률, tbl: DT_14303_E1407, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^사용 안함$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_gg, title: 경기도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(경기도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_gw, title: 강원특별자치도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(강원특별자치도|강원도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_cb, title: 충청북도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(충청북도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_cn, title: 충청남도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(충청남도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_jb, title: 전북특별자치도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(전북특별자치도|전라북도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_jn, title: 전라남도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(전라남도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_gb, title: 경상북도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(경상북도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_gn, title: 경상남도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(경상남도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_r_jj, title: 제주특별자치도 농업인 손상 발생률, tbl: DT_14303_E1401, org: "143", se: F, periods: 5, itm: "^업무상 손상 발생률$", want: ["^(제주특별자치도)$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_t_all, title: 농업인 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: [], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_fall, title: 추락 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^추락$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_slip, title: 넘어짐(전도) 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^전도$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_hit, title: 충돌·접촉 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^충돌·접촉$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_drop, title: 낙하·비래 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^낙하·비래$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_pinch, title: 끼임·감김(협착) 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^협착·감김$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_strain, title: 무리한 힘·동작 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^신체반응 과도한 힘·동작$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_t_mach, title: 승용 농기계 단독 운전사고 업무상 손상 건수, tbl: DT_14303_E1427, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^승용농업기계 단독 운전사고$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_mm_til, title: 경운기 관련 손상 비율, tbl: DT_14303_E1430, org: "143", se: F, periods: 5, itm: "^업무상 손상률$", want: ["^경운기$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_mm_trac, title: 트랙터 관련 손상 비율, tbl: DT_14303_E1430, org: "143", se: F, periods: 5, itm: "^업무상 손상률$", want: ["^트랙터$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_mm_cult, title: 관리기 관련 손상 비율, tbl: DT_14303_E1430, org: "143", se: F, periods: 5, itm: "^업무상 손상률$", want: ["^관리기$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: inj_mm_mow, title: 예취기 관련 손상 비율, tbl: DT_14303_E1430, org: "143", se: F, periods: 5, itm: "^업무상 손상률$", want: ["^예취기$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: dis_rate, title: 농업인 업무상 질병 유병률, tbl: DT_14303_E1301, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: [], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_n, title: 업무상 질병 농업인 수, tbl: DT_14303_E1301, org: "143", se: F, periods: 5, itm: "^업무상 질병자수$", want: [], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_k_msk, title: 농작업 관련 근골격계 질환 환자 수, tbl: DT_14303_E1534, org: "143", se: F, periods: 5, itm: "^농작업 관련 질병자수$", want: ["^근골격계 질환$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_k_circ, title: 농작업 관련 순환기계 질환 환자 수, tbl: DT_14303_E1534, org: "143", se: F, periods: 5, itm: "^농작업 관련 질병자수$", want: ["^순환기계 질환$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_k_resp, title: 농작업 관련 호흡기계 질환 환자 수, tbl: DT_14303_E1534, org: "143", se: F, periods: 5, itm: "^농작업 관련 질병자수$", want: ["^호흡기계 질환$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_k_heat, title: 농작업 관련 온열질환 환자 수, tbl: DT_14303_E1534, org: "143", se: F, periods: 5, itm: "^농작업 관련 질병자수$", want: ["^온열질환$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dis_k_skin, title: 농작업 관련 피부 질환 환자 수, tbl: DT_14303_E1534, org: "143", se: F, periods: 5, itm: "^농작업 관련 질병자수$", want: ["^피부 질환$"], unit: 명, survey: 농업인 업무상 질병조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

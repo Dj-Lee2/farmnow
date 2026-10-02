@@ -3379,6 +3379,33 @@ sources:
       - {id: dis_pe_aux, title: 농약 살포를 보조하는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^보조 살포$"], unit: "%", survey: 농업인 업무상 질병조사}
       - {id: dis_pe_mix, title: 농약을 상황에 따라 직접·보조 살포하는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^상황에 따라"], unit: "%", survey: 농업인 업무상 질병조사}
       - {id: dis_pe_out, title: 농약 살포를 남·대행·무인살포에 맡기는 농업인 업무상 질병 유병률, tbl: DT_14303_E1307, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^다른 사람 또는 대행"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: mzr_avg, title: 논벼 평균 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_till, title: 논벼 경운 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^경운$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_level, title: 논벼 정지 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^정지$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_plant, title: 논벼 이앙 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^이앙$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_spray, title: 논벼 방제 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^방제$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_harv, title: 논벼 수확 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^수확$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzr_dry, title: 논벼 건조 기계화율, tbl: DT_143004N_024, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^건조$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_avg, title: 밭작물 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_pot, title: 감자 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^감자$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_soy, title: 콩 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^콩$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_swp, title: 고구마 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^고구마$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_rad, title: 무 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^무$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_cab, title: 배추 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^배추$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_gar, title: 마늘 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^마늘$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_oni, title: 양파 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^양파$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_pep, title: 고추 평균 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^고추$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_till, title: 밭작물 경운·정지 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$", "^경운·정지$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_plant, title: 밭작물 파종·정식 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$", "^파종·정식$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_mulch, title: 밭작물 비닐 피복 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$", "^비닐 피복$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_spray, title: 밭작물 방제 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$", "^방제$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzf_harv, title: 밭작물 수확 기계화율, tbl: DT_143004N_025, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^평균$", "^수확$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_ses, title: 참깨 평균 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^참깨$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_gin, title: 인삼 평균 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^인삼$", "^평균$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_sesh, title: 참깨 수확 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^참깨$", "^수확$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_ginh, title: 인삼 수확 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^인삼$", "^수확$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_sesp, title: 참깨 파종·정식 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^참깨$", "^파종·정식$"], unit: "%", survey: 농업기계 이용실태조사}
+      - {id: mzs_ginp, title: 인삼 파종·정식 기계화율(주산지), tbl: DT_143004N_027, org: "143", se: F, periods: 5, itm: "^기계화율$", want: ["^인삼$", "^파종·정식$"], unit: "%", survey: 농업기계 이용실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

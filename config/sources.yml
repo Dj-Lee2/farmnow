@@ -3652,6 +3652,29 @@ sources:
       - {id: flr_full_pad, title: "논 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^논$", "^예$"], unit: "%", survey: 농지임대차실태조사}
       - {id: flr_full_fld, title: "밭 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^밭$", "^예$"], unit: "%", survey: 농지임대차실태조사}
       - {id: flr_full_orc, title: "과수원 임차 농업인 전업 비율", tbl: DT_114062_015, org: "114", periods: 2, itm: "^전겸업 여부$", want: ["^과수$", "^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: cinv_land0, title: 귀촌 농지 초기 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^농지$", "^초기 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cinv_land1, title: 귀촌 농지 추가 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^농지$", "^추가 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cinv_fac0, title: 귀촌 시설 초기 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^시설$", "^초기 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cinv_fac1, title: 귀촌 시설 추가 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^시설$", "^추가 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cinv_live0, title: 귀촌 가축 초기 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^가축$", "^초기 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: cinv_live1, title: 귀촌 가축 추가 투자액(평균), tbl: DT_114055_B035, org: "114", itm: "^평균$", want: ["^가축$", "^추가 투자액$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: csr_nh, title: 귀촌 가구 농산물 주 판매경로 지역 농협, tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^지역 농협$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_corp, title: 귀촌 가구 농산물 주 판매경로 영농 법인·조합, tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^영농 법인/영농 조합$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_mart, title: 귀촌 가구 농산물 주 판매경로 대형마트 등 수의매매, tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^대형마트 등과 수의매매$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_pos, title: 귀촌 가구 농산물 주 판매경로 밭떼기(포전매매), tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^밭떼기"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_direct, title: 귀촌 가구 농산물 주 판매경로 소비자 직거래(인터넷 등), tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^소비자 직거래"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_local, title: 귀촌 가구 농산물 주 판매경로 로컬푸드매장, tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^로컬푸드매장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_whs, title: 귀촌 가구 농산물 주 판매경로 농산물 공판장, tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^농산물 공판장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csr_none, title: 귀촌 가구 농산물 주 판매경로 판매하지 않음(자가소비 등), tbl: DT_114055_B038, org: "114", periods: 1, itm: "^농산물 주 판매경로$", want: ["^판매하지 않음"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cex_no, title: 귀촌 가구 향후 영농규모 계획 없음, tbl: DT_114055_B039, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^전혀 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cex_wait, title: 귀촌 가구 향후 영농규모 영농상황 보고 판단, tbl: DT_114055_B039, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^아직까진 계획이 없으나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cex_fund, title: 귀촌 가구 향후 영농규모 계획 있으나 자금부족 등으로 보류, tbl: DT_114055_B039, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^계획은 있으나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cex_act, title: 귀촌 가구 향후 영농규모 적극 확대, tbl: DT_114055_B039, org: "114", itm: "^향후 영농규모 확대 계획$", want: ["^적극적으로"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cld_paddy, title: 귀촌 가구 논 보유 비율, tbl: DT_114055_B031, org: "114", itm: "^임차 및 자작$", want: ["^논$", "^있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cld_field, title: 귀촌 가구 밭 보유 비율, tbl: DT_114055_B031, org: "114", itm: "^임차 및 자작$", want: ["^밭$", "^있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cld_orch, title: 귀촌 가구 과수원 보유 비율, tbl: DT_114055_B031, org: "114", itm: "^임차 및 자작$", want: ["^과수원$", "^있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfc_prod, title: 귀촌 가구 생산(재배)시설 보유 비율, tbl: DT_114055_B033, org: "114", itm: "^보유$", want: ["^생산\\(재배\\)시설$", "^시설 보유 여부$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfc_store, title: 귀촌 가구 저장시설 보유 비율, tbl: DT_114055_B033, org: "114", itm: "^보유$", want: ["^저장시설$", "^시설 보유 여부$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -2778,6 +2778,39 @@ sources:
       - {id: cem_emp, title: 농업법인 상용근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^상용근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
       - {id: cem_tmp, title: 농업법인 임시·일용 근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^임시 및 일용 근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
       - {id: cem_for, title: 농업법인 외국인 근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^외국인 근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      # 농업법인 연령별 종사자(DT_1E5207B)·상시종사자 규모별 법인수(DT_1E5208A)·인력 채용 계획(DT_1E5209A)·재배면적(DT_1E5211A)·가축 사육(DT_1E5213B)·설비투자(DT_1E206A)
+      - {id: cea_0, title: 농업법인 20대 이하 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^20대 이하$"], unit: 명, survey: 농업법인조사}
+      - {id: cea_1, title: 농업법인 30대 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^30대$"], unit: 명, survey: 농업법인조사}
+      - {id: cea_2, title: 농업법인 40대 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^40대$"], unit: 명, survey: 농업법인조사}
+      - {id: cea_3, title: 농업법인 50대 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^50대$"], unit: 명, survey: 농업법인조사}
+      - {id: cea_4, title: 농업법인 60대 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^60대$"], unit: 명, survey: 농업법인조사}
+      - {id: cea_5, title: 농업법인 70대 이상 종사자, tbl: DT_1E5207B, org: "114", itm: "^연령별 종사자수$", want: ["^전국$", "^계$", "^70대 이상$"], unit: 명, survey: 농업법인조사}
+      - {id: csz_all, title: 상시종사자 규모 집계 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^계$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: csz_1, title: 상시종사자 1인 이하 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^1인 이하$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: csz_2, title: 상시종사자 2~4인 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^2~4인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: csz_3, title: 상시종사자 5~9인 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^5~9인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: csz_4, title: 상시종사자 10~49인 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^10~49인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: csz_5, title: 상시종사자 50인 이상 농업법인 수, tbl: DT_1E5208A, org: "114", itm: "^법인특성 및 상시종사자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^50인 이상$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: chi_all, title: 농업법인 채용 계획 근로자(전체), tbl: DT_1E5209A, org: "114", itm: "^인력 채용 계획$", want: ["^전국$", "^계$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: chi_empn, title: 상용근로자 채용 계획 농업법인 수, tbl: DT_1E5209A, org: "114", itm: "^인력 채용 계획$", want: ["^전국$", "^계$", "^상용근로자 채용 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: chi_emp, title: 농업법인 상용근로자 채용 계획, tbl: DT_1E5209A, org: "114", itm: "^인력 채용 계획$", want: ["^전국$", "^계$", "^상용근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: chi_tmpn, title: 임시·일용 채용 계획 농업법인 수, tbl: DT_1E5209A, org: "114", itm: "^인력 채용 계획$", want: ["^전국$", "^계$", "^임시 및 일용근로자 채용 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: chi_tmp, title: 농업법인 임시·일용 근로자 채용 계획, tbl: DT_1E5209A, org: "114", itm: "^인력 채용 계획$", want: ["^전국$", "^계$", "^임시 및 일용근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: car_all, title: 농업법인 재배면적(전체), tbl: DT_1E5211A, org: "114", itm: "^재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^전체$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: car_open, title: 농업법인 노지 재배면적, tbl: DT_1E5211A, org: "114", itm: "^재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^노지재배$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: car_gh, title: 농업법인 시설 재배면적, tbl: DT_1E5211A, org: "114", itm: "^재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^시설재배$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cls_cattle, title: 농업법인 한·육우 사육(연평균), tbl: DT_1E5213B, org: "114", itm: "^법인특성별 가축 사육 두수[(]연평균[)]$", want: ["^(영농조합법인|농업회사법인)$", "^한육우$"], sum: true, unit: 마리, survey: 농업법인조사}
+      - {id: cls_dairy, title: 농업법인 젖소 사육(연평균), tbl: DT_1E5213B, org: "114", itm: "^법인특성별 가축 사육 두수[(]연평균[)]$", want: ["^(영농조합법인|농업회사법인)$", "^젖소$"], sum: true, unit: 마리, survey: 농업법인조사}
+      - {id: cls_pig, title: 농업법인 돼지 사육(연평균), tbl: DT_1E5213B, org: "114", itm: "^법인특성별 가축 사육 두수[(]연평균[)]$", want: ["^(영농조합법인|농업회사법인)$", "^돼지$"], sum: true, unit: 마리, survey: 농업법인조사}
+      - {id: cls_chick, title: 농업법인 닭 사육(연평균), tbl: DT_1E5213B, org: "114", itm: "^법인특성별 가축 사육 두수[(]연평균[)]$", want: ["^(영농조합법인|농업회사법인)$", "^닭$"], sum: true, unit: 백마리, survey: 농업법인조사}
+      - {id: cls_bee, title: 농업법인 꿀벌 사육(연평균), tbl: DT_1E5213B, org: "114", itm: "^법인특성별 가축 사육 두수[(]연평균[)]$", want: ["^(영농조합법인|농업회사법인)$", "^꿀벌$"], sum: true, unit: 통, survey: 농업법인조사}
+      - {id: cvi_n, title: 설비투자한 농업법인 수, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^실적 법인수$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cvi_all, title: 농업법인 설비투자 실적(전체), tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^설비투자$"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cvi_land, title: 농업법인 토지·토지개발 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^토지 및 토지개발"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cvi_bld, title: 농업법인 건축·구축물 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^건축 및 구축물"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cvi_mach, title: 농업법인 기계장치 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^기계장치$"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cvi_etc, title: 농업법인 기타(동산·무형자산) 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^기타[(]동산 무형자산[)]$"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cvi_plan, title: 농업법인 다음 해 설비투자 계획, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^차년도 계획$", "^설비투자$"], sum: true, unit: 백만원, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

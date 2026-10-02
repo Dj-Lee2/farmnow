@@ -3310,6 +3310,43 @@ sources:
       - {id: dis_w_full, title: 전업농 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^전업농$"], unit: "%", survey: 농업인 업무상 질병조사}
       - {id: dis_w_main, title: 주업 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^주업$"], unit: "%", survey: 농업인 업무상 질병조사}
       - {id: dis_w_side, title: 부업 농업인 업무상 질병 유병률, tbl: DT_14303_E1643, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^부업$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_ic_25, title: 농업소득 비중 25% 이하 농업인 업무상 질병 유병률, tbl: DT_14303_E1641, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^25%이하$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_ic_50, title: 농업소득 비중 26~50% 농업인 업무상 질병 유병률, tbl: DT_14303_E1641, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^26~50%$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_ic_75, title: 농업소득 비중 51~75% 농업인 업무상 질병 유병률, tbl: DT_14303_E1641, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^51~75%$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_ic_100, title: 농업소득 비중 76~100% 농업인 업무상 질병 유병률, tbl: DT_14303_E1641, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^76~100%$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_hh_1, title: 1인 가구 농업인 업무상 질병 유병률, tbl: DT_14303_E1642, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^1인 ?가구$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_hh_2, title: 2인 가구 농업인 업무상 질병 유병률, tbl: DT_14303_E1642, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^2인 가구$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_hh_3, title: 3인 가구 농업인 업무상 질병 유병률, tbl: DT_14303_E1642, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^3인 가구$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dis_hh_4, title: 4인 이상 가구 농업인 업무상 질병 유병률, tbl: DT_14303_E1642, org: "143", se: F, periods: 5, itm: "^업무상 질병 유병률$", want: ["^4인 이상$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: drk_all, title: 음주 여부 응답 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_yes, title: 술을 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^(한달에 1번 미만|한달에 1번 정도|한달에 2~4번|일주일에 2~3번 정도|일주일에 4번 이상)$"], sum: true, unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_no, title: 술을 마시지 않는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^마시지않음$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_m0, title: 한 달에 1번 미만 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^한달에 1번 미만$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_m1, title: 한 달에 1번 정도 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^한달에 1번 정도$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_m24, title: 한 달에 2~4번 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^한달에 2~4번$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_w23, title: 일주일에 2~3번 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^일주일에 2~3번 정도$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drk_w4, title: 일주일에 4번 이상 마시는 농업인, tbl: DT_14303_E1644, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^일주일에 4번 이상$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_all, title: 음주량 응답 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_12, title: 한 번에 1~2잔 마시는 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^1~2잔$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_34, title: 한 번에 3~4잔 마시는 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^3~4잔$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_56, title: 한 번에 5~6잔 마시는 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^5~6잔$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_79, title: 한 번에 7~9잔 마시는 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^7~9잔$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: drl_10, title: 한 번에 10잔 이상 마시는 농업인, tbl: DT_14303_E1645, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^10잔 이상$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: inj_st_all, title: 업무상 손상 건수(발생 상황 기준), tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_prep, title: 농작업 준비 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농작업 준비중$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_work, title: 농작업 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농작업 중$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_after, title: 농작업 후 정리 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농작업 후 정리중$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_move, title: 농작업 관련 이동 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농작업 관련 이동중$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_proc, title: 농산물 가공·포장·운송·판매 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농생산물의 가공"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_st_maint, title: 농기계·시설 점검·보수 중 일어난 업무상 손상 건수, tbl: DT_14303_E1426, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^농업기계/시설 관련 점검/보수$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_all, title: 농기구 관련 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_cart, title: 운반수레 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^운반수레$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_ladder, title: 사다리 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^사다리$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_knife, title: 칼 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^칼$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_saw, title: 일반톱 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^일반톱$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_box, title: 운반상자 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^운반상자$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_homi, title: 호미·모종삽 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^호미/모종삽$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: inj_tl_sickle, title: 낫 때문에 일어난 업무상 손상 건수, tbl: DT_14303_E1431, org: "143", se: F, periods: 5, itm: "^업무상 손상건수$", want: ["^낫$"], unit: 건, survey: 농업인 업무상 손상조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

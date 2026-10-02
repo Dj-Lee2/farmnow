@@ -3231,6 +3231,46 @@ sources:
       - {id: gpl_out, title: 배기가스·난방가스 노출 장소 실외 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실외$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: gpl_in, title: 배기가스·난방가스 노출 장소 실내 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실내$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: gpl_both, title: 배기가스·난방가스 노출 장소 실외+실내 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실외\\+실내$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_yes, title: 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^있음$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_all, title: 근골격계 통증 여부 응답 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^통증 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_hand, title: 손·손목·손가락 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^손/손목/손가락$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_arm, title: 팔·팔꿈치 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^팔/팔꿈치$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_shld, title: 어깨 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^어깨$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_neck, title: 목 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^목$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_back, title: 허리 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^허리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_knee, title: 무릎 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^무릎$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: msym_foot, title: 발·발목·발가락 근골격계 통증이 있는 농업인 수, tbl: DT_14303_E2117, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^발/발목/발가락$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_yes, title: 폭염 때 이상 증상을 겪은 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^있음$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_all, title: 폭염 이상 증상 여부 응답 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^폭염 이상 증상 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_dizzy, title: 폭염 이상 증상 어지럼증 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^어지럼증$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_head, title: 폭염 이상 증상 심한 두통 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^심한 두통$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_tired, title: 폭염 이상 증상 심한 피로 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^심한 피로$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_faint, title: 폭염 이상 증상 실신 혼미 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^실신 혼미$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_cramp, title: 폭염 이상 증상 근육 경련 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^근육 경련$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: heat_nausea, title: 폭염 이상 증상 오심 구토 경험 농업인 수, tbl: DT_14303_E2104, org: "143", se: F, periods: 5, itm: "^증상 경험자수$", want: ["^오심 구토$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_yes, title: 평소 운동하는 농업인 수(운동 횟수 응답 합), tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^(주1~2회|주3~4회|주5~6회|거의매일)$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_all, title: 평소 운동 여부 응답 농업인 수, tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^평소 운동 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_w12, title: 평소 운동 주1~2회 하는 농업인 수, tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^주1~2회$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_w34, title: 평소 운동 주3~4회 하는 농업인 수, tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^주3~4회$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_w56, title: 평소 운동 주5~6회 하는 농업인 수, tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^주5~6회$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ex_daily, title: 평소 운동 거의매일 하는 농업인 수, tbl: DT_14303_E2101, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^거의매일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpd_m0, title: 한 해 배기가스·난방가스 노출 기간 2개월 미만 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2개월 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpd_m3, title: 한 해 배기가스·난방가스 노출 기간 3~5개월 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^3~5개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpd_m6, title: 한 해 배기가스·난방가스 노출 기간 6~8개월 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpd_m9, title: 한 해 배기가스·난방가스 노출 기간 9개월 이상 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^9개월 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gph_h0, title: 하루 배기가스·난방가스 노출 2시간 미만 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2시간 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gph_h2, title: 하루 배기가스·난방가스 노출 2~4시간 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2~4시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gph_h4, title: 하루 배기가스·난방가스 노출 4~6시간 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^4~6시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gph_h6, title: 하루 배기가스·난방가스 노출 6~8시간 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gph_h8, title: 하루 배기가스·난방가스 노출 8시간 이상 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^8시간 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gdd_d0, title: 한 달 배기가스·난방가스 노출 일수 5일 이하 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^5일 이하$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gdd_d6, title: 한 달 배기가스·난방가스 노출 일수 6~10일 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~10일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gdd_d11, title: 한 달 배기가스·난방가스 노출 일수 11~20일 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^11~20일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gdd_d21, title: 한 달 배기가스·난방가스 노출 일수 21일 이상 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^21일 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsp_m0, title: 한 해 유기분진 노출 기간 2개월 미만 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2개월 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsp_m3, title: 한 해 유기분진 노출 기간 3~5개월 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^3~5개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsp_m6, title: 한 해 유기분진 노출 기간 6~8개월 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsp_m9, title: 한 해 유기분진 노출 기간 9개월 이상 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^9개월 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

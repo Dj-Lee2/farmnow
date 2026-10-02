@@ -344,7 +344,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점·농업인 업무상 손상·질병·농약 보호장구·살포 방법·손상 치료·피해 수준·활동기간별 질병·농기계 사용연수·중고 구입·교체 의향·임작업료·교체 구입 계획·기종별 이용시간·소음 노출·귀마개·농기계 관련 손상·근골격계 부담·중량물·편이장비·자외선·유기분진·배기가스·노출 기간·일수·노출원·마스크 종류·환기', 274) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점·농업인 업무상 손상·질병·농약 보호장구·살포 방법·손상 치료·피해 수준·활동기간별 질병·농기계 사용연수·중고 구입·교체 의향·임작업료·교체 구입 계획·기종별 이용시간·소음 노출·귀마개·농기계 관련 손상·근골격계 부담·중량물·편이장비·자외선·유기분진·배기가스·노출 기간·일수·노출원·마스크 종류·환기·근골격계 통증·폭염 증상·운동', 287) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -718,6 +718,22 @@
   {{ hcard('유기분진 노출 농업인이 쓰는 마스크 종류', [('황사·미세먼지·방역용 마스크', K.mk_kf), ('의료용 마스크', K.mk_med), ('방진 마스크', K.mk_dust), ('면 마스크', K.mk_cot), ('기타', K.mk_etc)], '명', '괄호는 유기분진에 노출된 농업인 중 비중 · 분진용 방진 마스크는 소수 · 오른쪽은 2년 전 대비', K.dust_y.vals[-1] if K.dust_y else none, '#5c6bc2') }}
   {{ hcard('배기가스·난방가스 노출 장소', [('실외', K.gpl_out), ('실내', K.gpl_in), ('실외와 실내', K.gpl_both)], '명', '괄호는 배기가스·난방가스에 노출된 농업인 중 비중 · 오른쪽은 2년 전 대비', K.gas_y.vals[-1] if K.gas_y else none, '#6b8fd6') }}
   {{ hcard('실내 배기가스·난방가스 노출 때 환기', [('자주 함', K.vent_often), ('가끔 함', K.vent_some), ('전혀 안 함', K.vent_no)], '명', '실내·실내외에서 노출된 농업인 응답 · 오른쪽은 2년 전 대비', none, '#3a8f6a') }}
+  {{ hcard('한 해 배기가스·난방가스 노출 기간', [('2개월 미만', K.gpd_m0), ('3~5개월', K.gpd_m3), ('6~8개월', K.gpd_m6), ('9개월 이상', K.gpd_m9)], '명', '괄호는 배기가스·난방가스에 노출된 농업인 중 비중 · 오른쪽은 2년 전 대비', K.gas_y.vals[-1] if K.gas_y else none, '#6b8fd6') }}
+  {{ hcard('하루 배기가스·난방가스 노출 시간', [('2시간 미만', K.gph_h0), ('2~4시간', K.gph_h2), ('4~6시간', K.gph_h4), ('6~8시간', K.gph_h6), ('8시간 이상', K.gph_h8)], '명', '괄호는 배기가스·난방가스에 노출된 농업인 중 비중 · 오른쪽은 2년 전 대비', K.gas_y.vals[-1] if K.gas_y else none, '#6b8fd6') }}
+  {{ hcard('한 달 배기가스·난방가스 노출 일수', [('5일 이하', K.gdd_d0), ('6~10일', K.gdd_d6), ('11~20일', K.gdd_d11), ('21일 이상', K.gdd_d21)], '명', '괄호는 배기가스·난방가스에 노출된 농업인 중 비중 · 오른쪽은 2년 전 대비', K.gas_y.vals[-1] if K.gas_y else none, '#6b8fd6') }}
+  {{ hcard('한 해 유기분진 노출 기간', [('2개월 미만', K.dsp_m0), ('3~5개월', K.dsp_m3), ('6~8개월', K.dsp_m6), ('9개월 이상', K.dsp_m9)], '명', '괄호는 유기분진에 노출된 농업인 중 비중 · 오른쪽은 2년 전 대비', K.dust_y.vals[-1] if K.dust_y else none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">농업인 건강 증상·운동 <small>근골격계 통증·폭염 이상 증상·평소 운동 · 농촌진흥청 농업인 업무상 손상조사 · 2년마다</small></h3>
+ <div class="sg-g">
+  {{ rcard('근골격계 통증이 있는 농업인', K.msym_yes, K.msym_all, 'p127', ('통증 ' ~ K.msym_yes.vals[-1]|big ~ '명 · 2년 전 ' ~ K.msym_yes.vals[-2]|big ~ '명') if K.msym_yes and K.msym_yes.vals|length > 1 else '', '#b0503a') }}
+  {{ rcard('통증 있는 농업인 중 허리가 아픈 비중', K.msym_back, K.msym_yes, 'p128', ('무릎 ' ~ '{:.1f}'.format(K.msym_knee.vals[-1] / K.msym_yes.vals[-1] * 100) ~ '% · 복수 응답') if K.msym_knee and K.msym_yes else '', '#b0503a') }}
+  {{ rcard('폭염 때 이상 증상을 겪은 농업인', K.heat_yes, K.heat_all, 'p129', ('증상 ' ~ K.heat_yes.vals[-1]|big ~ '명 · 2년 전 ' ~ K.heat_yes.vals[-2]|big ~ '명') if K.heat_yes and K.heat_yes.vals|length > 1 else '', '#d0603a') }}
+  {{ rcard('폭염 증상자 중 어지럼증을 겪은 비중', K.heat_dizzy, K.heat_yes, 'p130', ('심한 두통 ' ~ '{:.1f}'.format(K.heat_head.vals[-1] / K.heat_yes.vals[-1] * 100) ~ '% · 복수 응답') if K.heat_head and K.heat_yes else '', '#d0603a') }}
+  {{ rcard('평소 운동하는 농업인', K.ex_yes, K.ex_all, 'p131', ('운동 ' ~ K.ex_yes.vals[-1]|big ~ '명 · 2년 전 ' ~ K.ex_yes.vals[-2]|big ~ '명') if K.ex_yes and K.ex_yes.vals|length > 1 else '', '#3a8f6a') }}
+  {{ rcard('운동하는 농업인 중 거의 매일 하는 비중', K.ex_daily, K.ex_yes, 'p132', ('주 1~2회 ' ~ '{:.1f}'.format(K.ex_w12.vals[-1] / K.ex_yes.vals[-1] * 100) ~ '%') if K.ex_w12 and K.ex_yes else '', '#3a8f6a') }}
+  {{ hcard('부위별 근골격계 통증이 있는 농업인', [('허리', K.msym_back), ('무릎', K.msym_knee), ('어깨', K.msym_shld), ('손·손목·손가락', K.msym_hand), ('팔·팔꿈치', K.msym_arm), ('목', K.msym_neck), ('발·발목·발가락', K.msym_foot)], '명', '괄호는 통증이 있는 농업인 중 비중(복수 응답) · 오른쪽은 2년 전 대비', K.msym_yes.vals[-1] if K.msym_yes else none, '#b0503a') }}
+  {{ hcard('폭염 때 겪은 이상 증상', [('어지럼증', K.heat_dizzy), ('심한 두통', K.heat_head), ('심한 피로', K.heat_tired), ('근육 경련', K.heat_cramp), ('오심·구토', K.heat_nausea), ('실신·혼미', K.heat_faint)], '명', '괄호는 증상을 겪은 농업인 중 비중(복수 응답) · 오른쪽은 2년 전 대비', K.heat_yes.vals[-1] if K.heat_yes else none, '#d0603a') }}
+  {{ hcard('평소 운동 횟수', [('주 1~2회', K.ex_w12), ('주 3~4회', K.ex_w34), ('주 5~6회', K.ex_w56), ('거의 매일', K.ex_daily)], '명', '괄호는 운동하는 농업인 중 비중 · 오른쪽은 2년 전 대비', K.ex_yes.vals[-1] if K.ex_yes else none, '#3a8f6a') }}
  </div>
  </div></details>
 

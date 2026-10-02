@@ -2811,6 +2811,33 @@ sources:
       - {id: cvi_mach, title: 농업법인 기계장치 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^기계장치$"], sum: true, unit: 백만원, survey: 농업법인조사}
       - {id: cvi_etc, title: 농업법인 기타(동산·무형자산) 투자, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^당해년도 실적$", "^기타[(]동산 무형자산[)]$"], sum: true, unit: 백만원, survey: 농업법인조사}
       - {id: cvi_plan, title: 농업법인 다음 해 설비투자 계획, tbl: DT_1E206A, org: "114", itm: "^법인특성별 설비투자 실적 및 계획$", want: ["^(영농조합법인|농업회사법인)$", "^차년도 계획$", "^설비투자$"], sum: true, unit: 백만원, survey: 농업법인조사}
+      - {id: cac_all, title: 농업법인 작물별 재배면적(계), tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^계$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_n, title: 작물 재배 농업법인 수, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^법인수$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cac_rice, title: 농업법인 논벼 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^논벼$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_barley, title: 농업법인 맥류 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^맥류$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_bean, title: 농업법인 두류 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^두류$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_grain, title: 농업법인 잡곡 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^잡곡$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_tuber, title: 농업법인 서류 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^서류$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_veg, title: 농업법인 채소 작물 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^채소 작물$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_fruit, title: 농업법인 과수 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^과수$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_spec, title: 농업법인 특용·약용작물 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^특용·약용작물$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_flower, title: 농업법인 화훼 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^화훼$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_feed, title: 농업법인 사료 작물 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^사료 작물$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_seed, title: 농업법인 종자·종묘 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^종자·종묘$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_mush, title: 농업법인 버섯 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^버섯$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cac_etc, title: 농업법인 기타 재배면적, tbl: DT_1E5212A, org: "114", itm: "^법인특성 및 작물별 재배면적$", want: ["^(영농조합법인|농업회사법인)$", "^기타$"], sum: true, unit: ha, survey: 농업법인조사}
+      - {id: cfz_all, title: 출자금 규모 집계 농업법인 수, tbl: DT_1E5205A, org: "114", itm: "^법인특성 및 출자금 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^출자 법인 수$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cfz_1, title: 출자금 5천만원 미만 농업법인 수, tbl: DT_1E5205A, org: "114", itm: "^법인특성 및 출자금 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^5천만원 미만$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cfz_2, title: 출자금 5천만원~1억원 미만 농업법인 수, tbl: DT_1E5205A, org: "114", itm: "^법인특성 및 출자금 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^5천만원~1억원 미만$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cfz_3, title: 출자금 1억원~5억원 미만 농업법인 수, tbl: DT_1E5205A, org: "114", itm: "^법인특성 및 출자금 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^1억원~5억원 미만$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cfz_4, title: 출자금 5억원 이상 농업법인 수, tbl: DT_1E5205A, org: "114", itm: "^법인특성 및 출자금 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^5억원 이상$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_all, title: 출자자 규모 집계 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^출자 법인 수$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_1, title: 출자자 1인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^1인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_2, title: 출자자 2~3인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^2~3인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_3, title: 출자자 4~5인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^4~5인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_4, title: 출자자 6~9인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^6~9인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_5, title: 출자자 10~49인 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^10~49인$"], sum: true, unit: 개, survey: 농업법인조사}
+      - {id: cnq_6, title: 출자자 50인 이상 농업법인 수, tbl: DT_1E5203A, org: "114", itm: "^법인특성 및 출자자 규모별 법인수$", want: ["^(영농조합법인|농업회사법인)$", "^50인 이상$"], sum: true, unit: 개, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

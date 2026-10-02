@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자', 185) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모', 194) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -293,6 +293,18 @@
   {{ hcard('연령별 농업법인 종사자', [('20대 이하', K.cea_0), ('30대', K.cea_1), ('40대', K.cea_2), ('50대', K.cea_3), ('60대', K.cea_4), ('70대 이상', K.cea_5)], '명', '괄호는 전체 종사자 중 비중 · 오른쪽은 전년 대비', K.cem_all.vals[-1] if K.cem_all else none, '#6b8fd6') }}
   {{ hcard('상시종사자 규모별 농업법인 수', [('1인 이하', K.csz_1), ('2~4인', K.csz_2), ('5~9인', K.csz_3), ('10~49인', K.csz_4), ('50인 이상', K.csz_5)], '개', '괄호는 전체 법인 중 비중 · 오른쪽은 전년 대비', K.csz_all.vals[-1] if K.csz_all else none, '#3a8f6a') }}
   {{ hcard('농업법인 설비투자 구성', [('건축·구축물', K.cvi_bld), ('토지·토지개발', K.cvi_land), ('기타(동산·무형)', K.cvi_etc), ('기계장치', K.cvi_mach)], '백만원', ('괄호는 전체 투자 중 비중 · 다음 해 계획 ' ~ num(K.cvi_plan.vals[-1], '백만원')|striptags ~ ' · 오른쪽은 전년 대비') if K.cvi_plan else '', K.cvi_all.vals[-1] if K.cvi_all else none, '#3a8f6a') }}
+ </div>
+ <h3 class="sg-sub">농업법인 작물별 재배면적·출자 규모 <small>영농조합법인·농업회사법인 합계 · 농업법인조사</small></h3>
+ <div class="sg-g">
+  {{ card('cac_rice', 'gw1', ('작물 재배 법인 ' ~ num(K.cac_n.vals[-1], '개')|striptags) if K.cac_n else none, '#1c7a45') }}
+  {{ rcard('농업법인 재배면적 중 논벼 비중', K.cac_rice, K.cac_all, 'gw2', ('전체 재배면적 ' ~ num(K.cac_all.vals[-1], 'ha')|striptags) if K.cac_all else '', '#1c7a45') }}
+  {{ rcard('농업법인 재배면적 중 채소 비중', K.cac_veg, K.cac_all, 'gw3', ('채소 작물 ' ~ num(K.cac_veg.vals[-1], 'ha')|striptags) if K.cac_veg else '', '#1c7a45') }}
+  {{ rcard('출자금 5억원 이상 농업법인 비율', K.cfz_4, K.cfz_all, 'gw4', ('5억원 이상 ' ~ num(K.cfz_4.vals[-1], '개')|striptags ~ ' ÷ 전체 법인') if K.cfz_4 else '', '#3a8f6a') }}
+  {{ rcard('출자금 5천만원 미만 농업법인 비율', K.cfz_1, K.cfz_all, 'gw5', ('5천만원 미만 ' ~ num(K.cfz_1.vals[-1], '개')|striptags ~ ' ÷ 전체 법인') if K.cfz_1 else '', '#3a8f6a') }}
+  {{ rcard('출자자 1인 농업법인 비율', K.cnq_1, K.cnq_all, 'gw6', ('출자자 1인 ' ~ num(K.cnq_1.vals[-1], '개')|striptags ~ ' ÷ 전체 법인') if K.cnq_1 else '', '#6b8fd6') }}
+  {{ hcard('작물별 농업법인 재배면적', [('논벼', K.cac_rice), ('채소 작물', K.cac_veg), ('사료 작물', K.cac_feed), ('화훼', K.cac_flower), ('과수', K.cac_fruit), ('서류', K.cac_tuber), ('특용·약용작물', K.cac_spec), ('기타', K.cac_etc), ('맥류', K.cac_barley), ('버섯', K.cac_mush), ('두류', K.cac_bean), ('잡곡', K.cac_grain), ('종자·종묘', K.cac_seed)], 'ha', '괄호는 전체 재배면적 중 비중 · 오른쪽은 전년 대비', K.cac_all.vals[-1] if K.cac_all else none, '#1c7a45') }}
+  {{ hcard('출자금 규모별 농업법인 수', [('5천만원 미만', K.cfz_1), ('5천만~1억원', K.cfz_2), ('1억~5억원', K.cfz_3), ('5억원 이상', K.cfz_4)], '개', '괄호는 전체 법인 중 비중 · 오른쪽은 전년 대비', K.cfz_all.vals[-1] if K.cfz_all else none, '#3a8f6a') }}
+  {{ hcard('출자자 규모별 농업법인 수', [('1인', K.cnq_1), ('2~3인', K.cnq_2), ('4~5인', K.cnq_3), ('6~9인', K.cnq_4), ('10~49인', K.cnq_5), ('50인 이상', K.cnq_6)], '개', '괄호는 전체 법인 중 비중 · 오른쪽은 전년 대비', K.cnq_all.vals[-1] if K.cnq_all else none, '#6b8fd6') }}
  </div>
  </div></details>
 

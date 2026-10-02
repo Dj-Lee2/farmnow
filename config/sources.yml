@@ -1456,6 +1456,43 @@ sources:
       - {id: ddr_ds_frn, title: 말린 고사리 직접 판매 비율, tbl: DT_136036_11546, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
       - {id: ddr_ds_gdr, title: 말린 곤드레 직접 판매 비율, tbl: DT_136036_11595, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
       - {id: ddr_ds_sws, title: 말린 톱밥배지표고 직접 판매 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: fhi_sanm, title: 산마늘 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^산마늘$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_sap, title: 수액 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^수액$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_wch, title: 원추리 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원추리$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_cha, title: 참취 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_gdr, title: 곤드레 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^곤드레$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_mok, title: 목이버섯 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^목이버섯$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_cnm, title: 참나물 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^참나물$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_ma, title: 마 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^마$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_shl, title: 원목표고(노지) 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_shf, title: 원목표고(시설) 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_sws, title: 톱밥배지표고 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_ddk, title: 더덕 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^더덕$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_gom, title: 곰취 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_drj, title: 도라지 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^도라지$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_frn, title: 고사리 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^고사리$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_dok, title: 독활 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^독활$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fhi_dur, title: 두릅 노동 시간당 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^두릅$", "^시간당 소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_sanm, title: 산마늘 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^산마늘$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_sap, title: 수액 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^수액$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_wch, title: 원추리 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원추리$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_cha, title: 참취 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_gdr, title: 곤드레 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^곤드레$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_mok, title: 목이버섯 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^목이버섯$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_cnm, title: 참나물 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^참나물$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_ma, title: 마 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^마$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_shl, title: 원목표고(노지) 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_shf, title: 원목표고(시설) 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_sws, title: 톱밥배지표고 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_ddk, title: 더덕 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^더덕$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_gom, title: 곰취 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_drj, title: 도라지 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^도라지$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_frn, title: 고사리 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^고사리$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_dok, title: 독활 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^독활$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fip_dur, title: 두릅 소득, tbl: DT_136036_11537, org: "136", itm: "^값$", want: ["^두릅$", "^소득$"], unit: 천원, survey: 임산물생산조사}
+      - {id: dsl_ddk, title: 더덕 생물 직접 판매 비율, tbl: DT_136036_11617, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_drj, title: 도라지 생물 직접 판매 비율, tbl: DT_136036_11627, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_dur, title: 두릅 생물 직접 판매 비율, tbl: DT_136036_11556, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

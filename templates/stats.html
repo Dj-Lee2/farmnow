@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택', 81) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자', 94) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -208,6 +208,25 @@
   {{ hcard('귀농 가구가 겪는 가장 큰 어려움', [('소득', K.rdf_inc), ('농사', K.rdf_farm), ('어려움 없음', K.rdf_none), ('주거', K.rdf_house), ('지역 인프라 부족', K.rdf_infra), ('지역 주민과의 관계', K.rdf_rel)], '%', '기타 0.2% · 오른쪽은 전년 대비', none, '#b0503a') }}
   {{ hcard('주작목(작물) 선택 이유', [('쉽게 재배할 수 있어서', K.rcr_easy), ('가족·친척 등 주변인 권유', K.rcr_fam), ('소득이 높은 작목', K.rcr_inc), ('지역 특화 작목', K.rcr_loc), ('귀농교육 이수 작목', K.rcr_edu), ('농·축산 관련 기관 권유', K.rcr_org)], '%', '자본 규모·기타는 합쳐 2% 남짓 · 오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('주작목을 정한 시기', [('귀농 이전', K.rct_pre), ('귀농 후 6개월 이내', K.rct_6m), ('귀농 후 6개월~1년', K.rct_1y), ('귀농 후 1년 이후', K.rct_late)], '%', '오른쪽은 전년 대비', none, '#e0a03a') }}
+ </div>
+ <h3 class="sg-sub">귀농 생활 만족도와 겸업 <small>농식품부 귀농귀촌실태조사 · 응답 가구 중 비율 · 겸업은 겸업 가구 중 비율</small></h3>
+ <div class="sg-g">
+  {{ card('rst_ok', 'p46', ('매우 만족 ' ~ '{:.1f}'.format(K.rst_vok.vals[-1]) ~ '% · 불만족 ' ~ '{:.1f}'.format(K.rst_bad.vals[-1] + K.rst_vbad.vals[-1]) ~ '%') if K.rst_vok and K.rst_bad and K.rst_vbad else '귀농 생활에 만족', '#1c7a45') }}
+  {{ card('rbf_high', 'p47', ('비슷함 ' ~ '{:.1f}'.format(K.rbf_same.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.rbf_same.vals[-2]) ~ '%') if K.rbf_same else '귀농 전보다 높아짐', '#e0a03a') }}
+  {{ card('rjb_job', 'p48', ('임시직 ' ~ '{:.1f}'.format(K.rjb_temp.vals[-1]) ~ '% · 농업 임금 노동 ' ~ '{:.1f}'.format(K.rjb_farmw.vals[-1]) ~ '%') if K.rjb_temp and K.rjb_farmw else '겸업 가구 중', '#7a5cc2') }}
+  {{ hcard('전반적인 귀농 생활 만족도', [('매우 만족', K.rst_vok), ('만족', K.rst_ok), ('보통', K.rst_mid), ('불만족', K.rst_bad), ('매우 불만족', K.rst_vbad)], '%', '오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀농 전과 비교한 생활 만족도', [('매우 높음', K.rbf_vhigh), ('높음', K.rbf_high), ('비슷함', K.rbf_same), ('낮음', K.rbf_low), ('매우 낮음', K.rbf_vlow)], '%', '오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('겸업으로 버는 농외소득 종류', [('일반 직장(정규직)', K.rjb_job), ('임시직', K.rjb_temp), ('자영업', K.rjb_self), ('농업 임금 노동', K.rjb_farmw), ('비농업 일용직', K.rjb_day), ('농촌관광 사업', K.rjb_tour)], '%', '겸업 가구 중 비율(여러 개 겸업 포함, 합 100% 넘음) · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">정부·지자체 자금 보조와 융자 <small>농식품부 귀농귀촌실태조사 · 비중은 보조·융자 받은 가구 중 비율(귀농귀촌 전체 비용 대비)</small></h3>
+ <div class="sg-g">
+  {{ card('rsb_none', 'p49', ('지자체 보조 ' ~ '{:.1f}'.format(K.rsb_loc.vals[-1]) ~ '% · 정부 보조 ' ~ '{:.1f}'.format(K.rsb_gov.vals[-1]) ~ '%') if K.rsb_loc and K.rsb_gov else '보조 받은 적 없음', '#b0503a') }}
+  {{ card('rln_none', 'p50', ('정부 융자 ' ~ '{:.1f}'.format(K.rln_gov.vals[-1]) ~ '% · 지자체 융자 ' ~ '{:.1f}'.format(K.rln_loc.vals[-1]) ~ '%') if K.rln_gov and K.rln_loc else '융자받은 적 없음', '#3a8f6a') }}
+  {{ card('rlp_80p', 'p51', ('2023년 ' ~ '{:.1f}'.format(K.rlp_80p.vals[0]) ~ '% · 융자받은 가구 중') if K.rlp_80p else '융자가 비용의 80% 이상', '#7a5cc2') }}
+  {{ hcard('자금 보조를 받은 곳', [('지자체', K.rsb_loc), ('정부', K.rsb_gov), ('정부·지자체 모두', K.rsb_both)], '%', '응답 가구 전체 중 비율 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('자금 융자를 받은 곳', [('정부', K.rln_gov), ('지자체', K.rln_loc), ('정부·지자체 모두', K.rln_both)], '%', '응답 가구 전체 중 비율 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('보조금이 전체 비용에서 차지한 비중', [('10% 이내', K.rsp_10), ('10~30%', K.rsp_30), ('30~50%', K.rsp_50), ('50% 이상', K.rsp_50p)], '%', '보조 받은 가구 중 비율 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('융자금이 전체 비용에서 차지한 비중', [('10% 이내', K.rlp_10), ('10~30%', K.rlp_30), ('30~50%', K.rlp_50), ('50~80%', K.rlp_80), ('80% 이상', K.rlp_80p)], '%', '융자받은 가구 중 비율 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
  </div>
  </div></details>
 

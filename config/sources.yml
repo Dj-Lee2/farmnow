@@ -2558,6 +2558,45 @@ sources:
       - {id: brk_s2, title: 육계 3만~5만 수 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^30000~49999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
       - {id: brk_s3, title: 육계 5만~7만 수 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^50000~69999수$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
       - {id: brk_s4, title: 육계 7만 수 이상 농가 생체 10kg당 생산비, tbl: DT_2EE314, itm: "^생산비$", want: ["^70000수 이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_cost, title: 육우 생체 100kg당 생산비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_op, title: 육우 생체 100kg당 경영비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^경영비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_stock, title: 육우 생체 100kg당 가축비(송아지값), tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_feed, title: 육우 생체 100kg당 사료비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_conc, title: 육우 생체 100kg당 농후사료비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^농후사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_rough, title: 육우 생체 100kg당 조사료비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^조사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_vet, title: 육우 생체 100kg당 방역치료비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_manure, title: 육우 생체 100kg당 분뇨처리비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_own, title: 육우 생체 100kg당 자가노동비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^평균$", "^자가노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_s1, title: 육우 30두 미만 생체 100kg당 생산비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^30두미만$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_s2, title: 육우 30~69두 생체 100kg당 생산비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^30~69두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_s3, title: 육우 70~119두 생체 100kg당 생산비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^70~119두$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfk_s4, title: 육우 120두 이상 생체 100kg당 생산비, tbl: DT_1EE024_23, itm: "^생산비$", want: ["^120두이상$", "^생산비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_op, title: 우유 100ℓ당 경영비, tbl: DT_2EE301, itm: "^생산비$", want: ["^경영비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_conc, title: 우유 100ℓ당 농후사료비, tbl: DT_2EE301, itm: "^생산비$", want: ["^농후사료$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_rough, title: 우유 100ℓ당 조사료비, tbl: DT_2EE301, itm: "^생산비$", want: ["^조사료$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_tmr, title: 우유 100ℓ당 TMR사료비, tbl: DT_2EE301, itm: "^생산비$", want: ["^TMR사료$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_vet, title: 우유 100ℓ당 방역치료비, tbl: DT_2EE301, itm: "^생산비$", want: ["^방역치료비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_manure, title: 우유 100ℓ당 분뇨처리비, tbl: DT_2EE301, itm: "^생산비$", want: ["^분뇨처리비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_breed, title: 우유 100ℓ당 종부료, tbl: DT_2EE301, itm: "^생산비$", want: ["^종부료$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_cdep, title: 우유 100ℓ당 가축상각비, tbl: DT_2EE301, itm: "^생산비$", want: ["^가축상각비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_own, title: 우유 100ℓ당 자가노동비, tbl: DT_2EE301, itm: "^생산비$", want: ["^자가노동비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_hire, title: 우유 100ℓ당 고용노동비, tbl: DT_2EE301, itm: "^생산비$", want: ["^고용노동비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_s1, title: 젖소 50두 미만 농가 우유 100ℓ당 생산비, tbl: DT_2EE301, itm: "^생산비$", want: ["^생산비$", "^50두미만$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_s2, title: 젖소 50~69두 농가 우유 100ℓ당 생산비, tbl: DT_2EE301, itm: "^생산비$", want: ["^생산비$", "^50~69두$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_s3, title: 젖소 70~99두 농가 우유 100ℓ당 생산비, tbl: DT_2EE301, itm: "^생산비$", want: ["^생산비$", "^70~99두$"], unit: 원, survey: 축산물생산비조사}
+      - {id: mkk_s4, title: 젖소 100두 이상 농가 우유 100ℓ당 생산비, tbl: DT_2EE301, itm: "^생산비$", want: ["^생산비$", "^100두이상$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_total, title: 한우 번식우 두당 사육비(비용합계), tbl: DT_1EE015, itm: "^평균$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_feed, title: 한우 번식우 두당 사료비, tbl: DT_1EE015, itm: "^평균$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_conc, title: 한우 번식우 두당 농후사료비, tbl: DT_1EE015, itm: "^평균$", want: ["^농후사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_rough, title: 한우 번식우 두당 조사료비, tbl: DT_1EE015, itm: "^평균$", want: ["^조사료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_vet, title: 한우 번식우 두당 방역치료비, tbl: DT_1EE015, itm: "^평균$", want: ["^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_breed, title: 한우 번식우 두당 종부료, tbl: DT_1EE015, itm: "^평균$", want: ["^종부료$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_manure, title: 한우 번식우 두당 분뇨처리비, tbl: DT_1EE015, itm: "^평균$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_own, title: 한우 번식우 두당 자가노동비, tbl: DT_1EE015, itm: "^평균$", want: ["^자가노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_s1, title: 한우 번식우 10두 미만 농가 두당 사육비, tbl: DT_1EE015, itm: "^10두미만$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_s2, title: 한우 번식우 10~29두 농가 두당 사육비, tbl: DT_1EE015, itm: "^10~29두$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_s3, title: 한우 번식우 30~49두 농가 두당 사육비, tbl: DT_1EE015, itm: "^30~49두$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: cwk_s4, title: 한우 번식우 50두 이상 농가 두당 사육비, tbl: DT_1EE015, itm: "^50두이상$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

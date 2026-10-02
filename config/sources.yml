@@ -1781,6 +1781,45 @@ sources:
       - {id: rph_info, title: 귀농 정책 도움 됨 이상 비율 지자체 정보제공, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정보제공", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
       - {id: rph_fund, title: 귀농 정책 도움 됨 이상 비율 지자체 정착자금 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^정착자금", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
       - {id: rph_fac, title: 귀농 정책 도움 됨 이상 비율 지자체 영농시설·기계 지원, tbl: DT_114055_A059, org: "114", itm: "^귀농귀촌 정책", want: ["^영농시설", "^(도움 됨|매우 도움 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_friend, title: 귀농 가구가 본 지역 주민 우호적 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^우호적인 정도$", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_talk, title: 귀농 가구가 본 지역 주민 소통하려는 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^소통하려는 정도$", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_help, title: 귀농 가구가 본 지역 주민 도움을 주려는 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^도움을 주려는 정도$", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_econ, title: 귀농 가구가 본 지역 주민 경제적 도움을 기대하는 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^경제적 도움을 기대하는 정도$", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_med, title: 귀농 가구가 본 지역 주민 간섭하려는 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^간섭하려는 정도$", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnb_blg, title: 귀농 가구가 본 지역 주민 마을공동체 소속감 정도 높음 이상, tbl: DT_114055_A040, org: "114", itm: "^지역 주민들과의 관계$", want: ["^마을공동체에 대한 소속감", "^(높음|매우 높음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_senior, title: 귀농 영농생활 어려움 해소 방법 1순위 귀농귀촌 선배·동료와 상담, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^귀농귀촌 선배"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_resid, title: 귀농 영농생활 어려움 해소 방법 1순위 지역주민에게 상담, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^지역주민[(]이장 제외[)]에게"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_head, title: 귀농 영농생활 어려움 해소 방법 1순위 마을 이장에게 상담, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^마을 이장에게"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_net, title: 귀농 영농생활 어려움 해소 방법 1순위 인터넷 등 온라인 활용, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^인터넷 검색"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_inst, title: 귀농 영농생활 어려움 해소 방법 1순위 지역기관 활용, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^지역기관 활용"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhl_none, title: 귀농 영농생활 어려움 해소 방법 1순위 특별히 한 것 없음, tbl: DT_114055_A017, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^특별히 한 것 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_stay, title: 귀농 가구 계속 거주 계획, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^계속 거주할 계획임$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_rural, title: 귀농 가구 다른 농촌지역 이주 계획, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^다른 농촌지역으로 이주"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_city, title: 귀농 가구 도시 이주 계획, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^도시로 이주할 계획이 있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_6m, title: 귀농 가구 이주 시기 6개월 이내, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_1y, title: 귀농 가구 이주 시기 6개월~1년, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^6개월~1년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_3y, title: 귀농 가구 이주 시기 1~3년, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^1년~3년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmv_none, title: 귀농 가구 이주 시기 구체적 계획 없음, tbl: DT_114055_A054, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^구체적 계획 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_stay, title: 귀촌 가구 계속 거주 계획, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^계속 거주할 계획임$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_rural, title: 귀촌 가구 다른 농촌지역 이주 계획, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^다른 농촌지역으로 이주"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_city, title: 귀촌 가구 도시 이주 계획, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^도시로 이주할 계획이 있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_6m, title: 귀촌 가구 이주 시기 6개월 이내, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_1y, title: 귀촌 가구 이주 시기 6개월~1년, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^6개월~1년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_3y, title: 귀촌 가구 이주 시기 1~3년, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^1년~3년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cmv_none, title: 귀촌 가구 이주 시기 구체적 계획 없음, tbl: DT_114055_B059, org: "114", itm: "^현재 거주 지역 계속 거주", want: ["^구체적 계획 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cst_vok, title: 전반적인 귀촌 생활 만족도 매우 만족, tbl: DT_114055_B056, org: "114", itm: "^전반적인 귀촌 생활 만족도$", want: ["^매우 만족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cst_ok, title: 전반적인 귀촌 생활 만족도 만족, tbl: DT_114055_B056, org: "114", itm: "^전반적인 귀촌 생활 만족도$", want: ["^만족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cst_mid, title: 전반적인 귀촌 생활 만족도 보통, tbl: DT_114055_B056, org: "114", itm: "^전반적인 귀촌 생활 만족도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cst_bad, title: 전반적인 귀촌 생활 만족도 불만족 이하, tbl: DT_114055_B056, org: "114", itm: "^전반적인 귀촌 생활 만족도$", want: ["^(매우 불만족|불만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbf_vhigh, title: 귀촌 전보다 생활 만족도 매우 높음, tbl: DT_114055_B058, org: "114", itm: "^귀촌 전 대비 귀촌 후 생활 만족도$", want: ["^매우 높음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbf_high, title: 귀촌 전보다 생활 만족도 높음, tbl: DT_114055_B058, org: "114", itm: "^귀촌 전 대비 귀촌 후 생활 만족도$", want: ["^높음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbf_same, title: 귀촌 전보다 생활 만족도 비슷함, tbl: DT_114055_B058, org: "114", itm: "^귀촌 전 대비 귀촌 후 생활 만족도$", want: ["^비슷함$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbf_low, title: 귀촌 전보다 생활 만족도 낮음 이하, tbl: DT_114055_B058, org: "114", itm: "^귀촌 전 대비 귀촌 후 생활 만족도$", want: ["^(매우 낮음|낮음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfd_inc, title: 분야별 귀촌 생활 만족 이상 가구소득, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^가구소득$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfd_nat, title: 분야별 귀촌 생활 만족 이상 자연환경, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^자연환경$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfd_house, title: 분야별 귀촌 생활 만족 이상 주거환경, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^주거환경$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfd_hlth, title: 분야별 귀촌 생활 만족 이상 건강증진, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^건강증진$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cfd_job, title: 분야별 귀촌 생활 만족 이상 직업, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^직업$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

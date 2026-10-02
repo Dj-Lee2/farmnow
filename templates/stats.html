@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도', 117) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도', 132) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -259,6 +259,27 @@
   {{ hcard('처음 농사를 시작한 형태', [('토지 승계·부모와 경영', K.rfs_inh), ('농지 구입', K.rfs_buy), ('농지 임차', K.rfs_rent), ('텃밭 정도로 시작', K.rfs_gdn)], '%', '1순위 응답 · 실습·동업·일용 노동은 각 1% 미만 · 오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('귀농 정책을 받은 가구 비율', [('귀농귀촌종합센터', K.rpb_ctr), ('세제 지원', K.rpb_tax), ('지자체 시설·기계', K.rpb_fac), ('지자체 정착자금', K.rpb_fund), ('지자체 정보제공', K.rpb_info), ('주택·농업시설 자금', K.rpb_house), ('청년농 영농정착', K.rpb_young), ('지자체 관계형성', K.rpb_rel), ('체류형 지원', K.rpb_stay), ('지자체 생활 지원', K.rpb_life)], '%', '응답 가구 전체 중 · 지자체 정보제공은 2023년 37.0%에서 크게 줄어듦 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
   {{ hcard('받은 가구 중 도움 됨 이상', [('지자체 시설·기계', K.rph_fac), ('지자체 정착자금', K.rph_fund), ('귀농귀촌종합센터', K.rph_ctr), ('지자체 정보제공', K.rph_info), ('세제 지원', K.rph_tax)], '%', '도움 됨 + 매우 도움 됨 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+ </div>
+ <h3 class="sg-sub">귀농 가구와 지역 주민·계속 거주 계획 <small>농식품부 귀농귀촌실태조사 · 응답 가구 중 비율 · 이주 시기는 이주 계획 가구 중(표본 작음)</small></h3>
+ <div class="sg-g">
+  {{ card('rnb_friend', 'p64', ('소통하려는 정도 높음 이상 ' ~ '{:.1f}'.format(K.rnb_talk.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.rnb_talk.vals[-2]) ~ '%') if K.rnb_talk else '주민이 우호적', '#1c7a45') }}
+  {{ card('rhl_none', 'p65', ('주민에게 상담 ' ~ '{:.1f}'.format(K.rhl_resid.vals[-1]) ~ '% · 2023년 ' ~ '{:.1f}'.format(K.rhl_none.vals[0]) ~ '%') if K.rhl_resid else '어려움 해소 1순위', '#b0503a') }}
+  {{ card('rmv_stay', 'p66', ('도시 이주 계획 ' ~ '{:.1f}'.format(K.rmv_city.vals[-1]) ~ '% · 다른 농촌 ' ~ '{:.1f}'.format(K.rmv_rural.vals[-1]) ~ '%') if K.rmv_city and K.rmv_rural else '계속 거주 계획', '#3a8f6a') }}
+  {{ hcard('귀농 가구가 본 지역 주민 태도(높음 이상)', [('소통하려는 정도', K.rnb_talk), ('우호적인 정도', K.rnb_friend), ('도움을 주려는 정도', K.rnb_help), ('마을 소속감·동질감', K.rnb_blg), ('경제적 도움 기대', K.rnb_econ), ('간섭하려는 정도', K.rnb_med)], '%', '높음 + 매우 높음 · 2025년 우호·소통·도움 모두 크게 낮아짐 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('영농생활 어려움을 푼 방법', [('지역주민에게 상담', K.rhl_resid), ('특별히 한 것 없음', K.rhl_none), ('선배·동료 귀농인 상담', K.rhl_senior), ('마을 이장에게 상담', K.rhl_head), ('인터넷 등 온라인', K.rhl_net), ('지역기관(기술센터 등)', K.rhl_inst)], '%', '1순위 응답 · 전문컨설턴트·기타 각 0.5% 미만 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('귀농 가구 계속 거주·이주 계획', [('계속 거주', K.rmv_stay), ('도시로 이주', K.rmv_city), ('다른 농촌으로 이주', K.rmv_rural)], '%', '다른 농촌 이주는 농사 계속·그만두기 합 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('귀농 가구 이주 예정 시기', [('구체적 계획 없음', K.rmv_none), ('6개월~1년 이내', K.rmv_1y), ('1~3년 이내', K.rmv_3y), ('6개월 이내', K.rmv_6m)], '%', '이주 계획 가구 중(2025년 90명) · 오른쪽은 전년 대비', none, '#e0a03a') }}
+ </div>
+ <h3 class="sg-sub">귀촌 생활 만족도와 계속 거주 계획 <small>농식품부 귀농귀촌실태조사 · 귀촌 응답 가구 중 비율 · 이주 시기는 이주 계획 가구 중</small></h3>
+ <div class="sg-g">
+  {{ card('cst_ok', 'p67', ('매우 만족 ' ~ '{:.1f}'.format(K.cst_vok.vals[-1]) ~ '% · 불만족 이하 ' ~ '{:.1f}'.format(K.cst_bad.vals[-1]) ~ '%') if K.cst_vok and K.cst_bad else '귀촌 생활에 만족', '#1c7a45') }}
+  {{ card('cbf_high', 'p68', ('비슷함 ' ~ '{:.1f}'.format(K.cbf_same.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.cbf_same.vals[-2]) ~ '%') if K.cbf_same else '귀촌 전보다 높아짐', '#e0a03a') }}
+  {{ card('cmv_city', 'p69', ('2023년 ' ~ '{:.1f}'.format(K.cmv_city.vals[0]) ~ '% · 계속 거주 ' ~ '{:.1f}'.format(K.cmv_stay.vals[-1]) ~ '%') if K.cmv_stay else '도시 이주 계획', '#b0503a') }}
+  {{ hcard('전반적인 귀촌 생활 만족도', [('매우 만족', K.cst_vok), ('만족', K.cst_ok), ('보통', K.cst_mid), ('불만족 이하', K.cst_bad)], '%', '불만족 이하 = 불만족 + 매우 불만족 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀촌 전과 비교한 생활 만족도', [('매우 높음', K.cbf_vhigh), ('높음', K.cbf_high), ('비슷함', K.cbf_same), ('낮음 이하', K.cbf_low)], '%', '낮음 이하 = 낮음 + 매우 낮음 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('분야별 귀촌 생활 만족(만족 이상)', [('자연환경', K.cfd_nat), ('주거환경', K.cfd_house), ('건강증진', K.cfd_hlth), ('가구소득', K.cfd_inc), ('직업', K.cfd_job)], '%', '만족 + 매우 만족 · 2025년 새 분야(의료·편의·문화 등)는 1년치라 뺌 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('귀촌 가구 계속 거주·이주 계획', [('계속 거주', K.cmv_stay), ('도시로 이주', K.cmv_city), ('다른 농촌으로 이주', K.cmv_rural)], '%', '오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('귀촌 가구 이주 예정 시기', [('구체적 계획 없음', K.cmv_none), ('1~3년 이내', K.cmv_3y), ('6개월~1년 이내', K.cmv_1y), ('6개월 이내', K.cmv_6m)], '%', '이주 계획 가구 중(2025년 410명) · 오른쪽은 전년 대비', none, '#7a5cc2') }}
  </div>
  </div></details>
 

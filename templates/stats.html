@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도', 132) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보', 143) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -280,6 +280,20 @@
   {{ hcard('분야별 귀촌 생활 만족(만족 이상)', [('자연환경', K.cfd_nat), ('주거환경', K.cfd_house), ('건강증진', K.cfd_hlth), ('가구소득', K.cfd_inc), ('직업', K.cfd_job)], '%', '만족 + 매우 만족 · 2025년 새 분야(의료·편의·문화 등)는 1년치라 뺌 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
   {{ hcard('귀촌 가구 계속 거주·이주 계획', [('계속 거주', K.cmv_stay), ('도시로 이주', K.cmv_city), ('다른 농촌으로 이주', K.cmv_rural)], '%', '오른쪽은 전년 대비', none, '#b0503a') }}
   {{ hcard('귀촌 가구 이주 예정 시기', [('구체적 계획 없음', K.cmv_none), ('1~3년 이내', K.cmv_3y), ('6개월~1년 이내', K.cmv_1y), ('6개월 이내', K.cmv_6m)], '%', '이주 계획 가구 중(2025년 410명) · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">귀촌 가구의 어려움·정보 경로·농지 확보 <small>농식품부 귀농귀촌실태조사 · 귀촌 응답 가구 중 비율 · 어려움 해소·농지 확보는 농사짓는 귀촌 가구 중(2025년 224·312명)</small></h3>
+ <div class="sg-g">
+  {{ card('cdf_none', 'p70', ('주거 ' ~ '{:.1f}'.format(K.cdf_house.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.cdf_house.vals[-2]) ~ '%') if K.cdf_house else '어려움 없음', '#b0503a') }}
+  {{ card('cif_gov', 'p71', ('귀농귀촌종합센터 ' ~ '{:.1f}'.format(K.cif_ctr.vals[-1]) ~ '% · 2023년 ' ~ '{:.1f}'.format(K.cif_ctr.vals[0]) ~ '%') if K.cif_ctr else '정보 제공기관 1순위', '#3a8f6a') }}
+  {{ card('cat_pre', 'p72', ('귀촌 전 평균 ' ~ '{:.1f}'.format(K.cat_prem.vals[-1]) ~ '개월 · 귀촌 후 평균 ' ~ '{:.1f}'.format(K.cat_postm.vals[-1]) ~ '개월') if K.cat_prem and K.cat_postm else '귀촌 전 농지 확보', '#1c7a45') }}
+  {{ hcard('귀촌 가구가 겪는 가장 큰 어려움', [('어려움 없음', K.cdf_none), ('소득', K.cdf_inc), ('주거', K.cdf_house), ('지역 인프라 부족', K.cdf_infra), ('지역 주민과의 관계', K.cdf_rel), ('농사', K.cdf_farm)], '%', '2025년 주거 어려움이 크게 늘어남 · 기타 0.4% 이하 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('귀촌 영농생활 어려움을 푼 방법', [('특별히 한 것 없음', K.chl_none), ('지역주민에게 상담', K.chl_resid), ('선배·동료 귀농인 상담', K.chl_senior), ('마을 이장에게 상담', K.chl_head), ('지역기관(기술센터 등)', K.chl_inst), ('인터넷 등 온라인', K.chl_net)], '%', '1순위 응답 · 전문컨설턴트·기타 각 0.5% 이하 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('귀촌 준비 정보 습득 경로', [('가족 또는 지인', K.cif_family), ('인터넷·SNS·유튜브', K.cif_net), ('TV·신문 등', K.cif_tv), ('정부 귀농귀촌 기관', K.cif_ctr2), ('귀농귀촌 교육', K.cif_edu)], '%', '1순위 응답 · 서적·박람회·기타 각 1.2% 이하 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('귀촌 정보를 준 기관', [('지방자치단체(시·군)', K.cif_gov), ('귀농귀촌종합센터', K.cif_ctr), ('농진청·기술원·센터', K.cif_rda)], '%', '1순위 · 기관에서 정보를 얻은 가구 중(2025년 271명) · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+  {{ hcard('귀촌 가구 농지 확보 방법', [('개인 거래(중개 포함)', K.cas_deal), ('승계(상속·공동경작)', K.cas_inh), ('농지은행', K.cas_bank)], '%', '기타 2.5% · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('귀촌 가구 농지 정보를 얻은 곳', [('지인(친척·친구)', K.cai_friend), ('이장', K.cai_head), ('지자체(지원센터 등)', K.cai_loc)], '%', '지역 농협·단체·기타 각 3% 안팎 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('귀촌 가구 농지 확보 어려움', [('어려움 없었음', K.cad_none), ('농지 정보 부족', K.cad_info), ('농지가격 비쌈', K.cad_cost), ('마음에 드는 농지 부족', K.cad_lack)], '%', '오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('귀촌 전·후 농지 확보 시기', [('귀촌 전 확보', K.cat_pre), ('귀촌 후 확보', K.cat_post)], '%', '2025년 귀촌 후 확보가 처음으로 절반을 넘음 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
  </div>
  </div></details>
 

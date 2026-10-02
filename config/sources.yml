@@ -1820,6 +1820,40 @@ sources:
       - {id: cfd_house, title: 분야별 귀촌 생활 만족 이상 주거환경, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^주거환경$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
       - {id: cfd_hlth, title: 분야별 귀촌 생활 만족 이상 건강증진, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^건강증진$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
       - {id: cfd_job, title: 분야별 귀촌 생활 만족 이상 직업, tbl: DT_114055_B057, org: "114", itm: "^귀촌 생활 만족도$", want: ["^직업$", "^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_inc, title: 귀촌 가구가 겪는 가장 큰 어려움 소득, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^소득$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_house, title: 귀촌 가구가 겪는 가장 큰 어려움 주거, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^주거$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_infra, title: 귀촌 가구가 겪는 가장 큰 어려움 지역 인프라 부족, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^지역 인프라 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_rel, title: 귀촌 가구가 겪는 가장 큰 어려움 지역 주민과의 관계, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^지역 주민과의 관계$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_farm, title: 귀촌 가구가 겪는 가장 큰 어려움 농사, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^농사$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cdf_none, title: 귀촌 가구가 겪는 가장 큰 어려움 어려움 없음, tbl: DT_114055_B075, org: "114", itm: "^귀촌과 관련해서 겪는 어려움$", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_senior, title: 귀촌 영농생활 어려움 해소 방법 1순위 귀농귀촌 선배·동료와 상담, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^귀농귀촌 선배"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_resid, title: 귀촌 영농생활 어려움 해소 방법 1순위 지역주민에게 상담, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^지역주민[(]이장 제외[)]에게"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_head, title: 귀촌 영농생활 어려움 해소 방법 1순위 마을 이장에게 상담, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^마을 이장에게"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_net, title: 귀촌 영농생활 어려움 해소 방법 1순위 인터넷 등 온라인 활용, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^인터넷 검색"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_inst, title: 귀촌 영농생활 어려움 해소 방법 1순위 지역기관 활용, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^지역기관 활용"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chl_none, title: 귀촌 영농생활 어려움 해소 방법 1순위 특별히 한 것 없음, tbl: DT_114055_B030, org: "114", itm: "^영농생활 어려움 해소 방법$", want: ["^1순위$", "^특별히 한 것 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_family, title: 귀촌 준비 정보 습득 경로 가족 또는 지인, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^가족 또는 지인$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_net, title: 귀촌 준비 정보 습득 경로 인터넷·SNS·유튜브, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^인터넷"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_tv, title: 귀촌 준비 정보 습득 경로 TV·신문 등 대중매체, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^TV"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_ctr2, title: 귀촌 준비 정보 습득 경로 정부 귀농귀촌종합센터 등 관련 기관, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^정부"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_edu, title: 귀촌 준비 정보 습득 경로 귀농귀촌 교육, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^귀농귀촌 교육$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_ctr, title: 귀촌 준비 정보 제공기관 귀농귀촌종합센터, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^귀농귀촌종합센터$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_rda, title: 귀촌 준비 정보 제공기관 농촌진흥청·농업기술원·농업기술센터, tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^농촌진흥청"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cif_gov, title: 귀촌 준비 정보 제공기관 지방자치단체(시·군), tbl: DT_114055_B054, org: "114", itm: "^귀촌 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^지방자치단체"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cas_bank, title: 귀촌 농지 확보 방법 농지은행, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^농지은행$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cas_deal, title: 귀촌 농지 확보 방법 개인 거래(부동산중개 포함), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^개인 거래"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cas_inh, title: 귀촌 농지 확보 방법 승계(상속·공동경작), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^승계"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cai_friend, title: 귀촌 농지 정보 얻은 곳 지인(친척·친구 등), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^지인"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cai_head, title: 귀촌 농지 정보 얻은 곳 이장, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^이장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cai_loc, title: 귀촌 농지 정보 얻은 곳 지자체(귀농귀촌지원센터 등), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^지자체"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cad_none, title: 귀촌 농지 확보 어려움 없었음, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^어려움 없었음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cad_info, title: 귀촌 농지 확보 어려움 농지 정보 부족, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^농지에 대한 정보가 부족해서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cad_cost, title: 귀촌 농지 확보 어려움 농지가격이 비쌈(자금 부족), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^농지가격이 비싸서"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cad_lack, title: 귀촌 농지 확보 어려움 마음에 드는 농지 부족, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^마음에 드는 농지가 부족해서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cat_pre, title: 귀촌 전에 농지를 확보한 가구, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cat_post, title: 귀촌 후에 농지를 확보한 가구, tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 후$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cat_prem, title: 귀촌 전 농지 확보 평균 시기(귀촌 몇 개월 전), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 전 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
+      - {id: cat_postm, title: 귀촌 후 농지 확보 평균 시기(귀촌 몇 개월 후), tbl: DT_114055_B034, org: "114", itm: "^농지 확보$", want: ["^귀촌 후 평균$"], unit: 개월, survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

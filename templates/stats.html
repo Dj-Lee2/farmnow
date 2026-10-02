@@ -815,7 +815,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률', 74) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비', 81) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -833,6 +833,16 @@
  <h3 class="sg-sub">작물별 소득 <small>10a(300평)당 · 전국 평균</small></h3>
  <div class="sg-g">
   {{ hcard('작물별 10a당 소득', [('마늘', K.ci_garlic_inc), ('고추', K.ci_pepper_inc), ('양파', K.ci_onion_inc), ('논벼', K.rice_inc), ('콩', K.ci_bean_inc)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">작물별 소득과 비료비 <small>10a(300평)당 · 소득 = 총수입 − 경영비 · 농촌진흥청 농산물소득조사 · 오른쪽은 1년 전 대비</small></h3>
+ <div class="sg-g">
+  {{ card('ia_inc_pap', 'v46', ('시설 토마토 ' ~ num(K.ia_inc_tom.vals[-1], '원')|striptags ~ ' · 딸기 ' ~ num(K.ia_inc_stb.vals[-1], '원')|striptags) if K.ia_inc_tom and K.ia_inc_stb else none, '#b0503a') }}
+  {{ card('ia_rt_apl', 'v47', ('사과 10a당 소득 ' ~ num(K.ia_inc_apl.vals[-1], '원')|striptags ~ ' · 시설 딸기 소득률 ' ~ '{:.1f}'.format(K.ia_rt_stb.vals[-1]) ~ '%') if K.ia_inc_apl and K.ia_rt_stb else none, '#c0763a') }}
+  {{ rcard('인삼(4년근) 유기질비료비 ÷ 무기질비료비', K.ia_of_gin, K.ia_cf_gin, 'v48', ('유기질 ' ~ num(K.ia_of_gin.vals[-1], '원')|striptags ~ ' · 무기질 ' ~ num(K.ia_cf_gin.vals[-1], '원')|striptags ~ ' · 퇴비 위주') if K.ia_of_gin and K.ia_cf_gin else '', '#7a5cc2') }}
+  {{ hcard('과수 10a당 소득', [('블루베리', K.ia_inc_blu), ('노지포도', K.ia_inc_grp), ('사과', K.ia_inc_apl), ('배', K.ia_inc_pear), ('노지감귤', K.ia_inc_ctr), ('복숭아', K.ia_inc_pch)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 1년 전 대비', none, '#c0763a') }}
+  {{ hcard('채소·특용작물 10a당 소득', [('시설 파프리카', K.ia_inc_pap), ('시설 토마토', K.ia_inc_tom), ('시설 딸기', K.ia_inc_stb), ('시설 참외', K.ia_inc_mel), ('인삼(4년근)', K.ia_inc_gin), ('노지 대파', K.ia_inc_wel), ('노지 가을배추', K.ia_inc_acab), ('고구마', K.ia_inc_swp)], '원', '가을배추는 1년 새 크게 늘어남 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
+  {{ hcard('작물별 10a당 유기질(부산물) 비료비', [('인삼(4년근)', K.ia_of_gin), ('시설 토마토', K.ia_of_tom), ('시설 딸기', K.ia_of_stb), ('노지 가을배추', K.ia_of_acab), ('사과', K.ia_of_apl), ('노지감귤', K.ia_of_ctr), ('고구마', K.ia_of_swp)], '원', '퇴비·유박 등 유기질 비료 구입비 · 오른쪽은 1년 전 대비', none, '#3a8f6a') }}
+  {{ hcard('작물별 10a당 무기질(보통) 비료비', [('시설 딸기', K.ia_cf_stb), ('시설 토마토', K.ia_cf_tom), ('노지 가을배추', K.ia_cf_acab), ('인삼(4년근)', K.ia_cf_gin), ('사과', K.ia_cf_apl), ('고구마', K.ia_cf_swp), ('노지감귤', K.ia_cf_ctr)], '원', '요소·복합비료 등 화학비료 구입비 · 시설 토마토·인삼은 유기질 쪽이 더 많음 · 오른쪽은 1년 전 대비', none, '#6b8fd6') }}
  </div>
  <h3 class="sg-sub">논벼 작업별 노동 시간 <small>10a(300평)당 · 자가+고용 · 농산물생산비조사</small></h3>
  <div class="sg-g">

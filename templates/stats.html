@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용', 201) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용·농업용지 소유·임차', 209) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -315,6 +315,17 @@
   {{ hcard('운영기간별 농업법인 수', [('3년 이하', K.cop_1), ('4~7년', K.cop_2), ('8~12년', K.cop_3), ('13년 이상', K.cop_4)], '개', '괄호는 전체 법인 중 비중 · 오른쪽은 전년 대비', K.cnq_all.vals[-1] if K.cnq_all else none, '#6b8fd6') }}
   {{ hcard('사업유형별 농업법인 종사자', [('농축산물 유통업', K.cew_dist), ('농축산물 가공업', K.cew_proc), ('작물재배업', K.cew_crop), ('축산업', K.cew_live), ('기타사업', K.cew_etc), ('농어촌관광휴양', K.cew_tour), ('농업서비스업', K.cew_svc)], '명', '괄호는 전체 종사자 중 비중 · 오른쪽은 전년 대비', K.cem_all.vals[-1] if K.cem_all else none, '#1c7a45') }}
   {{ hcard('사업유형별 농업법인 채용 계획 근로자', [('작물재배업', K.crh_crop), ('농축산물 유통업', K.crh_dist), ('농축산물 가공업', K.crh_proc), ('농어촌관광휴양', K.crh_tour), ('축산업', K.crh_live), ('기타사업', K.crh_etc), ('농업서비스업', K.crh_svc)], '명', '상용+임시·일용 · 괄호는 전체 채용 계획 중 비중 · 오른쪽은 전년 대비', K.chi_all.vals[-1] if K.chi_all else none, '#3a8f6a') }}
+ </div>
+ <h3 class="sg-sub">농업법인 농업용지 소유·임차·지목·시도 <small>영농조합법인·농업회사법인 합계 · 농업법인조사</small></h3>
+ <div class="sg-g">
+  {{ card('lnd_all', 'gy1', ('농지 보유 법인 ' ~ num(K.lnd_n.vals[-1], '개')|striptags ~ ' · 소유+임차') if K.lnd_n else none, '#1c7a45') }}
+  {{ rcard('농업법인 농업용지 중 임차 비중', K.lnd_r_all, K.lnd_all, 'gy2', ('임차 ' ~ num(K.lnd_r_all.vals[-1], 'ha')|striptags ~ ' ÷ 소유+임차') if K.lnd_r_all else '', '#b07a3a') }}
+  {{ rcard('농업법인 농업용지 중 미경작 비율', K.lnd_u, K.lnd_all, 'gy3', ('미경작 ' ~ num(K.lnd_u.vals[-1], 'ha')|striptags ~ ' · 경작 ' ~ num(K.lnd_c.vals[-1], 'ha')|striptags) if K.lnd_u and K.lnd_c else '', '#6b8fd6') }}
+  {{ qcard('법인당 농업용지', K.lnd_all, K.lnd_n, 'gy4', '소유+임차 농업용지 ÷ 농지 보유 법인 수', 1, 'ha', '#1c7a45') }}
+  {{ rcard('소유 농업용지 중 논 비중', K.lnd_o_pd, K.lnd_o_all, 'gy5', ('소유 논 ' ~ num(K.lnd_o_pd.vals[-1], 'ha')|striptags ~ ' ÷ 소유 농업용지') if K.lnd_o_pd else '', '#2458d6') }}
+  {{ rcard('임차 농업용지 중 밭 비중', K.lnd_r_fd, K.lnd_r_all, 'gy6', ('임차 밭 ' ~ num(K.lnd_r_fd.vals[-1], 'ha')|striptags ~ ' ÷ 임차 농업용지 · 과수원 포함') if K.lnd_r_fd else '', '#b07a3a') }}
+  {{ hcard('소유·임차 지목별 농업법인 농업용지', [('소유 논', K.lnd_o_pd), ('소유 밭', K.lnd_o_fd), ('임차 밭', K.lnd_r_fd), ('임차 논', K.lnd_r_pd), ('소유 과수원', K.lnd_o_or), ('임차 과수원', K.lnd_r_or)], 'ha', '과수원은 밭에 포함 · 초지 제외 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#1c7a45') }}
+  {{ hcard('시도별 농업법인 농업용지', [('전남', K.lnd_jn), ('전북', K.lnd_jb), ('경기', K.lnd_gg), ('제주', K.lnd_jj), ('충남', K.lnd_cn), ('경남', K.lnd_gn), ('강원', K.lnd_gw), ('경북', K.lnd_gb), ('충북', K.lnd_cb)], 'ha', '소유+임차 · 특광역시 제외 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#3a8f6a') }}
  </div>
  </div></details>
 

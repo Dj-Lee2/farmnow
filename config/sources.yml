@@ -2923,6 +2923,28 @@ sources:
       - {id: smx_ph_pd, title: 논 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200010$"}, unit: pH, survey: 토양측정망}
       - {id: smx_ph_fd, title: 밭 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200014$"}, unit: pH, survey: 토양측정망}
       - {id: smx_ph_or, title: 과수원 토양 산도(pH) 최저값, tbl: DT_106N_20_0200006, org: "106", periods: 10, itm: "오염도", want: ["^최저$", "^수소이온농도 pH$"], codes: {C1: "4200018$"}, unit: pH, survey: 토양측정망}
+      # 농업법인 농업용지(DT_1E5210A_2020) — C2 이름 '계·논·밭'이 소유/임차·경작/미경작 블록마다 반복돼 코드(T1xx 전체·T2xx 경작·T3xx 미경작, x1x 소유·x2x 임차)로 고름
+      - {id: lnd_n, title: 농지 보유 농업법인 수, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^법인수$"], codes: {C2: "^T100$"}, sum: true, unit: 개, survey: 농업법인조사}
+      - {id: lnd_all, title: 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_c, title: 농업법인 경작 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$"], codes: {C2: "^T2[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_u, title: 농업법인 미경작 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$"], codes: {C2: "^T3[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_o_all, title: 농업법인 소유 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$"], codes: {C2: "^T111$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_o_pd, title: 농업법인 소유 논, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^논$"], codes: {C2: "^T112$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_o_fd, title: 농업법인 소유 밭, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^밭$"], codes: {C2: "^T113$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_o_or, title: 농업법인 소유 과수원, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^과수원$"], codes: {C2: "^T114$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_r_all, title: 농업법인 임차 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$"], codes: {C2: "^T121$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_r_pd, title: 농업법인 임차 논, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^논$"], codes: {C2: "^T122$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_r_fd, title: 농업법인 임차 밭, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^밭$"], codes: {C2: "^T123$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_r_or, title: 농업법인 임차 과수원, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^(영농조합법인|농업회사법인)$", "^과수원$"], codes: {C2: "^T124$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_gg, title: 경기 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^경기도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_gw, title: 강원 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^강원"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_cb, title: 충북 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^충청북도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_cn, title: 충남 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^충청남도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_jb, title: 전북 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^전북|^전라북도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_jn, title: 전남 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^전라남도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_gb, title: 경북 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^경상북도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_gn, title: 경남 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^경상남도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnd_jj, title: 제주 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^제주"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

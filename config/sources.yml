@@ -1601,6 +1601,34 @@ sources:
       - {id: eqp_etc, title: 동력분무기를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
       - {id: eqp_herb, title: 동력분무기를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
       - {id: eqp_wood, title: 동력분무기를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      # 임업경영실태조사 직거래 판매방법(업종별)·귀농인 농산물 주 판매경로
+      - {id: jdp_chest, title: 직거래 중 전화 주문 비율(밤 임가), tbl: DT_136022_9805, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_pers, title: 직거래 중 전화 주문 비율(감 임가), tbl: DT_136022_10064, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_mush, title: 직거래 중 전화 주문 비율(버섯 임가), tbl: DT_136022_9915, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_gath, title: 직거래 중 전화 주문 비율(식용 임산물 채취 임가), tbl: DT_136022_9770, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_orn, title: 직거래 중 전화 주문 비율(관상 산림식물 임가), tbl: DT_136022_9867, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_etc, title: 직거래 중 전화 주문 비율(기타 수실류 임가), tbl: DT_136022_10151, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdp_herb, title: 직거래 중 전화 주문 비율(산채·약초 임가), tbl: DT_136022_9923, org: "136", itm: "^값$", want: ["^전화 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_chest, title: 직거래 중 인터넷 주문 비율(밤 임가), tbl: DT_136022_9805, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_pers, title: 직거래 중 인터넷 주문 비율(감 임가), tbl: DT_136022_10064, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_mush, title: 직거래 중 인터넷 주문 비율(버섯 임가), tbl: DT_136022_9915, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_gath, title: 직거래 중 인터넷 주문 비율(식용 임산물 채취 임가), tbl: DT_136022_9770, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_orn, title: 직거래 중 인터넷 주문 비율(관상 산림식물 임가), tbl: DT_136022_9867, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_etc, title: 직거래 중 인터넷 주문 비율(기타 수실류 임가), tbl: DT_136022_10151, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdi_herb, title: 직거래 중 인터넷 주문 비율(산채·약초 임가), tbl: DT_136022_9923, org: "136", itm: "^값$", want: ["^인터넷 주문$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_chest, title: 직거래 중 직접 판매 비율(밤 임가), tbl: DT_136022_9805, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_pers, title: 직거래 중 직접 판매 비율(감 임가), tbl: DT_136022_10064, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_mush, title: 직거래 중 직접 판매 비율(버섯 임가), tbl: DT_136022_9915, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_gath, title: 직거래 중 직접 판매 비율(식용 임산물 채취 임가), tbl: DT_136022_9770, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_orn, title: 직거래 중 직접 판매 비율(관상 산림식물 임가), tbl: DT_136022_9867, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_etc, title: 직거래 중 직접 판매 비율(기타 수실류 임가), tbl: DT_136022_10151, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jds_herb, title: 직거래 중 직접 판매 비율(산채·약초 임가), tbl: DT_136022_9923, org: "136", itm: "^값$", want: ["^직접 판매$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: rsr_nh, title: 귀농인 농산물 주 판매경로 지역 농협, tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^지역 농협$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsr_corp, title: 귀농인 농산물 주 판매경로 영농 법인·조합, tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^영농 법인/영농 조합$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsr_direct, title: 귀농인 농산물 주 판매경로 소비자 직거래(인터넷 등), tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^소비자 직거래"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsr_local, title: 귀농인 농산물 주 판매경로 로컬푸드매장, tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^로컬푸드매장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsr_whs, title: 귀농인 농산물 주 판매경로 농산물 공판장, tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^농산물 공판장$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsr_none, title: 귀농인 농산물 주 판매경로 판매하지 않음(자가소비 등), tbl: DT_114055_A025, org: "114", itm: "^농산물 주 판매경로$", want: ["^판매하지 않음"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

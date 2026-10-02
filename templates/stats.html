@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처', 48) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로', 58) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -157,6 +157,22 @@
   {{ hcard('농협 판매 비율 · 품목별', [('고사리', K.dnh_frn), ('참취', K.dnh_cha), ('목이버섯', K.dnh_mok), ('곤드레', K.dnh_gdr), ('원추리', K.dnh_wch), ('톱밥배지표고', K.dnh_sws), ('수액(고로쇠 등)', K.dnh_sap), ('원목표고(노지)', K.dnh_shl), ('원목표고(시설)', K.dnh_shf), ('산마늘', K.dnh_smn)], '%', '생물 기준 · 곰취·참나물은 농협 판매 없음 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('도매상 판매 비율 · 품목별', [('참나물', K.dwh_cnm), ('톱밥배지표고', K.dwh_sws), ('곤드레', K.dwh_gdr), ('산마늘', K.dwh_smn), ('참취', K.dwh_cha), ('고사리', K.dwh_frn), ('곰취', K.dwh_gom), ('원목표고(노지)', K.dwh_shl), ('목이버섯', K.dwh_mok), ('원목표고(시설)', K.dwh_shf), ('수액(고로쇠 등)', K.dwh_sap)], '%', '생물 기준 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
   {{ hcard('말린 임산물 판매처', [('원목표고(시설) · 농협', K.ddr_nh_shf), ('원목표고(노지) · 농협', K.ddr_nh_shl), ('톱밥배지표고 · 농협', K.ddr_nh_sws), ('고사리 · 직접 판매', K.ddr_ds_frn), ('곤드레 · 직접 판매', K.ddr_ds_gdr), ('톱밥배지표고 · 직접 판매', K.ddr_ds_sws)], '%', '건물(말린 것) 판매량 중 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">임산물 직거래 판매 방법 <small>직거래하는 임가의 판매 방법별 비율 · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('jdp_chest', 'p28', ('직접 판매 ' ~ '{:.1f}'.format(K.jds_chest.vals[-1]) ~ '% · 전화 주문이 크게 늘었음') if K.jds_chest else '밤 재배 임가', '#e0a03a') }}
+  {{ card('jdp_herb', 'p29', ('직접 판매 ' ~ '{:.1f}'.format(K.jds_herb.vals[-1]) ~ '% · 업종 중 전화 주문 비율 최고') if K.jds_herb else '산채·약초 재배 임가', '#7a5cc2') }}
+  {{ card('jds_orn', 'p30', ('전화 주문 ' ~ '{:.1f}'.format(K.jdp_orn.vals[-1]) ~ '% · 조경수·분재·야생화는 현장 거래') if K.jdp_orn else '관상 산림식물 재배 임가', '#3a8f6a') }}
+  {{ hcard('업종별 직거래 중 직접 판매 비율', [('관상 산림식물', K.jds_orn), ('기타 수실류', K.jds_etc), ('식용 임산물 채취', K.jds_gath), ('버섯', K.jds_mush), ('감', K.jds_pers), ('밤', K.jds_chest), ('산채·약초', K.jds_herb)], '%', '직거래 임가 중 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('업종별 직거래 중 전화 주문 비율', [('산채·약초', K.jdp_herb), ('밤', K.jdp_chest), ('감', K.jdp_pers), ('버섯', K.jdp_mush), ('식용 임산물 채취', K.jdp_gath), ('기타 수실류', K.jdp_etc), ('관상 산림식물', K.jdp_orn)], '%', '직거래 임가 중 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('업종별 직거래 중 인터넷 주문 비율', [('관상 산림식물', K.jdi_orn), ('기타 수실류', K.jdi_etc), ('산채·약초', K.jdi_herb), ('식용 임산물 채취', K.jdi_gath), ('버섯', K.jdi_mush), ('밤', K.jdi_chest), ('감', K.jdi_pers)], '%', '직거래 임가 중 · 인터넷 주문은 모든 업종에서 3% 미만 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">귀농 가구 농산물 주 판매경로 <small>농식품부 귀농귀촌실태조사 · 응답 가구 중 비율</small></h3>
+ <div class="sg-g">
+  {{ card('rsr_nh', 'p31', '귀농 가구의 주 판매경로 · 지역 농협', '#1c7a45') }}
+  {{ card('rsr_direct', 'p32', '인터넷 등 소비자 직거래 · 로컬푸드매장 ' ~ K.rsr_local.vals[-1] ~ '%' if K.rsr_local else none, '#e0a03a') }}
+  {{ card('rsr_none', 'p33', '판매 없이 자가소비 등 · 2023년 ' ~ K.rsr_none.vals[0] ~ '%' if K.rsr_none else none, '#b0503a') }}
+  {{ hcard('귀농 가구 농산물 주 판매경로', [('판매하지 않음(자가소비 등)', K.rsr_none), ('지역 농협', K.rsr_nh), ('소비자 직거래(인터넷 등)', K.rsr_direct), ('영농 법인·영농 조합', K.rsr_corp), ('농산물 공판장', K.rsr_whs), ('로컬푸드매장', K.rsr_local)], '%', '대형마트 수의매매·밭떼기·기타는 합쳐 5% 안팎 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  </div></details>
 

@@ -1651,6 +1651,40 @@ sources:
       - {id: rif_ctr, title: 귀농 준비 정보 습득 경로 귀농귀촌종합센터, tbl: DT_114055_A049, org: "114", itm: "^귀농 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^귀농귀촌종합센터$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rif_ctr2, title: 귀농 준비 정보 습득 경로 정부 귀농귀촌종합센터 등 관련 기관, tbl: DT_114055_A049, org: "114", itm: "^귀농 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^정부"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rif_tv, title: 귀농 준비 정보 습득 경로 TV·신문 등 대중매체, tbl: DT_114055_A049, org: "114", itm: "^귀농 준비 당시 관련정보 습득 경로 및 제공기관$", want: ["^TV"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhi_before, title: 귀농 가구 평균 소득 귀농 직전 해, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^귀농 직전 년도$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_first, title: 귀농 가구 평균 소득 귀농 첫해, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^귀농 첫해$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_now, title: 귀농 가구 평균 소득 현재, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^현재$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_farm, title: 귀농 첫해 농업소득, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^농업소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_off, title: 귀농 첫해 농외소득, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^농외소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_trans, title: 귀농 첫해 이전소득, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^이전소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rhi_irr, title: 귀농 첫해 비경상소득, tbl: DT_114055_A029, org: "114", itm: "^평균 가구총소득$", want: ["^비경상소득$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rsf_avg, title: 귀농 정착자금 평균, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^평균$"], unit: "만원", survey: 귀농귀촌실태조사}
+      - {id: rsf_ret, title: 귀농 정착자금 조달 1순위 퇴직금, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^퇴직금$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsf_sav, title: 귀농 정착자금 조달 1순위 본인·배우자 저축, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^본인 및 배우자의 저축액$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsf_ast, title: 귀농 정착자금 조달 1순위 자산처분, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^자산처분$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsf_fam, title: 귀농 정착자금 조달 1순위 상속·가족 도움, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^상속 또는 가족의 도움$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsf_loan, title: 귀농 정착자금 조달 1순위 금융권 대출, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^금융권 대출$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsf_gov, title: 귀농 정착자금 조달 1순위 정부정책 지원금, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^정부정책 지원금$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsu_land, title: 귀농 정착자금 사용 1순위 농지 구입·임대, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^농지 구입 및 임대$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsu_fac, title: 귀농 정착자금 사용 1순위 영농시설·자재 구입, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^영농시설 자재구입$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsu_crop, title: 귀농 정착자금 사용 1순위 농작물 재배·가축 사육, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^농작물 재배 및 가축사육$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsu_live, title: 귀농 정착자금 사용 1순위 생활비, tbl: DT_114055_A046, org: "114", itm: "^귀농시 사용한 정착자금$", want: ["^생활비$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_inc, title: 귀농 가구가 겪는 가장 큰 어려움 소득, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^소득$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_farm, title: 귀농 가구가 겪는 가장 큰 어려움 농사, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^농사$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_house, title: 귀농 가구가 겪는 가장 큰 어려움 주거, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^주거$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_infra, title: 귀농 가구가 겪는 가장 큰 어려움 지역 인프라 부족, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^지역 인프라 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_rel, title: 귀농 가구가 겪는 가장 큰 어려움 지역 주민과의 관계, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^지역 주민과의 관계$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rdf_none, title: 귀농 가구가 겪는 가장 큰 어려움 어려움 없음, tbl: DT_114055_A069, org: "114", itm: "^귀농과 관련해서 겪는 어려움$", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_easy, title: 귀농 주작목 선택 이유 쉽게 재배할 수 있어서, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^쉽게 재배"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_inc, title: 귀농 주작목 선택 이유 소득이 높은 작목, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^소득이 높은"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_fam, title: 귀농 주작목 선택 이유 가족·친척 등 주변인 권유, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^가족 친척"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_loc, title: 귀농 주작목 선택 이유 지역 특화 작목, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^지역의 특화"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_edu, title: 귀농 주작목 선택 이유 귀농교육 이수 작목, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^귀농교육을 이수"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rcr_org, title: 귀농 주작목 선택 이유 농·축산 관련 기관 권유, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^농·축산 관련"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rct_pre, title: 귀농 주작목 선택 시기 귀농 이전, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^귀농 이전$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rct_6m, title: 귀농 주작목 선택 시기 귀농 후 6개월 이내, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^귀농 후 6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rct_1y, title: 귀농 주작목 선택 시기 귀농 후 6개월~1년, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^귀농 후 6개월~1년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rct_late, title: 귀농 주작목 선택 시기 귀농 후 1년 이후, tbl: DT_114055_A013, org: "114", itm: "^주작목 선택 이유 및 시기$", want: ["^귀농 후 1년 이후$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

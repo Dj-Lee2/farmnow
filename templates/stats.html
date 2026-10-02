@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로', 68) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택', 81) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -189,6 +189,25 @@
   {{ card('rif_rda', 'p39', ('지방자치단체 ' ~ '{:.1f}'.format(K.rif_gov.vals[-1]) ~ '% · 농진청·도 농업기술원·시군 농업기술센터') if K.rif_gov else '농촌진흥청·농업기술센터', '#3a8f6a') }}
   {{ hcard('귀농 준비 정보 습득 경로', [('가족 또는 지인', K.rif_family), ('정부 관련 기관(그린대로 등)', K.rif_ctr2), ('인터넷·SNS·유튜브', K.rif_net), ('TV·신문 등 대중매체', K.rif_tv), ('귀농귀촌 교육', K.rif_edu)], '%', '서적·박람회·기타는 합쳐 1% 남짓 · 오른쪽은 전년 대비', none, '#e0a03a') }}
   {{ hcard('귀농 정보 제공기관', [('귀농귀촌종합센터', K.rif_ctr), ('농진청·농업기술센터', K.rif_rda), ('시·군 지자체', K.rif_gov)], '%', '농업기술센터는 도 농업기술원 포함 · 대학·민간·기타 2% 안팎 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">귀농 가구 소득과 정착자금 <small>농식품부 귀농귀촌실태조사 · 귀농 5년 이내 가구 평균 · 조달·사용처는 1순위 응답</small></h3>
+ <div class="sg-g">
+  {{ card('rhi_now', 'p40', ('귀농 직전 ' ~ K.rhi_before.vals[-1]|big ~ '만 원 · 첫해 ' ~ K.rhi_first.vals[-1]|big ~ '만 원') if K.rhi_before and K.rhi_first else '귀농 가구 평균', '#1c7a45') }}
+  {{ card('rhi_farm', 'p41', ('첫해 소득의 ' ~ '{:.1f}'.format(K.rhi_farm.vals[-1] / K.rhi_first.vals[-1] * 100) ~ '% · 농외소득 ' ~ K.rhi_off.vals[-1]|big ~ '만 원') if K.rhi_first and K.rhi_off else '귀농 첫해', '#e0a03a') }}
+  {{ card('rsf_avg', 'p42', ('본인·배우자 저축으로 마련 ' ~ '{:.1f}'.format(K.rsf_sav.vals[-1]) ~ '% · 1순위') if K.rsf_sav else '귀농할 때 쓴 돈', '#7a5cc2') }}
+  {{ hcard('귀농 전후 가구 평균 소득', [('귀농 직전 해', K.rhi_before), ('귀농 첫해', K.rhi_first), ('현재', K.rhi_now)], '만원', '같은 가구에 물은 시기별 소득 · 오른쪽은 전년 조사 대비', none, '#1c7a45') }}
+  {{ hcard('귀농 첫해 소득 구성', [('농외소득', K.rhi_off), ('농업소득', K.rhi_farm), ('이전소득', K.rhi_trans), ('비경상소득', K.rhi_irr)], '만원', '괄호는 첫해 소득 중 비중 · 오른쪽은 전년 조사 대비', K.rhi_first.vals[-1] if K.rhi_first else none, '#e0a03a') }}
+  {{ hcard('정착자금 조달 1순위', [('본인·배우자 저축', K.rsf_sav), ('자산처분', K.rsf_ast), ('퇴직금', K.rsf_ret), ('상속·가족 도움', K.rsf_fam), ('금융권 대출', K.rsf_loan), ('정부정책 지원금', K.rsf_gov)], '%', '기타 1% 미만 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+  {{ hcard('정착자금 사용 1순위', [('농지 구입·임대', K.rsu_land), ('생활비', K.rsu_live), ('영농시설·자재 구입', K.rsu_fac), ('농작물 재배·가축 사육', K.rsu_crop)], '%', '주택 관련(2025년 수리·구입·임대로 나눔) 47.4%는 뺌 · 오른쪽은 전년 대비', none, '#b0503a') }}
+ </div>
+ <h3 class="sg-sub">귀농 어려움과 주작목 선택 <small>농식품부 귀농귀촌실태조사 · 응답 가구 중 비율</small></h3>
+ <div class="sg-g">
+  {{ card('rdf_inc', 'p43', ('어려움 없음 ' ~ '{:.1f}'.format(K.rdf_none.vals[-1]) ~ '% · 가장 큰 어려움 1위') if K.rdf_none else '가장 큰 어려움', '#b0503a') }}
+  {{ card('rdf_farm', 'p44', ('주거 ' ~ '{:.1f}'.format(K.rdf_house.vals[-1]) ~ '% · 2024년 ' ~ '{:.1f}'.format(K.rdf_house.vals[-2]) ~ '%') if K.rdf_house else '농사짓기', '#e0a03a') }}
+  {{ card('rcr_easy', 'p45', ('소득이 높아서 ' ~ '{:.1f}'.format(K.rcr_inc.vals[-1]) ~ '% · 귀농 이전에 정한 가구 ' ~ '{:.1f}'.format(K.rct_pre.vals[-1]) ~ '%') if K.rcr_inc and K.rct_pre else '주작목 선택 이유', '#1c7a45') }}
+  {{ hcard('귀농 가구가 겪는 가장 큰 어려움', [('소득', K.rdf_inc), ('농사', K.rdf_farm), ('어려움 없음', K.rdf_none), ('주거', K.rdf_house), ('지역 인프라 부족', K.rdf_infra), ('지역 주민과의 관계', K.rdf_rel)], '%', '기타 0.2% · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('주작목(작물) 선택 이유', [('쉽게 재배할 수 있어서', K.rcr_easy), ('가족·친척 등 주변인 권유', K.rcr_fam), ('소득이 높은 작목', K.rcr_inc), ('지역 특화 작목', K.rcr_loc), ('귀농교육 이수 작목', K.rcr_edu), ('농·축산 관련 기관 권유', K.rcr_org)], '%', '자본 규모·기타는 합쳐 2% 남짓 · 오른쪽은 전년 대비', none, '#1c7a45') }}
+  {{ hcard('주작목을 정한 시기', [('귀농 이전', K.rct_pre), ('귀농 후 6개월 이내', K.rct_6m), ('귀농 후 6개월~1년', K.rct_1y), ('귀농 후 1년 이후', K.rct_late)], '%', '오른쪽은 전년 대비', none, '#e0a03a') }}
  </div>
  </div></details>
 

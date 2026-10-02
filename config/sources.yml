@@ -1387,6 +1387,37 @@ sources:
       - {id: fyc_juj, title: 대추 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^대추$", want: [], unit: 가구, survey: 임업조사}
       - {id: fyc_nut, title: 호두·잣·은행 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^호두 잣 은행$", want: [], unit: 가구, survey: 임업조사}
       - {id: fyc_rasp, title: 복분자·산딸기 재배 임가, tbl: DT_1FA7008, periods: 6, itm: "^복분자·산딸기$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyd_total, title: 생산부문별 임가(계), tbl: DT_1FA7004, periods: 6, itm: "^임업가구$", want: ["^계$"], unit: 가구, survey: 임업조사}
+      - {id: fyd_tend, title: 육림업 임가, tbl: DT_1FA7004, periods: 6, itm: "^임업가구$", want: ["^육림업$"], unit: 가구, survey: 임업조사}
+      - {id: fyd_log, title: 벌목·양묘업 임가, tbl: DT_1FA7004, periods: 6, itm: "^임업가구$", want: ["^벌목 양묘업$"], unit: 가구, survey: 임업조사}
+      - {id: fyd_gath, title: 채취업 임가, tbl: DT_1FA7004, periods: 6, itm: "^임업가구$", want: ["^채취업$"], unit: 가구, survey: 임업조사}
+      - {id: fyg_gath, title: 채취업 임가(채취 품목 표), tbl: DT_1FA7019, periods: 6, itm: "^채취업임가$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_song, title: 송이버섯 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^송이버섯$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_mush, title: 기타 버섯 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^기타버섯$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_nut, title: 수실(열매)류 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^수실[(]열매[)]류$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_chwi, title: 취나물 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^취나물$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_fern, title: 고사리 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^고사리$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_herb, title: 기타 산나물 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^기타산나물$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_med, title: 약용류 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^약용류$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyg_sap, title: 수액류 채취 임가, tbl: DT_1FA7019, periods: 6, itm: "^수액류$", want: [], unit: 가구, survey: 임업조사}
+      - {id: fyv_total, title: 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^계$"], unit: 가구, survey: 임업조사}
+      - {id: fyv_none, title: 판매 없는 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^판매없음$"], unit: 가구, survey: 임업조사}
+      - {id: fyv_u120, title: 판매 120만원 미만 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^120만원 미만$"], unit: 가구, survey: 임업조사}
+      - {id: fyv_120_500, title: 판매 120만~500만원 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^(120만원~300만원 미만|300만원~500만원 미만)$"], sum: true, unit: 가구, survey: 임업조사}
+      - {id: fyv_500_1k, title: 판매 500만~1천만원 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^500만원~1천만원 미만$"], unit: 가구, survey: 임업조사}
+      - {id: fyv_1k_3k, title: 판매 1천만~3천만원 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^(1천만원~2천만원 미만|2천만원~3천만원 미만)$"], sum: true, unit: 가구, survey: 임업조사}
+      - {id: fyv_3kp, title: 판매 3천만원 이상 비재배 임가, tbl: DT_1FA7014, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^(3천만원~5천만원 미만|5천만원~7천만원 미만|7천만원~1억원 미만|1억원~2억원 미만|2억원~5억원 미만|5억원 이상)$"], sum: true, unit: 가구, survey: 임업조사}
+      - {id: fyw_1, title: 임업종사 가구원 1명 이하 비재배 임가, tbl: DT_1FA7011, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^1명 이하$"], unit: 가구, survey: 임업조사}
+      - {id: fyw_2, title: 임업종사 가구원 2명 비재배 임가, tbl: DT_1FA7011, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^2명$"], unit: 가구, survey: 임업조사}
+      - {id: fyw_3p, title: 임업종사 가구원 3명 이상 비재배 임가, tbl: DT_1FA7011, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^3명 이상$"], unit: 가구, survey: 임업조사}
+      - {id: fym_13, title: 연 임업종사 1~3개월 경영주, tbl: DT_1FA7012, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^1~3개월$"], unit: 가구, survey: 임업조사}
+      - {id: fym_36, title: 연 임업종사 3~6개월 경영주, tbl: DT_1FA7012, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^3~6개월$"], unit: 가구, survey: 임업조사}
+      - {id: fym_6p, title: 연 임업종사 6개월 이상 경영주, tbl: DT_1FA7012, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^6개월이상$"], unit: 가구, survey: 임업조사}
+      - {id: fye_u5, title: 임업 경력 5년 미만 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^5년미만$"], unit: 가구, survey: 임업조사}
+      - {id: fye_510, title: 임업 경력 5~10년 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^5-10$"], unit: 가구, survey: 임업조사}
+      - {id: fye_1015, title: 임업 경력 10~15년 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^10-15$"], unit: 가구, survey: 임업조사}
+      - {id: fye_1520, title: 임업 경력 15~20년 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^15-20$"], unit: 가구, survey: 임업조사}
+      - {id: fye_20p, title: 임업 경력 20년 이상 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^20년 이상$"], unit: 가구, survey: 임업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

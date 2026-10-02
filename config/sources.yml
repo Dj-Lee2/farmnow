@@ -2873,6 +2873,29 @@ sources:
       - {id: crh_svc, title: 농업서비스업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농업서비스업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
       - {id: crh_tour, title: 농어촌관광휴양 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^농어촌관광휴양사업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
       - {id: crh_etc, title: 기타사업 농업법인 채용 계획 근로자, tbl: DT_1E5209B, org: "114", itm: "^법인특성별 인력 채용 계획$", want: ["^기타사업$", "^전체 채용 근로자수$"], unit: 명, survey: 농업법인조사}
+      - {id: ghs_agri, title: 농업 온실가스 배출량(국가 인벤토리), tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300081$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_ent, title: 가축 장내발효 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300040$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_man, title: 가축 분뇨처리 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300042$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_rice, title: 벼 재배 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300044$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_soil, title: 농경지 토양 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300046$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_burn, title: 작물잔사 소각 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300050$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_lime, title: 석회 시용 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300089$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_urea, title: 요소 시용 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300091$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_total, title: 국가 온실가스 총배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300003$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_net, title: 국가 온실가스 순배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300006$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_energy, title: 에너지 분야 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300079$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_ippu, title: 산업공정 분야 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300080$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_waste, title: 폐기물 분야 온실가스 배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300082$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_lulucf, title: 토지이용·임업 분야 온실가스 순배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300083$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_forest, title: 산림지 온실가스 순배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300055$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghs_crop, title: 농경지(토지이용) 온실가스 순배출량, tbl: DT_106N_99_2800020, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4300057$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_ch4_agri, title: 농업 메탄(CH₄) 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400045$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_ch4_all, title: 국가 메탄(CH₄) 총배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400032$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_n2o_agri, title: 농업 아산화질소(N₂O) 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400075$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_n2o_all, title: 국가 아산화질소(N₂O) 총배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400066$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_ch4_man, title: 가축 분뇨처리 메탄 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400049$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_n2o_man, title: 가축 분뇨처리 아산화질소 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400077$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
+      - {id: ghm_co2_agri, title: 농업 이산화탄소(CO₂) 배출량, tbl: DT_106N_99_2800025, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "4400143$"}, unit: 백만톤, survey: 국가 온실가스 인벤토리}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

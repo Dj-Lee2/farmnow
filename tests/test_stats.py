@@ -36,6 +36,14 @@ def test_pick_series_class_as_item():
     assert kosis.pick_series(rows, "논|면적", ["^논"])["vals"] == [764000.0]
 
 
+def test_pick_series_by_class_code():
+    rows = [_r("2023", "배출량", "707.2", "백만t", C1="A.4300003", C1_NM="소계"),
+            _r("2023", "배출량", "22.5", "백만t", C1="A.4300081", C1_NM="소계"),
+            _r("2023", "배출량", "6.7", "백만t", C1="A.4300040", C1_NM="소계")]
+    assert kosis.pick_series(rows, "^배출량$", codes={"C1": "4300081$"})["vals"] == [22.5]
+    assert kosis.pick_series(rows, "^배출량$", codes={"C1": "43000(40|81)$"}, total=True)["vals"] == [29.2]
+
+
 def test_collect_uses_cache_and_skips_without_key(tmp_path, monkeypatch):
     src = {"id": "k", "env_key": "KOSIS_TEST_KEY", "series": [{"id": "farms", "title": "농가 수", "tbl": "T", "itm": "농가"}]}
     monkeypatch.delenv("KOSIS_TEST_KEY", raising=False)

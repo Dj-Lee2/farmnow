@@ -3196,6 +3196,41 @@ sources:
       - {id: msk_w20_all, title: 20kg 이상 중량물 취급 노출 여부 응답 농업인 수, tbl: DT_14303_E2116, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^노출 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: aid_w20_y, title: 20kg 이상 중량물 취급 때 편이장비를 사용하는 농업인 수, tbl: DT_14303_E2116, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^사용함$"], unit: 명, survey: 농업인 업무상 손상조사}
       - {id: aid_w20_all, title: 20kg 이상 중량물 취급 편이장비 사용 여부 응답 농업인 수, tbl: DT_14303_E2116, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^편이장비 사용 여부$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzp_m0, title: 한 해 소음 노출 기간 2개월 미만 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2개월 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzp_m3, title: 한 해 소음 노출 기간 3~5개월 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^3~5개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzp_m6, title: 한 해 소음 노출 기간 6~8개월 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8개월$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzp_m9, title: 한 해 소음 노출 기간 9개월 이상 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^9개월 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzd_d0, title: 한 달 소음 노출 일수 5일 이하 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^5일 이하$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzd_d6, title: 한 달 소음 노출 일수 6~10일 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~10일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzd_d11, title: 한 달 소음 노출 일수 11~20일 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^11~20일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzd_d21, title: 한 달 소음 노출 일수 21일 이상 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^21일 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzs_ride, title: 소음 노출원 탑승/보행식 농업기계 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^탑승/보행식 농업기계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzs_pack, title: 소음 노출원 등짐·휴대형 농업기계 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^등짐·휴대형 농업기계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzs_fix, title: 소음 노출원 고정식 농업기계 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^고정식 농업기계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzs_fac, title: 소음 노출원 농업시설·장치 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^농업시설·장치$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: nzs_etc, title: 소음 노출원 기타 농업인 수, tbl: DT_14303_E2105, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^기타$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: resp_mostly, title: 유기분진 노출 농업인 호흡기 보호구 거의 착용함, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^거의 착용함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: resp_some, title: 유기분진 노출 농업인 호흡기 보호구 가끔 착용함, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^가끔 착용함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsd_d0, title: 한 달 유기분진 노출 일수 5일 이하 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^5일 이하$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsd_d6, title: 한 달 유기분진 노출 일수 6~10일 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~10일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsd_d11, title: 한 달 유기분진 노출 일수 11~20일 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^11~20일$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsd_d21, title: 한 달 유기분진 노출 일수 21일 이상 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^21일 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsh_h0, title: 하루 유기분진 노출 2시간 미만 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2시간 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsh_h2, title: 하루 유기분진 노출 2~4시간 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^2~4시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsh_h4, title: 하루 유기분진 노출 4~6시간 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^4~6시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsh_h6, title: 하루 유기분진 노출 6~8시간 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^6~8시간$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dsh_h8, title: 하루 유기분진 노출 8시간 이상 농업인 수, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^8시간 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: mk_dust, title: 유기분진 노출 농업인 호흡기 보호구 종류 방진 마스크, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^방진 마스크$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: mk_kf, title: 유기분진 노출 농업인 호흡기 보호구 종류 황사·미세/방역용 마스크, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^황사·미세/방역용 마스크$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: mk_med, title: 유기분진 노출 농업인 호흡기 보호구 종류 의료용 마스크, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^의료용 마스크$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: mk_cot, title: 유기분진 노출 농업인 호흡기 보호구 종류 면 마스크, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^면 마스크$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: mk_etc, title: 유기분진 노출 농업인 호흡기 보호구 종류 기타, tbl: DT_14303_E2106, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^기타$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: vent_no, title: 배기가스·난방가스 노출 농업인 환기 전혀 안함, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^전혀 안함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: vent_some, title: 배기가스·난방가스 노출 농업인 환기 가끔함, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^가끔함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: vent_often, title: 배기가스·난방가스 노출 농업인 환기 자주함, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^자주함$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpl_out, title: 배기가스·난방가스 노출 장소 실외 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실외$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpl_in, title: 배기가스·난방가스 노출 장소 실내 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실내$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: gpl_both, title: 배기가스·난방가스 노출 장소 실외+실내 농업인 수, tbl: DT_14303_E2107, org: "143", se: F, periods: 5, itm: "^농업인수$", want: ["^실외\\+실내$"], unit: 명, survey: 농업인 업무상 손상조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1529,6 +1529,40 @@ sources:
       - {id: fbp_gom, title: 곰취 1ha당 농약비, tbl: DT_136036_11618, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: fbp_ma, title: 마 1ha당 농약비, tbl: DT_136036_11602, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: fbp_wch, title: 원추리 1ha당 농약비, tbl: DT_136036_11567, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: fir_sanm, title: 산마늘 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^산마늘$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_sap, title: 수액 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^수액$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_wch, title: 원추리 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원추리$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_cha, title: 참취 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_gdr, title: 곤드레 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^곤드레$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_mok, title: 목이버섯 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^목이버섯$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_cnm, title: 참나물 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^참나물$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_ma, title: 마 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^마$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_shl, title: 원목표고(노지) 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_shf, title: 원목표고(시설) 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_sws, title: 톱밥배지표고 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_ddk, title: 더덕 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^더덕$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_gom, title: 곰취 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_drj, title: 도라지 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^도라지$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_frn, title: 고사리 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^고사리$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_dok, title: 독활 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^독활$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fir_dur, title: 두릅 소득률, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^두릅$", "^소득률[(]%[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: fmb_sanm, title: 산마늘 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^산마늘$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_sap, title: 수액 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^수액$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_wch, title: 원추리 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원추리$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_cha, title: 참취 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_gdr, title: 곤드레 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^곤드레$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_mok, title: 목이버섯 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^목이버섯$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_cnm, title: 참나물 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^참나물$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_ma, title: 마 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^마$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_shl, title: 원목표고(노지) 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_shf, title: 원목표고(시설) 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_sws, title: 톱밥배지표고 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_ddk, title: 더덕 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^더덕$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_gom, title: 곰취 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_drj, title: 도라지 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^도라지$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_frn, title: 고사리 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^고사리$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_dok, title: 독활 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^독활$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fmb_dur, title: 두릅 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^두릅$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

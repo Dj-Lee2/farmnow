@@ -160,7 +160,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득', 69) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률', 74) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -269,6 +269,14 @@
   {{ card('fip_cnm', 'v42', ('노동 시간당 ' ~ num(K.fhi_cnm.vals[-1], '천원')|striptags ~ ' · 1ha당 소득') if K.fhi_cnm else none, '#1c7a45') }}
   {{ hcard('노동 1시간당 소득 · 품목별', [('목이버섯', K.fhi_mok), ('더덕', K.fhi_ddk), ('독활', K.fhi_dok), ('두릅', K.fhi_dur), ('참취', K.fhi_cha), ('산마늘', K.fhi_sanm), ('참나물', K.fhi_cnm), ('곰취', K.fhi_gom), ('마', K.fhi_ma), ('수액(고로쇠 등)', K.fhi_sap), ('톱밥배지표고', K.fhi_sws), ('도라지', K.fhi_drj), ('곤드레', K.fhi_gdr), ('고사리', K.fhi_frn), ('원추리', K.fhi_wch), ('원목표고(시설)', K.fhi_shf), ('원목표고(노지)', K.fhi_shl)], '천원', '소득 ÷ 총 노동 시간 · 목이버섯은 1만 봉 기준 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
   {{ hcard('소득 · 품목별', [('목이버섯', K.fip_mok), ('참나물', K.fip_cnm), ('곰취', K.fip_gom), ('참취', K.fip_cha), ('독활', K.fip_dok), ('더덕', K.fip_ddk), ('마', K.fip_ma), ('곤드레', K.fip_gdr), ('원추리', K.fip_wch), ('산마늘', K.fip_sanm), ('두릅', K.fip_dur), ('도라지', K.fip_drj), ('고사리', K.fip_frn), ('톱밥배지표고', K.fip_sws), ('원목표고(시설)', K.fip_shf), ('원목표고(노지)', K.fip_shl), ('수액(고로쇠 등)', K.fip_sap)], '천원', '1ha당(버섯은 1만 봉·본당) · 오른쪽은 전년 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">산나물·약초·버섯 품목별 경영비와 소득률 <small>소득률 = 소득 ÷ 총수입 · 1ha당(목이버섯·톱밥배지표고는 1만 봉, 원목표고는 1만 본당) · 산림청 임산물생산조사</small></h3>
+ <div class="sg-g">
+  {{ card('fir_dok', 'v43', ('경영비 ' ~ num(K.fmb_dok.vals[-1], '천원')|striptags ~ ' · 소득률') if K.fmb_dok else none, '#1c7a45') }}
+  {{ card('fir_ddk', 'v44', ('경영비 ' ~ num(K.fmb_ddk.vals[-1], '천원')|striptags ~ ' · 소득률') if K.fmb_ddk else none, '#1c7a45') }}
+  {{ card('fmb_ma', 'v45', ('소득률 ' ~ '{:.1f}'.format(K.fir_ma.vals[-1]) ~ '% · 경영비') if K.fir_ma else none, '#b0503a') }}
+  {{ hcard('소득률 · 품목별', [('독활', K.fir_dok), ('목이버섯', K.fir_mok), ('참취', K.fir_cha), ('원추리', K.fir_wch), ('참나물', K.fir_cnm), ('곰취', K.fir_gom), ('두릅', K.fir_dur), ('고사리', K.fir_frn), ('곤드레', K.fir_gdr), ('수액(고로쇠 등)', K.fir_sap), ('더덕', K.fir_ddk), ('산마늘', K.fir_sanm), ('마', K.fir_ma), ('도라지', K.fir_drj), ('톱밥배지표고', K.fir_sws), ('원목표고(시설)', K.fir_shf), ('원목표고(노지)', K.fir_shl)], '%', '총수입 중 소득 비율 · 오른쪽은 전년 대비(%p)', none, '#1c7a45') }}
+  {{ hcard('경영비 · 품목별', [('마', K.fmb_ma), ('톱밥배지표고', K.fmb_sws), ('원목표고(시설)', K.fmb_shf), ('도라지', K.fmb_drj), ('곰취', K.fmb_gom), ('참나물', K.fmb_cnm), ('더덕', K.fmb_ddk), ('원목표고(노지)', K.fmb_shl), ('산마늘', K.fmb_sanm), ('곤드레', K.fmb_gdr), ('참취', K.fmb_cha), ('목이버섯', K.fmb_mok), ('원추리', K.fmb_wch), ('두릅', K.fmb_dur), ('독활', K.fmb_dok), ('고사리', K.fmb_frn), ('수액(고로쇠 등)', K.fmb_sap)], '천원', '1ha당(버섯은 1만 봉·본당) · 오른쪽은 전년 대비', none, '#b0503a') }}
  </div>
  </div></details>
 

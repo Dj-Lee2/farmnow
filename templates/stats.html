@@ -344,7 +344,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점·농업인 업무상 손상·질병·농약 보호장구·살포 방법·손상 치료', 232) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물·더덕·도라지·두릅 판매처·임산물 직거래 판매 방법·귀농 가구 판매경로·판매대금 결제방법·귀농 정보 습득 경로·귀농 가구 소득·정착자금·어려움·주작목 선택·생활 만족도·겸업·정부 자금 보조·융자·농지 확보·영농규모 계획·귀농 교육·근로 직업·투자액·정착 필요 정책·처음 농사 시작 형태·정책 수혜·도움 정도·주민 관계·어려움 해소·계속 거주 계획·귀촌 생활 만족도·귀촌 어려움·정보 경로·농지 확보·귀촌 이유·주택 점유·주택 마련·주택 만족·거주지 선택 이유·귀촌 생활비·귀촌 정책 수혜·필요 정책·주택 마련 어려움 이유·귀촌 경제활동 어려움·창업·교육 안 받은 이유·귀농 생활비·분야별 만족·귀촌 소득·정착자금·귀농귀촌 형태·귀농·귀촌 준비·보유주택 처분·가족 지지·귀농인 모임·귀촌 영농 준비·경영체 등록·교육·주민 관계·교육 개선점·농업인 업무상 손상·질병·농약 보호장구·살포 방법·손상 치료·피해 수준·활동기간별 질병·농기계 사용연수·중고 구입·교체 의향·임작업료', 243) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -667,6 +667,20 @@
   {{ hcard('업무상 손상 치료 종류', [('병원 입원 치료', K.inj_tr_hosp), ('병원 통원 치료', K.inj_tr_out), ('약국 치료', K.inj_tr_pharm), ('자가 치료', K.inj_tr_self)], '건', '괄호는 치료받은 손상 건수 중 비중 · 오른쪽은 2년 전 대비', K.inj_tr_all.vals[-1] if K.inj_tr_all else none, '#b0503a') }}
   {{ hcard('입원 치료 기간', [('1~4일 미만', K.inj_d_1), ('4~7일 미만', K.inj_d_4), ('7~14일 미만', K.inj_d_7), ('14~30일 미만', K.inj_d_14), ('30일 이상', K.inj_d_30)], '건', '괄호는 입원 치료 손상 중 비중 · 30일 이상은 2021년 19,651건에서 절반으로 · 오른쪽은 2년 전 대비', K.inj_tr_hosp.vals[-1] if K.inj_tr_hosp else none, '#c0763a') }}
   {{ hcard('손상 뒤 농업활동 수행 능력', [('전혀 지장 없음', K.inj_f_ok), ('약간 떨어짐', K.inj_f_slight), ('많이 떨어짐', K.inj_f_much), ('농업활동 전혀 못 함', K.inj_f_none)], '건', '괄호는 업무상 손상 건수 중 비중 · 오른쪽은 2년 전 대비', K.inj_t_all.vals[-1] if K.inj_t_all else none, '#e0a03a') }}
+  {{ rcard('손상 치료비로 가계 압박이 심했던 비중', K.inj_hh_bad, K.inj_hh_all, 'p106', ('매우 심함·심함 ' ~ K.inj_hh_bad.vals[-1]|big ~ '건 · 업무상 손상 ' ~ K.inj_hh_all.vals[-1]|big ~ '건 중') if K.inj_hh_bad else '', '#b0503a') }}
+  {{ rcard('손상 때문에 농업 규모를 크게 줄인 비중', K.inj_sc_bad, K.inj_sc_all, 'p107', ('매우 심함·심함 ' ~ K.inj_sc_bad.vals[-1]|big ~ '건 · 업무상 손상 중') if K.inj_sc_bad else '', '#c0763a') }}
+  {{ card('dis_m_m9', 'p108', ('1~2개월 활동 ' ~ '{:.1f}'.format(K.dis_m_m1.vals[-1]) ~ '% · 오래 일할수록 높은 편') if K.dis_m_m1 else none, '#7a5cc2') }}
+  {{ hcard('한 해 농업활동 기간별 업무상 질병 유병률', [('1~2개월', K.dis_m_m1), ('3~5개월', K.dis_m_m3), ('6~8개월', K.dis_m_m6), ('9개월 이상', K.dis_m_m9)], '%', '지난 1년간 농업활동 기간 기준 · 오른쪽은 2년 전 대비', none, '#7a5cc2') }}
+ </div>
+ <h3 class="sg-sub">농업기계 이용 실태 <small>농촌진흥청 농업기계 이용실태조사 · 2년마다</small></h3>
+ <div class="sg-g">
+  {{ card('mage_trac', 'p109', ('경운기 ' ~ '{:.1f}'.format(K.mage_til.vals[-1]) ~ '년 · 콤바인 ' ~ '{:.1f}'.format(K.mage_comb.vals[-1]) ~ '년') if K.mage_til and K.mage_comb else none, '#6b8fd6') }}
+  {{ card('mu_trac', 'p110', ('콤바인 ' ~ '{:.1f}'.format(K.mu_comb.vals[-1]) ~ '% · 새 기계 대신 중고로 산 비율') if K.mu_comb else none, '#6b8fd6') }}
+  {{ card('rfee_harv', 'p111', ('이앙 ' ~ K.rfee_plant.vals[-1]|round|int ~ '원 · 건조 ' ~ K.rfee_dry.vals[-1]|round|int ~ '원 · 한 평당 위탁 요금') if K.rfee_plant and K.rfee_dry else none, '#e0a03a') }}
+  {{ hcard('보유 농업기계 평균 사용연수', [('경운기', K.mage_til), ('보행이앙기', K.mage_wpl), ('관리기', K.mage_cult), ('곡물건조기', K.mage_gdry), ('트랙터', K.mage_trac), ('농산물건조기', K.mage_adry), ('콤바인', K.mage_comb), ('SS기', K.mage_ss), ('승용이앙기', K.mage_rpl)], '년', '조사 농가가 지금 쓰는 기계 기준 · 오른쪽은 2년 전 대비', none, '#6b8fd6') }}
+  {{ hcard('농업기계 중고 구입률', [('트랙터', K.mu_trac), ('보행이앙기', K.mu_wpl), ('콤바인', K.mu_comb), ('경운기', K.mu_til), ('승용이앙기', K.mu_rpl), ('관리기', K.mu_cult), ('SS기', K.mu_ss), ('농산물건조기', K.mu_adry), ('곡물건조기', K.mu_gdry)], '%', '보유 기계 중 중고로 산 비율 · 오른쪽은 2년 전 대비', none, '#6b8fd6') }}
+  {{ hcard('농업기계를 바꿀 생각이 없는 이유', [('보유 기계가 잘 작동함', K.mnr_ok), ('나이가 많아 운전이 어려움', K.mnr_old), ('영농규모 축소·형태 변화', K.mnr_shrink), ('영농 포기', K.mnr_quit), ('더 좋은 다른 기종 구입', K.mnr_new), ('위탁작업·임대농기계 이용', K.mnr_rent)], '%', '교체 구입 의향이 없는 응답 기준 · 기종 전체 · 오른쪽은 2년 전 대비', none, '#5c6bc2') }}
+  {{ hcard('벼농사 작업별 임작업료', [('수확', K.rfee_harv), ('건조', K.rfee_dry), ('이앙', K.rfee_plant), ('정지', K.rfee_level), ('경운', K.rfee_till), ('방제', K.rfee_spray)], '원/평', '남에게 맡길 때 한 평(3.3㎡)당 요금 · 방제는 2년 새 거의 두 배 · 오른쪽은 2년 전 대비', none, '#e0a03a') }}
  </div>
  </div></details>
 

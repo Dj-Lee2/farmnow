@@ -3535,6 +3535,36 @@ sources:
       - {id: ia_sd_acab, title: "노지 가을배추 10a당 종자·종묘비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^노지가을배추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sl_apl, title: "사과 10a당 자가노동비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^자가노동비$", "^사과$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sl_stb, title: "시설 딸기 10a당 자가노동비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^자가노동비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_cuc, title: "시설 오이 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설오이$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_sqs, title: "시설 호박 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설호박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_egg, title: "시설 가지 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설가지$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_let, title: "시설 상추 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설상추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_chv, title: "시설 부추 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설부추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_hwm, title: "시설 수박 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설수박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_wm, title: "노지 수박 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지수박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_car, title: "노지 당근 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지당근$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_gng, title: "노지 생강 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지생강$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_hgrp, title: "시설 포도 10a당 소득", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설포도$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_omj, title: "오미자 10a당 소득", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^오미자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_cuc, title: "시설 오이 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설오이$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_sqs, title: "시설 호박 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설호박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_egg, title: "시설 가지 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설가지$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_let, title: "시설 상추 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설상추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_chv, title: "시설 부추 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설부추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_hwm, title: "시설 수박 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설수박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_wm, title: "노지 수박 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지수박$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_car, title: "노지 당근 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지당근$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_gng, title: "노지 생강 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지생강$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_hgrp, title: "시설 포도 10a당 경영비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설포도$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_omj, title: "오미자 10a당 경영비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^오미자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_va_apl, title: "사과 부가가치율", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^사과$"], unit: "%", survey: 농산물소득조사}
+      - {id: ia_va_stb, title: "시설 딸기 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설딸기$"], unit: "%", survey: 농산물소득조사}
+      - {id: ia_va_tom, title: "시설 토마토 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설토마토$"], unit: "%", survey: 농산물소득조사}
+      - {id: ia_va_pap, title: "시설 파프리카 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설착색단고추\\(파프리카\\)$"], unit: "%", survey: 농산물소득조사}
+      - {id: ia_lr_stb, title: "시설 딸기 10a당 토지임차료", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_lr_apl, title: "사과 10a당 토지임차료", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^사과$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_of_let, title: "시설 상추 10a당 유기질비료비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설상추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_of_cuc, title: "시설 오이 10a당 유기질비료비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설오이$"], unit: 원, survey: 농산물소득조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

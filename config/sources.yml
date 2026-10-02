@@ -1925,6 +1925,40 @@ sources:
       - {id: cnp_tax, title: 귀촌 정착에 가장 필요한 정책 세제 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^세제 지원$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cnp_life, title: 귀촌 정착에 가장 필요한 정책 생활 관련 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^생활 관련 지원"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cnp_rel, title: 귀촌 정착에 가장 필요한 정책 관계 형성 지원, tbl: DT_114055_B066, org: "114", itm: "^성공적인", want: ["^1순위$", "^관계 형성 지원"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhr_price, title: 귀농 가구 처음 주택 마련 어려움 이유 예상보다 비싼 가격, tbl: DT_114055_A0081, org: "114", itm: "^처음 거주 주택", want: ["^예상보다 비싼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhr_info, title: 귀농 가구 처음 주택 마련 어려움 이유 매물 정보 부족, tbl: DT_114055_A0081, org: "114", itm: "^처음 거주 주택", want: ["^매물에 대한 정보"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhr_ready, title: 귀농 가구 처음 주택 마련 어려움 이유 즉시 거주할 매물 부족, tbl: DT_114055_A0081, org: "114", itm: "^처음 거주 주택", want: ["^즉시 ?거주할"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rhr_build, title: 귀농 가구 처음 주택 마련 어려움 이유 신축 건축 절차 복잡, tbl: DT_114055_A0081, org: "114", itm: "^처음 거주 주택", want: ["^[(]신축"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chr_price, title: 귀촌 가구 처음 주택 마련 어려움 이유 예상보다 비싼 가격, tbl: DT_114055_B0091, org: "114", itm: "^처음 거주 주택", want: ["^예상보다 비싼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chr_info, title: 귀촌 가구 처음 주택 마련 어려움 이유 매물 정보 부족, tbl: DT_114055_B0091, org: "114", itm: "^처음 거주 주택", want: ["^매물에 대한 정보"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chr_ready, title: 귀촌 가구 처음 주택 마련 어려움 이유 즉시 거주할 매물 부족, tbl: DT_114055_B0091, org: "114", itm: "^처음 거주 주택", want: ["^즉시 ?거주할"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: chr_build, title: 귀촌 가구 처음 주택 마련 어려움 이유 신축 건축 절차 복잡, tbl: DT_114055_B0091, org: "114", itm: "^처음 거주 주택", want: ["^[(]신축"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_none, title: 귀촌 후 경제활동 어려움 어려움 없음, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_infra, title: 귀촌 후 경제활동 어려움 지역 내 인프라 부족, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^지역 내 인프라"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_skill, title: 귀촌 후 경제활동 어려움 본인 능력 부족, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^본인의 능력"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_info, title: 귀촌 후 경제활동 어려움 일할 기회·정보 부족, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^일을 해볼 기회"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_net, title: 귀촌 후 경제활동 어려움 인맥 부족, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^인맥"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cec_cap, title: 귀촌 후 경제활동 어려움 자본금 부족, tbl: DT_114055_B015, org: "114", itm: "^귀촌 후 경제활동", want: ["^자본금 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_yes, title: 귀촌 가구 창업활동 한 적 있음, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^창업활동을 한 적이 있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_live, title: 귀촌 가구 창업 이유 생계, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^생계를 위해$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_exp, title: 귀촌 가구 창업 이유 귀촌 전 직업경험 활용, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^귀촌 전 직업경험"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_adv, title: 귀촌 가구 창업 이유 유망한 업종, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^유망한 업종"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_rec, title: 귀촌 가구 창업 이유 주변 권유, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^주변의 권유"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_food, title: 귀촌 가구 창업 업종 요식업, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^요식업$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_sell, title: 귀촌 가구 창업 업종 유통·판매업, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^유통 및 판매업$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_tour, title: 귀촌 가구 창업 업종 관광·숙박업, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^관광/숙박업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_svc, title: 귀촌 가구 창업 업종 일반 서비스업, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^일반 서비스업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_vil, title: 귀촌 가구 창업 위치 마을, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^마을[(]인근"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_town, title: 귀촌 가구 창업 위치 읍면 소재지, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^읍면 사무소"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cbz_city, title: 귀촌 가구 창업 위치 시군청 소재지, tbl: DT_114055_B016, org: "114", itm: "^귀촌 후 지역 내 창업", want: ["^시군청 소재지$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnw_know, title: 귀농 가구 귀농귀촌교육 받지 않은 이유 교육을 알지 못해서, tbl: DT_114055_A056, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^교육에 대해 알지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnw_time, title: 귀농 가구 귀농귀촌교육 받지 않은 이유 시간이 없어서, tbl: DT_114055_A056, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^시간이 없어서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnw_use, title: 귀농 가구 귀농귀촌교육 받지 않은 이유 내용이 도움 안 돼서, tbl: DT_114055_A056, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^내용이 도움이"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnw_fit, title: 귀농 가구 귀농귀촌교육 받지 않은 이유 적합한 과정이 없어서, tbl: DT_114055_A056, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^적합한 과정"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnw_know, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 교육을 알지 못해서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^교육에 대해 알지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnw_time, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 시간이 없어서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^시간이 없어서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnw_use, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 내용이 도움 안 돼서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^내용이 도움이"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: cnw_fit, title: 귀촌 가구 귀농귀촌교육 받지 않은 이유 적합한 과정이 없어서, tbl: DT_114055_B062, org: "114", itm: "^귀농귀촌교육을 받지", want: ["^적합한 과정"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

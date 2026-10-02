@@ -1418,6 +1418,44 @@ sources:
       - {id: fye_1015, title: 임업 경력 10~15년 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^10-15$"], unit: 가구, survey: 임업조사}
       - {id: fye_1520, title: 임업 경력 15~20년 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^15-20$"], unit: 가구, survey: 임업조사}
       - {id: fye_20p, title: 임업 경력 20년 이상 경영주, tbl: DT_1FA7013, periods: 6, itm: "^임업가구[(]비재배업[)]$", want: ["^20년 이상$"], unit: 가구, survey: 임업조사}
+      - {id: dsl_shl, title: 원목표고(노지) 생물 직접 판매 비율, tbl: DT_136036_11590, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_shf, title: 원목표고(시설) 생물 직접 판매 비율, tbl: DT_136036_11604, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_sws, title: 톱밥배지표고 생물 직접 판매 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_mok, title: 목이버섯 생물 직접 판매 비율, tbl: DT_136036_11583, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_frn, title: 고사리 생물 직접 판매 비율, tbl: DT_136036_11546, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_gom, title: 곰취 생물 직접 판매 비율, tbl: DT_136036_11624, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_cha, title: 참취 생물 직접 판매 비율, tbl: DT_136036_11580, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_smn, title: 산마늘 생물 직접 판매 비율, tbl: DT_136036_11563, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_gdr, title: 곤드레 생물 직접 판매 비율, tbl: DT_136036_11595, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_cnm, title: 참나물 생물 직접 판매 비율, tbl: DT_136036_11601, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dsl_sap, title: 수액 직접 판매 비율, tbl: DT_136036_11566, org: "136", itm: "^값$", want: ["^직접 판매$", "^기타$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_shl, title: 원목표고(노지) 생물 농협 비율, tbl: DT_136036_11590, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_shf, title: 원목표고(시설) 생물 농협 비율, tbl: DT_136036_11604, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_sws, title: 톱밥배지표고 생물 농협 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_mok, title: 목이버섯 생물 농협 비율, tbl: DT_136036_11583, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_frn, title: 고사리 생물 농협 비율, tbl: DT_136036_11546, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_cha, title: 참취 생물 농협 비율, tbl: DT_136036_11580, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_smn, title: 산마늘 생물 농협 비율, tbl: DT_136036_11563, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_gdr, title: 곤드레 생물 농협 비율, tbl: DT_136036_11595, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_wch, title: 원추리 생물 농협 비율, tbl: DT_136036_11573, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dnh_sap, title: 수액 농협 비율, tbl: DT_136036_11566, org: "136", itm: "^값$", want: ["^농협$", "^기타$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_shl, title: 원목표고(노지) 생물 도매상 비율, tbl: DT_136036_11590, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_shf, title: 원목표고(시설) 생물 도매상 비율, tbl: DT_136036_11604, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_sws, title: 톱밥배지표고 생물 도매상 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_mok, title: 목이버섯 생물 도매상 비율, tbl: DT_136036_11583, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_frn, title: 고사리 생물 도매상 비율, tbl: DT_136036_11546, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_gom, title: 곰취 생물 도매상 비율, tbl: DT_136036_11624, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_cha, title: 참취 생물 도매상 비율, tbl: DT_136036_11580, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_smn, title: 산마늘 생물 도매상 비율, tbl: DT_136036_11563, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_gdr, title: 곤드레 생물 도매상 비율, tbl: DT_136036_11595, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_cnm, title: 참나물 생물 도매상 비율, tbl: DT_136036_11601, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dwh_sap, title: 수액 도매상 비율, tbl: DT_136036_11566, org: "136", itm: "^값$", want: ["^도매상$", "^기타$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_nh_shl, title: 말린 원목표고(노지) 농협 비율, tbl: DT_136036_11590, org: "136", itm: "^값$", want: ["^농협$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_nh_shf, title: 말린 원목표고(시설) 농협 비율, tbl: DT_136036_11604, org: "136", itm: "^값$", want: ["^농협$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_nh_sws, title: 말린 톱밥배지표고 농협 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^농협$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_ds_frn, title: 말린 고사리 직접 판매 비율, tbl: DT_136036_11546, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_ds_gdr, title: 말린 곤드레 직접 판매 비율, tbl: DT_136036_11595, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
+      - {id: ddr_ds_sws, title: 말린 톱밥배지표고 직접 판매 비율, tbl: DT_136036_11594, org: "136", itm: "^값$", want: ["^직접 판매$", "^건물$"], unit: "%", survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

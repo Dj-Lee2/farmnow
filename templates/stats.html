@@ -84,7 +84,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력', 41) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
+ <details class="sg-grp" id="g-people">{% call head('g-people', '농업인·일손', '경영주 나이·농가인구 연령·전업농·부대사업·귀농·귀촌·취업자·농기계·임가 도별·경영주 연령·임업형태·판매처·재배 작물·비재배 임가 생산부문·채취 품목·판매금액·경력·표고·고사리·산나물 판매처', 48) %}{% set o65 %}{% if K.op_65 and K.op_total %}{{ '{:.1f}'.format(K.op_65.vals[-1] / K.op_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{% set fto %}{% if K.full_time and K.ft_total %}{{ '{:.1f}'.format(K.full_time.vals[-1] / K.ft_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('65세 이상 경영주', K.op_65, o65, '') }}{{ kv('전업농 비율', K.full_time, fto, '') }}{{ kv('귀농가구', K.returnee) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">경영주와 영농형태</h3>
  <div class="sg-g">
@@ -147,6 +147,16 @@
   {{ hcard('경영주 임업 경력별 비재배 임가', [('5년 미만', K.fye_u5), ('5~10년', K.fye_510), ('10~15년', K.fye_1015), ('15~20년', K.fye_1520), ('20년 이상', K.fye_20p)], '가구', '괄호는 비중 · 오른쪽은 전년 대비', K.fyv_total.vals[-1] if K.fyv_total else none, '#7a5cc2') }}
   {{ hcard('경영주 연간 임업 종사 기간별 비재배 임가', [('1~3개월', K.fym_13), ('3~6개월', K.fym_36), ('6개월 이상', K.fym_6p)], '가구', '1개월 미만은 0가구 · 괄호는 비중', K.fyv_total.vals[-1] if K.fyv_total else none, '#3a8f6a') }}
   {{ hcard('임업에 종사하는 가구원 수별 비재배 임가', [('1명 이하', K.fyw_1), ('2명', K.fyw_2), ('3명 이상', K.fyw_3p)], '가구', '괄호는 비중 · 오른쪽은 전년 대비', K.fyv_total.vals[-1] if K.fyv_total else none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">임산물 품목별 판매처 <small>판매량 중 판매처별 비율 · 따로 적지 않으면 생물(날것) · 산림청 임산물생산조사</small></h3>
+ <div class="sg-g">
+  {{ card('dsl_shf', 'p25', '시설 원목표고 생물의 소비자 직접 판매 비율 · 농협 ' ~ K.dnh_shf.vals[-1] ~ '%' if K.dnh_shf else none, '#3a8f6a') }}
+  {{ card('ddr_nh_shl', 'p26', '말린 원목표고(노지)는 농협 수매가 대부분 · 생물은 농협 ' ~ K.dnh_shl.vals[-1] ~ '%' if K.dnh_shl else none, '#b04a07') }}
+  {{ card('ddr_ds_frn', 'p27', '말린 고사리는 직접 판매 · 생물 고사리는 농협 ' ~ K.dnh_frn.vals[-1] ~ '%' if K.dnh_frn else none, '#7a5cc2') }}
+  {{ hcard('소비자 직접 판매 비율 · 품목별', [('원목표고(노지)', K.dsl_shl), ('원목표고(시설)', K.dsl_shf), ('곰취', K.dsl_gom), ('수액(고로쇠 등)', K.dsl_sap), ('산마늘', K.dsl_smn), ('곤드레', K.dsl_gdr), ('참취', K.dsl_cha), ('목이버섯', K.dsl_mok), ('톱밥배지표고', K.dsl_sws), ('참나물', K.dsl_cnm), ('고사리', K.dsl_frn)], '%', '생물 기준 · 수액은 원액 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
+  {{ hcard('농협 판매 비율 · 품목별', [('고사리', K.dnh_frn), ('참취', K.dnh_cha), ('목이버섯', K.dnh_mok), ('곤드레', K.dnh_gdr), ('원추리', K.dnh_wch), ('톱밥배지표고', K.dnh_sws), ('수액(고로쇠 등)', K.dnh_sap), ('원목표고(노지)', K.dnh_shl), ('원목표고(시설)', K.dnh_shf), ('산마늘', K.dnh_smn)], '%', '생물 기준 · 곰취·참나물은 농협 판매 없음 · 오른쪽은 전년 대비', none, '#e0a03a') }}
+  {{ hcard('도매상 판매 비율 · 품목별', [('참나물', K.dwh_cnm), ('톱밥배지표고', K.dwh_sws), ('곤드레', K.dwh_gdr), ('산마늘', K.dwh_smn), ('참취', K.dwh_cha), ('고사리', K.dwh_frn), ('곰취', K.dwh_gom), ('원목표고(노지)', K.dwh_shl), ('목이버섯', K.dwh_mok), ('원목표고(시설)', K.dwh_shf), ('수액(고로쇠 등)', K.dwh_sap)], '%', '생물 기준 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
+  {{ hcard('말린 임산물 판매처', [('원목표고(시설) · 농협', K.ddr_nh_shf), ('원목표고(노지) · 농협', K.ddr_nh_shl), ('톱밥배지표고 · 농협', K.ddr_nh_sws), ('고사리 · 직접 판매', K.ddr_ds_frn), ('곤드레 · 직접 판매', K.ddr_ds_gdr), ('톱밥배지표고 · 직접 판매', K.ddr_ds_sws)], '%', '건물(말린 것) 판매량 중 비율 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  </div></details>
 

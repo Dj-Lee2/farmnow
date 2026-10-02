@@ -1019,7 +1019,7 @@
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황', 73) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황', 88) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -1088,6 +1088,24 @@
   {{ hcard('산란계 사육 규모별 100수당 노동시간', [('2만 수 미만', K.lyr_l1), ('2만~4만 수', K.lyr_l2), ('4만~9만 수', K.lyr_l3), ('9만 수 이상', K.lyr_l4)], '시간', ('평균 ' ~ num(K.lyr_lab.vals[-1], '시간')|striptags ~ ' · 오른쪽은 전년 대비') if K.lyr_lab else none, none, '#b04a07') }}
   {{ hcard('젖소 1두당 작업별 노동시간', [('착유', K.dyr_milk), ('사료 급여', K.dyr_feedw), ('분뇨 청소', K.dyr_clean), ('방역·손질', K.dyr_vet)], '시간', '괄호는 전체 노동시간 중 비중 · 나머지는 방목·풀베기·기타 · 오른쪽은 전년 대비', K.dyr_lab.vals[-1] if K.dyr_lab else none, '#7a6a3a') }}
   {{ hcard('젖소 1두당 사료 종류별 급여량', [('TMR사료', K.dyr_tmr), ('조사료', K.dyr_rough), ('농후사료', K.dyr_conc)], 'kg', '괄호는 전체 급여량 중 비중 · 조사료는 건초·볏짚·엔시레지 등 · 오른쪽은 전년 대비', K.dyr_fd.vals[-1] if K.dyr_fd else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">한우 비육우·번식돈·육계 사육 현황 <small>노동·사료·자본 · 한우·번식돈 1두당, 육계 100수당 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('hwr_lab', 'gq1', ('호당 ' ~ num(K.hwr_herd.vals[-1], '마리')|striptags ~ ' · 사료 급여가 절반쯤') if K.hwr_herd else none, '#b04a07') }}
+  {{ card('bsr_lab', 'gq2', '모돈 1두 1년 기준 · 자돈 분만이 가장 김', '#c77b30') }}
+  {{ card('brr_lab', 'gq3', ('호당 연간 ' ~ num(K.brr_herd.vals[-1], '마리')|striptags ~ ' · 규모가 클수록 짧음') if K.brr_herd else none, '#7a6a3a') }}
+  {{ card('hwr_fd', 'gq4', ('농후 ' ~ num(K.hwr_conc.vals[-1], 'kg')|striptags ~ ' · TMR ' ~ num(K.hwr_tmr.vals[-1], 'kg')|striptags) if K.hwr_conc and K.hwr_tmr else none, '#b04a07') }}
+  {{ card('bsr_fd', 'gq5', '배합사료가 거의 전부 · 1년 사육 기준', '#c77b30') }}
+  {{ card('brr_fd', 'gq6', '배합사료가 거의 전부 · 출하까지 기준', '#7a6a3a') }}
+  {{ card('hwr_cap', 'gq7', ('자기자본 비중 ' ~ num(K.hwr_eq.vals[-1], '%')|striptags ~ ' · 건물·토지·가축·유동자본 합') if K.hwr_eq else none, '#b04a07') }}
+  {{ card('bsr_cap', 'gq8', ('자기자본 비중 ' ~ num(K.bsr_eq.vals[-1], '%')|striptags ~ ' · 건물·토지·가축·유동자본 합') if K.bsr_eq else none, '#c77b30') }}
+  {{ card('brr_cap', 'gq9', ('자기자본 비중 ' ~ num(K.brr_eq.vals[-1], '%')|striptags ~ ' · 건물·토지·가축·유동자본 합') if K.brr_eq else none, '#7a6a3a') }}
+  {{ hcard('한우 비육우 1두당 작업별 노동시간', [('사료 급여', K.hwr_feedw), ('분뇨 청소', K.hwr_clean), ('방역·손질', K.hwr_vet)], '시간', '괄호는 전체 노동시간 중 비중 · 나머지는 풀베기·구입·판매 등 · 오른쪽은 전년 대비', K.hwr_lab.vals[-1] if K.hwr_lab else none, '#b04a07') }}
+  {{ hcard('한우 비육우 1두당 사료 종류별 급여량', [('농후사료', K.hwr_conc), ('TMR사료', K.hwr_tmr), ('조사료', K.hwr_rough)], 'kg', '괄호는 전체 급여량 중 비중 · 조사료는 볏짚·건초·엔시레지 등 · 오른쪽은 전년 대비', K.hwr_fd.vals[-1] if K.hwr_fd else none, '#b04a07') }}
+  {{ hcard('한우 비육우 사육 규모별 1두당 노동시간', [('20두 미만', K.hwr_l1), ('20~49두', K.hwr_l2), ('50~99두', K.hwr_l3), ('100두 이상', K.hwr_l4)], '시간', ('평균 ' ~ num(K.hwr_lab.vals[-1], '시간')|striptags ~ ' · 규모가 클수록 짧음 · 오른쪽은 전년 대비') if K.hwr_lab else none, none, '#b04a07') }}
+  {{ hcard('번식돈 1두당 작업별 노동시간', [('자돈 분만', K.bsr_farrow), ('사료 급여', K.bsr_feedw), ('분뇨 청소', K.bsr_clean), ('방역·손질', K.bsr_vet)], '시간', '괄호는 전체 노동시간 중 비중 · 나머지는 구입·판매·기타 · 오른쪽은 전년 대비', K.bsr_lab.vals[-1] if K.bsr_lab else none, '#c77b30') }}
+  {{ hcard('번식돈 사육 규모별 1두당 노동시간', [('1,000두 미만', K.bsr_l1), ('1,000~1,999두', K.bsr_l2), ('2,000~2,999두', K.bsr_l3), ('3,000두 이상', K.bsr_l4)], '시간', ('평균 ' ~ num(K.bsr_lab.vals[-1], '시간')|striptags ~ ' · 규모와 상관이 적음 · 오른쪽은 전년 대비') if K.bsr_lab else none, none, '#c77b30') }}
+  {{ hcard('육계 사육 규모별 100수당 노동시간', [('3만 수 미만', K.brr_l1), ('3만~5만 수', K.brr_l2), ('5만~7만 수', K.brr_l3), ('7만 수 이상', K.brr_l4)], '시간', ('평균 ' ~ num(K.brr_lab.vals[-1], '시간')|striptags ~ ' · 오른쪽은 전년 대비') if K.brr_lab else none, none, '#7a6a3a') }}
  </div>
  <h3 class="sg-sub">도축 실적 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('sl_cow', 'g48', '한우·육우·젖소 합계 · 축산물 도축실적', '#c77b30', yoy(K.sl_cow_yoy)) }}{{ card('sl_pig', 'g49', '축산물 도축실적', '#c77b30', yoy(K.sl_pig_yoy)) }}{{ card('sl_chick', 'g50', '축산물 도축실적', '#c77b30', yoy(K.sl_chick_yoy)) }}{{ card('sl_duck', 'g51', '축산물 도축실적', '#c77b30', yoy(K.sl_duck_yoy)) }}{% for k, uid in [('cow', 'g52'), ('pig', 'g53')] %}{% set c = K['sl_' ~ k ~ '_cum'] %}{% set r = K['sl_' ~ k ~ '_cumr'] %}{% if c and r %}{% set lab = r.years|map('prd')|list %}

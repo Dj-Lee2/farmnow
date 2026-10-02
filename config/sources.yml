@@ -2638,6 +2638,42 @@ sources:
       - {id: dyr_conc, title: 젖소 1두당 농후사료 급여량, tbl: DT_2EE304, itm: "^사육현황$", want: ["^농후사료$", "^평균$"], unit: kg, survey: 축산물생산비조사}
       - {id: dyr_rough, title: 젖소 1두당 조사료 급여량, tbl: DT_2EE304, itm: "^사육현황$", want: ["^조사료$", "^평균$"], unit: kg, survey: 축산물생산비조사}
       - {id: dyr_tmr, title: 젖소 1두당 TMR사료 급여량, tbl: DT_2EE304, itm: "^사육현황$", want: ["^TMR사료$", "^평균$"], unit: kg, survey: 축산물생산비조사}
+      - {id: hwr_herd, title: 한우 비육우 농가 호당 사육 마릿수, tbl: DT_1EE0111, itm: "^평균$", want: ["^호당사육두수$"], unit: 마리, survey: 축산물생산비조사}
+      - {id: hwr_cap, title: 한우 비육우 1두당 자본평가액, tbl: DT_1EE0111, itm: "^평균$", want: ["^자본평가액$"], unit: 원, survey: 축산물생산비조사}
+      - {id: hwr_eq, title: 한우 비육우 농가 자기자본 비중, tbl: DT_1EE0111, itm: "^평균$", want: ["^자기자본구성비"], unit: "%", survey: 축산물생산비조사}
+      - {id: hwr_lab, title: 한우 비육우 1두당 노동시간, tbl: DT_1EE0111, itm: "^평균$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_feedw, title: 한우 비육우 1두당 사료 급여 노동, tbl: DT_1EE0111, itm: "^평균$", want: ["^사료조리및급여$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_clean, title: 한우 비육우 1두당 분뇨 청소 노동, tbl: DT_1EE0111, itm: "^평균$", want: ["^청소"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_vet, title: 한우 비육우 1두당 방역·손질 노동, tbl: DT_1EE0111, itm: "^평균$", want: ["^방역치료및손질$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_fd, title: 한우 비육우 1두당 사료 급여량, tbl: DT_1EE0111, itm: "^평균$", want: ["^사료급여량$"], unit: kg, survey: 축산물생산비조사}
+      - {id: hwr_conc, title: 한우 비육우 1두당 농후사료 급여량, tbl: DT_1EE0111, itm: "^평균$", want: ["^농후사료$"], unit: kg, survey: 축산물생산비조사}
+      - {id: hwr_rough, title: 한우 비육우 1두당 조사료 급여량, tbl: DT_1EE0111, itm: "^평균$", want: ["^조사료$"], unit: kg, survey: 축산물생산비조사}
+      - {id: hwr_tmr, title: 한우 비육우 1두당 TMR사료 급여량, tbl: DT_1EE0111, itm: "^평균$", want: ["^TMR사료$"], unit: kg, survey: 축산물생산비조사}
+      - {id: hwr_l1, title: 한우 비육우 20두 미만 농가 1두당 노동시간, tbl: DT_1EE0111, itm: "^20두미만$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_l2, title: 한우 비육우 20~49두 농가 1두당 노동시간, tbl: DT_1EE0111, itm: "^20~49두$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_l3, title: 한우 비육우 50~99두 농가 1두당 노동시간, tbl: DT_1EE0111, itm: "^50~99두$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: hwr_l4, title: 한우 비육우 100두 이상 농가 1두당 노동시간, tbl: DT_1EE0111, itm: "^100두이상$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_cap, title: 번식돈 1두당 자본평가액, tbl: DT_1EE218, itm: "^평균$", want: ["^자본평가액$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bsr_eq, title: 번식돈 농가 자기자본 비중, tbl: DT_1EE218, itm: "^평균$", want: ["^자기자본구성비"], unit: "%", survey: 축산물생산비조사}
+      - {id: bsr_lab, title: 번식돈 1두당 노동시간, tbl: DT_1EE218, itm: "^평균$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_feedw, title: 번식돈 1두당 사료 급여 노동, tbl: DT_1EE218, itm: "^평균$", want: ["^사료조리및급여$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_farrow, title: 번식돈 1두당 자돈 분만 노동, tbl: DT_1EE218, itm: "^평균$", want: ["^자돈분만$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_clean, title: 번식돈 1두당 분뇨 청소 노동, tbl: DT_1EE218, itm: "^평균$", want: ["^청소"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_vet, title: 번식돈 1두당 방역·손질 노동, tbl: DT_1EE218, itm: "^평균$", want: ["^방역치료및손질$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_fd, title: 번식돈 1두당 사료 급여량, tbl: DT_1EE218, itm: "^평균$", want: ["^사료급여량$"], unit: kg, survey: 축산물생산비조사}
+      - {id: bsr_l1, title: 번식돈 1,000두 미만 농가 1두당 노동시간, tbl: DT_1EE218, itm: "^1000두미만$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_l2, title: 번식돈 1,000~1,999두 농가 1두당 노동시간, tbl: DT_1EE218, itm: "^1000~1999$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_l3, title: 번식돈 2,000~2,999두 농가 1두당 노동시간, tbl: DT_1EE218, itm: "^2000~2999$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: bsr_l4, title: 번식돈 3,000두 이상 농가 1두당 노동시간, tbl: DT_1EE218, itm: "^3000두이상$", want: ["^노동력투하량$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: brr_herd, title: 육계 농가 호당 연간 사육 마릿수, tbl: DT_2EE317, itm: "^사육현황$", want: ["^호당연간사육수수$", "^평균$"], unit: 마리, survey: 축산물생산비조사}
+      - {id: brr_cap, title: 육계 100수당 자본평가액, tbl: DT_2EE317, itm: "^사육현황$", want: ["^자본평가액", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brr_eq, title: 육계 농가 자기자본 비중, tbl: DT_2EE317, itm: "^사육현황$", want: ["^자기자본구성비$", "^평균$"], unit: "%", survey: 축산물생산비조사}
+      - {id: brr_lab, title: 육계 100수당 노동시간, tbl: DT_2EE317, itm: "^사육현황$", want: ["^노동력투하량", "^평균$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: brr_fd, title: 육계 100수당 사료 급여량, tbl: DT_2EE317, itm: "^사육현황$", want: ["^사료급여량", "^평균$"], unit: kg, survey: 축산물생산비조사}
+      - {id: brr_l1, title: 육계 3만 수 미만 농가 100수당 노동시간, tbl: DT_2EE317, itm: "^사육현황$", want: ["^노동력투하량", "^30000수 미만$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: brr_l2, title: 육계 3만~5만 수 농가 100수당 노동시간, tbl: DT_2EE317, itm: "^사육현황$", want: ["^노동력투하량", "^30000~49999수$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: brr_l3, title: 육계 5만~7만 수 농가 100수당 노동시간, tbl: DT_2EE317, itm: "^사육현황$", want: ["^노동력투하량", "^50000~69999수$"], unit: 시간, survey: 축산물생산비조사}
+      - {id: brr_l4, title: 육계 7만 수 이상 농가 100수당 노동시간, tbl: DT_2EE317, itm: "^사육현황$", want: ["^노동력투하량", "^70000수 이상$"], unit: 시간, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

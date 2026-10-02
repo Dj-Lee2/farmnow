@@ -3595,6 +3595,38 @@ sources:
       - {id: ia_mc_spn, title: "노지 시금치 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지시금치$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_cab, title: "노지 양배추 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지양배추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_scl, title: "노지 쪽파 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지쪽파$"], unit: 원, survey: 농산물소득조사}
+      - {id: flr_rent_all, title: "농지 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_pad, title: "논 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^논$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_fld, title: "밭 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^밭$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_orc, title: "과수원 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^과수$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_metro, title: "특광역시 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^특광역시$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_gg, title: "경기 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^경기$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_gw, title: "강원 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^강원$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_cb, title: "충북 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^충북$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_cn, title: "충남 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^충남$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_jb, title: "전북 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^전북$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_jn, title: "전남 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^전남$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_gb, title: "경북 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^경북$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_gn, title: "경남 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^경남$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_jj, title: "제주 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^제주$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_s1, title: "1,000㎡ 미만 필지 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^1000㎡ 미만$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_rent_s4, title: "3,000㎡ 이상 필지 연간 임차료(㎡당)", tbl: DT_114062_011, org: "114", periods: 2, itm: "^단위면적당 임차료$", want: ["^3000㎡\\s+이상$", "^평균$"], unit: 원/㎡, survey: 농지임대차실태조사}
+      - {id: flr_up_all, title: "임차료가 오른 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^전년 대비 상승$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_up_pad, title: "논 임차료가 오른 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^논$", "^전년 대비 상승$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_up_fld, title: "밭 임차료가 오른 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^밭$", "^전년 대비 상승$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_up_orc, title: "과수원 임차료가 오른 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^과수$", "^전년 대비 상승$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_dn_all, title: "임차료가 내린 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^전년 대비 하락$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_same_all, title: "임차료가 그대로인 필지 비율", tbl: DT_114062_012, org: "114", periods: 2, itm: "^전년 대비 임차료 변화$", want: ["^변동 없음$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_why_inc, title: "임차료 변화 이유: 농산물 수익성 변화", tbl: DT_114062_013, org: "114", periods: 2, itm: "^전년 대비 임차료 변화 이유$", want: ["^농산물 수익성 변화$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_why_land, title: "임차료 변화 이유: 농지 가격 변동", tbl: DT_114062_013, org: "114", periods: 2, itm: "^전년 대비 임차료 변화 이유$", want: ["^농지 가격의 변동$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_why_dem, title: "임차료 변화 이유: 임대차 수요 변동", tbl: DT_114062_013, org: "114", periods: 2, itm: "^전년 대비 임차료 변화 이유$", want: ["^임대차 수요 변동$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_term_avg, title: "농지 임차 평균 계약기간", tbl: DT_114062_007, org: "114", periods: 2, itm: "^임차 계약기간$", want: ["^평균$"], unit: 년, survey: 농지임대차실태조사}
+      - {id: flr_term_5, title: "계약기간 5년 미만 필지 비율", tbl: DT_114062_007, org: "114", periods: 2, itm: "^임차 계약기간$", want: ["^5년 미만$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_doc_yes, title: "임대차계약서를 쓴 필지 비율", tbl: DT_114062_005, org: "114", periods: 2, itm: "^임대차계약서 작성 여부$", want: ["^예$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_fix, title: "임차료 정액 지불 필지 비율", tbl: DT_114062_009, org: "114", periods: 2, itm: "^임차료 지불 방식$", want: ["^정액$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_cash, title: "임차료 현금 지불 필지 비율", tbl: DT_114062_010, org: "114", periods: 2, itm: "^임차료 지불 형태$", want: ["^현금$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_krc, title: "한국농어촌공사를 통한 임차 계약 비율", tbl: DT_114062_008, org: "114", periods: 2, itm: "^계약 형태$", want: ["^한국농어촌공사를 통한 계약$"], unit: "%", survey: 농지임대차실태조사}
+      - {id: flr_size_avg, title: "임차 필지 평균 계약면적", tbl: DT_114062_006, org: "114", periods: 2, itm: "^임차 계약면적$", want: ["^평균$"], unit: ㎡, survey: 농지임대차실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

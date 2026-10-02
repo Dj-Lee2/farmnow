@@ -1563,6 +1563,44 @@ sources:
       - {id: fmb_frn, title: 고사리 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^고사리$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
       - {id: fmb_dok, title: 독활 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^독활$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
       - {id: fmb_dur, title: 두릅 경영비, tbl: DT_136036_11531, org: "136", itm: "^값$", want: ["^두릅$", "^경영비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: eqg_chest, title: 예초기를 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqg_pers, title: 예초기를 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqg_etc, title: 예초기를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqg_herb, title: 예초기를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqg_orn, title: 예초기를 보유한 관상 산림식물 임가 비율, tbl: DT_136022_9912, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqg_wood, title: 예초기를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^예초기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_chest, title: 저온저장고를 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_pers, title: 저온저장고를 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_etc, title: 저온저장고를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_mush, title: 저온저장고를 보유한 버섯 임가 비율, tbl: DT_136022_9961, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_herb, title: 저온저장고를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_gath, title: 저온저장고를 보유한 식용 임산물 채취 임가 비율, tbl: DT_136022_9782, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqc_wood, title: 저온저장고를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^[(]?저온[)]? ?저장고$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_chest, title: 건조기를 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_pers, title: 건조기를 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_etc, title: 건조기를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_mush, title: 건조기를 보유한 버섯 임가 비율, tbl: DT_136022_9961, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_herb, title: 건조기를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_gath, title: 건조기를 보유한 식용 임산물 채취 임가 비율, tbl: DT_136022_9782, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqd_wood, title: 건조기를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^건조기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_chest, title: 경운기를 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_pers, title: 경운기를 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_etc, title: 경운기를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_mush, title: 경운기를 보유한 버섯 임가 비율, tbl: DT_136022_9961, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_herb, title: 경운기를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_orn, title: 경운기를 보유한 관상 산림식물 임가 비율, tbl: DT_136022_9912, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_gath, title: 경운기를 보유한 식용 임산물 채취 임가 비율, tbl: DT_136022_9782, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqt_wood, title: 경운기를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^경운기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqs_chest, title: 기계톱을 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^기계톱$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqs_pers, title: 기계톱을 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^기계톱$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqs_mush, title: 기계톱을 보유한 버섯 임가 비율, tbl: DT_136022_9961, org: "136", itm: "^값$", want: ["^기계톱$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqs_gath, title: 기계톱을 보유한 식용 임산물 채취 임가 비율, tbl: DT_136022_9782, org: "136", itm: "^값$", want: ["^기계톱$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqs_wood, title: 기계톱을 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^기계톱$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqp_chest, title: 동력분무기를 보유한 밤 임가 비율, tbl: DT_136022_9814, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqp_pers, title: 동력분무기를 보유한 감 임가 비율, tbl: DT_136022_10044, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqp_etc, title: 동력분무기를 보유한 기타 수실류 임가 비율, tbl: DT_136022_10163, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqp_herb, title: 동력분무기를 보유한 산채·약초 임가 비율, tbl: DT_136022_9928, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: eqp_wood, title: 동력분무기를 보유한 영림·목재수확 임가 비율, tbl: DT_136022_10013, org: "136", itm: "^값$", want: ["^동력분무기$", "^전체$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

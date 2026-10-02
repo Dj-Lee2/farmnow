@@ -531,7 +531,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비', 65) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비', 74) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -602,6 +602,18 @@
   {{ hcard('농촌용수개발 종류별 사업비', [('다목적(중규모)', K.rud_mid), ('기타 사업', K.rux_all), ('소규모', K.rud_sm), ('관리자동화', K.rud_au), ('지표수 보강', K.rud_sf), ('한발 대비', K.rud_dr)], '천원', '괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
   {{ hcard('도별 농촌용수개발 사업비', [('전남', K.rup_jn), ('경남', K.rup_gn), ('경북', K.rup_gb), ('전북', K.rup_jb), ('충남', K.rup_cn), ('경기', K.rup_gg), ('충북', K.rup_cb), ('강원', K.rup_gw)], '천원', '기타 사업 제외 5종 합 · 괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
   {{ hcard('농촌용수 기타 사업 내역', [('용수이용체계 재편', K.rux_reorg), ('용수 수질조사·개선', K.rux_wq), ('대형 치수능력 증대', K.rux_flood), ('제주 용수 광역화', K.rux_jj), ('지하수 자원관리', K.rux_gw), ('임진강 용수공급', K.rux_imj)], '천원', '괄호는 기타 사업비 중 비중 · 오른쪽은 전년 대비', K.rux_all.vals[-1] if K.rux_all else none, '#5b8bd9') }}
+ </div>
+ <h3 class="sg-sub">임가 보유 장비·시설 <small>업종별 장비를 가진 임가 비율(여러 장비 복수 응답) · 산림청 임업경영실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('eqc_mush', 'g91', ('건조기 ' ~ '{:.1f}'.format(K.eqd_mush.vals[-1]) ~ '% · 경운기 ' ~ '{:.1f}'.format(K.eqt_mush.vals[-1]) ~ '%') if K.eqd_mush and K.eqt_mush else '표고 등 버섯 재배 임가', '#1f5f8a') }}
+  {{ card('eqs_chest', 'g92', ('예초기 ' ~ '{:.1f}'.format(K.eqg_chest.vals[-1]) ~ '% · 경운기 ' ~ '{:.1f}'.format(K.eqt_chest.vals[-1]) ~ '%') if K.eqg_chest and K.eqt_chest else '밤 재배 임가', '#7a6a3a') }}
+  {{ card('eqp_pers', 'g93', ('경운기 ' ~ '{:.1f}'.format(K.eqt_pers.vals[-1]) ~ '% · 건조기 ' ~ '{:.1f}'.format(K.eqd_pers.vals[-1]) ~ '%') if K.eqt_pers and K.eqd_pers else '감 재배 임가', '#1c7a45') }}
+  {{ hcard('업종별 예초기를 보유한 임가 비율', [('밤', K.eqg_chest), ('감', K.eqg_pers), ('기타 수실류', K.eqg_etc), ('관상 산림식물', K.eqg_orn), ('산채·약초', K.eqg_herb), ('영림·목재수확', K.eqg_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#5fae7a') }}
+  {{ hcard('업종별 저온저장고를 보유한 임가 비율', [('버섯', K.eqc_mush), ('식용 임산물 채취', K.eqc_gath), ('밤', K.eqc_chest), ('감', K.eqc_pers), ('기타 수실류', K.eqc_etc), ('산채·약초', K.eqc_herb), ('영림·목재수확', K.eqc_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#1f5f8a') }}
+  {{ hcard('업종별 건조기를 보유한 임가 비율', [('버섯', K.eqd_mush), ('기타 수실류', K.eqd_etc), ('감', K.eqd_pers), ('산채·약초', K.eqd_herb), ('식용 임산물 채취', K.eqd_gath), ('밤', K.eqd_chest), ('영림·목재수확', K.eqd_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#b0503a') }}
+  {{ hcard('업종별 경운기를 보유한 임가 비율', [('감', K.eqt_pers), ('밤', K.eqt_chest), ('기타 수실류', K.eqt_etc), ('산채·약초', K.eqt_herb), ('관상 산림식물', K.eqt_orn), ('식용 임산물 채취', K.eqt_gath), ('버섯', K.eqt_mush), ('영림·목재수확', K.eqt_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('업종별 기계톱을 보유한 임가 비율', [('밤', K.eqs_chest), ('영림·목재수확', K.eqs_wood), ('버섯', K.eqs_mush), ('식용 임산물 채취', K.eqs_gath), ('감', K.eqs_pers)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('업종별 동력분무기를 보유한 임가 비율', [('감', K.eqp_pers), ('기타 수실류', K.eqp_etc), ('밤', K.eqp_chest), ('산채·약초', K.eqp_herb), ('영림·목재수확', K.eqp_wood)], '%', '전체 임가 중 · 오른쪽은 전년 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

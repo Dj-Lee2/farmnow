@@ -2741,6 +2741,43 @@ sources:
       - {id: own_grp, title: 농업법인 생산자 단체 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^생산자 단체$"], unit: 개, survey: 농업법인조사}
       - {id: own_etc, title: 농업법인 기타법인 출자자, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^기타법인$"], unit: 개, survey: 농업법인조사}
       - {id: own_per, title: 농업법인 법인당 출자자 수, tbl: DT_1E5202, org: "114", itm: "^출자자수$", want: ["^법인당 출자자수$"], unit: 명, survey: 농업법인조사}
+      # 농업법인 사업별 매출액(DT_1E5216)·법인당 경영성과(DT_1E5220)·사업유형별 법인수(DT_1E5201A)·종사자(DT_1E5207A)
+      - {id: crs_all, title: 농업법인 매출액(전체), tbl: DT_1E5216, org: "114", itm: "^매출액$", want: [], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_prod, title: 농업법인 농업생산 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농업생산수입$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_crop, title: 농업법인 작물재배업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^작물재배업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_live, title: 농업법인 축산업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^축산업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_proc, title: 농업법인 농축산물 가공업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농축산물 가공업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_dist, title: 농업법인 농축산물 유통업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농축산물 유통업"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_svc, title: 농업법인 농업서비스업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농업서비스업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_tour, title: 농업법인 농어촌관광휴양 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농어촌관광휴양사업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_etc, title: 농업법인 기타사업 매출, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^기타사업$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_ag, title: 영농조합법인 매출액, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: crs_co, title: 농업회사법인 매출액, tbl: DT_1E5216, org: "114", itm: "^매출액$", want: ["^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_sales, title: 농업법인 법인당 매출액, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^매출액$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_cogs, title: 농업법인 법인당 매출원가, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^매출원가$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_gross, title: 농업법인 법인당 매출총이익, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^매출총이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_sga, title: 농업법인 법인당 판매비와관리비, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^판매비와관리비$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_op, title: 농업법인 법인당 영업이익, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^영업이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_net, title: 농업법인 법인당 당기순이익, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^당기순이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_wage, title: 농업법인 법인당 급여, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^급여$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_dep, title: 농업법인 법인당 감가상각비, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^감가상각비$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_settle, title: 결산한 농업법인 수, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^결산 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: cpf_loss, title: 결손 농업법인 수, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^결손 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: cpf_op_ag, title: 영농조합법인 법인당 영업이익, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^영업이익$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: cpf_op_co, title: 농업회사법인 법인당 영업이익, tbl: DT_1E5220, org: "114", itm: "^경영성과$", want: ["^영업이익$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: ctp_crop, title: 작물재배업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^작물재배업$"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_live, title: 축산업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^축산업$"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_proc, title: 농축산물 가공업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^농축산물가공업$"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_dist, title: 농축산물 유통업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^농축산물유통업"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_svc, title: 농업서비스업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^농업서비스업$"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_tour, title: 농어촌관광휴양 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^농어촌관광휴양사업$"], unit: 개, survey: 농업법인조사}
+      - {id: ctp_etc, title: 기타사업 농업법인 수, tbl: DT_1E5201A, org: "114", itm: "^사업유형별$", want: ["^기타사업$"], unit: 개, survey: 농업법인조사}
+      - {id: cem_all, title: 농업법인 종사자(전체), tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^종사자수 합계$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cem_reg, title: 농업법인 상시종사자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^상시종사자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cem_own, title: 농업법인 상근출자자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^상근출자자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cem_emp, title: 농업법인 상용근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^상용근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cem_tmp, title: 농업법인 임시·일용 근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^임시 및 일용 근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
+      - {id: cem_for, title: 농업법인 외국인 근로자, tbl: DT_1E5207A, org: "114", itm: "^법인특성별 종사자수$", want: ["^외국인 근로자$", "^(영농조합법인|농업회사법인)$"], sum: true, unit: 명, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

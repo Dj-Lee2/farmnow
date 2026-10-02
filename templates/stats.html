@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자', 158) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자', 173) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -260,6 +260,24 @@
   {{ hcard('출자 주체별 농업법인 출자금', [('농업인', K.inv_far), ('비농업인', K.inv_non), ('기타법인', K.inv_etc), ('농업생산자단체', K.inv_grp)], '백만원', '괄호는 전체 출자금 중 비중 · 오른쪽은 전년 대비', K.inv_amt.vals[-1] if K.inv_amt else none, '#1c7a45') }}
   {{ hcard('출자 형태별 농업법인 출자금', [('현금 출자', K.inv_cash), ('현물 출자', K.inv_kind)], '백만원', '괄호는 전체 출자금 중 비중 · 오른쪽은 전년 대비', K.inv_amt.vals[-1] if K.inv_amt else none, '#c0763a') }}
   {{ hcard('유형별 농업법인 출자자', [('농업인', K.own_far), ('비농업인', K.own_non)], '명', ('괄호는 전체 출자자 중 비중 · 이 밖에 생산자 단체 ' ~ num(K.own_grp.vals[-1], '개')|striptags ~ '·기타법인 ' ~ num(K.own_etc.vals[-1], '개')|striptags ~ ' · 오른쪽은 전년 대비') if K.own_grp and K.own_etc else '', K.own_all.vals[-1] if K.own_all else none, '#6b8fd6') }}
+ </div>
+ <h3 class="sg-sub">농업법인 매출·경영성과·종사자 <small>영농조합법인·농업회사법인 합계 · 경영성과는 결산 법인 평균 · 농업법인조사</small></h3>
+ <div class="sg-g">
+  {{ card('crs_all', 'gu1', ('농업생산 ' ~ num(K.crs_prod.vals[-1], '백만원')|striptags ~ ' · 나머지는 가공·유통 등') if K.crs_prod else none, '#1c7a45') }}
+  {{ rcard('농업법인 매출 중 농업생산 비중', K.crs_prod, K.crs_all, 'gu2', '작물재배·축산 매출 ÷ 전체 매출 · 나머지는 가공·유통·서비스 등', '#1c7a45') }}
+  {{ card('cpf_sales', 'gu3', ('결산 법인 ' ~ num(K.cpf_settle.vals[-1], '개')|striptags ~ ' 평균') if K.cpf_settle else none, '#1c7a45') }}
+  {{ card('cpf_op', 'gu4', '매출총이익 − 판매비와관리비', '#c0763a') }}
+  {{ rcard('농업법인 영업이익률', K.cpf_op, K.cpf_sales, 'gu5', '법인당 영업이익 ÷ 법인당 매출액', '#c0763a') }}
+  {{ rcard('결손 농업법인 비율', K.cpf_loss, K.cpf_settle, 'gu6', ('결손 법인 ' ~ num(K.cpf_loss.vals[-1], '개')|striptags ~ ' ÷ 결산 법인') if K.cpf_loss else '', '#b04a07') }}
+  {{ card('cem_all', 'gu7', '상시종사자 + 임시·일용 근로자', '#6b8fd6') }}
+  {{ rcard('농업법인 종사자 중 임시·일용 비중', K.cem_tmp, K.cem_all, 'gu8', ('임시·일용 ' ~ num(K.cem_tmp.vals[-1], '명')|striptags) if K.cem_tmp else '', '#6b8fd6') }}
+  {{ rcard('농업법인 종사자 중 외국인 비중', K.cem_for, K.cem_all, 'gu9', ('외국인 근로자 ' ~ num(K.cem_for.vals[-1], '명')|striptags) if K.cem_for else '', '#6b8fd6') }}
+  {{ hcard('사업별 농업법인 매출액', [('농축산물 유통업', K.crs_dist), ('농축산물 가공업', K.crs_proc), ('축산업', K.crs_live), ('작물재배업', K.crs_crop), ('기타사업', K.crs_etc), ('농업서비스업', K.crs_svc), ('농어촌관광휴양', K.crs_tour)], '백만원', '괄호는 전체 매출 중 비중 · 오른쪽은 전년 대비', K.crs_all.vals[-1] if K.crs_all else none, '#1c7a45') }}
+  {{ hcard('법인 형태별 매출액', [('농업회사법인', K.crs_co), ('영농조합법인', K.crs_ag)], '백만원', '괄호는 전체 매출 중 비중 · 오른쪽은 전년 대비', K.crs_all.vals[-1] if K.crs_all else none, '#1c7a45') }}
+  {{ hcard('주 사업유형별 농업법인 수', [('농축산물 유통업', K.ctp_dist), ('작물재배업', K.ctp_crop), ('농축산물 가공업', K.ctp_proc), ('기타사업', K.ctp_etc), ('축산업', K.ctp_live), ('농어촌관광휴양', K.ctp_tour), ('농업서비스업', K.ctp_svc)], '개', '주 사업 기준 · 괄호는 전체 법인 중 비중 · 오른쪽은 전년 대비', (K.ctp_dist.vals[-1] + K.ctp_crop.vals[-1] + K.ctp_proc.vals[-1] + K.ctp_etc.vals[-1] + K.ctp_live.vals[-1] + K.ctp_tour.vals[-1] + K.ctp_svc.vals[-1]) if K.ctp_dist and K.ctp_crop and K.ctp_proc and K.ctp_etc and K.ctp_live and K.ctp_tour and K.ctp_svc else none, '#3a8f6a') }}
+  {{ hcard('농업법인 법인당 손익', [('매출총이익', K.cpf_gross), ('판매비와관리비', K.cpf_sga), ('급여', K.cpf_wage), ('영업이익', K.cpf_op), ('당기순이익', K.cpf_net), ('감가상각비', K.cpf_dep)], '백만원', '결산 법인 평균 · 매출총이익 − 판매비와관리비 = 영업이익 · 오른쪽은 전년 대비', none, '#c0763a') }}
+  {{ hcard('법인 형태별 법인당 영업이익', [('농업회사법인', K.cpf_op_co), ('영농조합법인', K.cpf_op_ag)], '백만원', ('전체 평균 ' ~ num(K.cpf_op.vals[-1], '백만원')|striptags ~ ' · 오른쪽은 전년 대비') if K.cpf_op else '', none, '#c0763a') }}
+  {{ hcard('농업법인 종사자 구성', [('상용근로자', K.cem_emp), ('임시·일용 근로자', K.cem_tmp), ('상근출자자', K.cem_own), ('외국인 근로자', K.cem_for)], '명', '괄호는 전체 종사자 중 비중 · 외국인은 상용·임시 근로자에 포함 · 오른쪽은 전년 대비', K.cem_all.vals[-1] if K.cem_all else none, '#6b8fd6') }}
  </div>
  </div></details>
 

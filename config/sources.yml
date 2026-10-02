@@ -3565,6 +3565,36 @@ sources:
       - {id: ia_lr_apl, title: "사과 10a당 토지임차료", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^사과$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_of_let, title: "시설 상추 10a당 유기질비료비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설상추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_of_cuc, title: "시설 오이 10a당 유기질비료비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설오이$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_brl, title: "겉보리 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^겉보리$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_nbrl, title: "쌀보리 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^쌀보리$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_wht, title: "밀 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^밀$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_corn, title: "노지 풋옥수수 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지풋옥수수$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_spot, title: "봄감자 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^봄감자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_apot, title: "가을감자 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^가을감자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_ses, title: "참깨 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^참깨$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_per, title: "들깨 10a당 소득", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^들깨$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_arad, title: "노지 가을무 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지가을무$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_hrad, title: "고랭지 무 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지고랭지무$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_scab, title: "노지 봄배추 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지봄배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_hcab, title: "고랭지 배추 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지고랭지배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_spn, title: "노지 시금치 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지시금치$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_cab, title: "노지 양배추 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지양배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_scl, title: "노지 쪽파 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지쪽파$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_brl, title: "겉보리 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^겉보리$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_nbrl, title: "쌀보리 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^쌀보리$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_wht, title: "밀 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^밀$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_corn, title: "노지 풋옥수수 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지풋옥수수$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_spot, title: "봄감자 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^봄감자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_apot, title: "가을감자 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^가을감자$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_ses, title: "참깨 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^참깨$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_per, title: "들깨 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^들깨$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_arad, title: "노지 가을무 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지가을무$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_hrad, title: "고랭지 무 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지고랭지무$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_scab, title: "노지 봄배추 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지봄배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_hcab, title: "고랭지 배추 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지고랭지배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_spn, title: "노지 시금치 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지시금치$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_cab, title: "노지 양배추 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지양배추$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_scl, title: "노지 쪽파 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지쪽파$"], unit: 원, survey: 농산물소득조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

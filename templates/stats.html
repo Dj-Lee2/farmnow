@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용·농업용지 소유·임차', 209) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용·농업용지 소유·임차·사업유형·규모·운영기간별 농업용지', 221) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -91,7 +91,7 @@
   {{ card('ftr_agri', 'g98', ('이전소득의 ' ~ '{:.0f}'.format(K.ftr_agri.vals[-1] / K.transfer_income.vals[-1] * 100) ~ '% · 직불금 등') if K.transfer_income else '직불금 등', '#1c7a45') }}
   {{ card('ftr_opub', 'g99', '기초연금·국민연금 등 농업 외 공적 지원', '#6b8fd6') }}
   {{ hcard('농지 소유·임차 형태별 농가', [('자작농가', K.lrf_own), ('자작+임차농가', K.lrf_mixed), ('순수 임차농가', K.lrf_pure), ('경지 없는 농가', K.lrf_none)], '%', '전체 농가 중 비율 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
-  {{ hcard('농지 종류별 임차료율', [('일모작 논', K.lrl_p1), ('이모작 논', K.lrl_p2), ('밭', K.lrl_field), ('전체', K.lrl_rent), ('전체(무상 임차 제외)', K.lrl_rentx)], '%', '농지 가치 대비 1년 임차료 · 논·밭은 무상 임차 포함 · 오른쪽은 전년 대비', none, '#b04a07') }}
+  {{ hcard('농지 종류별 임차료율', [('일모작 논', K.lrl_p1), ('이모작 논', K.lrl_p2), ('밭', K.lrl_field), ('일모작 논(무상 제외)', K.lrl_p1x), ('이모작 논(무상 제외)', K.lrl_p2x), ('밭(무상 제외)', K.lrl_fdx), ('전체', K.lrl_rent), ('전체(무상 임차 제외)', K.lrl_rentx)], '%', '농지 가치 대비 1년 임차료 · 무상 제외는 무상으로 빌린 농지를 뺀 값 · 오른쪽은 전년 대비', none, '#b04a07') }}
   {{ hcard('용도별 농가부채', [('농업용', K.fdb_agri), ('겸업용', K.fdb_side), ('가계용', K.fdb_home), ('기타용', K.fdb_etc)], '천원', ('농가당 부채 ' ~ num(K.debt.vals[-1], '천원')|striptags ~ ' · 괄호는 비중 · 오른쪽은 전년 대비') if K.debt else '', K.debt.vals[-1] if K.debt else none, '#b04a07') }}
   {{ hcard('빌린 곳별 농가부채', [('금융기관', K.fdb_bank), ('개인 등', K.fdb_priv)], '천원', '괄호는 비중 · 오른쪽은 전년 대비', K.debt.vals[-1] if K.debt else none, '#c0763a') }}
   {{ hcard('영농형태별 농가부채', [('축산', K.fdb_t_live), ('화훼', K.fdb_t_flower), ('과수', K.fdb_t_fruit), ('채소', K.fdb_t_veg), ('특용작물', K.fdb_t_spec), ('일반밭작물', K.fdb_t_field), ('논벼', K.fdb_t_rice)], '천원', ('전체 평균 ' ~ num(K.debt.vals[-1], '천원')|striptags ~ ' · 오른쪽은 전년 대비') if K.debt else '', none, '#b04a07') }}
@@ -326,6 +326,21 @@
   {{ rcard('임차 농업용지 중 밭 비중', K.lnd_r_fd, K.lnd_r_all, 'gy6', ('임차 밭 ' ~ num(K.lnd_r_fd.vals[-1], 'ha')|striptags ~ ' ÷ 임차 농업용지 · 과수원 포함') if K.lnd_r_fd else '', '#b07a3a') }}
   {{ hcard('소유·임차 지목별 농업법인 농업용지', [('소유 논', K.lnd_o_pd), ('소유 밭', K.lnd_o_fd), ('임차 밭', K.lnd_r_fd), ('임차 논', K.lnd_r_pd), ('소유 과수원', K.lnd_o_or), ('임차 과수원', K.lnd_r_or)], 'ha', '과수원은 밭에 포함 · 초지 제외 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#1c7a45') }}
   {{ hcard('시도별 농업법인 농업용지', [('전남', K.lnd_jn), ('전북', K.lnd_jb), ('경기', K.lnd_gg), ('제주', K.lnd_jj), ('충남', K.lnd_cn), ('경남', K.lnd_gn), ('강원', K.lnd_gw), ('경북', K.lnd_gb), ('충북', K.lnd_cb)], 'ha', '소유+임차 · 특광역시 제외 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#3a8f6a') }}
+ </div>
+ <h3 class="sg-sub">사업유형·종사자 규모·운영기간별 농업법인 농업용지 <small>소유+임차 · 영농조합법인·농업회사법인 합계 · 농업법인조사</small></h3>
+ <div class="sg-g">
+  {{ card('lnu_t_crop', 'gz1', ('전체 농업용지의 ' ~ '{:.1f}'.format(K.lnu_t_crop.vals[-1] / K.lnd_all.vals[-1] * 100) ~ '% · 소유+임차') if K.lnu_t_crop and K.lnd_all else none, '#1c7a45') }}
+  {{ card('lnu_n_crop', 'gz2', '농지를 가진 작물재배업 법인', '#3a8f6a') }}
+  {{ rcard('작물재배업 법인 농업용지 중 임차 비중', K.lnu_tr_crop, K.lnu_t_crop, 'gz3', ('임차 ' ~ num(K.lnu_tr_crop.vals[-1], 'ha')|striptags ~ ' ÷ 소유+임차') if K.lnu_tr_crop else '', '#b07a3a') }}
+  {{ rcard('농축산물가공업 법인 농업용지 중 임차 비중', K.lnu_tr_proc, K.lnu_t_proc, 'gz4', ('임차 ' ~ num(K.lnu_tr_proc.vals[-1], 'ha')|striptags ~ ' ÷ 소유+임차') if K.lnu_tr_proc else '', '#b07a3a') }}
+  {{ rcard('농축산물유통업 법인 농업용지 중 임차 비중', K.lnu_tr_dist, K.lnu_t_dist, 'gz5', ('임차 ' ~ num(K.lnu_tr_dist.vals[-1], 'ha')|striptags ~ ' ÷ 소유+임차') if K.lnu_tr_dist else '', '#b07a3a') }}
+  {{ rcard('축산업 법인 농업용지 중 임차 비중', K.lnu_tr_live, K.lnu_t_live, 'gz6', ('임차 ' ~ num(K.lnu_tr_live.vals[-1], 'ha')|striptags ~ ' ÷ 소유+임차') if K.lnu_tr_live else '', '#b07a3a') }}
+  {{ card('lnu_n_live', 'gz7', '농지를 가진 축산업 법인', '#6b8fd6') }}
+  {{ rcard('운영 13년 이상 법인의 농업용지 비중', K.lnu_p_4, K.lnd_all, 'gz8', ('13년 이상 ' ~ num(K.lnu_p_4.vals[-1], 'ha')|striptags ~ ' ÷ 전체 농업용지') if K.lnu_p_4 else '', '#6b8fd6') }}
+  {{ rcard('종사자 1인 이하 법인의 농업용지 비중', K.lnu_s_1, K.lnd_all, 'gz9', ('1인 이하 ' ~ num(K.lnu_s_1.vals[-1], 'ha')|striptags ~ ' ÷ 전체 농업용지') if K.lnu_s_1 else '', '#3a8f6a') }}
+  {{ hcard('사업유형별 농업법인 농업용지', [('작물재배업', K.lnu_t_crop), ('농축산물 유통업', K.lnu_t_dist), ('농축산물 가공업', K.lnu_t_proc), ('축산업', K.lnu_t_live), ('농업서비스업', K.lnu_t_serv), ('농어촌관광휴양', K.lnu_t_tour), ('기타사업', K.lnu_t_etc)], 'ha', '소유+임차 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#1c7a45') }}
+  {{ hcard('종사자 규모별 농업법인 농업용지', [('2~4인', K.lnu_s_2), ('1인 이하', K.lnu_s_1), ('5~9인', K.lnu_s_3), ('10~49인', K.lnu_s_4), ('50인 이상', K.lnu_s_5)], 'ha', '상시종사자 기준 · 괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#3a8f6a') }}
+  {{ hcard('운영기간별 농업법인 농업용지', [('13년 이상', K.lnu_p_4), ('8~12년', K.lnu_p_3), ('4~7년', K.lnu_p_2), ('3년 이하', K.lnu_p_1)], 'ha', '괄호는 전체 농업용지 중 비중 · 오른쪽은 전년 대비', K.lnd_all.vals[-1] if K.lnd_all else none, '#6b8fd6') }}
  </div>
  </div></details>
 

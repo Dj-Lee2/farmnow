@@ -2945,6 +2945,31 @@ sources:
       - {id: lnd_gb, title: 경북 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^경상북도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
       - {id: lnd_gn, title: 경남 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^경상남도$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
       - {id: lnd_jj, title: 제주 농업법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^제주"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_crop, title: 작물재배업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^작물재배업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_live, title: 축산업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^축산업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_proc, title: 농축산물가공업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농축산물가공업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_dist, title: 농축산물유통업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농축산물유통업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_serv, title: 농업서비스업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농업서비스업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_tour, title: 농어촌관광휴양사업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농어촌관광휴양사업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_t_etc, title: 기타사업 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^기타사업$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_tr_crop, title: 작물재배업 법인 임차 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^작물재배업$"], codes: {C2: "^T121$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_tr_live, title: 축산업 법인 임차 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^축산업$"], codes: {C2: "^T121$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_tr_proc, title: 농축산물가공업 법인 임차 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농축산물가공업$"], codes: {C2: "^T121$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_tr_dist, title: 농축산물유통업 법인 임차 농업용지, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^농축산물유통업$"], codes: {C2: "^T121$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_n_crop, title: 농지 보유 작물재배업 법인 수, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^작물재배업$", "^법인수$"], codes: {C2: "^T100$"}, sum: true, unit: 개, survey: 농업법인조사}
+      - {id: lnu_n_live, title: 농지 보유 축산업 법인 수, tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^축산업$", "^법인수$"], codes: {C2: "^T100$"}, sum: true, unit: 개, survey: 농업법인조사}
+      - {id: lnu_s_1, title: 종사자 1인 이하 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^1인 이하$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_s_2, title: 종사자 2~4인 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^2~4인$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_s_3, title: 종사자 5~9인 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^5~9인$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_s_4, title: 종사자 10~49인 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^10~49인$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_s_5, title: 종사자 50인 이상 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^50인 이상$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_p_1, title: 운영 3년 이하 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^3년 이하$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_p_2, title: 운영 4~7년 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^4~7년$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_p_3, title: 운영 8~12년 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^8~12년$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lnu_p_4, title: 운영 13년 이상 법인 농업용지(소유+임차), tbl: DT_1E5210A_2020, org: "114", itm: "^법인특성별 농지현황$", want: ["^13년 이상$"], codes: {C2: "^T1[12]1$"}, sum: true, unit: ha, survey: 농업법인조사}
+      - {id: lrl_p1x, title: 일모작 논 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^301$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrl_p2x, title: 이모작 논 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^302$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrl_fdx, title: 밭 임차료율(무상 임차 제외), tbl: DT_1EQ002, itm: "^임차농지 비율 및 임차료율$", want: [".*"], codes: {C1: "^303$"}, unit: "%", survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

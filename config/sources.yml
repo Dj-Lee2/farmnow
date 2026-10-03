@@ -3953,6 +3953,47 @@ sources:
       - {id: eal_gb, title: 경북 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상북도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
       - {id: eal_gn, title: 경남 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상남도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
       - {id: eal_jj, title: 제주 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: ghh_fac, title: 시설재배 농가(가온 조사), tbl: DT_1EA1051, itm: "^시설재배있는 농가$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_heat, title: 시설 가온 농가, tbl: DT_1EA1051, itm: "^시설 가온농가$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_dsl, title: 경유 가온 농가, tbl: DT_1EA1051, itm: "^경유$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_kero, title: 등유 가온 농가, tbl: DT_1EA1051, itm: "^등유$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_hvy, title: 중유 가온 농가, tbl: DT_1EA1051, itm: "^중유$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_gas, title: 가스 가온 농가, tbl: DT_1EA1051, itm: "^가스$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_elec, title: 전기 가온 농가, tbl: DT_1EA1051, itm: "^전기$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_geo, title: 지열 가온 농가, tbl: DT_1EA1051, itm: "^지열$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_air, title: 공기열 가온 농가, tbl: DT_1EA1051, itm: "^공기열$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_coal, title: 석탄 가온 농가, tbl: DT_1EA1051, itm: "^석탄$", unit: 가구, survey: 농림어업조사}
+      - {id: ghh_clean, title: 전기·지열·공기열 가온 농가, tbl: DT_1EA1051, itm: "^(전기|지열|공기열)$", sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: esv_farm, title: 에너지절감시설 설치 농가, tbl: DT_1EA1052, itm: "^에너지절감시설 설치 농가$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_curt, title: 다겹보온커튼 설치 농가, tbl: DT_1EA1052, itm: "^다겹보온커튼$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_alu, title: 알루미늄스크린 설치 농가, tbl: DT_1EA1052, itm: "^알루미늄스크린$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_exh, title: 배기열회수장치 설치 농가, tbl: DT_1EA1052, itm: "^배기열회수장치$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_hrv, title: 열회수형환기장치 설치 농가, tbl: DT_1EA1052, itm: "^열회수형환기장치$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_wcr, title: 수막시설(순환식) 설치 농가, tbl: DT_1EA1052, itm: "^수막시설\\(순환식\\)$", unit: 가구, survey: 농림어업조사}
+      - {id: esv_wcn, title: 수막시설(비순환) 설치 농가, tbl: DT_1EA1052, itm: "^수막시설\\(비순환\\)$", unit: 가구, survey: 농림어업조사}
+      - {id: irg_tot, title: 시설채소 관수 면적(전체), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: irg_spr, title: 시설채소 관수 면적(스프링쿨러), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^스프링쿨러$"], unit: ha, survey: 채소류생산실적}
+      - {id: irg_drip, title: 시설채소 관수 면적(점적관수), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^점적관수$"], unit: ha, survey: 채소류생산실적}
+      - {id: irg_perf, title: 시설채소 관수 면적(다공튜브), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^다공튜브$"], unit: ha, survey: 채소류생산실적}
+      - {id: irg_mist, title: 시설채소 관수 면적(살수·분무호스), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^살수\\(분무호스\\)$"], unit: ha, survey: 채소류생산실적}
+      - {id: irg_man, title: 시설채소 관수 면적(인력), tbl: DT_114018_015, org: "114", itm: "^면적$", want: ["^인력$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_tot, title: 시설채소 양액재배 면적(전체), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_sub, title: 시설채소 양액재배 면적(고형배지), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^고형배지$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_perl, title: 시설채소 양액재배 면적(펄라이트), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^펄라이트$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_rw, title: 시설채소 양액재배 면적(암면), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^암면$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_coco, title: 시설채소 양액재배 면적(코코넛피트), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^코코넛피트$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_dft, title: 시설채소 양액재배 면적(담액경 DFT), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^담액경\\(DFT\\)$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_nft, title: 시설채소 양액재배 면적(박막경 NFT), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^박막경\\(NFT\\)$"], unit: ha, survey: 채소류생산실적}
+      - {id: hyd_aero, title: 시설채소 양액재배 면적(분무경), tbl: DT_114018_016, org: "114", itm: "^면적$", want: ["^분무경$"], unit: ha, survey: 채소류생산실적}
+      - {id: ict_all, title: 농가 정보화(전체농가), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^전체농가$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_own, title: 농가 정보화(정보화기기 보유농가), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^정보화기기 보유농가$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_sp, title: 농가 정보화(스마트폰), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^스마트폰$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_use, title: 농가 정보화(정보화기기 활용농가), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^정보화기기 활용농가$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_fac, title: 농가 정보화(농업 재배시설 및 축사 관리), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농업 재배시설 및 축사 관리$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_sale, title: 농가 정보화(농산물판매), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농산물판매$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_mgmt, title: 농가 정보화(농업경영), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농업경영$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_info, title: 농가 정보화(농업관련정보수집), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농업관련정보수집$"], unit: 가구, survey: 농림어업조사}
+      - {id: ict_spu, title: 농가 정보화(스마트폰 활용농가), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^스마트폰 활용농가$"], unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

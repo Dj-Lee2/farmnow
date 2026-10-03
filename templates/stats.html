@@ -46,7 +46,7 @@
 {% set trv %}{{ '{:.1f}'.format(tr[-1]) if tr else '–' }}{% endset %}{% set trdv %}{% if trd is not none %}<em class="{{ 'up' if trd > 0 else 'down' if trd < 0 else '' }}">{{ ('+' if trd > 0 else '') ~ '{:.1f}'.format(trd) }}p</em>{% endif %}{% endset %}
  <div class="sg-bar"><button type="button" class="sg-all" id="sgAll" aria-pressed="false">모두 펼치기</button></div>
 
- <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용·농업용지 소유·임차·사업유형·규모·운영기간별 농업용지·농업법인 자산·부채·부채비율·유동비율·시도별 재무·분기별 임시·일용 근로자·외국인·경영성과 합계·매출원가율·순이익률·경지규모·판매금액·시설면적·경영주 경력별 농가', 262) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
+ <details class="sg-grp" id="g-farm">{% call head('g-farm', '농가 살림', '농가·도별 농가·판매처·소득·농업총수입·재무지표·형태·지역·연령·규모별 소득·경영비·농지 임차·임차료율·용도별 부채·보조금·자산 구성·소비지출·사업외수입·세금·연금·보험료·영농형태·연령별 지출·표본농가 가구원·경지면적·영농형태·규모별 농업소득률·시간당 소득·경영비·영농형태·연령별 부채비율·비경상소득·연령별 경지면적·자본 효율·농기구자본비율·주·부업별 소득률·규모별 농업취업률·주·부업별 부채비율·영농형태별 농업취업률·노동·토지생산성·노동·자본집약도·규모별 부채비율·영농형태별 가구원·규모별 노동·자본집약도·자기자본비율·규모별 가구원·연령별 노동·자본집약도·부채비율·영농형태별 자본생산성·규모별 농기구자본비율·고정비율·자본구성도·연령별 농기구자본비율·자본생산성·전·겸업별 소득률·자본생산성·고정비율·규모별 고정비율·자기자본비율·연령별 농업취업률·가구원·전·겸업별 노동·자본집약도·자기자본비율·농기구자본비율·취업률·가구원·주·부업별 고정비율·규모별 자본구성도·자본생산성·농업법인 출자금·출자자·매출·경영성과·종사자·연령·규모·채용 계획·재배면적·가축·설비투자·작물별 재배면적·출자 규모·시도별 법인·운영기간·사업유형별 종사자·채용·농업용지 소유·임차·사업유형·규모·운영기간별 농업용지·농업법인 자산·부채·부채비율·유동비율·시도별 재무·분기별 임시·일용 근로자·외국인·경영성과 합계·매출원가율·순이익률·경지규모·판매금액·시설면적·경영주 경력별 농가·작물별 재배 농가', 270) %}{{ kv('농가 수', K.farms) }}{{ kv('농가소득', K.farm_income) }}{{ kv('농가부채', K.debt) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
@@ -331,6 +331,17 @@
   {{ hcard('농축산물 판매금액별 농가', [('판매 없음', K.fsl_none), ('120만 원 미만', K.fsl_u120), ('120~300만 원', K.fsl_120_300), ('300만~1천만 원', K.fsl_300_1k), ('1천만~3천만 원', K.fsl_1k_3k), ('3천만~5천만 원', K.fsl_3k_5k), ('5천만~1억 원', K.fsl_5k_1e), ('1억~2억 원', K.fsl_1e_2e), ('2억~5억 원', K.fsl_2e_5e), ('5억 원 이상', K.fsl_5e)], '가구', '연간 농축산물 판매금액 · 괄호는 전체 농가 중 비중 · 오른쪽은 전년 대비', K.fsl_tot.vals[-1] if K.fsl_tot else none, '#3a8f6a') }}
   {{ hcard('시설면적규모별 농가', [('0.1ha 미만', K.fgh_u01), ('0.1~0.3ha', K.fgh_01_03), ('0.3~0.5ha', K.fgh_03_05), ('0.5~1ha', K.fgh_05_1), ('1~2ha', K.fgh_1_2), ('2ha 이상', K.fgh_2)], '가구', '시설(온실·하우스) 보유 농가 · 괄호는 보유 농가 중 비중 · 오른쪽은 전년 대비', K.fgh_tot.vals[-1] if K.fgh_tot else none, '#6b8fd6') }}
   {{ hcard('경영주 농업경력별 농가', [('5년 미만', K.fcx_u5), ('5~10년', K.fcx_5_10), ('10~15년', K.fcx_10_15), ('15~20년', K.fcx_15_20), ('20년 이상', K.fcx_20)], '가구', '괄호는 전체 농가 중 비중 · 오른쪽은 전년 대비', K.fcx_tot.vals[-1] if K.fcx_tot else none, '#c0763a') }}
+ </div>
+ <h3 class="sg-sub">작물별 재배 농가 — 식량·채소·과수 <small>전국 농가 수 · 여러 작물을 함께 지으면 작물마다 집계 · 농림어업조사</small></h3>
+ <div class="sg-g">
+  {{ rcard('논벼 수확 농가 비율', K.hcp_rice, K.fls_tot, 'hc1', ('논벼 ' ~ K.hcp_rice.vals[-1]|big ~ ' · 전체 ' ~ K.fls_tot.vals[-1]|big ~ ' 가구') if K.hcp_rice and K.fls_tot else '', '#b08a2a') }}
+  {{ rcard('고추 수확 농가 비율', K.hcp_pep, K.fls_tot, 'hc2', ('고추 ' ~ K.hcp_pep.vals[-1]|big ~ ' · 콩 ' ~ K.hcp_soy.vals[-1]|big ~ ' 가구') if K.hcp_pep and K.hcp_soy else '', '#c0463a') }}
+  {{ rcard('과수 재배 농가 비율', K.hfr_tot, K.fls_tot, 'hc3', ('과수 ' ~ K.hfr_tot.vals[-1]|big ~ ' 가구 · 사과 ' ~ K.hfr_apple.vals[-1]|big ~ ' 가구') if K.hfr_tot and K.hfr_apple else '', '#3a8f6a') }}
+  {{ card('hcp_gar', 'hc4', ('양파 ' ~ K.hcp_oni.vals[-1]|big ~ ' 가구 · 참깨 ' ~ K.hcp_ses.vals[-1]|big ~ ' 가구') if K.hcp_oni and K.hcp_ses else none, '#8a6ab0') }}
+  {{ card('hfr_sweet', 'hc5', ('떫은감 ' ~ K.hfr_astr.vals[-1]|big ~ ' 가구 · 감 재배 농가가 사과보다 많음') if K.hfr_astr else none, '#d07a2a') }}
+  {{ card('hfr_apple', 'hc6', ('배 ' ~ K.hfr_pear.vals[-1]|big ~ ' · 포도 ' ~ K.hfr_grape.vals[-1]|big ~ ' 가구') if K.hfr_pear and K.hfr_grape else none, '#c0463a') }}
+  {{ hcard('수확 작물별 농가', [('논벼', K.hcp_rice), ('고추', K.hcp_pep), ('콩', K.hcp_soy), ('기타 식량작물', K.hcp_grain), ('마늘', K.hcp_gar), ('참깨', K.hcp_ses), ('양파', K.hcp_oni), ('보리', K.hcp_barley), ('기타 채소·특용', K.hcp_veg)], '가구', '괄호는 작물재배 농가 중 비중(중복 집계) · 오른쪽은 전년 대비', K.hcp_all.vals[-1] if K.hcp_all else none, '#b08a2a') }}
+  {{ hcard('과수 작물별 재배 농가', [('떫은감', K.hfr_astr), ('사과', K.hfr_apple), ('복숭아', K.hfr_peach), ('단감', K.hfr_sweet), ('포도', K.hfr_grape), ('감귤', K.hfr_citrus), ('배', K.hfr_pear), ('기타 과수', K.hfr_etc)], '가구', '괄호는 과수 재배 농가 중 비중(중복 집계) · 오른쪽은 전년 대비', K.hfr_tot.vals[-1] if K.hfr_tot else none, '#3a8f6a') }}
  </div>
  <h3 class="sg-sub">농업법인 인력·재배면적·가축·설비투자 <small>영농조합법인·농업회사법인 합계 · 농업법인조사</small></h3>
  <div class="sg-g">
@@ -1410,7 +1421,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식', 144) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식', 152) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1480,6 +1491,17 @@
   {{ rcard('시설채소 중 난방 면적 비율', K.htp_tot, K.cov_tot, 'sh2', '난방 시설을 갖춘 면적 ÷ 시설채소 면적', '#c0763a') }}
   {{ rcard('난방 면적 중 온풍난방 비율', K.htp_warm, K.htp_tot, 'sh3', ('온풍난방 ' ~ K.htp_warm.vals[-1]|big ~ ' ha · 온풍기로 공기를 데움') if K.htp_warm else '', '#c0763a') }}
   {{ hcard('난방 방식별 시설채소 면적', [('온풍난방', K.htp_warm), ('온수난방 · 방열관', K.htp_rad), ('기타 지상부난방', K.htp_etc), ('온수난방 · 팬코일', K.htp_fan), ('온수보일러(지하부)', K.htp_boil), ('태양열복합(지하부)', K.htp_sol)], 'ha', '괄호는 난방 면적 중 비율 · 오른쪽은 전년 대비', K.htp_tot.vals[-1] if K.htp_tot else none, '#c0763a') }}
+ </div>
+ <h3 class="sg-sub">시설채소 보온 방식 — 커튼·다겹보온·수막 <small>농림축산식품부 채소류 생산실적 · 시설채소 재배면적 기준 · 한 시설에 여러 방식을 함께 쓰면 각각 집계</small></h3>
+ <div class="sg-g">
+  {{ rcard('시설채소 중 연동 온실 면적 비율', K.hin_multi, K.ins_tot, 'iv1', ('연동 ' ~ K.hin_multi.vals[-1]|big ~ ' ha · 단동 ' ~ K.hin_single.vals[-1]|big ~ ' ha') if K.hin_multi and K.hin_single else '', '#5f7fae') }}
+  {{ rcard('연동 온실 중 다겹보온커튼 비율', K.hin_mlt, K.hin_multi, 'iv2', ('다겹보온 ' ~ K.hin_mlt.vals[-1]|big ~ ' ha · 솜·부직포를 여러 겹 누빈 보온커튼') if K.hin_mlt else '', '#5f7fae') }}
+  {{ rcard('수막시설 중 순환식 비율', K.hin_wcr, K.hin_wc, 'iv3', ('순환식 ' ~ K.hin_wcr.vals[-1]|big ~ ' · 비순환식 ' ~ K.hin_wcn.vals[-1]|big ~ ' ha · 지하수를 지붕에 흘려 보온') if K.hin_wcr and K.hin_wcn else '', '#3a7fa0') }}
+  {{ card('hin_dbl', 'iv4', ('단동 하우스의 ' ~ '{:.1f}'.format(K.hin_dbl.vals[-1] / K.hin_single.vals[-1] * 100) ~ '% · 비닐을 두세 겹 씌움') if K.hin_dbl and K.hin_single else none, '#5fae7a') }}
+  {{ card('hin_cov', 'iv5', ('외부보온 ' ~ K.hin_out.vals[-1]|big ~ ' ha · 하우스 위를 덮는 보온덮개') if K.hin_out else none, '#a08a5a') }}
+  {{ card('hin_wc', 'iv6', ('단동 하우스의 ' ~ '{:.1f}'.format(K.hin_wc.vals[-1] / K.hin_single.vals[-1] * 100) ~ '%') if K.hin_wc and K.hin_single else none, '#3a7fa0') }}
+  {{ hcard('연동 온실 보온 방식별 면적', [('다겹보온', K.hin_mlt), ('부직포류', K.hin_nw), ('일층커튼', K.hin_c1), ('이층커튼', K.hin_c2), ('알루미늄스크린', K.hin_alu), ('삼층 이상 커튼', K.hin_c3), ('배기열회수장치', K.hin_exh), ('열회수형 환기장치', K.hin_hrv)], 'ha', '괄호는 연동 온실 면적 중 비율 · 오른쪽은 전년 대비', K.hin_multi.vals[-1] if K.hin_multi else none, '#5f7fae') }}
+  {{ hcard('단동 하우스 보온 방식별 면적', [('다중피복', K.hin_dbl), ('보온덮개', K.hin_cov), ('수막 · 비순환식', K.hin_wcn), ('수막 · 순환식', K.hin_wcr), ('외부보온', K.hin_out)], 'ha', '괄호는 단동 하우스 면적 중 비율 · 오른쪽은 전년 대비', K.hin_single.vals[-1] if K.hin_single else none, '#5fae7a') }}
  </div>
  <h3 class="sg-sub">농업용수 시설 <small>한국농어촌공사 농업생산기반시설 현황 · 저수지·양배수장</small></h3>
  <div class="sg-g">

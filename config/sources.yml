@@ -4066,6 +4066,41 @@ sources:
       - {id: fcx_10_15, title: 경영주 농업경력 10~15년 농가, tbl: DT_1EA1026, itm: "^10~15년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
       - {id: fcx_15_20, title: 경영주 농업경력 15~20년 농가, tbl: DT_1EA1026, itm: "^15~20년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
       - {id: fcx_20, title: 경영주 농업경력 20년 이상 농가, tbl: DT_1EA1026, itm: "^20년 이상$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_all, title: 수확작물별 농가(작물재배 농가), tbl: DT_1EA1036, itm: "^작물재배농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_rice, title: 수확작물별 농가(논벼 수확 농가), tbl: DT_1EA1036, itm: "^논벼수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_barley, title: 수확작물별 농가(보리 수확 농가), tbl: DT_1EA1036, itm: "^보리수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_soy, title: 수확작물별 농가(콩 수확 농가), tbl: DT_1EA1036, itm: "^콩수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_grain, title: 수확작물별 농가(기타 식량작물 수확 농가), tbl: DT_1EA1036, itm: "^기타 식량작물$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_pep, title: 수확작물별 농가(고추 수확 농가), tbl: DT_1EA1036, itm: "^고추수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_gar, title: 수확작물별 농가(마늘 수확 농가), tbl: DT_1EA1036, itm: "^마늘수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_oni, title: 수확작물별 농가(양파 수확 농가), tbl: DT_1EA1036, itm: "^양파수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_ses, title: 수확작물별 농가(참깨 수확 농가), tbl: DT_1EA1036, itm: "^참깨수확농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hcp_veg, title: 수확작물별 농가(기타 채소·특용작물 수확 농가), tbl: DT_1EA1036, itm: "^기타 채소특용$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_tot, title: 과수 재배 작물별 농가(과수재배 농가), tbl: DT_1EA1038, itm: "^과수재배 농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_apple, title: 과수 재배 작물별 농가(사과), tbl: DT_1EA1038, itm: "^사과$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_pear, title: 과수 재배 작물별 농가(배), tbl: DT_1EA1038, itm: "^배$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_peach, title: 과수 재배 작물별 농가(복숭아), tbl: DT_1EA1038, itm: "^복숭아$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_sweet, title: 과수 재배 작물별 농가(단감), tbl: DT_1EA1038, itm: "^단감$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_grape, title: 과수 재배 작물별 농가(포도), tbl: DT_1EA1038, itm: "^포도$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_citrus, title: 과수 재배 작물별 농가(감귤), tbl: DT_1EA1038, itm: "^감귤$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_astr, title: 과수 재배 작물별 농가(떫은감), tbl: DT_1EA1038, itm: "^떫은감$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hfr_etc, title: 과수 재배 작물별 농가(기타), tbl: DT_1EA1038, itm: "^기타$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: hin_multi, title: 시설채소 보온방식별 면적(연동), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^연동$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_nw, title: 시설채소 보온방식별 면적(부직포류), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^부직포류$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_c1, title: 시설채소 보온방식별 면적(일층커튼), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^일층커튼$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_c2, title: 시설채소 보온방식별 면적(이층커튼), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^이층커튼$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_c3, title: 시설채소 보온방식별 면적(삼층이상), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^삼층이상$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_alu, title: 시설채소 보온방식별 면적(알루미늄스크린), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^알루미늄스크린$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_mlt, title: 시설채소 보온방식별 면적(다겹보온), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^다겹보온$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_exh, title: 시설채소 보온방식별 면적(배기열회수장치), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^배기열회수장치$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_hrv, title: 시설채소 보온방식별 면적(열회수형환기장치), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^열회수형환기장치$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_single, title: 시설채소 보온방식별 면적(단동), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^단동$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_dbl, title: 시설채소 보온방식별 면적(다중피복), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^다중피복$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_cov, title: 시설채소 보온방식별 면적(보온덮개), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^보온덮개$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_out, title: 시설채소 보온방식별 면적(외부보온), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^외부보온$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_wc, title: 시설채소 보온방식별 면적(수막시설), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^수막시설$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_wcr, title: 시설채소 보온방식별 면적(순환식), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^순환식$"], unit: ha, survey: 채소류생산실적}
+      - {id: hin_wcn, title: 시설채소 보온방식별 면적(비순환식), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^비순환식$"], unit: ha, survey: 채소류생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

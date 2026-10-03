@@ -4190,6 +4190,43 @@ sources:
       - {id: occ_nutr, title: 유기가공식품 구입 시 우선 확인 — 영양성분, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양성분$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: occ_add, title: 유기가공식품 구입 시 우선 확인 — 식품첨가물, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: occ_etc, title: 유기가공식품 구입 시 우선 확인 — 기타 확인사항, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(포장 디자인|섭취주의사항[(]알레르기유발 등[)]|보관방법|포장 재활용 여부|기능성 표시/식품의 효능)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      # 영농형태·전겸업별 경지규모 농가(DT_1EA1015)
+      - {id: fft_rice_tot, title: 영농형태 논벼 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 논벼$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_rice_s, title: 영농형태 논벼 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 논벼$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_rice_b, title: 영농형태 논벼 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 논벼$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_grain_tot, title: 영농형태 식량작물 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 식량작물$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_grain_s, title: 영농형태 식량작물 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 식량작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_grain_b, title: 영농형태 식량작물 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 식량작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_veg_tot, title: 영농형태 채소·산나물 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 채소·산나물$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_veg_s, title: 영농형태 채소·산나물 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 채소·산나물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_veg_b, title: 영농형태 채소·산나물 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 채소·산나물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_spec_tot, title: 영농형태 특용작물·버섯 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 특용작물·버섯$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_spec_s, title: 영농형태 특용작물·버섯 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 특용작물·버섯$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_spec_b, title: 영농형태 특용작물·버섯 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 특용작물·버섯$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_fruit_tot, title: 영농형태 과수 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 과수$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_fruit_s, title: 영농형태 과수 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 과수$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_fruit_b, title: 영농형태 과수 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 과수$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_med_tot, title: 영농형태 약용작물 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 약용작물$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_med_s, title: 영농형태 약용작물 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 약용작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_med_b, title: 영농형태 약용작물 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 약용작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_flow_tot, title: 영농형태 화초·관상작물 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 화초·관상작물$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_flow_s, title: 영농형태 화초·관상작물 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 화초·관상작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_flow_b, title: 영농형태 화초·관상작물 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 화초·관상작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_etc_tot, title: 영농형태 기타작물 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 기타작물$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_etc_s, title: 영농형태 기타작물 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 기타작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_etc_b, title: 영농형태 기타작물 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 기타작물$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_live_tot, title: 영농형태 축산 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^영농형태 : 축산$"], unit: 가구, survey: 농림어업조사}
+      - {id: fft_live_s, title: 영농형태 축산 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^영농형태 : 축산$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fft_live_b, title: 영농형태 축산 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^영농형태 : 축산$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_ft_tot, title: 전업 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: fwt_ft_s, title: 전업 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^전업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_ft_b, title: 전업 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^전업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p1_tot, title: 1종 겸업 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^1종 겸업$"], unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p1_s, title: 1종 겸업 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^1종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p1_b, title: 1종 겸업 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^1종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p2_tot, title: 2종 겸업 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^2종 겸업$"], unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p2_s, title: 2종 겸업 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^2종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fwt_p2_b, title: 2종 겸업 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^2종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

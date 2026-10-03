@@ -1011,7 +1011,7 @@
  </div>
  <h3 class="sg-sub">여성농업인 — 교육·자격증·성역할 인식 <small>앞으로 받고 싶은 교육·자격증 보유와 취득 의향·사회 일반의 성역할 인식(4점 척도, 높을수록 동의) · 여성농업인 실태조사(2023)</small></h3>
  <div class="sg-g">
-  {{ card('wf_ql_avg', 'wf22', '여성농업인 1인당 보유 자격증 평균 · 자격증 없음 ' ~ num(K.wf_ql_none.vals[-1], '%')|striptags if K.wf_ql_none else none, '#7a5cc2') }}{{ card('wf_ql_help', 'wf23', '가진 자격증이 의미 있거나 도움된다 · 자격증 보유자 기준', '#3a8f6a') }}{{ card('wf_ql_want', 'wf24', '앞으로 따고 싶은 자격증이 있다 · 여성농업인 전체 기준', '#2458d6') }}
+  {{ card('wf_ql_none', 'wf22', '자격증이 하나도 없다 · 1인당 평균 ' ~ '{:.1f}'.format(K.wf_ql_avg.vals[-1]) ~ '개' if K.wf_ql_avg else none, '#7a5cc2') }}{{ card('wf_ql_help', 'wf23', '가진 자격증이 의미 있거나 도움된다 · 자격증 보유자 기준', '#3a8f6a') }}{{ card('wf_ql_want', 'wf24', '앞으로 따고 싶은 자격증이 있다 · 여성농업인 전체 기준', '#2458d6') }}
   {{ card('wf_ew_prod', 'wf25', '앞으로 받고 싶은 교육 1순위 농업생산 기술 · 교양 교육 ' ~ num(K.wf_ew_cult.vals[-1], '%')|striptags if K.wf_ew_cult else none, '#1c7a45') }}{{ card('wf_gr_bread', 'wf26', '"가족 생계는 주로 남성이 책임져야" 동의 정도 · 4점 만점 · 남성농업인 ' ~ num(K.wf_gr_bread_m.vals[-1], '점')|striptags if K.wf_gr_bread_m else none, '#c77b30') }}{{ card('wf_gr_child', 'wf27', '"일을 하더라도 자녀의 주된 책임은 여성에게" 동의 정도 · 4점 만점', '#b0503a') }}
   {{ hcard('여성농업인이 앞으로 받고 싶은 교육(1순위)', [('교양 교육', K.wf_ew_cult), ('농업생산 기술', K.wf_ew_prod), ('농업환경 변화', K.wf_ew_env), ('6차 산업화', K.wf_ew_six), ('농기계', K.wf_ew_mach), ('정보화', K.wf_ew_info), ('농촌 관광', K.wf_ew_tour), ('신기술', K.wf_ew_new), ('자격증·직업훈련', K.wf_ew_cert), ('경영', K.wf_ew_mgmt), ('리더십', K.wf_ew_lead), ('없음', K.wf_ew_none)], '%', '여성농업인 전체 기준 · 1순위 응답', none, '#1c7a45') }}
   {{ hcard('여성농업인 자격증 보유', [('없음', K.wf_ql_none), ('1개', K.wf_ql_one), ('2개 이상', K.wf_ql_two)], '%', '여성농업인 전체 기준 · 세 항목 합 100', none, '#7a5cc2') }}

@@ -4351,6 +4351,33 @@ sources:
       - {id: rco_dg, title: 대구에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^대구광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rco_gj, title: 광주에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^광주광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rco_dj, title: 대전에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^대전광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_all, title: 귀어인 계(성·연령 표), tbl: DT_1A02022, itm: "^귀어인수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_m, title: 남성 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^남자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_f, title: 여성 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^여자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_u40, title: 39세 이하 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^0 - 39세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_40, title: 40대 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^40 - 49세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_50, title: 50대 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^50 - 59세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_60, title: 60대 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^60 - 69세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_70, title: 70세 이상 귀어인, tbl: DT_1A02022, itm: "^귀어인수$", want: ["^70세 이상$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_comp, title: 귀어 동반가구원, tbl: DT_1A02022, itm: "^동반가구원수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxn_mem, title: 귀어가구원 계, tbl: DT_1A02022, itm: "^귀어가구원수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxj_ft, title: 전업 귀어인, tbl: DT_1A02025, itm: "^귀어인수$", want: ["^전업$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxj_pt, title: 겸업 귀어인, tbl: DT_1A02025, itm: "^귀어인수$", want: ["^겸업$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxv_in, title: 귀어인 시도 안 이동, tbl: DT_1A02027, itm: "^귀어인수$", want: ["^시도내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxv_out, title: 귀어인 시도 간 이동, tbl: DT_1A02027, itm: "^귀어인수$", want: ["^시도간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rxh_tot, title: 귀어가구(가구원수 표), tbl: DT_1A02029, itm: "^가구수$", periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxh_1, title: 1인 귀어가구, tbl: DT_1A02029, itm: "^가구수$", want: ["^1인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxh_2, title: 2인 귀어가구, tbl: DT_1A02029, itm: "^가구수$", want: ["^2인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxh_3, title: 3인 귀어가구, tbl: DT_1A02029, itm: "^가구수$", want: ["^3인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxh_4, title: 4인 이상 귀어가구, tbl: DT_1A02029, itm: "^가구수$", want: ["^4인가구이상$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxg_tot, title: 귀어가구주 계(성·연령 표), tbl: DT_1A02028, itm: "^귀어가구수$", periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxg_f, title: 여성 귀어가구주, tbl: DT_1A02028, itm: "^귀어가구수$", want: ["^여자$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rxg_u40, title: 39세 이하 귀어가구주, tbl: DT_1A02028, itm: "^귀어가구수$", want: ["^0 - 39세$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rlv_all, title: 가축 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^사육가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rlv_hanwoo, title: 한우 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^한우$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rlv_chick, title: 닭 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^닭$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rlv_goat, title: 염소 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^염소$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rlv_bee, title: 꿀벌 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^꿀벌$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

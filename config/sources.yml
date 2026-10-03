@@ -5466,6 +5466,43 @@ sources:
       - {id: brx_util, title: 육계 10수당 수도광열비, tbl: DT_2EE315, itm: "^사육비$", want: ["^수도광열비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
       - {id: brx_hire, title: 육계 10수당 고용노동비, tbl: DT_2EE315, itm: "^사육비$", want: ["^고용노동비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
       - {id: brx_int, title: 육계 10수당 차입금 이자, tbl: DT_2EE315, itm: "^사육비$", want: ["^차입금이자$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: gc_bar, title: 1인당 보리쌀 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^보리쌀$"], survey: 양곡소비량조사}
+      - {id: gc_flour, title: 1인당 밀가루 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^밀가루$"], survey: 양곡소비량조사}
+      - {id: gc_misc, title: 1인당 잡곡 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^잡곡$"], survey: 양곡소비량조사}
+      - {id: gc_bean, title: 1인당 두류 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^두류$"], survey: 양곡소비량조사}
+      - {id: gc_tuber, title: 1인당 서류 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^서류$"], survey: 양곡소비량조사}
+      - {id: gc_rice_main, title: 1인당 쌀 소비량(주부식용), tbl: DT_1ED0001, itm: "^전가구$", want: ["^쌀$", "^주부식용$"], survey: 양곡소비량조사}
+      - {id: gc_rice_oth, title: 1인당 쌀 소비량(기타 음식용), tbl: DT_1ED0001, itm: "^전가구$", want: ["^쌀$", "^기타음식용$"], survey: 양곡소비량조사}
+      - {id: gc_farm, title: 농가 1인당 쌀 소비량, tbl: DT_1ED0001, itm: "^농가$", want: ["^쌀$"], survey: 양곡소비량조사}
+      - {id: gc_nonfarm, title: 비농가 1인당 쌀 소비량, tbl: DT_1ED0001, itm: "^비농가$", want: ["^쌀$"], survey: 양곡소비량조사}
+      - {id: gc_farm_all, title: 농가 1인당 양곡 소비량, tbl: DT_1ED0001, itm: "^농가$", want: ["^양곡계$"], survey: 양곡소비량조사}
+      - {id: gc_nonfarm_all, title: 비농가 1인당 양곡 소비량, tbl: DT_1ED0001, itm: "^비농가$", want: ["^양곡계$"], survey: 양곡소비량조사}
+      - {id: rb_tot, title: 사업체 쌀 소비량 합계, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^계$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_food, title: 사업체 쌀 소비량 식료품제조업, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^식료품제조업 총계$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_grain, title: 사업체 쌀 소비량 기타 곡물가공품, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^기타 곡물 가공품 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_starch, title: 사업체 쌀 소비량 전분·당류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^전분제품 및 당류 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_tteok, title: 사업체 쌀 소비량 떡류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^떡류 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_snack, title: 사업체 쌀 소비량 과자류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^과자류 및 코코아 제품 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_noodle, title: 사업체 쌀 소비량 면류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^면류 마카로니 및 유사식품 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_jang, title: 사업체 쌀 소비량 장류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^장류 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_dosi, title: 사업체 쌀 소비량 도시락류, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^도시락류 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_ready, title: 사업체 쌀 소비량 즉석조리식품, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^기타 식사용 가공처리 조리식품 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_bev, title: 사업체 쌀 소비량 음료제조업, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^음료제조업 총계$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_makg, title: 사업체 쌀 소비량 탁주·약주, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^탁주 및 약주 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb_ethan, title: 사업체 쌀 소비량 주정, tbl: DT_1ED0006, itm: "^쌀 소비량$", want: ["^주정 제조업$"], periods: 6, survey: 양곡소비량조사}
+      - {id: rb25_tot, title: 사업체 쌀 소비량 합계(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^계$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_food, title: 사업체 쌀 소비량 식료품제조업(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^식료품제조업 총계$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_grain, title: 사업체 쌀 소비량 기타 곡물가공품(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^기타 곡물 가공품 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_starch, title: 사업체 쌀 소비량 전분·당류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^전분제품 및 당류 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_tteok, title: 사업체 쌀 소비량 떡류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^떡류 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_snack, title: 사업체 쌀 소비량 과자류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^과자류 및 코코아 제품 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_noodle, title: 사업체 쌀 소비량 면류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^면류 마카로니 및 유사식품 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_jang, title: 사업체 쌀 소비량 장류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^장류 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_dosi, title: 사업체 쌀 소비량 도시락류(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^도시락류 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_ready, title: 사업체 쌀 소비량 즉석조리식품(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^기타 식사용 가공처리 조리식품 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_bev, title: 사업체 쌀 소비량 음료제조업(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^음료제조업 총계$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_makg, title: 사업체 쌀 소비량 탁주·약주(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^탁주 및 약주 제조업$"], periods: 1, survey: 양곡소비량조사}
+      - {id: rb25_ethan, title: 사업체 쌀 소비량 주정(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^주정 제조업$"], periods: 1, survey: 양곡소비량조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

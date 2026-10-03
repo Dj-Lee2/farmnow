@@ -5579,6 +5579,36 @@ sources:
       - {id: dpc_btr_c, title: "버터 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^버터$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
       - {id: dpc_inf_p, title: "조제분유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^조제분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
       - {id: dpc_inf_c, title: "조제분유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^조제분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: fru_supply, title: "식품제조업 국산 사용 이유 — 조달이 쉬워서", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^조달이\\s*용이해서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_gap, title: "식품제조업 국산 사용 이유 — 국산·외국산 가격 차이가 적어서", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^국산과 외국산의 가격차이가 적어서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_orig, title: "식품제조업 국산 사용 이유 — 소비자가 원산지에 민감해서", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^소비자가 원산지에 민감한 원재료라서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_noimp, title: "식품제조업 국산 사용 이유 — 수입되지 않는 원재료라서", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^수입되지 않는 원재료라서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_phys, title: "식품제조업 국산 사용 이유 — 가공 적합성", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^\\(국산\\)원재료의 물리적 특성이 가공에 더 적합해서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_fresh, title: "식품제조업 국산 사용 이유 — 신선한 원재료가 필요해서", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^신선한\\s*원재료가\\s*필요해서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_pol, title: "식품제조업 국산 사용 이유 — 정책 지원", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^국산 원재료 사용시 정책적 지원을 받을 수 있어서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_phil, title: "식품제조업 국산 사용 이유 — 경영 방침", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^회사 경영 철학 혹은 방침이라서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_prem, title: "식품제조업 국산 사용 이유 — 프리미엄 제품용", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^프리미엄 제품생산을 위해서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fru_etc, title: "식품제조업 국산 사용 이유 — 기타", tbl: DT_114010_E001, org: "114", periods: 3, itm: "^기타$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_qual, title: "식품제조업 수입산 사용 이유 — 품질 불균일", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^\\(국내산은\\) 맛/품질/규격이 일정하지 않아서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_bulk, title: "식품제조업 수입산 사용 이유 — 대량 납품 불가", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^\\(국내산은\\) 일시에 대량으로 납품받을 수 없어서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_safe, title: "식품제조업 수입산 사용 이유 — 더 안전해서", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^국내산보다 더 안전하게 생각되어서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_cost, title: "식품제조업 수입산 사용 이유 — 국산 원가 높음", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^\\(국내산은\\) 원가가 높아 가격경쟁이 안돼서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_nodom, title: "식품제조업 수입산 사용 이유 — 국내 생산 안 됨", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^국내에서 생산되지 않는 원재료라서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_season, title: "식품제조업 수입산 사용 이유 — 국내 비생산 계절", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^국내에서 생산되지 않는 계절에 일시적으로 수입$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_pref, title: "식품제조업 수입산 사용 이유 — 선호도 차이 작음", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^소비자들의 외국산과 국내산 원료선호도의 차이가 크지 않아서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_proc, title: "식품제조업 수입산 사용 이유 — 1차 가공 편리", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^사용이 편리하게 1차 가공이 잘 되어 있어서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_phys, title: "식품제조업 수입산 사용 이유 — 가공 적합성", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^\\(외국산\\) 원재료의 물리적 특성이 가공에 더 적합해서$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fri_etc, title: "식품제조업 수입산 사용 이유 — 기타", tbl: DT_114010_G001, org: "114", periods: 3, itm: "^기타$", want: ["^전\\s*체$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: rmk_tot, title: "원유 생산량 — 전국", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_gg, title: "원유 생산량 — 경기", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^경기도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_cn, title: "원유 생산량 — 충남", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^충청남도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_jb, title: "원유 생산량 — 전북", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^전북(특별자치)?도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_gb, title: "원유 생산량 — 경북", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^경상북도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_jn, title: "원유 생산량 — 전남", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^전라남도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_gn, title: "원유 생산량 — 경남", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^경상남도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_gw, title: "원유 생산량 — 강원", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^강원(특별자치)?도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_cb, title: "원유 생산량 — 충북", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^충청북도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: rmk_jj, title: "원유 생산량 — 제주", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^제주(특별자치)?도$"], unit: 톤, survey: 시도별 원유생산량}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -1008,7 +1008,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비', 132) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비', 140) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1180,6 +1180,17 @@
   {{ card('lmq_fan', 'e66', ('축사 환기용 환풍기 · 선풍기 ' ~ K.lmq_elec.vals[-1]|big ~ '호') if K.lmq_elec else '축사 환기용 환풍기', '#2458d6') }}
   {{ hcard('축사 작업·운반 기계 사용 농장', [('트랙터', K.lmq_trac), ('트럭', K.lmq_truck), ('경운기', K.lmq_cult), ('스키드로더', K.lmq_skid), ('굴삭기', K.lmq_exc), ('지게차', K.lmq_fork), ('관리기', K.lmq_mgr), ('방제기', K.lmq_spr), ('페로더', K.lmq_pay), ('탱크로리', K.lmq_tank)], '호', '6개 축종 합계 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('축사 환경 관리 장비 사용 농장', [('선풍기', K.lmq_elec), ('보온등', K.lmq_lamp), ('환풍기', K.lmq_fan), ('소형냉동고', K.lmq_frz), ('난방기', K.lmq_heat), ('온풍기', K.lmq_hair), ('자동개폐기', K.lmq_auto), ('에어컨', K.lmq_ac), ('히트펌프', K.lmq_hp)], '호', '6개 축종 합계 · 보온등은 2024년부터 조사 · 오른쪽은 전년 대비', none, '#2458d6') }}
+ </div>
+ <h3 class="sg-sub">축종별로 본 축사 기계·장비 <small>가축분뇨처리통계 · 한·육우·젖소·돼지·산란계·육계·오리 · 사용 농장 수</small></h3>
+ <div class="sg-g">
+  {{ card('lmq_trac_hw', 'e67', ('한·육우 축사의 트랙터 · 6개 축종 합계의 ' ~ '{:.1f}'.format(K.lmq_trac_hw.vals[-1] / K.lmq_trac.vals[-1] * 100) ~ '%') if K.lmq_trac_hw and K.lmq_trac else '한·육우 축사의 트랙터', '#7a6a3a') }}
+  {{ card('lmq_fan_pig', 'e68', ('돼지 축사의 환풍기 · 젖소 ' ~ K.lmq_fan_dy.vals[-1]|big ~ '호') if K.lmq_fan_dy else '돼지 축사의 환풍기', '#2458d6') }}
+  {{ card('lmq_heat_pig', 'e69', ('돼지 축사의 난방기 · 육계 ' ~ K.lmq_heat_brl.vals[-1]|big ~ '호') if K.lmq_heat_brl else '돼지 축사의 난방기', '#c0603a') }}
+  {{ hcard('축종별 트랙터 사용 농장', [('한·육우', K.lmq_trac_hw), ('젖소', K.lmq_trac_dy), ('돼지', K.lmq_trac_pig), ('산란계', K.lmq_trac_egg), ('육계', K.lmq_trac_brl), ('오리', K.lmq_trac_duck)], '호', '축종별 사용 농장 수 · 괄호는 6개 축종 합계 대비 비율 · 오른쪽은 전년 대비', K.lmq_trac.vals[-1] if K.lmq_trac else none, '#7a6a3a') }}
+  {{ hcard('축종별 스키드로더 사용 농장', [('한·육우', K.lmq_skid_hw), ('젖소', K.lmq_skid_dy), ('돼지', K.lmq_skid_pig), ('산란계', K.lmq_skid_egg), ('육계', K.lmq_skid_brl), ('오리', K.lmq_skid_duck)], '호', '축종별 사용 농장 수 · 괄호는 6개 축종 합계 대비 비율 · 오른쪽은 전년 대비', K.lmq_skid.vals[-1] if K.lmq_skid else none, '#5a7a3a') }}
+  {{ hcard('축종별 환풍기 사용 농장', [('한·육우', K.lmq_fan_hw), ('젖소', K.lmq_fan_dy), ('돼지', K.lmq_fan_pig), ('산란계', K.lmq_fan_egg), ('육계', K.lmq_fan_brl), ('오리', K.lmq_fan_duck)], '호', '축종별 사용 농장 수 · 괄호는 6개 축종 합계 대비 비율 · 오른쪽은 전년 대비', K.lmq_fan.vals[-1] if K.lmq_fan else none, '#2458d6') }}
+  {{ hcard('축종별 방제기 사용 농장', [('한·육우', K.lmq_spr_hw), ('젖소', K.lmq_spr_dy), ('돼지', K.lmq_spr_pig), ('산란계', K.lmq_spr_egg), ('육계', K.lmq_spr_brl), ('오리', K.lmq_spr_duck)], '호', '축종별 사용 농장 수 · 괄호는 6개 축종 합계 대비 비율 · 오른쪽은 전년 대비', K.lmq_spr.vals[-1] if K.lmq_spr else none, '#a0605a') }}
+  {{ hcard('축종별 난방기 사용 농장', [('한·육우', K.lmq_heat_hw), ('젖소', K.lmq_heat_dy), ('돼지', K.lmq_heat_pig), ('산란계', K.lmq_heat_egg), ('육계', K.lmq_heat_brl), ('오리', K.lmq_heat_duck)], '호', '축종별 사용 농장 수 · 괄호는 6개 축종 합계 대비 비율 · 오른쪽은 전년 대비', K.lmq_heat.vals[-1] if K.lmq_heat else none, '#c0603a') }}
  </div>
  <h3 class="sg-sub">축사·처리시설 악취저감·방역시설 <small>가축분뇨처리통계 · 설치 농장 수(여러 개 설치 시 각각 셈)</small></h3>
  <div class="sg-g">

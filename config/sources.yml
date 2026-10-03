@@ -3751,6 +3751,36 @@ sources:
       - {id: csc_act, title: 귀촌 가구 일반 사회단체 자주 참여, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^(주도적이고 적극적으로 참여|자주 참여하며 적극적으로 의견을 개진|자주 참여하나 적극적으로 의견내지 않음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
       - {id: csc_some, title: 귀촌 가구 일반 사회단체 가끔 참여, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: csc_rare, title: 귀촌 가구 일반 사회단체 거의 참여하지 않음, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^거의 참여하지 않음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: lmq_trac_hw, title: 한·육우 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^한·육우$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac_dy, title: 젖소 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^젖소$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac_pig, title: 돼지 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^돼지$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac_egg, title: 산란계 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac_brl, title: 육계 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac_duck, title: 오리 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_hw, title: 한·육우 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^한·육우$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_dy, title: 젖소 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^젖소$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_pig, title: 돼지 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^돼지$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_egg, title: 산란계 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_brl, title: 육계 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid_duck, title: 오리 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_hw, title: 한·육우 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^한·육우$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_dy, title: 젖소 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^젖소$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_pig, title: 돼지 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^돼지$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_egg, title: 산란계 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_brl, title: 육계 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan_duck, title: 오리 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_hw, title: 한·육우 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^한·육우$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_dy, title: 젖소 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^젖소$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_pig, title: 돼지 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^돼지$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_egg, title: 산란계 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_brl, title: 육계 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr_duck, title: 오리 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_hw, title: 한·육우 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^한·육우$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_dy, title: 젖소 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^젖소$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_pig, title: 돼지 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^돼지$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_egg, title: 산란계 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_brl, title: 육계 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat_duck, title: 오리 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

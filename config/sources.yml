@@ -4031,6 +4031,41 @@ sources:
       - {id: ins_mov, title: 시설채소 설치유형별 면적(이동식), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^이동식$"], unit: ha, survey: 채소류생산실적}
       - {id: ins_pad, title: 시설채소 설치유형별 면적(논), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^논$"], unit: ha, survey: 채소류생산실적}
       - {id: ins_upl, title: 시설채소 설치유형별 면적(밭), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^밭$"], unit: ha, survey: 채소류생산실적}
+      - {id: fls_tot, title: 경지규모별 농가(전체), tbl: DT_1EA1015, itm: "^농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fls_none, title: 경지없는 농가, tbl: DT_1EA1015, itm: "^경지없는 농가$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fls_u05, title: 경지 0.5ha 미만 농가, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fls_05_1, title: 경지 0.5~1ha 농가, tbl: DT_1EA1015, itm: "^(0.5~0.7ha 미만|0.7~1.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fls_1_2, title: 경지 1~2ha 농가, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fls_2_3, title: 경지 2~3ha 농가, tbl: DT_1EA1015, itm: "^(2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fls_3_5, title: 경지 3~5ha 농가, tbl: DT_1EA1015, itm: "^3.0~5.0ha 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fls_5_10, title: 경지 5~10ha 농가, tbl: DT_1EA1015, itm: "^(5.0~7.0ha 미만|7.0~10.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fls_10, title: 경지 10ha 이상 농가, tbl: DT_1EA1015, itm: "^10.0ha 이상$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fls_3up, title: 경지 3ha 이상 농가, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsl_tot, title: 판매규모별 농가(전체), tbl: DT_1EA1022, itm: "^계$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_none, title: 농축산물 판매 없는 농가, tbl: DT_1EA1022, itm: "^판매없음$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_u120, title: 판매 120만원 미만 농가, tbl: DT_1EA1022, itm: "^120만원 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_120_300, title: 판매 120~300만원 농가, tbl: DT_1EA1022, itm: "^120만원~300만원 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_300_1k, title: 판매 300~1천만원 농가, tbl: DT_1EA1022, itm: "^(300만원~500만원 미만|500만원~1천만원 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsl_1k_3k, title: 판매 1천~3천만원 농가, tbl: DT_1EA1022, itm: "^(1천~2천만원 미만|2천~3천만원 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsl_3k_5k, title: 판매 3천~5천만원 농가, tbl: DT_1EA1022, itm: "^3천~5천만원 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_5k_1e, title: 판매 5천만~1억원 농가, tbl: DT_1EA1022, itm: "^(5천~7천만원 미만|7천~1억원 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsl_1e_2e, title: 판매 1억~2억원 농가, tbl: DT_1EA1022, itm: "^1억~2억원 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_2e_5e, title: 판매 2억~5억원 농가, tbl: DT_1EA1022, itm: "^2억~5억원 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_5e, title: 판매 5억원 이상 농가, tbl: DT_1EA1022, itm: "^5억원 이상$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fsl_1e, title: 판매 1억원 이상 농가, tbl: DT_1EA1022, itm: "^(1억~2억원 미만|2억~5억원 미만|5억원 이상)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fgh_tot, title: 시설 보유 농가(시설면적규모별 계), tbl: DT_1EA1025, itm: "^계$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fgh_u01, title: 시설 0.1ha 미만 농가, tbl: DT_1EA1025, itm: "^(0.02ha 미만|0.02~0.05ha 미만|0.05~0.1ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fgh_01_03, title: 시설 0.1~0.3ha 농가, tbl: DT_1EA1025, itm: "^(0.1~0.2ha 미만|0.2~0.3ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fgh_03_05, title: 시설 0.3~0.5ha 농가, tbl: DT_1EA1025, itm: "^0.3~0.5ha 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fgh_05_1, title: 시설 0.5~1ha 농가, tbl: DT_1EA1025, itm: "^(0.5~0.7ha 미만|0.7~1.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fgh_1_2, title: 시설 1~2ha 농가, tbl: DT_1EA1025, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만)$", want: ["^전국$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fgh_2, title: 시설 2ha 이상 농가, tbl: DT_1EA1025, itm: "^2.0ha 이상$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_tot, title: 경영주 농업경력별 농가(전체), tbl: DT_1EA1026, itm: "^계$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_u5, title: 경영주 농업경력 5년 미만 농가, tbl: DT_1EA1026, itm: "^5년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_5_10, title: 경영주 농업경력 5~10년 농가, tbl: DT_1EA1026, itm: "^5~10년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_10_15, title: 경영주 농업경력 10~15년 농가, tbl: DT_1EA1026, itm: "^10~15년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_15_20, title: 경영주 농업경력 15~20년 농가, tbl: DT_1EA1026, itm: "^15~20년 미만$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: fcx_20, title: 경영주 농업경력 20년 이상 농가, tbl: DT_1EA1026, itm: "^20년 이상$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

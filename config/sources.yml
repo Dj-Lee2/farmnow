@@ -4786,6 +4786,43 @@ sources:
       - {id: fs_q_sug, title: "외식업 월평균 구매량 설탕", tbl: DT_114054_116, org: "114", se: F, periods: 2, itm: "^설탕$", want: ["^월평균 구매량$"], unit: kg, survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_q_gbean, title: "외식업 월평균 구매량 생두", tbl: DT_114054_116, org: "114", se: F, periods: 2, itm: "^생두$", want: ["^월평균 구매량$"], unit: kg, survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_q_roast, title: "외식업 월평균 구매량 볶은 원두", tbl: DT_114054_116, org: "114", se: F, periods: 2, itm: "^볶은 원두$", want: ["^월평균 구매량$"], unit: kg, survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fr_day, title: "외식업 식재료 구매빈도 매일", tbl: DT_114054_102, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^매일$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fr_w34, title: "외식업 식재료 구매빈도 주 3~4회", tbl: DT_114054_102, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^일주일에 3-4회$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fr_w12, title: "외식업 식재료 구매빈도 주 1~2회", tbl: DT_114054_102, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^일주일에 1-2회$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fr_m23, title: "외식업 식재료 구매빈도 월 2~3회", tbl: DT_114054_102, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^월에 2-3회$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fr_m1, title: "외식업 식재료 구매빈도 월 1회", tbl: DT_114054_102, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^월에 1회$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_meat_raw, title: "외식업 육류·축산물 구매형태 원물 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^원물$", "^육류 및 축산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_grain_raw, title: "외식업 곡류·곡류 가공식품 구매형태 원물 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^원물$", "^곡류/곡류 가공식품$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fish_raw, title: "외식업 수산물 구매형태 원물 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^원물$", "^수산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_veg_raw, title: "외식업 채소 구매형태 원물 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^원물$", "^채소류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fruit_raw, title: "외식업 과일 구매형태 원물 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^원물$", "^과일류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_meat_pre, title: "외식업 육류·축산물 구매형태 전처리 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^육류 및 축산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_grain_pre, title: "외식업 곡류·곡류 가공식품 구매형태 전처리 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^곡류/곡류 가공식품$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fish_pre, title: "외식업 수산물 구매형태 전처리 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^수산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_veg_pre, title: "외식업 채소 구매형태 전처리 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^채소류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fruit_pre, title: "외식업 과일 구매형태 전처리 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^과일류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_meat_proc, title: "외식업 육류·축산물 구매형태 가공 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^가공$", "^육류 및 축산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_grain_proc, title: "외식업 곡류·곡류 가공식품 구매형태 가공 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^가공$", "^곡류/곡류 가공식품$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fish_proc, title: "외식업 수산물 구매형태 가공 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^가공$", "^수산물류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_veg_proc, title: "외식업 채소 구매형태 가공 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^가공$", "^채소류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fm_fruit_proc, title: "외식업 과일 구매형태 가공 비중", tbl: DT_114054_103, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^가공$", "^과일류$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_beef, title: "외식업 소고기 전처리 구매 비중", tbl: DT_114054_107, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^소고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_pork, title: "외식업 돼지고기 전처리 구매 비중", tbl: DT_114054_107, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^돼지고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_chick, title: "외식업 닭고기 전처리 구매 비중", tbl: DT_114054_107, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^닭고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_egg, title: "외식업 계란 전처리 구매 비중", tbl: DT_114054_107, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^계란$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_rice, title: "외식업 쌀 전처리 구매 비중", tbl: DT_114054_109, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^쌀$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_squid, title: "외식업 오징어 전처리 구매 비중", tbl: DT_114054_111, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^오징어$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_anch, title: "외식업 멸치 전처리 구매 비중", tbl: DT_114054_111, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^멸치$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_garlic, title: "외식업 마늘 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^마늘$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_onion, title: "외식업 양파 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^양파$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_gonion, title: "외식업 파(대파) 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^파\\(대파\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_pep, title: "외식업 풋고추·홍고추 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^풋고추·홍고추$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_cab, title: "외식업 배추 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^배추$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_rad, title: "외식업 무 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^무$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_car, title: "외식업 당근 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^당근$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_pot, title: "외식업 감자 전처리 구매 비중", tbl: DT_114054_113, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^감자$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_apple, title: "외식업 사과 전처리 구매 비중", tbl: DT_114054_115, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^사과$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_fp_pear, title: "외식업 배 전처리 구매 비중", tbl: DT_114054_115, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^전처리$", "^배$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

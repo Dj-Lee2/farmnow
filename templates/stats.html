@@ -1373,7 +1373,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력', 94) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지', 108) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1444,6 +1444,26 @@
   {{ hcard('농촌용수개발 종류별 사업비', [('다목적(중규모)', K.rud_mid), ('기타 사업', K.rux_all), ('소규모', K.rud_sm), ('관리자동화', K.rud_au), ('지표수 보강', K.rud_sf), ('한발 대비', K.rud_dr)], '천원', '괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
   {{ hcard('도별 농촌용수개발 사업비', [('전남', K.rup_jn), ('경남', K.rup_gn), ('경북', K.rup_gb), ('전북', K.rup_jb), ('충남', K.rup_cn), ('경기', K.rup_gg), ('충북', K.rup_cb), ('강원', K.rup_gw)], '천원', '기타 사업 제외 5종 합 · 괄호는 농촌용수개발 사업비 중 비중 · 오른쪽은 전년 대비', K.pbi_wat.vals[-1] if K.pbi_wat else none, '#5b8bd9') }}
   {{ hcard('농촌용수 기타 사업 내역', [('용수이용체계 재편', K.rux_reorg), ('용수 수질조사·개선', K.rux_wq), ('대형 치수능력 증대', K.rux_flood), ('제주 용수 광역화', K.rux_jj), ('지하수 자원관리', K.rux_gw), ('임진강 용수공급', K.rux_imj)], '천원', '괄호는 기타 사업비 중 비중 · 오른쪽은 전년 대비', K.rux_all.vals[-1] if K.rux_all else none, '#5b8bd9') }}
+ </div>
+ <h3 class="sg-sub">수리계 — 농민이 함께 꾸리는 물 관리 조직 <small>한국농어촌공사 농업생산기반시설 현황 · 시·군 관할 시설을 맡아 운영하는 수리계</small></h3>
+ <div class="sg-g">
+  {{ card('wug_mem', 'wg1', ('계조직 ' ~ K.wug_org.vals[-1]|big ~ '개 · 시설 ' ~ K.wug_fac.vals[-1]|big ~ '곳을 함께 관리') if K.wug_org and K.wug_fac else none, '#2458d6') }}
+  {{ card('wug_ben', 'wg2', ('인가면적 ' ~ K.wug_auth.vals[-1]|big ~ 'ha 중 실제로 물을 받는 논밭') if K.wug_auth else none, '#2458d6') }}
+  {{ rcard('인가면적 대비 수혜면적', K.wug_ben, K.wug_auth, 'wg3', '수혜면적 ÷ 인가면적 · 인가 구역 중 실제로 물을 대는 비율', '#2458d6') }}
+  {{ qcard('수리계 한 곳당 계원', K.wug_mem, K.wug_org, 'wg4', '계원 수 ÷ 계조직 수', 1, '명', '#2458d6') }}
+  {{ rcard('수혜면적 중 관정 비중', K.wug_ben_well, K.wug_ben, 'wg5', '지하수 관정으로 물을 대는 면적 ÷ 수리계 수혜면적', '#2458d6') }}
+  {{ qcard('계원 한 명당 수혜면적', K.wug_ben, K.wug_mem, 'wg6', '수혜면적 ÷ 계원 수', 10000, '㎡', '#2458d6') }}
+  {{ hcard('시설 종류별 수리계 수혜면적', [('관정', K.wug_ben_well), ('저수지', K.wug_ben_rsv), ('양수장', K.wug_ben_pump), ('보', K.wug_ben_weir), ('방조제', K.wug_ben_tide)], 'ha', '괄호는 수리계 수혜면적 중 비중 · 오른쪽은 전년 대비', K.wug_ben.vals[-1] if K.wug_ben else none, '#5b8bd9') }}
+  {{ hcard('시설 종류별 수리계 계원 수', [('관정', K.wug_mem_well), ('저수지', K.wug_mem_rsv), ('양수장', K.wug_mem_pump), ('보', K.wug_mem_weir)], '명', '괄호는 전체 계원 중 비중 · 오른쪽은 전년 대비', K.wug_mem.vals[-1] if K.wug_mem else none, '#5b8bd9') }}
+  {{ hcard('시설 종류별 수리계 조직 수', [('관정', K.wug_org_well), ('저수지', K.wug_org_rsv), ('양수장', K.wug_org_pump), ('보', K.wug_org_weir)], '개', '괄호는 전체 계조직 중 비중 · 오른쪽은 전년 대비', K.wug_org.vals[-1] if K.wug_org else none, '#5b8bd9') }}
+  {{ hcard('도별 수리계 계원 수', [('경북', K.wug_mem_gb), ('경남', K.wug_mem_gn), ('제주', K.wug_mem_jj), ('충남', K.wug_mem_cn), ('전북', K.wug_mem_jb), ('전남', K.wug_mem_jn), ('강원', K.wug_mem_gw), ('경기', K.wug_mem_gg), ('충북', K.wug_mem_cb)], '명', '괄호는 전국 계원 중 비중 · 오른쪽은 전년 대비', K.wug_mem.vals[-1] if K.wug_mem else none, '#5b8bd9') }}
+ </div>
+ <h3 class="sg-sub">수리시설 폐지 <small>한국농어촌공사 농업생산기반시설 현황 · 그해 용도를 다해 없앤 시설</small></h3>
+ <div class="sg-g">
+  {{ card('irx_n', 'wx1', ('관정 ' ~ K.irx_n_well.vals[-1]|big ~ ' · 보 ' ~ K.irx_n_weir.vals[-1]|big ~ ' · 저수지 ' ~ K.irx_n_rsv.vals[-1]|big ~ '곳') if K.irx_n_well and K.irx_n_weir and K.irx_n_rsv else none, '#2458d6') }}
+  {{ card('irx_ha', 'wx2', '폐지된 시설이 물을 대던 면적', '#2458d6') }}
+  {{ qcard('폐지 시설 한 곳당 면적', K.irx_ha, K.irx_n, 'wx3', '폐지 면적 ÷ 폐지 시설 수', 10000, '㎡', '#2458d6') }}
+  {{ hcard('시설 종류별 폐지 수', [('관정', K.irx_n_well), ('보', K.irx_n_weir), ('저수지', K.irx_n_rsv), ('양·배수장', K.irx_n_pp)], '곳', '괄호는 폐지 시설 중 비중 · 해마다 정비 대상이 달라 등락이 큼 · 오른쪽은 전년 대비', K.irx_n.vals[-1] if K.irx_n else none, '#5b8bd9') }}
  </div>
  <h3 class="sg-sub">임가 보유 장비·시설 <small>업종별 장비를 가진 임가 비율(여러 장비 복수 응답) · 산림청 임업경영실태조사</small></h3>
  <div class="sg-g">

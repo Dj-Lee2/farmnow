@@ -5179,6 +5179,37 @@ sources:
       - {id: rc_pr_up, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 상승", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^상승$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rc_pr_same, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 비슷", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^(비슷|동일)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rc_pr_down, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 하락", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^하락$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_all, title: "쌀가공식품 매출액 총계", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^총계$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_tteok, title: "쌀가공식품 매출액 떡볶이떡·떡국떡", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^떡볶이떡/떡국떡$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_trad, title: "쌀가공식품 매출액 전통떡", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^전통떡$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_crack, title: "쌀가공식품 매출액 쌀과자", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^쌀과자$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_hangwa, title: "쌀가공식품 매출액 한과", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^한과$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_bread, title: "쌀가공식품 매출액 쌀빵류", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^쌀빵류$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_gochu, title: "쌀가공식품 매출액 고추장", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^고추장$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_takju, title: "쌀가공식품 매출액 탁주·약주", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^탁주/약주$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_soju, title: "쌀가공식품 매출액 소주", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^소주$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_flour, title: "쌀가공식품 매출액 생쌀가루", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^생쌀가루$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_nurung, title: "쌀가공식품 매출액 누룽지", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^누룽지$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_cereal, title: "쌀가공식품 매출액 시리얼·선식 등", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^씨리얼 선식 등$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_dosirak, title: "쌀가공식품 매출액 도시락류", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^도시락류$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_aseptic, title: "쌀가공식품 매출액 무균화 포장밥", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^무균화 포장밥$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_frozen, title: "쌀가공식품 매출액 냉동밥", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^냉동밥$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sl_instant, title: "쌀가공식품 매출액 기타 즉석식품류", tbl: DT_446001_A024, org: "466", periods: 2, itm: "^매출액$", want: ["^전체$", "^기타 즉석 식품류$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_u1, title: "쌀가공업체 매출 규모 1억 원 미만", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^1억원 미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_1to5, title: "쌀가공업체 매출 규모 1억~5억 원", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^1억~5억원 미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_5to15, title: "쌀가공업체 매출 규모 5억~15억 원", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^5억~15억원 미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_15to50, title: "쌀가공업체 매출 규모 15억~50억 원", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^15억~50억 미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_50to100, title: "쌀가공업체 매출 규모 50억~100억 원", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^50억원~\\s*100억원 미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sz_100, title: "쌀가공업체 매출 규모 100억 원 이상", tbl: DT_446001_A014, org: "466", periods: 2, itm: "^100억원 이상$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_firm, title: "쌀가공업체 수(추정)", tbl: DT_446001_A008, org: "466", periods: 2, itm: "^추정 사업체수$", want: ["^전체$"], unit: "개", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_emp_all, title: "쌀가공업체 전체 종사자 수", tbl: DT_446001_A008, org: "466", periods: 2, itm: "^전체 종사자 수$", want: ["^전체$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_emp_rice, title: "쌀가공업체 쌀가공식품 부문 종사자 수", tbl: DT_446001_A008, org: "466", periods: 2, itm: "^쌀가공식품 부문\\s+종사자 수$", want: ["^전체$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pf_up, title: "쌀가공업체 수익성 1년 전보다 호전", tbl: DT_446001_A021, org: "466", periods: 2, itm: "^호전$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pf_same, title: "쌀가공업체 수익성 1년 전보다 비슷", tbl: DT_446001_A021, org: "466", periods: 2, itm: "^(비슷|동일)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pf_down, title: "쌀가공업체 수익성 1년 전보다 악화", tbl: DT_446001_A021, org: "466", periods: 2, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_bz_up, title: "쌀가공업계 경기 1년 전보다 호전", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^호전$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_bz_same, title: "쌀가공업계 경기 1년 전보다 비슷", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_bz_down, title: "쌀가공업계 경기 1년 전보다 악화", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

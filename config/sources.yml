@@ -5109,6 +5109,37 @@ sources:
       - {id: mpk_ship, title: "오리 평사 등 축사 매 출하 후 분뇨 수거 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^매 출하 후 수거$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mpk_yr, title: "오리 평사 등 축사 깔짚 연 1~4회 교체 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^연간 1~4회 교체$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: mpk_old, title: "오리 평사 등 축사 깔짚 1년 이상 사용 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^1년 이상 사용$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: ks_rv_dom, title: "한식 음식점 채소 국산 비중 평균", tbl: DT_114058_2023_D007, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rv_all, title: "한식 음식점 채소 전부 국산 쓰는 업체", tbl: DT_114058_2023_D007, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rg_dom, title: "한식 음식점 곡류 국산 비중 평균", tbl: DT_114058_2023_D013, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rg_all, title: "한식 음식점 곡류 전부 국산 쓰는 업체", tbl: DT_114058_2023_D013, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rf_dom, title: "한식 음식점 과일·과채 국산 비중 평균", tbl: DT_114058_2023_D021, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rf_all, title: "한식 음식점 과일·과채 전부 국산 쓰는 업체", tbl: DT_114058_2023_D021, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mv_dom, title: "한식 식품제조업체 채소 국산 비중 평균", tbl: DT_114058_F028, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mv_all, title: "한식 식품제조업체 채소 전부 국산 쓰는 업체", tbl: DT_114058_F028, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mg_dom, title: "한식 식품제조업체 곡류 국산 비중 평균", tbl: DT_114058_F032, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mg_all, title: "한식 식품제조업체 곡류 전부 국산 쓰는 업체", tbl: DT_114058_F032, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mf_dom, title: "한식 식품제조업체 과일·과채 국산 비중 평균", tbl: DT_114058_F030, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mf_all, title: "한식 식품제조업체 과일·과채 전부 국산 쓰는 업체", tbl: DT_114058_F030, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_whs, title: "한식 음식점 채소 구입처 도매상", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^도매상$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_mkt, title: "한식 음식점 채소 구입처 농수산물 시장", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^농수산물 시장$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_mart, title: "한식 음식점 채소 구입처 식자재 마트", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^식자재 마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_big, title: "한식 음식점 채소 구입처 일반 대형마트", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^일반 대형마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_fran, title: "한식 음식점 채소 구입처 프랜차이즈 본사", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^프랜차이즈 본사$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_farm, title: "한식 음식점 채소 구입처 산지 직거래", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^산지 직거래$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_etc, title: "한식 음식점 채소 구입처 기타", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rvb_onl, title: "한식 음식점 채소 구입처 온라인 마트", tbl: DT_114058_2023_D008, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^온라인 ?마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rgb_farm, title: "한식 음식점 곡류 구입처 산지 직거래", tbl: DT_114058_2023_D014, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^산지 직거래$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rfb_farm, title: "한식 음식점 과일·과채 구입처 산지 직거래", tbl: DT_114058_2023_D022, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^산지 직거래$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_farm, title: "한식 식품제조업체 채소 구입처 산지조달", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_whm, title: "한식 식품제조업체 채소 구입처 도매시장", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^도매시장$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_apc, title: "한식 식품제조업체 채소 구입처 농수산물종합유통센터", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^농수산물종합유통센터$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_trad, title: "한식 식품제조업체 채소 구입처 재래(소매)시장", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^재래\\(소매\\)시장$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_imp, title: "한식 식품제조업체 채소 구입처 수입상사", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^수입상사$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_vend, title: "한식 식품제조업체 채소 구입처 중간도매/벤더업체", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^중간도매/벤더업체$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mvb_etc, title: "한식 식품제조업체 채소 구입처 기타", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mgb_farm, title: "한식 식품제조업체 곡류 구입처 산지조달", tbl: DT_114058_F033, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mfb_farm, title: "한식 식품제조업체 과일·과채 구입처 산지조달", tbl: DT_114058_F031, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

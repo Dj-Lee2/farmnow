@@ -5711,6 +5711,33 @@ sources:
       - {id: hmw_feed, title: "말산업 종사자 — 말사료생산판매업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^말사료생산판매업$"], unit: 명, survey: 말산업실태조사}
       - {id: hmw_meat, title: "말산업 종사자 — 말고기음식점업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^말고기음식점업$"], unit: 명, survey: 말산업실태조사}
       - {id: hmw_etc, title: "말산업 종사자 — 기타", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^기타$"], unit: 명, survey: 말산업실태조사}
+      - {id: dlk_1n, title: 1종 보통면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^1종 보통면허$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_1l, title: 1종 대형면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^1종 대형면허$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_2n, title: 2종 보통면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^2종 보통면허$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_2s, title: 2종 소형면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^2종 소형면허$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_2m, title: 2종 원동기면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^2종 원동기면허$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_etc, title: 기타 운전면허 있는 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^(남성|여성)$", "^기타$"], sum: true, unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_f_1n, title: 1종 보통면허 있는 여성 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^여성$", "^1종 보통면허$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_f_2n, title: 2종 보통면허 있는 여성 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^여성$", "^2종 보통면허$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlk_70_2m, title: 2종 원동기면허 있는 70대 이상 농업인, tbl: DT_14303_E1441, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^70대 이상$", "^2종 원동기면허$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: lht_lt12, title: 1.2m 미만 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^1\\.2M 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: lht_12, title: 1.2~2m 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^1\\.2M 이상 ~ 2M 미만$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: lht_2, title: 2~3.5m 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^2M 이상 ~ 3\\.5M 이하$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: lht_35, title: 3.5m 넘는 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^3\\.5M 초과$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldw_top, title: 사다리 맨 위 칸에서 일하는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^맨 위 칸$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldw_top2, title: 사다리 맨 위 2번째 칸에서 일하는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^맨 위 2번째 칸$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldw_top3, title: 사다리 맨 위 3번째 이하 칸에서 일하는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^맨 위 3번째 이하 칸$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_hh, title: H형 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^H형 사다리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tlh_tot, title: 경운기 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_days, title: 경운기 한 해 이용일수, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용일수$", "^계$"], unit: 일/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_till, title: 경운기 경운 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^경운$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_level, title: 경운기 정지 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^정지$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_flat, title: 경운기 균평 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^균평$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_pump, title: 경운기 양수 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^양수$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_spray, title: 경운기 방제 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^방제$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_haul, title: 경운기 운반 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^운반$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_etc, title: 경운기 기타 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^기타$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: tlh_spray_d, title: 경운기 방제 작업 한 해 이용일수, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용일수$", "^방제$"], unit: 일/년, survey: 농업기계 이용실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

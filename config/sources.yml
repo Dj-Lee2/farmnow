@@ -4227,6 +4227,37 @@ sources:
       - {id: fwt_p2_tot, title: 2종 겸업 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^2종 겸업$"], unit: 가구, survey: 농림어업조사}
       - {id: fwt_p2_s, title: 2종 겸업 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^2종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: fwt_p2_b, title: 2종 겸업 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^2종 겸업$"], sum: true, unit: 가구, survey: 농림어업조사}
+      # 소유형태·경영주연령별 경지규모 농가(DT_1EA1015)
+      - {id: fot_own_tot, title: 100% 자기 땅 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^100%소유$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_own_s, title: 100% 자기 땅 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^100%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_own_b, title: 100% 자기 땅 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^100%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o75_tot, title: 자기 땅 75~100% 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^75~100%소유$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_o75_s, title: 자기 땅 75~100% 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^75~100%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o75_b, title: 자기 땅 75~100% 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^75~100%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o50_tot, title: 자기 땅 50~75% 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^50~75%소유$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_o50_s, title: 자기 땅 50~75% 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^50~75%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o50_b, title: 자기 땅 50~75% 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^50~75%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o25_tot, title: 자기 땅 25~50% 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^25~50%소유$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_o25_s, title: 자기 땅 25~50% 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^25~50%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o25_b, title: 자기 땅 25~50% 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^25~50%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o1_tot, title: 자기 땅 1~25% 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^1~25%소유$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_o1_s, title: 자기 땅 1~25% 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^1~25%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_o1_b, title: 자기 땅 1~25% 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^1~25%소유$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_rent_tot, title: 100% 빌린 땅 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^100%차용$"], unit: 가구, survey: 농림어업조사}
+      - {id: fot_rent_s, title: 100% 빌린 땅 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^100%차용$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fot_rent_b, title: 100% 빌린 땅 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^100%차용$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_u50_tot, title: 경영주 49세 이하 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_u50_s, title: 경영주 49세 이하 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_u50_b, title: 경영주 49세 이하 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_50_tot, title: 경영주 50~64세 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^경영주연령 : (50~54세|55~59세|60~64세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_50_s, title: 경영주 50~64세 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^경영주연령 : (50~54세|55~59세|60~64세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_50_b, title: 경영주 50~64세 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^경영주연령 : (50~54세|55~59세|60~64세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_65_tot, title: 경영주 65~74세 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^경영주연령 : (65~69세|70~74세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_65_s, title: 경영주 65~74세 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^경영주연령 : (65~69세|70~74세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_65_b, title: 경영주 65~74세 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^경영주연령 : (65~69세|70~74세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_75_tot, title: 경영주 75세 이상 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_75_s, title: 경영주 75세 이상 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fsa_75_b, title: 경영주 75세 이상 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

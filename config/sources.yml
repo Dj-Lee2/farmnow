@@ -5563,6 +5563,44 @@ sources:
       - {id: cap_hw3a, title: 한우 3A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^3A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: cap_dy, title: 젖소 평균 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^젖소$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: cap_yw, title: 육우 평균 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^육우$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: ibp_tot, title: 업무상 손상 건수(부위 전체), tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^총계$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_fing, title: 손가락 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^손가락$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_hand, title: 손 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^손$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_wrist, title: 손목 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^손목$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_arm, title: 팔 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^팔$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_shou, title: 어깨 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^어깨$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_back, title: 등 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^등$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_spine, title: 척추 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^척추$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_leg, title: 다리 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^다리$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: ibp_ankle, title: 발목 업무상 손상 건수, tbl: DT_14303_E1428, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^발목$"], unit: 건, survey: 농업인 업무상 손상조사}
+      - {id: dlc_all_all, title: 농업인 수(운전면허 조사), tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_all_own, title: 운전면허 있는 농업인, tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^소유$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_m_all, title: 남성 농업인 수(운전면허 조사), tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^남성$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_m_own, title: 운전면허 있는 남성 농업인, tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^소유$", want: ["^남성$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_f_all, title: 여성 농업인 수(운전면허 조사), tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^여성$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_f_own, title: 운전면허 있는 여성 농업인, tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^소유$", want: ["^여성$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_70_all, title: 70대 이상 농업인 수(운전면허 조사), tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^70대 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dlc_70_own, title: 운전면허 있는 70대 이상 농업인, tbl: DT_14303_E1440, org: "143", se: F, periods: 1, itm: "^소유$", want: ["^70대 이상$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ret_all, title: 농업인 수(귀농 여부 조사), tbl: DT_14303_E1438, org: "143", se: F, periods: 1, itm: "^농업인수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ret_yes, title: 귀농한 농업인, tbl: DT_14303_E1438, org: "143", se: F, periods: 1, itm: "^농업인수$", want: ["^그렇다$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_tot, title: 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^사다리 이용 장소$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_orch, title: 과수원에서 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^과수원$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_gh, title: 비닐하우스 수리·관리에 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^비닐하우스의 수리/관리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_barn, title: 축사에서 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^축사$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_home, title: 집에서 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^집$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_a, title: A형 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^A형 사다리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_fruit, title: 과수용 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^과수용 사다리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: ldr_tri, title: 삼각 사다리 쓰는 농업인, tbl: DT_14303_E1439, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^삼각 사다리$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: trp_c_tot, title: 경운기 운반작업 이용시간, tbl: DT_143004N_010, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_c_mach, title: 경운기 농기계 운반 이용시간, tbl: DT_143004N_010, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농기계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_c_mat, title: 경운기 농자재 운반 이용시간, tbl: DT_143004N_010, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농자재$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_c_soil, title: 경운기 상토·육묘상자 운반 이용시간, tbl: DT_143004N_010, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^상토 육묘상자$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_c_ship, title: 경운기 농산물 수확·출하 운반 이용시간, tbl: DT_143004N_010, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농산물 수확 출하 운반$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_t_tot, title: 트랙터 운반작업 이용시간, tbl: DT_143004N_012, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_t_mach, title: 트랙터 농기계 운반 이용시간, tbl: DT_143004N_012, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농기계$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_t_mat, title: 트랙터 농자재 운반 이용시간, tbl: DT_143004N_012, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농자재$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_t_soil, title: 트랙터 상토·육묘상자 운반 이용시간, tbl: DT_143004N_012, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^상토 육묘상자$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: trp_t_ship, title: 트랙터 농산물 수확·출하 운반 이용시간, tbl: DT_143004N_012, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^농산물 수확 출하 운반$"], unit: 시간/년, survey: 농업기계 이용실태조사}
       - {id: fmu_tot, title: "식품제조업 농축수산물 사용량 합계", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^총량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
       - {id: fmu_dom, title: "식품제조업 국산 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
       - {id: fmu_imp, title: "식품제조업 수입 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^수입산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}

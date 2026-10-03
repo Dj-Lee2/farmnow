@@ -1082,7 +1082,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비·시설장미 소득·경영비·6차산업 경영체 사업 분야·매출·자산·판매 비중·인증·경영주 종사기간·조직 형태·체험 프로그램·방문객·예약·홍보·직매장·식음료점·제조 형태', 143) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비·시설장미 소득·경영비·6차산업 경영체 사업 분야·매출·자산·판매 비중·인증·경영주 종사기간·조직 형태·체험 프로그램·방문객·예약·홍보·직매장·식음료점·제조 형태·판매처별 매출·가공품·수출 국가·체험 이용객', 150) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -1282,6 +1282,13 @@
   {{ hcard('직매장 운영 방식', [('독립 매장(별도 매장 소유)', K.sx_st_own), ('온라인', K.sx_st_onl), ('공동 매장(지자체·농협 로컬푸드 입점)', K.sx_st_co)], '%', '직매장 경영체 중 비중 · 중복응답', none, '#7a6a3a') }}
   {{ hcard('식·음료점 유형', [('카페', K.sx_rs_cafe), ('음식점', K.sx_rs_food), ('농가식당', K.sx_rs_farm), ('기타', K.sx_rs_etc)], '%', '식·음료점 경영체 중 비중 · 중복응답', none, '#3a8f6a') }}
   {{ hcard('제조·가공 형태', [('완제품', K.sx_mf_fin), ('중간재', K.sx_mf_mid), ('OEM/ODM(주문자·제조자 개발 생산)', K.sx_mf_oem)], '%', '제조·가공 경영체 중 비중 · 중복응답', none, '#1f5f8a') }}
+ </div>
+  <h3 class="sg-sub">6차산업 경영체의 판매처·가공품·수출과 체험 이용객 <small>판매처별 매출 비중·주요 가공품·수출 국가·체험관광 1곳당 분기별 이용객 · 2024 · 농촌융복합산업 실태조사</small></h3>
+ <div class="sg-g">{{ card('sxs_onl', 'sx13', '매출 중 온라인 몰 판매 비중 · 로컬푸드 직매장 ' ~ num(K.sxs_local.vals[-1], '%')|striptags ~ ' · SNS ' ~ num(K.sxs_sns.vals[-1], '%')|striptags if K.sxs_local and K.sxs_sns else none, '#1f5f8a') }}{{ card('sxp_hlth', 'sx14', '가공 경영체 중 건강식품류를 만드는 곳 · 반찬류 ' ~ num(K.sxp_side.vals[-1], '%')|striptags ~ ' · 차·음료 ' ~ num(K.sxp_tea.vals[-1], '%')|striptags if K.sxp_side and K.sxp_tea else none, '#7a6a3a') }}{{ card('sxv_pay', 'sx15', '체험관광 1곳당 한 해 유료 이용객 · 무료 ' ~ num(K.sxv_free.vals[-1], '명')|striptags if K.sxv_free else none, '#3a8f6a') }}
+  {{ hcard('판매처별 매출 비중', [('온라인 몰(자사몰·오픈마켓 등)', K.sxs_onl), ('지역 로컬푸드 직매장', K.sxs_local), ('도매업체', K.sxs_whs), ('대형할인업체', K.sxs_mart), ('SNS 판매', K.sxs_sns), ('급식업체(학교·군대·회사)', K.sxs_meal), ('외식산업업체', K.sxs_rest), ('홈쇼핑', K.sxs_home), ('수출', K.sxs_exp), ('기타', K.sxs_etc)], '%', '6차산업 경영체 매출 기준 · 합 100', none, '#1f5f8a') }}
+  {{ hcard('주요 가공품', [('건강식품류', K.sxp_hlth), ('반찬류(김치 포함)', K.sxp_side), ('차·음료류', K.sxp_tea), ('간식류(과자·제과·제빵)', K.sxp_snack), ('장류', K.sxp_jang), ('떡류', K.sxp_rice), ('소스류(장류 제외)', K.sxp_sauce), ('주류', K.sxp_liq)], '%', '가공품을 만드는 경영체 중 비중 · 중복응답', none, '#7a6a3a') }}
+  {{ hcard('수출 국가', [('미국', K.sxe_us), ('중국', K.sxe_cn), ('일본', K.sxe_jp), ('동남아', K.sxe_sea), ('베트남', K.sxe_vn), ('홍콩', K.sxe_hk)], '%', '수출하는 경영체 중 해당 국가로 수출하는 비중 · 중복응답', none, '#b0503a') }}
+  {{ hcard('체험관광 1곳당 유료 이용객 — 분기별', [('1분기', K.sxv_pay_q1), ('2분기', K.sxv_pay_q2), ('3분기', K.sxv_pay_q3), ('4분기', K.sxv_pay_q4)], '명', '체험관광 경영체 평균' ~ (' · 한 해 ' ~ num(K.sxv_pay.vals[-1], '명')|striptags if K.sxv_pay else ''), none, '#3a8f6a') }}
  </div>
  </div></details>
 

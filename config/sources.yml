@@ -5738,6 +5738,36 @@ sources:
       - {id: tlh_haul, title: 경운기 운반 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^운반$"], unit: 시간/년, survey: 농업기계 이용실태조사}
       - {id: tlh_etc, title: 경운기 기타 작업 한 해 이용시간, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$", "^기타$"], unit: 시간/년, survey: 농업기계 이용실태조사}
       - {id: tlh_spray_d, title: 경운기 방제 작업 한 해 이용일수, tbl: DT_143004N_009, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용일수$", "^방제$"], unit: 일/년, survey: 농업기계 이용실태조사}
+      - {id: sxs_local, title: "6차산업 경영체 판매처별 매출 비중 지역 로컬푸드 직매장(안테나숍 포함)", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^지역 로컬푸드"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_onl, title: "6차산업 경영체 판매처별 매출 비중 온라인 몰", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^온라인 몰"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_sns, title: "6차산업 경영체 판매처별 매출 비중 SNS 판매", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS 판매"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_whs, title: "6차산업 경영체 판매처별 매출 비중 도매업체", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^도매업체$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_mart, title: "6차산업 경영체 판매처별 매출 비중 대형할인업체", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^대형할인업체"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_meal, title: "6차산업 경영체 판매처별 매출 비중 급식업체", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^급식업체"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_rest, title: "6차산업 경영체 판매처별 매출 비중 외식산업업체", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^외식산업업체$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_home, title: "6차산업 경영체 판매처별 매출 비중 홈쇼핑", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홈쇼핑$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_exp, title: "6차산업 경영체 판매처별 매출 비중 수출", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^수출$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxs_etc, title: "6차산업 경영체 판매처별 매출 비중 기타", tbl: DT_114061_057, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_hlth, title: "6차산업 경영체 주요 가공품 건강식품류", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^건강식품류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_side, title: "6차산업 경영체 주요 가공품 반찬류(김치류 포함)", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^반찬류"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_tea, title: "6차산업 경영체 주요 가공품 차·음료류", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^차·음료류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_snack, title: "6차산업 경영체 주요 가공품 간식류(과자·제과·제빵)", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^간식류"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_jang, title: "6차산업 경영체 주요 가공품 장류", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^장류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_rice, title: "6차산업 경영체 주요 가공품 떡류", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^떡류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_sauce, title: "6차산업 경영체 주요 가공품 소스류(장류 제외)", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^소스류"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxp_liq, title: "6차산업 경영체 주요 가공품 주류", tbl: DT_114061_054, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^주류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_us, title: "6차산업 경영체 수출 국가 미국", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^미국$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_cn, title: "6차산업 경영체 수출 국가 중국", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^중국$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_jp, title: "6차산업 경영체 수출 국가 일본", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^일본$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_sea, title: "6차산업 경영체 수출 국가 동남아", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^동남아$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_vn, title: "6차산업 경영체 수출 국가 베트남", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^베트남$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxe_hk, title: "6차산업 경영체 수출 국가 홍콩", tbl: DT_114061_038, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홍콩$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_pay_q1, title: "6차산업 체험관광 1곳당 유료 이용객 1분기", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^1분기$"], unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_pay_q2, title: "6차산업 체험관광 1곳당 유료 이용객 2분기", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^2분기$"], unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_pay_q3, title: "6차산업 체험관광 1곳당 유료 이용객 3분기", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^3분기$"], unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_pay_q4, title: "6차산업 체험관광 1곳당 유료 이용객 4분기", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^4분기$"], unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_pay, title: "6차산업 체험관광 1곳당 한 해 유료 이용객", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^[1-4]분기$"], sum: true, unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxv_free, title: "6차산업 체험관광 1곳당 한 해 무료 이용객", tbl: DT_114061_041, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^[1-4]분기$"], sum: true, unit: "명", survey: 농촌융복합산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

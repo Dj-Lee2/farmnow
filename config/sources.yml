@@ -4378,6 +4378,46 @@ sources:
       - {id: rlv_chick, title: 닭 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^닭$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
       - {id: rlv_goat, title: 염소 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^염소$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
       - {id: rlv_bee, title: 꿀벌 기르는 귀농가구, tbl: DT_1A02031, itm: "^사육가구수$", want: ["^꿀벌$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      # 육묘업·종자업 실태조사(2년 주기, 2022·2024)
+      - {id: nur_n, title: 육묘업체 수, tbl: DT_114052_B01, org: "114", se: F, periods: 2, itm: "^육묘업체 일반 현황$", want: [], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_sales, title: 육묘업체 연간 판매액, tbl: DT_114052_B10, org: "114", se: F, periods: 2, itm: "^육묘업체의 연간 판매액$", want: [], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_exp, title: 육묘업체 해외 수출액, tbl: DT_114052_B10, org: "114", se: F, periods: 2, itm: "^육묘업체의 연간 판매액$", want: ["^해외 수출$"], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_g_tot, title: 육묘 전체 묘 판매액, tbl: DT_114052_B19, org: "114", se: F, periods: 2, itm: "^작목군별 판매액$", want: [], unit: 억원, survey: 육묘업실태조사}
+      - {id: nur_g_food, title: 육묘 식량작물 묘 판매액, tbl: DT_114052_B19, org: "114", se: F, periods: 2, itm: "^작목군별 판매액$", want: ["^식량작물$"], unit: 억원, survey: 육묘업실태조사}
+      - {id: nur_g_veg, title: 육묘 채소 묘 판매액, tbl: DT_114052_B19, org: "114", se: F, periods: 2, itm: "^작목군별 판매액$", want: ["^채소$"], unit: 억원, survey: 육묘업실태조사}
+      - {id: nur_g_flow, title: 육묘 화훼 묘 판매액, tbl: DT_114052_B19, org: "114", se: F, periods: 2, itm: "^작목군별 판매액$", want: ["^화훼$"], unit: 억원, survey: 육묘업실태조사}
+      - {id: nur_g_etc, title: 육묘 기타 묘 판매액, tbl: DT_114052_B19, org: "114", se: F, periods: 2, itm: "^작목군별 판매액$", want: ["^기타$"], unit: 억원, survey: 육묘업실태조사}
+      - {id: nur_ch_farm, title: 육묘업체 판매처 재배농가, tbl: DT_114052_B11, org: "114", se: F, periods: 2, itm: "^판매처 비율$", want: ["^평균$", "^재배농가$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_ch_shop, title: 육묘업체 판매처 농약상/종묘상, tbl: DT_114052_B11, org: "114", se: F, periods: 2, itm: "^판매처 비율$", want: ["^평균$", "^농약상/종묘상$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_ch_whole, title: 육묘업체 판매처 묘 도매상, tbl: DT_114052_B11, org: "114", se: F, periods: 2, itm: "^판매처 비율$", want: ["^평균$", "^묘 도매상$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_ch_cons, title: 육묘업체 판매처 일반 소비자, tbl: DT_114052_B11, org: "114", se: F, periods: 2, itm: "^판매처 비율$", want: ["^평균$", "^일반 소비자$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_ch_coop, title: 육묘업체 판매처 농협, tbl: DT_114052_B11, org: "114", se: F, periods: 2, itm: "^판매처 비율$", want: ["^평균$", "^농협$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_cost, title: 육묘 판매액 중 경영비 비율, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^육묘 관련 판매액 중 경영비 소요 비율$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_seed, title: 육묘 경영비 중 종자비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^종자비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_fert, title: 육묘 경영비 중 비료/양액비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^비료/양액비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_pest, title: 육묘 경영비 중 농약비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^농약비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_heat, title: 육묘 경영비 중 광열 동력비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^광열 동력비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_tray, title: 육묘 경영비 중 트레이 구입비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^트레이 구입비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_soil, title: 육묘 경영비 중 상토비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^상토비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_c_labor, title: 육묘 경영비 중 인건비, tbl: DT_114052_B12, org: "114", se: F, periods: 2, itm: "^경영비 항목별 비율$", want: ["^평균$", "^인건비$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_w_tot, title: 육묘업체 종사자, tbl: DT_114052_B07, org: "114", se: F, periods: 2, itm: "^육묘업체의 종사상 지위별 종사자 수$", want: [], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_w_f, title: 육묘업체 여성 종사자, tbl: DT_114052_B07, org: "114", se: F, periods: 2, itm: "^육묘업체의 종사상 지위별 종사자 수$", want: ["^여$"], unit: 명, survey: 육묘업실태조사}
+      - {id: sed_n, title: 종자업체 수, tbl: DT_114052_001, org: "114", se: F, periods: 2, itm: "^종자업체일반현황$", want: [], unit: 개, survey: 종자업실태조사}
+      - {id: sed_sales, title: 종자업체 연간 판매액, tbl: DT_114052_019, org: "114", se: F, periods: 2, itm: "^판매액$", want: [], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_exp, title: 종자업체 해외(수출) 판매액, tbl: DT_114052_019, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^해외\\(수출\\)$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_g_tot, title: 전체 종자 판매액, tbl: DT_114052_025A, org: "114", se: F, periods: 2, itm: "^판매액$", want: [], unit: 억원, survey: 종자업실태조사}
+      - {id: sed_g_food, title: 식량 종자 판매액, tbl: DT_114052_025A, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^식량$"], unit: 억원, survey: 종자업실태조사}
+      - {id: sed_g_veg, title: 채소 종자 판매액, tbl: DT_114052_025A, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^채소$"], unit: 억원, survey: 종자업실태조사}
+      - {id: sed_g_fruit, title: 과수 종자 판매액, tbl: DT_114052_025A, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^과수$"], unit: 억원, survey: 종자업실태조사}
+      - {id: sed_g_flow, title: 화훼 종자 판매액, tbl: DT_114052_025A, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^화훼$"], unit: 억원, survey: 종자업실태조사}
+      - {id: sed_ch_shop, title: 종자 판매대상처 종자·종묘상, tbl: DT_114052_016, org: "114", se: F, periods: 2, itm: "^판매대상처 비율$", want: ["^종자·종묘상$"], unit: "%", survey: 종자업실태조사}
+      - {id: sed_ch_nur, title: 종자 판매대상처 육묘업체, tbl: DT_114052_016, org: "114", se: F, periods: 2, itm: "^판매대상처 비율$", want: ["^육묘업체$"], unit: "%", survey: 종자업실태조사}
+      - {id: sed_ch_coop, title: 종자 판매대상처 지역농협·영농조합, tbl: DT_114052_016, org: "114", se: F, periods: 2, itm: "^판매대상처 비율$", want: ["^지역농협·영농조합$"], unit: "%", survey: 종자업실태조사}
+      - {id: sed_ch_farm, title: 종자 판매대상처 농가, tbl: DT_114052_016, org: "114", se: F, periods: 2, itm: "^판매대상처 비율$", want: ["^농가$"], unit: "%", survey: 종자업실태조사}
+      - {id: sed_breed_tot, title: 종자업체(육종 실적 표), tbl: DT_114052_012A, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 실적 여부$", want: [], unit: 개, survey: 종자업실태조사}
+      - {id: sed_breed, title: 육종 실적 있는 종자업체, tbl: DT_114052_012A, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 실적 여부$", want: ["^있음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_x, title: 종자 수출액, tbl: DT_114052_021, org: "114", se: F, periods: 2, itm: "^종자 수출입액$", want: ["^수출$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_m, title: 종자 수입액, tbl: DT_114052_021, org: "114", se: F, periods: 2, itm: "^종자 수출입액$", want: ["^수입$"], unit: 만원, survey: 종자업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -4630,6 +4630,49 @@ sources:
       - {id: fs_bf_au, title: "외식업 외국산 소고기 원산지 호주", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^호주$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_bf_nz, title: "외식업 외국산 소고기 원산지 뉴질랜드", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^뉴질랜드$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_bf_none, title: "외식업 외국산 소고기 원산지 외국산 사용 안 함", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^외국산 사용 안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: rtr_typ_narrow, title: "농촌관광 경험률", tbl: DT_143005_2024A004, org: "143", se: F, periods: 1, itm: "^지난 1년간 경험한 농촌관광 유형$", want: ["^전체$", "^농촌관광$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_typ_wide, title: "광의의 농촌관광 경험률", tbl: DT_143005_2024A004, org: "143", se: F, periods: 1, itm: "^지난 1년간 경험한 농촌관광 유형$", want: ["^전체$", "^광의의 농촌관광$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_typ_none, title: "농촌관광 미경험자", tbl: DT_143005_2024A004, org: "143", se: F, periods: 1, itm: "^지난 1년간 경험한 농촌관광 유형$", want: ["^전체$", "^미경험자$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_exp, title: "농촌체험활동", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌체험활동$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_stay, title: "농촌숙박", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌숙박$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_food, title: "농촌지역 맛집 방문", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역 맛집 방문$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_trail, title: "농촌 둘레길 걷기", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌 둘레길 걷기$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_direct, title: "농·특산물 직거래", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농·특산물 직거래$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_camp, title: "농촌지역 캠핑", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역 캠핑$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_sight, title: "농촌에서 관광지 방문", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌에서 관광지 방문$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_family, title: "농촌에서 가족/친척/친구 방문", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌에서 가족/친척/친구 방문$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_act_none, title: "모두 경험 없음", tbl: DT_143005_2024A003, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^모두 경험 없음$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_cnt, title: "연간 농촌관광 평균 횟수", tbl: DT_143005_2024A019, org: "143", se: F, periods: 1, itm: "^연간 농촌관광 총 횟수$", want: ["^전체$", "^평균$"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_cost, title: "연간 농촌관광 평균 경비", tbl: DT_143005_2024A020, org: "143", se: F, periods: 1, itm: "^연간 농촌관광 총 경비$", want: ["^전체$", "^평균$"], unit: 원, survey: 농촌관광 실태조사}
+      - {id: rtr_no_busy, title: "미경험 이유 바빠서 여유가 없어서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^바쁜 일상생활"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_int, title: "미경험 이유 관심이 낮아서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌관광에 대한 관심이 낮아서$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_far, title: "미경험 이유 이동거리가 멀어서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^이동거리가 멀어서$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_fun, title: "미경험 이유 즐길거리가 부족해서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^흥미로운 즐길거리"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_know, title: "미경험 이유 잘 알지 못해서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌관광에 대해 잘 알지 못해서$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_cost, title: "미경험 이유 비용이 많이 들어서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^비용이 많이 들어서$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_alone, title: "미경험 이유 같이 갈 사람이 없어서", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌관광을 같이 갈 사람이 없어서$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_no_hlth, title: "미경험 이유 건강상 이유", tbl: DT_143005_2024A006, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^건강상 이유"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_nat, title: "방문지 선택 이유 자연경관", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^자연경관$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_acc, title: "방문지 선택 이유 접근성", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^접근성$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_prog, title: "방문지 선택 이유 볼거리·프로그램", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^다양한 볼거리/프로그램$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_food, title: "방문지 선택 이유 음식", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^음식$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_frnd, title: "방문지 선택 이유 지인추천", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^지인추천$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_prod, title: "방문지 선택 이유 농특산물", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농특산물 종류"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_home, title: "방문지 선택 이유 고향인근", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^고향인근$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_rural, title: "방문지 선택 이유 농촌다움", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌다움$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_why_sns, title: "방문지 선택 이유 SNS·온라인 리뷰", tbl: DT_143005_2024A125, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^SNS나 온라인"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_will, title: "향후 농촌관광 의향(100점)", tbl: DT_143005_2024A147, org: "143", se: F, periods: 1, itm: "^향후 농촌관광 의향$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_sat, title: "타 여행 대비 농촌관광 만족도(100점)", tbl: DT_143005_2024A148, org: "143", se: F, periods: 1, itm: "^향후 농촌관광 의향$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_rec, title: "농촌관광 타인 추천 의향(100점)", tbl: DT_143005_2024A149, org: "143", se: F, periods: 1, itm: "^향후 농촌관광 의향$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_w_forest, title: "하고 싶은 활동 자연휴양림", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^자연휴양림$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_rest, title: "하고 싶은 활동 농가음식점", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농가음식점$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_cafe, title: "하고 싶은 활동 농가카페", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농가카페$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_trail, title: "하고 싶은 활동 둘레길 걷기", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌 둘레길 걷기$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_direct, title: "하고 싶은 활동 농특산물 직거래", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농·특산물 직거래"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_heal, title: "하고 싶은 활동 치유프로그램", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^치유프로그램$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_farm, title: "하고 싶은 활동 농업체험", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농업체험$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_eco, title: "하고 싶은 활동 생태체험", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^생태체험$"], unit: "%", survey: 농촌관광 실태조사}
+      - {id: rtr_w_work, title: "하고 싶은 활동 농촌 워케이션", tbl: DT_143005_2024A152, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌 워케이션$"], unit: "%", survey: 농촌관광 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

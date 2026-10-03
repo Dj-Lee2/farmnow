@@ -1373,7 +1373,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지', 108) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적', 118) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1464,6 +1464,19 @@
   {{ card('irx_ha', 'wx2', '폐지된 시설이 물을 대던 면적', '#2458d6') }}
   {{ qcard('폐지 시설 한 곳당 면적', K.irx_ha, K.irx_n, 'wx3', '폐지 면적 ÷ 폐지 시설 수', 10000, '㎡', '#2458d6') }}
   {{ hcard('시설 종류별 폐지 수', [('관정', K.irx_n_well), ('보', K.irx_n_weir), ('저수지', K.irx_n_rsv), ('양·배수장', K.irx_n_pp)], '곳', '괄호는 폐지 시설 중 비중 · 해마다 정비 대상이 달라 등락이 큼 · 오른쪽은 전년 대비', K.irx_n.vals[-1] if K.irx_n else none, '#5b8bd9') }}
+ </div>
+ <h3 class="sg-sub">수리시설 관개규모 — 한 시설이 대는 논밭 넓이 <small>한국농어촌공사 농업생산기반시설 현황 · 주수원공(논밭에 물을 대는 주된 시설) 기준</small></h3>
+ <div class="sg-g">
+  {{ card('irs_n', 'ws1', ('물을 대는 시설 ' ~ K.irs_irr.vals[-1]|big ~ ' · 대지 않는 시설 ' ~ K.irs_non.vals[-1]|big ~ '곳') if K.irs_irr and K.irs_non else none, '#2458d6') }}
+  {{ card('irs_ha', 'ws2', ('농어촌공사 ' ~ K.irs_ha_kr.vals[-1]|big ~ ' · 시·군 ' ~ K.irs_ha_si.vals[-1]|big ~ 'ha') if K.irs_ha_kr and K.irs_ha_si else none, '#2458d6') }}
+  {{ rcard('농어촌공사 관할 면적 비중', K.irs_ha_kr, K.irs_ha, 'ws3', ('공사 관할 수혜면적 ÷ 전체 · 시설 수로는 ' ~ '{:.1f}'.format(K.irs_n_kr.vals[-1] / K.irs_n.vals[-1] * 100) ~ '%뿐') if K.irs_n_kr and K.irs_n else '공사 관할 수혜면적 ÷ 전체', '#2458d6') }}
+  {{ qcard('시설 한 곳당 수혜면적', K.irs_ha, K.irs_n, 'ws4', '수혜면적 ÷ 주수원공 수', 1, 'ha', '#2458d6') }}
+  {{ qcard('공사 관할 시설 한 곳당 면적', K.irs_ha_kr, K.irs_n_kr, 'ws5', ('농어촌공사 관할 수혜면적 ÷ 시설 수 · 시·군 관할은 ' ~ '{:.1f}'.format(K.irs_ha_si.vals[-1] / K.irs_n_si.vals[-1]) ~ 'ha') if K.irs_ha_si and K.irs_n_si else '농어촌공사 관할 수혜면적 ÷ 시설 수', 1, 'ha', '#2458d6') }}
+  {{ rcard('1,000ha 이상 대형 시설의 면적 비중', K.irs_ha_s6, K.irs_ha, 'ws6', ('1,000ha 이상 시설 ' ~ K.irs_n_s6.vals[-1]|big ~ '곳의 수혜면적 ÷ 전체') if K.irs_n_s6 else '1,000ha 이상 시설의 수혜면적 ÷ 전체', '#2458d6') }}
+  {{ hcard('관개규모별 수리시설 수', [('10ha 미만', K.irs_n_s1), ('10~50ha', K.irs_n_s2), ('50~100ha', K.irs_n_s3), ('100~500ha', K.irs_n_s4), ('500~1,000ha', K.irs_n_s5), ('1,000ha 이상', K.irs_n_s6)], '곳', '괄호는 물을 대는 시설 중 비중 · 오른쪽은 전년 대비', K.irs_irr.vals[-1] if K.irs_irr else none, '#5b8bd9') }}
+  {{ hcard('관개규모별 수혜면적', [('10ha 미만', K.irs_ha_s1), ('10~50ha', K.irs_ha_s2), ('50~100ha', K.irs_ha_s3), ('100~500ha', K.irs_ha_s4), ('500~1,000ha', K.irs_ha_s5), ('1,000ha 이상', K.irs_ha_s6)], 'ha', '괄호는 전체 수혜면적 중 비중 · 오른쪽은 전년 대비', K.irs_ha.vals[-1] if K.irs_ha else none, '#5b8bd9') }}
+  {{ hcard('시설 종류별 수혜면적', [('저수지', K.irs_ha_rsv), ('양수장', K.irs_ha_pump), ('보', K.irs_ha_weir), ('양·배수장', K.irs_ha_pd), ('관정', K.irs_ha_well), ('집수암거', K.irs_ha_cul)], 'ha', '괄호는 전체 수혜면적 중 비중 · 오른쪽은 전년 대비', K.irs_ha.vals[-1] if K.irs_ha else none, '#5b8bd9') }}
+  {{ hcard('도별 수리시설 수혜면적', [('전남', K.irs_ha_jn), ('충남', K.irs_ha_cn), ('전북', K.irs_ha_jb), ('경북', K.irs_ha_gb), ('경남', K.irs_ha_gn), ('경기', K.irs_ha_gg), ('충북', K.irs_ha_cb), ('강원', K.irs_ha_gw)], 'ha', '괄호는 전국 수혜면적 중 비중 · 오른쪽은 전년 대비', K.irs_ha.vals[-1] if K.irs_ha else none, '#5b8bd9') }}
  </div>
  <h3 class="sg-sub">임가 보유 장비·시설 <small>업종별 장비를 가진 임가 비율(여러 장비 복수 응답) · 산림청 임업경영실태조사</small></h3>
  <div class="sg-g">

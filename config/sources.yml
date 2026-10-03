@@ -3889,6 +3889,41 @@ sources:
       - {id: irx_n_pp, title: "폐지된 양·배수장 수", tbl: DT_311001_029, org: "311", itm: "^시설수$", want: ["^양·배수장$"], unit: 곳, survey: 농업생산기반시설 현황}
       - {id: irx_n_weir, title: "폐지된 보 수", tbl: DT_311001_029, org: "311", itm: "^시설수$", want: ["^보$"], unit: 곳, survey: 농업생산기반시설 현황}
       - {id: irx_n_well, title: "폐지된 관정 수", tbl: DT_311001_029, org: "311", itm: "^시설수$", want: ["^관정$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n, title: "수리시설(주수원공) 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^주수원공$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_ha, title: "수리시설(주수원공) 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_irr, title: "물을 대는(관개) 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^관개$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_non, title: "물을 대지 않는(무관개) 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^무관개$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s1, title: "관개규모 10ha 미만 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^10ha 미만$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s2, title: "관개규모 10~50ha 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 50ha 미만$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s3, title: "관개규모 50~100ha 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 100ha 미만$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s4, title: "관개규모 100~500ha 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 500ha 미만$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s5, title: "관개규모 500~1,000ha 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 1000ha 미만$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_n_s6, title: "관개규모 1,000ha 이상 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^1000ha 이상$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s1, title: "관개규모 10ha 미만 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^10ha 미만$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s2, title: "관개규모 10~50ha 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^~ 50ha 미만$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s3, title: "관개규모 50~100ha 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^~ 100ha 미만$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s4, title: "관개규모 100~500ha 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^~ 500ha 미만$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s5, title: "관개규모 500~1,000ha 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^~ 1000ha 미만$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_s6, title: "관개규모 1,000ha 이상 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^1000ha 이상$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_n_kr, title: "농어촌공사 관할 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^주수원공$", "^공사관할$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_kr, title: "농어촌공사 관할 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^공사관할$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_n_si, title: "시·군 관할 수리시설 수", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^주수원공$", "^시군관할$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_si, title: "시·군 관할 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^시군관할$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_rsv, title: "저수지 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^저수지$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_pump, title: "양수장 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^양수장$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_pd, title: "양·배수장 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^양·배수장$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_weir, title: "보 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^보$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_cul, title: "집수암거 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^집수암거$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_well, title: "관정 수혜면적(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^관정$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_n_rsv, title: "저수지 수(주수원공)", tbl: DT_311001_007, org: "311", periods: 3, itm: "^시설수$", want: ["^주수원공$", "^저수지$"], unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_gg, title: "경기 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^경기도$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_gw, title: "강원 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^강원"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_cb, title: "충북 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^(충청북도|충북)$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_cn, title: "충남 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^(충청남도|충남)$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_jb, title: "전북 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^(전라북도|전북특별자치도)$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_jn, title: "전남 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^전라남도$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_gb, title: "경북 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^경상북도$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irs_ha_gn, title: "경남 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^경상남도$"], unit: ha, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

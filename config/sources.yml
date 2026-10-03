@@ -4278,6 +4278,47 @@ sources:
       - {id: fss_b1_s, title: 판매 1억원 이상 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: fss_b1_m, title: 판매 1억원 이상 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: fss_b1_b, title: 판매 1억원 이상 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: rgj_ft, title: 전업 귀농인, tbl: DT_1A02004, itm: "^귀농인수$", want: ["^전업$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgj_pt, title: 겸업 귀농인, tbl: DT_1A02004, itm: "^귀농인수$", want: ["^겸업$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgj_u40, title: 30대 이하 귀농인(겸업 표), tbl: DT_1A02004, itm: "^귀농인수$", want: ["^30대이하$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgj_u40_pt, title: 30대 이하 겸업 귀농인, tbl: DT_1A02004, itm: "^귀농인수$", want: ["^30대이하$", "^겸업$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgv_all, title: 귀농인 계(이주유형 표), tbl: DT_1A02006, itm: "^귀농인수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgv_in, title: 귀농인 시군 안 이동, tbl: DT_1A02006, itm: "^귀농인수$", want: ["^시도내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgv_sg, title: 귀농인 시군 간 이동, tbl: DT_1A02006, itm: "^귀농인수$", want: ["^시군간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgv_uc, title: 귀농인 도농통합시 안 이동, tbl: DT_1A02006, itm: "^귀농인수$", want: ["^도농통합시내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgv_out, title: 귀농인 시도 간 이동, tbl: DT_1A02006, itm: "^귀농인수$", want: ["^시도간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgh_tot, title: 귀농가구주 계, tbl: DT_1A02007, itm: "^귀농가구주수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgh_m, title: 남성 귀농가구주, tbl: DT_1A02007, itm: "^귀농가구주수$", want: ["^남자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgh_f, title: 여성 귀농가구주, tbl: DT_1A02007, itm: "^귀농가구주수$", want: ["^여자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgs_tot, title: 귀농가구(가구원수 표), tbl: DT_1A02008, itm: "^가구수$", periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgs_1, title: 1인 귀농가구, tbl: DT_1A02008, itm: "^가구수$", want: ["^1인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgs_2, title: 2인 귀농가구, tbl: DT_1A02008, itm: "^가구수$", want: ["^2인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgs_3, title: 3인 귀농가구, tbl: DT_1A02008, itm: "^가구수$", want: ["^3인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgs_4, title: 4인 이상 귀농가구, tbl: DT_1A02008, itm: "^가구수$", want: ["^4인가구이상$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rga_avg, title: 귀농가구 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^평균재배면적$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_rice, title: 귀농가구 논벼 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^논벼$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_veg, title: 귀농가구 채소 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^채소$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_fruit, title: 귀농가구 과수 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^과수$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_spec, title: 귀농가구 특용작물 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^특용$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_bean, title: 귀농가구 두류 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^두류$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rga_flow, title: 귀농가구 화훼 평균 재배면적, tbl: DT_1A02011, itm: "^재배면적$", want: ["^화훼$"], periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rgz_all, title: 작물 재배 귀농가구(규모 표), tbl: DT_1A02012, itm: "^가구수$", want: ["^재배가구수$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgz_s, title: 재배면적 0.5ha 미만 귀농가구, tbl: DT_1A02012, itm: "^가구수$", want: ["^0.5ha미만$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgz_m1, title: 재배면적 0.5~1ha 귀농가구, tbl: DT_1A02012, itm: "^가구수$", want: ["^0.5~1.0ha미만$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgz_m2, title: 재배면적 1~2ha 귀농가구, tbl: DT_1A02012, itm: "^가구수$", want: ["^1.0~2.0ha미만$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgz_b, title: 재배면적 2ha 이상 귀농가구, tbl: DT_1A02012, itm: "^가구수$", want: ["^2.0ha이상$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgo_own, title: 자기 농지만 경작하는 귀농가구, tbl: DT_1A02013, itm: "^농지 경영형태$", want: ["^가구수$"], codes: {C2: "^0301$"}, periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgo_mix, title: 자기 농지와 빌린 농지를 함께 경작하는 귀농가구, tbl: DT_1A02013, itm: "^농지 경영형태$", want: ["^가구수$"], codes: {C2: "^0401$"}, periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgo_rent, title: 빌린 농지만 경작하는 귀농가구, tbl: DT_1A02013, itm: "^농지 경영형태$", want: ["^가구수$"], codes: {C2: "^0501$"}, periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rgo_own_ar, title: 자기 농지만 경작 귀농가구 평균 면적, tbl: DT_1A02013, itm: "^농지 경영형태$", want: ["^자경면적$"], codes: {C2: "^0302$"}, periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rgo_rent_ar, title: 빌린 농지만 경작 귀농가구 평균 면적, tbl: DT_1A02013, itm: "^농지 경영형태$", want: ["^임차면적$"], codes: {C2: "^0502$"}, periods: 3, unit: ㎡, survey: 귀농어귀촌인통계}
+      - {id: rgf_seoul, title: 서울에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^서울특별시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_gg, title: 경기에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^경기도$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_inc, title: 인천에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^인천광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_bs, title: 부산에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^부산광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_dg, title: 대구에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^대구광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_gj, title: 광주에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^광주광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rgf_dj, title: 대전에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^대전광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

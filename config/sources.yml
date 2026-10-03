@@ -5140,6 +5140,45 @@ sources:
       - {id: ks_mvb_etc, title: "한식 식품제조업체 채소 구입처 기타", tbl: DT_114058_F029, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_mgb_farm, title: "한식 식품제조업체 곡류 구입처 산지조달", tbl: DT_114058_F033, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_mfb_farm, title: "한식 식품제조업체 과일·과채 구입처 산지조달", tbl: DT_114058_F031, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: rc_buy_all, title: "쌀가공업체 쌀 구입량 합계", tbl: DT_446001_A035, org: "466", periods: 2, itm: "^합계$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_buy_gen, title: "쌀가공업체 쌀 구입량 일반미", tbl: DT_446001_A035, org: "466", periods: 2, itm: "^일반미$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_buy_glu, title: "쌀가공업체 쌀 구입량 찹쌀", tbl: DT_446001_A035, org: "466", periods: 2, itm: "^찹쌀$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_buy_brk, title: "쌀가공업체 쌀 구입량 싸라기", tbl: DT_446001_A035, org: "466", periods: 2, itm: "^싸라기$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_buy_spc, title: "쌀가공업체 쌀 구입량 특수미", tbl: DT_446001_A035, org: "466", periods: 2, itm: "^특수미$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_all, title: "쌀가공업체 민간 쌀 구입처 민간 합계", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^합계$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_dist, title: "쌀가공업체 민간 쌀 구입처 유통업체", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^유통업체$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_grain, title: "쌀가공업체 민간 쌀 구입처 양곡상", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^양곡상$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_rpc, title: "쌀가공업체 민간 쌀 구입처 산지유통업체(RPC·민간)", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^산지유통업체\\(RPC/민간\\)$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_farm, title: "쌀가공업체 민간 쌀 구입처 농가 직거래·자가재배", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^농가직거래/자가재배$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_src_con, title: "쌀가공업체 민간 쌀 구입처 계약재배", tbl: DT_446001_A036_1, org: "466", periods: 1, itm: "^계약재배.*$", want: ["^전체$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_all, title: "쌀가공업체 쌀가루 구입량 합계", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^합계$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_dry, title: "쌀가공업체 쌀가루 구입량 건식미분", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^건식미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_wet, title: "쌀가공업체 쌀가루 구입량 습식·반습식", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^습식/반습식$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_mix, title: "쌀가공업체 쌀가루 구입량 프리믹스", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^프리믹스$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_alpha, title: "쌀가공업체 쌀가루 구입량 알파미분", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^알파미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_grit, title: "쌀가공업체 쌀가루 구입량 그릿츠", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^그릿츠$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_roast, title: "쌀가공업체 쌀가루 구입량 볶음미분", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^볶음미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_flr_etc, title: "쌀가공업체 쌀가루 구입량 기타", tbl: DT_446001_A037, org: "466", periods: 2, itm: ".", want: ["^전체$", "^기타$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_fo_dom, title: "쌀가공업체 쌀가루 원산지 비중 국내산", tbl: DT_446001_A038, org: "466", periods: 2, itm: "^국내산$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_fo_imp, title: "쌀가공업체 쌀가루 원산지 비중 수입산", tbl: DT_446001_A038, org: "466", periods: 2, itm: "^수입산$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_dept, title: "쌀가공식품 판매처 비중 백화점", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^백화점$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_mart, title: "쌀가공식품 판매처 비중 대형마트·슈퍼마켓", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^대형마트/슈퍼마켓$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_cvs, title: "쌀가공식품 판매처 비중 편의점", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^편의점$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_own, title: "쌀가공식품 판매처 비중 직영 영업소", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^직영 영업소\\(점포\\)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_agcy, title: "쌀가공식품 판매처 비중 대리점", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^대리점$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_onl, title: "쌀가공식품 판매처 비중 무점포 판매", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^무점포 판매$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_mfr, title: "쌀가공식품 판매처 비중 제조업체", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^제조업체$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_food, title: "쌀가공식품 판매처 비중 외식·급식업체", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^(외식/)?급식업체$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_exp, title: "쌀가공식품 판매처 비중 수출", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^수출$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ch_etc, title: "쌀가공식품 판매처 비중 기타", tbl: DT_446001_A031, org: "466", periods: 2, itm: "^기타$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ct_org, title: "쌀가공업체 보유 인증 유기가공식품인증", tbl: DT_446001_A033, org: "466", periods: 2, itm: "^유기가공식품인증$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ct_haccp, title: "쌀가공업체 보유 인증 HACCP", tbl: DT_446001_A033, org: "466", periods: 2, itm: "^식품안전관리인증기준\\(HACCP\\)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ct_gf, title: "쌀가공업체 보유 인증 글루텐프리인증", tbl: DT_446001_A033, org: "466", periods: 2, itm: "^글루텐프리인증$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ct_trad, title: "쌀가공업체 보유 인증 전통식품품질인증", tbl: DT_446001_A033, org: "466", periods: 2, itm: "^전통식품품질인증$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_ct_none, title: "쌀가공업체 보유 인증 보유 인증 없음", tbl: DT_446001_A033, org: "466", periods: 2, itm: "^보유 인증 없음$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pr_up, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 상승", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^상승$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pr_same, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 비슷", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^(비슷|동일)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_pr_down, title: "쌀가공업체 쌀·쌀가루 구입가격 1년 전보다 하락", tbl: DT_446001_A020, org: "466", periods: 2, itm: "^하락$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

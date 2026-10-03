@@ -1592,7 +1592,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식·가온 연료·시설 유형·외식업 식재료 국내산 비중·구매경로·국산 사용 이유', 175) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식·가온 연료·시설 유형·외식업 식재료 국내산 비중·구매경로·국산·수입산 사용 이유·소고기 원산지·가격정보·전처리 식재료', 183) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1803,11 +1803,17 @@
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
- <h3 class="sg-sub">외식업 식재료 <small>음식점이 사는 식재료 중 국내산 비중·구매경로 · 외식업체 식재료 구매 실태조사</small></h3>
+ <h3 class="sg-sub">외식업 식재료 <small>음식점이 사는 식재료 중 국내산 비중·구매경로·수입산을 쓰는 이유 · 외식업체 식재료 구매 실태조사</small></h3>
  <div class="sg-g">{{ card('fs_dom_beef', 'fy1', '구매량 기준 · 돼지고기 ' ~ num(K.fs_dom_pork.vals[-1], '%')|striptags ~ ' · 닭고기 ' ~ num(K.fs_dom_chick.vals[-1], '%')|striptags if K.fs_dom_pork and K.fs_dom_chick else none, '#c77b30') }}{{ card('fs_dom_kim', 'fy2', '음식점이 사서 쓰는 김치 중 국산 · 구매량 기준', '#c0392b') }}{{ card('fs_dom_chili', 'fy3', '건고추 포함 · 구매량 기준', '#c0392b') }}{{ card('fs_dom_garlic', 'fy4', '구매량 기준 · 양파 ' ~ num(K.fs_dom_onion.vals[-1], '%')|striptags if K.fs_dom_onion else none) }}{{ card('fs_dom_squid', 'fy5', '구매량 기준 · 멸치 ' ~ num(K.fs_dom_anch.vals[-1], '%')|striptags if K.fs_dom_anch else none, '#1f5f8a') }}{{ card('fs_ch_local', 'fy6', '식재료 구매액 중 비중 · 농수산물 도매시장 ' ~ num(K.fs_ch_wmk.vals[-1], '%')|striptags if K.fs_ch_wmk else none) }}
   {{ hcard('품목별 국내산 사용 비중', [('사과', K.fs_dom_apple), ('배', K.fs_dom_pear), ('계란', K.fs_dom_egg), ('풋고추·홍고추', K.fs_dom_pep), ('파(대파)', K.fs_dom_gonion), ('배추', K.fs_dom_cab), ('무', K.fs_dom_rad), ('쌀', K.fs_dom_rice), ('양파', K.fs_dom_onion), ('감자', K.fs_dom_pot), ('멸치', K.fs_dom_anch), ('닭고기', K.fs_dom_chick), ('당근', K.fs_dom_car), ('마늘', K.fs_dom_garlic), ('돼지고기', K.fs_dom_pork), ('고춧가루', K.fs_dom_chili), ('오징어', K.fs_dom_squid), ('김치', K.fs_dom_kim), ('소고기', K.fs_dom_beef)], '%', '전체 외식업체 구매량 중 국산 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}
   {{ hcard('식재료 구매경로', [('개인 도매상', K.fs_ch_whs), ('식자재 마트', K.fs_ch_mart), ('프랜차이즈 본사', K.fs_ch_fc), ('농수산물 도매시장', K.fs_ch_wmk), ('식재료 유통법인', K.fs_ch_corp), ('일반 대형마트', K.fs_ch_hyp), ('산지 직거래·로컬푸드', K.fs_ch_local), ('식재료 유통 대기업', K.fs_ch_big), ('온라인마트', K.fs_ch_onl), ('소매상', K.fs_ch_ret), ('수입상', K.fs_ch_imp), ('기타', K.fs_ch_etc), ('직접 생산', K.fs_ch_self)], '%', '구매 비율 응답 평균 · 합계 100% · 오른쪽은 1년 전 대비(%p)', none, '#1f5f8a') }}
   {{ hcard('국내산 원재료를 쓰는 이유', [('맛·품질이 우수해서', K.fs_why_qual), ('안전해서', K.fs_why_safe), ('물량 확보가 쉬워서', K.fs_why_supply), ('프랜차이즈 본사가 제공', K.fs_why_fc), ('가격 변화가 적어서', K.fs_why_stable), ('가격이 저렴해서', K.fs_why_cheap), ('프리미엄 제품용', K.fs_why_prem), ('국산 안 씀', K.fs_why_none)], '%', '1+2순위 응답 비중 · 오른쪽은 1년 전 대비(%p)', none, '#7a6a3a') }}
+  {{ card('fs_imp_cheap', 'fx1', '1+2순위 응답 비중 · 국산을 쓰는 이유로 가격을 꼽은 비중은 ' ~ num(K.fs_why_cheap.vals[-1], '%')|striptags if K.fs_why_cheap else none, '#c77b30') }}{{ card('fs_pi_kamis', 'fx2', '중복응답 · 식재료 공급업체에 묻는다 ' ~ num(K.fs_pi_supp.vals[-1], '%')|striptags if K.fs_pi_supp else none, '#1f5f8a') }}{{ card('fs_bf_au', 'fx3', '외국산 소고기 쓰는 곳의 원산지 · 미국 ' ~ num(K.fs_bf_us.vals[-1], '%')|striptags if K.fs_bf_us else none, '#c0392b') }}
+  {{ hcard('수입 원재료를 쓰는 이유', [('가격이 저렴해서', K.fs_imp_cheap), ('외국산 안 씀', K.fs_imp_none), ('물량 확보가 쉬워서', K.fs_imp_supply), ('가격 변화가 적어서', K.fs_imp_stable), ('프랜차이즈 본사가 제공', K.fs_imp_fc), ('안전해서', K.fs_imp_safe), ('맛·품질이 우수해서', K.fs_imp_qual), ('프리미엄 제품용', K.fs_imp_prem)], '%', '1+2순위 응답 비중 · 오른쪽은 1년 전 대비(%p)', none, '#c77b30') }}
+  {{ hcard('외국산 소고기 원산지', [('호주', K.fs_bf_au), ('미국', K.fs_bf_us), ('외국산 안 씀', K.fs_bf_none), ('뉴질랜드', K.fs_bf_nz)], '%', '중복응답 · 오른쪽은 1년 전 대비(%p)', none, '#c0392b') }}
+  {{ hcard('주재료 구매처를 주로 쓰는 이유', [('품질·신선도가 좋아서', K.fs_sup_qual), ('물량 확보가 쉬워서', K.fs_sup_supply), ('프랜차이즈 본사라서', K.fs_sup_fc), ('오랜 거래로 믿을 수 있어서', K.fs_sup_trust), ('가격이 저렴해서', K.fs_sup_cheap), ('한 번에 여러 재료를 사서', K.fs_sup_onestop), ('직접 배달해 줘서', K.fs_sup_deliv), ('가격 변화가 적어서', K.fs_sup_stable)], '%', '1+2순위 응답 비중 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}
+  {{ hcard('식재료 가격정보를 얻는 곳', [('식재료 공급업체', K.fs_pi_supp), ('인터넷 검색', K.fs_pi_web), ('지인·동종업체', K.fs_pi_peer), ('직접 현장조사', K.fs_pi_field), ('정부기관 공시정보', K.fs_pi_gov), ('협회 등 커뮤니티', K.fs_pi_assoc), ('aT 농산물유통정보(KAMIS)', K.fs_pi_kamis)], '%', '중복응답 · 오른쪽은 1년 전 대비(%p)', none, '#1f5f8a') }}
+  {{ hcard('손질된(전처리) 식재료를 사는 이유', [('전처리 식재료 안 씀', K.fs_pre_none), ('저장·보관이 쉬워서', K.fs_pre_store), ('일손이 모자라서', K.fs_pre_labor), ('위생적이어서', K.fs_pre_hyg), ('음식물쓰레기가 줄어서', K.fs_pre_waste), ('원물보다 싸서', K.fs_pre_cheap), ('손질 공간이 좁아서', K.fs_pre_space)], '%', '1+2순위 응답 비중 · 오른쪽은 1년 전 대비(%p)', none, '#7a6a3a') }}
  </div>
  </div></details>
 

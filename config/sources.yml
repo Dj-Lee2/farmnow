@@ -4596,6 +4596,40 @@ sources:
       - {id: fs_why_prem, title: "외식업 국내산 사용 이유 프리미엄 제품 생산을 위해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^프리미엄 제품 생산을 위해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_why_fc, title: "외식업 국내산 사용 이유 프랜차이즈 본사에서 제공해줘서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^프랜차이즈 본사에서 제공해줘서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_why_none, title: "외식업 국내산 사용 이유 국산 식재료 사용 안 함", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^국산 식재료 사용 안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_cheap, title: "외식업 수입산 사용 이유 가격이 저렴해서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^가격이 저렴해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_stable, title: "외식업 수입산 사용 이유 가격변화가 비교적 적어서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^가격변화가 비교적 적어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_supply, title: "외식업 수입산 사용 이유 물량 확보가 용이해서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^물량 확보가 용이해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_safe, title: "외식업 수입산 사용 이유 안전해서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^안전해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_qual, title: "외식업 수입산 사용 이유 맛·품질이 우수해서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^맛·품질이 우수해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_prem, title: "외식업 수입산 사용 이유 프리미엄 제품 생산을 위해서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^프리미엄 제품 생산을 위해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_fc, title: "외식업 수입산 사용 이유 프랜차이즈 본사에서 제공해줘서", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^프랜차이즈 본사에서 제공해줘서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_imp_none, title: "외식업 수입산 사용 이유 외국산 식재료 사용안 함", tbl: DT_114054_129, org: "114", se: F, periods: 2, itm: "^수입 원재료 사용 이유$", want: ["^외국산 식재료 사용안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_peer, title: "외식업 식재료 가격정보 얻는 곳 지인(동종업체)으로부터 참고", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^지인\\(동종업체\\)으로부터 참고$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_web, title: "외식업 식재료 가격정보 얻는 곳 인터넷 사이트 탐색", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^인터넷 사이트 탐색$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_gov, title: "외식업 식재료 가격정보 얻는 곳 정부기관 공시정보를 통해서", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^정부기관 공시정보를 통해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_kamis, title: "외식업 식재료 가격정보 얻는 곳 aT 농산물유통정보(KAMIS)를 통해서", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^aT 농산물유통정보\\(KAMIS\\)를 통해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_assoc, title: "외식업 식재료 가격정보 얻는 곳 협회 등 커뮤니티를 통해", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^협회 등 커뮤니티를 통해$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_field, title: "외식업 식재료 가격정보 얻는 곳 직접 현장조사", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^직접 현장조사$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pi_supp, title: "외식업 식재료 가격정보 얻는 곳 식재료 공급업체", tbl: DT_114054_132, org: "114", se: F, periods: 2, itm: "^식재료 가격정보 획득방법$", want: ["^식재료 공급업체$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_cheap, title: "외식업 전처리 식재료 구매 이유 원물상태보다 저렴해서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^원물상태보다 저렴해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_labor, title: "외식업 전처리 식재료 구매 이유 인력이 부족해서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^인력이 부족해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_store, title: "외식업 전처리 식재료 구매 이유 저장·보관이 용이해서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^저장·보관이 용이해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_hyg, title: "외식업 전처리 식재료 구매 이유 위생적이어서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^위생적이어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_waste, title: "외식업 전처리 식재료 구매 이유 음식물쓰레기 배출량이 적어서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^음식물쓰레기 배출량이 적어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_space, title: "외식업 전처리 식재료 구매 이유 식재료 손질 공간이 협소해서", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^식재료 손질 공간이 협소해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_pre_none, title: "외식업 전처리 식재료 구매 이유 전처리 식재료 사용 안 함", tbl: DT_114054_131, org: "114", se: F, periods: 2, itm: "^식재료 전처리 상태 구매 이유$", want: ["^전처리 식재료 사용 안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_cheap, title: "외식업 주재료 구매처 이용 이유 가격이 저렴해서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^가격이 저렴해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_stable, title: "외식업 주재료 구매처 이용 이유 가격변화가 비교적 적어서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^가격변화가 비교적 적어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_supply, title: "외식업 주재료 구매처 이용 이유 물량 확보가 용이해서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^물량 확보가 용이해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_qual, title: "외식업 주재료 구매처 이용 이유 품질(신선도 등)이 우수", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^품질\\(신선도 등\\)이 우수$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_trust, title: "외식업 주재료 구매처 이용 이유 오랜 거래처로 신뢰가 쌓여서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^오랜 거래처로 신뢰가 쌓여서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_onestop, title: "외식업 주재료 구매처 이용 이유 여러 재료를 한꺼번에 구입하기 편해서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^여러 재료를 한꺼번에 구입하기 편해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_deliv, title: "외식업 주재료 구매처 이용 이유 직접 배달해 주어서", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^직접 배달해 주어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_sup_fc, title: "외식업 주재료 구매처 이용 이유 프랜차이즈 본사이므로", tbl: DT_114054_117, org: "114", se: F, periods: 2, itm: "^주재료 구매처를 주로 이용하는 이유$", want: ["^프랜차이즈 본사이므로$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_bf_us, title: "외식업 외국산 소고기 원산지 미국", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^미국$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_bf_au, title: "외식업 외국산 소고기 원산지 호주", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^호주$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_bf_nz, title: "외식업 외국산 소고기 원산지 뉴질랜드", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^뉴질랜드$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_bf_none, title: "외식업 외국산 소고기 원산지 외국산 사용 안 함", tbl: DT_114054_130, org: "114", se: F, periods: 2, itm: "^외국산 소고기 수입 국가$", want: ["^외국산 사용 안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

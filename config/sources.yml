@@ -5085,6 +5085,30 @@ sources:
       - {id: wf_co_exe, title: "여성농업인 농축협 참여 현황 이사·감사 등 임원", tbl: DT_114036_2024_A016, org: "114", se: F, periods: 1, itm: "^농축협 참여 현황", want: ["^여성농업인\\(전체\\)$", "^이사·감사 등 임원$"], unit: "%", survey: 여성농업인 실태조사}
       - {id: wf_co_none, title: "여성농업인 농축협 참여 현황 조합원 아님", tbl: DT_114036_2024_A016, org: "114", se: F, periods: 1, itm: "^농축협 참여 현황", want: ["^여성농업인\\(전체\\)$", "^조합원 아님$"], unit: "%", survey: 여성농업인 실태조사}
       - {id: wf_co_mem_m, title: "남성농업인 농축협 참여 현황 일반 조합원", tbl: DT_114036_2024_A016, org: "114", se: F, periods: 1, itm: "^농축협 참여 현황", want: ["^남성농업인\\(전체\\)$", "^일반 조합원$"], unit: "%", survey: 여성농업인 실태조사}
+      - {id: mbl_all, title: "산란계 벨트·스크레이퍼 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_006_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbl_d, title: "산란계 벨트·스크레이퍼 축사 분뇨 매일 수거 농장", tbl: DT_114059_006_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^매일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbl_3, title: "산란계 벨트·스크레이퍼 축사 분뇨 2~3일 수거 농장", tbl: DT_114059_006_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^2~3일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbl_7, title: "산란계 벨트·스크레이퍼 축사 분뇨 4~7일 수거 농장", tbl: DT_114059_006_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^4~7일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbl_w, title: "산란계 벨트·스크레이퍼 축사 분뇨 7일 이상 간격 수거 농장", tbl: DT_114059_006_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^7일 이상$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpl_all, title: "산란계 평사 등 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_006_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpl_3m, title: "산란계 평사 등 축사 분뇨 3개월 미만 간격 수거 농장", tbl: DT_114059_006_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^3개월 미만$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpl_6m, title: "산란계 평사 등 축사 분뇨 3~6개월 간격 수거 농장", tbl: DT_114059_006_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^3~6개월$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpl_12m, title: "산란계 평사 등 축사 분뇨 6~12개월 간격 수거 농장", tbl: DT_114059_006_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^6~12개월$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpl_y, title: "산란계 평사 등 축사 분뇨 12개월 이상 간격 수거 농장", tbl: DT_114059_006_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^12개월 이상$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbb_all, title: "육계 벨트·스크레이퍼 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_007_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbb_3, title: "육계 벨트·스크레이퍼 축사 분뇨 2~3일 수거 농장", tbl: DT_114059_007_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^2~3일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbb_7, title: "육계 벨트·스크레이퍼 축사 분뇨 4~7일 수거 농장", tbl: DT_114059_007_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^4~7일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpb_all, title: "육계 평사 등 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_007_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpb_ship, title: "육계 평사 등 축사 매 출하 후 분뇨 수거 농장", tbl: DT_114059_007_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^매 출하 후 수거$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpb_yr, title: "육계 평사 등 축사 깔짚 연 1~4회 교체 농장", tbl: DT_114059_007_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^연간 1~4회 교체$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpb_old, title: "육계 평사 등 축사 깔짚 1년 이상 사용 농장", tbl: DT_114059_007_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^1년 이상 사용$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbk_all, title: "오리 스크레이퍼 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_008_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbk_d, title: "오리 스크레이퍼 축사 분뇨 매일 수거 농장", tbl: DT_114059_008_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^매일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mbk_3, title: "오리 스크레이퍼 축사 분뇨 2~3일 수거 농장", tbl: DT_114059_008_01, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^2~3일$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpk_all, title: "오리 평사 등 축사 분뇨 수거주기 조사 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpk_ship, title: "오리 평사 등 축사 매 출하 후 분뇨 수거 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^매 출하 후 수거$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpk_yr, title: "오리 평사 등 축사 깔짚 연 1~4회 교체 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^연간 1~4회 교체$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mpk_old, title: "오리 평사 등 축사 깔짚 1년 이상 사용 농장", tbl: DT_114059_008_02, org: "114", periods: 1, itm: "농가수$", want: ["^합계$", "^1년 이상 사용$"], unit: 호, survey: 가축분뇨처리통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

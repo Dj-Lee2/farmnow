@@ -4556,6 +4556,46 @@ sources:
       - {id: ins_pu_bio, title: "곤충 가공·유통 판매액 천적용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^천적용$"], unit: 백만원, survey: 곤충산업실태조사}
       - {id: ins_pu_env, title: "곤충 가공·유통 판매액 환경정화용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^환경정화용$"], unit: 백만원, survey: 곤충산업실태조사}
       - {id: ins_pu_etc, title: "곤충 가공·유통 판매액 기타", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^기타$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: fs_dom_beef, title: "외식업 국내산 사용 비중 소고기", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^소고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_pork, title: "외식업 국내산 사용 비중 돼지고기", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^돼지고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_chick, title: "외식업 국내산 사용 비중 닭고기", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^닭고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_egg, title: "외식업 국내산 사용 비중 계란", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^계란$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_rice, title: "외식업 국내산 사용 비중 쌀", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^쌀$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_squid, title: "외식업 국내산 사용 비중 오징어", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^오징어$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_anch, title: "외식업 국내산 사용 비중 멸치", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^멸치$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_garlic, title: "외식업 국내산 사용 비중 마늘", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^마늘$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_onion, title: "외식업 국내산 사용 비중 양파", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^양파$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_gonion, title: "외식업 국내산 사용 비중 파(대파)", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^파\\(대파\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_pep, title: "외식업 국내산 사용 비중 풋고추·홍고추", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^풋고추·홍고추$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_cab, title: "외식업 국내산 사용 비중 배추", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^배추$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_rad, title: "외식업 국내산 사용 비중 무", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^무$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_car, title: "외식업 국내산 사용 비중 당근", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^당근$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_pot, title: "외식업 국내산 사용 비중 감자", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^감자$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_apple, title: "외식업 국내산 사용 비중 사과", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^사과$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_pear, title: "외식업 국내산 사용 비중 배", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^배$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_chili, title: "외식업 국내산 사용 비중 고춧가루(건고추 포함)", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^고춧가루\\(건고추\\ 포함\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_kim, title: "외식업 국내산 사용 비중 김치", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^김치$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_big, title: "외식업 식재료 구매경로 식재료 유통 대기업", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^식재료 유통 대기업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_corp, title: "외식업 식재료 구매경로 식재료 유통법인", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^식재료 유통법인$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_whs, title: "외식업 식재료 구매경로 개인 도매상", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^개인 도매상$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_mart, title: "외식업 식재료 구매경로 식자재 마트", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^식자재 마트$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_hyp, title: "외식업 식재료 구매경로 일반 대형마트", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^일반 대형마트$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_wmk, title: "외식업 식재료 구매경로 농수산물 도매시장", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^농수산물 도매시장$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_ret, title: "외식업 식재료 구매경로 소매상", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^소매상$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_local, title: "외식업 식재료 구매경로 산지 직거래 및 로컬푸드 매장", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^산지 직거래 및 로컬푸드 매장$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_self, title: "외식업 식재료 구매경로 직접 생산", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^직접 생산$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_fc, title: "외식업 식재료 구매경로 프랜차이즈 본사", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^프랜차이즈 본사$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_onl, title: "외식업 식재료 구매경로 온라인마트", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^온라인마트$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_imp, title: "외식업 식재료 구매경로 수입상", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^수입상$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_ch_etc, title: "외식업 식재료 구매경로 기타", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^기타$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_cheap, title: "외식업 국내산 사용 이유 가격이 저렴해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^가격이 저렴해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_stable, title: "외식업 국내산 사용 이유 가격변화가 비교적 적어서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^가격변화가 비교적 적어서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_supply, title: "외식업 국내산 사용 이유 물량 확보가 용이해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^물량 확보가 용이해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_safe, title: "외식업 국내산 사용 이유 안전해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^안전해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_qual, title: "외식업 국내산 사용 이유 맛·품질이 우수해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^맛·품질이 우수해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_prem, title: "외식업 국내산 사용 이유 프리미엄 제품 생산을 위해서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^프리미엄 제품 생산을 위해서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_fc, title: "외식업 국내산 사용 이유 프랜차이즈 본사에서 제공해줘서", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^프랜차이즈 본사에서 제공해줘서$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_why_none, title: "외식업 국내산 사용 이유 국산 식재료 사용 안 함", tbl: DT_114054_128, org: "114", se: F, periods: 2, itm: "^국내산 원재료 사용 이유$", want: ["^국산 식재료 사용 안 함$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

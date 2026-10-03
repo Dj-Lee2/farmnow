@@ -4168,6 +4168,28 @@ sources:
       - {id: ocp_ssm, title: 유기가공식품 주 구입처 — 대기업 슈퍼마켓, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^대기업에서 운영하는 슈퍼마켓$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: ocp_local, title: 유기가공식품 주 구입처 — 로컬푸드 마켓, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^오프라인 독립된 로컬푸드 마켓$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: ocp_town, title: 유기가공식품 주 구입처 — 동네 슈퍼·식자재마트, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^동네 슈퍼마켓 식자재마트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_dairy, title: 지출 많은 유기가공식품 품목군 — 유가공품, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^유가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_tofu, title: 지출 많은 유기가공식품 품목군 — 연식품(두부·묵 등), tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^연식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_egg, title: 지출 많은 유기가공식품 품목군 — 알가공품, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^알가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_bev, title: 지출 많은 유기가공식품 품목군 — 음료류, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^음료류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_sauce, title: 지출 많은 유기가공식품 품목군 — 장류, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^장류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_bread, title: 지출 많은 유기가공식품 품목군 — 빵 및 떡류, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^빵 및 떡류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_meat, title: 지출 많은 유기가공식품 품목군 — 육류가공품, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^육류가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_noodle, title: 지출 많은 유기가공식품 품목군 — 면류, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^면류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_kimchi, title: 지출 많은 유기가공식품 품목군 — 김치 및 절임류, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^김치 및 절임류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_coffee, title: 지출 많은 유기가공식품 품목군 — 커피 및 차, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^커피 및 차$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_grain, title: 지출 많은 유기가공식품 품목군 — 곡물가공품, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^곡물가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocg_etc, title: 지출 많은 유기가공식품 품목군 — 기타 품목군, tbl: DT_114053_083_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(조미수산가공품|염건수산가공품|과일채소가공품|과자류|간편식[(]HMR[)]|조미식품|유지류)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_brand, title: 유기가공식품 구입 시 우선 확인 — 브랜드·제조사, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^브랜드/상표/제조사$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_date, title: 유기가공식품 구입 시 우선 확인 — 제조일자·소비기한, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^제조일자/소비[(]유통[)]기한$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_cert, title: 유기가공식품 구입 시 우선 확인 — 품질인증 표시, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^품질인증 표시$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_price, title: 유기가공식품 구입 시 우선 확인 — 가격, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_origin, title: 유기가공식품 구입 시 우선 확인 — 원산지, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_vol, title: 유기가공식품 구입 시 우선 확인 — 용량, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^용량$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_ingr, title: 유기가공식품 구입 시 우선 확인 — 원재료·성분 함량, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원재료/성분함량$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_nutr, title: 유기가공식품 구입 시 우선 확인 — 영양성분, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_add, title: 유기가공식품 구입 시 우선 확인 — 식품첨가물, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: occ_etc, title: 유기가공식품 구입 시 우선 확인 — 기타 확인사항, tbl: DT_114053_085, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(포장 디자인|섭취주의사항[(]알레르기유발 등[)]|보관방법|포장 재활용 여부|기능성 표시/식품의 효능)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

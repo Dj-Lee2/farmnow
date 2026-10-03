@@ -1079,7 +1079,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처', 162) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항', 170) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1315,6 +1315,14 @@
   {{ hcard('유기가공식품 항목별 만족도', [('안전성', K.ocs_safe), ('영양·건강', K.ocs_health), ('편리성', K.ocs_conv), ('맛', K.ocs_taste), ('다양성', K.ocs_div), ('전반', K.ocs_all), ('가격', K.ocs_price)], '점', '5점 만점 평균 · 구입 경험자 기준 · 오른쪽은 1년 전 대비', none, '#2458d6') }}
   {{ hcard('향후 1년 유기가공식품 구입 계획', [('늘릴 것', K.ocf_up), ('현 수준 유지', K.ocf_keep), ('줄일 것', K.ocf_down)], '%', ('5점 만점 평균 ' ~ '{:.1f}'.format(K.ocf_avg.vals[-1]) ~ '점 · 오른쪽은 1년 전 대비') if K.ocf_avg else '오른쪽은 1년 전 대비', none, '#e0a03a') }}
   {{ hcard('유기가공식품 주 구입처', [('대형마트', K.ocp_mart), ('동네 슈퍼·식자재마트', K.ocp_town), ('대기업 슈퍼마켓', K.ocp_ssm), ('온라인 쇼핑몰', K.ocp_online), ('친환경 식품 전문점', K.ocp_eco), ('로컬푸드 마켓', K.ocp_local)], '%', '구입 경험자 중 비율 · 나머지는 편의점·홈쇼핑·백화점 등 · 오른쪽은 1년 전 대비', none, '#7a5cc2') }}
+  {{ card('ocg_dairy', 'e86', ('연식품(두부·묵 등) ' ~ '{:.1f}'.format(K.ocg_tofu.vals[-1]) ~ '% · 둘이 합쳐 절반 넘음') if K.ocg_tofu else none, '#1c7a45') }}
+  {{ card('ocg_egg', 'e87', ('음료류 ' ~ '{:.1f}'.format(K.ocg_bev.vals[-1]) ~ '% · 장류 ' ~ '{:.1f}'.format(K.ocg_sauce.vals[-1]) ~ '%') if K.ocg_bev and K.ocg_sauce else none, '#e0a03a') }}
+  {{ card('ocg_bread', 'e88', ('육류가공품 ' ~ '{:.1f}'.format(K.ocg_meat.vals[-1]) ~ '% · 면류 ' ~ '{:.1f}'.format(K.ocg_noodle.vals[-1]) ~ '%') if K.ocg_meat and K.ocg_noodle else none, '#3a8f6a') }}
+  {{ card('occ_cert', 'e89', ('유기 인증 마크 등 품질인증 표시를 가장 먼저 보는 비율 · 가격 ' ~ '{:.1f}'.format(K.occ_price.vals[-1]) ~ '%') if K.occ_price else none, '#2458d6') }}
+  {{ card('occ_brand', 'e90', ('원산지 ' ~ '{:.1f}'.format(K.occ_origin.vals[-1]) ~ '% · 용량 ' ~ '{:.1f}'.format(K.occ_vol.vals[-1]) ~ '%') if K.occ_origin and K.occ_vol else none, '#7a5cc2') }}
+  {{ card('occ_date', 'e91', ('원재료·성분 함량 ' ~ '{:.1f}'.format(K.occ_ingr.vals[-1]) ~ '% · 식품첨가물 ' ~ '{:.1f}'.format(K.occ_add.vals[-1]) ~ '%') if K.occ_ingr and K.occ_add else none, '#c0503a') }}
+  {{ hcard('지출 많은 유기가공식품 품목군', [('유가공품', K.ocg_dairy), ('연식품(두부·묵 등)', K.ocg_tofu), ('알가공품', K.ocg_egg), ('음료류', K.ocg_bev), ('장류', K.ocg_sauce), ('빵 및 떡류', K.ocg_bread), ('육류가공품', K.ocg_meat), ('면류', K.ocg_noodle), ('김치 및 절임류', K.ocg_kimchi), ('커피 및 차', K.ocg_coffee), ('곡물가공품', K.ocg_grain), ('기타 7개 품목군', K.ocg_etc)], '%', '구입 경험자가 돈을 가장 많이 쓰는 품목군 · 기타는 수산·과채 가공품·과자·간편식·조미식품·유지류 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
+  {{ hcard('유기가공식품 살 때 가장 먼저 확인하는 것', [('브랜드·제조사', K.occ_brand), ('제조일자·소비기한', K.occ_date), ('품질인증 표시', K.occ_cert), ('가격', K.occ_price), ('원산지', K.occ_origin), ('용량', K.occ_vol), ('원재료·성분 함량', K.occ_ingr), ('영양성분', K.occ_nutr), ('식품첨가물', K.occ_add), ('기타', K.occ_etc)], '%', '구입 경험자 중 1순위 응답 비율 · 기타는 포장 디자인·알레르기 주의·보관법·재활용·기능성 표시 · 오른쪽은 1년 전 대비', none, '#2458d6') }}
  </div>
 </div></details>
 

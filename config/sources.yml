@@ -5284,6 +5284,36 @@ sources:
       - {id: sx_pr_sns, title: "6차산업 체험관광 홍보 SNS", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS$"], unit: "%", survey: 농촌융복합산업 실태조사}
       - {id: sx_pr_off, title: "6차산업 체험관광 홍보 오프라인", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^오프라인$"], unit: "%", survey: 농촌융복합산업 실태조사}
       - {id: sx_pr_none, title: "6차산업 체험관광 홍보 홍보안함", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홍보안함$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sed_main_tot, title: 종자업체(주된 사업 표), tbl: DT_114052_005, org: "114", se: F, periods: 2, itm: "^종자업체의 주된 사업$", want: ["^전체$", "^계$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_main_breed, title: 주된 사업이 육종인 종자업체, tbl: DT_114052_005, org: "114", se: F, periods: 2, itm: "^종자업체의 주된 사업$", want: ["^전체$", "^육종$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_main_prod, title: 주된 사업이 종자생산인 종자업체, tbl: DT_114052_005, org: "114", se: F, periods: 2, itm: "^종자업체의 주된 사업$", want: ["^전체$", "^종자생산$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_main_sell, title: 주된 사업이 종자판매인 종자업체, tbl: DT_114052_005, org: "114", se: F, periods: 2, itm: "^종자업체의 주된 사업$", want: ["^전체$", "^종자판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_main_nur, title: 주된 사업이 육묘인 종자업체, tbl: DT_114052_005, org: "114", se: F, periods: 2, itm: "^종자업체의 주된 사업$", want: ["^전체$", "^육묘$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_dist_tot, title: 판매실적 있는 종자업체(유통지역 표), tbl: DT_114052_017, org: "114", se: F, periods: 2, itm: "^종자업체의 종자 유통지역$", want: ["^전체$", "^계$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_dist_dom, title: 국내에만 파는 종자업체, tbl: DT_114052_017, org: "114", se: F, periods: 2, itm: "^종자업체의 종자 유통지역$", want: ["^전체$", "^국내\\(판매\\)만$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_dist_exp, title: 수출만 하는 종자업체, tbl: DT_114052_017, org: "114", se: F, periods: 2, itm: "^종자업체의 종자 유통지역$", want: ["^전체$", "^해외\\(수출\\)만$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_dist_both, title: 국내 판매와 수출 병행 종자업체, tbl: DT_114052_017, org: "114", se: F, periods: 2, itm: "^종자업체의 종자 유통지역$", want: ["^전체$", "^국내\\(판매\\)와 해외\\(수출\\) 병행$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_sm_yes, title: 판매실적 있는 종자업체, tbl: DT_114052_015, org: "114", se: F, periods: 2, itm: "^종자업체의 판매액 실적 여부 및 판매방법$", want: ["^전체$", "^있음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_sm_dir, title: 직접판매만 하는 종자업체, tbl: DT_114052_015, org: "114", se: F, periods: 2, itm: "^종자업체의 판매액 실적 여부 및 판매방법$", want: ["^전체$", "^직접판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_sm_mix, title: 직접·위탁판매 병행 종자업체, tbl: DT_114052_015, org: "114", se: F, periods: 2, itm: "^종자업체의 판매액 실적 여부 및 판매방법$", want: ["^전체$", "^직접판매\\+위탁판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_sm_con, title: 위탁판매만 하는 종자업체, tbl: DT_114052_015, org: "114", se: F, periods: 2, itm: "^종자업체의 판매액 실적 여부 및 판매방법$", want: ["^전체$", "^위탁판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: nur_vp_tot, title: 채소묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^계$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_pep, title: 고추 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^고추$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_cab, title: 배추 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^배추$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_wm, title: 수박 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^수박$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_tom, title: 토마토 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^토마토$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_cuc, title: 오이 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^오이$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_oni, title: 양파 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^양파$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vp_let, title: 상추 묘 생산량, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^상추$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nur_vs_tot, title: 채소묘 판매액, tbl: DT_114052_B23_1, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: ["^계$"], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_fs_tot, title: 식량작물 묘 판매액, tbl: DT_114052_B21, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: ["^계$"], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_fs_rice, title: 벼 묘 판매액, tbl: DT_114052_B21, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: ["^벼$"], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_fs_bean, title: 콩 묘 판매액, tbl: DT_114052_B21, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: ["^콩$"], unit: 만원, survey: 육묘업실태조사}
+      - {id: nur_gr_wm, title: 수박 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^수박$", "^접목$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_gr_cuc, title: 오이 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^오이$", "^접목$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_gr_tom, title: 토마토 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^토마토$", "^접목$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_gr_pep, title: 고추 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^고추$", "^접목$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nur_gr_mel, title: 참외 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^참외$", "^접목$"], unit: "%", survey: 육묘업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

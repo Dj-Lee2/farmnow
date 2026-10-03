@@ -1241,7 +1241,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적', 226) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로', 237) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1559,6 +1559,20 @@
   {{ hcard('종자업체 업체당 상시근무자 직무', [('생산·품질관리', K.sed_job_qc), ('경영 및 기타', K.sed_job_mgmt), ('관행육종', K.sed_job_breed)], '명', '업체 평균 · 괄호는 업체당 상시근무자 중 비율 · 나머지는 영업·생명공학 · 오른쪽은 2년 전 대비', K.sed_job_tot.vals[-1] if K.sed_job_tot else none, '#3a8f6a') }}
   {{ hcard('해외채종 안 한 종자업체의 사유', [('국내 채종만으로 충분', K.sed_os_dom), ('사업체 규모 등 부적합', K.sed_os_size), ('해외 채종 지식 부족', K.sed_os_know)], '개', '괄호는 해외채종 실적 없는 업체 중 비율 · 나머지는 기타 · 오른쪽은 2년 전 대비', K.sed_os_no.vals[-1] if K.sed_os_no else none, '#e0a03a') }}
   {{ hcard('종자업체 시설별 평균 건물 연면적', [('연구시설', K.sed_bl_lab), ('저온저장고', K.sed_bl_cold), ('사무실', K.sed_bl_office), ('가공·처리시설', K.sed_bl_proc)], '㎡', '업체 평균 · 괄호는 전체 연면적 중 비율 · 나머지는 항온항습창고·기타 · 오른쪽은 2년 전 대비', K.sed_bl_tot.vals[-1] if K.sed_bl_tot else none, '#c0503a') }}
+ </div>
+ <h3 class="sg-sub">육묘장이 키우는 채소·식량작물 묘와 종자업체 판로 <small>국립종자원 육묘업·종자업실태조사 · 2년마다</small></h3>
+ <div class="sg-g">
+  {{ card('nur_vp_tot', 'vp1', ('고추·배추·양파·상추 묘가 ' ~ '{:.1f}'.format((K.nur_vp_pep.vals[-1] + K.nur_vp_cab.vals[-1] + K.nur_vp_oni.vals[-1] + K.nur_vp_let.vals[-1]) / K.nur_vp_tot.vals[-1] * 100) ~ '%') if K.nur_vp_pep and K.nur_vp_cab and K.nur_vp_oni and K.nur_vp_let and K.nur_vp_tot else none, '#1c7a45') }}
+  {{ card('nur_vs_tot', 'vp2', '육묘업체가 판 채소 모종 전체 · 2년 전 대비', '#3a8f6a') }}
+  {{ card('nur_fs_tot', 'vp3', ('벼 모가 ' ~ '{:.1f}'.format(K.nur_fs_rice.vals[-1] / K.nur_fs_tot.vals[-1] * 100) ~ '% · 콩·옥수수·보리 등 포함') if K.nur_fs_rice and K.nur_fs_tot else none, '#e0a03a') }}
+  {{ rcard('주된 사업이 육묘인 종자업체', K.sed_main_nur, K.sed_main_tot, 'vp4', '등록 종자업체 중 · 2년 전 대비', '#3a8f6a') }}
+  {{ rcard('직접판매만 하는 종자업체', K.sed_sm_dir, K.sed_sm_yes, 'vp5', '판매실적 있는 업체 중 · 나머지는 위탁판매 이용 · 2년 전 대비', '#7a5cc2') }}
+  {{ rcard('국내 판매와 수출 병행 종자업체', K.sed_dist_both, K.sed_dist_tot, 'vp6', '판매실적 있는 업체 중 · 수출만 하는 업체는 별도 · 2년 전 대비', '#c0503a') }}
+  {{ hcard('채소묘 작목별 생산량', [('배추', K.nur_vp_cab), ('양파', K.nur_vp_oni), ('고추', K.nur_vp_pep), ('상추', K.nur_vp_let), ('토마토', K.nur_vp_tom), ('오이', K.nur_vp_cuc), ('수박', K.nur_vp_wm)], '만주', '괄호는 채소묘 전체 생산량 중 비율 · 나머지는 양배추·호박·가지 등 · 오른쪽은 2년 전 대비', K.nur_vp_tot.vals[-1] if K.nur_vp_tot else none, '#3a8f6a') }}
+  {{ hcard('주요 채소묘 접목묘 비중', [('수박', K.nur_gr_wm), ('토마토', K.nur_gr_tom), ('오이', K.nur_gr_cuc), ('참외', K.nur_gr_mel), ('고추', K.nur_gr_pep)], '%', '작목별 생산 묘 중 접목묘 비율 · 나머지는 실생묘 · 오른쪽은 2년 전 대비', none, '#1c7a45') }}
+  {{ hcard('식량작물 묘 판매액', [('벼', K.nur_fs_rice), ('콩', K.nur_fs_bean)], '만원', '괄호는 식량작물 묘 판매액 중 비율 · 오른쪽은 2년 전 대비', K.nur_fs_tot.vals[-1] if K.nur_fs_tot else none, '#e0a03a') }}
+  {{ hcard('종자업체의 주된 사업', [('종자생산', K.sed_main_prod), ('종자판매', K.sed_main_sell), ('육묘', K.sed_main_nur), ('육종', K.sed_main_breed)], '개', '괄호는 등록 종자업체 중 비율 · 나머지는 종자가공·기타 · 오른쪽은 2년 전 대비', K.sed_main_tot.vals[-1] if K.sed_main_tot else none, '#7a5cc2') }}
+  {{ hcard('종자업체 판매 방법', [('직접판매만', K.sed_sm_dir), ('직접판매+위탁판매', K.sed_sm_mix), ('위탁판매만', K.sed_sm_con)], '개', '괄호는 판매실적 있는 업체 중 비율 · 오른쪽은 2년 전 대비', K.sed_sm_yes.vals[-1] if K.sed_sm_yes else none, '#c0503a') }}
  </div>
 </div></details>
 

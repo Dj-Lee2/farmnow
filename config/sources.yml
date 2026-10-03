@@ -5439,6 +5439,33 @@ sources:
       - {id: rms_spc, title: 귀농 가구 평균 재배비중 특작·약용, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^특작"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rms_live, title: 귀농 가구 평균 재배비중 축산, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^축산"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rms_etc, title: 귀농 가구 평균 재배비중 기타, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^기타"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: bfp_rev, title: 육우 두당 총수입, tbl: DT_1EE022_23, itm: "^평균$", want: ["^총수입"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_inc, title: 육우 두당 소득, tbl: DT_1EE022_23, itm: "^평균$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_net, title: 육우 두당 순수익, tbl: DT_1EE022_23, itm: "^평균$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_n1, title: 육우 30두 미만 농가 두당 순수익, tbl: DT_1EE022_23, itm: "^30두미만$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_n2, title: 육우 30~69두 농가 두당 순수익, tbl: DT_1EE022_23, itm: "^30~69두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_n3, title: 육우 70~119두 농가 두당 순수익, tbl: DT_1EE022_23, itm: "^70~119두$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_n4, title: 육우 120두 이상 농가 두당 순수익, tbl: DT_1EE022_23, itm: "^120두이상$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_i1, title: 육우 30두 미만 농가 두당 소득, tbl: DT_1EE022_23, itm: "^30두미만$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_i2, title: 육우 30~69두 농가 두당 소득, tbl: DT_1EE022_23, itm: "^30~69두$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_i3, title: 육우 70~119두 농가 두당 소득, tbl: DT_1EE022_23, itm: "^70~119두$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_i4, title: 육우 120두 이상 농가 두당 소득, tbl: DT_1EE022_23, itm: "^120두이상$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_c1, title: 육우 30두 미만 농가 두당 생산비, tbl: DT_1EE022_23, itm: "^30두미만$", want: ["^비용합계"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_c2, title: 육우 30~69두 농가 두당 생산비, tbl: DT_1EE022_23, itm: "^30~69두$", want: ["^비용합계"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_c3, title: 육우 70~119두 농가 두당 생산비, tbl: DT_1EE022_23, itm: "^70~119두$", want: ["^비용합계"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfp_c4, title: 육우 120두 이상 농가 두당 생산비, tbl: DT_1EE022_23, itm: "^120두이상$", want: ["^비용합계"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfx_tot, title: 육우 두당 사육비 합계, tbl: DT_1EE021_23, itm: "^평균$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfx_util, title: 육우 두당 수도광열비, tbl: DT_1EE021_23, itm: "^평균$", want: ["^수도광열비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfx_hire, title: 육우 두당 고용노동비, tbl: DT_1EE021_23, itm: "^평균$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: bfx_int, title: 육우 두당 차입금 이자, tbl: DT_1EE021_23, itm: "^평균$", want: ["^차입금이자$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lyx_tot, title: 산란계 수당 사육비 합계, tbl: DT_2EE310_23, itm: "^사육비$", want: ["^비용합계$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lyx_util, title: 산란계 수당 수도광열비, tbl: DT_2EE310_23, itm: "^사육비$", want: ["^수도광열비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lyx_hire, title: 산란계 수당 고용노동비, tbl: DT_2EE310_23, itm: "^사육비$", want: ["^고용노동비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lyx_int, title: 산란계 수당 차입금 이자, tbl: DT_2EE310_23, itm: "^사육비$", want: ["^차입금이자$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brx_tot, title: 육계 10수당 사육비 합계, tbl: DT_2EE315, itm: "^사육비$", want: ["^비용합계$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brx_util, title: 육계 10수당 수도광열비, tbl: DT_2EE315, itm: "^사육비$", want: ["^수도광열비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brx_hire, title: 육계 10수당 고용노동비, tbl: DT_2EE315, itm: "^사육비$", want: ["^고용노동비$", "^평균$"], unit: 원, survey: 축산물생산비조사}
+      - {id: brx_int, title: 육계 10수당 차입금 이자, tbl: DT_2EE315, itm: "^사육비$", want: ["^차입금이자$", "^평균$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

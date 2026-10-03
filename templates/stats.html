@@ -2050,7 +2050,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매', 122) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매', 137) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -2151,6 +2151,27 @@
   {{ hcard('육우 사육 규모별 1두당 노동시간', [('30두 미만', K.bfr_l1), ('30~69두', K.bfr_l2), ('70~119두', K.bfr_l3), ('120두 이상', K.bfr_l4)], '시간', ('평균 ' ~ num(K.bfr_lab.vals[-1], '시간')|striptags ~ ' · 규모가 클수록 짧음 · 오른쪽은 전년 대비') if K.bfr_lab else none, none, '#b04a07') }}
   {{ hcard('육성계 100수당 작업별 노동시간', [('계분 처리', K.pul_manure), ('방역·손질', K.pul_vet), ('사료 급여', K.pul_feedw)], '시간', '괄호는 전체 노동시간 중 비중 · 나머지는 구입·판매·기타 · 오른쪽은 전년 대비', K.pul_lab.vals[-1] if K.pul_lab else none, '#7a6a3a') }}
   {{ hcard('육성계 사육 규모별 100수당 노동시간', [('2만 수 미만', K.pul_l1), ('2만~4만 수', K.pul_l2), ('4만~9만 수', K.pul_l3), ('9만 수 이상', K.pul_l4)], '시간', ('평균 ' ~ num(K.pul_lab.vals[-1], '시간')|striptags ~ ' · 규모가 클수록 짧음 · 오른쪽은 전년 대비') if K.pul_lab else none, none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">육우 수익성 — 사육 규모별 소득·순수익 <small>1두당 · 송아지 입식부터 출하까지 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {% set bn = K.bfp_net %}{{ card('bfp_net', 'lx1', '총수입 − 생산비(자가노동·자본·토지용역 포함)', '#2458d6' if bn and bn.vals[-1] < 0 else '#1c7a45') }}
+  {% set bi = K.bfp_inc %}{{ card('bfp_inc', 'lx2', '총수입 − 일반비(자가노동·자본용역 제외)', '#2458d6' if bi and bi.vals[-1] < 0 else '#1c7a45') }}
+  {{ card('bfp_rev', 'lx3', ('두당 생산비 ' ~ '{:,.0f}'.format(K.bfx_tot.vals[-1]) ~ '원 · 출하 1두 기준') if K.bfx_tot else none, '#b04a07') }}
+  {{ hcard('육우 사육 규모별 두당 순수익', [('30두 미만', K.bfp_n1), ('30~69두', K.bfp_n2), ('70~119두', K.bfp_n3), ('120두 이상', K.bfp_n4)], '원', ('평균 ' ~ '{:,.0f}'.format(K.bfp_net.vals[-1]) ~ '원 · 파란 막대는 적자 · 오른쪽은 전년 대비') if K.bfp_net else '', none, '#b04a07') }}
+  {{ hcard('육우 사육 규모별 두당 소득', [('30두 미만', K.bfp_i1), ('30~69두', K.bfp_i2), ('70~119두', K.bfp_i3), ('120두 이상', K.bfp_i4)], '원', ('평균 ' ~ '{:,.0f}'.format(K.bfp_inc.vals[-1]) ~ '원 · 자가노동비를 빼기 전 · 오른쪽은 전년 대비') if K.bfp_inc else '', none, '#b04a07') }}
+  {{ hcard('육우 사육 규모별 두당 생산비', [('30두 미만', K.bfp_c1), ('30~69두', K.bfp_c2), ('70~119두', K.bfp_c3), ('120두 이상', K.bfp_c4)], '원', ('평균 ' ~ '{:,.0f}'.format(K.bfx_tot.vals[-1]) ~ '원 · 규모가 클수록 낮음 · 오른쪽은 전년 대비') if K.bfx_tot else '', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">축산 사육비 속 고용 인력·전기·물·빚 이자 <small>육우 1두당 · 산란계 1수당 · 육계 10수당 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ rcard('육우 사육비 중 고용노동비 비중', K.bfx_hire, K.bfx_tot, 'lx4', ('고용노동비 ' ~ '{:,.0f}'.format(K.bfx_hire.vals[-1]) ~ '원 · 사육비 합계 대비') if K.bfx_hire else '', '#b04a07') }}
+  {{ card('bfx_util', 'lx5', '전기·수도·연료 · 축사 환기·급수·보온', '#b04a07') }}
+  {{ card('bfx_int', 'lx6', '사료·송아지 구입 등에 빌린 돈의 이자', '#b04a07') }}
+  {{ rcard('산란계 사육비 중 고용노동비 비중', K.lyx_hire, K.lyx_tot, 'lx7', ('고용노동비 ' ~ '{:,.0f}'.format(K.lyx_hire.vals[-1]) ~ '원 · 사육비 합계 대비') if K.lyx_hire else '', '#e0a03a') }}
+  {{ card('lyx_util', 'lx8', '전기·수도·연료 · 계사 환기·조명', '#e0a03a') }}
+  {{ card('lyx_int', 'lx9', '빌린 돈의 이자 · 산란계 1수 기준', '#e0a03a') }}
+  {{ rcard('육계 사육비 중 고용노동비 비중', K.brx_hire, K.brx_tot, 'lx10', ('고용노동비 ' ~ '{:,.0f}'.format(K.brx_hire.vals[-1]) ~ '원 · 대부분 자가노동') if K.brx_hire else '', '#7a6a3a') }}
+  {{ card('brx_util', 'lx11', '전기·수도·연료 · 병아리 보온 난방이 큼', '#7a6a3a') }}
+  {{ card('brx_int', 'lx12', '빌린 돈의 이자 · 육계 10수 기준', '#7a6a3a') }}
  </div>
  <h3 class="sg-sub">축산 농가 고용 근로자·전력 사용 <small>농가가 고용한 상시·기간 근로자 · 축종·사육 규모별 호당 연간 전력 사용량 · 가축분뇨처리통계</small></h3>
  <div class="sg-g">

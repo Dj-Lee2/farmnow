@@ -4258,6 +4258,26 @@ sources:
       - {id: fsa_75_tot, title: 경영주 75세 이상 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: fsa_75_s, title: 경영주 75세 이상 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: fsa_75_b, title: 경영주 75세 이상 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^경영주연령 : (75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_none_tot, title: 판매 없는 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^판매없음$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_none_s, title: 판매 없는 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매없음$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_none_m, title: 판매 없는 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매없음$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_none_b, title: 판매 없는 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매없음$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_u5_tot, title: 판매 500만원 미만 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^판매금액 : (120만원 미만|120~300|300~500)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_u5_s, title: 판매 500만원 미만 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매금액 : (120만원 미만|120~300|300~500)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_u5_m, title: 판매 500만원 미만 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매금액 : (120만원 미만|120~300|300~500)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_u5_b, title: 판매 500만원 미만 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매금액 : (120만원 미만|120~300|300~500)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_m_tot, title: 판매 500만~3천만원 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^판매금액 : (500~1천|1~2천|2~3천)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_m_s, title: 판매 500만~3천만원 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매금액 : (500~1천|1~2천|2~3천)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_m_m, title: 판매 500만~3천만원 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매금액 : (500~1천|1~2천|2~3천)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_m_b, title: 판매 500만~3천만원 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매금액 : (500~1천|1~2천|2~3천)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_h_tot, title: 판매 3천만~1억원 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^판매금액 : (3~5천|5~7천|7천~1억)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_h_s, title: 판매 3천만~1억원 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매금액 : (3~5천|5~7천|7천~1억)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_h_m, title: 판매 3천만~1억원 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매금액 : (3~5천|5~7천|7천~1억)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_h_b, title: 판매 3천만~1억원 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매금액 : (3~5천|5~7천|7천~1억)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_b1_tot, title: 판매 1억원 이상 농가(경지규모 표), tbl: DT_1EA1015, itm: "^농가$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_b1_s, title: 판매 1억원 이상 농가 중 경지 0.5ha 미만, tbl: DT_1EA1015, itm: "^(0.1ha 미만|0.1~0.2ha 미만|0.2~0.3ha 미만|0.3~0.5ha 미만)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_b1_m, title: 판매 1억원 이상 농가 중 경지 1~3ha, tbl: DT_1EA1015, itm: "^(1.0~1.5ha 미만|1.5~2.0ha 미만|2.0~2.5ha 미만|2.5~3.0ha 미만)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: fss_b1_b, title: 판매 1억원 이상 농가 중 경지 3ha 이상, tbl: DT_1EA1015, itm: "^(3.0~5.0ha 미만|5.0~7.0ha 미만|7.0~10.0ha 미만|10.0ha 이상)$", want: ["^판매금액 : (1~2억|2억~5억|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

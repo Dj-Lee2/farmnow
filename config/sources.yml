@@ -4517,6 +4517,45 @@ sources:
       - {id: fl_inc, title: "시설장미 10a당 소득", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^소득$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
       - {id: fl_vr, title: "시설장미 부가가치율", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설장미$"], unit: "%", survey: 농산물소득조사}
       - {id: fl_rt, title: "시설장미 소득률", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^소득률$", "^시설장미$"], unit: "%", survey: 농산물소득조사}
+      - {id: ins_farm, title: "곤충 사육 농가", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^농가수$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_emp, title: "곤충 사육 종사자", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^종사자수$"], unit: 명, survey: 곤충산업실태조사}
+      - {id: ins_rp_prod, title: "곤충 생산업 신고", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^생산업$"], unit: 건, survey: 곤충산업실태조사}
+      - {id: ins_rp_proc, title: "곤충 가공업 신고", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^가공업$"], unit: 건, survey: 곤충산업실태조사}
+      - {id: ins_rp_dist, title: "곤충 유통업 신고", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^유통업$"], unit: 건, survey: 곤충산업실태조사}
+      - {id: ins_rp_none, title: "곤충 사육 미신고 농가", tbl: DT_114060_A001, org: "114", se: F, periods: 1, itm: "^업 신고$", want: ["^미신고$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_bt_tot, title: "곤충 농가 사업형태 응답", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^사업형태$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_bt_farm, title: "곤충 농가형", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^농가형$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_bt_co, title: "곤충 업체형", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^업체형$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_bt_corp, title: "곤충 단체·법인형", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^단체법인형$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_mj_main, title: "곤충 사육이 주업인 농가", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^주업$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_mj_dual, title: "곤충 사육 겸업 농가", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^겸업$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_mj_side, title: "곤충 사육이 부업인 농가", tbl: DT_114060_A002, org: "114", se: F, periods: 1, itm: "^사업 형태$", want: ["^부업$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_fa_n, title: "곤충 사육시설 보유 농가", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^농가수$", want: ["^전체\\s*$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_fa_area, title: "곤충 사육시설 면적", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^(비닐 하우스|컨테이너|판넬|철골\\(콘크리트\\)|태양광곤충사육사|기타)$"], sum: true, unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_vinyl, title: "곤충 사육시설 면적 비닐하우스", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^비닐 하우스$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_cont, title: "곤충 사육시설 면적 컨테이너", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^컨테이너$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_panel, title: "곤충 사육시설 면적 판넬", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^판넬$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_steel, title: "곤충 사육시설 면적 철골(콘크리트)", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^철골\\(콘크리트\\)$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_solar, title: "곤충 사육시설 면적 태양광 곤충사육사", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^태양광곤충사육사$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_fa_etc, title: "곤충 사육시설 면적 기타", tbl: DT_114060_A003, org: "114", se: F, periods: 1, itm: "^면적$", want: ["^기타$"], unit: ㎡, survey: 곤충산업실태조사}
+      - {id: ins_sl_n, title: "곤충 판매 농가", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^농가수$", want: ["^전체\\s*$"], unit: 호, survey: 곤충산업실태조사}
+      - {id: ins_sl, title: "곤충 사육 판매액", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^전체\\s*$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_beetle, title: "곤충 판매액 장수풍뎅이", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^장수풍뎅이$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_stag, title: "곤충 판매액 사슴벌레", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^사슴벌레$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_cet, title: "곤충 판매액 흰점박이 꽃무지", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^흰점박이 꽃무지$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_meal, title: "곤충 판매액 갈색거저리", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^갈색거저리$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_bsf, title: "곤충 판매액 동애등에", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^동애등에$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_crk, title: "곤충 판매액 귀뚜라미", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^귀뚜라미$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_silk, title: "곤충 판매액 누에", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^누에$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_btf, title: "곤충 판매액 나비", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^나비$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_sl_etc, title: "곤충 판매액 기타", tbl: DT_114060_A004, org: "114", se: F, periods: 1, itm: "^판매액$", want: ["^기타$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_pet, title: "곤충 가공·유통 판매액 애완·학습용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^애완·학습용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_feed, title: "곤충 가공·유통 판매액 사료용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^사료용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_food, title: "곤충 가공·유통 판매액 식용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^식용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_poll, title: "곤충 가공·유통 판매액 화분매개용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^화분매개용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_bio, title: "곤충 가공·유통 판매액 천적용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^천적용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_env, title: "곤충 가공·유통 판매액 환경정화용", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^환경정화용$"], unit: 백만원, survey: 곤충산업실태조사}
+      - {id: ins_pu_etc, title: "곤충 가공·유통 판매액 기타", tbl: DT_114060_A005, org: "114", se: F, periods: 1, itm: "^가공·유통 판매액$", want: ["^기타$"], unit: 백만원, survey: 곤충산업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

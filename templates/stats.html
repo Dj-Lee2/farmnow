@@ -1805,7 +1805,7 @@
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·축산 고용 근로자·전력 사용', 109) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매', 122) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -1919,6 +1919,22 @@
   {{ hcard('축종별 고용 근로자 중 외국인 비중', [('돼지', K.lbw_f_pg|ratio(K.lbw_pg)), ('닭', K.lbw_f_ck|ratio(K.lbw_ck)), ('오리', K.lbw_f_dk|ratio(K.lbw_dk)), ('젖소', K.lbw_f_dy|ratio(K.lbw_dy)), ('한·육우', K.lbw_f_hw|ratio(K.lbw_hw))], '%', '축종별 고용 근로자 중 외국인 비율 · 돼지 농가가 가장 높음 · 오른쪽은 전년 대비', none, '#c77b30') }}
   {{ hcard('축종별 호당 연간 전력 사용량', [('돼지', K.ele_pg), ('산란계', K.ele_ly), ('젖소', K.ele_dy), ('육계', K.ele_br), ('육용오리', K.ele_md), ('종오리', K.ele_bd), ('한·육우', K.ele_hw)], 'kWh', '농가 1호의 1년 평균 전력 소비량 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('돼지 사육 규모별 호당 연간 전력 사용량', [('1천 두 미만', K.ele_p1), ('1천~5천 두', K.ele_p2), ('5천~1만 두', K.ele_p3), ('1만 두 이상', K.ele_p4)], 'kWh', ('돼지 농가 평균 ' ~ num(K.ele_pg.vals[-1], 'kWh')|striptags ~ ' · 규모가 클수록 많음 · 오른쪽은 전년 대비') if K.ele_pg else none, none, '#c77b30') }}
+ </div>
+ <h3 class="sg-sub">곤충산업 — 굼벵이·동애등에·귀뚜라미 <small>농림축산식품부 곤충산업실태조사 · 2024년 한 해 · 판매액은 사육 곤충을 그대로 판 금액</small></h3>
+ <div class="sg-g">
+  {{ card('ins_farm', 'bg1', ('종사자 ' ~ num(K.ins_emp.vals[-1], '명')|striptags ~ ' · 곤충을 기르는 농가·업체') if K.ins_emp else none, '#7a6a3a') }}
+  {{ card('ins_sl', 'bg2', ('판매 농가 ' ~ num(K.ins_sl_n.vals[-1], '호')|striptags ~ ' · 흰점박이 꽃무지(굼벵이)가 가장 많음') if K.ins_sl_n else none, '#7a6a3a') }}
+  {{ qcard('판매 농가 1호당 곤충 판매액', K.ins_sl, K.ins_sl_n, 'bg3', '사육 곤충 판매액 ÷ 판매 농가', 100, '만원', '#7a6a3a') }}
+  {{ rcard('곤충 판매액 중 동애등에 비중', K.ins_sl_bsf, K.ins_sl, 'bg4', '음식물·축산 부산물을 먹여 기르는 사료·퇴비용 곤충', '#1c7a45') }}
+  {{ rcard('곤충 농가 중 농가형 비중', K.ins_bt_farm, K.ins_bt_tot, 'bg5', ('업체형 ' ~ num(K.ins_bt_co.vals[-1], '호')|striptags ~ ' · 단체·법인형 ' ~ num(K.ins_bt_corp.vals[-1], '호')|striptags) if K.ins_bt_co and K.ins_bt_corp else '', '#7a6a3a') }}
+  {{ card('ins_mj_main', 'bg6', ('겸업 ' ~ num(K.ins_mj_dual.vals[-1], '호')|striptags ~ ' · 부업 ' ~ num(K.ins_mj_side.vals[-1], '호')|striptags ~ ' · 부업 농가가 가장 많음') if K.ins_mj_dual and K.ins_mj_side else none, '#7a6a3a') }}
+  {{ card('ins_fa_area', 'bg7', ('시설 보유 농가 ' ~ num(K.ins_fa_n.vals[-1], '호')|striptags ~ ' · 여섯 가지 시설 합') if K.ins_fa_n else none, '#c77b30') }}
+  {{ qcard('농가 1호당 곤충 사육시설 면적', K.ins_fa_area, K.ins_fa_n, 'bg8', '사육시설 면적 ÷ 시설 보유 농가', 1, '㎡', '#c77b30') }}
+  {{ card('ins_rp_proc', 'bg9', ('생산업 ' ~ num(K.ins_rp_prod.vals[-1], '건')|striptags ~ ' · 유통업 ' ~ num(K.ins_rp_dist.vals[-1], '건')|striptags ~ ' · 미신고 ' ~ num(K.ins_rp_none.vals[-1], '호')|striptags) if K.ins_rp_prod and K.ins_rp_dist and K.ins_rp_none else none, '#c77b30') }}
+  {{ hcard('곤충별 판매액', [('흰점박이 꽃무지', K.ins_sl_cet), ('동애등에', K.ins_sl_bsf), ('갈색거저리', K.ins_sl_meal), ('장수풍뎅이', K.ins_sl_beetle), ('귀뚜라미', K.ins_sl_crk), ('누에', K.ins_sl_silk), ('사슴벌레', K.ins_sl_stag), ('나비', K.ins_sl_btf), ('기타', K.ins_sl_etc)], '백만원', '괄호는 전체 곤충 판매액 중 비중 · 꽃무지·장수풍뎅이·사슴벌레는 애완·약용, 동애등에·거저리는 사료·식용이 많음', K.ins_sl.vals[-1] if K.ins_sl else none, '#7a6a3a') }}
+  {{ hcard('곤충 사육시설 종류별 면적', [('태양광 곤충사육사', K.ins_fa_solar), ('판넬', K.ins_fa_panel), ('철골(콘크리트)', K.ins_fa_steel), ('비닐하우스', K.ins_fa_vinyl), ('기타', K.ins_fa_etc), ('컨테이너', K.ins_fa_cont)], '㎡', '괄호는 전체 사육시설 면적 중 비중', K.ins_fa_area.vals[-1] if K.ins_fa_area else none, '#c77b30') }}
+  {{ hcard('곤충 가공·유통 용도별 판매액', [('사료용', K.ins_pu_feed), ('식용', K.ins_pu_food), ('애완·학습용', K.ins_pu_pet), ('천적용', K.ins_pu_bio), ('화분매개용', K.ins_pu_poll), ('환경정화용', K.ins_pu_env), ('기타', K.ins_pu_etc)], '백만원', '곤충을 가공하거나 받아서 판 금액 · 천적·화분매개용은 친환경 농사에 쓰는 곤충', none, '#1c7a45') }}
+  {{ hcard('곤충 농가 사업 형태·겸업 여부', [('농가형', K.ins_bt_farm), ('업체형', K.ins_bt_co), ('단체·법인형', K.ins_bt_corp), ('주업', K.ins_mj_main), ('겸업', K.ins_mj_dual), ('부업', K.ins_mj_side)], '호', '위 셋은 사업 형태, 아래 셋은 곤충 사육이 본업인지 · 괄호는 응답 농가 중 비중', K.ins_bt_tot.vals[-1] if K.ins_bt_tot else none, '#7a6a3a') }}
  </div>
  <h3 class="sg-sub">도축 실적 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('sl_cow', 'g48', '한우·육우·젖소 합계 · 축산물 도축실적', '#c77b30', yoy(K.sl_cow_yoy)) }}{{ card('sl_pig', 'g49', '축산물 도축실적', '#c77b30', yoy(K.sl_pig_yoy)) }}{{ card('sl_chick', 'g50', '축산물 도축실적', '#c77b30', yoy(K.sl_chick_yoy)) }}{{ card('sl_duck', 'g51', '축산물 도축실적', '#c77b30', yoy(K.sl_duck_yoy)) }}{% for k, uid in [('cow', 'g52'), ('pig', 'g53')] %}{% set c = K['sl_' ~ k ~ '_cum'] %}{% set r = K['sl_' ~ k ~ '_cumr'] %}{% if c and r %}{% set lab = r.years|map('prd')|list %}

@@ -3816,6 +3816,46 @@ sources:
       - {id: acf_dbt_gb, title: 경북 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^경상북도$"], unit: 백만원, survey: 농업법인조사}
       - {id: acf_dbt_gn, title: 경남 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^경상남도$"], unit: 백만원, survey: 농업법인조사}
       - {id: acf_dbt_jj, title: 제주 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^제주"], unit: 백만원, survey: 농업법인조사}
+      - {id: ctw_n, title: 임시·일용 근로자 조사 농업법인 수, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B00$"}, sum: true, unit: 개, survey: 농업법인조사}
+      - {id: ctw_q1, title: 농업법인 1분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B01$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q2, title: 농업법인 2분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B02$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3, title: 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q4, title: 농업법인 4분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B04$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_tmp_q1, title: 농업법인 1분기 임시근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0101"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_tmp_q2, title: 농업법인 2분기 임시근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0201"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_tmp_q3, title: 농업법인 3분기 임시근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0301"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_tmp_q4, title: 농업법인 4분기 임시근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0401"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_day_q1, title: 농업법인 1분기 일용근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0102"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_day_q2, title: 농업법인 2분기 일용근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0202"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_day_q3, title: 농업법인 3분기 일용근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0302"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_day_q4, title: 농업법인 4분기 일용근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B0402"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_frn_q1, title: 농업법인 1분기 외국인 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B010[12]02$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_frn_q2, title: 농업법인 2분기 외국인 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B020[12]02$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_frn_q3, title: 농업법인 3분기 외국인 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B030[12]02$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_frn_q4, title: 농업법인 4분기 외국인 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^(영농조합법인|농업회사법인)$", "분기$|국인$|^법인수$"], codes: {C2: "^B040[12]02$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_ag, title: 영농조합법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^영농조합법인$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_co, title: 농업회사법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^농업회사법인$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_crop, title: 작물재배업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^작물재배업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_live, title: 축산업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^축산업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_proc, title: 농축산물가공업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^농축산물가공업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_dist, title: 농축산물유통업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^농축산물유통업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_svc, title: 농업서비스업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^농업서비스업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: ctw_q3_tour, title: 농어촌관광휴양사업 농업법인 3분기 임시·일용 근로자, tbl: DT_1E5222A, org: "114", periods: 1, itm: "^분기별$", want: ["^농어촌관광휴양사업$", "분기$"], codes: {C2: "^B03$"}, sum: true, unit: 명, survey: 농업법인조사}
+      - {id: pfa_sales, title: 농업법인 매출액 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^매출액$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_cogs, title: 농업법인 매출원가 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^매출원가$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_sga, title: 농업법인 판매비와관리비 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^판매와관리비$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_wage, title: 농업법인 급여 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^급여$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_welf, title: 농업법인 복리후생비 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^복리후생비$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_rent, title: 농업법인 임차료 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^임차료$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_dep, title: 농업법인 감가상각비 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^감가상각비$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_op, title: 농업법인 영업이익 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^영업이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_pti, title: 농업법인 법인세차감전순이익 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^법인세차감전순이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_tax, title: 농업법인 법인세 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^법인세$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_ni, title: 농업법인 당기순이익 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^당기순이익$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_sales_ag, title: 영농조합법인 매출액 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^매출액$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_ni_ag, title: 영농조합법인 당기순이익 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^당기순이익$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_sales_co, title: 농업회사법인 매출액 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^매출액$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: pfa_ni_co, title: 농업회사법인 당기순이익 합계, tbl: DT_1E5220A, org: "114", itm: "^경영성과\\(합계\\)$", want: ["^당기순이익$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -5609,6 +5609,46 @@ sources:
       - {id: rmk_gw, title: "원유 생산량 — 강원", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^강원(특별자치)?도$"], unit: 톤, survey: 시도별 원유생산량}
       - {id: rmk_cb, title: "원유 생산량 — 충북", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^충청북도$"], unit: 톤, survey: 시도별 원유생산량}
       - {id: rmk_jj, title: "원유 생산량 — 제주", tbl: DT_114N_1C001, org: "114", periods: 6, itm: "^생산량$", want: ["^제주(특별자치)?도$"], unit: 톤, survey: 시도별 원유생산량}
+      - {id: fdm_rfl, title: "식품제조업 쌀가루 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^쌀가루$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_wfl, title: "식품제조업 소맥분 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^소맥분$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_pep, title: "식품제조업 고춧가루 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^고춧가루$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_pepsc, title: "식품제조업 고추양념 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^고추양념$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_gar, title: "식품제조업 다진마늘 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^다진마늘$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_kim, title: "식품제조업 절임배추 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^절임배추$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_jui, title: "식품제조업 농축과·채즙 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^농축과·채즙$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_dveg, title: "식품제조업 건조야채 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^건조야채$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_wmp, title: "식품제조업 전지분유 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^전지분유$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_btr, title: "식품제조업 버터 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^버터$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_chs, title: "식품제조업 치즈 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^치즈$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_pst, title: "식품제조업 감자전분 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^감자전분$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_soyo, title: "식품제조업 대두유 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^대두유$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_seso, title: "식품제조업 참기름 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^참기름$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fdm_periol, title: "식품제조업 들기름 국내 제조 비중", tbl: DT_114010_H001, org: "114", periods: 3, itm: "^국내 제조 비중$", want: ["^들기름$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: hrs_tot, title: "말 사육두수 — 전국", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^총계$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_horse, title: "말 사육두수 — 말", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^총계$", "^말$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_jj, title: "말 사육두수 — 제주", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^제주$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_gg, title: "말 사육두수 — 경기", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^경기$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_gb, title: "말 사육두수 — 경북", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^경북$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_jb, title: "말 사육두수 — 전북", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^전북$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_bs, title: "말 사육두수 — 부산", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^부산$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_gn, title: "말 사육두수 — 경남", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^경남$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_jn, title: "말 사육두수 — 전남", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^전남$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hrs_cn, title: "말 사육두수 — 충남", tbl: DT_114051N_002, org: "114", periods: 6, itm: "^사육두수 현황$", want: ["^충남$", "^총계$"], unit: 두, survey: 말산업실태조사}
+      - {id: hbz_tot, title: "말산업 사업체 — 총계", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^총계$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_own, title: "말산업 사업체 — 말 보유 사업체", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^말 보유 사업체$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_none, title: "말산업 사업체 — 말 미보유 사업체", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^말 미보유 사업체$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_prod, title: "말산업 사업체 — 말 생산업", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^말 생산업$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_ride, title: "말산업 사업체 — 승마시설운영", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^승마시설운영$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_indv, title: "말산업 사업체 — 말 개인사육자", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^말 개인사육자$"], unit: 개, survey: 말산업실태조사}
+      - {id: hbz_rel, title: "말산업 사업체 — 말 연관업", tbl: DT_114051N_011, org: "114", periods: 6, itm: "^말보유 여부별", want: ["^총계$", "^말 연관업$"], unit: 개, survey: 말산업실태조사}
+      - {id: hmw_tot, title: "말산업 종사자 — 총계", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^총계$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_kra, title: "말산업 종사자 — 한국마사회", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^한국마사회$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_race, title: "말산업 종사자 — 경마마필관계자", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^경마마필관계자$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_ride, title: "말산업 종사자 — 승마시설업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^승마시설업$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_breed, title: "말산업 종사자 — 말사육업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^말사육업$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_feed, title: "말산업 종사자 — 말사료생산판매업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^말사료생산판매업$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_meat, title: "말산업 종사자 — 말고기음식점업", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^말고기음식점업$"], unit: 명, survey: 말산업실태조사}
+      - {id: hmw_etc, title: "말산업 종사자 — 기타", tbl: DT_114051N_015, org: "114", periods: 6, itm: "^인원$", want: ["^기타$"], unit: 명, survey: 말산업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

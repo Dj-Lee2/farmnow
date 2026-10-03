@@ -3781,6 +3781,41 @@ sources:
       - {id: lmq_heat_egg, title: 산란계 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^산란계$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: lmq_heat_brl, title: 육계 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^육계$"], unit: 호, survey: 가축분뇨처리통계}
       - {id: lmq_heat_duck, title: 오리 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^오리$"], unit: 호, survey: 가축분뇨처리통계}
+      # 농업법인 재무상태(DT_1E5218) — 결산 법인 평균 자산·부채·자본
+      - {id: acf_n, title: 재무를 결산한 농업법인 수, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^결산 법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: acf_ast, title: 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ca, title: 농업법인 법인당 유동자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^유동자산$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_nca, title: 농업법인 법인당 비유동자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^비유동자산$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt, title: 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_cl, title: 농업법인 법인당 유동부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^유동부채$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ncl, title: 농업법인 법인당 비유동부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^비유동부채$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_eq, title: 농업법인 법인당 자본, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자본$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_n_ag, title: 재무를 결산한 영농조합법인 수, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^결산 법인수$", "^영농조합법인$"], unit: 개, survey: 농업법인조사}
+      - {id: acf_ast_ag, title: 영농조합법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_ag, title: 영농조합법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_eq_ag, title: 영농조합법인 법인당 자본, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자본$", "^영농조합법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_n_co, title: 재무를 결산한 농업회사법인 수, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^결산 법인수$", "^농업회사법인$"], unit: 개, survey: 농업법인조사}
+      - {id: acf_ast_co, title: 농업회사법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_co, title: 농업회사법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_eq_co, title: 농업회사법인 법인당 자본, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자본$", "^농업회사법인$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_gg, title: 경기 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^경기도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_gw, title: 강원 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^강원"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_cb, title: 충북 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^충청북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_cn, title: 충남 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^충청남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_jb, title: 전북 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^전북|^전라북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_jn, title: 전남 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^전라남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_gb, title: 경북 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^경상북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_gn, title: 경남 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^경상남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_ast_jj, title: 제주 농업법인 법인당 자산, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^자산$", "^제주"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_gg, title: 경기 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^경기도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_gw, title: 강원 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^강원"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_cb, title: 충북 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^충청북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_cn, title: 충남 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^충청남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_jb, title: 전북 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^전북|^전라북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_jn, title: 전남 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^전라남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_gb, title: 경북 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^경상북도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_gn, title: 경남 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^경상남도$"], unit: 백만원, survey: 농업법인조사}
+      - {id: acf_dbt_jj, title: 제주 농업법인 법인당 부채, tbl: DT_1E5218, org: "114", itm: "^경영실태$", want: ["^부채$", "^제주"], unit: 백만원, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

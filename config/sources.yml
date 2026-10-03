@@ -3924,6 +3924,35 @@ sources:
       - {id: irs_ha_jn, title: "전남 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^전라남도$"], unit: ha, survey: 농업생산기반시설 현황}
       - {id: irs_ha_gb, title: "경북 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^경상북도$"], unit: ha, survey: 농업생산기반시설 현황}
       - {id: irs_ha_gn, title: "경남 수리시설 수혜면적", tbl: DT_311001_007, org: "311", periods: 3, itm: "^면적$", want: ["^주수원공$", "^경상남도$"], unit: ha, survey: 농업생산기반시설 현황}
+      - {id: fpp_gar, title: 마늘 10a당 인산질비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^인산질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpp_oni, title: 양파 10a당 인산질비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^인산질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpp_pep, title: 고추 10a당 인산질비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^인산질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpp_soy, title: 콩 10a당 인산질비료, tbl: DT_1EC0083, itm: "^10a당$", want: ["^인산질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpk_gar, title: 마늘 10a당 가리질비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^가리질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpk_oni, title: 양파 10a당 가리질비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^가리질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fpk_pep, title: 고추 10a당 가리질비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^가리질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fcm_gar, title: 마늘 10a당 복합비료, tbl: DT_1EC0043, itm: "^10a당$", want: ["^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fcm_oni, title: 양파 10a당 복합비료, tbl: DT_1EC0053, itm: "^10a당$", want: ["^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fcm_pep, title: 고추 10a당 복합비료, tbl: DT_1EC0063, itm: "^10a당$", want: ["^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fcm_soy, title: 콩 10a당 복합비료, tbl: DT_1EC0083, itm: "^10a당$", want: ["^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fps_gar, title: 마늘 10a당 토양개량제, tbl: DT_1EC0043, itm: "^10a당$", want: ["^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fps_oni, title: 양파 10a당 토양개량제, tbl: DT_1EC0053, itm: "^10a당$", want: ["^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fps_pep, title: 고추 10a당 토양개량제, tbl: DT_1EC0063, itm: "^10a당$", want: ["^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: fps_soy, title: 콩 10a당 토양개량제, tbl: DT_1EC0083, itm: "^10a당$", want: ["^토양개량제$"], unit: kg, survey: 농산물생산비조사}
+      - {id: eal_cnt, title: 유기·무항생제 축산 인증 건수, tbl: DT_1YL20131, itm: "^건수$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: 건, survey: 친환경축산물인증현황}
+      - {id: eal_cnt_org, title: 유기축산 인증 건수, tbl: DT_1YL20131, itm: "^건수$", want: ["소계$|^강원특별자치도$", "^유기축산물$"], sum: true, unit: 건, survey: 친환경축산물인증현황}
+      - {id: eal_ship, title: 유기·무항생제 축산물 출하량, tbl: DT_1YL20131, itm: "^출하량$", want: ["소계$|^강원특별자치도$", "^계$"], sum: true, unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eal_ship_org, title: 유기축산물 출하량, tbl: DT_1YL20131, itm: "^출하량$", want: ["소계$|^강원특별자치도$", "^유기축산물$"], sum: true, unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eal_noab, title: 무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["소계$|^강원특별자치도$", "^무항생제축산물$"], sum: true, unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_gg, title: 경기 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^경기도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_gw, title: 강원 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^강원(도|특별자치도)( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_cb, title: 충북 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^충청북도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_cn, title: 충남 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^충청남도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_jb, title: 전북 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^(전라북도|전북특별자치도)( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_jn, title: 전남 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^(전라남도|전남광주통합특별시)( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_gb, title: 경북 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상북도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_gn, title: 경남 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상남도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eal_jj, title: 제주 유기·무항생제 축산 인증 농가, tbl: DT_1YL20131, itm: "^농가수$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: 호, survey: 친환경축산물인증현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

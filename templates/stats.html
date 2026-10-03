@@ -1048,7 +1048,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비', 140) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별', 151) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1062,6 +1062,13 @@
  <h3 class="sg-sub">도별 친환경 인증 면적 <small>유기+무농약</small></h3>
  <div class="sg-g">
   {{ hcard('도별 친환경 인증 면적', [('전남', K.ecr_jn), ('경기', K.ecr_gg), ('전북', K.ecr_jb), ('경남', K.ecr_gn), ('충남', K.ecr_cn), ('경북', K.ecr_gb), ('강원', K.ecr_gw), ('충북', K.ecr_cb), ('제주', K.ecr_jj)], 'ha', '괄호는 전국 인증 면적 중 비율 · 오른쪽은 전년 대비', K.eco_area.vals[-1] if K.eco_area else none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">친환경 축산 인증 — 유형·도별 <small>유기축산+무항생제 · 친환경축산물인증현황</small></h3>
+ <div class="sg-g">
+  {{ card('eal_noab', 'e70', ('무항생제 인증 농가 · 전체 축산 인증 농가의 ' ~ '{:.1f}'.format(K.eal_noab.vals[-1] / K.ecl_farms.vals[-1] * 100) ~ '%') if K.ecl_farms and K.ecl_farms.vals[-1] else '무항생제 인증 농가') }}
+  {{ card('eal_cnt', 'e71', ('유기축산 ' ~ K.eal_cnt_org.vals[-1]|big ~ '건 · 나머지는 무항생제') if K.eal_cnt_org else none) }}
+  {{ card('eal_ship', 'e72', ('유기축산물 ' ~ K.eal_ship_org.vals[-1]|big ~ '톤 · 출하량의 ' ~ '{:.1f}'.format(K.eal_ship_org.vals[-1] / K.eal_ship.vals[-1] * 100) ~ '%') if K.eal_ship_org and K.eal_ship.vals[-1] else none, '#7a6a3a') }}
+  {{ hcard('도별 친환경 축산 인증 농가', [('전남', K.eal_jn), ('경기', K.eal_gg), ('경북', K.eal_gb), ('전북', K.eal_jb), ('충남', K.eal_cn), ('경남', K.eal_gn), ('강원', K.eal_gw), ('충북', K.eal_cb), ('제주', K.eal_jj)], '호', '유기축산+무항생제 · 괄호는 전국 인증 농가 중 비율 · 오른쪽은 전년 대비', K.ecl_farms.vals[-1] if K.ecl_farms else none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">논벼 비료 투입량 <small>10a(300평)당 · 농산물생산비조사</small></h3>
  <div class="sg-g">
@@ -1083,6 +1090,16 @@
   {{ hcard('작물별 노동 투입 시간', [('고추', K.cfl_pep), ('마늘', K.cfl_gar), ('양파', K.cfl_oni), ('콩', K.cfl_soy)], '시간', '10a당 자가+고용 노동 시간 · 오른쪽은 전년 대비', none, '#2458d6') }}
   {{ hcard('재배 규모별 논벼 유기질비료 투입량', [('0.5ha 미만', K.rszo_s05), ('0.5~1ha', K.rszo_s1), ('1~1.5ha', K.rszo_s15), ('1.5~2ha', K.rszo_s2), ('2~2.5ha', K.rszo_s25), ('2.5~3ha', K.rszo_s3), ('3~5ha', K.rszo_s5), ('5~7ha', K.rszo_s7), ('7~10ha', K.rszo_s10), ('10ha 이상', K.rszo_s10p)], 'kg', '10a당 퇴비 등 유기질비료 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
   {{ hcard('재배 규모별 논벼 무기질비료 투입량', [('0.5ha 미만', K.rszi_s05), ('0.5~1ha', K.rszi_s1), ('1~1.5ha', K.rszi_s15), ('1.5~2ha', K.rszi_s2), ('2~2.5ha', K.rszi_s25), ('2.5~3ha', K.rszi_s3), ('3~5ha', K.rszi_s5), ('5~7ha', K.rszi_s7), ('7~10ha', K.rszi_s10), ('10ha 이상', K.rszi_s10p)], 'kg', '10a당 화학비료 실물 무게 · 오른쪽은 전년 대비', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">밭작물 비료 종류별 투입량 <small>10a(300평)당 실물 무게 · 농산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('fcm_gar', 'e73', ('마늘 · 무기질비료의 ' ~ '{:.1f}'.format(K.fcm_gar.vals[-1] / K.cfi_gar.vals[-1] * 100) ~ '%가 복합비료') if K.cfi_gar and K.cfi_gar.vals[-1] else '마늘 복합비료', '#b04a07') }}
+  {{ card('fcm_oni', 'e74', ('양파 · 무기질비료의 ' ~ '{:.1f}'.format(K.fcm_oni.vals[-1] / K.cfi_oni.vals[-1] * 100) ~ '%가 복합비료') if K.cfi_oni and K.cfi_oni.vals[-1] else '양파 복합비료', '#b04a07') }}
+  {{ card('fps_gar', 'e75', ('석회·규산 등 · 양파 ' ~ '{:.1f}'.format(K.fps_oni.vals[-1]) ~ ' · 고추 ' ~ '{:.1f}'.format(K.fps_pep.vals[-1]) ~ ' kg') if K.fps_oni and K.fps_pep else '석회·규산 등 토양개량제', '#b07a3a') }}
+  {{ hcard('작물별 복합비료 투입량', [('마늘', K.fcm_gar), ('양파', K.fcm_oni), ('고추', K.fcm_pep), ('논벼', K.rf_cmp), ('콩', K.fcm_soy)], 'kg', '10a당 실물 무게 · 오른쪽은 전년 대비', none, '#b04a07') }}
+  {{ hcard('작물별 토양개량제 투입량', [('마늘', K.fps_gar), ('고추', K.fps_pep), ('양파', K.fps_oni), ('논벼', K.rf_soil), ('콩', K.fps_soy)], 'kg', '10a당 석회·규산 등 · 오른쪽은 전년 대비', none, '#b07a3a') }}
+  {{ hcard('작물별 인산질비료 투입량', [('양파', K.fpp_oni), ('마늘', K.fpp_gar), ('고추', K.fpp_pep), ('논벼', K.rf_p), ('콩', K.fpp_soy)], 'kg', '10a당 용과린 등 단비 실물 무게(복합비료 제외) · 오른쪽은 전년 대비', none, '#7a5ab0') }}
+  {{ hcard('작물별 가리질비료 투입량', [('양파', K.fpk_oni), ('고추', K.fpk_pep), ('마늘', K.fpk_gar), ('논벼', K.rf_k)], 'kg', '10a당 염화가리 등 단비 실물 무게(복합비료 제외) · 오른쪽은 전년 대비', none, '#5a7ab0') }}
  </div>
  <h3 class="sg-sub">경영주 연령·재배 규모별 논벼 투입 <small>10a(300평)당 · 농산물생산비조사 · 30대는 표본 비공개</small></h3>
  <div class="sg-g">

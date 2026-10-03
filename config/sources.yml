@@ -5384,6 +5384,39 @@ sources:
       - {id: rpc_epm_jn, title: 전남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^전라남|^전남"], unit: 개, survey: 농작물생산조사}
       - {id: rpc_epm_gb, title: 경북 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상북"], unit: 개, survey: 농작물생산조사}
       - {id: rpc_epm_gn, title: 경남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상남"], unit: 개, survey: 농작물생산조사}
+      - {id: fpb_soy, title: 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_y, title: 콩 10a당 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fpb_soy_a, title: 콩 재배면적, tbl: DT_1ET0025, periods: 5, itm: "^콩:면적$", want: ["^계$"], unit: ha, survey: 농작물생산조사}
+      - {id: fpb_soy_gg, title: 경기 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_gw, title: 강원 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_cb, title: 충북 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_cn, title: 충남 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_jb, title: 전북 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_jn, title: 전남 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_gb, title: 경북 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_gn, title: 경남 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpt_swp, title: 고구마 생산량, tbl: DT_1ET0026, periods: 5, itm: "^고구마:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpt_swp_y, title: 고구마 10a당 생산량, tbl: DT_1ET0026, periods: 5, itm: "^고구마:10a당 생산량$", want: ["^전국$"], unit: kg, survey: 농작물생산조사}
+      - {id: fpt_pot, title: 감자 생산량, tbl: DT_1ET0026, periods: 5, itm: "^감자:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpt_spr, title: 일반봄감자 생산량, tbl: DT_1ET0026, periods: 5, itm: "^일반봄감자:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpt_spr_y, title: 일반봄감자 10a당 생산량, tbl: DT_1ET0026, periods: 5, itm: "^일반봄감자:10a당 생산량$", want: ["^전국$"], unit: kg, survey: 농작물생산조사}
+      - {id: fpt_hl, title: 고랭지감자 생산량, tbl: DT_1ET0026, periods: 5, itm: "^고랭지감자:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpt_fall, title: 가을감자 생산량, tbl: DT_1ET0026, periods: 5, itm: "^가을감자:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpm_bar, title: 겉보리·쌀보리 생산량, tbl: DT_1ET0231, periods: 5, itm: "^겉보리쌀보리:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpm_malt, title: 맥주보리 생산량, tbl: DT_1ET0231, periods: 5, itm: "^맥주보리:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpm_wht, title: 밀 생산량, tbl: DT_1ET0231, periods: 5, itm: "^밀:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpm_wht_a, title: 밀 재배면적, tbl: DT_1ET0231, periods: 5, itm: "^밀:면적$", want: ["^전국$"], unit: ha, survey: 농작물생산조사}
+      - {id: fpo_sesa, title: 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_peri, title: 들깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^들깨:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_pnut, title: 땅콩 생산량, tbl: DT_1ET0293, periods: 5, itm: "^땅콩:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_gg, title: 경기 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_gw, title: 강원 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_cb, title: 충북 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_cn, title: 충남 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_jb, title: 전북 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_jn, title: 전남 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_gb, title: 경북 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa_gn, title: 경남 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

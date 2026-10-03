@@ -984,7 +984,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비', 109) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비·시설장미 소득·경영비', 117) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -1042,6 +1042,17 @@
   {{ hcard('그 밖의 채소·과수 10a당 소득', [('시설 가지', K.ia_inc_egg), ('시설 오이', K.ia_inc_cuc), ('시설 호박', K.ia_inc_sqs), ('시설 포도', K.ia_inc_hgrp), ('시설 부추', K.ia_inc_chv), ('시설 상추', K.ia_inc_let), ('노지 생강', K.ia_inc_gng), ('노지 당근', K.ia_inc_car), ('시설 수박', K.ia_inc_hwm), ('오미자', K.ia_inc_omj), ('노지 수박', K.ia_inc_wm)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
   {{ hcard('그 밖의 채소·과수 10a당 경영비', [('시설 가지', K.ia_mc_egg), ('시설 오이', K.ia_mc_cuc), ('시설 호박', K.ia_mc_sqs), ('시설 부추', K.ia_mc_chv), ('시설 상추', K.ia_mc_let), ('시설 포도', K.ia_mc_hgrp), ('노지 생강', K.ia_mc_gng), ('시설 수박', K.ia_mc_hwm), ('노지 당근', K.ia_mc_car), ('노지 수박', K.ia_mc_wm), ('오미자', K.ia_mc_omj)], '원', '시설 상추·부추는 경영비가 소득보다 큼 · 오른쪽은 1년 전 대비', none, '#6b8fd6') }}
   {{ hcard('작물별 부가가치율', [('사과', K.ia_va_apl), ('시설 토마토', K.ia_va_tom), ('시설 딸기', K.ia_va_stb), ('시설 파프리카', K.ia_va_pap)], '%', '부가가치 ÷ 총수입 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">화훼 — 시설장미 소득·경영비 <small>10a(300평)당 · 2023년부터 조사 · 농촌진흥청 농산물소득조사 · 오른쪽은 1년 전 대비</small></h3>
+ <div class="sg-g">
+  {{ card('fl_inc', 'v61', ('총수입 ' ~ num(K.fl_rev.vals[-1], '원')|striptags ~ ' − 경영비 ' ~ num(K.fl_mc.vals[-1], '원')|striptags) if K.fl_rev and K.fl_mc else none, '#c2577a') }}
+  {{ card('fl_rt', 'v62', ('소득 ÷ 총수입 · 부가가치율 ' ~ '{:.1f}'.format(K.fl_vr.vals[-1]) ~ '%') if K.fl_vr else '소득 ÷ 총수입', '#c2577a') }}
+  {{ card('fl_pr', 'v63', ('장미 한 본 값 · 10a당 ' ~ '{:,.0f}'.format(K.fl_qty.vals[-1]) ~ '본 판매') if K.fl_qty else '장미 한 본 값', '#b07a3a') }}
+  {{ rcard('시설장미 수도광열비 ÷ 경영비', K.fl_heat, K.fl_mc, 'v64', ('난방·전기 ' ~ num(K.fl_heat.vals[-1], '원')|striptags ~ ' · 경영비 ' ~ num(K.fl_mc.vals[-1], '원')|striptags) if K.fl_heat and K.fl_mc else '', '#c0763a') }}
+  {{ rcard('시설장미 영농시설상각비 ÷ 경영비', K.fl_fac, K.fl_mc, 'v65', ('온실 등 시설 감가상각 ' ~ num(K.fl_fac.vals[-1], '원')|striptags) if K.fl_fac else '', '#6b8fd6') }}
+  {{ rcard('시설장미 자가노동비 ÷ 생산비', K.fl_self, K.fl_pc, 'v66', ('내 일손 값 ' ~ num(K.fl_self.vals[-1], '원')|striptags ~ ' · 고용노동비 ' ~ num(K.fl_hire.vals[-1], '원')|striptags) if K.fl_self and K.fl_hire else '', '#7a5cc2') }}
+  {{ hcard('시설장미 10a당 경영비 구성', [('수도광열비', K.fl_heat), ('영농시설상각비', K.fl_fac), ('고용노동비', K.fl_hire), ('기타재료비', K.fl_omat), ('무기질비료비', K.fl_cf), ('농약비', K.fl_pest), ('종자·종묘비', K.fl_seed), ('대농구상각비', K.fl_mach), ('토지임차료', K.fl_land), ('기타비용', K.fl_etc), ('수리·유지비', K.fl_rep), ('소농구비', K.fl_tool), ('유기질비료비', K.fl_of)], '원', '괄호는 경영비 중 비중 · 난방이 가장 큰 몫 · 유기질비료는 거의 안 씀 · 오른쪽은 1년 전 대비', K.fl_mc.vals[-1] if K.fl_mc else none, '#c2577a') }}
+  {{ hcard('시설장미와 시설채소 10a당 소득', [('시설 파프리카', K.ia_inc_pap), ('시설 토마토', K.ia_inc_tom), ('시설장미', K.fl_inc), ('시설 딸기', K.ia_inc_stb), ('시설 참외', K.ia_inc_mel)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">식량·특용작물과 노지 채소 소득·경영비 <small>10a(300평)당 · 농촌진흥청 농산물소득조사 · 오른쪽은 1년 전 대비</small></h3>
  <div class="sg-g">

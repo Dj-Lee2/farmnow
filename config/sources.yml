@@ -4492,6 +4492,31 @@ sources:
       - {id: sed_bl_proc, title: 종자업체 평균 건물 연면적 가공·처리시설, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^가공·처리시설$"], unit: ㎡, survey: 종자업실태조사}
       - {id: sed_bl_lab, title: 종자업체 평균 건물 연면적 연구시설, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^연구시설$"], unit: ㎡, survey: 종자업실태조사}
       - {id: sed_bl_cold, title: 종자업체 평균 건물 연면적 저온저장고, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^저온저장고$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: fl_rev, title: "시설장미 10a당 총수입", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^총수입$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_main, title: "시설장미 10a당 주산물가액", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^주산물가액$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_qty, title: "시설장미 10a당 주산물수량", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^시설장미$"], unit: 본, survey: 농산물소득조사}
+      - {id: fl_pr, title: "시설장미 농가수취가격", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^시설장미$"], unit: 원/본, survey: 농산물소득조사}
+      - {id: fl_mid, title: "시설장미 10a당 중간재비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^중간재비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_seed, title: "시설장미 10a당 종자·종묘비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_cf, title: "시설장미 10a당 무기질비료비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^보통\\(무기질\\)비료비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_of, title: "시설장미 10a당 유기질비료비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_pest, title: "시설장미 10a당 농약비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^농약비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_heat, title: "시설장미 10a당 수도광열비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^수도광열비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_omat, title: "시설장미 10a당 기타재료비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^기타재료비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_tool, title: "시설장미 10a당 소농구비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^소농구비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_mach, title: "시설장미 10a당 대농구상각비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^대농구상각비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_fac, title: "시설장미 10a당 영농시설상각비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^영농시설상각비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_rep, title: "시설장미 10a당 수리·유지비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^수리·유지비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_etc, title: "시설장미 10a당 기타비용", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^기타비용$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_mc, title: "시설장미 10a당 경영비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_land, title: "시설장미 10a당 토지임차료", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_hire, title: "시설장미 10a당 고용노동비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^고용노동비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_pc, title: "시설장미 10a당 생산비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^생산비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_self, title: "시설장미 10a당 자가노동비", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^자가노동비$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_va, title: "시설장미 10a당 부가가치", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^부가가치$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_inc, title: "시설장미 10a당 소득", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^소득$", "^시설장미$"], unit: 원, survey: 농산물소득조사}
+      - {id: fl_vr, title: "시설장미 부가가치율", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설장미$"], unit: "%", survey: 농산물소득조사}
+      - {id: fl_rt, title: "시설장미 소득률", tbl: DT_143002_E005, org: "143", periods: 2, itm: "^금액/수량/비율$", want: ["^소득률$", "^시설장미$"], unit: "%", survey: 농산물소득조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

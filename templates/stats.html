@@ -1397,7 +1397,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배', 131) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식', 144) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1451,6 +1451,22 @@
   {{ rcard('시설채소 중 양액재배 비율', K.hyd_tot, K.irg_tot, 'ir3', ('양액재배 ' ~ K.hyd_tot.vals[-1]|big ~ ' ha · 흙 대신 배지·물에 양액을 줌') if K.hyd_tot else '', '#6b8fd6') }}
   {{ hcard('시설채소 관수 방식별 면적', [('점적관수', K.irg_drip), ('스프링쿨러', K.irg_spr), ('살수(분무호스)', K.irg_mist), ('다공튜브', K.irg_perf), ('인력', K.irg_man)], 'ha', '괄호는 시설채소 면적 중 비율 · 오른쪽은 전년 대비', K.irg_tot.vals[-1] if K.irg_tot else none, '#2458d6') }}
   {{ hcard('양액재배 배지·방식별 면적', [('코코넛피트', K.hyd_coco), ('펄라이트', K.hyd_perl), ('암면', K.hyd_rw), ('담액경(DFT)', K.hyd_dft), ('분무경', K.hyd_aero), ('박막경(NFT)', K.hyd_nft)], 'ha', '괄호는 양액재배 면적 중 비율 · 앞 셋은 고형배지, 뒤 셋은 배지 없는 순수수경 · 오른쪽은 전년 대비', K.hyd_tot.vals[-1] if K.hyd_tot else none, '#6b8fd6') }}
+ </div>
+<h3 class="sg-sub">시설 구조 — 비닐·뼈대·난방 방식 <small>농림축산식품부 채소류 생산실적 · 시설채소 재배면적 기준</small></h3>
+ <div class="sg-g">
+  {{ card('cov_tot', 'sc1', ('연질필름 ' ~ K.cov_soft.vals[-1]|big ~ ' ha · 경질필름 ' ~ K.cov_hard.vals[-1]|big ~ ' ha · 유리 ' ~ K.cov_glass.vals[-1]|big ~ ' ha') if K.cov_soft and K.cov_hard and K.cov_glass else none, '#5fae7a') }}
+  {{ rcard('시설채소 중 연질필름(비닐) 피복 비율', K.cov_soft, K.cov_tot, 'sc2', 'PE·EVA·PO·PVC 같은 비닐 ÷ 시설채소 면적', '#5fae7a') }}
+  {{ rcard('연질필름 중 PO필름 비율', K.cov_po, K.cov_soft, 'sc3', ('PO ' ~ K.cov_po.vals[-1]|big ~ ' ha · 오래 쓰고 빛이 잘 드는 장기성 필름') if K.cov_po else '', '#3a8a5a') }}
+  {{ hcard('피복자재별 시설채소 면적', [('PE', K.cov_pe), ('PO', K.cov_po), ('EVA', K.cov_eva), ('PVC', K.cov_pvc), ('PET(경질필름)', K.cov_pet), ('유리', K.cov_glass), ('경질판', K.cov_hb), ('기타 연질필름', K.cov_etc), ('직조필름', K.cov_weave), ('불소수지(경질필름)', K.cov_fl), ('PC(경질판)', K.cov_pc)], 'ha', '괄호는 시설채소 면적 중 비율 · 오른쪽은 전년 대비', K.cov_tot.vals[-1] if K.cov_tot else none, '#5fae7a') }}
+  {{ rcard('시설채소 중 파이프 골조 비율', K.frm_pipe, K.frm_tot, 'sk1', ('파이프 ' ~ K.frm_pipe.vals[-1]|big ~ ' ha · 흔한 아연도 강관 비닐하우스') if K.frm_pipe else '', '#7a7f8a') }}
+  {{ rcard('시설채소 중 철골(원형·각관) 골조 비율', K.frm_stl, K.frm_tot, 'sk2', ('철골원형 ' ~ K.frm_rnd.vals[-1]|big ~ ' ha · 철골각관 ' ~ K.frm_sq.vals[-1]|big ~ ' ha · 연동·유리온실형 튼튼한 뼈대') if K.frm_rnd and K.frm_sq else '', '#7a7f8a') }}
+  {{ rcard('시설채소 중 이동식 시설 비율', K.ins_mov, K.ins_tot, 'sk3', ('고정식 ' ~ K.ins_fix.vals[-1]|big ~ ' ha · 이동식은 철마다 걷었다 세우는 터널·하우스') if K.ins_fix else '', '#a08a5a') }}
+  {{ hcard('골조(뼈대)별 시설채소 면적', [('파이프', K.frm_pipe), ('PVC피막파이프', K.frm_pvcp), ('PVC', K.frm_pvc), ('철골원형', K.frm_rnd), ('철골각관', K.frm_sq), ('목재', K.frm_wood)], 'ha', '괄호는 시설채소 면적 중 비율 · 앞 둘과 철골은 철재(' ~ (K.frm_steel.vals[-1]|big if K.frm_steel else '') ~ ' ha) · 오른쪽은 전년 대비', K.frm_tot.vals[-1] if K.frm_tot else none, '#7a7f8a') }}
+  {{ hcard('설치 유형별 시설채소 면적', [('고정식 · 논', K.ins_pad), ('고정식 · 밭', K.ins_upl), ('이동식', K.ins_mov)], 'ha', '괄호는 시설채소 면적 중 비율 · 오른쪽은 전년 대비', K.ins_tot.vals[-1] if K.ins_tot else none, '#a08a5a') }}
+  {{ card('htp_tot', 'sh1', ('지상부 ' ~ K.htp_top.vals[-1]|big ~ ' ha · 지하부(땅속) ' ~ K.htp_gnd.vals[-1]|big ~ ' ha') if K.htp_top and K.htp_gnd else none, '#c0763a') }}
+  {{ rcard('시설채소 중 난방 면적 비율', K.htp_tot, K.cov_tot, 'sh2', '난방 시설을 갖춘 면적 ÷ 시설채소 면적', '#c0763a') }}
+  {{ rcard('난방 면적 중 온풍난방 비율', K.htp_warm, K.htp_tot, 'sh3', ('온풍난방 ' ~ K.htp_warm.vals[-1]|big ~ ' ha · 온풍기로 공기를 데움') if K.htp_warm else '', '#c0763a') }}
+  {{ hcard('난방 방식별 시설채소 면적', [('온풍난방', K.htp_warm), ('온수난방 · 방열관', K.htp_rad), ('기타 지상부난방', K.htp_etc), ('온수난방 · 팬코일', K.htp_fan), ('온수보일러(지하부)', K.htp_boil), ('태양열복합(지하부)', K.htp_sol)], 'ha', '괄호는 난방 면적 중 비율 · 오른쪽은 전년 대비', K.htp_tot.vals[-1] if K.htp_tot else none, '#c0763a') }}
  </div>
  <h3 class="sg-sub">농업용수 시설 <small>한국농어촌공사 농업생산기반시설 현황 · 저수지·양배수장</small></h3>
  <div class="sg-g">

@@ -3994,6 +3994,43 @@ sources:
       - {id: ict_mgmt, title: 농가 정보화(농업경영), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농업경영$"], unit: 가구, survey: 농림어업조사}
       - {id: ict_info, title: 농가 정보화(농업관련정보수집), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^농업관련정보수집$"], unit: 가구, survey: 농림어업조사}
       - {id: ict_spu, title: 농가 정보화(스마트폰 활용농가), tbl: DT_1EA1053, itm: "^농가$", want: ["^전국$", "^스마트폰 활용농가$"], unit: 가구, survey: 농림어업조사}
+      - {id: cov_tot, title: 시설채소 피복자재별 면적(전체), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_glass, title: 시설채소 피복자재별 면적(유리), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^유리$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_soft, title: 시설채소 피복자재별 면적(연질필름), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^연질필름$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_pe, title: 시설채소 피복자재별 면적(PE), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^PE$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_pvc, title: 시설채소 피복자재별 면적(PVC), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^PVC$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_eva, title: 시설채소 피복자재별 면적(EVA), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^EVA$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_po, title: 시설채소 피복자재별 면적(PO), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^PO$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_weave, title: 시설채소 피복자재별 면적(직조필름), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^직조필름$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_etc, title: 시설채소 피복자재별 면적(기타), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_hard, title: 시설채소 피복자재별 면적(경질필름), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^경질필름$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_fl, title: 시설채소 피복자재별 면적(불소수지), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^불소수지$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_pet, title: 시설채소 피복자재별 면적(PET), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^PET$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_hb, title: 시설채소 피복자재별 면적(경질판), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^경질판$"], unit: ha, survey: 채소류생산실적}
+      - {id: cov_pc, title: 시설채소 피복자재별 면적(PC), tbl: DT_114018_014, org: "114", itm: "^면적$", want: ["^전국$", "^PC$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_tot, title: 시설채소 골재별 면적(전체), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_wood, title: 시설채소 골재별 면적(목재), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^목재$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_pvc, title: 시설채소 골재별 면적(PVC), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^PVC$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_steel, title: 시설채소 골재별 면적(철재), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^철재$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_pipe, title: 시설채소 골재별 면적(파이프), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^파이프$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_pvcp, title: 시설채소 골재별 면적(PVC피막파이프), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^PVC피막파이프$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_rnd, title: 시설채소 골재별 면적(철골원형), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^철골원형$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_sq, title: 시설채소 골재별 면적(철골각관), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^철골각관$"], unit: ha, survey: 채소류생산실적}
+      - {id: frm_stl, title: 시설채소 골재별 면적(철골 원형+각관), tbl: DT_114018_013, org: "114", itm: "^면적$", want: ["^전국$", "^철골원형$|^철골각관$"], sum: true, unit: ha, survey: 채소류생산실적}
+      - {id: htp_tot, title: 시설채소 난방방식별 면적(전체), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_top, title: 시설채소 난방방식별 면적(지상부난방), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^지상부난방$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_warm, title: 시설채소 난방방식별 면적(온풍난방), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^온풍난방$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_rad, title: 시설채소 난방방식별 면적(온수난방 방열관), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^온수난방_방열관$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_fan, title: 시설채소 난방방식별 면적(온수난방 팬코일), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^온수난방_펜코일$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_etc, title: 시설채소 난방방식별 면적(기타), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_gnd, title: 시설채소 난방방식별 면적(지하부난방), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^지하부난방$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_boil, title: 시설채소 난방방식별 면적(온수보일러), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^온수보일러$"], unit: ha, survey: 채소류생산실적}
+      - {id: htp_sol, title: 시설채소 난방방식별 면적(태양열복합), tbl: DT_114018_020, org: "114", itm: "^면적$", want: ["^전국$", "^태양열복합$"], unit: ha, survey: 채소류생산실적}
+      - {id: ins_tot, title: 시설채소 설치유형별 면적(전체), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: ins_fix, title: 시설채소 설치유형별 면적(고정식), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^고정식$"], unit: ha, survey: 채소류생산실적}
+      - {id: ins_mov, title: 시설채소 설치유형별 면적(이동식), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^이동식$"], unit: ha, survey: 채소류생산실적}
+      - {id: ins_pad, title: 시설채소 설치유형별 면적(논), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^논$"], unit: ha, survey: 채소류생산실적}
+      - {id: ins_upl, title: 시설채소 설치유형별 면적(밭), tbl: DT_114018_017, org: "114", itm: "^면적$", want: ["^전국$", "^밭$"], unit: ha, survey: 채소류생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

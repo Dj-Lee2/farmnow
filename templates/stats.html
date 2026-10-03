@@ -1038,7 +1038,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비·시설장미 소득·경영비', 117) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
+ <details class="sg-grp" id="g-value">{% call head('g-value', '생산액·소득', '농업 생산액·부문별·작물별 소득·논벼 작업별 노동 시간·임산물 소득·경영비·생산비·노동 시간·선도·전업 임가·규모·연령·도별 소득·경영비(감·대추·밤·호두·오미자·복분자딸기)·임가 소득 변화·지원금 수혜·애로사항·산나물·약초·버섯 품목별 소득·경영비·소득률·과수·채소 작물별 소득·유기질·무기질 비료비·농약비·경영비·수도광열비·수경재배·수량·수취가격·종묘비·그 밖의 채소·과수·부가가치율·토지임차료·식량·특용작물·노지 채소 소득·경영비·시설장미 소득·경영비·6차산업 경영체 사업 분야·매출·자산·판매 비중·인증·경영주 종사기간·조직 형태', 130) %}{{ kv('농업 생산액', K.pv_total) }}{{ kv('논벼 10a당 소득', K.rice_inc) }}{{ kv('농업생산지수', K.pv_idx) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">농업 생산액</h3>
  <div class="sg-g">
@@ -1216,6 +1216,17 @@
   {{ card('fmb_ma', 'v45', ('소득률 ' ~ '{:.1f}'.format(K.fir_ma.vals[-1]) ~ '% · 경영비') if K.fir_ma else none, '#b0503a') }}
   {{ hcard('소득률 · 품목별', [('독활', K.fir_dok), ('목이버섯', K.fir_mok), ('참취', K.fir_cha), ('원추리', K.fir_wch), ('참나물', K.fir_cnm), ('곰취', K.fir_gom), ('두릅', K.fir_dur), ('고사리', K.fir_frn), ('곤드레', K.fir_gdr), ('수액(고로쇠 등)', K.fir_sap), ('더덕', K.fir_ddk), ('산마늘', K.fir_sanm), ('마', K.fir_ma), ('도라지', K.fir_drj), ('톱밥배지표고', K.fir_sws), ('원목표고(시설)', K.fir_shf), ('원목표고(노지)', K.fir_shl)], '%', '총수입 중 소득 비율 · 오른쪽은 전년 대비(%p)', none, '#1c7a45') }}
   {{ hcard('경영비 · 품목별', [('마', K.fmb_ma), ('톱밥배지표고', K.fmb_sws), ('원목표고(시설)', K.fmb_shf), ('도라지', K.fmb_drj), ('곰취', K.fmb_gom), ('참나물', K.fmb_cnm), ('더덕', K.fmb_ddk), ('원목표고(노지)', K.fmb_shl), ('산마늘', K.fmb_sanm), ('곤드레', K.fmb_gdr), ('참취', K.fmb_cha), ('목이버섯', K.fmb_mok), ('원추리', K.fmb_wch), ('두릅', K.fmb_dur), ('독활', K.fmb_dok), ('고사리', K.fmb_frn), ('수액(고로쇠 등)', K.fmb_sap)], '천원', '1ha당(버섯은 1만 봉·본당) · 오른쪽은 전년 대비', none, '#b0503a') }}
+ </div>
+ <h3 class="sg-sub">농촌융복합산업(6차산업) 경영체의 사업과 매출 <small>1차 생산에 제조·가공(2차)이나 직매장·체험관광(3차)을 더한 경영체 · 1곳당 평균 매출·자산·판매 비중·인증 · 농촌융복합산업 실태조사</small></h3>
+ <div class="sg-g">{{ card('sx_fin_rev', 'sx1', '6차산업 경영체 1곳당 평균 한 해 매출액 · 2차(제조·가공) ' ~ ('{:.1f}'.format(K.sx_fin_rev2.vals[-1] / K.sx_fin_rev.vals[-1] * 100) ~ '%') ~ ' · 3차(서비스) ' ~ ('{:.1f}'.format(K.sx_fin_rev3.vals[-1] / K.sx_fin_rev.vals[-1] * 100) ~ '%') if K.sx_fin_rev2 and K.sx_fin_rev3 and K.sx_fin_rev else none, '#7a6a3a') }}{{ card('sx_fin_asset', 'sx2', '1곳당 평균 자산총계 · 부채총계 ' ~ num(K.sx_fin_debt.vals[-1], '백만원')|striptags ~ ' · 보조금 ' ~ num(K.sx_fin_sub.vals[-1], '백만원')|striptags if K.sx_fin_debt and K.sx_fin_sub else none, '#1f5f8a') }}{{ card('sx_tr_b2c', 'sx3', '판매액 중 소비자 직접 판매(B2C) 비중 · 기업 거래(B2B) ' ~ num(K.sx_tr_b2b.vals[-1], '%')|striptags if K.sx_tr_b2b else none, '#3a8f6a') }}
+  {{ card('sx_rt_yes', 'sx4', '경영주가 귀농·귀촌인인 경영체 · 직접 농사 지은 경험 없는 경영주 ' ~ num(K.sx_yr_none.vals[-1], '%')|striptags if K.sx_yr_none else none, '#b0503a') }}{{ card('sx_ct_haccp', 'sx5', 'HACCP 인증을 가진 경영체 · 인증·지정 없음 ' ~ num(K.sx_ct_none.vals[-1], '%')|striptags if K.sx_ct_none else none, '#1f5f8a') }}{{ card('sx_ct_six', 'sx6', '농촌융복합산업 사업자 인증 보유 · 친환경(유기·무농약·무항생제) 인증 ' ~ num(K.sx_ct_eco.vals[-1], '%')|striptags if K.sx_ct_eco else none, '#3a8f6a') }}
+  {{ hcard('6차산업 경영체가 하는 사업 — 분야별', [('재배업', K.sx_mid_crop), ('직매장', K.sx_mid_store), ('식품가공 제조업', K.sx_mid_food), ('체험관광', K.sx_mid_tour), ('임업', K.sx_mid_forest), ('식·음료점', K.sx_mid_rest), ('축산업', K.sx_mid_live), ('비식품 가공품 제조업', K.sx_mid_nonfood)], '%', '경영체 중 해당 사업을 하는 비중 · 중복응답', none, '#7a6a3a') }}
+  {{ hcard('6차산업 경영체가 하는 사업 — 1·2·3차', [('1차(농림축산업)', K.sx_op_1st), ('3차(유통·판매·체험·관광)', K.sx_op_3rd), ('2차(제조·가공업)', K.sx_op_2nd)], '%', '경영체 중 해당 부문을 하는 비중 · 중복응답', none, '#3a8f6a') }}
+  {{ hcard('1곳당 평균 매출액 — 부문별', [('2차(제조·가공)', K.sx_fin_rev2), ('3차(서비스)', K.sx_fin_rev3), ('1차(농림축산업)', K.sx_fin_rev1)], '백만원', '6차산업 경영체 평균' ~ (' · 합계 ' ~ num(K.sx_fin_rev.vals[-1], '백만원')|striptags if K.sx_fin_rev else ''), none, '#b0503a') }}
+  {{ hcard('판매처 유형별 판매 비중', [('B2C(소비자)', K.sx_tr_b2c), ('B2B(기업)', K.sx_tr_b2b), ('B2G(공공)', K.sx_tr_b2g), ('수출', K.sx_tr_exp)], '%', '판매액 기준 · 합 100', none, '#1f5f8a') }}
+  {{ hcard('보유한 인증·지정', [('HACCP', K.sx_ct_haccp), ('농촌융복합산업 인증', K.sx_ct_six), ('친환경(유기·무농약·무항생제)', K.sx_ct_eco), ('GAP', K.sx_ct_gap), ('전통식품', K.sx_ct_trad), ('지리적표시', K.sx_ct_gi), ('해당 없음', K.sx_ct_none)], '%', '경영체 중 보유 비중 · 중복응답', none, '#3a8f6a') }}
+  {{ hcard('경영주의 농업 종사기간', [('20년 이상', K.sx_yr_20), ('10~20년', K.sx_yr_10to20), ('5~10년', K.sx_yr_5to10), ('3~5년', K.sx_yr_3to5), ('3년 미만', K.sx_yr_u3), ('직접 생산 경험 없음', K.sx_yr_none)], '%', '6차산업 경영체 · 합 100', none, '#7a5cc2') }}
+  {{ hcard('조직 형태', [('농가', K.sx_org_farm), ('농업법인', K.sx_org_corp), ('기타', K.sx_org_etc)], '%', '6차산업 경영체 · 합 100', none, '#1f5f8a') }}
  </div>
  </div></details>
 

@@ -5210,6 +5210,45 @@ sources:
       - {id: rc_bz_up, title: "쌀가공업계 경기 1년 전보다 호전", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^호전$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rc_bz_same, title: "쌀가공업계 경기 1년 전보다 비슷", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rc_bz_down, title: "쌀가공업계 경기 1년 전보다 악화", tbl: DT_446001_A022, org: "466", periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: sx_op_1st, title: "6차산업 경영체 사업 형태 1차(농림축산업)", tbl: DT_114061_002, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^1차"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_op_2nd, title: "6차산업 경영체 사업 형태 2차(제조·가공업)", tbl: DT_114061_002, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^2차"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_op_3rd, title: "6차산업 경영체 사업 형태 3차(유통·판매·체험·관광)", tbl: DT_114061_002, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^3차"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_crop, title: "6차산업 경영체 사업 분야 재배업", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^재배업$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_live, title: "6차산업 경영체 사업 분야 축산업", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^축산업$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_forest, title: "6차산업 경영체 사업 분야 임업", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^임업$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_food, title: "6차산업 경영체 사업 분야 식품가공 제조업", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^식품가공 제조업$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_nonfood, title: "6차산업 경영체 사업 분야 비식품 가공품 제조업", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^비식품 가공품 제조업$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_store, title: "6차산업 경영체 사업 분야 직매장", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^직매장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_rest, title: "6차산업 경영체 사업 분야 식·음료점", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^식·음료점$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mid_tour, title: "6차산업 경영체 사업 분야 체험관광", tbl: DT_114061_003, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^체험관광$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_org_farm, title: "6차산업 경영체 조직 형태 농가", tbl: DT_114061_011, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농가$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_org_corp, title: "6차산업 경영체 조직 형태 농업법인", tbl: DT_114061_011, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농업법인$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_org_etc, title: "6차산업 경영체 조직 형태 기타", tbl: DT_114061_011, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_rt_yes, title: "6차산업 경영주 귀농·귀촌인", tbl: DT_114061_010, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^예$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_u3, title: "6차산업 경영주 농업 종사기간 3년 미만", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^3년 미만$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_3to5, title: "6차산업 경영주 농업 종사기간 3~5년", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^3년 이상 ~ 5년 미만$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_5to10, title: "6차산업 경영주 농업 종사기간 5~10년", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^5년 이상 ~ 10년 미만$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_10to20, title: "6차산업 경영주 농업 종사기간 10~20년", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^10년 이상 ~ 20년 미만$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_20, title: "6차산업 경영주 농업 종사기간 20년 이상", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^20년 이상$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_yr_none, title: "6차산업 경영주 농업 종사기간 직접생산 경험 없음", tbl: DT_114061_009, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^직접생산 경험 없음$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_six, title: "6차산업 경영체 농촌융복합산업 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농촌융복합산업 인증$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_eco, title: "6차산업 경영체 친환경(유기·무농약·무항생제) 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^유기농/무농약"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_gap, title: "6차산업 경영체 GAP 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^GAP 인증$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_haccp, title: "6차산업 경영체 HACCP 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^HACCP 인증$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_gi, title: "6차산업 경영체 지리적표시 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^지리적표시제 인증$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_trad, title: "6차산업 경영체 전통식품 인증 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^전통식품 인증$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_ct_none, title: "6차산업 경영체 인증·지정 없음 보유", tbl: DT_114061_018, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^해당없음$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_tr_b2b, title: "6차산업 경영체 판매 비중 B2B(기업)", tbl: DT_114061_060, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^B2B$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_tr_b2c, title: "6차산업 경영체 판매 비중 B2C(소비자)", tbl: DT_114061_060, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^B2C$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_tr_b2g, title: "6차산업 경영체 판매 비중 B2G(공공)", tbl: DT_114061_060, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^B2G$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_tr_exp, title: "6차산업 경영체 판매 비중 수출", tbl: DT_114061_060, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^수출$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_rev, title: "6차산업 경영체 평균 매출액 계", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^계$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_rev1, title: "6차산업 경영체 평균 1차 부문 매출액", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^1차"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_rev2, title: "6차산업 경영체 평균 2차 부문 매출액", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^2차"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_rev3, title: "6차산업 경영체 평균 3차 부문 매출액", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^3차"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_asset, title: "6차산업 경영체 평균 자산총계", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^자산총계$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_debt, title: "6차산업 경영체 평균 부채총계", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^부채총계$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_fin_sub, title: "6차산업 경영체 평균 보조금", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^전체 보조금$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

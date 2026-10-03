@@ -5349,6 +5349,41 @@ sources:
       - {id: nuo_spare_barley, title: 보리 묘 예비묘 생산율, tbl: DT_114052_B22, org: "114", se: F, periods: 2, itm: "^예비묘 생산율$", want: ["^보리$", "^실생$"], unit: "%", survey: 육묘업실태조사}
       - {id: nuo_fl_prod, title: 화훼묘 생산량, tbl: DT_114052_B25, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: [], unit: 만주, survey: 육묘업실태조사}
       - {id: nuo_fl_sales, title: 화훼묘 판매액, tbl: DT_114052_B25, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: [], unit: 만원, survey: 육묘업실태조사}
+      - {id: dk_new, title: 조사 전년도 신규 발생 농작업 관련 질병 건수, tbl: DT_14303_E1535, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^조사 전년도 신규 발생$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_old, title: 조사 전년도 이전 발생 농작업 관련 질병 건수, tbl: DT_14303_E1535, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^조사 전년도 이전 발생$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_all, title: 농작업 관련 질병 건수(발생 시기 기준), tbl: DT_14303_E1535, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^조사 전년도"], sum: true, unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_1, title: 휴업 1~4일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^1~4일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_4, title: 휴업 4~7일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^4~7일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_7, title: 휴업 7~14일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^7~14일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_14, title: 휴업 14~30일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^14~30일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_30, title: 휴업 30일 이상 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^30일 이상$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_perm, title: 휴업 영구적으로 일을 못함 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^영구적으로 일을 못함$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_off_all, title: 휴업한 농작업 관련 질병 건수, tbl: DT_14303_E1537, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["일"], sum: true, unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_self, title: 자가 치료 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^자가 치료$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_pharm, title: 약국 치료 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^약국 치료$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_out, title: 병원 통원 치료 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^병원 통원 치료$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_hosp, title: 병원 입원 치료 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^병원 입원 치료$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_none, title: 치료받지 않은 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^치료 받지 않음$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_all, title: 농작업 관련 질병 건수(치료 종류 기준), tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["치료"], sum: true, unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_tr_clin, title: 병원 치료(통원·입원) 농작업 관련 질병 건수, tbl: DT_14303_E1538, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^병원"], sum: true, unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_d_u4, title: 치료 기간 4일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1539, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^4일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_d_4, title: 치료 기간 4~7일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1539, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^4~7일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_d_7, title: 치료 기간 7~14일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1539, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^7~14일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_d_14, title: 치료 기간 14~30일 미만 농작업 관련 질병 건수, tbl: DT_14303_E1539, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^14~30일 미만$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: dk_d_30, title: 치료 기간 30일 이상 농작업 관련 질병 건수, tbl: DT_14303_E1539, org: "143", se: F, periods: 2, itm: "^농작업 관련 질병건수$", want: ["^30일 이상$"], unit: 건, survey: 농업인 업무상 질병조사}
+      - {id: rpc_hill, title: 논벼 1㎡당 포기 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당포기수$", want: ["^계$"], unit: 포기, survey: 농작물생산조사}
+      - {id: rpc_eff, title: 논벼 포기당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:유효이삭수$", want: ["^계$"], unit: 이삭, survey: 농작물생산조사}
+      - {id: rpc_fill, title: 논벼 이삭당 완전낟알 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:완전낟알수$", want: ["^계$"], unit: 알, survey: 농작물생산조사}
+      - {id: rpc_epm, title: 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^계$"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_hull, title: 논벼 제현율, tbl: DT_1ET0031, periods: 3, itm: "^논벼:제현율.%.$", want: ["^계$"], unit: "%", survey: 농작물생산조사}
+      - {id: rpc_epm_gg, title: 경기 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경기"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_gw, title: 강원 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^강원"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_cb, title: 충북 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^충청북"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_cn, title: 충남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^충청남"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_jb, title: 전북 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^전라북|^전북"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_jn, title: 전남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^전라남|^전남"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_gb, title: 경북 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상북"], unit: 개, survey: 농작물생산조사}
+      - {id: rpc_epm_gn, title: 경남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상남"], unit: 개, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

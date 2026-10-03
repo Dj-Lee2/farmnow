@@ -4137,6 +4137,37 @@ sources:
       - {id: hst_gl_m, title: 시설채소 시설유형별 면적(유리온실 연동), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^연동$"], codes: {C2: "H0302$"}, unit: ha, survey: 채소류생산실적}
       - {id: hst_gl_roof, title: 시설채소 시설유형별 면적(유리온실 연동 지붕형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^지붕형$"], codes: {C2: "H030201$"}, unit: ha, survey: 채소류생산실적}
       - {id: hst_gl_ven, title: 시설채소 시설유형별 면적(유리온실 연동 벤로형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^벤로형$"], codes: {C2: "H030202$"}, unit: ha, survey: 채소류생산실적}
+      - {id: oca_know, title: 유기가공식품을 알고 있다, tbl: DT_114053_081_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: oca_heard, title: 유기가공식품을 들어본 적은 있다, tbl: DT_114053_081_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^들어본 적은 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: oca_no, title: 유기가공식품을 모른다, tbl: DT_114053_081_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^모른다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_buy, title: 유기가공식품 구입 경험 있음, tbl: DT_114053_082_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^있음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_nobuy, title: 유기가공식품 구입 경험 없음, tbl: DT_114053_082_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^없음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_trust, title: 유기 인증 품질을 신뢰한다, tbl: DT_114053_082_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(신뢰하는 편이다|신뢰하고 있다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_tmid, title: 유기 인증 품질 신뢰 보통, tbl: DT_114053_082_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보통이다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_distrust, title: 유기 인증 품질을 신뢰하지 않는다, tbl: DT_114053_082_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^신뢰하지 않(는다|는 편이다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocb_tavg, title: 유기 인증 품질 신뢰도(5점 만점), tbl: DT_114053_082_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocr_taste, title: 유기가공식품 구입 이유 — 맛이 더 좋아서, tbl: DT_114053_084_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^맛이 더 좋아서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocr_qual, title: 유기가공식품 구입 이유 — 원료 품질, tbl: DT_114053_084_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원료의 품질이"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocr_nutr, title: 유기가공식품 구입 이유 — 영양, tbl: DT_114053_084_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양이 더 풍부"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocr_safe, title: 유기가공식품 구입 이유 — 더 안전해서, tbl: DT_114053_084_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^더 안전하다고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocr_env, title: 유기가공식품 구입 이유 — 환경 보전, tbl: DT_114053_084_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^환경보전"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocs_all, title: 유기가공식품 만족도 — 전반(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^전반적인 만족도$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_price, title: 유기가공식품 만족도 — 가격(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_taste, title: 유기가공식품 만족도 — 맛(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^맛$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_safe, title: 유기가공식품 만족도 — 안전성(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^안전성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_health, title: 유기가공식품 만족도 — 영양·건강(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^영양/건강$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_conv, title: 유기가공식품 만족도 — 편리성(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^편리성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocs_div, title: 유기가공식품 만족도 — 다양성(5점 만점), tbl: DT_114053_087, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocf_up, title: 향후 1년 유기가공식품 구입 늘릴 것, tbl: DT_114053_088, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간|매우) 증가할 것이다$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocf_keep, title: 향후 1년 유기가공식품 구입 현 수준 유지, tbl: DT_114053_088, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^현 수준을 유지할 것이다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocf_down, title: 향후 1년 유기가공식품 구입 줄일 것, tbl: DT_114053_088, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간|매우) 감소할 것이다$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocf_avg, title: 향후 1년 유기가공식품 구입 변화 예상(5점 만점), tbl: DT_114053_088, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: ocp_eco, title: 유기가공식품 주 구입처 — 친환경 식품 전문점, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^친환경 식품 전문점$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocp_online, title: 유기가공식품 주 구입처 — 온라인 쇼핑몰, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^온라인 쇼핑몰$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocp_mart, title: 유기가공식품 주 구입처 — 대형마트, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^오프라인 대형마트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocp_ssm, title: 유기가공식품 주 구입처 — 대기업 슈퍼마켓, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^대기업에서 운영하는 슈퍼마켓$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocp_local, title: 유기가공식품 주 구입처 — 로컬푸드 마켓, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^오프라인 독립된 로컬푸드 마켓$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: ocp_town, title: 유기가공식품 주 구입처 — 동네 슈퍼·식자재마트, tbl: DT_114053_086, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^동네 슈퍼마켓 식자재마트$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

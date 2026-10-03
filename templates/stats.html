@@ -2056,7 +2056,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매', 137) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축', 149) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -2214,6 +2214,13 @@
    <div class="v">{{ num(c.vals[-1], c.unit) }} {{ yoy(r) }}</div>
    <div class="s"><span>{{ c.years[-1][:4] }}년 1~{{ c.years[-1][5:]|int }}월 · 막대는 전년 같은 기간 대비(%)</span><span>{{ lab[-1] }}</span></div>
    <div class="sg-ch">{{ r.vals|mini(uid, '#c77b30', lab, '%') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}{% endfor %}</div>
+ <h3 class="sg-sub">도축 세부 — 소 품종·닭 종류·시도별 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
+ <div class="sg-g">{{ card('slb_hw', 'dh1', ('암소 ' ~ num(K.slb_hw_f.vals[-1], '두')|striptags ~ ' · 수소 ' ~ num(K.slb_hw_m.vals[-1], '두')|striptags) if K.slb_hw_f and K.slb_hw_m else none, '#c77b30', yoy(K.slb_hw_yoy)) }}{{ card('slb_dy', 'dh2', '우유를 짜다 도태한 젖소 · 축산물 도축실적', '#1f5f8a', yoy(K.slb_dy_yoy)) }}{{ card('slb_yw', 'dh3', '젖소 수소를 고기용으로 기른 소 · 축산물 도축실적', '#7a6a3a', yoy(K.slb_yw_yoy)) }}
+  {{ rcard('한우 도축 중 암소 비율', K.slb_hw_f, K.slb_hw, 'dh4', '암소 도축이 늘면 번식 기반이 줄어 몇 해 뒤 송아지가 적어짐', '#b0503a') }}{{ rcard('소 도축 중 한우 비율', K.slb_hw, K.slb_tot, 'dh5', '한우·젖소·육우 합계 중 한우 · 수입 생우 도축은 최근 없음', '#c77b30') }}{{ card('slc_broil', 'dh6', ('닭 도축의 ' ~ '{:.1f}'.format(K.slc_broil.vals[-1] / K.slc_tot.vals[-1] * 100) ~ '% · 치킨·닭고기용') if K.slc_tot else none, '#c77b30', yoy(K.slc_broil_yoy)) }}
+  {{ card('slc_samg', 'dh7', '삼계탕용 작은 닭 · 복날이 든 7월에 크게 늘어남', '#b0503a', yoy(K.slc_samg_yoy)) }}{{ card('slc_native', 'dh8', '재래·토종 계통 닭 · 여름 보양철에 몰림', '#1c7a45', yoy(K.slc_native_yoy)) }}{{ card('slc_layer', 'dh9', '알을 다 낳고 도태한 산란계 · 축산물 도축실적', '#7a6a3a', yoy(K.slc_layer_yoy)) }}
+  {{ hcard('닭 종류별 도축 마릿수', [('육계', K.slc_broil), ('삼계', K.slc_samg), ('토종닭', K.slc_native), ('산란노계', K.slc_layer), ('육용종계', K.slc_bb), ('산란종계', K.slc_bs), ('겸용종', K.slc_dual)], '수', '괄호는 닭 도축 전체 중 비중 · 종계는 병아리를 얻으려 기르던 어미닭 · 오른쪽은 전월 대비', K.slc_tot.vals[-1] if K.slc_tot else none, '#c77b30') }}
+  {{ hcard('시도별 소 도축 마릿수', [('경기', K.slr_gg), ('충북', K.slr_cb), ('경남', K.slr_gn), ('전남·광주', K.slr_jn), ('충남', K.slr_cn), ('경북', K.slr_gb), ('강원', K.slr_gw), ('인천', K.slr_ic), ('전북', K.slr_jb), ('대구', K.slr_dg), ('울산', K.slr_us), ('대전', K.slr_dj), ('제주', K.slr_jj)], '두', '도축장 소재지 기준(사육지와 다를 수 있음) · 괄호는 전국 소 도축 중 비중 · 서울·부산은 최근 도축 없음 · 오른쪽은 전월 대비', K.slr_tot.vals[-1] if K.slr_tot else none, '#b0503a') }}
+  {{ hcard('소 품종·암수별 도축 마릿수', [('한우 암소', K.slb_hw_f), ('한우 수소', K.slb_hw_m), ('육우', K.slb_yw), ('젖소', K.slb_dy)], '두', '괄호는 소 도축 전체 중 비중 · 오른쪽은 전월 대비', K.slb_tot.vals[-1] if K.slb_tot else none, '#7a6a3a') }}</div>
  <h3 class="sg-sub">번식우·산란계·오리</h3>
  <div class="sg-g">{% set cn = K.cow_net %}{{ card('cow_net', 'g41', ('총수입 ' ~ num(K.cow_rev.vals[-1], '원')|striptags ~ ' · 송아지 생산 농가 평균') if K.cow_rev else none, '#2458d6' if cn and cn.vals[-1] < 0 else '#1c7a45') }}{{ card('cow_inc', 'g42', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('cow_birth', 'g43', '가임 암소 중 송아지를 낳은 비율') }}{{ card('ly_net', 'g44', ('수당 소득 ' ~ '{:,.0f}'.format(K.ly_inc.vals[-1]) ~ '원 · 산란계 1마리 기준') if K.ly_inc else none) }}{{ card('ly_inc', 'g45', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('duck', 'g46', ('농가 ' ~ K.duck_farms.vals[-1]|big ~ '곳 · 계절에 따라 크게 변함') if K.duck_farms else none) }}</div>
  </div></details>

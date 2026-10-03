@@ -5503,6 +5503,42 @@ sources:
       - {id: rb25_bev, title: 사업체 쌀 소비량 음료제조업(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^음료제조업 총계$"], periods: 1, survey: 양곡소비량조사}
       - {id: rb25_makg, title: 사업체 쌀 소비량 탁주·약주(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^탁주 및 약주 제조업$"], periods: 1, survey: 양곡소비량조사}
       - {id: rb25_ethan, title: 사업체 쌀 소비량 주정(11차 개정), tbl: DT_1ED0007, itm: "^쌀 소비량$", want: ["^주정 제조업$"], periods: 1, survey: 양곡소비량조사}
+      # 도축실적 세부(월별) — 소 품종·암수, 닭 종류, 시도별 소
+      - {id: slb_hw, title: 한우 도축 마릿수, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^한우\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slb_hw_yoy, title: 한우 도축 전년 같은 달 대비, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^한우\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slb_dy, title: 젖소 도축 마릿수, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^젖소\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slb_dy_yoy, title: 젖소 도축 전년 같은 달 대비, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^젖소\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slb_yw, title: 육우 도축 마릿수, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^육우\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slb_yw_yoy, title: 육우 도축 전년 같은 달 대비, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^육우\\(계\\)$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slb_hw_f, title: 한우 암소 도축 마릿수, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^한우\\(암\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slb_hw_m, title: 한우 수소 도축 마릿수, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^한우\\(수\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slb_tot, title: 소 품종별 도축 합계, tbl: DT_114_2016_S0020, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^총계\\(계\\)$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slc_tot, title: 닭 종류별 도축 합계, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_broil, title: 육계 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^육계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_broil_yoy, title: 육계 도축 전년 같은 달 대비, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^육계$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slc_samg, title: 삼계 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^삼계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_samg_yoy, title: 삼계 도축 전년 같은 달 대비, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^삼계$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slc_layer, title: 산란노계 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^산란노계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_layer_yoy, title: 산란노계 도축 전년 같은 달 대비, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^산란노계$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slc_native, title: 토종닭 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^토종닭$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_native_yoy, title: 토종닭 도축 전년 같은 달 대비, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^전년대비", "^토종닭$"], unit: "%", survey: 축산물 도축실적}
+      - {id: slc_bs, title: 산란종계 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^산란종계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_bb, title: 육용종계 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^육용종계$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slc_dual, title: 겸용종(닭) 도축 마릿수, tbl: DT_114_2016_S0023, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월", "^겸용종\\(닭\\)$"], unit: 수, survey: 축산물 도축실적}
+      - {id: slr_tot, title: 시도별 소 도축 전국, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^전국$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_dg, title: 대구 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^대구"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_ic, title: 인천 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^인천"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_dj, title: 대전 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^대전"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_us, title: 울산 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^울산"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_gg, title: 경기 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^경기"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_gw, title: 강원 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^강원"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_cb, title: 충북 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^충청북도$|^충북"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_cn, title: 충남 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^충청남도$|^충남"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_jb, title: 전북 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^전북|^전라북도$"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_gb, title: 경북 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^경상북도$|^경북"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_gn, title: 경남 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^경상남도$|^경남"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_jj, title: 제주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^제주"], unit: 두, survey: 축산물 도축실적}
+      - {id: slr_jn, title: 전남·광주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 두, survey: 축산물 도축실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -4319,6 +4319,38 @@ sources:
       - {id: rgf_dg, title: 대구에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^대구광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rgf_gj, title: 광주에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^광주광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rgf_dj, title: 대전에서 온 귀농인, tbl: DT_1A02005, itm: "^귀농인수$", want: ["^대전광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_all, title: 귀촌인 계(성·연령 표), tbl: DT_1A02014, itm: "^귀촌인수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_m, title: 남성 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^남자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_f, title: 여성 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^여자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_u30, title: 29세 이하 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^0 - 29세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_30, title: 30대 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^30 - 39세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_40, title: 40대 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^40 - 49세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_50, title: 50대 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^50 - 59세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_60, title: 60대 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^60 - 69세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_70, title: 70세 이상 귀촌인, tbl: DT_1A02014, itm: "^귀촌인수$", want: ["^70세 이상$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_head, title: 귀촌가구주 계, tbl: DT_1A02014, itm: "^귀촌가구주수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcn_comp, title: 귀촌 동반가구원 계, tbl: DT_1A02014, itm: "^동반가구원수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcv_all, title: 귀촌인 계(이주유형 표), tbl: DT_1A02018, itm: "^귀촌인수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcv_in, title: 귀촌인 시도 안 이동, tbl: DT_1A02018, itm: "^귀촌인수$", want: ["^시도내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcv_sg, title: 귀촌인 시군 간 이동, tbl: DT_1A02018, itm: "^귀촌인수$", want: ["^시군간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcv_uc, title: 귀촌인 도농통합시 안 이동, tbl: DT_1A02018, itm: "^귀촌인수$", want: ["^도농통합시내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcv_out, title: 귀촌인 시도 간 이동, tbl: DT_1A02018, itm: "^귀촌인수$", want: ["^시도간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rch_tot, title: 귀촌가구(가구원수 표), tbl: DT_1A02020, itm: "^가구수$", periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rch_1, title: 1인 귀촌가구, tbl: DT_1A02020, itm: "^가구수$", want: ["^1인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rch_2, title: 2인 귀촌가구, tbl: DT_1A02020, itm: "^가구수$", want: ["^2인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rch_3, title: 3인 귀촌가구, tbl: DT_1A02020, itm: "^가구수$", want: ["^3인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rch_4, title: 4인 이상 귀촌가구, tbl: DT_1A02020, itm: "^가구수$", want: ["^4인가구이상$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: rcg_tot, title: 귀촌가구주 계(성·연령 표), tbl: DT_1A02019, itm: "^귀촌가구주수$", periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcg_f, title: 여성 귀촌가구주, tbl: DT_1A02019, itm: "^귀촌가구주수$", want: ["^여자$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcg_u40, title: 39세 이하 귀촌가구주, tbl: DT_1A02019, itm: "^귀촌가구주수$", want: ["^(0 - 29세|30 - 39세)$"], sum: true, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcg_70, title: 70세 이상 귀촌가구주, tbl: DT_1A02019, itm: "^귀촌가구주수$", want: ["^70세 이상$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_seoul, title: 서울에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^서울특별시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_gg, title: 경기에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^경기도$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_inc, title: 인천에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^인천광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_bs, title: 부산에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^부산광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_dg, title: 대구에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^대구광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_gj, title: 광주에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^광주광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rco_dj, title: 대전에서 온 귀촌인, tbl: DT_1A02017, itm: "^귀촌인수$", want: ["^대전광역시$"], codes: {C2: "^00$"}, periods: 3, unit: 명, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

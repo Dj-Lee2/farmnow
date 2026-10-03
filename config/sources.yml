@@ -3713,6 +3713,44 @@ sources:
       - {id: cla_time, title: 귀촌 가구 지역 활동 어려움 시간 부족(육아·농사일), tbl: DT_114055_B046, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^시간 부족"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cla_trans, title: 귀촌 가구 지역 활동 어려움 교통수단 부족, tbl: DT_114055_B046, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^교통 수단의 부족$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cla_prej, title: 귀촌 가구 지역 활동 어려움 기존 지역민의 텃세, tbl: DT_114055_B046, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^기존 지역민의 텃세$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: mcl_all, title: 산란계 분뇨 수거주기 조사 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_day, title: 산란계 분뇨 매일 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^매일$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_1w, title: 산란계 분뇨 1주 미만마다 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^1주 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_1m, title: 산란계 분뇨 1개월 미만마다 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^1개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_3m, title: 산란계 분뇨 3개월 미만마다 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^3개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_6m, title: 산란계 분뇨 6개월 미만마다 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^6개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcl_loop, title: 산란계 분뇨 상시(컨베이어 벨트 등) 수거 농장, tbl: DT_114059_006, org: "114", periods: 5, itm: "농장수$", want: ["^상시\\(컨베이어 벨트 등\\)$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_all, title: 육계 분뇨 수거주기 조사 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_2w, title: 육계 분뇨 2주 미만마다 수거 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^2주 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_1m, title: 육계 분뇨 1개월 미만마다 수거 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^1개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_2m, title: 육계 분뇨 2개월 미만마다 수거 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^2개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_4m, title: 육계 분뇨 4개월 미만마다 수거 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^4개월 미만$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mcb_loop, title: 육계 분뇨 상시(컨베이어 벨트 등) 수거 농장, tbl: DT_114059_007, org: "114", periods: 5, itm: "농장수$", want: ["^상시\\(컨베이어 벨트 등\\)$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mck_all, title: 오리 분뇨 수거주기 조사 농장, tbl: DT_114059_008, org: "114", periods: 5, itm: "농장수$", want: ["^합계$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: mck_loop, title: 오리 분뇨 상시(컨베이어 벨트 등) 수거 농장, tbl: DT_114059_008, org: "114", periods: 5, itm: "농장수$", want: ["^상시\\(컨베이어 벨트 등\\)$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_cult, title: 축사 경운기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^경운기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_mgr, title: 축사 관리기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^관리기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_trac, title: 축사 트랙터 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트랙터$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_spr, title: 축사 방제기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^방제기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_truck, title: 축사 트럭 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^트럭$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fork, title: 축사 지게차 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^지게차$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_skid, title: 축사 스키드로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^스키드로더$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_pay, title: 축사 페로더 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^페로더$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_exc, title: 축사 굴삭기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^굴삭기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_tank, title: 축사 탱크로리 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^탱크로리$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_frz, title: 축사 소형냉동고 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^소형냉동고$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_heat, title: 축사 난방기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^난방기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_ac, title: 축사 에어컨 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^에어컨$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_auto, title: 축사 자동개폐기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^자동개폐기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_fan, title: 축사 환풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^환풍기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_hair, title: 축사 온풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^온풍기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_elec, title: 축사 선풍기 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^선풍기$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_hp, title: 축사 히트펌프 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^히트펌프$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: lmq_lamp, title: 축사 보온등 사용 농장, tbl: DT_114059_014, org: "114", itm: "기계·장비 종류별 사용 농장수$", want: ["^보온등$", "^합계$"], unit: 호, survey: 가축분뇨처리통계}
+      - {id: csc_has, title: 귀촌 가구 지역에 일반 사회단체 있음, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^있음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csc_act, title: 귀촌 가구 일반 사회단체 자주 참여, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^(주도적이고 적극적으로 참여|자주 참여하며 적극적으로 의견을 개진|자주 참여하나 적극적으로 의견내지 않음)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csc_some, title: 귀촌 가구 일반 사회단체 가끔 참여, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: csc_rare, title: 귀촌 가구 일반 사회단체 거의 참여하지 않음, tbl: DT_114055_B043, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^거의 참여하지 않음$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

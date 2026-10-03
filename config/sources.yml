@@ -4712,6 +4712,44 @@ sources:
       - {id: rtr_s_need, title: "농촌관광 만족도 고객 요구사항 반영(100점)", tbl: DT_143005_2024A086, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
       - {id: rtr_s_meal, title: "농촌관광 만족도 식사·음료 품질(100점)", tbl: DT_143005_2024A087, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
       - {id: rtr_s_asafe, title: "농촌관광 만족도 관광활동 안전성(100점)", tbl: DT_143005_2024A088, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_hyg, title: "농촌관광 만족도 방역·위생관리(100점)", tbl: DT_143005_2024A089, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_price, title: "농촌관광 만족도 합리적인 비용(가격)(100점)", tbl: DT_143005_2024A090, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_road, title: "농촌관광 만족도 도로·진입로 접근성·안전성(100점)", tbl: DT_143005_2024A091, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_bus, title: "농촌관광 만족도 대중교통 편리성·정보(100점)", tbl: DT_143005_2024A092, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_emer, title: "농촌관광 만족도 응급의료·비상 대응체계(100점)", tbl: DT_143005_2024A093, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_prog, title: "농촌관광 만족도 체험 프로그램 다양성(100점)", tbl: DT_143005_2024A094, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_fun, title: "농촌관광 만족도 볼거리·이벤트 등 즐길거리(100점)", tbl: DT_143005_2024A095, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_gift, title: "농촌관광 만족도 지역특산품·기념품 전시·판매(100점)", tbl: DT_143005_2024A096, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_eat, title: "농촌관광 만족도 특색있는 먹거리(100점)", tbl: DT_143005_2024A097, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_guide, title: "농촌관광 만족도 마을·체험 해설 안내(100점)", tbl: DT_143005_2024A098, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_info, title: "농촌관광 만족도 안내자료 제공(100점)", tbl: DT_143005_2024A099, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_sign, title: "농촌관광 만족도 안내지도·도로표지판 등 안내체계(100점)", tbl: DT_143005_2024A100, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_crowd, title: "농촌관광 만족도 관광객 밀집도·현황 정보 제공(100점)", tbl: DT_143005_2024A101, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_view, title: "농촌관광 만족도 자연경관·생태자원의 아름다움(100점)", tbl: DT_143005_2024A102, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_herit, title: "농촌관광 만족도 전통문화유산 등 지역 자원의 고유성(100점)", tbl: DT_143005_2024A103, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_value, title: "농촌관광 만족도 비용 대비 만족도(100점)", tbl: DT_143005_2024A104, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_s_all, title: "농촌관광 만족도 전반적 만족도(100점)", tbl: DT_143005_2024A105, org: "143", se: F, periods: 1, itm: "^만족도$", want: ["^전체$", "^100점 평균$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_infra, title: "농촌관광 만족도 대분류 인프라(100점)", tbl: DT_143005_2024A106, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_svc, title: "농촌관광 만족도 대분류 서비스·가격(100점)", tbl: DT_143005_2024A107, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_acc, title: "농촌관광 만족도 대분류 접근성(100점)", tbl: DT_143005_2024A108, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_cont, title: "농촌관광 만족도 대분류 관광 콘텐츠·프로그램(100점)", tbl: DT_143005_2024A109, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_pr, title: "농촌관광 만족도 대분류 안내·홍보(100점)", tbl: DT_143005_2024A110, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_c_res, title: "농촌관광 만족도 대분류 마을자원·매력(100점)", tbl: DT_143005_2024A111, org: "143", se: F, periods: 1, itm: "^100점 평균$", want: ["^전체$"], unit: 점, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_trip, title: "농촌 관계활동 연간 횟수 농촌지역으로 출장", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역으로 출장$"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_comm, title: "농촌 관계활동 연간 횟수 농촌지역으로 통근·통학", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역으로 통근"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_second, title: "농촌 관계활동 연간 횟수 세컨하우스", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^세컨하우스"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_long, title: "농촌 관계활동 연간 횟수 일주일 이상 장기 체류", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^일주일 이상 장기 체류"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_club, title: "농촌 관계활동 연간 횟수 향우회·동창회 등 지역모임", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^향우회 동창회"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_family, title: "농촌 관계활동 연간 횟수 가족·친척·지인 방문", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역의 가족·친척·지인 방문$"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_direct, title: "농촌 관계활동 연간 횟수 농특산물 직거래 방문 구매", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^관계지역 농특산물 직거래"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_sight, title: "농촌 관계활동 연간 횟수 명소·사찰·유적지 등 방문", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌지역 명소"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_tour, title: "농촌 관계활동 연간 횟수 지속적 상호작용 농촌관광", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^지속적 상호작용 농촌관광$"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_hobby, title: "농촌 관계활동 연간 횟수 취미활동", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^취미활동"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_vol, title: "농촌 관계활동 연간 횟수 봉사활동", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^봉사활동"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_edu, title: "농촌 관계활동 연간 횟수 농촌 관련 교육활동", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^농촌과 관련된 교육활동"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_gift, title: "농촌 관계활동 연간 횟수 고향사랑기부", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^고향사랑기부"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_online, title: "농촌 관계활동 연간 횟수 농특산물 온라인 구매", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^관계지역 농특산물 온라인"], unit: 회, survey: 농촌관광 실태조사}
+      - {id: rtr_rf_sns, title: "농촌 관계활동 연간 횟수 온라인 지역정보 공유·홍보", tbl: DT_143005_2024A161, org: "143", se: F, periods: 1, itm: "^비율$", want: ["^전체$", "^온라인"], unit: 회, survey: 농촌관광 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

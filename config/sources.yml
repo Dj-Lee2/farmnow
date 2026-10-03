@@ -5314,6 +5314,41 @@ sources:
       - {id: nur_gr_tom, title: 토마토 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^토마토$", "^접목$"], unit: "%", survey: 육묘업실태조사}
       - {id: nur_gr_pep, title: 고추 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^고추$", "^접목$"], unit: "%", survey: 육묘업실태조사}
       - {id: nur_gr_mel, title: 참외 묘 접목 비중, tbl: DT_114052_B24, org: "114", se: F, periods: 2, itm: "^접목 및 실생 비중$", want: ["^참외$", "^접목$"], unit: "%", survey: 육묘업실태조사}
+      - {id: sdo_tot, title: 종자업체(운영 형태 표), tbl: DT_114052_002, org: "114", se: F, periods: 2, itm: "^종자업체의 지사\\(점\\) 보유 여부 및 사업운영 형태$", want: [], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_br, title: 지사(점) 있는 종자업체, tbl: DT_114052_002, org: "114", se: F, periods: 2, itm: "^종자업체의 지사\\(점\\) 보유 여부 및 사업운영 형태$", want: ["^지사\\(점\\) 있음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_full, title: 종자업 전업 업체, tbl: DT_114052_002, org: "114", se: F, periods: 2, itm: "^종자업체의 지사\\(점\\) 보유 여부 및 사업운영 형태$", want: ["^종자업 전업$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_side, title: 종자업 외 겸업 업체, tbl: DT_114052_002, org: "114", se: F, periods: 2, itm: "^종자업체의 지사\\(점\\) 보유 여부 및 사업운영 형태$", want: ["^종자업 외 겸업$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_inc_seed, title: 겸업 종자업체 주된 소득 종자업, tbl: DT_114052_003, org: "114", se: F, periods: 2, itm: "^종자 외 겸업 종자업체의 주된 소득$", want: ["^종자업$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_inc_crop, title: 겸업 종자업체 주된 소득 작물재배·판매, tbl: DT_114052_003, org: "114", se: F, periods: 2, itm: "^종자 외 겸업 종자업체의 주된 소득$", want: ["^작물재배 및 판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_inc_etc, title: 겸업 종자업체 주된 소득 기타, tbl: DT_114052_003, org: "114", se: F, periods: 2, itm: "^종자 외 겸업 종자업체의 주된 소득$", want: ["^기타$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_bz_breed, title: 육종을 포함하는 종자업체, tbl: DT_114052_004, org: "114", se: F, periods: 2, itm: "^종자업체의 사업내용$", want: ["^육종-"], sum: true, unit: 개, survey: 종자업실태조사}
+      - {id: sdo_bz_nur, title: 육묘를 포함하는 종자업체, tbl: DT_114052_004, org: "114", se: F, periods: 2, itm: "^종자업체의 사업내용$", want: ["-육묘$"], sum: true, unit: 개, survey: 종자업실태조사}
+      - {id: sdo_bz_ps, title: 생산-판매 종자업체, tbl: DT_114052_004, org: "114", se: F, periods: 2, itm: "^종자업체의 사업내용$", want: ["^생산-판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_bz_p, title: 생산만 하는 종자업체, tbl: DT_114052_004, org: "114", se: F, periods: 2, itm: "^종자업체의 사업내용$", want: ["^생산$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_bz_s, title: 판매만 하는 종자업체, tbl: DT_114052_004, org: "114", se: F, periods: 2, itm: "^종자업체의 사업내용$", want: ["^판매$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_mc_multi, title: 복수 작목군 종자 취급 업체, tbl: DT_114052_006, org: "114", se: F, periods: 2, itm: "^종자업체의 단일 및 복수 작목군 종자 취급 여부$", want: ["^복수작목군$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdo_nc_food, title: 종자업체 식량 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^식량$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_veg, title: 종자업체 채소 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^채소$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_fruit, title: 종자업체 과수 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^과수$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_flow, title: 종자업체 화훼 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^화훼$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_mush, title: 종자업체 버섯 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^버섯$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_for, title: 종자업체 산림 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^산림$"], unit: 작목, survey: 종자업실태조사}
+      - {id: sdo_nc_etc, title: 종자업체 특용/사료/기타 평균 취급 작목 수, tbl: DT_114052_025, org: "114", se: F, periods: 2, itm: "^작목 수$", want: ["^특용/사료/기타$"], unit: 작목, survey: 종자업실태조사}
+      - {id: nuo_inc_tot, title: 겸업 육묘업체, tbl: DT_114052_B03, org: "114", se: F, periods: 2, itm: "^육묘 외 겸업 육묘업체의 주된 소득$", want: ["^계$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nuo_inc_nur, title: 겸업 육묘업체 주된 소득 육묘업, tbl: DT_114052_B03, org: "114", se: F, periods: 2, itm: "^육묘 외 겸업 육묘업체의 주된 소득$", want: ["^육묘업$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nuo_inc_crop, title: 겸업 육묘업체 주된 소득 작물재배 및 판매, tbl: DT_114052_B03, org: "114", se: F, periods: 2, itm: "^육묘 외 겸업 육묘업체의 주된 소득$", want: ["^작물재배 및 판매$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nuo_inc_etc, title: 겸업 육묘업체 주된 소득 기타, tbl: DT_114052_B03, org: "114", se: F, periods: 2, itm: "^육묘 외 겸업 육묘업체의 주된 소득$", want: ["^기타$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nuo_inc_seed, title: 겸업 육묘업체 주된 소득 종자업, tbl: DT_114052_B03, org: "114", se: F, periods: 2, itm: "^육묘 외 겸업 육묘업체의 주된 소득$", want: ["^종자업$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nuo_job_tot, title: 육묘업체 업체당 상시근무자, tbl: DT_114052_B08, org: "114", se: F, periods: 2, itm: "^육묘업체의 상시근무자 중 직무별 평균 종사자 수$", want: ["^계$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nuo_job_prod, title: 육묘업체 업체당 생산·품질관리 인력, tbl: DT_114052_B08, org: "114", se: F, periods: 2, itm: "^육묘업체의 상시근무자 중 직무별 평균 종사자 수$", want: ["^생산/품질관리$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nuo_job_sales, title: 육묘업체 업체당 영업 인력, tbl: DT_114052_B08, org: "114", se: F, periods: 2, itm: "^육묘업체의 상시근무자 중 직무별 평균 종사자 수$", want: ["^영업$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nuo_job_mgmt, title: 육묘업체 업체당 경영 및 기타 인력, tbl: DT_114052_B08, org: "114", se: F, periods: 2, itm: "^육묘업체의 상시근무자 중 직무별 평균 종사자 수$", want: ["^경영 및 기타$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nuo_spare_rice, title: 벼 묘 예비묘 생산율, tbl: DT_114052_B22, org: "114", se: F, periods: 2, itm: "^예비묘 생산율$", want: ["^벼$", "^실생$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nuo_spare_bean, title: 콩 묘 예비묘 생산율, tbl: DT_114052_B22, org: "114", se: F, periods: 2, itm: "^예비묘 생산율$", want: ["^콩$", "^실생$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nuo_spare_corn, title: 옥수수 묘 예비묘 생산율, tbl: DT_114052_B22, org: "114", se: F, periods: 2, itm: "^예비묘 생산율$", want: ["^옥수수$", "^실생$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nuo_spare_barley, title: 보리 묘 예비묘 생산율, tbl: DT_114052_B22, org: "114", se: F, periods: 2, itm: "^예비묘 생산율$", want: ["^보리$", "^실생$"], unit: "%", survey: 육묘업실태조사}
+      - {id: nuo_fl_prod, title: 화훼묘 생산량, tbl: DT_114052_B25, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: [], unit: 만주, survey: 육묘업실태조사}
+      - {id: nuo_fl_sales, title: 화훼묘 판매액, tbl: DT_114052_B25, org: "114", se: F, periods: 2, itm: "^전체 판매액$", want: [], unit: 만원, survey: 육묘업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -4418,6 +4418,43 @@ sources:
       - {id: sed_breed, title: 육종 실적 있는 종자업체, tbl: DT_114052_012A, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 실적 여부$", want: ["^있음$"], unit: 개, survey: 종자업실태조사}
       - {id: sed_x, title: 종자 수출액, tbl: DT_114052_021, org: "114", se: F, periods: 2, itm: "^종자 수출입액$", want: ["^수출$"], unit: 만원, survey: 종자업실태조사}
       - {id: sed_m, title: 종자 수입액, tbl: DT_114052_021, org: "114", se: F, periods: 2, itm: "^종자 수출입액$", want: ["^수입$"], unit: 만원, survey: 종자업실태조사}
+      - {id: nur_ft, title: 육묘업 전업 업체, tbl: DT_114052_B02, org: "114", se: F, periods: 2, itm: "^사업운영 형태$", want: ["^전체$", "^육묘업 전업$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_bt, title: 육묘업체(사업운영 형태 표), tbl: DT_114052_B02, org: "114", se: F, periods: 2, itm: "^사업운영 형태$", want: ["^전체$", "^계$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_area, title: 육묘장 평균 재배면적, tbl: DT_114052_B04, org: "114", se: F, periods: 2, itm: "^육묘업체의 육묘장 평균 재배면적 및 부속시설 면적$", want: ["^전체 평균$", "^육묘장 재배면적\\(A\\)$"], unit: ㎡, survey: 육묘업실태조사}
+      - {id: nur_log, title: 관리일지 기록하는 육묘업체, tbl: DT_114052_B14, org: "114", se: F, periods: 2, itm: "^일지 기록 여부$", want: ["^기록함$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_log_tot, title: 육묘업체(일지 기록 표), tbl: DT_114052_B14, org: "114", se: F, periods: 2, itm: "^일지 기록 여부$", want: [], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_sup, title: 외부기관 지원받은 육묘업체, tbl: DT_114052_B15, org: "114", se: F, periods: 2, itm: "^외부기관 협력 및 지원 여부$", want: ["^지원 받음$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_sup_tot, title: 육묘업체(외부 지원 표), tbl: DT_114052_B15, org: "114", se: F, periods: 2, itm: "^외부기관 협력 및 지원 여부$", want: [], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_seed, title: 자동파종기 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^자동파종기$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_germ, title: 발아실 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^발아실$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_env, title: 환경제어시스템 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^환경제어시스템$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_mon, title: 원격환경모니터링시스템 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^원격환경모니터링시스템$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_irr, title: 자동관수장치 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^자동관수장치$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_pest, title: 무인병해충방제시스템 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^무인병해충방제시스템$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_renew, title: 신재생에너지냉난방시스템 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^신재생에너지냉난방시스템$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_eq_bench, title: 벤치이동시스템 보유 육묘업체, tbl: DT_114052_B13, org: "114", se: F, periods: 2, itm: "^시설 자재별 보유 및 사용여부$", want: ["^보유 여부$", "^벤치이동시스템$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_wish_loan, title: 육묘업체 지원희망 운영자금융자, tbl: DT_114052_B17, org: "114", se: F, periods: 2, itm: "^지원희망 분야$", want: ["^운영자금융자$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_wish_fac, title: 육묘업체 지원희망 육묘장시설 개보수비용 지원, tbl: DT_114052_B17, org: "114", se: F, periods: 2, itm: "^지원희망 분야$", want: ["^육묘장시설 개보수비용 지원$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_wish_edu, title: 육묘업체 지원희망 육묘 관련 기술 교육실시 및 지원, tbl: DT_114052_B17, org: "114", se: F, periods: 2, itm: "^지원희망 분야$", want: ["^육묘 관련 기술 교육실시 및 지원$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_wish_auto, title: 육묘업체 지원희망 육묘 자동화 설비 개발 및 보급지원, tbl: DT_114052_B17, org: "114", se: F, periods: 2, itm: "^지원희망 분야$", want: ["^육묘 자동화 설비 개발 및 보급지원$"], unit: 개, survey: 육묘업실태조사}
+      - {id: nur_wish_hr, title: 육묘업체 지원희망 육묘 관련 전문인력 육성 및 수급 지원, tbl: DT_114052_B17, org: "114", se: F, periods: 2, itm: "^지원희망 분야$", want: ["^육묘 관련 전문인력 육성 및 수급 지원$"], unit: 개, survey: 육묘업실태조사}
+      - {id: sed_rd, title: 종자업체 품종개발 투입액, tbl: DT_114052_013, org: "114", se: F, periods: 2, itm: "^투입액$", want: [], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_rd_own, title: 종자업체 자체연구개발비, tbl: DT_114052_013, org: "114", se: F, periods: 2, itm: "^투입액$", want: ["^자체연구개발비$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_rd_out, title: 종자업체 위탁연구개발비, tbl: DT_114052_013, org: "114", se: F, periods: 2, itm: "^투입액$", want: ["^위탁연구개발비$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_rd_in, title: 종자업체 수탁연구개발비, tbl: DT_114052_013, org: "114", se: F, periods: 2, itm: "^투입액$", want: ["^수탁연구개발비$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_ec, title: 인터넷 판매하는 종자업체, tbl: DT_114052_018, org: "114", se: F, periods: 2, itm: "^전자상거래\\(인터넷 판매\\) 여부$", want: ["^하고 있음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_ec_tot, title: 종자업체(전자상거래 표), tbl: DT_114052_018, org: "114", se: F, periods: 2, itm: "^전자상거래\\(인터넷 판매\\) 여부$", want: [], unit: 개, survey: 종자업실태조사}
+      - {id: sed_xp, title: 종자 수출 경험 업체, tbl: DT_114052_020, org: "114", se: F, periods: 2, itm: "^종자 수출입 경험$", want: ["^있었음$", "^수출$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_mp, title: 종자 수입 경험 업체, tbl: DT_114052_020, org: "114", se: F, periods: 2, itm: "^종자 수출입 경험$", want: ["^있었음$", "^수입$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_xp_tot, title: 종자업체(수출 경험 표), tbl: DT_114052_020, org: "114", se: F, periods: 2, itm: "^종자 수출입 경험$", want: ["^계$", "^수출$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_roy, title: 로열티 받은 종자업체, tbl: DT_114052_023, org: "114", se: F, periods: 2, itm: "^로열티 수취 경험 및 금액$", want: ["^있었음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_roy_tot, title: 종자업체(로열티 표), tbl: DT_114052_023, org: "114", se: F, periods: 2, itm: "^로열티 수취 경험 및 금액$", want: ["^계$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_roy_amt, title: 종자업체 로열티 수취 금액, tbl: DT_114052_023, org: "114", se: F, periods: 2, itm: "^로열티 수취 경험 및 금액$", want: ["^로열티 수취 금액$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_fd_tot, title: 식량종자 판매액 계, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: [], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_fd_rice, title: 식량종자 판매액 벼, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^벼$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_fd_bean, title: 식량종자 판매액 콩, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^콩$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_fd_potato, title: 식량종자 판매액 감자, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^감자$"], unit: 만원, survey: 종자업실태조사}
+      - {id: sed_fd_barley, title: 식량종자 판매액 보리, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^보리$"], unit: 만원, survey: 종자업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

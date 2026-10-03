@@ -1154,7 +1154,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·종자업체 판매액·육종·수출입', 187) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티', 203) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1411,6 +1411,17 @@
   {{ hcard('육묘업체 묘 판매처', [('재배농가', K.nur_ch_farm), ('농약상·종묘상', K.nur_ch_shop), ('일반 소비자', K.nur_ch_cons), ('묘 도매상', K.nur_ch_whole), ('농협', K.nur_ch_coop)], '%', '판매액 중 비율 · 업체 평균 · 나머지는 수출·기타 · 오른쪽은 2년 전 대비', none, '#e0a03a') }}
   {{ hcard('육묘 경영비 항목별 비율', [('종자비', K.nur_c_seed), ('인건비', K.nur_c_labor), ('상토비', K.nur_c_soil), ('트레이 구입비', K.nur_c_tray), ('광열·동력비', K.nur_c_heat), ('비료·양액비', K.nur_c_fert), ('농약비', K.nur_c_pest)], '%', '경영비 중 비율 · 업체 평균 · 나머지는 시설 수리비·기타 · 오른쪽은 2년 전 대비', none, '#c0503a') }}
  </div>
+ <h3 class="sg-sub">육묘장 시설·관리와 지원 <small>국립종자원 육묘업실태조사 · 2년마다 · 비율은 전체 육묘업체 중</small></h3>
+ <div class="sg-g">
+  {{ rcard('육묘업만 하는 전업 업체', K.nur_ft, K.nur_bt, 'nq1', '나머지는 작물재배·종자업 등 겸업 · 2년 전 대비', '#1c7a45') }}
+  {{ card('nur_area', 'nq2', '업체 평균 · 발아실·작업장 등 부속시설 제외', '#3a8f6a') }}
+  {{ rcard('관리일지 기록하는 육묘업체', K.nur_log, K.nur_log_tot, 'nq3', '육묘장 운영·모종 생산 관리 일지 · 2년 전 대비', '#2458d6') }}
+  {{ rcard('외부 지원받은 육묘업체', K.nur_sup, K.nur_sup_tot, 'nq4', '공공기관·학교·연구소의 기술·자금 지원 · 2년 전 대비', '#7a5cc2') }}
+  {{ rcard('환경제어시스템 갖춘 육묘업체', K.nur_eq_env, K.nur_bt, 'nq5', '온도·습도·광을 자동으로 조절 · 2년 전 대비', '#e0a03a') }}
+  {{ rcard('자동관수장치 갖춘 육묘업체', K.nur_eq_irr, K.nur_bt, 'nq6', '물을 자동으로 주는 장치 · 2년 전 대비', '#3a8a5a') }}
+  {{ hcard('육묘 시설·장비 보유 업체', [('자동파종기', K.nur_eq_seed), ('발아실', K.nur_eq_germ), ('자동관수장치', K.nur_eq_irr), ('환경제어시스템', K.nur_eq_env), ('벤치이동시스템', K.nur_eq_bench), ('원격환경모니터링', K.nur_eq_mon), ('무인병해충방제', K.nur_eq_pest), ('신재생에너지 냉난방', K.nur_eq_renew)], '개', '괄호는 전체 육묘업체 중 비율 · 오른쪽은 2년 전 대비', K.nur_bt.vals[-1] if K.nur_bt else none, '#3a8f6a') }}
+  {{ hcard('육묘업체가 바라는 지원', [('시설 개보수비', K.nur_wish_fac), ('자동화 설비 보급', K.nur_wish_auto), ('운영자금 융자', K.nur_wish_loan), ('전문인력 육성', K.nur_wish_hr), ('기술 교육', K.nur_wish_edu)], '개', '가장 바라는 분야 · 괄호는 전체 육묘업체 중 비율 · 오른쪽은 2년 전 대비', K.nur_bt.vals[-1] if K.nur_bt else none, '#c0503a') }}
+ </div>
  <h3 class="sg-sub">종자를 만들고 파는 종자업체 <small>국립종자원 종자업실태조사 · 2년마다 · 판매실적 있는 업체 기준</small></h3>
  <div class="sg-g">
   {{ card('sed_n', 'sd1', none, '#1c7a45') }}
@@ -1421,6 +1432,17 @@
   {{ card('sed_m', 'sd6', none, '#7a5cc2') }}
   {{ hcard('작목군별 종자 판매액', [('채소', K.sed_g_veg), ('과수', K.sed_g_fruit), ('화훼', K.sed_g_flow), ('식량', K.sed_g_food)], '억원', '종자업체 전체 · 나머지는 버섯·산림·특용/사료 · 오른쪽은 2년 전 대비', none, '#e0a03a') }}
   {{ hcard('종자 주요 판매대상처', [('농가', K.sed_ch_farm), ('종자·종묘상', K.sed_ch_shop), ('지역농협·영농조합', K.sed_ch_coop), ('육묘업체', K.sed_ch_nur)], '%', '판매액 중 비율 · 나머지는 관공서·도매업자·일반소비자·기타 · 오른쪽은 2년 전 대비', none, '#2458d6') }}
+ </div>
+ <h3 class="sg-sub">종자업체 품종개발·온라인 판매·로열티 <small>국립종자원 종자업실태조사 · 2년마다</small></h3>
+ <div class="sg-g">
+  {{ card('sed_rd', 'sq1', ('자체 연구개발 ' ~ '{:.1f}'.format(K.sed_rd_own.vals[-1] / K.sed_rd.vals[-1] * 100) ~ '% · 업체 연구개발비 합계') if K.sed_rd_own and K.sed_rd else none, '#1c7a45') }}
+  {{ rcard('품종개발비 중 위탁연구', K.sed_rd_out, K.sed_rd, 'sq2', '대학·연구소 등에 맡긴 연구개발비 · 2년 전 대비', '#2458d6') }}
+  {{ rcard('인터넷으로 파는 종자업체', K.sed_ec, K.sed_ec_tot, 'sq3', '판매실적 있는 업체 중 · 2년 전 대비', '#3a8f6a') }}
+  {{ rcard('종자 수출해 본 업체', K.sed_xp, K.sed_xp_tot, 'sq4', '판매실적 있는 업체 중 · 2년 전 대비', '#e0a03a') }}
+  {{ rcard('종자 수입해 본 업체', K.sed_mp, K.sed_xp_tot, 'sq5', '판매실적 있는 업체 중 · 2년 전 대비', '#7a5cc2') }}
+  {{ card('sed_roy_amt', 'sq6', ('로열티 받은 업체 ' ~ K.sed_roy.vals[-1]|int ~ '곳 · 전체 ' ~ '{:,}'.format(K.sed_roy_tot.vals[-1]|int) ~ '곳 중') if K.sed_roy and K.sed_roy_tot else none, '#c0503a') }}
+  {{ hcard('품종개발 투입액 구성', [('자체 연구개발', K.sed_rd_own), ('위탁 연구개발', K.sed_rd_out), ('수탁 연구개발', K.sed_rd_in)], '만원', '괄호는 전체 투입액 중 비율 · 오른쪽은 2년 전 대비', K.sed_rd.vals[-1] if K.sed_rd else none, '#2458d6') }}
+  {{ hcard('식량 종자 작목별 판매액', [('감자', K.sed_fd_potato), ('벼', K.sed_fd_rice), ('콩', K.sed_fd_bean), ('보리', K.sed_fd_barley)], '만원', '괄호는 식량 종자 판매액 중 비율 · 나머지는 고구마·옥수수·밀·팥·귀리 등 · 오른쪽은 2년 전 대비', K.sed_fd_tot.vals[-1] if K.sed_fd_tot else none, '#e0a03a') }}
  </div>
 </div></details>
 

@@ -1052,7 +1052,7 @@
   {{ rcard('시설장미 영농시설상각비 ÷ 경영비', K.fl_fac, K.fl_mc, 'v65', ('온실 등 시설 감가상각 ' ~ num(K.fl_fac.vals[-1], '원')|striptags) if K.fl_fac else '', '#6b8fd6') }}
   {{ rcard('시설장미 자가노동비 ÷ 생산비', K.fl_self, K.fl_pc, 'v66', ('내 일손 값 ' ~ num(K.fl_self.vals[-1], '원')|striptags ~ ' · 고용노동비 ' ~ num(K.fl_hire.vals[-1], '원')|striptags) if K.fl_self and K.fl_hire else '', '#7a5cc2') }}
   {{ hcard('시설장미 10a당 경영비 구성', [('수도광열비', K.fl_heat), ('영농시설상각비', K.fl_fac), ('고용노동비', K.fl_hire), ('기타재료비', K.fl_omat), ('무기질비료비', K.fl_cf), ('농약비', K.fl_pest), ('종자·종묘비', K.fl_seed), ('대농구상각비', K.fl_mach), ('토지임차료', K.fl_land), ('기타비용', K.fl_etc), ('수리·유지비', K.fl_rep), ('소농구비', K.fl_tool), ('유기질비료비', K.fl_of)], '원', '괄호는 경영비 중 비중 · 난방이 가장 큰 몫 · 유기질비료는 거의 안 씀 · 오른쪽은 1년 전 대비', K.fl_mc.vals[-1] if K.fl_mc else none, '#c2577a') }}
-  {{ hcard('시설장미와 시설채소 10a당 소득', [('시설 파프리카', K.ia_inc_pap), ('시설 토마토', K.ia_inc_tom), ('시설장미', K.fl_inc), ('시설 딸기', K.ia_inc_stb), ('시설 참외', K.ia_inc_mel)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
+  {{ hcard('시설장미와 시설채소 10a당 소득', [('시설장미', K.fl_inc), ('시설 파프리카', K.ia_inc_pap), ('시설 토마토', K.ia_inc_tom), ('시설 딸기', K.ia_inc_stb), ('시설 참외', K.ia_inc_mel)], '원', '소득 = 총수입 − 경영비 · 오른쪽은 1년 전 대비', none, '#1c7a45') }}
  </div>
  <h3 class="sg-sub">식량·특용작물과 노지 채소 소득·경영비 <small>10a(300평)당 · 농촌진흥청 농산물소득조사 · 오른쪽은 1년 전 대비</small></h3>
  <div class="sg-g">

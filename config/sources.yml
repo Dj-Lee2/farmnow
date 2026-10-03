@@ -5768,6 +5768,37 @@ sources:
       - {id: sxv_pay_q4, title: "6차산업 체험관광 1곳당 유료 이용객 4분기", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^4분기$"], unit: "명", survey: 농촌융복합산업 실태조사}
       - {id: sxv_pay, title: "6차산업 체험관광 1곳당 한 해 유료 이용객", tbl: DT_114061_040, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^[1-4]분기$"], sum: true, unit: "명", survey: 농촌융복합산업 실태조사}
       - {id: sxv_free, title: "6차산업 체험관광 1곳당 한 해 무료 이용객", tbl: DT_114061_041, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^[1-4]분기$"], sum: true, unit: "명", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_cnt, title: "6차산업 체험·관광 경영체 수", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^사업체 수$"], unit: "곳", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_edu, title: "6차산업 체험·관광 경영체 운영 형태 농촌교육농장", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농촌교육농장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_vil, title: "6차산업 체험·관광 경영체 운영 형태 농어촌체험휴양마을", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농어촌체험휴양마을$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_farm, title: "6차산업 체험·관광 경영체 운영 형태 관광농원", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^관광농원$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_park, title: "6차산업 체험·관광 경영체 운영 형태 농어촌테마공원", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농어촌테마공원$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_brew, title: "6차산업 체험·관광 경영체 운영 형태 찾아가는 양조장", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^찾아가는 양조장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_dairy, title: "6차산업 체험·관광 경영체 운영 형태 낙농체험목장", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^낙농체험목장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_horse, title: "6차산업 체험·관광 경영체 운영 형태 농촌형승마장", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농촌형승마장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_own, title: "6차산업 체험·관광 경영체 운영 형태 개인 농촌체험농장", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^개인 농촌체험농장$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxt_stay, title: "6차산업 체험·관광 경영체 운영 형태 농어촌민박", tbl: DT_114061_007, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농어촌민박$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_cnt, title: "6차산업 수출 경영체 수", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^사업체 수$"], unit: "곳", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_snack, title: "6차산업 수출 품목(1순위) 간식류(과자류)", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^간식류"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_hlth, title: "6차산업 수출 품목(1순위) 건강식품류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^건강식품류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_for, title: "6차산업 수출 품목(1순위) 임산물", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^임산물$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_meat, title: "6차산업 수출 품목(1순위) 육가공품류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^육가공품류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_rice, title: "6차산업 수출 품목(1순위) 떡류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^떡류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_bake, title: "6차산업 수출 품목(1순위) 제과·제빵류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^제과·제빵류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_dairy, title: "6차산업 수출 품목(1순위) 유제품류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^유제품류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxx_tea, title: "6차산업 수출 품목(1순위) 차·음료류", tbl: DT_114061_034, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^차·음료류$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_liq, title: "6차산업 품목별 평균 수출액 주류", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^주류$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_side, title: "6차산업 품목별 평균 수출액 반찬류(김치류 포함)", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^반찬류"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_noodle, title: "6차산업 품목별 평균 수출액 면류", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^면류$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_sauce, title: "6차산업 품목별 평균 수출액 소스류", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^소스류$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_snack, title: "6차산업 품목별 평균 수출액 간식류(과자류)", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^간식류"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_hort, title: "6차산업 품목별 평균 수출액 원예작물", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^원예작물$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_tea, title: "6차산업 품목별 평균 수출액 차·음료류", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^차·음료류$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxy_beauty, title: "6차산업 품목별 평균 수출액 미용제품류", tbl: DT_114061_036, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^미용제품류$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sxd_portal, title: "6차산업 직매장 홍보활동 포털사이트", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^포털사이트$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxd_sns, title: "6차산업 직매장 홍보활동 SNS", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxd_off, title: "6차산업 직매장 홍보활동 오프라인", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^오프라인$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sxd_none, title: "6차산업 직매장 홍보활동 홍보 안 함", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홍보안함$"], unit: "%", survey: 농촌융복합산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

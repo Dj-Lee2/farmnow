@@ -1154,7 +1154,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티', 203) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적', 217) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -1443,6 +1443,23 @@
   {{ card('sed_roy_amt', 'sq6', ('로열티 받은 업체 ' ~ K.sed_roy.vals[-1]|int ~ '곳 · 전체 ' ~ '{:,}'.format(K.sed_roy_tot.vals[-1]|int) ~ '곳 중') if K.sed_roy and K.sed_roy_tot else none, '#c0503a') }}
   {{ hcard('품종개발 투입액 구성', [('자체 연구개발', K.sed_rd_own), ('위탁 연구개발', K.sed_rd_out), ('수탁 연구개발', K.sed_rd_in)], '만원', '괄호는 전체 투입액 중 비율 · 오른쪽은 2년 전 대비', K.sed_rd.vals[-1] if K.sed_rd else none, '#2458d6') }}
   {{ hcard('식량 종자 작목별 판매액', [('감자', K.sed_fd_potato), ('벼', K.sed_fd_rice), ('콩', K.sed_fd_bean), ('보리', K.sed_fd_barley)], '만원', '괄호는 식량 종자 판매액 중 비율 · 나머지는 고구마·옥수수·밀·팥·귀리 등 · 오른쪽은 2년 전 대비', K.sed_fd_tot.vals[-1] if K.sed_fd_tot else none, '#e0a03a') }}
+ </div>
+ <h3 class="sg-sub">육묘·종자업체 일손과 시설 <small>국립종자원 육묘업·종자업실태조사 · 2년마다</small></h3>
+ <div class="sg-g">
+  {{ card('nur_hr_tot', 'nh1', ('대표자 포함 · 경력 15년 이상 ' ~ '{:.1f}'.format(K.nur_hr_c15.vals[-1] / K.nur_hr_tot.vals[-1] * 100) ~ '%') if K.nur_hr_c15 and K.nur_hr_tot else none, '#1c7a45') }}
+  {{ rcard('육묘 생산·품질 인력 중 60세 이상', K.nur_hr_60, K.nur_hr_tot, 'nh2', '대표자와 종사자 모두 · 2년 전 대비', '#c0503a') }}
+  {{ rcard('육묘 생산·품질 인력 중 39세 이하', K.nur_hr_u40, K.nur_hr_tot, 'nh3', '대표자와 종사자 모두 · 2년 전 대비', '#2458d6') }}
+  {{ card('sed_emp_tot', 'sw1', ('여성 ' ~ '{:.1f}'.format(K.sed_emp_f.vals[-1] / K.sed_emp_tot.vals[-1] * 100) ~ '% · 상용·일용·자영·가족 종사자 모두') if K.sed_emp_f and K.sed_emp_tot else none, '#3a8f6a') }}
+  {{ rcard('종자업체 종사자 중 상용근로자', K.sed_emp_reg, K.sed_emp_tot, 'sw2', '나머지는 일용·자영·무급가족 등 · 2년 전 대비', '#7a5cc2') }}
+  {{ rcard('해외에서 채종한 종자업체', K.sed_os, K.sed_os_tot, 'sw3', '해외에서 종자를 채종한 실적 있는 업체 · 2년 전 대비', '#e0a03a') }}
+  {{ hcard('육묘 생산·품질 인력 연령대', [('39세 이하', K.nur_hr_u40), ('40대', K.nur_hr_40), ('50대', K.nur_hr_50), ('60세 이상', K.nur_hr_60)], '명', '대표자와 종사자 모두 · 괄호는 전체 중 비율 · 오른쪽은 2년 전 대비', K.nur_hr_tot.vals[-1] if K.nur_hr_tot else none, '#c0503a') }}
+  {{ hcard('육묘 생산·품질 인력 경력', [('5년 미만', K.nur_hr_c5), ('5~10년', K.nur_hr_c510), ('10~15년', K.nur_hr_c1015), ('15년 이상', K.nur_hr_c15)], '명', '대표자와 종사자 모두 · 괄호는 전체 중 비율 · 오른쪽은 2년 전 대비', K.nur_hr_tot.vals[-1] if K.nur_hr_tot else none, '#1c7a45') }}
+  {{ hcard('육묘 생산·품질 인력 학력', [('고졸 이하', K.nur_hr_hs), ('대학', K.nur_hr_univ), ('대학원', K.nur_hr_grad)], '명', '대표자와 종사자 모두 · 괄호는 전체 중 비율 · 오른쪽은 2년 전 대비', K.nur_hr_tot.vals[-1] if K.nur_hr_tot else none, '#2458d6') }}
+  {{ hcard('시설 형태별 육묘장 평균 재배면적', [('비닐온실', K.nur_fa_vinyl), ('노지', K.nur_fa_open), ('유리온실', K.nur_fa_glass), ('경질판온실', K.nur_fa_hard)], '㎡', '전체 육묘업체 평균 · 오른쪽은 2년 전 대비', none, '#3a8f6a') }}
+  {{ hcard('종자업체 종사상 지위별 종사자', [('상용근로자', K.sed_emp_reg), ('임시·일용근로자', K.sed_emp_tmp), ('무급가족종사자', K.sed_emp_fam), ('자영업자', K.sed_emp_self)], '명', '괄호는 전체 종사자 중 비율 · 나머지는 기타종사자 · 오른쪽은 2년 전 대비', K.sed_emp_tot.vals[-1] if K.sed_emp_tot else none, '#7a5cc2') }}
+  {{ hcard('종자업체 업체당 상시근무자 직무', [('생산·품질관리', K.sed_job_qc), ('경영 및 기타', K.sed_job_mgmt), ('관행육종', K.sed_job_breed)], '명', '업체 평균 · 괄호는 업체당 상시근무자 중 비율 · 나머지는 영업·생명공학 · 오른쪽은 2년 전 대비', K.sed_job_tot.vals[-1] if K.sed_job_tot else none, '#3a8f6a') }}
+  {{ hcard('해외채종 안 한 종자업체의 사유', [('국내 채종만으로 충분', K.sed_os_dom), ('사업체 규모 등 부적합', K.sed_os_size), ('해외 채종 지식 부족', K.sed_os_know)], '개', '괄호는 해외채종 실적 없는 업체 중 비율 · 나머지는 기타 · 오른쪽은 2년 전 대비', K.sed_os_no.vals[-1] if K.sed_os_no else none, '#e0a03a') }}
+  {{ hcard('종자업체 시설별 평균 건물 연면적', [('연구시설', K.sed_bl_lab), ('저온저장고', K.sed_bl_cold), ('사무실', K.sed_bl_office), ('가공·처리시설', K.sed_bl_proc)], '㎡', '업체 평균 · 괄호는 전체 연면적 중 비율 · 나머지는 항온항습창고·기타 · 오른쪽은 2년 전 대비', K.sed_bl_tot.vals[-1] if K.sed_bl_tot else none, '#c0503a') }}
  </div>
 </div></details>
 

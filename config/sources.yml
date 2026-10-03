@@ -4455,6 +4455,43 @@ sources:
       - {id: sed_fd_bean, title: 식량종자 판매액 콩, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^콩$"], unit: 만원, survey: 종자업실태조사}
       - {id: sed_fd_potato, title: 식량종자 판매액 감자, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^감자$"], unit: 만원, survey: 종자업실태조사}
       - {id: sed_fd_barley, title: 식량종자 판매액 보리, tbl: DT_114052_026, org: "114", se: F, periods: 2, itm: "^판매액$", want: ["^보리$"], unit: 만원, survey: 종자업실태조사}
+      - {id: nur_hr_tot, title: 육묘업체 생산·품질관리 인력, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: [], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_c5, title: 육묘업체 생산·품질관리 인력 경력 5년 미만, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^5년미만$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_c510, title: 육묘업체 생산·품질관리 인력 경력 5~10년, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^5~10년$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_c1015, title: 육묘업체 생산·품질관리 인력 경력 10~15년, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^10~15년$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_c15, title: 육묘업체 생산·품질관리 인력 경력 15년 이상, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^15년이상$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_u40, title: 육묘업체 생산·품질관리 인력 39세 이하, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^39세 이하$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_40, title: 육묘업체 생산·품질관리 인력 40대, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^40대$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_50, title: 육묘업체 생산·품질관리 인력 50대, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^50대$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_60, title: 육묘업체 생산·품질관리 인력 60세 이상, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^60세 이상$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_hs, title: 육묘업체 생산·품질관리 인력 고졸 이하, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^고졸이하$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_univ, title: 육묘업체 생산·품질관리 인력 대학, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^대학$"], unit: 명, survey: 육묘업실태조사}
+      - {id: nur_hr_grad, title: 육묘업체 생산·품질관리 인력 대학원, tbl: DT_114052_B09, org: "114", se: F, periods: 2, itm: "^계$", want: ["^대학원$"], unit: 명, survey: 육묘업실태조사}
+      - {id: sed_emp_tot, title: 종자업체 종사자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: [], unit: 명, survey: 종자업실태조사}
+      - {id: sed_emp_f, title: 종자업체 여성 종사자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: ["^여$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_emp_reg, title: 종자업체 종사자 상용근로자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: ["^상용근로자$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_emp_tmp, title: 종자업체 종사자 임시 및 일용근로자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: ["^임시 및 일용근로자$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_emp_self, title: 종자업체 종사자 자영업자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: ["^자영업자$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_emp_fam, title: 종자업체 종사자 무급가족종사자, tbl: DT_114052_009, org: "114", se: F, periods: 2, itm: "^종사자 수$", want: ["^무급가족종사자$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_job_tot, title: 종자업체 업체당 상시근무자, tbl: DT_114052_010, org: "114", se: F, periods: 2, itm: "^평균 종사자 수$", want: [], unit: 명, survey: 종자업실태조사}
+      - {id: sed_job_breed, title: 종자업체 업체당 관행육종 인력, tbl: DT_114052_010, org: "114", se: F, periods: 2, itm: "^평균 종사자 수$", want: ["^관행육종$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_job_qc, title: 종자업체 업체당 생산·품질관리 인력, tbl: DT_114052_010, org: "114", se: F, periods: 2, itm: "^평균 종사자 수$", want: ["^생산/품질관리$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_job_mgmt, title: 종자업체 업체당 경영 및 기타 인력, tbl: DT_114052_010, org: "114", se: F, periods: 2, itm: "^평균 종사자 수$", want: ["^경영 및 기타$"], unit: 명, survey: 종자업실태조사}
+      - {id: sed_os, title: 해외채종 실적 있는 종자업체, tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^있었음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_os_tot, title: 종자업체(해외채종 표), tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^실적여부$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_os_no, title: 해외채종 실적 없는 종자업체, tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^없었음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_os_dom, title: 해외채종 안 한 사유 국내 채종만으로 충분, tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^국내 채종만으로 충분$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_os_know, title: 해외채종 안 한 사유 해외 채종 지식 부족, tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^해외 채종에 관한 지식 부족$"], unit: 개, survey: 종자업실태조사}
+      - {id: sed_os_size, title: 해외채종 안 한 사유 사업체규모 등 부적합, tbl: DT_114052_022, org: "114", se: F, periods: 2, itm: "^업체수$", want: ["^사업체규모 등 해외 채종 부적합$"], unit: 개, survey: 종자업실태조사}
+      - {id: nur_fa_glass, title: 육묘장 평균 재배면적 유리온실, tbl: DT_114052_B05, org: "114", se: F, periods: 2, itm: "^육묘업체의 시설형태별 육묘장 평균 재배면적$", want: ["^전체 평균$", "^유리온실$"], unit: ㎡, survey: 육묘업실태조사}
+      - {id: nur_fa_hard, title: 육묘장 평균 재배면적 경질판온실, tbl: DT_114052_B05, org: "114", se: F, periods: 2, itm: "^육묘업체의 시설형태별 육묘장 평균 재배면적$", want: ["^전체 평균$", "^경질판온실$"], unit: ㎡, survey: 육묘업실태조사}
+      - {id: nur_fa_vinyl, title: 육묘장 평균 재배면적 비닐온실, tbl: DT_114052_B05, org: "114", se: F, periods: 2, itm: "^육묘업체의 시설형태별 육묘장 평균 재배면적$", want: ["^전체 평균$", "^비닐온실$"], unit: ㎡, survey: 육묘업실태조사}
+      - {id: nur_fa_open, title: 육묘장 평균 재배면적 노지, tbl: DT_114052_B05, org: "114", se: F, periods: 2, itm: "^육묘업체의 시설형태별 육묘장 평균 재배면적$", want: ["^전체 평균$", "^노지$"], unit: ㎡, survey: 육묘업실태조사}
+      - {id: sed_bl_tot, title: 종자업체 평균 건물 연면적, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: [], unit: ㎡, survey: 종자업실태조사}
+      - {id: sed_bl_office, title: 종자업체 평균 건물 연면적 사무실, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^사무실$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sed_bl_proc, title: 종자업체 평균 건물 연면적 가공·처리시설, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^가공·처리시설$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sed_bl_lab, title: 종자업체 평균 건물 연면적 연구시설, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^연구시설$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sed_bl_cold, title: 종자업체 평균 건물 연면적 저온저장고, tbl: DT_114052_008, org: "114", se: F, periods: 2, itm: "^연면적$", want: ["^저온저장고$"], unit: ㎡, survey: 종자업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

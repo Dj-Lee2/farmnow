@@ -1518,7 +1518,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해', 48) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안', 57) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -1587,6 +1587,14 @@
   {{ hcard('관상 산림식물 임가의 자연재해 피해', [('피해 없음', K.ndo_none), ('고온', K.ndo_heat), ('가뭄', K.ndo_drt), ('냉해', K.ndo_cold), ('수해', K.ndo_flood), ('병해충', K.ndo_pest), ('동해', K.ndo_frz), ('태풍', K.ndo_typh)], '%', '전체 임가 중 · 1순위+2순위 응답이라 합이 100%를 넘음 · 오른쪽은 전년 대비', none, '#b0503a') }}
   {{ hcard('5년간 병해충 발생이 늘어나고 있다는 임가 비율', [('대추', K.pvt_up_jjb), ('잣', K.pvt_up_pine), ('기타 수실류 전체', K.pvt_up), ('기타 유실수', K.pvt_up_oth), ('호두', K.pvt_up_wal)], '%', '기타 수실류 세부 업종별 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
  </div>
+ <h3 class="sg-sub">농업인이 보는 기후변화 — 영향과 대응 <small>기후변화가 농업생산·건강에 미치는 영향 인식과 농업인이 가장 먼저 하는 대응(1순위) · 여성농업인 기준, 일부 남성농업인 비교 · 여성농업인 실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('wf_cc_agri', 'cv1', '기후변화가 농업생산에 부정적 영향을 준다 · 남성농업인 ' ~ num(K.wf_cc_agri_m.vals[-1], '%')|striptags if K.wf_cc_agri_m else none, '#d23a32') }}{{ card('wf_cc_body', 'cv2', '기후변화가 신체건강에 부정적 영향을 준다 · 정신건강 ' ~ num(K.wf_cc_mind.vals[-1], '%')|striptags if K.wf_cc_mind else none, '#b0503a') }}{{ card('wf_ca_var', 'cv3', '농업생산 대응 1순위 작목·품종 변경 · 파종·수확 시기 조절 ' ~ num(K.wf_ca_time.vals[-1], '%')|striptags if K.wf_ca_time else none, '#7a6a3a') }}
+  {{ card('wf_ca_eco', 'cv4', '친환경농법 적용 확대를 대응 1순위로 꼽음 · 남성농업인 ' ~ num(K.wf_ca_eco_m.vals[-1], '%')|striptags if K.wf_ca_eco_m else none, '#1c7a45') }}{{ card('wf_ch_stop', 'cv5', '건강 대응 1순위 작업 중단·시간 조절 · 기상예보 확인 ' ~ num(K.wf_ch_fcst.vals[-1], '%')|striptags if K.wf_ch_fcst else none, '#2458d6') }}{{ card('wf_ch_rest', 'cv6', '건강 대응 1순위 잦은 휴식 · 충분한 수분·영양 섭취 ' ~ num(K.wf_ch_water.vals[-1], '%')|striptags if K.wf_ch_water else none, '#1f5f8a') }}
+  {{ hcard('기후변화가 미치는 영향을 부정적으로 보는 비율', [('농업생산 — 남성농업인', K.wf_cc_agri_m), ('농업생산', K.wf_cc_agri), ('신체건강', K.wf_cc_body), ('정신건강', K.wf_cc_mind)], '%', '"부정적"+"매우 부정적" 비율 · 따로 적지 않은 줄은 여성농업인', none, '#d23a32') }}
+  {{ hcard('농업생산 쪽 기후변화 대응 방안(1순위)', [('작목·품종 변경', K.wf_ca_var), ('파종·수확 시기 조절', K.wf_ca_time), ('농작물 재해보험 가입', K.wf_ca_ins), ('친환경농법 적용 확대', K.wf_ca_eco), ('재배 환경 조절', K.wf_ca_env), ('정확한 기후정보 얻기', K.wf_ca_info), ('냉난방 시설 설치', K.wf_ca_hvac), ('농약·비료 더 투입', K.wf_ca_inp), ('대응하지 않음', K.wf_ca_none), ('농업 축소·중단', K.wf_ca_quit), ('더 많은 공부·기술 투입', K.wf_ca_study)], '%', '여성농업인 전체 기준 · 1순위 응답 · 합 100', none, '#1c7a45') }}
+  {{ hcard('건강을 지키는 기후변화 대응 방안(1순위)', [('작업 중단·시간 조절', K.wf_ch_stop), ('기상예보 확인', K.wf_ch_fcst), ('잦은 휴식', K.wf_ch_rest), ('충분한 수분·영양 섭취', K.wf_ch_water), ('안전교육·안전수칙 준수', K.wf_ch_safe), ('가림막·쉼터 설치', K.wf_ch_shade), ('대응하지 않음', K.wf_ch_none), ('보조기구 사용', K.wf_ch_aid)], '%', '여성농업인 전체 기준 · 1순위 응답 · 합 100', none, '#2458d6') }}
+ </div>
  </div></details>
 
  <details class="sg-grp" id="g-price">{% call head('g-price', '농산물 가격', '교역조건·가격지수·부문별 등락·소비자물가·비료·농약·사료·농기계 생산자물가·비료 원료 수입물가·곡물·먹거리 수입물가·국산 농산물 생산자물가·축산물·채소·과일·특용작물 생산자물가', 28) %}{{ kv('교역조건', K.sell_idx, trv, trdv) }}{{ kv('판매가격지수', K.sell_idx) }}{{ kv('구입가격지수', K.buy_idx) }}{% endcall %}
@@ -1636,7 +1644,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식·가온 연료·시설 유형·외식업 식재료 국내산 비중·구매경로·국산·수입산 사용 이유·소고기 원산지·가격정보·전처리 식재료·품목별 월평균 구매량·금액·구매빈도·원물·전처리·가공 구매형태·농촌관광 경험·횟수·경비·만족도·미경험 이유·방문지 선택 이유·하고 싶은 활동·유형별 횟수·항목별 만족도·만족도 대분류·농촌 관계활동·관계활동 횟수', 223) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식·가온 연료·시설 유형·외식업 식재료 국내산 비중·구매경로·국산·수입산 사용 이유·소고기 원산지·가격정보·전처리 식재료·품목별 월평균 구매량·금액·구매빈도·원물·전처리·가공 구매형태·농촌관광 경험·횟수·경비·만족도·미경험 이유·방문지 선택 이유·하고 싶은 활동·유형별 횟수·항목별 만족도·만족도 대분류·농촌 관계활동·관계활동 횟수·임차 농업인 애로사항·임차 농지 시설설치 주체', 229) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1844,6 +1852,13 @@
   {{ hcard('임차 농업인의 영농경력', [('30년 이상', K.flr_exp_4), ('10~20년', K.flr_exp_2), ('20~30년', K.flr_exp_3), ('10년 미만', K.flr_exp_1)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#1f5f8a') }}
   {{ hcard('농지 종류별 임차 농업인 평균 영농경력', [('논', K.flr_exp_pad), ('전체', K.flr_exp_all), ('밭', K.flr_exp_fld), ('과수원', K.flr_exp_orc)], '년', '오른쪽은 1년 전 대비', none, '#1f5f8a') }}
   {{ hcard('농지 종류별 다모작·전업 비율', [('밭 다모작', K.flr_multi_fld), ('논 다모작', K.flr_multi_pad), ('밭 시설재배', K.flr_gh_fld), ('논 전업', K.flr_full_pad), ('밭 전업', K.flr_full_fld), ('과수원 전업', K.flr_full_orc)], '%', '임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">임차 농업인의 농업 애로사항과 시설 설치 <small>임차 필지 기준 · 농림축산식품부 농지임대차실태조사 · 애로사항 보기는 2025년에 바뀜</small></h3>
+ <div class="sg-g">
+  {{ card('flr_dif_none', 'lr1', '농사에 특별한 애로사항이 없다 · 오른쪽은 1년 전 대비', '#1c7a45') }}{{ card('flr_dif_pol', 'lr2', '2025년 애로사항 1위 농업 지원 정책 부족(기타 제외) · 생산 기반 시설 부족 ' ~ num(K.flr_dif_base.vals[-1], '%')|striptags if K.flr_dif_base else none, '#b0503a') }}{{ card('flr_fac_ten', 'lr3', '빌린 농지의 시설을 임차인이 직접 설치 · 땅 주인이 설치 ' ~ num(K.flr_fac_own.vals[-1], '%')|striptags if K.flr_fac_own else none, '#2458d6') }}
+  {{ hcard('임차 농업인의 농업 애로사항(2025년)', [('특별히 없음', K.flr_dif_none), ('기타', K.flr_dif_etc), ('농업 관련 지원 정책 부족', K.flr_dif_pol), ('농업 생산 기반 시설 부족', K.flr_dif_base), ('빌려 쓸 수 있는 땅 부족', K.flr_dif_short), ('농지 가격·임차료가 높음', K.flr_dif_rent)], '%', '임차 필지 중 · 합 100', none, '#b0503a') }}
+  {{ hcard('임차 농업인의 농업 애로사항(2024년 보기)', [('농지 확보가 어렵고 제약이 많음', K.flr_dif_land), ('정부지원 부족·규제', K.flr_dif_gov), ('기반 시설·장비 부족', K.flr_dif_infra), ('낮은 농산물 가격', K.flr_dif_price), ('농자재·인건비 부담', K.flr_dif_cost), ('환경 변화·피해', K.flr_dif_env), ('건강 악화·고령', K.flr_dif_old)], '%', '임차 필지 중 · 2024년 조사 보기 · 나머지 40.1%는 "특별히 없음"', none, '#7a6a3a') }}
+  {{ hcard('빌린 농지의 시설을 설치한 주체', [('임차인', K.flr_fac_ten), ('임차 농지 소유자', K.flr_fac_own), ('기타', K.flr_fac_etc)], '%', '시설이 있는 임차 필지 중 · 오른쪽은 1년 전 대비(%p)', none, '#2458d6') }}
  </div>
  <h3 class="sg-sub">소비 <small>1인당 연간</small></h3>
  <div class="sg-g">{{ card('rice_cons', 'g24', ('하루 ' ~ '{:,.0f}'.format(K.rice_cons.vals[-1] * 1000 / 365) ~ 'g') if K.rice_cons else none) }}{{ card('grain_cons', 'g25', '쌀·보리·밀가루·잡곡·두류·서류') }}</div>

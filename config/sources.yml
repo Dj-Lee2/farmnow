@@ -5249,6 +5249,41 @@ sources:
       - {id: sx_fin_asset, title: "6차산업 경영체 평균 자산총계", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^자산총계$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
       - {id: sx_fin_debt, title: "6차산업 경영체 평균 부채총계", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^부채총계$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
       - {id: sx_fin_sub, title: "6차산업 경영체 평균 보조금", tbl: DT_114061_030, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^전체 보조금$"], unit: "백만원", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mf_fin, title: "6차산업 제조·가공 형태 완제품", tbl: DT_114061_004, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^완제품$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mf_mid, title: "6차산업 제조·가공 형태 중간재", tbl: DT_114061_004, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^중간재$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_mf_oem, title: "6차산업 제조·가공 형태 OEM/ODM", tbl: DT_114061_004, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^OEM/ODM$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_st_own, title: "6차산업 직매장 운영 독립 매장", tbl: DT_114061_005, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^독립운영"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_st_co, title: "6차산업 직매장 운영 공동 매장(로컬푸드 입점)", tbl: DT_114061_005, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^공동운영"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_st_onl, title: "6차산업 직매장 운영 온라인", tbl: DT_114061_005, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^온라인$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_rs_cafe, title: "6차산업 식·음료점 유형 카페", tbl: DT_114061_006, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^카페$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_rs_food, title: "6차산업 식·음료점 유형 음식점", tbl: DT_114061_006, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^음식점$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_rs_farm, title: "6차산업 식·음료점 유형 농가식당", tbl: DT_114061_006, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농가식당$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_rs_etc, title: "6차산업 식·음료점 유형 기타", tbl: DT_114061_006, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_farm, title: "6차산업 체험관광 프로그램 농촌체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농촌체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_craft, title: "6차산업 체험관광 프로그램 공예체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^공예체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_eco, title: "6차산업 체험관광 프로그램 생태체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^생태체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_ani, title: "6차산업 체험관광 프로그램 가축체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^가축체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_cult, title: "6차산업 체험관광 프로그램 농촌생활문화체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^농촌생활문화체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_food, title: "6차산업 체험관광 프로그램 음식체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^음식체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_play, title: "6차산업 체험관광 프로그램 놀이체험", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^놀이체험$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pg_etc, title: "6차산업 체험관광 프로그램 기타", tbl: DT_114061_076, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_bk_none, title: "6차산업 체험 예약 방법 예약제 운영 안함", tbl: DT_114061_077, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^예약제 운영 안함$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_bk_tel, title: "6차산업 체험 예약 방법 전화", tbl: DT_114061_077, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^전화$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_bk_portal, title: "6차산업 체험 예약 방법 포털사이트", tbl: DT_114061_077, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^포털사이트$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_bk_home, title: "6차산업 체험 예약 방법 자체홈페이지", tbl: DT_114061_077, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^자체홈페이지$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_bk_sns, title: "6차산업 체험 예약 방법 SNS", tbl: DT_114061_077, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_solo, title: "6차산업 체험·관광시설 방문 유형 개인(혼자)", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^개인"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_pair, title: "6차산업 체험·관광시설 방문 유형 배우자·연인·친구·지인", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^배우자"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_fam, title: "6차산업 체험·관광시설 방문 유형 가족·친척", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^가족"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_kid, title: "6차산업 체험·관광시설 방문 유형 유치원생 단체", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^유치원생"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_sch, title: "6차산업 체험·관광시설 방문 유형 초중고 학생 단체", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^초중고"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_club, title: "6차산업 체험·관광시설 방문 유형 모임", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^모임$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_agcy, title: "6차산업 체험·관광시설 방문 유형 여행사 단체", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^여행사"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_vt_etc, title: "6차산업 체험·관광시설 방문 유형 기타", tbl: DT_114061_075, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pr_portal, title: "6차산업 체험관광 홍보 포털사이트", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^포털사이트$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pr_sns, title: "6차산업 체험관광 홍보 SNS", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pr_off, title: "6차산업 체험관광 홍보 오프라인", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^오프라인$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: sx_pr_none, title: "6차산업 체험관광 홍보 홍보안함", tbl: DT_114061_078, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홍보안함$"], unit: "%", survey: 농촌융복합산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

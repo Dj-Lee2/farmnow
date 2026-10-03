@@ -5539,6 +5539,46 @@ sources:
       - {id: slr_gn, title: 경남 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^경상남도$|^경남"], unit: 두, survey: 축산물 도축실적}
       - {id: slr_jj, title: 제주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^제주"], unit: 두, survey: 축산물 도축실적}
       - {id: slr_jn, title: 전남·광주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 두, survey: 축산물 도축실적}
+      - {id: fmu_tot, title: "식품제조업 농축수산물 사용량 합계", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^총량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
+      - {id: fmu_dom, title: "식품제조업 국산 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
+      - {id: fmu_imp, title: "식품제조업 수입 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^수입산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_rice, title: "식품제조업 쌀 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^쌀$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_corn, title: "식품제조업 옥수수 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^옥수수$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_wht, title: "식품제조업 밀 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^소맥\\(밀\\)$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_soy, title: "식품제조업 대두 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^대두$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_pot, title: "식품제조업 감자 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^감자$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_swp, title: "식품제조업 고구마 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^고구마$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_sesa, title: "식품제조업 참깨 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^참깨$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_cab, title: "식품제조업 배추 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^배추$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_rad, title: "식품제조업 무 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^무$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_pep, title: "식품제조업 건고추 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^건고추$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_gar, title: "식품제조업 마늘 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^마늘\\(깐마늘포함\\)$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_oni, title: "식품제조업 양파 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^양파$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_apl, title: "식품제조업 사과 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^사과$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_beef, title: "식품제조업 쇠고기 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^쇠고기$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_pork, title: "식품제조업 돼지고기 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^돼지고기$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_chk, title: "식품제조업 닭고기 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^닭고기$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: fmd_milk, title: "식품제조업 원유 국산 비중", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산비중$", want: ["^원유$"], unit: "%", survey: 식품산업 원료소비 실태조사}
+      - {id: dpc_wm_p, title: "백색시유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^백색시유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_wm_c, title: "백색시유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^백색시유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_pm_p, title: "가공시유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^가공시유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_pm_c, title: "가공시유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^가공시유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_yog_p, title: "발효유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^발효유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_yog_c, title: "발효유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^발효유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_chs_p, title: "치즈 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^치즈$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_chs_c, title: "치즈 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^치즈$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_nchs_p, title: "자연치즈 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^자연치즈$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_nchs_c, title: "자연치즈 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^자연치즈$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_skm_p, title: "탈지분유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^탈지분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_skm_c, title: "탈지분유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^탈지분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_wmp_p, title: "전지분유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^전지분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_wmp_c, title: "전지분유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^전지분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_cnd_p, title: "연유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^연유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_cnd_c, title: "연유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^연유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_btr_p, title: "버터 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^버터$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_btr_c, title: "버터 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^버터$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_inf_p, title: "조제분유 국내생산", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내생산$", want: ["^조제분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
+      - {id: dpc_inf_c, title: "조제분유 국내소비", tbl: DT_114N_1C002, org: "114", periods: 6, itm: "^국내소비$", want: ["^조제분유$"], unit: 톤, survey: 유제품 생산 및 소비 실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

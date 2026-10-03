@@ -5417,6 +5417,28 @@ sources:
       - {id: fpo_sesa_jn, title: 전남 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
       - {id: fpo_sesa_gb, title: 경북 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
       - {id: fpo_sesa_gn, title: 경남 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: rmc_rice, title: 귀농 가구 주소득 작목 1순위 논벼, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^논벼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_bar, title: 귀농 가구 주소득 작목 1순위 맥류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^맥류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_pot, title: 귀농 가구 주소득 작목 1순위 서류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^서류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_bean, title: 귀농 가구 주소득 작목 1순위 두류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^두류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_ovg, title: 귀농 가구 주소득 작목 1순위 노지채소, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^노지채소"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_gvg, title: 귀농 가구 주소득 작목 1순위 시설채소, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^시설채소"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_flw, title: 귀농 가구 주소득 작목 1순위 화훼, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^화훼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_fru, title: 귀농 가구 주소득 작목 1순위 과수, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^과수"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_spc, title: 귀농 가구 주소득 작목 1순위 특작·약용, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^특작"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_live, title: 귀농 가구 주소득 작목 1순위 축산, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^축산"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rmc_etc, title: 귀농 가구 주소득 작목 1순위 기타, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^1순위$", "^기타"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_rice, title: 귀농 가구 평균 재배비중 논벼, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^논벼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_bar, title: 귀농 가구 평균 재배비중 맥류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^맥류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_pot, title: 귀농 가구 평균 재배비중 서류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^서류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_bean, title: 귀농 가구 평균 재배비중 두류, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^두류"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_ovg, title: 귀농 가구 평균 재배비중 노지채소, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^노지채소"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_gvg, title: 귀농 가구 평균 재배비중 시설채소, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^시설채소"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_flw, title: 귀농 가구 평균 재배비중 화훼, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^화훼"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_fru, title: 귀농 가구 평균 재배비중 과수, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^과수"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_spc, title: 귀농 가구 평균 재배비중 특작·약용, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^특작"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_live, title: 귀농 가구 평균 재배비중 축산, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^축산"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rms_etc, title: 귀농 가구 평균 재배비중 기타, tbl: DT_114055_A012, org: "114", itm: "^현재 재배하고 있는 주소득 작목$", want: ["^재배비중", "^기타"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

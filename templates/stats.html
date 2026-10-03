@@ -2063,7 +2063,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자', 170) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자', 180) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -2228,6 +2228,13 @@
   {{ hcard('닭 종류별 도축 마릿수', [('육계', K.slc_broil), ('삼계', K.slc_samg), ('토종닭', K.slc_native), ('산란노계', K.slc_layer), ('육용종계', K.slc_bb), ('산란종계', K.slc_bs), ('겸용종', K.slc_dual)], '수', '괄호는 닭 도축 전체 중 비중 · 종계는 병아리를 얻으려 기르던 어미닭 · 오른쪽은 전월 대비', K.slc_tot.vals[-1] if K.slc_tot else none, '#c77b30') }}
   {{ hcard('시도별 소 도축 마릿수', [('경기', K.slr_gg), ('충북', K.slr_cb), ('경남', K.slr_gn), ('전남·광주', K.slr_jn), ('충남', K.slr_cn), ('경북', K.slr_gb), ('강원', K.slr_gw), ('인천', K.slr_ic), ('전북', K.slr_jb), ('대구', K.slr_dg), ('울산', K.slr_us), ('대전', K.slr_dj), ('제주', K.slr_jj)], '두', '도축장 소재지 기준(사육지와 다를 수 있음) · 괄호는 전국 소 도축 중 비중 · 서울·부산은 최근 도축 없음 · 오른쪽은 전월 대비', K.slr_tot.vals[-1] if K.slr_tot else none, '#b0503a') }}
   {{ hcard('소 품종·암수별 도축 마릿수', [('한우 암소', K.slb_hw_f), ('한우 수소', K.slb_hw_m), ('육우', K.slb_yw), ('젖소', K.slb_dy)], '두', '괄호는 소 도축 전체 중 비중 · 오른쪽은 전월 대비', K.slb_tot.vals[-1] if K.slb_tot else none, '#7a6a3a') }}</div>
+ <h3 class="sg-sub">소 등급판정 — 육질등급·경락가격 <small>월별 · 도축장에서 등급판정을 받은 소 · 경락가격은 전국 도매시장 평균(지육 1kg) · 축산물 등급판정 통계</small></h3>
+ <div class="sg-g">{{ card('cgn_hw', 'kq1', ('거세우 ' ~ num(K.cgn_hws.vals[-1], '두')|striptags ~ ' · 암소 ' ~ num(K.cgn_hwf.vals[-1], '두')|striptags) if K.cgn_hws and K.cgn_hwf else none, '#c77b30') }}{{ card('cgd_hw1pp', 'kq2', ('1+ 이상 ' ~ '{:.1f}'.format(K.cgd_hw1pp.vals[-1] + K.cgd_hw1p.vals[-1]) ~ '% · 육량 A등급 ' ~ '{:.1f}'.format(K.cgd_hwa.vals[-1]) ~ '%') if K.cgd_hw1pp and K.cgd_hw1p and K.cgd_hwa else none, '#b0503a') }}{{ card('cap_hw', 'kq3', ('1++A ' ~ '{:,.0f}'.format(K.cap_hw1ppa.vals[-1]) ~ '원/kg · 모든 등급 평균') if K.cap_hw1ppa else none, '#7a6a3a') }}
+  {{ rcard('한우 판정 중 거세우 비율', K.cgn_hws, K.cgn_hw, 'kq4', '고기소로 키우는 거세 수소 · 나머지는 대부분 암소', '#1c7a45') }}{{ card('cgd_st1pp', 'kq5', ('암소 1++ ' ~ '{:.1f}'.format(K.cgd_cw1pp.vals[-1]) ~ '% · 거세우가 마블링이 좋음') if K.cgd_cw1pp else none, '#c77b30') }}{{ rcard('한우 3A 값은 1++A의 몇 %', K.cap_hw3a, K.cap_hw1ppa, 'kq6', '같은 육량 A에서 육질 등급에 따른 값 차이', '#2458d6') }}
+  {{ hcard('한우 육질등급 출현율', [('1++', K.cgd_hw1pp), ('1+', K.cgd_hw1p), ('1', K.cgd_hw1), ('2', K.cgd_hw2), ('3', K.cgd_hw3), ('D(등외)', K.cgd_hwd)], '%', '한우 판정 마릿수 중 등급별 비율 · 합계 100% · 오른쪽은 전월 대비(%p)', none, '#b0503a') }}
+  {{ hcard('한우 등급별 경락가격', [('1++A', K.cap_hw1ppa), ('1+A', K.cap_hw1pa), ('1A', K.cap_hw1a), ('2A', K.cap_hw2a), ('3A', K.cap_hw3a)], '원/kg', '육량 A등급 기준 · 전국 도매시장 평균 · 오른쪽은 전월 대비', none, '#7a6a3a') }}
+  {{ hcard('소 품종·성별 등급판정 마릿수', [('한우 거세우', K.cgn_hws), ('한우 암소', K.cgn_hwf), ('한우 수소', K.cgn_hwm), ('육우', K.cgn_yw), ('젖소', K.cgn_dy)], '두', '괄호는 소 판정 전체 중 비중 · 오른쪽은 전월 대비', K.cgn_tot.vals[-1] if K.cgn_tot else none, '#c77b30') }}
+  {{ hcard('품종별 평균 경락가격', [('한우', K.cap_hw), ('육우', K.cap_yw), ('젖소', K.cap_dy)], '원/kg', '모든 등급 평균 · 전국 도매시장 · 오른쪽은 전월 대비', none, '#1c7a45') }}</div>
  <h3 class="sg-sub">유제품 — 국내 생산과 소비 <small>연간 · 소비량은 수입분을 포함한 국내 소비 · 유제품별 생산 및 소비 실적</small></h3>
  <div class="sg-g">{{ card('dpc_chs_c', 'dp1', ('자연치즈 ' ~ num(K.dpc_nchs_c.vals[-1], '톤')|striptags ~ ' · 가공치즈 포함') if K.dpc_nchs_c else none, '#c77b30') }}{{ rcard('치즈 국내 생산 비중', K.dpc_chs_p, K.dpc_chs_c, 'dp2', '국내 소비량 대비 국내 생산량 · 나머지는 수입', '#c77b30') }}{{ rcard('자연치즈 국내 생산 비중', K.dpc_nchs_p, K.dpc_nchs_c, 'dp3', '모차렐라·체다 같은 자연치즈는 대부분 수입', '#b0503a') }}
   {{ card('dpc_btr_c', 'dp4', ('국내 생산 ' ~ num(K.dpc_btr_p.vals[-1], '톤')|striptags) if K.dpc_btr_p else none, '#7a6a3a') }}{{ rcard('버터 국내 생산 비중', K.dpc_btr_p, K.dpc_btr_c, 'dp5', '국내 소비량 대비 국내 생산량', '#7a6a3a') }}{{ card('dpc_yog_p', 'dp6', '요구르트 · 액상·호상 합계', '#1c7a45') }}
@@ -2250,7 +2257,7 @@
  const sync=()=>{const all=g.every(d=>d.open);b.textContent=all?'모두 접기':'모두 펼치기';b.setAttribute('aria-pressed',all)};
  b.addEventListener('click',()=>{const o=!g.every(d=>d.open);g.forEach(d=>d.open=o);sync()});g.forEach(d=>d.addEventListener('toggle',()=>{sync();if(d.open)d.querySelectorAll('.hbar,.dv').forEach(h=>{h.classList.remove('go');requestAnimationFrame(()=>requestAnimationFrame(()=>h.classList.add('go')))})}));
  const go=()=>{const h=location.hash&&document.getElementById(location.hash.slice(1));const d=h&&h.closest('.sg-grp');if(d){d.open=true;sync();d.scrollIntoView()}};go();addEventListener('hashchange',go)})()</script>
- <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사·귀농어귀촌인통계·농산물생산비조사·경제활동인구조사·친환경농축산물인증현황·소비자물가조사), 농림축산식품부(농림업생산지수·농업기계보유현황·원유생산실적·배합사료 생산실적·시설채소 온실현황·축산물 도축실적), 한국농어촌공사(수리답), 국제통계(비료·농약 사용량 FAO 기반, 온실가스 배출), 기상청(기온·강수량). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
+ <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사·귀농어귀촌인통계·농산물생산비조사·경제활동인구조사·친환경농축산물인증현황·소비자물가조사), 농림축산식품부(농림업생산지수·농업기계보유현황·원유생산실적·배합사료 생산실적·시설채소 온실현황·축산물 도축실적), 축산물품질평가원(축산물 등급판정), 한국농어촌공사(수리답), 국제통계(비료·농약 사용량 FAO 기반, 온실가스 배출), 기상청(기온·강수량). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
  {% else %}<p class="empty">통계 미수집</p>{% endif %}
 </div>
 {% endblock %}

@@ -5539,6 +5539,30 @@ sources:
       - {id: slr_gn, title: 경남 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^경상남도$|^경남"], unit: 두, survey: 축산물 도축실적}
       - {id: slr_jj, title: 제주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^제주"], unit: 두, survey: 축산물 도축실적}
       - {id: slr_jn, title: 전남·광주 소 도축 마릿수, tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^소 소계$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 두, survey: 축산물 도축실적}
+      - {id: cgd_hw1pp, title: 한우 육질 1++등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^1\\+\\+$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hw1p, title: 한우 육질 1+등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^1\\+$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hw1, title: 한우 육질 1등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^1$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hw2, title: 한우 육질 2등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^2$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hw3, title: 한우 육질 3등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^3$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hwd, title: 한우 육질 D(등외)등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^D$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_hwa, title: 한우 육량 A등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^A$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_st1pp, title: 한우 거세우 1++등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^거세$", "^1\\+\\+$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgd_cw1pp, title: 한우 암소 1++등급 출현율, tbl: DT_APGS_003, org: "323", se: M, periods: 24, itm: "^출현율$", want: ["^한우$", "^암$", "^1\\+\\+$"], unit: "%", survey: 축산물 등급판정 통계}
+      - {id: cgn_tot, title: 소 전체 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^계$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_hw, title: 한우 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^한우$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_dy, title: 젖소 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^젖소$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_yw, title: 육우 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^육우$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_hwf, title: 한우 암소 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^한우$", "^암$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_hwm, title: 한우 수소 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^한우$", "^수$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cgn_hws, title: 한우 거세우 등급판정 마릿수, tbl: DT_APGS_001, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^한우$", "^거세$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: cap_hw, title: 한우 평균 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_hw1ppa, title: 한우 1++A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_hw1pa, title: 한우 1+A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_hw1a, title: 한우 1A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_hw2a, title: 한우 2A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^2A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_hw3a, title: 한우 3A 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^3A$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_dy, title: 젖소 평균 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^젖소$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cap_yw, title: 육우 평균 경락가격, tbl: DT_APGS_008, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^육우$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: fmu_tot, title: "식품제조업 농축수산물 사용량 합계", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^총량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
       - {id: fmu_dom, title: "식품제조업 국산 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^국산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}
       - {id: fmu_imp, title: "식품제조업 수입 농축수산물 사용량", tbl: DT_114010_A001, org: "114", periods: 3, itm: "^수입산사용량$", want: ["^전체$"], unit: "톤", survey: 식품산업 원료소비 실태조사}

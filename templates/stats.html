@@ -484,11 +484,11 @@
   {{ card('rga_avg', 'rq5', '작물을 재배하는 귀농가구의 가구당 평균 재배면적', '#3a8f6a') }}
   {{ rcard('빌린 농지만 경작하는 귀농가구 비율', K.rgo_rent, K.rgz_all, 'rq6', ('빌린 농지만 ' ~ K.rgo_rent.vals[-1]|big ~ ' · 자기 농지만 ' ~ K.rgo_own.vals[-1]|big ~ ' 가구') if K.rgo_rent and K.rgo_own else '', '#e0a03a') }}
   {{ hcard('귀농인의 전 거주지', [('경기', K.rgf_gg), ('서울', K.rgf_seoul), ('광주', K.rgf_gj), ('대구', K.rgf_dg), ('부산', K.rgf_bs), ('인천', K.rgf_inc), ('대전', K.rgf_dj)], '명', ('귀농인 ' ~ K.rgv_all.vals[-1]|big ~ ' 명 · 그 밖의 시도는 생략 · 괄호는 비중 · 오른쪽은 전년 대비') if K.rgv_all else '', K.rgv_all.vals[-1] if K.rgv_all else none, '#6b8fd6') }}
-  {{ hcard('귀농인 이주 유형', [('다른 시도에서 옮겨 옴', K.rgv_out), ('같은 시도 안 다른 시군에서', K.rgv_sg), ('같은 도농통합시 안 동에서 읍면으로', K.rgv_uc)], '명', '괄호는 귀농인 중 비중 · 오른쪽은 전년 대비', K.rgv_all.vals[-1] if K.rgv_all else none, '#1c7a45') }}
+  {{ hcard('귀농인 이주 유형', [('다른 시도에서', K.rgv_out), ('도 안 다른 시군', K.rgv_sg), ('같은 시 동→읍면', K.rgv_uc)], '명', '같은 시 동→읍면은 도농통합시 안 이동 · 괄호는 귀농인 중 비중 · 오른쪽은 전년 대비', K.rgv_all.vals[-1] if K.rgv_all else none, '#1c7a45') }}
   {{ hcard('가구원 수별 귀농가구', [('1인 가구', K.rgs_1), ('2인 가구', K.rgs_2), ('3인 가구', K.rgs_3), ('4인 이상', K.rgs_4)], '가구', '괄호는 비중 · 오른쪽은 전년 대비', K.rgs_tot.vals[-1] if K.rgs_tot else none, '#7a5cc2') }}
   {{ hcard('작물별 귀농가구 평균 재배면적', [('논벼', K.rga_rice), ('과수', K.rga_fruit), ('두류', K.rga_bean), ('채소', K.rga_veg), ('화훼', K.rga_flow), ('특용작물', K.rga_spec)], '㎡', '그 작물을 재배하는 귀농가구 평균 · 1,000㎡ = 0.1ha · 오른쪽은 전년 대비', none, '#3a8f6a') }}
   {{ hcard('재배면적 규모별 귀농가구', [('0.5ha 미만', K.rgz_s), ('0.5~1ha', K.rgz_m1), ('1~2ha', K.rgz_m2), ('2ha 이상', K.rgz_b)], '가구', ('작물을 재배하는 귀농가구 ' ~ K.rgz_all.vals[-1]|big ~ ' 가구 · 괄호는 비중 · 오른쪽은 전년 대비') if K.rgz_all else '', K.rgz_all.vals[-1] if K.rgz_all else none, '#5fae7a') }}
-  {{ hcard('농지 보유 형태별 귀농가구', [('자기 농지만', K.rgo_own), ('빌린 농지만', K.rgo_rent), ('자기 농지와 빌린 농지', K.rgo_mix)], '가구', ('평균 경작 면적: 자기 농지만 ' ~ K.rgo_own_ar.vals[-1]|big ~ '㎡ · 빌린 농지만 ' ~ K.rgo_rent_ar.vals[-1]|big ~ '㎡ · 괄호는 비중') if K.rgo_own_ar and K.rgo_rent_ar else '괄호는 비중', K.rgz_all.vals[-1] if K.rgz_all else none, '#e0a03a') }}
+  {{ hcard('농지 보유 형태별 귀농가구', [('자기 농지만', K.rgo_own), ('빌린 농지만', K.rgo_rent), ('둘 다', K.rgo_mix)], '가구', ('평균 경작 면적: 자기 농지만 ' ~ K.rgo_own_ar.vals[-1]|big ~ '㎡ · 빌린 농지만 ' ~ K.rgo_rent_ar.vals[-1]|big ~ '㎡ · 괄호는 비중') if K.rgo_own_ar and K.rgo_rent_ar else '괄호는 비중', K.rgz_all.vals[-1] if K.rgz_all else none, '#e0a03a') }}
  </div>
  <h3 class="sg-sub">임가 <small>임산물을 생산·채취해 파는 가구</small></h3>
  <div class="sg-g">

@@ -4101,6 +4101,42 @@ sources:
       - {id: hin_wc, title: 시설채소 보온방식별 면적(수막시설), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^수막시설$"], unit: ha, survey: 채소류생산실적}
       - {id: hin_wcr, title: 시설채소 보온방식별 면적(순환식), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^순환식$"], unit: ha, survey: 채소류생산실적}
       - {id: hin_wcn, title: 시설채소 보온방식별 면적(비순환식), tbl: DT_114018_018, org: "114", itm: "^면적$", want: ["^전국$", "^비순환식$"], unit: ha, survey: 채소류생산실적}
+      - {id: hfu_tot, title: 시설채소 가온연료별 면적(합계), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^합계$"], codes: {C2: "P01$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_none, title: 시설채소 가온연료별 면적(무가온), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^무가온$"], codes: {C2: "P02$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_heat, title: 시설채소 가온연료별 면적(가온 전체), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^가온$"], codes: {C2: "P03$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_sol, title: 시설채소 가온연료별 면적(고체연료), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^고체연료$"], codes: {C2: "P0301$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_wood, title: 시설채소 가온연료별 면적(폐목), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^폐목$"], codes: {C2: "P030101$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_coal, title: 시설채소 가온연료별 면적(연탄), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^연탄$"], codes: {C2: "P030102$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_coke, title: 시설채소 가온연료별 면적(석탄코크스), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^석탄코크스$"], codes: {C2: "P030103$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_tire, title: 시설채소 가온연료별 면적(폐타이어), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^폐타이어$"], codes: {C2: "P030104$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_pel, title: 시설채소 가온연료별 면적(목재펠릿), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^목재펠릿$"], codes: {C2: "P030105$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_setc, title: 시설채소 가온연료별 면적(고체연료 기타), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], codes: {C2: "P030106$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_oil, title: 시설채소 가온연료별 면적(유류), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^유류$"], codes: {C2: "P0302$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_dsl, title: 시설채소 가온연료별 면적(경유), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^경유$"], codes: {C2: "P030201$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_hvy, title: 시설채소 가온연료별 면적(중유), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^중유$"], codes: {C2: "P030202$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_ker, title: 시설채소 가온연료별 면적(등유), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^등유$"], codes: {C2: "P030203$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_oetc, title: 시설채소 가온연료별 면적(유류 기타), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], codes: {C2: "P030204$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_gas, title: 시설채소 가온연료별 면적(가스류), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^가스류$"], codes: {C2: "P0303$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_elec, title: 시설채소 가온연료별 면적(전기), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^전기$"], codes: {C2: "P0304$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hfu_geo, title: 시설채소 가온연료별 면적(지열), tbl: DT_114018_019, org: "114", itm: "^면적$", want: ["^전국$", "^지열$"], codes: {C2: "P0305$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_tot, title: 시설채소 시설유형별 면적(전체), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^(비닐하우스|경질판온실|유리온실)$"], codes: {C2: "H0[123]$"}, sum: true, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vinyl, title: 시설채소 시설유형별 면적(비닐하우스 전체), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^비닐하우스$"], codes: {C2: "H01$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vs, title: 시설채소 시설유형별 면적(비닐하우스 단동), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^단동$"], codes: {C2: "H0101$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vs_tun, title: 시설채소 시설유형별 면적(비닐하우스 단동 터널형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^터널$"], codes: {C2: "H010101$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vs_arc, title: 시설채소 시설유형별 면적(비닐하우스 단동 아치형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^아치$"], codes: {C2: "H010102$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vs_etc, title: 시설채소 시설유형별 면적(비닐하우스 단동 기타), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], codes: {C2: "H010103$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vm, title: 시설채소 시설유형별 면적(비닐하우스 연동), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^연동$"], codes: {C2: "H0102$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vm_tun, title: 시설채소 시설유형별 면적(비닐하우스 연동 터널형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^터널$"], codes: {C2: "H010201$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vm_arc, title: 시설채소 시설유형별 면적(비닐하우스 연동 아치형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^아치$"], codes: {C2: "H010202$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vm_etc, title: 시설채소 시설유형별 면적(비닐하우스 연동 기타), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], codes: {C2: "H010203$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vetc, title: 시설채소 시설유형별 면적(비닐하우스 기타형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^기타$"], codes: {C2: "H0103$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vtun_s, title: 시설채소 시설유형별 면적(소형터널), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^소형터널$"], codes: {C2: "H010301$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_vrain, title: 시설채소 시설유형별 면적(비가림시설), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^비가림시설$"], codes: {C2: "H010302$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_hard, title: 시설채소 시설유형별 면적(경질판온실), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^경질판온실$"], codes: {C2: "H02$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_glass, title: 시설채소 시설유형별 면적(유리온실), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^유리온실$"], codes: {C2: "H03$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_gl_m, title: 시설채소 시설유형별 면적(유리온실 연동), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^연동$"], codes: {C2: "H0302$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_gl_roof, title: 시설채소 시설유형별 면적(유리온실 연동 지붕형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^지붕형$"], codes: {C2: "H030201$"}, unit: ha, survey: 채소류생산실적}
+      - {id: hst_gl_ven, title: 시설채소 시설유형별 면적(유리온실 연동 벤로형), tbl: DT_114018_011, org: "114", itm: "^면적$", want: ["^전국$", "^벤로형$"], codes: {C2: "H030202$"}, unit: ha, survey: 채소류생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

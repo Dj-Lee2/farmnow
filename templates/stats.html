@@ -1421,7 +1421,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식', 152) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
+ <details class="sg-grp" id="g-land">{% call head('g-land', '농지·작물·소비', '경지·도별 경지·수리답·온실·재배면적·쌀·과일·채소·과수·시설작물 면적·시설재배 농가·저수지·양배수장·농업용수 개발·기반정비 사업비·임가 보유 장비·농지 임대차·도별 임차료·계약기간·임차 필지 작물·임차 농업인 영농경력·수리계 조직·계원·수혜면적·수리시설 폐지·관개규모별 수리시설·도별 수혜면적·시설 난방 연료·에너지절감 장치·시설채소 관수·양액재배·시설 피복자재·골조·난방 방식·보온 방식·가온 연료·시설 유형', 166) %}{{ kv('경지면적', K.area) }}{{ kv('쌀 생산량', K.rice) }}{{ kv('1인당 쌀 소비', K.rice_cons) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">생산·면적</h3>
  <div class="sg-g">
@@ -1502,6 +1502,23 @@
   {{ card('hin_wc', 'iv6', ('단동 하우스의 ' ~ '{:.1f}'.format(K.hin_wc.vals[-1] / K.hin_single.vals[-1] * 100) ~ '%') if K.hin_wc and K.hin_single else none, '#3a7fa0') }}
   {{ hcard('연동 온실 보온 방식별 면적', [('다겹보온', K.hin_mlt), ('부직포류', K.hin_nw), ('일층커튼', K.hin_c1), ('이층커튼', K.hin_c2), ('알루미늄스크린', K.hin_alu), ('삼층 이상 커튼', K.hin_c3), ('배기열회수장치', K.hin_exh), ('열회수형 환기장치', K.hin_hrv)], 'ha', '괄호는 연동 온실 면적 중 비율 · 오른쪽은 전년 대비', K.hin_multi.vals[-1] if K.hin_multi else none, '#5f7fae') }}
   {{ hcard('단동 하우스 보온 방식별 면적', [('다중피복', K.hin_dbl), ('보온덮개', K.hin_cov), ('수막 · 비순환식', K.hin_wcn), ('수막 · 순환식', K.hin_wcr), ('외부보온', K.hin_out)], 'ha', '괄호는 단동 하우스 면적 중 비율 · 오른쪽은 전년 대비', K.hin_single.vals[-1] if K.hin_single else none, '#5fae7a') }}
+ </div>
+ <h3 class="sg-sub">시설채소 가온 연료·시설 유형 <small>농림축산식품부 채소류 생산실적 · 시설채소 재배면적 기준</small></h3>
+ <div class="sg-g">
+  {{ card('hfu_heat', 'fu1', ('무가온 ' ~ K.hfu_none.vals[-1]|big ~ ' ha · 시설채소의 ' ~ '{:.1f}'.format(K.hfu_heat.vals[-1] / K.hfu_tot.vals[-1] * 100) ~ '%를 데워 키움') if K.hfu_none and K.hfu_tot else none, '#c0763a') }}
+  {{ rcard('가온 면적 중 유류(기름) 비율', K.hfu_oil, K.hfu_heat, 'fu2', ('유류 ' ~ K.hfu_oil.vals[-1]|big ~ ' ha · 등유·경유·중유') if K.hfu_oil else '', '#c0763a') }}
+  {{ rcard('유류 가온 중 등유 비율', K.hfu_ker, K.hfu_oil, 'fu3', ('등유 ' ~ K.hfu_ker.vals[-1]|big ~ ' · 경유 ' ~ K.hfu_dsl.vals[-1]|big ~ ' · 중유 ' ~ K.hfu_hvy.vals[-1]|big ~ ' ha') if K.hfu_ker and K.hfu_dsl and K.hfu_hvy else '', '#c0763a') }}
+  {{ rcard('가온 면적 중 전기 비율', K.hfu_elec, K.hfu_heat, 'fu4', ('전기 ' ~ K.hfu_elec.vals[-1]|big ~ ' ha · 전기 온풍기·히트펌프 등') if K.hfu_elec else '', '#5f7fae') }}
+  {{ card('hfu_geo', 'fu5', ('가온 면적의 ' ~ '{:.1f}'.format(K.hfu_geo.vals[-1] / K.hfu_heat.vals[-1] * 100) ~ '% · 땅속 열을 끌어 쓰는 난방') if K.hfu_heat else none, '#3a8a5a') }}
+  {{ rcard('고체연료 가온 중 목재펠릿 비율', K.hfu_pel, K.hfu_sol, 'fu6', ('목재펠릿 ' ~ K.hfu_pel.vals[-1]|big ~ ' ha · 고체연료 ' ~ K.hfu_sol.vals[-1]|big ~ ' ha') if K.hfu_pel and K.hfu_sol else '', '#a08a5a') }}
+  {{ hcard('가온 연료별 시설채소 면적', [('등유', K.hfu_ker), ('경유', K.hfu_dsl), ('전기', K.hfu_elec), ('중유', K.hfu_hvy), ('기타 유류', K.hfu_oetc), ('목재펠릿', K.hfu_pel), ('기타 고체연료', K.hfu_setc), ('지열', K.hfu_geo), ('가스류', K.hfu_gas), ('폐목', K.hfu_wood), ('연탄', K.hfu_coal), ('석탄코크스', K.hfu_coke), ('폐타이어', K.hfu_tire)], 'ha', '괄호는 가온 면적 중 비율 · 오른쪽은 전년 대비', K.hfu_heat.vals[-1] if K.hfu_heat else none, '#c0763a') }}
+  {{ card('hst_vinyl', 'st1', ('단동 ' ~ K.hst_vs.vals[-1]|big ~ ' · 연동 ' ~ K.hst_vm.vals[-1]|big ~ ' ha · 시설채소의 ' ~ '{:.1f}'.format(K.hst_vinyl.vals[-1] / K.hst_tot.vals[-1] * 100) ~ '%') if K.hst_vs and K.hst_vm and K.hst_tot else none, '#5fae7a') }}
+  {{ rcard('비닐하우스 중 연동 비율', K.hst_vm, K.hst_vinyl, 'st2', ('연동 ' ~ K.hst_vm.vals[-1]|big ~ ' ha · 여러 동을 이어 붙인 하우스') if K.hst_vm else '', '#5f7fae') }}
+  {{ rcard('단동 비닐하우스 중 터널형 비율', K.hst_vs_tun, K.hst_vs, 'st3', ('터널형 ' ~ K.hst_vs_tun.vals[-1]|big ~ ' · 아치형 ' ~ K.hst_vs_arc.vals[-1]|big ~ ' ha') if K.hst_vs_tun and K.hst_vs_arc else '', '#5fae7a') }}
+  {{ card('hst_vrain', 'st4', ('소형터널 ' ~ K.hst_vtun_s.vals[-1]|big ~ ' ha · 비만 막는 지붕형 시설') if K.hst_vtun_s else none, '#3a7fa0') }}
+  {{ card('hst_glass', 'st5', ('연동 ' ~ K.hst_gl_m.vals[-1]|big ~ ' ha(벤로형 ' ~ K.hst_gl_ven.vals[-1]|big ~ ' · 지붕형 ' ~ K.hst_gl_roof.vals[-1]|big ~ ') · 경질판온실 ' ~ K.hst_hard.vals[-1]|big ~ ' ha') if K.hst_gl_m and K.hst_gl_ven and K.hst_gl_roof and K.hst_hard else none, '#7a7f8a') }}
+  {{ rcard('유리온실 중 벤로형 비율', K.hst_gl_ven, K.hst_glass, 'st6', ('벤로형 ' ~ K.hst_gl_ven.vals[-1]|big ~ ' ha · 지붕이 톱니 모양으로 이어진 네덜란드식 온실') if K.hst_gl_ven else '', '#7a7f8a') }}
+  {{ hcard('시설 유형별 시설채소 면적', [('단동 비닐 · 터널형', K.hst_vs_tun), ('단동 비닐 · 아치형', K.hst_vs_arc), ('연동 비닐 · 아치형', K.hst_vm_arc), ('연동 비닐 · 터널형', K.hst_vm_tun), ('비가림시설', K.hst_vrain), ('단동 비닐 · 기타', K.hst_vs_etc), ('유리온실', K.hst_glass), ('연동 비닐 · 기타', K.hst_vm_etc), ('경질판온실', K.hst_hard), ('소형터널', K.hst_vtun_s)], 'ha', '괄호는 시설채소 면적 중 비율 · 오른쪽은 전년 대비', K.hst_tot.vals[-1] if K.hst_tot else none, '#5fae7a') }}
  </div>
  <h3 class="sg-sub">농업용수 시설 <small>한국농어촌공사 농업생산기반시설 현황 · 저수지·양배수장</small></h3>
  <div class="sg-g">

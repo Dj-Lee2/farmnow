@@ -6319,6 +6319,45 @@ sources:
       - {id: yin_b_nut, title: "수실류 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641124$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
       - {id: yin_b_oth, title: "기타 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641125$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
       - {id: yin_b_tmb, title: "육림·목재수확업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136411125$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_inc, title: "임가 겸업소득(겸업 표)", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_rev, title: "임가 겸업수입", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.61$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_exp, title: "임가 겸업지출", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.62$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_af, title: "겸업수입 농·축·어업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_mfg, title: "겸업수입 제조업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.52$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_con, title: "겸업수입 건설업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.53$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_oth, title: "겸업수입 기타겸업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.54$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_farm, title: "겸업수입 농업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.6$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_r_live, title: "겸업수입 축산업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_x_af, title: "겸업지출 농·축·어업", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641048$", C2: "^13102136410X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_prs, title: "감 재배업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641010$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_chs, title: "밤 재배업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364105$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_nut, title: "수실류 재배업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364106$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_msh, title: "버섯 재배업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364107$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_oth, title: "기타 재배업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364108$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_lsc, title: "조경재업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364109$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_gat, title: "채취업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021364104$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_b_tmb, title: "육림·목재수확업 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641064$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_t_ful, title: "전업임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641045$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_t_main, title: "임업주업 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641046$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_t_sub, title: "임업부업 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641047$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_a_u49, title: "경영주 49세 이하 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641063$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_a_50, title: "경영주 50대 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641020$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_a_60, title: "경영주 60대 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641021$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycj_a_70, title: "경영주 70세 이상 임가 겸업소득", tbl: DT_136023_11470, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641022$", C2: "^13102136410X\\.60$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_tot, title: "임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_land, title: "임업고정자본 토지개량자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.4$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_tree, title: "임업고정자본 대식물", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.5$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_fac, title: "임업고정자본 시설물", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.6$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_mach, title: "임업고정자본 기계·기구·비품", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_shii, title: "임업고정자본 표고자목", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631248$", C2: "^13102136312X\\.8$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_prs, title: "감 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631218$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_chs, title: "밤 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631219$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_msh, title: "버섯 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631220$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_lsc, title: "조경재업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631221$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_gat, title: "채취업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631223$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_nut, title: "수실류 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631224$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_oth, title: "기타 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631225$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yfc_b_tmb, title: "육림·목재수확업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631250$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

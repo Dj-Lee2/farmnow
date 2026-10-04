@@ -2062,7 +2062,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향', 138) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유', 148) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2243,6 +2243,19 @@
   {{ hcard('한 해 난방 사용 기간', [('65세 이상 1인 가구', K.hpd_s65), ('면', K.hpd_myn), ('농어가', K.hpd_f), ('단독주택', K.hpd_det), ('농어촌 전체', K.hpd_r), ('도시', K.hpd_c), ('비농어가', K.hpd_nf), ('아파트', K.hpd_apt), ('읍', K.hpd_eup)], '개월', '난방비를 쓰는 평균 개월 수', none, '#d23a32') }}
   {{ hcard('앞으로 평생교육에 참여할 의향이 있는 비율', [('농어가', K.lew_f), ('60대', K.lew_a60), ('면', K.lew_myn), ('농어촌 전체', K.lew_r), ('도시', K.lew_c), ('30대 이하', K.lew_y30), ('비농어가', K.lew_nf), ('70대 이상', K.lew_o70)], '%', '향후 참여 의향층', none, '#2458d6') }}
   {{ hcard('농어촌 주민이 참여하고 싶은 평생교육 분야', [('스포츠·건강교육', K.lew_spo), ('문화예술교육', K.lew_art), ('직업능력교육', K.lew_voc), ('정보화교육', K.lew_it), ('농촌생활 관련 교육', K.lew_farm), ('시민참여교육', K.lew_civ), ('인문교양교육', K.lew_hum), ('문해교육', K.lew_lit)], '%', '농어촌 주민 전체 대비 · 복수 응답 · 농어가는 농촌생활 교육 ' ~ ('{:.1f}'.format(K.lew_farm_f.vals[-1]) ~ '%' if K.lew_farm_f else '-'), none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">주택 점유형태와 이주를 바라는 이유 <small>자기 집·전세·월세·무상으로 사는 가구 비율, 다른 곳으로 옮겨 살고 싶은 주민이 꼽은 이유 · 도시·농어촌·연령대 비교 · 농어업인 복지실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('tnr_own_r', 'tn1', ('자기 집에 사는 농어촌 가구 · 도시 ' ~ num(K.tnr_own_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.tnr_own_myn.vals[-1], '%')|striptags) if K.tnr_own_c and K.tnr_own_myn else none, '#1c7a45') }}
+  {{ card('tnr_own_f', 'tn2', ('자기 집에 사는 농어가 · 비농어가 ' ~ num(K.tnr_own_nf.vals[-1], '%')|striptags ~ ' · 선주민 ' ~ num(K.tnr_own_nat.vals[-1], '%')|striptags) if K.tnr_own_nf and K.tnr_own_nat else none, '#2a8a5a') }}
+  {{ card('tnr_wol_r', 'tn3', ('월세로 사는 농어촌 가구 · 전세 ' ~ num(K.tnr_jeon_r.vals[-1], '%')|striptags ~ ' · 30대 이하 월세 ' ~ num(K.tnr_wol_y30.vals[-1], '%')|striptags) if K.tnr_jeon_r and K.tnr_wol_y30 else none, '#b04a07') }}
+  {{ card('mvw_job_r', 'tn4', ('이주를 바라는 농어촌 주민이 꼽은 직업 관련 사유 · 도시 ' ~ num(K.mvw_job_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.mvw_job_myn.vals[-1], '%')|striptags) if K.mvw_job_c and K.mvw_job_myn else none, '#2458d6') }}
+  {{ card('mvw_house_r', 'tn5', ('이주를 바라는 농어촌 주민이 꼽은 주택 관련 사유 · 도시 ' ~ num(K.mvw_house_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.mvw_house_myn.vals[-1], '%')|striptags) if K.mvw_house_c and K.mvw_house_myn else none, '#c0392b') }}
+  {{ card('mvw_edu_r', 'tn6', ('이주를 바라는 농어촌 주민이 꼽은 자녀교육 · 생활환경 ' ~ num(K.mvw_env_r.vals[-1], '%')|striptags ~ ' · 30대 이하 직업 사유 ' ~ num(K.mvw_job_y30.vals[-1], '%')|striptags) if K.mvw_env_r and K.mvw_job_y30 else none, '#5c6bc2') }}
+  {{ hcard('자기 집에 사는 가구 비율', [('농어가', K.tnr_own_f), ('선주민', K.tnr_own_nat), ('70대 이상', K.tnr_own_o70), ('60대', K.tnr_own_a60), ('면', K.tnr_own_myn), ('50대', K.tnr_own_a50), ('농어촌 전체', K.tnr_own_r), ('40대', K.tnr_own_a40), ('이주민', K.tnr_own_mig), ('읍', K.tnr_own_eup), ('비농어가', K.tnr_own_nf), ('도시', K.tnr_own_c), ('30대 이하', K.tnr_own_y30)], '%', '나머지는 전세·월세·무상', none, '#1c7a45') }}
+  {{ hcard('농어촌 가구의 주택 점유형태', [('자기 집', K.tnr_own_r), ('월세', K.tnr_wol_r), ('전세', K.tnr_jeon_r), ('무상', K.tnr_free_r)], '%', '농어촌 가구 전체 대비', none, '#b04a07') }}
+  {{ hcard('이주를 바라는 농어촌 주민이 꼽은 이유', [('직업 관련 사유', K.mvw_job_r), ('주택 관련 사유', K.mvw_house_r), ('생활환경 관련 사유', K.mvw_env_r), ('자녀교육', K.mvw_edu_r), ('가족 관련 사유', K.mvw_fam_r), ('건강상의 이유', K.mvw_hlt_r)], '%', '향후 이주 희망자 대비', none, '#2458d6') }}
+  {{ hcard('이주 희망 이유 중 직업 관련 사유', [('면', K.mvw_job_myn), ('30대 이하', K.mvw_job_y30), ('농어촌 전체', K.mvw_job_r), ('도시', K.mvw_job_c), ('읍', K.mvw_job_eup)], '%', '향후 이주 희망자 대비 · 도시는 주택 사유 ' ~ ('{:.1f}'.format(K.mvw_house_c.vals[-1]) ~ '%' if K.mvw_house_c else '-') ~ '로 더 많음', none, '#5c6bc2') }}
  </div>
  </div></details>
 

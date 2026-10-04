@@ -7283,6 +7283,35 @@ sources:
       - {id: lew_spo, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 스포츠·건강교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^스포츠·건강교육$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: lew_farm, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 농촌생활 관련 교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^농촌생활 관련 교육$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: lew_farm_f, title: "농어가가 앞으로 참여하고 싶은 평생교육 — 농촌생활 관련 교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^농촌생활 관련 교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_c, title: "자기 집에 사는 가구 비율 — 도시", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_r, title: "자기 집에 사는 가구 비율 — 농어촌", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_eup, title: "자기 집에 사는 가구 비율 — 읍", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_myn, title: "자기 집에 사는 가구 비율 — 면", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_f, title: "자기 집에 사는 가구 비율 — 농어가", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_nf, title: "자기 집에 사는 가구 비율 — 비농어가", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_y30, title: "자기 집에 사는 가구 비율 — 30대 이하", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_a40, title: "자기 집에 사는 가구 비율 — 40대", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^40대$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_a50, title: "자기 집에 사는 가구 비율 — 50대", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^50대$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_a60, title: "자기 집에 사는 가구 비율 — 60대", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^60대$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_o70, title: "자기 집에 사는 가구 비율 — 70대 이상", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_mig, title: "자기 집에 사는 가구 비율 — 이주민", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^이주민$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_own_nat, title: "자기 집에 사는 가구 비율 — 선주민", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^선주민$", "^자기 집$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_jeon_r, title: "농어촌 가구의 주택 점유형태 — 전세", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^전세$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_wol_r, title: "농어촌 가구의 주택 점유형태 — 월세", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^월세$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_free_r, title: "농어촌 가구의 주택 점유형태 — 무상", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^무상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: tnr_wol_y30, title: "주택 점유형태 — 30대 이하 월세", tbl: DT_11437074_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^월세$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_job_r, title: "이주를 희망하는 농어촌 주민의 이유 — 직업 관련 사유", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_house_r, title: "이주를 희망하는 농어촌 주민의 이유 — 주택 관련 사유", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주택 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_fam_r, title: "이주를 희망하는 농어촌 주민의 이유 — 가족 관련 사유", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^가족 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_env_r, title: "이주를 희망하는 농어촌 주민의 이유 — 생활환경 관련 사유", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^생활환경 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_edu_r, title: "이주를 희망하는 농어촌 주민의 이유 — 자녀교육 때문에", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^자녀교육 때문에$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_hlt_r, title: "이주를 희망하는 농어촌 주민의 이유 — 건강상의 이유로", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^건강상의 이유로$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_job_c, title: "이주 희망 이유 — 직업 관련 사유(도시)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_job_eup, title: "이주 희망 이유 — 직업 관련 사유(읍)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_job_myn, title: "이주 희망 이유 — 직업 관련 사유(면)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_job_y30, title: "이주 희망 이유 — 직업 관련 사유(30대 이하)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_house_c, title: "이주 희망 이유 — 주택 관련 사유(도시)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^주택 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mvw_house_myn, title: "이주 희망 이유 — 주택 관련 사유(면)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^주택 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

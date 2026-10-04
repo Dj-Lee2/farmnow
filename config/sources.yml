@@ -6837,6 +6837,36 @@ sources:
       - {id: rxd_trans, title: 귀농 가구 농업 외 경제활동 어려움 · 교통수단 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^이동\\(교통\\)"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rxd_hlth, title: 귀농 가구 농업 외 경제활동 어려움 · 건강이 좋지 않음, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^본인의 건강"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rxd_none, title: 귀농 가구 농업 외 경제활동 어려움 · 어려움 없음, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: tsf_tot, title: 트랙터 쓰는 농업인(안전프레임 응답), tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^안전바안전프레임$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tsf_ok, title: 트랙터 안전프레임을 잘 장착한 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^잘 장착\\(캡이나 서있는 안전바 유지\\)$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tsf_off, title: 트랙터 안전프레임이 있지만 쓰지 않는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^있지만 미사용\\(탈착제거접어놓음\\)$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tsf_none, title: 트랙터에 안전프레임이 원래 없는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^원래없음$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tsb_use, title: 트랙터 안전벨트를 매는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^사용$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: tsb_no, title: 트랙터 안전벨트가 있지만 매지 않는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 2, itm: "^농업인 수$", want: ["^미사용$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: bld_tot, title: 예초기 쓰는 농업인(날 종류 응답), tbl: DT_14303_E1442, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^날 종류$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: bld_2, title: 예초기에 이도날을 쓰는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^이도날$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: bld_str, title: 예초기에 끈날을 쓰는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^끈날$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: bld_rnd, title: 예초기에 원형날을 쓰는 농업인, tbl: DT_14303_E1442, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^원형날$"], unit: 명, survey: 농업인 업무상 손상조사}
+      - {id: dzi_all, title: 농업인 업무상 질병 유병률(총소득 조사), tbl: DT_14303_E2119, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^총계$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzi_n_all, title: 농업인 업무상 질병자 수(총소득 조사), tbl: DT_14303_E2119, org: "143", se: F, periods: 2, itm: "^업무상 질병자수$", want: ["^총계$"], unit: 명, survey: 농업인 업무상 질병조사}
+      - {id: dzi_lt10, title: 총소득 1천만 원 미만 농업인 업무상 질병 유병률, tbl: DT_14303_E2119, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^1000만원 미만$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzi_10, title: 총소득 1천만~2천만 원 농업인 업무상 질병 유병률, tbl: DT_14303_E2119, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^1000~2000만원 미만$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzi_20, title: 총소득 2천만~5천만 원 농업인 업무상 질병 유병률, tbl: DT_14303_E2119, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^2000~5000만원 미만$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzi_50, title: 총소득 5천만 원 이상 농업인 업무상 질병 유병률, tbl: DT_14303_E2119, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^5000만원 이상$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzc_paddy, title: 논농사 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^논$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzc_field, title: 밭농사 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^밭$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzc_orch, title: 과수 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^과수$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzc_fac, title: 시설재배 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^시설$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dzc_live, title: 축산 농업인 업무상 질병 유병률, tbl: DT_14303_E2120, org: "143", se: F, periods: 1, itm: "^업무상 질병 유병률$", want: ["^축산$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: mdr_h, title: 농산물건조기 한 해 이용시간, tbl: DT_143004N_018, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: mdr_n, title: 농산물건조기 한 해 건조횟수, tbl: DT_143004N_018, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^건조횟수$"], unit: 회/년, survey: 농업기계 이용실태조사}
+      - {id: mss_area, title: SS기(방제기) 한 해 이용면적, tbl: DT_143004N_019, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용면적$"], unit: ha, survey: 농업기계 이용실태조사}
+      - {id: mss_days, title: SS기(방제기) 한 해 이용일수, tbl: DT_143004N_019, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용일수$"], unit: 일/년, survey: 농업기계 이용실태조사}
+      - {id: mss_h, title: SS기(방제기) 한 해 이용시간, tbl: DT_143004N_019, org: "143", se: F, periods: 2, itm: "^이용실적$", want: ["^이용시간$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: mss_cp_h, title: SS기 퇴비살포 한 해 이용시간, tbl: DT_143004N_020, org: "143", se: F, periods: 2, itm: "^퇴비살포$", want: ["^이용시간$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: mss_cp_d, title: SS기 퇴비살포 한 해 이용일수, tbl: DT_143004N_020, org: "143", se: F, periods: 2, itm: "^퇴비살포$", want: ["^이용일수$"], unit: 일/년, survey: 농업기계 이용실태조사}
+      - {id: mss_hl_h, title: SS기 운반작업 한 해 이용시간, tbl: DT_143004N_020, org: "143", se: F, periods: 2, itm: "^운반작업$", want: ["^이용시간$"], unit: 시간/년, survey: 농업기계 이용실태조사}
+      - {id: mss_ct_h, title: SS기 퇴비살포·운반작업 한 해 이용시간, tbl: DT_143004N_020, org: "143", se: F, periods: 2, itm: "^계$", want: ["^이용시간$"], unit: 시간/년, survey: 농업기계 이용실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -6589,6 +6589,44 @@ sources:
       - {id: mar_fl_rent, title: "표고버섯 재배장 평균 면적 — 원목 시설재배사 임차", tbl: DT_136022_9775, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시설재배사 - 임차$"], unit: ㎡, survey: 임업경영실태조사}
       - {id: mar_sw_own, title: "표고버섯 재배장 평균 면적 — 톱밥 재배사 본인 소유", tbl: DT_136022_9775, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시설\\(톱밥\\) 재배사 - 본인 소유$"], unit: ㎡, survey: 임업경영실태조사}
       - {id: mar_sw_rent, title: "표고버섯 재배장 평균 면적 — 톱밥 재배사 임차", tbl: DT_136022_9775, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시설\\(톱밥\\) 재배사 - 임차$"], unit: ㎡, survey: 임업경영실태조사}
+      - {id: mso_yes_all, title: "버섯재배업 생산 임산물 재고가 있는 임가 비율 — 전체", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mso_avg_all, title: "버섯재배업 재고가 있는 임가의 평균 재고량 — 전체", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: kg, survey: 임업경영실태조사}
+      - {id: mso_yes_log, title: "버섯재배업 생산 임산물 재고가 있는 임가 비율 — 원목표고(노지)", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mso_avg_log, title: "버섯재배업 재고가 있는 임가의 평균 재고량 — 원목표고(노지)", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^평균$"], unit: kg, survey: 임업경영실태조사}
+      - {id: mso_yes_saw, title: "버섯재배업 생산 임산물 재고가 있는 임가 비율 — 톱밥배지 표고", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mso_avg_saw, title: "버섯재배업 재고가 있는 임가의 평균 재고량 — 톱밥배지 표고", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^평균$"], unit: kg, survey: 임업경영실태조사}
+      - {id: mso_yes_fac, title: "버섯재배업 생산 임산물 재고가 있는 임가 비율 — 원목표고(시설)", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mso_avg_fac, title: "버섯재배업 재고가 있는 임가의 평균 재고량 — 원목표고(시설)", tbl: DT_136022_9896, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^평균$"], unit: kg, survey: 임업경영실태조사}
+      - {id: mhl_near_all, title: "버섯재배업 고용노동력 확보 지역 — 인근 지역(전체)", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인근 지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhl_frn_all, title: "버섯재배업 고용노동력 확보 지역 — 외국인(전체)", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^외국인$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhl_near_saw, title: "버섯재배업 고용노동력 확보 지역 — 인근 지역(톱밥배지 표고)", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^인근 지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhl_frn_saw, title: "버섯재배업 고용노동력 확보 지역 — 외국인(톱밥배지 표고)", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^외국인$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhl_near_fac, title: "버섯재배업 고용노동력 확보 지역 — 인근 지역(원목표고(시설))", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^인근 지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhl_frn_fac, title: "버섯재배업 고용노동력 확보 지역 — 외국인(원목표고(시설))", tbl: DT_136022_9968, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^외국인$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywk_msh_hv, title: "버섯 재배업 임가 작업별 노동투하량 — 수확", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^수확$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_mg, title: "버섯 재배업 임가 작업별 노동투하량 — 관리작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^관리작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_sel, title: "버섯 재배업 임가 작업별 노동투하량 — 선별작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^선별작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_pest, title: "버섯 재배업 임가 작업별 노동투하량 — 병해충방제작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^병해충방제작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_old, title: "버섯 재배업 임가 작업별 노동투하량 — 고목폐기", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^고목폐기$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_etc, title: "버섯 재배업 임가 작업별 노동투하량 — 이외 임업작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^이외 임업작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_turn, title: "버섯 재배업 임가 작업별 노동투하량 — 뒤집기/본눕히기/세우기", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^뒤집기/본눕히기/세우기$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_pack, title: "버섯 재배업 임가 작업별 노동투하량 — 포장작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^포장작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_msh_dry, title: "버섯 재배업 임가 작업별 노동투하량 — 건조작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^건조작업$", "^버섯 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_hv, title: "밤 재배업 임가 작업별 노동투하량 — 수확", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^수확$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_weed, title: "밤 재배업 임가 작업별 노동투하량 — 풀베기작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^풀베기작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_sel, title: "밤 재배업 임가 작업별 노동투하량 — 선별작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^선별작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_prune, title: "밤 재배업 임가 작업별 노동투하량 — 가지치기작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^가지치기작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_peel, title: "밤 재배업 임가 작업별 노동투하량 — 껍질벗기는작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^껍질벗기는작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_mg, title: "밤 재배업 임가 작업별 노동투하량 — 관리작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^관리작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_pest, title: "밤 재배업 임가 작업별 노동투하량 — 병해충방제작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^병해충방제작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_plant, title: "밤 재배업 임가 작업별 노동투하량 — 조림작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^조림작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_chs_fert, title: "밤 재배업 임가 작업별 노동투하량 — 시비작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^시비작업$", "^밤 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_weed, title: "조경재업 임가 작업별 노동투하량 — 풀베기작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^풀베기작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_mg, title: "조경재업 임가 작업별 노동투하량 — 관리작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^관리작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_hv, title: "조경재업 임가 작업별 노동투하량 — 수확", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^수확$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_plant, title: "조경재업 임가 작업별 노동투하량 — 조림작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^조림작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_prune, title: "조경재업 임가 작업별 노동투하량 — 가지치기작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^가지치기작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ywk_lsc_rep, title: "조경재업 임가 작업별 노동투하량 — 보식작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^보식작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

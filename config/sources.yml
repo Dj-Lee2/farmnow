@@ -6153,6 +6153,45 @@ sources:
       - {id: rbn_cost, title: "외식업체 로봇 미도입 사유 — 비용 부담", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^비용이 부담"], unit: "%", survey: 외식업체 경영실태조사}
       - {id: rbn_roi, title: "외식업체 로봇 미도입 사유 — 비용 대비 성과가 낮을 듯", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^비용 대비 성과"], unit: "%", survey: 외식업체 경영실태조사}
       - {id: rbn_space, title: "외식업체 로봇 미도입 사유 — 공간 등 사업장 환경", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^공간 등"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: krbi_kor, title: "외식산업 경기전망지수 — 한식 음식점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^한식 음식점업$"], codes: {C1: "^0001$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_frn, title: "외식산업 경기전망지수 — 외국식 음식점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^외국식 음식점업$"], codes: {C1: "^0002$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_inst, title: "외식산업 경기전망지수 — 기관 구내식당업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^기관 구내식당업$"], codes: {C1: "^0003$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_bar, title: "외식산업 경기전망지수 — 주점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^주점업$"], codes: {C1: "^0006$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_cof, title: "외식산업 경기전망지수 — 커피 전문점", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^커피 전문점$"], codes: {C1: "^00070001$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_bak, title: "외식산업 경기전망지수 — 제과점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^제과점업$"], codes: {C1: "^0009$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_piz, title: "외식산업 경기전망지수 — 피자 햄버거 샌드위치 및 유사 음식점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^피자 햄버거 샌드위치 및 유사 음식점업$"], codes: {C1: "^00100001$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_chk, title: "외식산업 경기전망지수 — 치킨 전문점", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^치킨 전문점$"], codes: {C1: "^00100002$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: krbi_kim, title: "외식산업 경기전망지수 — 김밥 및 기타 간이 음식점업", tbl: DT_KRBI_11, org: "114", se: Q, periods: 12, itm: "^외식산업경기전망지수$", want: ["^김밥 및 기타 간이 음식점업$"], codes: {C1: "^0011$"}, unit: 점, survey: 외식산업경기동향지수}
+      - {id: sty_hall_now_inc, title: "외식업체 판매유형별 전년 대비 현재 — 홀 영업 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^홀 영업$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_hall_now_dec, title: "외식업체 판매유형별 전년 대비 현재 — 홀 영업 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^홀 영업$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_hall_fut_inc, title: "외식업체 판매유형별 향후 전망 — 홀 영업 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^홀 영업$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_hall_fut_dec, title: "외식업체 판매유형별 향후 전망 — 홀 영업 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^홀 영업$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_dlv_now_inc, title: "외식업체 판매유형별 전년 대비 현재 — 배달 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^배달$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_dlv_now_dec, title: "외식업체 판매유형별 전년 대비 현재 — 배달 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^배달$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_dlv_fut_inc, title: "외식업체 판매유형별 향후 전망 — 배달 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^배달$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_dlv_fut_dec, title: "외식업체 판매유형별 향후 전망 — 배달 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^배달$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_tk_now_inc, title: "외식업체 판매유형별 전년 대비 현재 — 테이크아웃 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^테이크아웃$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_tk_now_dec, title: "외식업체 판매유형별 전년 대비 현재 — 테이크아웃 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^테이크아웃$", "^전년 대비 현재$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_tk_fut_inc, title: "외식업체 판매유형별 향후 전망 — 테이크아웃 증가", tbl: DT_114054_135, org: "114", periods: 3, itm: "^증가$", want: ["^전체$", "^테이크아웃$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: sty_tk_fut_dec, title: "외식업체 판매유형별 향후 전망 — 테이크아웃 감소", tbl: DT_114054_135, org: "114", periods: 3, itm: "^감소$", want: ["^전체$", "^테이크아웃$", "^향후 전망$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fvis_avg, title: "외식업체 하루 평균 방문 고객 수 — 전체", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^전체$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_dlv, title: "외식업체 하루 평균 배달 판매 — 전체", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^전체$", "^평균$"], codes: {C2: "^B0305$"}, unit: 인분, survey: 외식업체 경영실태조사}
+      - {id: fvis_tk, title: "외식업체 하루 평균 테이크아웃 판매 — 전체", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^전체$", "^평균$"], codes: {C2: "^B0405$"}, unit: 인분, survey: 외식업체 경영실태조사}
+      - {id: fvis_kor, title: "외식업체 하루 평균 방문 고객 수 — 한식", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^한식$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_chn, title: "외식업체 하루 평균 방문 고객 수 — 중식", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^중식$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_jpn, title: "외식업체 하루 평균 방문 고객 수 — 일식", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^일식$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_wst, title: "외식업체 하루 평균 방문 고객 수 — 서양식", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^서양식$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_inst, title: "외식업체 하루 평균 방문 고객 수 — 기관 구내식당업", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^기관 구내식당업$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_bak, title: "외식업체 하루 평균 방문 고객 수 — 제과점", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^제과점$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_piz, title: "외식업체 하루 평균 방문 고객 수 — 피자·햄버거·샌드위치 및 유사 음식점업", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^피자·햄버거·샌드위치 및 유사 음식점업$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_chk, title: "외식업체 하루 평균 방문 고객 수 — 치킨전문점", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^치킨전문점$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_kim, title: "외식업체 하루 평균 방문 고객 수 — 김밥 및 기타 간이 음식점업", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^김밥 및 기타 간이 음식점업$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_bar, title: "외식업체 하루 평균 방문 고객 수 — 주점업", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^주점업$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_cafe, title: "외식업체 하루 평균 방문 고객 수 — 비알코올 음료점업", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^비알코올 음료점업$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_s1, title: "외식업체 하루 평균 방문 고객 수 — 5천만원 미만", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^5천만원 미만$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_s2, title: "외식업체 하루 평균 방문 고객 수 — 5천만원~1억원 미만", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^5천만원~1억원 미만$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_s3, title: "외식업체 하루 평균 방문 고객 수 — 1억원~5억원 미만", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^1억원~5억원 미만$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fvis_s4, title: "외식업체 하루 평균 방문 고객 수 — 5억원 이상", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^5억원 이상$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

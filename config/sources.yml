@@ -7413,6 +7413,46 @@ sources:
       - {id: frq_w23_r, title: "주된 문화·여가활동 빈도 — 주 2~3회(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주 2~3회$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: frq_w1_r, title: "주된 문화·여가활동 빈도 — 주 1회 정도(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주 1회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: frq_m13_r, title: "주된 문화·여가활동 빈도 — 월 1~3회 정도(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^월 1~3회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_c, title: "주된 문화·여가활동 장소 — 자택(도시)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_r, title: "주된 문화·여가활동 장소 — 자택(농어촌)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_eup, title: "주된 문화·여가활동 장소 — 자택(읍)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_myn, title: "주된 문화·여가활동 장소 — 자택(면)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_f, title: "주된 문화·여가활동 장소 — 자택(농어가)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_y30, title: "주된 문화·여가활동 장소 — 자택(30대 이하)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_home_o70, title: "주된 문화·여가활동 장소 — 자택(70대 이상)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^자택\\(집\\)$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_pub_r, title: "주된 문화·여가활동 장소 — 공공시설(농어촌)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^공공시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_com_r, title: "주된 문화·여가활동 장소 — 마을 내 공동시설(농어촌)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^마을 내 공동시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_priv_r, title: "주된 문화·여가활동 장소 — 민간시설(농어촌)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^민간시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_out_r, title: "주된 문화·여가활동 장소 — 실외공간(농어촌)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^실외공간$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_com_o70, title: "주된 문화·여가활동 장소 — 마을 내 공동시설(70대 이상)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^마을 내 공동시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: plc_priv_y30, title: "주된 문화·여가활동 장소 — 민간시설(30대 이하)", tbl: DT_11430057_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^민간시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_c, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(도시)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_r, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_eup, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(읍)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_myn, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(면)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_f, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(농어가)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_y30, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(30대 이하)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_o70, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(70대 이상)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_car, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(개인차량)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^개인차량$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_walk, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(걸어서)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^걸어서$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_avg_bus, title: "문화·여가활동 장소까지 편도 소요시간 — 평균(대중교통)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^대중교통$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: ttm_u5_r, title: "문화·여가활동 장소까지 편도 소요시간 — 5분 미만(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^5분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_u10_r, title: "문화·여가활동 장소까지 편도 소요시간 — 5-10분 미만(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^5-10분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_u20_r, title: "문화·여가활동 장소까지 편도 소요시간 — 10-20분 미만(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^10-20분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_u30_r, title: "문화·여가활동 장소까지 편도 소요시간 — 20-30분 미만(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^20-30분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_u60_r, title: "문화·여가활동 장소까지 편도 소요시간 — 30분-1시간 미만(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^30분-1시간 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ttm_o60_r, title: "문화·여가활동 장소까지 편도 소요시간 — 1시간 이상(농어촌)", tbl: DT_11430060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^1시간 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_tour_c, title: "희망 문화·여가활동 — 관광(도시)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_tour_r, title: "희망 문화·여가활동 — 관광(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_tour_y30, title: "희망 문화·여가활동 — 관광(30대 이하)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_tour_o70, title: "희망 문화·여가활동 — 관광(70대 이상)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_tour_f, title: "희망 문화·여가활동 — 관광(농어가)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_hob_r, title: "희망 문화·여가활동 — 취미오락활동(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^취미오락활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_spo_r, title: "희망 문화·여가활동 — 스포츠참여활동(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^스포츠참여활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_artv_r, title: "희망 문화·여가활동 — 문화예술관람활동(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화예술관람활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_artp_r, title: "희망 문화·여가활동 — 문화예술참여활동(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화예술참여활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_rest_r, title: "희망 문화·여가활동 — 휴식(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^휴식$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsh_soc_r, title: "희망 문화·여가활동 — 사회활동(농어촌)", tbl: DT_11430079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^사회활동$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

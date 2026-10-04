@@ -7339,6 +7339,45 @@ sources:
       - {id: trn_bus_c, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(도시)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: trn_bus_r, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(농어촌)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: trn_bus_o70, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(70대 이상)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_all, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(농어촌 전체)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_eup, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(읍)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^읍$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_myn, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(면)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^면$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_f, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(농어가)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_nf, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(비농어가)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^비농어가$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_s65, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(65세 이상 1인 가구)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^65세 이상 1인 가구$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_y30, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(30대 이하)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^30대 이하$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_o70, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(70대 이상)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_m, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(남)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^남$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_car_w, title: "물품 구입처까지 주로 이용하는 교통수단 — 자가용(여)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^여$", "^자가용$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_walk_all, title: "물품 구입처까지 주로 이용하는 교통수단 — 걸어서(농어촌 전체)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_walk_myn, title: "물품 구입처까지 주로 이용하는 교통수단 — 걸어서(면)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^면$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_walk_o70, title: "물품 구입처까지 주로 이용하는 교통수단 — 걸어서(70대 이상)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_bus_all, title: "물품 구입처까지 주로 이용하는 교통수단 — 대중교통(농어촌 전체)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^대중교통$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_bus_o70, title: "물품 구입처까지 주로 이용하는 교통수단 — 대중교통(70대 이상)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^대중교통$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbt_etc_all, title: "물품 구입처까지 주로 이용하는 교통수단 — 기타(농어촌 전체)", tbl: DT_11430042_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_all, title: "물품 구입처까지 편도 소요시간 평균(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_eup, title: "물품 구입처까지 편도 소요시간 평균(읍)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^읍$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_myn, title: "물품 구입처까지 편도 소요시간 평균(면)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^면$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_f, title: "물품 구입처까지 편도 소요시간 평균(농어가)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_nf, title: "물품 구입처까지 편도 소요시간 평균(비농어가)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^비농어가$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_avg_o70, title: "물품 구입처까지 편도 소요시간 평균(70대 이상)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_walk, title: "물품 구입처까지 편도 소요시간 평균(걸어서으로 가는 주민)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^걸어서$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_bus, title: "물품 구입처까지 편도 소요시간 평균(대중교통으로 가는 주민)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^대중교통$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbm_car, title: "물품 구입처까지 편도 소요시간 평균(자가용으로 가는 주민)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^자가용$", "^평균$"], unit: "분", survey: 농어업인 복지실태조사}
+      - {id: sbd_u10_all, title: "물품 구입처까지 편도 소요시간 — 10분 미만(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^10분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbd_u20_all, title: "물품 구입처까지 편도 소요시간 — 10-20분 미만(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^10-20분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbd_u30_all, title: "물품 구입처까지 편도 소요시간 — 20-30분 미만(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^20-30분 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbd_u60_all, title: "물품 구입처까지 편도 소요시간 — 30분-1시간 미만(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^30분-1시간 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sbd_o60_all, title: "물품 구입처까지 편도 소요시간 — 1시간 이상(농어촌 전체)", tbl: DT_11430043_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^1시간 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_age_f, title: "은퇴계획 — 특정 연령에 은퇴(농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^특정 연령$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_nev_f, title: "은퇴계획 — 건강이 허락하는 한 은퇴하지 않겠다(농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^건강이 허락하는 한"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_done_f, title: "은퇴계획 — 이미 은퇴했음(농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^이미 은퇴했음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_dk_f, title: "은퇴계획 — 잘 모르겠다(농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^잘 모르겠다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_na_f, title: "은퇴계획 — 해당 없음(농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^농어가$", "^해당 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_nev_nf, title: "은퇴계획 — 건강이 허락하는 한 은퇴하지 않겠다(비농어가)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^비농어가$", "^건강이 허락하는 한"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_nev_all, title: "은퇴계획 — 건강이 허락하는 한 은퇴하지 않겠다(농어촌 전체)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^건강이 허락하는 한"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_done_all, title: "은퇴계획 — 이미 은퇴했음(농어촌 전체)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^이미 은퇴했음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rtp_done_o70, title: "은퇴계획 — 이미 은퇴했음(70대 이상)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^이미 은퇴했음$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

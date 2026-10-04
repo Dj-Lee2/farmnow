@@ -7938,6 +7938,44 @@ sources:
       - {id: ufb_loc, title: "밭기반 정비 지방비", tbl: DT_311001_028, org: "311", itm: "^밭기반 정비사업$", want: ["^전국$", "^지방비$"], unit: 천원, survey: 농업생산기반정비사업 통계}
       - {id: ufb_well, title: "밭기반 정비 관정 수", tbl: DT_311001_028, org: "311", itm: "^밭기반 정비사업$", want: ["^전국$", "^관정수$"], unit: 개, survey: 농업생산기반정비사업 통계}
       - {id: ufb_irr, title: "밭기반 정비 관개면적", tbl: DT_311001_028, org: "311", itm: "^밭기반 정비사업$", want: ["^전국$", "^관개면적$"], unit: ha, survey: 농업생산기반정비사업 통계}
+      - {id: rzc_tot_s05, title: "논벼 0.5ha미만 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^0\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s1, title: "논벼 0.5~1ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s15, title: "논벼 1~1.5ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s2, title: "논벼 1.5~2ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s25, title: "논벼 2~2.5ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s3, title: "논벼 2.5~3ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s5, title: "논벼 3~5ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s7, title: "논벼 5~7ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s10, title: "논벼 7~10ha 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_tot_s10p, title: "논벼 10ha이상 농가 — 10a당 생산비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^10\\.0ha이상$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s05, title: "논벼 0.5ha미만 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^0\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s1, title: "논벼 0.5~1ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^0\\.5-1\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s15, title: "논벼 1~1.5ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^1\\.0-1\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s2, title: "논벼 1.5~2ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^1\\.5-2\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s25, title: "논벼 2~2.5ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^2\\.0-2\\.5ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s3, title: "논벼 2.5~3ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^2\\.5-3\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s5, title: "논벼 3~5ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^3\\.0-5\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s7, title: "논벼 5~7ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^5\\.0-7\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s10, title: "논벼 7~10ha 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^7\\.0-10\\.0ha미만$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_kg_s10p, title: "논벼 10ha이상 농가 — 쌀 20kg당 생산비", tbl: DT_1EC0005, itm: "^정곡 20kg당 현백률 92\\.9% 적용$", want: ["^10\\.0ha이상$", "^생산비 합계$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s05, title: "논벼 0.5ha미만 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^0\\.5ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s1, title: "논벼 0.5~1ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s15, title: "논벼 1~1.5ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s2, title: "논벼 1.5~2ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s25, title: "논벼 2~2.5ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s3, title: "논벼 2.5~3ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s5, title: "논벼 3~5ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s7, title: "논벼 5~7ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s10, title: "논벼 7~10ha 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzc_out_s10p, title: "논벼 10ha이상 농가 — 10a당 위탁영농비", tbl: DT_1EC0005, itm: "^10a당$", want: ["^10\\.0ha이상$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rzf_area_s05, title: "논벼 0.5ha미만 농가 — 경지면적", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^0\\.5ha미만$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_rent_s05, title: "논벼 0.5ha미만 농가 — 차용지(빌린 땅)", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^0\\.5ha미만$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_rice_s05, title: "논벼 0.5ha미만 농가 — 논벼 재배면적", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^0\\.5ha미만$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_yld_s05, title: "논벼 0.5ha미만 농가 — 주산물(벼) 수량", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^0\\.5ha미만$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rzf_area_s10p, title: "논벼 10ha이상 농가 — 경지면적", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_rent_s10p, title: "논벼 10ha이상 농가 — 차용지(빌린 땅)", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_rice_s10p, title: "논벼 10ha이상 농가 — 논벼 재배면적", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rzf_yld_s10p, title: "논벼 10ha이상 농가 — 주산물(벼) 수량", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

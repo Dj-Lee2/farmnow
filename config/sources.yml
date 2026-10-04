@@ -6627,6 +6627,40 @@ sources:
       - {id: ywk_lsc_plant, title: "조경재업 임가 작업별 노동투하량 — 조림작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^조림작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
       - {id: ywk_lsc_prune, title: "조경재업 임가 작업별 노동투하량 — 가지치기작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^가지치기작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
       - {id: ywk_lsc_rep, title: "조경재업 임가 작업별 노동투하량 — 보식작업", tbl: DT_136023_11497, org: "136", periods: 3, itm: "^값$", want: ["^보식작업$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_veg, title: "채취업 임가 종목별 노동투하량 — 산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^산나물$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_prs, title: "채취업 임가 종목별 노동투하량 — 감", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^감$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_sap, title: "채취업 임가 종목별 노동투하량 — 수지/수액", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^수지/수액$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_pine, title: "채취업 임가 종목별 노동투하량 — 송이", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^송이$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_chs, title: "채취업 임가 종목별 노동투하량 — 밤", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^밤$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_wveg, title: "채취업 임가 종목별 노동투하량 — 채취산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^채취산나물$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_onut, title: "채취업 임가 종목별 노동투하량 — 기타종실류", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^기타종실류$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_gat_med, title: "채취업 임가 종목별 노동투하량 — 약용", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^약용$", "^채취업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_veg, title: "기타 재배업 임가 종목별 노동투하량 — 산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^산나물$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_med, title: "기타 재배업 임가 종목별 노동투하량 — 약용", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^약용$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_chs, title: "기타 재배업 임가 종목별 노동투하량 — 밤", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^밤$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_prs, title: "기타 재배업 임가 종목별 노동투하량 — 감", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^감$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_onut, title: "기타 재배업 임가 종목별 노동투하량 — 기타종실류", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^기타종실류$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_sap, title: "기타 재배업 임가 종목별 노동투하량 — 수지/수액", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^수지/수액$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_ltree, title: "기타 재배업 임가 종목별 노동투하량 — 조경수", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^조경수$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_oth_jjb, title: "기타 재배업 임가 종목별 노동투하량 — 대추", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^대추$", "^기타 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_jjb, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 대추", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^대추$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_onut, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 기타종실류", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^기타종실류$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_chs, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 밤", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^밤$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_prs, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 감", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^감$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_wal, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 호두", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^호두$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_nut_veg, title: "수실류 재배업(밤·감 제외) 임가 종목별 노동투하량 — 산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^산나물$", "^수실류재배업\\(밤 감 제외\\)$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_prs, title: "감 재배업 임가 종목별 노동투하량 — 감", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^감$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_veg, title: "감 재배업 임가 종목별 노동투하량 — 산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^산나물$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_jjb, title: "감 재배업 임가 종목별 노동투하량 — 대추", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^대추$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_chs, title: "감 재배업 임가 종목별 노동투하량 — 밤", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^밤$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_wveg, title: "감 재배업 임가 종목별 노동투하량 — 채취산나물", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^채취산나물$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_prs_med, title: "감 재배업 임가 종목별 노동투하량 — 약용", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^약용$", "^감 재배업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_ltree, title: "조경재업 임가 종목별 노동투하량 — 조경수", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^조경수$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_wfl, title: "조경재업 임가 종목별 노동투하량 — 야생화", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^야생화$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_bon, title: "조경재업 임가 종목별 노동투하량 — 분재", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^분재$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_onut, title: "조경재업 임가 종목별 노동투하량 — 기타종실류", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^기타종실류$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_med, title: "조경재업 임가 종목별 노동투하량 — 약용", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^약용$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysp_lsc_chs, title: "조경재업 임가 종목별 노동투하량 — 밤", tbl: DT_136023_11498, org: "136", periods: 3, itm: "^값$", want: ["^밤$", "^조경재업$"], unit: 시간, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

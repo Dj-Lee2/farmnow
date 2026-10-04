@@ -6192,6 +6192,45 @@ sources:
       - {id: fvis_s2, title: "외식업체 하루 평균 방문 고객 수 — 5천만원~1억원 미만", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^5천만원~1억원 미만$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
       - {id: fvis_s3, title: "외식업체 하루 평균 방문 고객 수 — 1억원~5억원 미만", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^1억원~5억원 미만$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
       - {id: fvis_s4, title: "외식업체 하루 평균 방문 고객 수 — 5억원 이상", tbl: DT_114054_023, org: "114", periods: 3, itm: "^1일 평균 방문 및 배달/테이크아웃 고객 수$", want: ["^5억원 이상$", "^평균$"], codes: {C2: "^B0106$"}, unit: 명, survey: 외식업체 경영실태조사}
+      - {id: fyi_tot, title: "임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_for, title: "임가 임업소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.52$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_off, title: "임가 임업외소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.53$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_trn, title: "임가 이전소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.54$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_ext, title: "임가 비경상소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.58$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_side, title: "임가 겸업소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_biz, title: "임가 사업외소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650849$", C2: "^13102136508X\\.8$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_ful, title: "전업 임가 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650846$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_ful_for, title: "전업 임가 임업소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650846$", C2: "^13102136508X\\.52$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_main, title: "임업주업 임가 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650847$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_main_for, title: "임업주업 임가 임업소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650847$", C2: "^13102136508X\\.52$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_sub, title: "임업부업 임가 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650848$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_sub_for, title: "임업부업 임가 임업소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650848$", C2: "^13102136508X\\.52$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_tmb, title: "육림·목재수확업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650860$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_gat, title: "채취업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021365084$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_chs, title: "밤 재배업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021365085$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_prs, title: "감 재배업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650810$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_nut, title: "수실류 재배업(밤·감 제외) 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650811$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_msh, title: "버섯 재배업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021365087$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_lsc, title: "조경재업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021365089$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_b_oth, title: "기타 재배업 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021365088$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_a_u49, title: "경영주 49세 이하 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650859$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_a_50, title: "경영주 50대 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650821$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_a_60, title: "경영주 60대 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650822$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_a_70, title: "경영주 70세 이상 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650823$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_s1, title: "임지 1ha 미만 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650813$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_s2, title: "임지 1~5ha 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650814$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_s3, title: "임지 5~10ha 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650815$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_s4, title: "임지 10~20ha 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650816$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_s5, title: "임지 20ha 이상 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650817$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_gg, title: "경기 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650831$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_gw, title: "강원 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650832$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_cb, title: "충북 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650833$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_cn, title: "충남 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650834$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_jb, title: "전북 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650835$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_jn, title: "전남 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650836$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_gb, title: "경북 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650837$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_gn, title: "경남 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650838$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fyi_r_me, title: "특·광역시 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650839$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -5860,6 +5860,42 @@ sources:
       - {id: shp_emd, title: 농어가의 생활용품 구입처 — 같은 읍·면, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^동일 읍·면 내$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: shp_sgg, title: 농어가의 생활용품 구입처 — 같은 시·군, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^동일 시·군 내$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: shp_oth, title: 농어가의 생활용품 구입처 — 다른 시·군, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^다른 시·군$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lsm_avg, title: 농어가의 현재 삶 만족도, tbl: DT_11430010_2025, org: "143", se: F, periods: 1, itm: "^현재 삶에 대한 만족도$", want: ["^농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: lsm_avg_non, title: 비농어가의 현재 삶 만족도, tbl: DT_11430010_2025, org: "143", se: F, periods: 1, itm: "^현재 삶에 대한 만족도$", want: ["^비농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: lsm_sat, title: 현재 삶에 만족하는 농어가, tbl: DT_11430010_2025, org: "143", se: F, periods: 1, itm: "^현재 삶에 대한 만족도$", want: ["^농어가$", "^(매우 만족|만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lsm_dis, title: 현재 삶에 불만족하는 농어가, tbl: DT_11430010_2025, org: "143", se: F, periods: 1, itm: "^현재 삶에 대한 만족도$", want: ["^농어가$", "^(불만족|매우 불만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: dep_yes, title: 우울감을 경험한 농어가, tbl: DT_11430227_2025, org: "143", se: F, periods: 1, itm: "^우울감 경험 실태$", want: ["^농어가$", "^있다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: dep_yes_non, title: 우울감을 경험한 비농어가, tbl: DT_11430227_2025, org: "143", se: F, periods: 1, itm: "^우울감 경험 실태$", want: ["^비농어가$", "^있다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csm_avg, title: 농어가의 소비생활 만족도, tbl: DT_11437206_2025, org: "143", se: F, periods: 1, itm: "^소비생활 만족도$", want: ["^농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: csm_avg_non, title: 비농어가의 소비생활 만족도, tbl: DT_11437206_2025, org: "143", se: F, periods: 1, itm: "^소비생활 만족도$", want: ["^비농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: pnb_burden, title: 공적연금 보험료가 부담되는 농어가, tbl: DT_11437026_2025, org: "143", se: F, periods: 1, itm: "^공적연금 보험료 부담 정도$", want: ["^농어가$", "^(매우 부담됨|부담됨)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ssp_hi, title: 농어가의 사회보장 사업 만족도 — 농어업인 건강보험료 지원, tbl: DT_11430205_2025, org: "143", se: F, periods: 1, itm: "^농어촌 주민 사회보장 강화 사업 만족도$", want: ["^농어가$", "^농어업인에 대한 건강보험료 지원$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: ssp_pen, title: 농어가의 사회보장 사업 만족도 — 농어업인 연금보험료 지원, tbl: DT_11430205_2025, org: "143", se: F, periods: 1, itm: "^농어촌 주민 사회보장 강화 사업 만족도$", want: ["^농어가$", "^농어업인에 대한 연금보험료 지원$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: ssp_safe, title: 농어가의 사회보장 사업 만족도 — 농어업인 안전재해보장 제도, tbl: DT_11430205_2025, org: "143", se: F, periods: 1, itm: "^농어촌 주민 사회보장 강화 사업 만족도$", want: ["^농어가$", "^농어업인 안전재해보장 제도$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: ssp_basic, title: 농어가의 사회보장 사업 만족도 — 기초연금, tbl: DT_11430205_2025, org: "143", se: F, periods: 1, itm: "^농어촌 주민 사회보장 강화 사업 만족도$", want: ["^농어가$", "^기초연금$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: lpp_hlth, title: 농어가의 여가활동 목적 — 건강, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^건강을 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_rest, title: 농어가의 여가활동 목적 — 마음의 안정과 휴식, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^마음의 안정과 휴식을 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_fun, title: 농어가의 여가활동 목적 — 개인의 즐거움, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^개인의 즐거움을 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_self, title: 농어가의 여가활동 목적 — 자기만족, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^자기만족을 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_rel, title: 농어가의 여가활동 목적 — 대인 관계·교제, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^대인 관계·교제를 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_time, title: 농어가의 여가활동 목적 — 시간 보내기, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^시간을 보내기 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_fam, title: 농어가의 여가활동 목적 — 가족과 함께, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^가족과 시간을 함께하기 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_strs, title: 농어가의 여가활동 목적 — 스트레스 해소, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^스트레스 해소를 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lpp_dev, title: 농어가의 여가활동 목적 — 자기 계발, tbl: DT_11430053_2025, org: "143", se: F, periods: 1, itm: "^여가활동의 목적$", want: ["^농어가$", "^자기 계발을 위해$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_none, title: 농어가에 필요한 보건의료 과목 — 불편 경험 없음, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^불편을 느낀 경험이 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_int, title: 농어가에 필요한 보건의료 과목 — 내과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^내과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_eye, title: 농어가에 필요한 보건의료 과목 — 안과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^안과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_ortho, title: 농어가에 필요한 보건의료 과목 — 정형외과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^정형외과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_neuro, title: 농어가에 필요한 보건의료 과목 — 신경외과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^신경외과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_ent, title: 농어가에 필요한 보건의료 과목 — 이비인후과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^이비인후과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_dent, title: 농어가에 필요한 보건의료 과목 — 치과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^치과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_obgy, title: 농어가에 필요한 보건의료 과목 — 산부인과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^산부인과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nmd_surg, title: 농어가에 필요한 보건의료 과목 — 외과, tbl: DT_11430216_2025, org: "143", se: F, periods: 1, itm: "^필요 보건의료서비스 과목$", want: ["^농어가$", "^외과$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: pnu_own, title: 농어가의 공공의료기관 비이용 사유 — 이용하는 병·의원이 있어서, tbl: DT_11430213_2025, org: "143", se: F, periods: 1, itm: "^공공의료기관 비이용 사유$", want: ["^농어가$", "^이용하는 병·의원이 있어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: pnu_exp, title: 농어가의 공공의료기관 비이용 사유 — 전문성이 떨어져서, tbl: DT_11430213_2025, org: "143", se: F, periods: 1, itm: "^공공의료기관 비이용 사유$", want: ["^농어가$", "^전문성이 떨어져서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: pnu_far, title: 농어가의 공공의료기관 비이용 사유 — 거리가 멀어서, tbl: DT_11430213_2025, org: "143", se: F, periods: 1, itm: "^공공의료기관 비이용 사유$", want: ["^농어가$", "^거리가 멀어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: pnu_old, title: 농어가의 공공의료기관 비이용 사유 — 시설이 낙후되어서, tbl: DT_11430213_2025, org: "143", se: F, periods: 1, itm: "^공공의료기관 비이용 사유$", want: ["^농어가$", "^시설이 낙후되어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: pnu_alone, title: 농어가의 공공의료기관 비이용 사유 — 동행자가 없어서, tbl: DT_11430213_2025, org: "143", se: F, periods: 1, itm: "^공공의료기관 비이용 사유$", want: ["^농어가$", "^동행자가 없어서$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

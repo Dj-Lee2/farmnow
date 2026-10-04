@@ -6129,6 +6129,30 @@ sources:
       - {id: fdif_comp, title: "외식업체 경영상 애로사항 — 경쟁심화", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^경쟁심화$"], unit: "%", survey: 외식업체 경영실태조사}
       - {id: fpf_opm, title: "외식업체 매출액 대비 영업이익률", tbl: DT_114054_029, org: "114", periods: 3, itm: "^매출액 대비 영업이익률$", want: ["^전체$"], unit: "%", survey: 외식업체 경영실태조사}
       - {id: fpf_cost, title: "외식업체 매출 대비 식재료비·인건비 비율", tbl: DT_114054_029, org: "114", periods: 3, itm: "^매출 대비 식재료 및 인건비 비율$", want: ["^전체$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_app, title: "외식업체 배달앱 이용 비율 — 전체", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^전체$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_agt, title: "외식업체 배달대행 이용 비율 — 전체", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^전체$", "^배달대행$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_appfee, title: "배달앱 이용 외식업체 월평균 수수료 — 전체", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^전체$", "^배달앱$", "^평균$"], unit: "원", survey: 외식업체 경영실태조사}
+      - {id: dlv_agtfee, title: "배달대행 이용 외식업체 월평균 비용 — 전체", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^전체$", "^배달대행$", "^평균$"], unit: "원", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_kor, title: "외식업체 배달앱 이용 비율 — 한식", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^한식$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_chn, title: "외식업체 배달앱 이용 비율 — 중식", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^중식$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_jpn, title: "외식업체 배달앱 이용 비율 — 일식", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^일식$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_wst, title: "외식업체 배달앱 이용 비율 — 서양식", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^서양식$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_piz, title: "외식업체 배달앱 이용 비율 — 피자·햄버거·샌드위치", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^피자", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_chk, title: "외식업체 배달앱 이용 비율 — 치킨전문점", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^치킨 ?전문점$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_kim, title: "외식업체 배달앱 이용 비율 — 김밥·간이 음식점", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^김밥", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_cafe, title: "외식업체 배달앱 이용 비율 — 비알코올 음료점", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^비알코올", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_bar, title: "외식업체 배달앱 이용 비율 — 주점", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^주점업$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_fr, title: "외식업체 배달앱 이용 비율 — 프랜차이즈", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^프랜차이즈$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dlv_a_nfr, title: "외식업체 배달앱 이용 비율 — 비프랜차이즈", tbl: DT_114054_016, org: "114", periods: 3, itm: "^배달앱 및 배달대행 이용현황$", want: ["^비프랜차이즈$", "^배달앱$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dla_pub, title: "배달앱 이용 외식업체가 쓰는 배달앱 — 공공 배달앱", tbl: DT_114054_077, org: "114", periods: 3, itm: "^사업장 특성별 사용 중인 배달앱$", want: ["^전체$", "^공공 배달앱$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dla_pri, title: "배달앱 이용 외식업체가 쓰는 배달앱 — 민간 전문 배달앱", tbl: DT_114054_077, org: "114", periods: 3, itm: "^사업장 특성별 사용 중인 배달앱$", want: ["^전체$", "^민간 전문 배달앱$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: dla_own, title: "배달앱 이용 외식업체가 쓰는 배달앱 — 자사 자체 배달앱", tbl: DT_114054_077, org: "114", periods: 3, itm: "^사업장 특성별 사용 중인 배달앱$", want: ["^전체$", "^자사 자체 배달앱$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbt_all, title: "외식업체 로봇 도입 비율 — 전체", tbl: DT_114054_069, org: "114", periods: 3, itm: "^사업장 특성별 로봇 도입 여부$", want: ["^전체$", "^예$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbn_nojob, title: "외식업체 로봇 미도입 사유 — 로봇을 쓸 만한 업무가 아님", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^로봇 도입 정도의 업무가"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbn_nofit, title: "외식업체 로봇 미도입 사유 — 업무에 맞는 로봇이 없음", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^업무에 적합한"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbn_cost, title: "외식업체 로봇 미도입 사유 — 비용 부담", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^비용이 부담"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbn_roi, title: "외식업체 로봇 미도입 사유 — 비용 대비 성과가 낮을 듯", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^비용 대비 성과"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: rbn_space, title: "외식업체 로봇 미도입 사유 — 공간 등 사업장 환경", tbl: DT_114054_076, org: "114", periods: 3, itm: "^사업장 특성별 로봇 미도입 사유$", want: ["^전체$", "^공간 등"], unit: "%", survey: 외식업체 경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

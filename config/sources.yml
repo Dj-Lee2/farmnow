@@ -6809,6 +6809,34 @@ sources:
       - {id: rnf_biz, title: 귀농 가구 농외소득 경험 · 겸업소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^농업 이외 사업에서"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rnf_wage, title: 귀농 가구 농외소득 경험 · 근로소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^근로소득"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rnf_prop, title: 귀농 가구 농외소득 경험 · 재산소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^재산소득"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsg_lead, title: 귀농인 일반 사회단체 주도적·적극 참여, tbl: DT_114055_A038, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^주도적이고"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsg_vocal, title: 귀농인 일반 사회단체 자주 참여·의견 개진, tbl: DT_114055_A038, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^자주 참여하며"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsg_quiet, title: 귀농인 일반 사회단체 자주 참여·의견은 안 냄, tbl: DT_114055_A038, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^자주 참여하나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsg_some, title: 귀농인 일반 사회단체 가끔 참여, tbl: DT_114055_A038, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsg_rare, title: 귀농인 일반 사회단체 거의 참여 안 함, tbl: DT_114055_A038, org: "114", itm: "^일반 사회단체 참여 정도 및 이유$", want: ["^거의 참여하지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rls_y, title: 가축을 기르는 귀농 가구, tbl: DT_114055_A019, org: "114", itm: "^보유$", want: ["^사육 여부$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfc_prod, title: 귀농 가구 시설 보유 · 생산(재배)시설, tbl: DT_114055_A020, org: "114", itm: "^보유$", want: ["^생산\\(재배\\)시설$", "^시설 보유 여부$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfc_proc, title: 귀농 가구 시설 보유 · 가공시설, tbl: DT_114055_A020, org: "114", itm: "^보유$", want: ["^가공시설$", "^시설 보유 여부$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfc_stor, title: 귀농 가구 시설 보유 · 저장시설, tbl: DT_114055_A020, org: "114", itm: "^보유$", want: ["^저장시설$", "^시설 보유 여부$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rae_hs, title: 귀농 가구주 농업계 고등학교 졸업, tbl: DT_114055_A064, org: "114", itm: "^농업계 고등학교 졸업여부$", want: ["^가구주$", "^입학 후 졸업$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rae_col, title: 귀농 가구주 농업계 대학 졸업, tbl: DT_114055_A065, org: "114", itm: "^농업계 대학 졸업여부$", want: ["^가구주$", "^입학 후 졸업$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rae_uni, title: 귀농 가구주 일반대학 농업계열 졸업, tbl: DT_114055_A066, org: "114", itm: "^일반대학 농업계열 졸업여부$", want: ["^가구주$", "^입학 후 졸업$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_inc, title: 귀농 가구 농업 외 경제활동 이유 · 소득을 더 올리려고, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^소득을 더 올리려고$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_hard, title: 귀농 가구 농업 외 경제활동 이유 · 농사일이 힘들어서, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농사일이 힘들어서$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_tal, title: 귀농 가구 농업 외 경제활동 이유 · 재능·경력 활용, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^내가 가진 재능"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_soc, title: 귀농 가구 농업 외 경제활동 이유 · 사회생활을 하고 싶어서, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^사회생활을 하고"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_rec, title: 귀농 가구 농업 외 경제활동 이유 · 주변의 권유, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^주변의 권유로$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_liv, title: 귀농 가구 농업 외 경제활동 이유 · 생활비 충당, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^생활비 충당"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_loan, title: 귀농 가구 농업 외 경제활동 이유 · 대출 관련 지출, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^대출 관련"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxr_exp, title: 귀농 가구 농업 외 경제활동 이유 · 영농·창업 규모 확장, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^영농 및 창업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_skill, title: 귀농 가구 농업 외 경제활동 어려움 · 본인 능력 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^본인의 능력"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_time, title: 귀농 가구 농업 외 경제활동 어려움 · 농사일이 바빠 시간 없음, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농사일이 바빠"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_info, title: 귀농 가구 농업 외 경제활동 어려움 · 기회·정보 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^일을 해볼 기회"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_net, title: 귀농 가구 농업 외 경제활동 어려움 · 인맥 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^인맥"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_cap, title: 귀농 가구 농업 외 경제활동 어려움 · 자본금 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^자본금 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_trans, title: 귀농 가구 농업 외 경제활동 어려움 · 교통수단 부족, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^이동\\(교통\\)"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_hlth, title: 귀농 가구 농업 외 경제활동 어려움 · 건강이 좋지 않음, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^본인의 건강"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxd_none, title: 귀농 가구 농업 외 경제활동 어려움 · 어려움 없음, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

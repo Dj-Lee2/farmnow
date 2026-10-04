@@ -2062,7 +2062,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도', 117) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류', 127) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2216,6 +2216,19 @@
   {{ hcard('농어촌 주민이 꼽은 생활 부문별 중요도', [('보건의료', K.rimp_med), ('복지서비스', K.rimp_wel), ('안전', K.rimp_safe), ('경제활동 여건', K.rimp_eco), ('기초생활기반', K.rimp_base), ('환경·경관', K.rimp_env), ('이웃과의 관계', K.rimp_nbr), ('정보화 여건', K.rimp_info), ('교육 여건', K.rimp_edu), ('문화·여가 여건', K.rimp_cul)], '점', '농어촌 주민 전체 · 100점 환산', none, '#2458d6') }}
   {{ hcard('농어촌 생활 부문별 만족도', [('환경·경관', K.rsat_env), ('안전', K.rsat_safe), ('이웃과의 관계', K.rsat_nbr), ('정보화 여건', K.rsat_info), ('복지서비스', K.rsat_wel), ('기초생활기반', K.rsat_base), ('경제활동 여건', K.rsat_eco), ('보건의료', K.rsat_med), ('교육 여건', K.rsat_edu), ('문화·여가 여건', K.rsat_cul)], '점', '농어촌 주민 전체 · 100점 환산 · 종합만족도 ' ~ ('{:.1f}'.format(K.rsat_tot.vals[-1]) ~ '점' if K.rsat_tot else '-'), none, '#1c7a45') }}
   {{ hcard('누가 더 만족하나 — 생활 종합만족도', [('도시', K.rsat_tot_c), ('선주민', K.rsat_tot_nat), ('농어가', K.rsat_tot_f), ('읍', K.rsat_tot_eup), ('농어촌 전체', K.rsat_tot), ('비농어가', K.rsat_tot_nf), ('이주민', K.rsat_tot_mig), ('면', K.rsat_tot_myn)], '점', '100점 환산 · 이주민=다른 지역에서 옮겨 온 주민', none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">마을 경관·지역발전 인식과 마을공동사업·이웃 교류 <small>내 마을 경관이 좋다는 비율, 사는 지역이 발전·낙후되었다는 인식, 마을공동사업이 도움된다는 응답, 가족·이웃과 일주일에 한 번 이상 만나는 비율 · 도시·농어촌·농어가 비교 · 농어업인 복지실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('lsv_in_r', 'ls1', ('마을 안길에서 본 경관이 좋다는 농어촌 주민 · 도시 ' ~ num(K.lsv_in_c.vals[-1], '%')|striptags ~ ' · 농어가 ' ~ num(K.lsv_in_f.vals[-1], '%')|striptags) if K.lsv_in_c and K.lsv_in_f else none, '#1c7a45') }}
+  {{ card('ldv_dev_r', 'ls2', ('사는 지역이 발전되어 있다는 농어촌 주민 · 도시 ' ~ num(K.ldv_dev_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.ldv_dev_myn.vals[-1], '%')|striptags) if K.ldv_dev_c and K.ldv_dev_myn else none, '#2458d6') }}
+  {{ card('ldv_lag_r', 'ls3', ('사는 지역이 낙후되어 있다는 농어촌 주민 · 도시 ' ~ num(K.ldv_lag_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.ldv_lag_myn.vals[-1], '%')|striptags) if K.ldv_lag_c and K.ldv_lag_myn else none, '#c0392b') }}
+  {{ card('vjb_all', 'ls4', ('마을공동사업이 마을 발전에 도움된다는 농어촌 주민 · 참여 경험층 ' ~ num(K.vjb_all_exp.vals[-1], '%')|striptags ~ ' · 비경험층 ' ~ num(K.vjb_all_nexp.vals[-1], '%')|striptags) if K.vjb_all_exp and K.vjb_all_nexp else none, '#3a8f6a') }}
+  {{ card('nbq_nbr_r', 'ls5', ('이웃·친구와 일주일에 한 번 이상 교류하는 농어촌 주민 · 도시 ' ~ num(K.nbq_nbr_c.vals[-1], '%')|striptags ~ ' · 70대 이상 ' ~ num(K.nbq_nbr_o70.vals[-1], '%')|striptags) if K.nbq_nbr_c and K.nbq_nbr_o70 else none, '#b04a07') }}
+  {{ card('nbq_fam_r', 'ls6', ('따로 사는 가족과 일주일에 한 번 이상 교류하는 농어촌 주민 · 도시 ' ~ num(K.nbq_fam_c.vals[-1], '%')|striptags ~ ' · 친척(농어촌) ' ~ num(K.nbq_rel_r.vals[-1], '%')|striptags) if K.nbq_fam_c and K.nbq_rel_r else none, '#5c6bc2') }}
+  {{ hcard('마을 경관이 좋다는 비율 — 보는 자리별', [('마을 안길 · 농어촌', K.lsv_in_r), ('마을 안길 · 도시', K.lsv_in_c), ('마을 진입로 · 농어촌', K.lsv_ent_r), ('마을 진입로 · 도시', K.lsv_ent_c), ('멀리 높은 곳 · 농어촌', K.lsv_far_r), ('멀리 높은 곳 · 도시', K.lsv_far_c)], '%', '매우 좋다 + 좋은 편이다 · 자기 마을 기준', none, '#1c7a45') }}
+  {{ hcard('사는 지역이 발전되어 있다고 보는 비율', [('도시', K.ldv_dev_c), ('농어가', K.ldv_dev_f), ('70대 이상', K.ldv_dev_o70), ('읍', K.ldv_dev_eup), ('농어촌 전체', K.ldv_dev_r), ('비농어가', K.ldv_dev_nf), ('면', K.ldv_dev_myn), ('30대 이하', K.ldv_dev_y30)], '%', '매우 발전 + 발전된 편 · 낙후되었다는 농어촌 주민 ' ~ ('{:.1f}'.format(K.ldv_lag_r.vals[-1]) ~ '%' if K.ldv_lag_r else '-'), none, '#2458d6') }}
+  {{ hcard('마을공동사업이 도움된다는 농어촌 주민', [('주민 화합', K.vjb_har), ('전반적 마을 발전', K.vjb_all), ('생활환경 개선', K.vjb_env), ('주민 소득 증대', K.vjb_inc), ('가구 삶의 질 개선', K.vjb_qol)], '%', '매우 그렇다 + 그런 편이다 · 농어가 기준 마을 발전 ' ~ ('{:.1f}'.format(K.vjb_all_f.vals[-1]) ~ '%' if K.vjb_all_f else '-'), none, '#3a8f6a') }}
+  {{ hcard('일주일에 한 번 이상 교류하는 비율 — 대상별', [('이웃·친구·직장동료 · 농어촌', K.nbq_nbr_r), ('이웃·친구·직장동료 · 도시', K.nbq_nbr_c), ('따로 사는 가족 · 농어촌', K.nbq_fam_r), ('따로 사는 가족 · 도시', K.nbq_fam_c), ('따로 사는 친척 · 농어촌', K.nbq_rel_r), ('따로 사는 친척 · 도시', K.nbq_rel_c)], '%', '일주일에 한 번 정도 + 수차례 + 매일', none, '#b04a07') }}
  </div>
  </div></details>
 

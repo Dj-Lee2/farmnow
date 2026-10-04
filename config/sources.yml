@@ -7072,6 +7072,44 @@ sources:
       - {id: ls_net, title: "농어촌 기초생활여건 만족도 — 정보통신여건", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^정보통신여건$"], unit: "점", survey: 농어업인 복지실태조사}
       - {id: ls_water, title: "농어촌 기초생활여건 만족도 — 상수도 수질", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^상수도 수질$"], unit: "점", survey: 농어업인 복지실태조사}
       - {id: ls_bus_c, title: "도시 기초생활여건 만족도 — 대중교통 이용", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^대중교통 이용$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: sa_road, title: "농어촌 생활안전 개선 필요사항 — 도로안전시설 확충", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^도로안전시설 확충$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_walk, title: "농어촌 생활안전 개선 필요사항 — 안전한 보행자길 정비", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^안전한 보행자길 정비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_light, title: "농어촌 생활안전 개선 필요사항 — 가로등 확충", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^가로등 확충$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_cctv, title: "농어촌 생활안전 개선 필요사항 — CCTV 설치 확대", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^CCTV 설치 확대$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_patrol, title: "농어촌 생활안전 개선 필요사항 — 경찰 순찰·주민 방범 확대", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^경찰 순찰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_empty, title: "농어촌 생활안전 개선 필요사항 — 노후 건물 보수·빈집 관리", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^노후 건물"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_home, title: "농어촌 생활안전 개선 필요사항 — 안심 귀가 서비스 확충", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^안심 귀가"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sa_cctv_c, title: "도시 생활안전 개선 필요사항 — CCTV 설치 확대", tbl: DT_11437102_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^CCTV 설치 확대$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_pub, title: "농어촌 주민이 주로 이용하는 의료기관 — 공공의료기관", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^공공의료기관$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_clinic, title: "농어촌 주민이 주로 이용하는 의료기관 — 병·의원", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^병.의.원$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_gen, title: "농어촌 주민이 주로 이용하는 의료기관 — 종합병원", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^종합병원$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_orient, title: "농어촌 주민이 주로 이용하는 의료기관 — 한방병·의원", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^한방병.의.원$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_hc, title: "농어촌 주민이 주로 이용하는 의료기관 — 보건진료소", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건진료소$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_ph, title: "농어촌 주민이 주로 이용하는 의료기관 — 보건소(지소)", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건소"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_cnt, title: "농어촌 주민이 주로 이용하는 의료기관 — 보건의료원", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건의료원$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_pub_f, title: "농어가가 주로 이용하는 의료기관 — 공공의료기관", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^공공의료기관$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: md_pub_c, title: "도시 주민이 주로 이용하는 의료기관 — 공공의료기관", tbl: DT_11437010_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^공공의료기관$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: erm_exp, title: "농어촌 주민 응급실 이용 경험", tbl: DT_11437016_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^경험층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: erm_exp_c, title: "도시 주민 응급실 이용 경험", tbl: DT_11437016_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^경험층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: erm_exp_f, title: "농어가 응급실 이용 경험", tbl: DT_11437016_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^경험층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: erm_farm, title: "농어촌 응급실 이용 원인 — 농작업 안전사고", tbl: DT_11437016_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^농작업 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: erm_farm_f, title: "농어가 응급실 이용 원인 — 농작업 안전사고", tbl: DT_11437016_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^농작업 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_food, title: "농어촌 월 평균 생활비 중 비중 — 식료품비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^식료품비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_house, title: "농어촌 월 평균 생활비 중 비중 — 주거비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주거비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_med, title: "농어촌 월 평균 생활비 중 비중 — 보건의료비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건의료비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_heat, title: "농어촌 월 평균 생활비 중 비중 — 광열수도비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^광열수도비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_edu, title: "농어촌 월 평균 생활비 중 비중 — 교육비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^교육비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_trans, title: "농어촌 월 평균 생활비 중 비중 — 교통비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^교통비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_comm, title: "농어촌 월 평균 생활비 중 비중 — 통신비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^통신비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_etc, title: "농어촌 월 평균 생활비 중 비중 — 기타", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_heat_f, title: "농어가 월 평균 생활비 중 비중 — 광열수도비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^광열수도비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_heat_c, title: "도시 월 평균 생활비 중 비중 — 광열수도비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^광열수도비$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lc_hh, title: "농어촌 가구당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균.가구당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lc_pp, title: "농어촌 1인당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균.1인당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lc_hh_c, title: "도시 가구당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균.가구당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lc_pp_c, title: "도시 1인당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균.1인당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lc_hh_f, title: "농어가 가구당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균.가구당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lc_pp_f, title: "농어가 1인당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균.1인당.$"], unit: "만원", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

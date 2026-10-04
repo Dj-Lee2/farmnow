@@ -7244,6 +7244,45 @@ sources:
       - {id: nbq_nbr_r, title: "이웃·친구·직장동료과 일주일에 한 번 이상 교류하는 비율 — 농어촌 주민", tbl: DT_11430309_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^(일주일에 한 번 정도|일주일에 수차례|매일)$", "^이웃 친구 직장동료$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
       - {id: nbq_nbr_c, title: "이웃·친구·직장동료과 일주일에 한 번 이상 교류하는 비율 — 도시 주민", tbl: DT_11430309_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^(일주일에 한 번 정도|일주일에 수차례|매일)$", "^이웃 친구 직장동료$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
       - {id: nbq_nbr_o70, title: "70대 이상이 이웃·친구·직장동료와 일주일에 한 번 이상 교류하는 비율", tbl: DT_11430309_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^(일주일에 한 번 정도|일주일에 수차례|매일)$", "^이웃 친구 직장동료$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_c, title: "최저주거기준 미달 가구 비율 — 도시", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_r, title: "최저주거기준 미달 가구 비율 — 농어촌", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_eup, title: "최저주거기준 미달 가구 비율 — 읍", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_myn, title: "최저주거기준 미달 가구 비율 — 면", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_f, title: "최저주거기준 미달 가구 비율 — 농어가", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_bas, title: "최저주거기준 미달 가구 비율 — 국민기초생활수급 가구", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^국민기초생활수급가구$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_old, title: "최저주거기준 미달 가구 비율 — 1980년대 이전 지은 주택", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^1980년대 이전$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_new, title: "최저주거기준 미달 가구 비율 — 2010년 이후 지은 주택", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^2010년 이후$", "^최저주거기준 미달 가구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_room, title: "농어촌 가구 중 방 개수 기준에 못 미치는 비율", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^방 개수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_area, title: "농어촌 가구 중 최소 주거면적 기준에 못 미치는 비율", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^최소 주거면적$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_kit, title: "농어촌 가구 중 전용 입식 부엌 기준에 못 미치는 비율", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^전용 입식 부엌$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_wc, title: "농어촌 가구 중 전용 수세식 화장실 기준에 못 미치는 비율", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^전용 수세식 화장실$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hsq_bath, title: "농어촌 가구 중 목욕시설 기준에 못 미치는 비율", tbl: DT_11437180_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^목욕시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hpd_c, title: "한 해 난방 사용 기간(평균) — 도시", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_r, title: "한 해 난방 사용 기간(평균) — 농어촌", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_eup, title: "한 해 난방 사용 기간(평균) — 읍", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_myn, title: "한 해 난방 사용 기간(평균) — 면", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_f, title: "한 해 난방 사용 기간(평균) — 농어가", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_nf, title: "한 해 난방 사용 기간(평균) — 비농어가", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_s65, title: "한 해 난방 사용 기간(평균) — 65세 이상 1인 가구", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^65세 이상 1인 가구$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_det, title: "한 해 난방 사용 기간(평균) — 단독주택", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^단독주택$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: hpd_apt, title: "한 해 난방 사용 기간(평균) — 아파트", tbl: DT_11437079_2023, org: "143", periods: 1, itm: ".", want: ["^아파트$", "^평균 지출 기간$"], unit: "개월", survey: 농어업인 복지실태조사}
+      - {id: lew_c, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 도시", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_r, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 농어촌", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_myn, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 면", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_f, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 농어가", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_nf, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 비농어가", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_y30, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 30대 이하", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_a60, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 60대", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^60대$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_o70, title: "앞으로 평생교육에 참여할 의향이 있는 비율 — 70대 이상", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^향후 참여 의향층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_lit, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 문해교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문해교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_hum, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 인문교양교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^인문교양교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_it, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 정보화교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^정보화교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_voc, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 직업능력교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^직업능력교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_art, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 문화예술교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화예술교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_civ, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 시민참여교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^시민참여교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_spo, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 스포츠·건강교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^스포츠·건강교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_farm, title: "농어촌 주민이 앞으로 참여하고 싶은 평생교육 — 농촌생활 관련 교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^농촌생활 관련 교육$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lew_farm_f, title: "농어가가 앞으로 참여하고 싶은 평생교육 — 농촌생활 관련 교육", tbl: DT_11437060_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^농촌생활 관련 교육$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

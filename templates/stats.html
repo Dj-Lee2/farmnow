@@ -2062,7 +2062,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류', 127) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향', 138) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2229,6 +2229,20 @@
   {{ hcard('사는 지역이 발전되어 있다고 보는 비율', [('도시', K.ldv_dev_c), ('농어가', K.ldv_dev_f), ('70대 이상', K.ldv_dev_o70), ('읍', K.ldv_dev_eup), ('농어촌 전체', K.ldv_dev_r), ('비농어가', K.ldv_dev_nf), ('면', K.ldv_dev_myn), ('30대 이하', K.ldv_dev_y30)], '%', '매우 발전 + 발전된 편 · 낙후되었다는 농어촌 주민 ' ~ ('{:.1f}'.format(K.ldv_lag_r.vals[-1]) ~ '%' if K.ldv_lag_r else '-'), none, '#2458d6') }}
   {{ hcard('마을공동사업이 도움된다는 농어촌 주민', [('주민 화합', K.vjb_har), ('전반적 마을 발전', K.vjb_all), ('생활환경 개선', K.vjb_env), ('주민 소득 증대', K.vjb_inc), ('가구 삶의 질 개선', K.vjb_qol)], '%', '매우 그렇다 + 그런 편이다 · 농어가 기준 마을 발전 ' ~ ('{:.1f}'.format(K.vjb_all_f.vals[-1]) ~ '%' if K.vjb_all_f else '-'), none, '#3a8f6a') }}
   {{ hcard('일주일에 한 번 이상 교류하는 비율 — 대상별', [('이웃·친구·직장동료 · 농어촌', K.nbq_nbr_r), ('이웃·친구·직장동료 · 도시', K.nbq_nbr_c), ('따로 사는 가족 · 농어촌', K.nbq_fam_r), ('따로 사는 가족 · 도시', K.nbq_fam_c), ('따로 사는 친척 · 농어촌', K.nbq_rel_r), ('따로 사는 친척 · 도시', K.nbq_rel_c)], '%', '일주일에 한 번 정도 + 수차례 + 매일', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">주거 기준 미달·난방 기간과 평생교육 참여 의향 <small>국가 최저주거기준(방 개수·면적·부엌·화장실·목욕시설)에 못 미치는 가구 비율, 한 해 난방을 켜는 기간, 앞으로 평생교육에 참여하려는 비율과 희망 분야 · 도시·농어촌·농어가 비교 · 농어업인 복지실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('hsq_r', 'hz1', ('최저주거기준에 못 미치는 농어촌 가구 · 도시 ' ~ num(K.hsq_c.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.hsq_myn.vals[-1], '%')|striptags) if K.hsq_c and K.hsq_myn else none, '#c0392b') }}
+  {{ card('hsq_old', 'hz2', ('1980년대 이전 지은 주택의 최저주거기준 미달 비율 · 2010년 이후 ' ~ num(K.hsq_new.vals[-1], '%')|striptags ~ ' · 기초생활수급 가구 ' ~ num(K.hsq_bas.vals[-1], '%')|striptags) if K.hsq_new and K.hsq_bas else none, '#b04a07') }}
+  {{ card('hpd_r', 'hz3', ('농어촌 가구가 한 해 난방을 켜는 기간 · 도시 ' ~ num(K.hpd_c.vals[-1], '개월')|striptags ~ ' · 농어가 ' ~ num(K.hpd_f.vals[-1], '개월')|striptags) if K.hpd_c and K.hpd_f else none, '#d23a32') }}
+  {{ card('lew_r', 'hz4', ('앞으로 평생교육에 참여할 의향이 있는 농어촌 주민 · 도시 ' ~ num(K.lew_c.vals[-1], '%')|striptags ~ ' · 농어가 ' ~ num(K.lew_f.vals[-1], '%')|striptags) if K.lew_c and K.lew_f else none, '#2458d6') }}
+  {{ card('lew_farm_f', 'hz5', ('농어가가 참여하고 싶은 농촌생활 관련 교육 · 농어촌 전체 ' ~ num(K.lew_farm.vals[-1], '%')|striptags ~ ' · 도시 의향층 ' ~ num(K.lew_c.vals[-1], '%')|striptags) if K.lew_farm and K.lew_c else none, '#1c7a45') }}
+  {{ card('lew_spo', 'hz6', ('농어촌 주민이 가장 많이 꼽은 스포츠·건강교육 · 문화예술 ' ~ num(K.lew_art.vals[-1], '%')|striptags ~ ' · 정보화 ' ~ num(K.lew_it.vals[-1], '%')|striptags) if K.lew_art and K.lew_it else none, '#5c6bc2') }}
+  {{ hcard('최저주거기준에 못 미치는 가구 비율', [('1980년대 이전 지은 주택', K.hsq_old), ('기초생활수급 가구', K.hsq_bas), ('면', K.hsq_myn), ('농어가', K.hsq_f), ('농어촌 전체', K.hsq_r), ('읍', K.hsq_eup), ('도시', K.hsq_c), ('2010년 이후 지은 주택', K.hsq_new)], '%', '방 개수·면적·부엌·화장실·목욕시설 중 하나라도 미달', none, '#c0392b') }}
+  {{ hcard('농어촌 가구가 못 미치는 최저주거기준 항목', [('방 개수', K.hsq_room), ('목욕시설', K.hsq_bath), ('전용 수세식 화장실', K.hsq_wc), ('최소 주거면적', K.hsq_area), ('전용 입식 부엌', K.hsq_kit)], '%', '농어촌 가구 전체 대비 · 여러 항목이 겹칠 수 있음', none, '#b04a07') }}
+  {{ hcard('한 해 난방 사용 기간', [('65세 이상 1인 가구', K.hpd_s65), ('면', K.hpd_myn), ('농어가', K.hpd_f), ('단독주택', K.hpd_det), ('농어촌 전체', K.hpd_r), ('도시', K.hpd_c), ('비농어가', K.hpd_nf), ('아파트', K.hpd_apt), ('읍', K.hpd_eup)], '개월', '난방비를 쓰는 평균 개월 수', none, '#d23a32') }}
+  {{ hcard('앞으로 평생교육에 참여할 의향이 있는 비율', [('농어가', K.lew_f), ('60대', K.lew_a60), ('면', K.lew_myn), ('농어촌 전체', K.lew_r), ('도시', K.lew_c), ('30대 이하', K.lew_y30), ('비농어가', K.lew_nf), ('70대 이상', K.lew_o70)], '%', '향후 참여 의향층', none, '#2458d6') }}
+  {{ hcard('농어촌 주민이 참여하고 싶은 평생교육 분야', [('스포츠·건강교육', K.lew_spo), ('문화예술교육', K.lew_art), ('직업능력교육', K.lew_voc), ('정보화교육', K.lew_it), ('농촌생활 관련 교육', K.lew_farm), ('시민참여교육', K.lew_civ), ('인문교양교육', K.lew_hum), ('문해교육', K.lew_lit)], '%', '농어촌 주민 전체 대비 · 복수 응답 · 농어가는 농촌생활 교육 ' ~ ('{:.1f}'.format(K.lew_farm_f.vals[-1]) ~ '%' if K.lew_farm_f else '-'), none, '#1c7a45') }}
  </div>
  </div></details>
 

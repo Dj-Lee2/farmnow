@@ -6490,6 +6490,46 @@ sources:
       - {id: hpl_keep, title: "산채·약초 재배 임가의 재배계획 — 현 상태 유지", tbl: DT_136022_9936, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현 상태를 유지할 것이다$"], unit: "%", survey: 임업경영실태조사}
       - {id: hpl_down, title: "산채·약초 재배 임가의 재배계획 — 줄일 것", tbl: DT_136022_9936, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄일 것이다$"], unit: "%", survey: 임업경영실태조사}
       - {id: hpl_stop, title: "산채·약초 재배 임가의 재배계획 — 중단할 것", tbl: DT_136022_9936, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중단할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yhx_tot, title: "임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_cons, title: "임가 소비지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.50$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_nc, title: "임가 비소비지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_food, title: "임가 소비지출 — 식료품·비주류 음료", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.14$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_alc, title: "임가 소비지출 — 주류·담배", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.9$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_clo, title: "임가 소비지출 — 의류·신발", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.5$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_house, title: "임가 소비지출 — 주거·수도광열", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.11$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_hh, title: "임가 소비지출 — 가정용품·가사서비스", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.12$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_hlth, title: "임가 소비지출 — 보건", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.6$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_trn, title: "임가 소비지출 — 교통", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.15$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_com, title: "임가 소비지출 — 통신", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_rec, title: "임가 소비지출 — 오락·문화", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.16$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_edu, title: "임가 소비지출 — 교육", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_rest, title: "임가 소비지출 — 음식·숙박", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.10$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_etc, title: "임가 소비지출 — 기타 상품·서비스", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.13$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_c_dep, title: "임가 소비지출 — 가계 감가상각비", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.8$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_pen, title: "임가 비소비지출 — 공적연금", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.19$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_ins, title: "임가 비소비지출 — 사회보험", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_evt, title: "임가 비소비지출 — 경조사", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.21$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_stu, title: "임가 비소비지출 — 국내 학생가구 송금", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.22$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_trf, title: "임가 비소비지출 — 기타 가구 간 이전", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.23$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_int, title: "임가 비소비지출 — 가계용 차입금 이자", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.24$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_npo, title: "임가 비소비지출 — 비영리 단체로 이전", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.25$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_tax, title: "임가 비소비지출 — 경상조세", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.26$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_n_xtax, title: "임가 비소비지출 — 비경상조세", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631048$", C2: "^13102136310X\\.27$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_t_ful, title: "전업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631027$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_t_main, title: "임업주업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631028$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_t_sub, title: "임업부업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631029$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_prs, title: "감 재배업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631018$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_chs, title: "밤 재배업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631019$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_msh, title: "버섯 재배업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631020$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_lsc, title: "조경재업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631021$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_gat, title: "채취업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631023$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_nut, title: "수실류 재배업(밤·감 제외) 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631024$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_oth, title: "기타 재배업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631025$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_b_tmb, title: "육림·목재수확업 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631053$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_a_u49, title: "경영주 49세 이하 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631052$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_a_50, title: "경영주 50대 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631033$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_a_60, title: "경영주 60대 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631034$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yhx_a_70, title: "경영주 70세 이상 임가 가계지출", tbl: DT_136023_11473, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631035$", C2: "^13102136310X\\.49$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

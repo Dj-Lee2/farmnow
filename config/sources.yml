@@ -7885,6 +7885,26 @@ sources:
       - {id: fsc_avg_cc, title: 근로자 고용 농업경영체 내년 영농규모 변경 계획 평균 · 대전·충청·세종, tbl: DT_111014_C107, org: "111", itm: "^영농규모 변경 계획$", want: ["^대전/충청/세종$", "^평균$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: fsc_avg_gw, title: 근로자 고용 농업경영체 내년 영농규모 변경 계획 평균 · 강원, tbl: DT_111014_C107, org: "111", itm: "^영농규모 변경 계획$", want: ["^강원$", "^평균$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: fsc_avg_jj, title: 근로자 고용 농업경영체 내년 영농규모 변경 계획 평균 · 제주, tbl: DT_111014_C107, org: "111", itm: "^영농규모 변경 계획$", want: ["^제주$", "^평균$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: sld_gen, title: 분뇨찌꺼기 발생량(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^발생량$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_tot, title: 분뇨찌꺼기 처리량 합계(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^계$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_rec, title: 분뇨찌꺼기 재활용(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^재활용$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_land, title: 분뇨찌꺼기 육상매립(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^육상매립$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_inc, title: 분뇨찌꺼기 소각(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^소각$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_etc, title: 분뇨찌꺼기 기타 처리(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^기타$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: sld_fuel, title: 분뇨찌꺼기 연료화(전국), tbl: DT_106N_07_0100049, org: "106", periods: 6, itm: "^분뇨찌꺼기 처리현황$", want: ["^연료화$"], codes: {C1: "4200002$"}, unit: 톤, survey: 하수도통계}
+      - {id: drt_mafra, title: 가뭄대책비 지원 · 농림축산식품부(전국), tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^전체$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mois, title: 가뭄대책비 지원 · 행정안전부(전국), tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^전체$", "^행정안전부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_dg, title: 가뭄대책비 지원 · 농림축산식품부 · 대구광역시, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(대구광역시)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_us, title: 가뭄대책비 지원 · 농림축산식품부 · 울산광역시, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(울산광역시)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_gg, title: 가뭄대책비 지원 · 농림축산식품부 · 경기도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(경기도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_gw, title: 가뭄대책비 지원 · 농림축산식품부 · 강원특별자치도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(강원특별자치도|강원도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_cb, title: 가뭄대책비 지원 · 농림축산식품부 · 충청북도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(충청북도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_cn, title: 가뭄대책비 지원 · 농림축산식품부 · 충청남도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(충청남도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_jb, title: 가뭄대책비 지원 · 농림축산식품부 · 전북특별자치도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(전북특별자치도|전라북도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_jn, title: 가뭄대책비 지원 · 농림축산식품부 · 전라남도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(전라남도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_gb, title: 가뭄대책비 지원 · 농림축산식품부 · 경상북도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(경상북도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_gn, title: 가뭄대책비 지원 · 농림축산식품부 · 경상남도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(경상남도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
+      - {id: drt_mafra_jj, title: 가뭄대책비 지원 · 농림축산식품부 · 제주특별자치도, tbl: DT_110032_A002, org: "110", periods: 4, itm: "^가뭄대책비$", want: ["^(제주특별자치도)$", "^농림축산식품부$", "^합계$"], unit: 백만원, survey: 재해연보}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

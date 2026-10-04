@@ -6279,6 +6279,46 @@ sources:
       - {id: ydb_r_gn, title: "경남 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631315$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
       - {id: yas_r_me, title: "특·광역시 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631616$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
       - {id: ydb_r_me, title: "특·광역시 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631316$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_rev, title: "임업총수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.121$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_cost, title: "임업경영비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.122$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_inc, title: "임업소득(임업경영비 표)", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_wood, title: "임업총수입 중 목재수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.112$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_st, title: "임업총수입 중 단기소득 임산물 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.113$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_col, title: "임업총수입 중 채취 임산물 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.114$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_misc, title: "임업잡수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.115$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_chs, title: "밤 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.10$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_jjb, title: "대추 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.12$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_wal, title: "호두 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.13$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_prs, title: "감 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.14$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_msh, title: "버섯류 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.72$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_lsc, title: "조경재 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.73$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_med, title: "약용 임산물 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.25$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_veg, title: "재배산나물 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.27$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_sdl, title: "묘목 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.26$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_pine, title: "송이 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.76$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_sap, title: "수액·수지 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.77$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_i_log, title: "원목 수입", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.69$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_mat, title: "임업 재료비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.116$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_lab, title: "임업 노무비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.117$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_exp, title: "임업 경비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.118$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_sell, title: "임산물 판매·관리비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.119$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_fert, title: "임업용 비료비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.86$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_pest, title: "임업용 농약비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.87$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_spawn, title: "종균비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.84$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_seed, title: "종자·종묘비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.85$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_dep, title: "임업 감가상각비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.100$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_fuel, title: "임업 광열비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.94$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_rent, title: "임업 임차료", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.95$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_int, title: "임업 이자지급", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.99$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_c_rep, title: "임업 수선·농구비", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641164$", C2: "^13102136411X\\.101$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_chs, title: "밤 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641118$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_prs, title: "감 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641119$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_msh, title: "버섯 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641120$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_lsc, title: "조경재업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641121$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_gat, title: "채취업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641123$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_nut, title: "수실류 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641124$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_oth, title: "기타 재배업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213641125$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yin_b_tmb, title: "육림·목재수확업 임업소득", tbl: DT_136023_11469, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136411125$", C2: "^13102136411X\\.120$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

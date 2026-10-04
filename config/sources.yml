@@ -5998,6 +5998,38 @@ sources:
       - {id: fdl_emd, title: 농어가의 식료품 구입처 위치 — 같은 읍·면, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^동일 읍·면 내$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: fdl_sgg, title: 농어가의 식료품 구입처 위치 — 같은 시·군, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^동일 시·군 내$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: fdl_oth, title: 농어가의 식료품 구입처 위치 — 다른 시·군, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^다른 시·군$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hmo_bad, title: "말산업 사업체 — 향후 1년 경영이 나빠질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "나빠질 것 같다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hmo_bad2, title: "말산업 사업체 — 많이 나빠질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "^많이 나빠질 것 같다$"], unit: "%", survey: 말산업실태조사}
+      - {id: hmo_bad1, title: "말산업 사업체 — 약간 나빠질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "^약간 나빠질 것 같다$"], unit: "%", survey: 말산업실태조사}
+      - {id: hmo_same, title: "말산업 사업체 — 비슷할 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "^비슷할 것 같다$"], unit: "%", survey: 말산업실태조사}
+      - {id: hmo_good, title: "말산업 사업체 — 좋아질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "좋아질 것 같다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hmo_bad_loss, title: "말산업 손해 사업체 — 나빠질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^손해집단$", "나빠질 것 같다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hmo_bad_prof, title: "말산업 이익 사업체 — 나빠질 것", tbl: DT_114051N_038, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^이익집단$", "나빠질 것 같다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hgv_dist, title: "말산업 사업체가 정부에 바라는 점 1순위 — 말 유통체계 구축", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말 유통체계 구축$"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_dem, title: "말산업 사업체가 정부에 바라는 점 1순위 — 말 수요확충·승마 대중화", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말 수요확충 및 승마 대중화$"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_infra, title: "말산업 사업체가 정부에 바라는 점 1순위 — 승마 복합단지 등 기반시설 확충", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^승마 시설 복합단지"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_tech, title: "말산업 사업체가 정부에 바라는 점 1순위 — 말 생산·육성 기술 향상", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말 생산 육성 기술"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_hr, title: "말산업 사업체가 정부에 바라는 점 1순위 — 현장 전문 인력 양성", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^현장에 필요한 전문 인력"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_fund, title: "말산업 사업체가 정부에 바라는 점 1순위 — 육성재원 확보", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말산업 육성을 위한 육성재원"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_rnd, title: "말산업 사업체가 정부에 바라는 점 1순위 — 연구개발(R&D) 강화", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말산업의 지속적 성장을 위한 R"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_exp, title: "말산업 사업체가 정부에 바라는 점 1순위 — 수출시장 개척", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말산업 관련 수출시장"], unit: "%", survey: 말산업실태조사}
+      - {id: hgv_info, title: "말산업 사업체가 정부에 바라는 점 1순위 — 정보 시스템 구축", tbl: DT_114051N_039, org: "114", periods: 3, itm: "^말산업 활성화를 위해 정부에 바라는 점", want: ["^전체$", "^말산업 관련 정보를"], unit: "%", survey: 말산업실태조사}
+      - {id: cqp_1pp, title: "한우 육질 1++등급 경락가격(육량 무관)", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cqp_1p, title: "한우 육질 1+등급 경락가격(육량 무관)", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cqp_1, title: "한우 육질 1등급 경락가격(육량 무관)", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cqp_2, title: "한우 육질 2등급 경락가격(육량 무관)", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^2$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cqp_3, title: "한우 육질 3등급 경락가격(육량 무관)", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^3$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cyp_a, title: "한우 육량 A등급 경락가격(육질 무관)", tbl: DT_APGS_010, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^A$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cyp_b, title: "한우 육량 B등급 경락가격(육질 무관)", tbl: DT_APGS_010, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^B$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cyp_c, title: "한우 육량 C등급 경락가격(육질 무관)", tbl: DT_APGS_010, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^C$", "^계$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_es, title: "한우 1++등급 경락가격 — 농협음성", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^농협음성$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_bg, title: "한우 1++등급 경락가격 — 부경축공", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^부경축공$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_pv, title: "한우 1++등급 경락가격 — 농협포크빌", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^농협포크빌$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_bc, title: "한우 1++등급 경락가격 — 농협부천", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^농협부천$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_hs, title: "한우 1++등급 경락가격 — 협신식품", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^협신식품$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_dd, title: "한우 1++등급 경락가격 — 도드람", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^도드람$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_gr, title: "한우 1++등급 경락가격 — 농협고령", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^농협고령$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cmk_n, title: "한우 1++등급 경락 두수 — 전국 도매시장", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^두수$", want: ["^한우$", "^1\\+\\+$", "^계$"], unit: "두", survey: 축산물 등급판정 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

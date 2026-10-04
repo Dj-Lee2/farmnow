@@ -2076,7 +2076,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도', 188) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유', 197) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2322,6 +2322,18 @@
   {{ hcard('앞으로 여가를 혼자 하고 싶다는 비율', [('도시', K.wcp_alone_c), ('여', K.wcp_alone_w), ('면', K.wcp_alone_myn), ('70대 이상', K.wcp_alone_o70), ('비농어가', K.wcp_alone_nf), ('농어촌 전체', K.wcp_alone_r), ('농어가', K.wcp_alone_f), ('읍', K.wcp_alone_eup), ('남', K.wcp_alone_m), ('30대 이하', K.wcp_alone_y30)], '%', '응답자 대비', none, '#5c6bc2') }}
   {{ hcard('여가를 주 4회 이상 하고 싶다는 비율', [('70대 이상', K.wfq_w4_o70), ('면', K.wfq_w4_myn), ('농어가', K.wfq_w4_f), ('농어촌 전체', K.wfq_w4_r), ('도시', K.wfq_w4_c), ('읍', K.wfq_w4_eup), ('30대 이하', K.wfq_w4_y30)], '%', '응답자 대비', none, '#2458d6') }}
   {{ hcard('농어촌 주민이 바라는 여가 빈도', [('주 4회 이상', K.wfq_w4_r), ('주 2~3회', K.wfq_w23_r), ('주 1회 정도', K.wfq_w1_r), ('월 1~3회', K.wfq_m13_r), ('2~3개월에 1회', K.wfq_m23_r), ('4~6개월에 1회', K.wfq_m46_r), ('연 1회 정도', K.wfq_y1_r)], '%', '농어촌 응답자 대비', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">지역사회단체 참여와 참여하지 않는 이유 <small>참여율·참여 단체 종류(복수 응답)·미참여 이유 · 읍·면·농어가·연령대 비교 · 농어업인 복지실태조사(2024)</small></h3>
+ <div class="sg-g">
+  {{ card('csg_part_all', 'cs1', ('지역사회단체에 참여하는 농어촌 주민 · 읍 ' ~ num(K.csg_part_eup.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.csg_part_myn.vals[-1], '%')|striptags) if K.csg_part_eup and K.csg_part_myn else none, '#2a8a5a') }}
+  {{ card('csg_part_f', 'cs2', ('지역사회단체에 참여하는 농어가 · 비농어가 ' ~ num(K.csg_part_nf.vals[-1], '%')|striptags ~ ' · 70대 이상 ' ~ num(K.csg_part_o70.vals[-1], '%')|striptags) if K.csg_part_nf and K.csg_part_o70 else none, '#1c7a45') }}
+  {{ card('csg_vil_all', 'cs3', ('마을단위 자생조직(부녀회·노인회 등)에 참여하는 주민 · 70대 이상 ' ~ num(K.csg_vil_o70.vals[-1], '%')|striptags ~ ' · 친목도모단체 ' ~ num(K.csg_frd_all.vals[-1], '%')|striptags) if K.csg_vil_o70 and K.csg_frd_all else none, '#b04a07') }}
+  {{ card('csg_eco_f', 'cs4', ('경제활동단체(작목반·영농조합 등)에 참여하는 농어가 · 주민 전체 ' ~ num(K.csg_eco_all.vals[-1], '%')|striptags) if K.csg_eco_all else none, '#2458d6') }}
+  {{ card('cmr_time_all', 'cs5', ('지역사회단체에 참여하지 않는 이유 — 시간적 여유가 없다 · 30대 이하 ' ~ num(K.cmr_time_y30.vals[-1], '%')|striptags ~ ' · 40대 ' ~ num(K.cmr_time_a40.vals[-1], '%')|striptags) if K.cmr_time_y30 and K.cmr_time_a40 else none, '#c0392b') }}
+  {{ card('cmr_int_o70', 'cs6', ('지역사회단체에 참여하지 않는 70대 이상이 꼽은 이유 — 관심이 없다 · 전체 ' ~ num(K.cmr_int_all.vals[-1], '%')|striptags ~ ' · 70대 이상 참여 기회가 없다 ' ~ num(K.cmr_opp_o70.vals[-1], '%')|striptags) if K.cmr_int_all and K.cmr_opp_o70 else none, '#5c6bc2') }}
+  {{ hcard('지역사회단체에 참여하는 비율', [('농어가', K.csg_part_f), ('70대 이상', K.csg_part_o70), ('면', K.csg_part_myn), ('65세 이상 1인 가구', K.csg_part_s65), ('여', K.csg_part_w), ('농어촌 전체', K.csg_part_all), ('남', K.csg_part_m), ('읍', K.csg_part_eup), ('비농어가', K.csg_part_nf), ('30대 이하', K.csg_part_y30)], '%', '응답자 대비', none, '#2a8a5a') }}
+  {{ hcard('농어촌 주민이 참여하는 지역사회단체 종류', [('마을단위 자생조직', K.csg_vil_all), ('친목도모단체', K.csg_frd_all), ('종교단체', K.csg_rel_all), ('경제활동단체', K.csg_eco_all), ('시민사회단체', K.csg_civ_all)], '%', '응답자 대비 · 복수 응답', none, '#b04a07') }}
+  {{ hcard('지역사회단체에 참여하지 않는 이유', [('시간적 여유가 없다', K.cmr_time_all), ('관심이 없다', K.cmr_int_all), ('참여할 기회가 없다', K.cmr_opp_all), ('참여할 만한 단체가 없다', K.cmr_none_all), ('경제적 여유가 없다', K.cmr_money_all), ('기타', K.cmr_etc_all)], '%', '미참여자 대비 · 관심 없다는 농어가 ' ~ ('{:.1f}'.format(K.cmr_int_f.vals[-1]) ~ '%' if K.cmr_int_f else '-') ~ ' · 면 ' ~ ('{:.1f}'.format(K.cmr_int_myn.vals[-1]) ~ '%' if K.cmr_int_myn else '-') ~ ' · 읍 ' ~ ('{:.1f}'.format(K.cmr_int_eup.vals[-1]) ~ '%' if K.cmr_int_eup else '-') ~ ' · 30대 이하 ' ~ ('{:.1f}'.format(K.cmr_int_y30.vals[-1]) ~ '%' if K.cmr_int_y30 else '-'), none, '#c0392b') }}
  </div>
  </div></details>
 

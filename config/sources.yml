@@ -7483,6 +7483,37 @@ sources:
       - {id: wfq_m23_r, title: "희망 문화·여가활동 빈도 — 2~3개월에 1회 정도(농어촌)", tbl: DT_11430081_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^2~3개월에 1회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: wfq_m46_r, title: "희망 문화·여가활동 빈도 — 4~6개월에 1회 정도(농어촌)", tbl: DT_11430081_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^4~6개월에 1회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: wfq_y1_r, title: "희망 문화·여가활동 빈도 — 연 1회 정도(농어촌)", tbl: DT_11430081_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^연 1회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_all, title: "지역사회단체 참여율(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_eup, title: "지역사회단체 참여율(읍)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^읍$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_myn, title: "지역사회단체 참여율(면)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^면$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_f, title: "지역사회단체 참여율(농어가)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_nf, title: "지역사회단체 참여율(비농어가)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_s65, title: "지역사회단체 참여율(65세 이상 1인 가구)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^65세\ 이상\ 1인\ 가구$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_m, title: "지역사회단체 참여율(남)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^남$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_w, title: "지역사회단체 참여율(여)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^여$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_y30, title: "지역사회단체 참여율(30대 이하)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^30대\ 이하$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_part_o70, title: "지역사회단체 참여율(70대 이상)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^70대\ 이상$", "^지역사회단체 참여층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_vil_all, title: "참여 단체 — 마을단위 자생조직(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^마을단위자생조직$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_eco_all, title: "참여 단체 — 경제활동단체(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^경제활동단체$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_frd_all, title: "참여 단체 — 친목도모단체(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^친목도모단체$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_rel_all, title: "참여 단체 — 종교단체(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^종교단체$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_civ_all, title: "참여 단체 — 시민사회단체(전체)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^시민사회단체$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_vil_o70, title: "참여 단체 — 마을단위 자생조직(70대 이상)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^70대\ 이상$", "^마을단위자생조직$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: csg_eco_f, title: "참여 단체 — 경제활동단체(농어가)", tbl: DT_11430150_2024, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^경제활동단체$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_all, title: "지역사회단체 미참여 이유 — 관심이 없다(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_none_all, title: "지역사회단체 미참여 이유 — 참여할 만한 단체가 없다(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^참여할 만한 지역사회 단체가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_time_all, title: "지역사회단체 미참여 이유 — 시간적 여유가 없다(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^참여할 만한 시간적 여유가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_money_all, title: "지역사회단체 미참여 이유 — 경제적 여유가 없다(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^참여할 만한 경제적 여유가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_opp_all, title: "지역사회단체 미참여 이유 — 참여할 기회가 없다(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^참여할 기회가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_etc_all, title: "지역사회단체 미참여 이유 — 기타(전체)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_eup, title: "지역사회단체 미참여 이유 — 관심이 없다(읍)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^읍$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_myn, title: "지역사회단체 미참여 이유 — 관심이 없다(면)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^면$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_f, title: "지역사회단체 미참여 이유 — 관심이 없다(농어가)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_y30, title: "지역사회단체 미참여 이유 — 관심이 없다(30대 이하)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^30대\ 이하$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_int_o70, title: "지역사회단체 미참여 이유 — 관심이 없다(70대 이상)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^70대\ 이상$", "^지역사회 단체 활동에 관심이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_time_y30, title: "지역사회단체 미참여 이유 — 시간적 여유가 없다(30대 이하)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^30대\ 이하$", "^참여할 만한 시간적 여유가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_time_a40, title: "지역사회단체 미참여 이유 — 시간적 여유가 없다(40대)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^40대$", "^참여할 만한 시간적 여유가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmr_opp_o70, title: "지역사회단체 미참여 이유 — 참여할 기회가 없다(70대 이상)", tbl: DT_11430152_2024, org: "143", periods: 1, itm: ".", want: ["^70대\ 이상$", "^참여할 기회가 없다$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

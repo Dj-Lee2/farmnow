@@ -7658,6 +7658,35 @@ sources:
       - {id: lfr_u39_all, title: "작년 고용한 한 달 이상 근로자 중 외국인 비율 분포 — 30~39%", tbl: DT_111014_C064, org: "111", itm: ".", want: ["^전체$", "^30~39%$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: lfr_o50_all, title: "작년 고용한 한 달 이상 근로자 중 외국인 비율 분포 — 50% 이상", tbl: DT_111014_C064, org: "111", itm: ".", want: ["^전체$", "^50% 이상$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: lfr_avg_all, title: "작년 고용한 한 달 이상 근로자 중 외국인 비율 평균 — 전체", tbl: DT_111014_C064, org: "111", itm: ".", want: ["^전체$", "^평균$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_grain, title: "작년 인력 고용이 가장 많은 품목 — 식량작물(곡류·두류·서류)", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^식량작물\\(곡류 두류 서류\\)$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_oveg, title: "작년 인력 고용이 가장 많은 품목 — 노지 채소", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^노지 채소$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_gveg, title: "작년 인력 고용이 가장 많은 품목 — 시설 채소", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^시설 채소$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_ofruit, title: "작년 인력 고용이 가장 많은 품목 — 노지 과수", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^노지 과수$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_gfruit, title: "작년 인력 고용이 가장 많은 품목 — 시설 과수", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^시설 과수$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_ospec, title: "작년 인력 고용이 가장 많은 품목 — 노지 특용·약용·기타작물", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^노지 특용·약용작물 및 기타작물\\(산나물 등\\)$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_gspec, title: "작년 인력 고용이 가장 많은 품목 — 시설 특용·약용작물", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^시설 특용·약용작물$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_gflow, title: "작년 인력 고용이 가장 많은 품목 — 시설 화훼", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^시설 화훼$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_oflow, title: "작년 인력 고용이 가장 많은 품목 — 노지 화훼", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^노지 화훼$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_gmush, title: "작년 인력 고용이 가장 많은 품목 — 시설 버섯", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^시설 버섯$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_persim, title: "작년 인력 고용이 가장 많은 품목 — 떫은 감·곶감", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^떫은 감 재배 및 곶감 가공$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: hti_etc, title: "작년 인력 고용이 가장 많은 품목 — 기타", tbl: DT_111014_C037, org: "111", itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_u1_all, title: "작년 고용한 연중 내국인 근로자 수 분포 — 1명 이하", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^전체$", "^1명 이하$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_u3_all, title: "작년 고용한 연중 내국인 근로자 수 분포 — 2~3명", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^전체$", "^2~3명$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_u5_all, title: "작년 고용한 연중 내국인 근로자 수 분포 — 4~5명", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^전체$", "^4~5명$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_o6_all, title: "작년 고용한 연중 내국인 근로자 수 분포 — 6명 이상", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^전체$", "^6명 이상$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_avg_all, title: "작년 고용한 연중 내국인 근로자 수 평균 — 전체", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^전체$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_avg_rice, title: "작년 고용한 연중 내국인 근로자 수 평균 — 논벼", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^논벼$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_avg_veg, title: "작년 고용한 연중 내국인 근로자 수 평균 — 채소·산나물", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^채소 산나물$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_avg_fruit, title: "작년 고용한 연중 내국인 근로자 수 평균 — 과수", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^과수$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: ydn_avg_spec, title: "작년 고용한 연중 내국인 근로자 수 평균 — 특용작물·버섯", tbl: DT_111014_C040, org: "111", itm: ".", want: ["^특용작물 버섯$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_u1_all, title: "작년 필요했던 한 달 이상 근로자 수 분포 — 1명 이하", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^전체$", "^1명 이하$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_u3_all, title: "작년 필요했던 한 달 이상 근로자 수 분포 — 2~3명", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^전체$", "^2~3명$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_u5_all, title: "작년 필요했던 한 달 이상 근로자 수 분포 — 4~5명", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^전체$", "^4~5명$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_o6_all, title: "작년 필요했던 한 달 이상 근로자 수 분포 — 6명 이상", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^전체$", "^6명 이상$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_avg_all, title: "작년 필요했던 한 달 이상 근로자 수 평균 — 전체", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^전체$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_avg_rice, title: "작년 필요했던 한 달 이상 근로자 수 평균 — 논벼", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^논벼$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_avg_veg, title: "작년 필요했던 한 달 이상 근로자 수 평균 — 채소·산나물", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^채소 산나물$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
+      - {id: lnq_avg_fruit, title: "작년 필요했던 한 달 이상 근로자 수 평균 — 과수", tbl: DT_111014_C068, org: "111", itm: ".", want: ["^과수$", "^평균$"], unit: "명", survey: 외국인고용실태조사(농업)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -6980,6 +6980,37 @@ sources:
       - {id: gwf_gb, title: 경북 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^경상북도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
       - {id: gwf_gn, title: 경남 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^경상남도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
       - {id: gwf_jj, title: 제주 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^제주", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: rea_fac, title: 농어촌 대기 오염 주된 원인 — 지역공장 매연 배출먼지, tbl: DT_11430276_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^지역공장 매연 배출먼지$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rea_car, title: 농어촌 대기 오염 주된 원인 — 자동차 배기가스, tbl: DT_11430276_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^자동차 배기가스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rea_dust, title: 농어촌 대기 오염 주된 원인 — 미세먼지, tbl: DT_11430276_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^미세먼지$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rea_burn, title: 농어촌 대기 오염 주된 원인 — 쓰레기 등 소각, tbl: DT_11430276_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^쓰레기 등 소각$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rea_etc, title: 농어촌 대기 오염 주된 원인 — 기타, tbl: DT_11430276_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_home, title: 농어촌 수질 오염 주된 원인 — 생활하수, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^생활하수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_ind, title: 농어촌 수질 오염 주된 원인 — 산업폐수, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^산업폐수\\s*$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_agr, title: 농어촌 수질 오염 주된 원인 — 농·축산 폐수, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^농.축산 폐수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_man, title: 농어촌 수질 오염 주된 원인 — 가축의 분뇨, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^가축의 분뇨$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_etc, title: 농어촌 수질 오염 주된 원인 — 기타, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rso_ind, title: 농어촌 토양 오염 주된 원인 — 산업 폐기물, tbl: DT_11430278_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^산업 폐기물$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rso_trash, title: 농어촌 토양 오염 주된 원인 — 쓰레기 투기·매립, tbl: DT_11430278_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^쓰레기 투기.매립$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rso_chem, title: 농어촌 토양 오염 주된 원인 — 농약·비료, tbl: DT_11430278_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^농약.비료$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_fac, title: 농어촌 악취 주된 원인 — 공장, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^공장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_sew, title: 농어촌 악취 주된 원인 — 하수 처리장, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^하수 처리장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_barn, title: 농어촌 악취 주된 원인 — 축사, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^축사$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_trash, title: 농어촌 악취 주된 원인 — 쓰레기 투기·매립, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^쓰레기 투기.매립$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_etc, title: 농어촌 악취 주된 원인 — 기타, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_air, title: 농어촌에서 가장 개선해야 할 환경문제 — 대기 오염, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^대기 오염$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_water, title: 농어촌에서 가장 개선해야 할 환경문제 — 수질 오염, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^수질 오염$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_soil, title: 농어촌에서 가장 개선해야 할 환경문제 — 토양 오염, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^토양 오염$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_noise, title: 농어촌에서 가장 개선해야 할 환경문제 — 소음과 진동, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^소음과 진동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_odor, title: 농어촌에서 가장 개선해야 할 환경문제 — 악취, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^악취$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_trash, title: 농어촌에서 가장 개선해야 할 환경문제 — 쓰레기, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^쓰레기$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rim_none, title: 농어촌에서 가장 개선해야 할 환경문제 — 특별히 없다, tbl: DT_11430282_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^특별히 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rso_chem_f, title: 농어가 — 토양 오염 원인 농약·비료, tbl: DT_11430278_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^농어가$", "^농약.비료$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rso_chem_n, title: 비농어가 — 토양 오염 원인 농약·비료, tbl: DT_11430278_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^비농어가$", "^농약.비료$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_barn_f, title: 농어가 — 악취 원인 축사, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^농어가$", "^축사$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rod_barn_n, title: 비농어가 — 악취 원인 축사, tbl: DT_11430280_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^비농어가$", "^축사$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_agr_f, title: 농어가 — 수질 오염 원인 농·축산 폐수, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^농어가$", "^농.축산 폐수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rwa_agr_n, title: 비농어가 — 수질 오염 원인 농·축산 폐수, tbl: DT_11430277_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^비농어가$", "^농.축산 폐수$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

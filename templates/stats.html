@@ -2054,7 +2054,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안', 57) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식', 68) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2130,6 +2130,20 @@
   {{ hcard('기후변화가 미치는 영향을 부정적으로 보는 비율', [('농업생산 — 남성농업인', K.wf_cc_agri_m), ('농업생산', K.wf_cc_agri), ('신체건강', K.wf_cc_body), ('정신건강', K.wf_cc_mind)], '%', '"부정적"+"매우 부정적" 비율 · 따로 적지 않은 줄은 여성농업인', none, '#d23a32') }}
   {{ hcard('농업생산 쪽 기후변화 대응 방안(1순위)', [('작목·품종 변경', K.wf_ca_var), ('파종·수확 시기 조절', K.wf_ca_time), ('농작물 재해보험 가입', K.wf_ca_ins), ('친환경농법 적용 확대', K.wf_ca_eco), ('재배 환경 조절', K.wf_ca_env), ('정확한 기후정보 얻기', K.wf_ca_info), ('냉난방 시설 설치', K.wf_ca_hvac), ('농약·비료 더 투입', K.wf_ca_inp), ('대응하지 않음', K.wf_ca_none), ('농업 축소·중단', K.wf_ca_quit), ('더 많은 공부·기술 투입', K.wf_ca_study)], '%', '여성농업인 전체 기준 · 1순위 응답 · 합 100', none, '#1c7a45') }}
   {{ hcard('건강을 지키는 기후변화 대응 방안(1순위)', [('작업 중단·시간 조절', K.wf_ch_stop), ('기상예보 확인', K.wf_ch_fcst), ('잦은 휴식', K.wf_ch_rest), ('충분한 수분·영양 섭취', K.wf_ch_water), ('안전교육·안전수칙 준수', K.wf_ch_safe), ('가림막·쉼터 설치', K.wf_ch_shade), ('대응하지 않음', K.wf_ch_none), ('보조기구 사용', K.wf_ch_aid)], '%', '여성농업인 전체 기준 · 1순위 응답 · 합 100', none, '#2458d6') }}
+ </div>
+ <h3 class="sg-sub">농어촌 주민이 보는 오염 원인 — 토양·물·공기·악취 <small>사는 지역의 오염을 일으키는 주된 원인(하나만 응답)과 가장 개선해야 할 환경문제 · 농어촌 주민 전체, 일부 농어가·비농어가 비교 · 농어업인 복지실태조사(2024)</small></h3>
+ <div class="sg-g">
+  {{ card('rso_chem', 'en1', ('토양 오염 원인 1위 · 농어가 ' ~ num(K.rso_chem_f.vals[-1], '%')|striptags ~ ' · 비농어가 ' ~ num(K.rso_chem_n.vals[-1], '%')|striptags) if K.rso_chem_f and K.rso_chem_n else none, '#7a6a3a') }}
+  {{ card('rod_barn', 'en2', ('악취 원인 1위 · 농어가 ' ~ num(K.rod_barn_f.vals[-1], '%')|striptags ~ ' · 비농어가 ' ~ num(K.rod_barn_n.vals[-1], '%')|striptags) if K.rod_barn_f and K.rod_barn_n else none, '#b0503a') }}
+  {{ card('rwa_agr', 'en3', ('수질 오염 원인 · 가축의 분뇨 ' ~ num(K.rwa_man.vals[-1], '%')|striptags ~ ' · 농어가 ' ~ num(K.rwa_agr_f.vals[-1], '%')|striptags) if K.rwa_man and K.rwa_agr_f else none, '#2458d6') }}
+  {{ card('rwa_home', 'en4', ('수질 오염 원인 · 비농어가 농·축산 폐수 ' ~ num(K.rwa_agr_n.vals[-1], '%')|striptags) if K.rwa_agr_n else none, '#5c6bc2') }}
+  {{ card('rea_dust', 'en5', ('대기 오염 원인 1위 · 지역공장 매연·먼지 ' ~ num(K.rea_fac.vals[-1], '%')|striptags) if K.rea_fac else none, '#7a5cc2') }}
+  {{ card('rim_none', 'en6', ('개선할 환경문제 · 쓰레기 ' ~ num(K.rim_trash.vals[-1], '%')|striptags ~ ' · 악취 ' ~ num(K.rim_odor.vals[-1], '%')|striptags) if K.rim_trash and K.rim_odor else none, '#1c7a45') }}
+  {{ hcard('토양 오염의 주된 원인', [('농약·비료', K.rso_chem), ('쓰레기 투기·매립', K.rso_trash), ('산업 폐기물', K.rso_ind)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#7a6a3a') }}
+  {{ hcard('수질 오염의 주된 원인', [('생활하수', K.rwa_home), ('농·축산 폐수', K.rwa_agr), ('가축의 분뇨', K.rwa_man), ('기타', K.rwa_etc), ('산업폐수', K.rwa_ind)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#2458d6') }}
+  {{ hcard('대기 오염의 주된 원인', [('미세먼지', K.rea_dust), ('지역공장 매연·배출먼지', K.rea_fac), ('자동차 배기가스', K.rea_car), ('기타', K.rea_etc), ('쓰레기 등 소각', K.rea_burn)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#7a5cc2') }}
+  {{ hcard('악취의 주된 원인', [('축사', K.rod_barn), ('쓰레기 투기·매립', K.rod_trash), ('공장', K.rod_fac), ('하수 처리장', K.rod_sew), ('기타', K.rod_etc)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#b0503a') }}
+  {{ hcard('사는 지역에서 가장 개선해야 할 환경문제', [('특별히 없다', K.rim_none), ('쓰레기', K.rim_trash), ('소음과 진동', K.rim_noise), ('악취', K.rim_odor), ('대기 오염', K.rim_air), ('수질 오염', K.rim_water), ('토양 오염', K.rim_soil)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#1c7a45') }}
  </div>
  </div></details>
 

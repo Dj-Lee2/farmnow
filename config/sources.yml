@@ -5975,6 +5975,29 @@ sources:
       - {id: er_traf, title: 농어가의 응급실 이용 원인 — 교통사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^교통사고$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: er_home, title: 농어가의 응급실 이용 원인 — 가정 내 안전사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^가정내 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: er_emg, title: 농어가의 응급실 이용 원인 — 응급질환 발생, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^응급질환발생$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_loc, title: 농어가의 식료품 구입처 — 동네가게(편의점 포함), tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^동네가게"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_sm, title: 농어가의 식료품 구입처 — 중소형 슈퍼마켓, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^중소형 슈퍼마켓$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_local, title: 농어가의 식료품 구입처 — 농·수·축산물 직판장·로컬푸드 매장·하나로마트, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^농/수/축산물 직판장"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_mart, title: 농어가의 식료품 구입처 — 대형할인매장, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^대형할인매장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_mkt, title: 농어가의 식료품 구입처 — 상설시장·5일장, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^상설시장/5일장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_web, title: 농어가의 식료품 구입처 — 인터넷 쇼핑몰·TV홈쇼핑, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^농어가$", "^인터넷 쇼핑몰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_local_non, title: 비농어가의 식료품 구입처 — 농·수·축산물 직판장·로컬푸드 매장·하나로마트, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^비농어가$", "^농/수/축산물 직판장"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_mart_non, title: 비농어가의 식료품 구입처 — 대형할인매장, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^비농어가$", "^대형할인매장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_mkt_non, title: 비농어가의 식료품 구입처 — 상설시장·5일장, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^비농어가$", "^상설시장/5일장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_web_non, title: 비농어가의 식료품 구입처 — 인터넷 쇼핑몰·TV홈쇼핑, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^비농어가$", "^인터넷 쇼핑몰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_web_70, title: 70대 이상 농촌 주민의 식료품 구입처 — 인터넷 쇼핑몰·TV홈쇼핑, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^70대 이상$", "^인터넷 쇼핑몰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fds_web_30, title: 30대 이하 농촌 주민의 식료품 구입처 — 인터넷 쇼핑몰·TV홈쇼핑, tbl: DT_11430038_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처$", want: ["^30대 이하$", "^인터넷 쇼핑몰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_loc, title: 농어가의 생활용품 구입처 — 동네가게(편의점 포함), tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^동네가게"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_sm, title: 농어가의 생활용품 구입처 — 중소형 슈퍼마켓, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^중소형 슈퍼마켓$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_local, title: 농어가의 생활용품 구입처 — 농·수·축산물 직판장·로컬푸드 매장·하나로마트, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^농/수/축산물 직판장"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_mart, title: 농어가의 생활용품 구입처 — 대형할인매장, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^대형할인매장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_dept, title: 농어가의 생활용품 구입처 — 백화점, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^백화점$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_mkt, title: 농어가의 생활용품 구입처 — 상설시장·5일장, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^상설시장/5일장$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: gds_web, title: 농어가의 생활용품 구입처 — 인터넷 쇼핑몰·TV홈쇼핑, tbl: DT_11430039_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처$", want: ["^농어가$", "^인터넷 쇼핑몰"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fdl_vil, title: 농어가의 식료품 구입처 위치 — 마을 안, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fdl_emd, title: 농어가의 식료품 구입처 위치 — 같은 읍·면, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^동일 읍·면 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fdl_sgg, title: 농어가의 식료품 구입처 위치 — 같은 시·군, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^동일 시·군 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: fdl_oth, title: 농어가의 식료품 구입처 위치 — 다른 시·군, tbl: DT_11430040_2025, org: "143", se: F, periods: 1, itm: "^식료품 구입처 위치$", want: ["^농어가$", "^다른 시·군$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

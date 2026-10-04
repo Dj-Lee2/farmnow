@@ -6721,6 +6721,37 @@ sources:
       - {id: rfh2_dis, title: 귀농 가구 영농활동 어려움 1+2순위 천재지변(홍수·가뭄 등), tbl: DT_114055_A016, org: "114", itm: "^영농활동 수행에서의 어려움$", want: ["^1[+]2순위$", "^천재지변"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rfh2_price, title: 귀농 가구 영농활동 어려움 1+2순위 재배품목 가격 변동성, tbl: DT_114055_A016, org: "114", itm: "^영농활동 수행에서의 어려움$", want: ["^1[+]2순위$", "^재배 ?품목의 높은 가격"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rfh2_fac, title: 귀농 가구 영농활동 어려움 1+2순위 농업시설 불충분(농수로 등), tbl: DT_114055_A016, org: "114", itm: "^영농활동 수행에서의 어려움$", want: ["^1[+]2순위$", "^농업 ?시설 불충분"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_vis, title: 귀농 이유 1순위 농업의 비전·발전가능성, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^농업의 비전"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_nat, title: 귀농 이유 1순위 자연환경이 좋아서, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^자연환경"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_inh, title: 귀농 이유 1순위 가업 승계, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^가업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_hlth, title: 귀농 이유 1순위 본인·가족 건강, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^본인이나 가족의 건강"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_fam, title: 귀농 이유 1순위 가족·친지와 가까이, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^가족 및 친지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_edu, title: 귀농 이유 1순위 자녀교육, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^자녀교육"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_cost, title: 귀농 이유 1순위 비싼 도시생활비, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^비싼 도시생활비"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_tired, title: 귀농 이유 1순위 도시생활에 회의, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^도시생활에 회의"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwh_job, title: 귀농 이유 1순위 실직·사업 실패, tbl: DT_114055_A003, org: "114", itm: "^귀농의 이유$", want: ["^1순위$", "^실직"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rbg_6m, title: 귀농 후 농사 시작 6개월 이내, tbl: DT_114055_A011, org: "114", itm: "^귀농 이후 농사 시작 시기$", want: ["^6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rbg_1y, title: 귀농 후 농사 시작 6개월~1년 이내, tbl: DT_114055_A011, org: "114", itm: "^귀농 이후 농사 시작 시기$", want: ["^6개월~ ?1년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rbg_late, title: 귀농 후 농사 시작 1년 이후, tbl: DT_114055_A011, org: "114", itm: "^귀농 이후 농사 시작 시기$", want: ["^1년 이후$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_6m, title: 귀농 가구 조언 없이 농사짓기까지 6개월 이내, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^6개월 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_1y, title: 귀농 가구 조언 없이 농사짓기까지 6개월~1년, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^6개월~ ?1년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_2y, title: 귀농 가구 조언 없이 농사짓기까지 1~2년, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^1년~ ?2년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_3y, title: 귀농 가구 조언 없이 농사짓기까지 2~3년, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^2년~ ?3년 이내$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_3p, title: 귀농 가구 조언 없이 농사짓기까지 3년 이상, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^3년 이상$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rind_need, title: 귀농 가구 조언 없이 농사짓기까지 아직 조언 필요, tbl: DT_114055_A015, org: "114", itm: "^다른 사람의 조언 없이 농사 짓기까지의 기간$", want: ["^아직 조언"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfa_sup, title: 귀농 준비 때 가족 지지 이상, tbl: DT_114055_A048, org: "114", itm: "^귀농 준비 당시 가족들의 지지정도$", want: ["^(지지|적극지지)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfa_mid, title: 귀농 준비 때 가족 반응 보통, tbl: DT_114055_A048, org: "114", itm: "^귀농 준비 당시 가족들의 지지정도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rfa_opp, title: 귀농 준비 때 가족 반대 이상, tbl: DT_114055_A048, org: "114", itm: "^귀농 준비 당시 가족들의 지지정도$", want: ["^(반대|매우 반대)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rps_sat, title: 귀농 준비과정 만족 이상, tbl: DT_114055_A050, org: "114", itm: "^귀농 준비과정에 대한 만족도$", want: ["^(만족|매우 만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rps_mid, title: 귀농 준비과정 보통, tbl: DT_114055_A050, org: "114", itm: "^귀농 준비과정에 대한 만족도$", want: ["^보통$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rps_bad, title: 귀농 준비과정 불만족 이하, tbl: DT_114055_A050, org: "114", itm: "^귀농 준비과정에 대한 만족도$", want: ["^(불만족|매우 불만족)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_info, title: 귀농정책 문제점 관련 정보 얻기 어려움, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^관련 정보"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_amt, title: 귀농정책 문제점 지원금액이 적음, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^지원금액"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_once, title: 귀농정책 문제점 일회성 지원, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^일회성"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_peak, title: 귀농정책 문제점 지원 시기 특정 시기 집중, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^특정시기"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_none, title: 귀농정책 문제점 실질적으로 필요한 정책 없음, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^실질적으로"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_paper, title: 귀농정책 문제점 지원 절차·서류 복잡, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^지원절차"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rpp_qual, title: 귀농정책 문제점 지원 자격 까다로움, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^지원 자격"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

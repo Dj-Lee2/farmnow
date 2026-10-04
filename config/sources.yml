@@ -7175,6 +7175,41 @@ sources:
       - {id: rsat_cul_c, title: "도시 생활 부문별 만족도 — 문화·여가 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^문화.여가 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
       - {id: rsat_env_c, title: "도시 생활 부문별 만족도 — 환경·경관(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^환경.경관$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
       - {id: rsat_eco_c, title: "도시 생활 부문별 만족도 — 경제활동 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^경제활동 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: sxq_fund, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 자금 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^자금 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_tech, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 기술력 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^기술력 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_mgmt, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 경영관리 역량 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^경영관리 역량 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_fac, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 시설·설비 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^시설/설비 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_admin, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 행정·제도 복잡", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^행정.제도 복잡$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_labor, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 인력 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^인력 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_mkt, title: "농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 고객·판로 확보", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^고객.판로 확보$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_mkt_eup, title: "읍 농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 고객·판로 확보", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^고객.판로 확보$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_mkt_myn, title: "면 농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 고객·판로 확보", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^고객.판로 확보$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_tech_eup, title: "읍 농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 기술력 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^기술력 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: sxq_tech_myn, title: "면 농어가 도·농 교류·6차산업 추진 시 가장 큰 어려움 — 기술력 부족", tbl: DT_11437140_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^기술력 부족$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_rice, title: "농어촌 농가의 영농형태(주 재배 품목) — 논벼", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^논벼$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_grain, title: "농어촌 농가의 영농형태(주 재배 품목) — 식량작물", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^식량작물$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_veg, title: "농어촌 농가의 영농형태(주 재배 품목) — 노지채소", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^노지채소$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_gh, title: "농어촌 농가의 영농형태(주 재배 품목) — 시설채소", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^시설채소$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_fruit, title: "농어촌 농가의 영농형태(주 재배 품목) — 과수", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^과수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_flower, title: "농어촌 농가의 영농형태(주 재배 품목) — 화훼", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^화훼$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_spec, title: "농어촌 농가의 영농형태(주 재배 품목) — 특용·약용작물·버섯", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^특/약용작물.버섯$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_live, title: "농어촌 농가의 영농형태(주 재배 품목) — 축산", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^축산$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_etc, title: "농어촌 농가의 영농형태(주 재배 품목) — 기타", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^합계$", "^기타$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_rice_o, title: "70대 이상 농가의 영농형태 — 논벼", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^논벼$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_veg_o, title: "70대 이상 농가의 영농형태 — 노지채소", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^노지채소$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_fruit_o, title: "70대 이상 농가의 영농형태 — 과수", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^과수$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_rice_eup, title: "읍 농가의 영농형태 — 논벼", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^논벼$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ftp_rice_myn, title: "면 농가의 영농형태 — 논벼", tbl: DT_11430031_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^논벼$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_f, title: "농어가 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_nf, title: "비농어가 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_c, title: "도시 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_r, title: "농어촌 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_mig, title: "이주민 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^이주민$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_nat, title: "선주민 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^선주민$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_o70, title: "70대 이상 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_act_y30, title: "30대 이하 공동체 활동에 적극 참여하는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^(매우 적극적으로 참여한다|적극적으로 참여하는 편이다)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_none_f, title: "농어가 공동체 활동에 전혀 참여하지 않는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^전혀 참여하지 않는다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cpt_none_c, title: "도시 공동체 활동에 전혀 참여하지 않는 비율", tbl: DT_11430324_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^전혀 참여하지 않는다$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: wsv_med_f, title: "농어가가 필요로 하는 복지서비스 — 보건의료·건강관리 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^보건의료.건강관리 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세

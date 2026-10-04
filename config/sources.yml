@@ -7312,6 +7312,33 @@ sources:
       - {id: mvw_job_y30, title: "이주 희망 이유 — 직업 관련 사유(30대 이하)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^직업 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: mvw_house_c, title: "이주 희망 이유 — 주택 관련 사유(도시)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^주택 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: mvw_house_myn, title: "이주 희망 이유 — 주택 관련 사유(면)", tbl: DT_11430009_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^주택 관련 사유$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_c, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(도시)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_r, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(농어촌)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_eup, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(읍)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_myn, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(면)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_f, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(농어가)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_nf, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(비농어가)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_y30, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(30대 이하)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_a40, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(40대)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^40대$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_a50, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(50대)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^50대$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_a60, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(60대)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^60대$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_o70, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(70대 이상)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_m, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(남)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^남$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_w, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(여)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^여$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_spo, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(스포츠 참여 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^스포츠참여활동$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_soc, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(사회활동 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^사회활동$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_rest, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(휴식 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^휴식$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_car_hob, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 개인차량(취미오락 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^취미오락활동$", "^개인차량$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_c, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(도시)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_r, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(농어촌)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_myn, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(면)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_o70, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(70대 이상)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_w, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(여)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^여$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_soc, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(사회활동 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^사회활동$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_walk_rest, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 걸어서(휴식 장소)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^휴식$", "^걸어서$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_bus_c, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(도시)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_bus_r, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(농어촌)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: trn_bus_o70, title: "문화·여가활동 장소까지 주로 이용하는 교통수단 — 버스(70대 이상)", tbl: DT_11430059_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^버스$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

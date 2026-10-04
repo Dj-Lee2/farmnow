@@ -6398,6 +6398,37 @@ sources:
       - {id: foi_r_gb, title: "경북 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.17$"}, unit: "%", survey: 산림산업실태조사}
       - {id: foi_r_gn, title: "경남 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.18$"}, unit: "%", survey: 산림산업실태조사}
       - {id: foi_r_jj, title: "제주 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.19$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: lgs_tot, title: "원목표고 재배규모 — 합계 재배규모", tbl: DT_136034_2024_Q002, org: "136", periods: 3, itm: "^합계 재배규모$", want: ["^전체$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgs_n, title: "원목표고 재배규모 — 임가수", tbl: DT_136034_2024_Q002, org: "136", periods: 3, itm: "^임가수$", want: ["^전체$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: lgs_avg, title: "원목표고 재배규모 — 평균 재배규모", tbl: DT_136034_2024_Q002, org: "136", periods: 3, itm: "^평균 재배규모$", want: ["^전체$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: sds_tot, title: "톱밥표고 재배규모 — 합계 재배규모", tbl: DT_136034_2024_Q003, org: "136", periods: 3, itm: "^합계 재배규모$", want: ["^전체$"], unit: 톤, survey: 임업경영실태조사}
+      - {id: sds_n, title: "톱밥표고 재배규모 — 임가수", tbl: DT_136034_2024_Q003, org: "136", periods: 3, itm: "^임가수$", want: ["^전체$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: sds_avg, title: "톱밥표고 재배규모 — 평균 재배규모", tbl: DT_136034_2024_Q003, org: "136", periods: 3, itm: "^평균 재배규모$", want: ["^전체$"], unit: 톤, survey: 임업경영실태조사}
+      - {id: sdf_own, title: "톱밥·톱밥배지 생산형태 — 원목을 이용하여 직접생산", tbl: DT_136034_2024_Q004, org: "136", periods: 3, itm: ".", want: ["^전체$", "^원목을 이용하여 직접생산$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sdf_saw, title: "톱밥·톱밥배지 생산형태 — 생산된 톱밥을 이용하여 배지생산", tbl: DT_136034_2024_Q004, org: "136", periods: 3, itm: ".", want: ["^전체$", "^생산된 톱밥을 이용하여 배지생산$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sdf_med, title: "톱밥·톱밥배지 생산형태 — 생산된 톱밥배지 이용", tbl: DT_136034_2024_Q004, org: "136", periods: 3, itm: ".", want: ["^전체$", "^생산된 톱밥배지 이용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: lgt_tot, title: "수종별 국내산 표고자목 이용량 — 합계", tbl: DT_136034_2024_Q009, org: "136", periods: 3, itm: ".", want: ["^전체$", "^합계$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgt_sang, title: "수종별 국내산 표고자목 이용량 — 상수리나무", tbl: DT_136034_2024_Q009, org: "136", periods: 3, itm: ".", want: ["^전체$", "^상수리나무$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgt_sing, title: "수종별 국내산 표고자목 이용량 — 신갈나무", tbl: DT_136034_2024_Q009, org: "136", periods: 3, itm: ".", want: ["^전체$", "^신갈나무$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgt_etc, title: "수종별 국내산 표고자목 이용량 — 기타", tbl: DT_136034_2024_Q009, org: "136", periods: 3, itm: ".", want: ["^전체$", "^기타$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: wsl_fire, title: "폐표고자목 처리 방법 — 화목 사용", tbl: DT_136034_2024_Q010, org: "136", periods: 3, itm: ".", want: ["^전체$", "^화목 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wsl_saw, title: "폐표고자목 처리 방법 — 톱밥공장에서 수집", tbl: DT_136034_2024_Q010, org: "136", periods: 3, itm: ".", want: ["^전체$", "^톱밥공장에서 수집$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wsl_nat, title: "폐표고자목 처리 방법 — 그대로 자연에 방치", tbl: DT_136034_2024_Q010, org: "136", periods: 3, itm: ".", want: ["^전체$", "^그대로 자연에 방치$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wsl_fert, title: "폐표고자목 처리 방법 — 유기질비료 공장에서 수집", tbl: DT_136034_2024_Q010, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유기질비료 공장에서 수집$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wsl_etc, title: "폐표고자목 처리 방법 — 기타", tbl: DT_136034_2024_Q010, org: "136", periods: 3, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wsq_tot, title: "폐표고자목 폐기량 — 총 폐기량", tbl: DT_136034_2024_Q011, org: "136", periods: 1, itm: ".", want: ["^총 폐기량$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: wsq_avg, title: "폐표고자목 폐기량 — 평균 폐기량", tbl: DT_136034_2024_Q011, org: "136", periods: 1, itm: ".", want: ["^평균 폐기량$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_tot, title: "조달방법별 국내산 표고자목 이용량 — 이용량 합계", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^이용량 합계$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_own, title: "조달방법별 국내산 표고자목 이용량 — 산주와 계약 후 직접벌채", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^산주와 계약 후 직접벌채$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_prod, title: "조달방법별 국내산 표고자목 이용량 — 원목생산자 벌채사업자 통해 이용", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^원목생산자 벌채사업자 통해 이용$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_gov, title: "조달방법별 국내산 표고자목 이용량 — 국가와 계약 후 직접 벌채", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^국가와 계약 후 직접 벌채$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_loc, title: "조달방법별 국내산 표고자목 이용량 — 국가 지자체 통해 이용", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^국가 지자체 통해 이용$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_peer, title: "조달방법별 국내산 표고자목 이용량 — 타 동종 업체 통해 이용", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^타 동종 업체 통해 이용$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgp_etc, title: "조달방법별 국내산 표고자목 이용량 — 기타", tbl: DT_136034_2024_Q008, org: "136", periods: 1, itm: ".", want: ["^전체$", "^기타$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: lgy_u3, title: "표고자목 평균 재배 연한 — 3년 이하", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^3년 이하$"], unit: "%", survey: 임업경영실태조사}
+      - {id: lgy_y4, title: "표고자목 평균 재배 연한 — 4년", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^4년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: lgy_y5, title: "표고자목 평균 재배 연한 — 5년", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^5년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: lgy_o6, title: "표고자목 평균 재배 연한 — 6년 이상", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^6년 이상$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

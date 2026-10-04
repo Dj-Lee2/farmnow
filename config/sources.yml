@@ -7776,6 +7776,36 @@ sources:
       - {id: rcf_50, title: "귀촌 후 농업개시자 — 50대", tbl: DT_1A02043, itm: "^계$", want: ["^50대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rcf_60, title: "귀촌 후 농업개시자 — 60대", tbl: DT_1A02043, itm: "^계$", want: ["^60대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
       - {id: rcf_70, title: "귀촌 후 농업개시자 — 70세 이상", tbl: DT_1A02043, itm: "^계$", want: ["^70세 이상$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rag_area_avg, title: "논벼 농가 전국 평균 — 경지면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_area_40, title: "경영주 40대 논벼 농가 — 경지면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_area_50, title: "경영주 50대 논벼 농가 — 경지면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_area_60, title: "경영주 60대 논벼 농가 — 경지면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_area_70, title: "경영주 70대 이상 논벼 농가 — 경지면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^경지면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rice_avg, title: "논벼 농가 전국 평균 — 논벼 재배면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rice_40, title: "경영주 40대 논벼 농가 — 논벼 재배면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rice_50, title: "경영주 50대 논벼 농가 — 논벼 재배면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rice_60, title: "경영주 60대 논벼 농가 — 논벼 재배면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rice_70, title: "경영주 70대 이상 논벼 농가 — 논벼 재배면적", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rent_avg, title: "논벼 농가 전국 평균 — 차용지(빌린 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rent_40, title: "경영주 40대 논벼 농가 — 차용지(빌린 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rent_50, title: "경영주 50대 논벼 농가 — 차용지(빌린 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rent_60, title: "경영주 60대 논벼 농가 — 차용지(빌린 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_rent_70, title: "경영주 70대 이상 논벼 농가 — 차용지(빌린 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_yld_avg, title: "논벼 농가 전국 평균 — 주산물(벼) 수량", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rag_yld_40, title: "경영주 40대 논벼 농가 — 주산물(벼) 수량", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rag_yld_50, title: "경영주 50대 논벼 농가 — 주산물(벼) 수량", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rag_yld_60, title: "경영주 60대 논벼 농가 — 주산물(벼) 수량", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rag_yld_70, title: "경영주 70대 이상 논벼 농가 — 주산물(벼) 수량", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: rag_val_avg, title: "논벼 농가 전국 평균 — 주산물(벼) 평가액", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^주산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rag_val_40, title: "경영주 40대 논벼 농가 — 주산물(벼) 평가액", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^주산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rag_val_50, title: "경영주 50대 논벼 농가 — 주산물(벼) 평가액", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^주산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rag_val_60, title: "경영주 60대 논벼 농가 — 주산물(벼) 평가액", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^주산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rag_val_70, title: "경영주 70대 이상 논벼 농가 — 주산물(벼) 평가액", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^주산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rag_own_avg, title: "논벼 농가 전국 평균 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^전국평균$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_own_40, title: "경영주 40대 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^40대$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_own_50, title: "경영주 50대 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_own_60, title: "경영주 60대 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: rag_own_70, title: "경영주 70대 이상 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

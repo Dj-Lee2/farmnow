@@ -5799,6 +5799,33 @@ sources:
       - {id: sxd_sns, title: "6차산업 직매장 홍보활동 SNS", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^SNS$"], unit: "%", survey: 농촌융복합산업 실태조사}
       - {id: sxd_off, title: "6차산업 직매장 홍보활동 오프라인", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^오프라인$"], unit: "%", survey: 농촌융복합산업 실태조사}
       - {id: sxd_none, title: "6차산업 직매장 홍보활동 홍보 안 함", tbl: DT_114061_066, org: "114", se: F, periods: 1, itm: ".", want: ["^전체$", "^홍보안함$"], unit: "%", survey: 농촌융복합산업 실태조사}
+      - {id: wli_crop, title: 농어가 농작물재해보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^농작물재해보험"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_safe, title: 농어가 농업인안전보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^농업인안전보험"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_mach, title: 농어가 농기계종합보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^농기계종합보험"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_land, title: 농어가 농지연금 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^농지연금"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_priv, title: 농어가 민간의료보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^민간의료보험$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_priv_non, title: 비농어가 민간의료보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^비농어가$", "^민간의료보험$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_emp, title: 농어가 고용보험 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^고용보험$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wli_ppen, title: 농어가 개인연금 가입률, tbl: DT_11437027_2025, org: "143", se: F, periods: 1, itm: "^기타보험 가입현황$", want: ["^농어가$", "^개인연금$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhi_all, title: 농어가 국민건강보험 가입률, tbl: DT_11437023_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 가입현황$", want: ["^농어가$", "^국민건강보험 가입$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhi_reg, title: 농어가 건강보험 지역가입자, tbl: DT_11437023_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 가입현황$", want: ["^농어가$", "^지역가입자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhi_job, title: 농어가 건강보험 직장가입자, tbl: DT_11437023_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 가입현황$", want: ["^농어가$", "^직장가입자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhi_dep, title: 농어가 건강보험 직장가입자의 피부양자, tbl: DT_11437023_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 가입현황$", want: ["^농어가$", "^직장가입자의 피부양자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhi_aid, title: 농어가 의료급여 수급, tbl: DT_11437023_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 가입현황$", want: ["^농어가$", "^의료급여 수급$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhb_hi, title: 건강보험료가 부담된다는 농어가, tbl: DT_11437024_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 보험료 부담 정도$", want: ["^농어가$", "^(매우 부담됨|부담됨)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nhb_hi_non, title: 건강보험료가 부담된다는 비농어가, tbl: DT_11437024_2025, org: "143", se: F, periods: 1, itm: "^국민건강보험 보험료 부담 정도$", want: ["^비농어가$", "^(매우 부담됨|부담됨)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rta_avg, title: 농어가가 생각하는 은퇴 연령, tbl: DT_11437147_2025, org: "143", se: F, periods: 1, itm: "^은퇴 연령$", want: ["^농어가$", "^평균$"], unit: 세, survey: 농어업인 복지실태조사}
+      - {id: rta_avg_non, title: 비농어가가 생각하는 은퇴 연령, tbl: DT_11437147_2025, org: "143", se: F, periods: 1, itm: "^은퇴 연령$", want: ["^비농어가$", "^평균$"], unit: 세, survey: 농어업인 복지실태조사}
+      - {id: rta_70, title: 70세 넘어 은퇴하겠다는 농어가, tbl: DT_11437147_2025, org: "143", se: F, periods: 1, itm: "^은퇴 연령$", want: ["^농어가$", "^(70-74세|75-79세|80세 이상)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mtt_avg, title: 농어가의 의료기관 편도 이동시간, tbl: DT_11437013_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이동 시 편도 소요시간$", want: ["^농어가$", "^평균$"], unit: 분, survey: 농어업인 복지실태조사}
+      - {id: mtt_avg_non, title: 비농어가의 의료기관 편도 이동시간, tbl: DT_11437013_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이동 시 편도 소요시간$", want: ["^비농어가$", "^평균$"], unit: 분, survey: 농어업인 복지실태조사}
+      - {id: mtt_30p, title: 의료기관까지 30분 이상 걸리는 농어가, tbl: DT_11437013_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이동 시 편도 소요시간$", want: ["^농어가$", "^(30-40분 미만|40-50분 미만|50분-1시간 미만|1시간 이상)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_cost, title: 농어가 질병치료 어려움 — 치료비 부담, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^치료비가 부담된다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_qual, title: 농어가 질병치료 어려움 — 의료서비스 질, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^의료서비스의 질이 낮다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_find, title: 농어가 질병치료 어려움 — 적합한 의료기관 찾기, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^적합한 의료기관을 찾기가 어렵다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_move, title: 농어가 질병치료 어려움 — 의료기관까지 이동, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^의료기관까지 이동이 어렵다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_care, title: 농어가 질병치료 어려움 — 돌볼 사람 없음, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^환자를 돌볼 사람이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mdf_none, title: 농어가 질병치료 어려움 — 특별한 어려움 없음, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^특별한 어려움이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

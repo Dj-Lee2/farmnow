@@ -6752,6 +6752,31 @@ sources:
       - {id: rpp_none, title: 귀농정책 문제점 실질적으로 필요한 정책 없음, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^실질적으로"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rpp_paper, title: 귀농정책 문제점 지원 절차·서류 복잡, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^지원절차"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rpp_qual, title: 귀농정책 문제점 지원 자격 까다로움, tbl: DT_114055_A061, org: "114", itm: "^귀농정책의 문제점$", want: ["^지원 자격"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_mgr, title: 귀농 가구주 직전 직업 관리자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^관리자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_pro, title: 귀농 가구주 직전 직업 전문가, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^전문가"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_off, title: 귀농 가구주 직전 직업 사무 종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^사무 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_svc, title: 귀농 가구주 직전 직업 서비스 종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^서비스 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_sale, title: 귀농 가구주 직전 직업 판매 종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^판매 종사자$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_farm, title: 귀농 가구주 직전 직업 농림어업 숙련종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^농림어업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_craft, title: 귀농 가구주 직전 직업 기능·기계조작 종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^(기능원|장치)"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_lab, title: 귀농 가구주 직전 직업 단순노무 종사자, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^단순노무"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_mil, title: 귀농 가구주 직전 직업 군인, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^군인$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rjh_none, title: 귀농 가구주 직전 직업 학생·주부·무직, tbl: DT_114055_A068, org: "114", itm: "^귀농 직전 직업$", want: ["^가구주$", "^(학생|주부|무직)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtu_on, title: 귀농 온라인교육 농촌생활에 도움 이상, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^온라인교육$", "^(도움이 됨|매우 도움이 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtn_on, title: 귀농 온라인교육 도움 안됨 이하, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^온라인교육$", "^(전혀 도움 안됨|도움 안됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtu_off, title: 귀농 오프라인교육 농촌생활에 도움 이상, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^오프라인교육$", "^(도움이 됨|매우 도움이 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtn_off, title: 귀농 오프라인교육 도움 안됨 이하, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^오프라인교육$", "^(전혀 도움 안됨|도움 안됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtu_int, title: 귀농 인턴십 농촌생활에 도움 이상, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^인턴십$", "^(도움이 됨|매우 도움이 됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rtn_int, title: 귀농 인턴십 도움 안됨 이하, tbl: DT_114055_A057, org: "114", itm: "^교육/인턴십의 농촌생활 도움 정도$", want: ["^인턴십$", "^(전혀 도움 안됨|도움 안됨)$"], sum: true, unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsw_with, title: 귀농 당시 배우자와 함께 이주, tbl: DT_114055_A067, org: "114", itm: "^귀농 당시 배우자와 함께 이주 여부$", want: ["^배우자와 함께 이주$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsw_sep, title: 귀농 당시 배우자와 따로 이주, tbl: DT_114055_A067, org: "114", itm: "^귀농 당시 배우자와 함께 이주 여부$", want: ["^배우자와 함께 이주하지 않음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rsw_none, title: 귀농 당시 배우자 없음, tbl: DT_114055_A067, org: "114", itm: "^귀농 당시 배우자와 함께 이주 여부$", want: ["^배우자 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rvp_lead, title: 귀농인 마을 회의·행사 주도적·적극 참여, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^주도적이고"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rvp_vocal, title: 귀농인 마을 회의·행사 자주 참여·의견 개진, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^자주 참여하며"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rvp_quiet, title: 귀농인 마을 회의·행사 자주 참여·의견은 안 냄, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^자주 참여하나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rvp_some, title: 귀농인 마을 회의·행사 가끔 참여, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rvp_rare, title: 귀농인 마을 회의·행사 거의 참여 안 함, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^거의 참여하지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rem_y, title: 귀농 가구 인력 고용함, tbl: DT_114055_A070, org: "114", itm: "^인력 고용$", want: ["^예$"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

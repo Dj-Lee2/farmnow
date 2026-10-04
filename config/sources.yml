@@ -5826,6 +5826,40 @@ sources:
       - {id: mdf_move, title: 농어가 질병치료 어려움 — 의료기관까지 이동, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^의료기관까지 이동이 어렵다$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: mdf_care, title: 농어가 질병치료 어려움 — 돌볼 사람 없음, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^환자를 돌볼 사람이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: mdf_none, title: 농어가 질병치료 어려움 — 특별한 어려움 없음, tbl: DT_11437020_2025, org: "143", se: F, periods: 1, itm: "^질병치료 시 어려움$", want: ["^농어가$", "^특별한 어려움이 없다$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_job, title: 농어가가 필요한 복지서비스 — 고용(취업) 지원, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^고용"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_inc, title: 농어가가 필요한 복지서비스 — 소득 지원, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^소득 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_hou, title: 농어가가 필요한 복지서비스 — 주거 관련, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^주거 관련 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_hlth, title: 농어가가 필요한 복지서비스 — 보건의료·건강관리, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^보건의료"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_edu, title: 농어가가 필요한 복지서비스 — 보육·교육, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^보육 및 교육"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_cul, title: 농어가가 필요한 복지서비스 — 문화·여가 향유, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^문화"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_life, title: 농어가가 필요한 복지서비스 — 일상생활지원, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^일상생활지원"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: nws_none, title: 농어가가 필요한 복지서비스 — 필요 없음, tbl: DT_11430305_2025, org: "143", se: F, periods: 1, itm: "^필요 복지서비스$", want: ["^농어가$", "^필요한 서비스가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mds_avg, title: 농어가의 지역 의료 여건 만족도, tbl: DT_11437009_2025, org: "143", se: F, periods: 1, itm: "^지역 내 의료 여건 전반에 대한 만족도$", want: ["^농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: mds_avg_non, title: 비농어가의 지역 의료 여건 만족도, tbl: DT_11437009_2025, org: "143", se: F, periods: 1, itm: "^지역 내 의료 여건 전반에 대한 만족도$", want: ["^비농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: mds_sat, title: 지역 의료 여건에 만족하는 농어가, tbl: DT_11437009_2025, org: "143", se: F, periods: 1, itm: "^지역 내 의료 여건 전반에 대한 만족도$", want: ["^농어가$", "^(매우 만족|만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: mds_dis, title: 지역 의료 여건에 불만족하는 농어가, tbl: DT_11437009_2025, org: "143", se: F, periods: 1, itm: "^지역 내 의료 여건 전반에 대한 만족도$", want: ["^농어가$", "^(불만족|매우 불만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_lt1, title: 농어가 의료기관 이용 횟수 — 월 1회 미만, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^월 1회 미만$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_m12, title: 농어가 의료기관 이용 횟수 — 월 1~2회, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^월 1~2회$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_m34, title: 농어가 의료기관 이용 횟수 — 월 3~4회, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^월 3~4회$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_w23, title: 농어가 의료기관 이용 횟수 — 주 2~3회, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^주 2~3회$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_w4, title: 농어가 의료기관 이용 횟수 — 주 4회 이상, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: muf_3p, title: 한 달 3번 이상 의료기관에 가는 농어가, tbl: DT_11437011_2025, org: "143", se: F, periods: 1, itm: "^의료기관 이용 횟수$", want: ["^농어가$", "^(월 3~4회|주 2~3회|주 4회 이상)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_care, title: 농어가의 노인복지서비스 인지도 — 노인맞춤돌봄서비스, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^노인맞춤돌봄"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_dem, title: 농어가의 노인복지서비스 인지도 — 치매검진·치료관리비 지원, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^치매검진"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_job, title: 농어가의 노인복지서비스 인지도 — 노인일자리·사회활동 지원, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^노인일자리"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_eye, title: 농어가의 노인복지서비스 인지도 — 노인 안검진·개안수술 지원, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^노인 안검진"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_knee, title: 농어가의 노인복지서비스 인지도 — 노인 무릎인공관절 수술 지원, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^노인 무릎"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_alone, title: 농어가의 노인복지서비스 인지도 — 독거노인 응급안전안심서비스, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^독거노인"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_dent, title: 농어가의 노인복지서비스 인지도 — 의료급여 틀니·치과임플란트, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^의료급여 틀니"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: osa_ltc, title: 농어가의 노인복지서비스 인지도 — 노인장기요양보험, tbl: DT_11437033_2025, org: "143", se: F, periods: 1, itm: "^노인복지서비스 인지도$", want: ["^농어가$", "^노인장기요양보험$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ism_avg, title: 농어가의 소득 만족도, tbl: DT_11437205_2025, org: "143", se: F, periods: 1, itm: "^소득 만족도$", want: ["^농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: ism_avg_non, title: 비농어가의 소득 만족도, tbl: DT_11437205_2025, org: "143", se: F, periods: 1, itm: "^소득 만족도$", want: ["^비농어가$", "^평균$"], unit: 점, survey: 농어업인 복지실태조사}
+      - {id: ism_sat, title: 소득에 만족하는 농어가, tbl: DT_11437205_2025, org: "143", se: F, periods: 1, itm: "^소득 만족도$", want: ["^농어가$", "^(매우 만족|만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ism_dis, title: 소득에 불만족하는 농어가, tbl: DT_11437205_2025, org: "143", se: F, periods: 1, itm: "^소득 만족도$", want: ["^농어가$", "^(불만족|매우 불만족)$"], sum: true, unit: "%", survey: 농어업인 복지실태조사}
+      - {id: shp_vil, title: 농어가의 생활용품 구입처 — 마을 안, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: shp_emd, title: 농어가의 생활용품 구입처 — 같은 읍·면, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^동일 읍·면 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: shp_sgg, title: 농어가의 생활용품 구입처 — 같은 시·군, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^동일 시·군 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: shp_oth, title: 농어가의 생활용품 구입처 — 다른 시·군, tbl: DT_11430041_2025, org: "143", se: F, periods: 1, itm: "^생활용품 구입처 위치$", want: ["^농어가$", "^다른 시·군$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

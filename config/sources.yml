@@ -7041,6 +7041,37 @@ sources:
       - {id: rvl_food_f, title: 농어가 — 농어업·농어촌 가치 인식 식량의 안정적 공급, tbl: DT_11437113_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^농어가$", "^식량의 안정적 공급$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: rvl_clim, title: 농어업·농어촌의 가치 인식 — 기후변화 완화·탄소저감, tbl: DT_11437113_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^합계$", "^기후변화 완화 및 탄소저감$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: rvl_clim_f, title: 농어가 — 농어업·농어촌 가치 인식 기후변화 완화·탄소저감, tbl: DT_11437113_2024, org: "143", periods: 1, itm: "^항목1$", want: ["^농어가$", "^기후변화 완화 및 탄소저감$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_oil, title: "농어촌 주택 난방시설 — 기름 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^기름 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_gas, title: "농어촌 주택 난방시설 — 도시가스 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^도시가스 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_lpg, title: "농어촌 주택 난방시설 — 프로판가스(LPG) 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^프로판가스.LPG. 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_elec, title: "농어촌 주택 난방시설 — 전기 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^전기 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_wood, title: "농어촌 주택 난방시설 — 화목 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^화목 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_coal, title: "농어촌 주택 난방시설 — 연탄 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^연탄 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_dist, title: "농어촌 주택 난방시설 — 지역난방", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^지역난방$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_oil_f, title: "농어가 주택 난방시설 — 기름 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^기름 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_oil_c, title: "도시 주택 난방시설 — 기름 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^기름 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hh_wood_f, title: "농어가 주택 난방시설 — 화목 보일러", tbl: DT_11437078_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^화목 보일러$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: hc_city, title: "월 평균 난방비 — 도시", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: hc_rural, title: "월 평균 난방비 — 농어촌", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: hc_farm, title: "월 평균 난방비 — 농어가", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: hc_oil, title: "월 평균 난방비 — 기름 보일러 가구", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^기름 보일러$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: hc_gas, title: "월 평균 난방비 — 도시가스 보일러 가구", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^도시가스 보일러$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: hc_wood, title: "월 평균 난방비 — 화목 보일러 가구", tbl: DT_11437081_2023, org: "143", periods: 1, itm: ".", want: ["^화목 보일러$", "^평균$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: ws_pub, title: "농어촌 주택 상하수도 — 광역·지방 상수도", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^광역 및 지방 상수도$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_vil, title: "농어촌 주택 상하수도 — 마을 상수도(간이 상수도)", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^마을 상수도.간이 상수도.$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_well, title: "농어촌 주택 상하수도 — 가정용 우물(지하수)", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^가정용 우물.지하수.$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_sewp, title: "농어촌 주택 상하수도 — 공공하수처리시설", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^공공하수처리시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_sewi, title: "농어촌 주택 상하수도 — 개인하수처리시설", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^개인하수처리시설$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_none, title: "농어촌 주택 상하수도 — 하수처리시설 없음", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_well_f, title: "농어가 주택 상수도 — 가정용 우물(지하수)", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^가정용 우물.지하수.$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ws_vil_m, title: "면 지역 주택 상수도 — 마을 상수도(간이 상수도)", tbl: DT_11437090_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^마을 상수도.간이 상수도.$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ls_sew, title: "농어촌 기초생활여건 만족도 — 하수 처리", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^하수 처리$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_trash, title: "농어촌 기초생활여건 만족도 — 쓰레기 처리", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^쓰레기 처리$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_bus, title: "농어촌 기초생활여건 만족도 — 대중교통 이용", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^대중교통 이용$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_svc, title: "농어촌 기초생활여건 만족도 — 생활서비스 이용", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^생활서비스 이용$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_net, title: "농어촌 기초생활여건 만족도 — 정보통신여건", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^정보통신여건$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_water, title: "농어촌 기초생활여건 만족도 — 상수도 수질", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^상수도 수질$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: ls_bus_c, title: "도시 기초생활여건 만족도 — 대중교통 이용", tbl: DT_11437098_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^대중교통 이용$"], unit: "점", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -4573,7 +4573,7 @@ sources:
       - {id: fs_dom_pot, title: "외식업 국내산 사용 비중 감자", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^감자$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_dom_apple, title: "외식업 국내산 사용 비중 사과", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^사과$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_dom_pear, title: "외식업 국내산 사용 비중 배", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^배$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
-      - {id: fs_dom_chili, title: "외식업 국내산 사용 비중 고춧가루(건고추 포함)", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^고춧가루\\(건고추\\ 포함\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fs_dom_chili, title: "외식업 국내산 사용 비중 고춧가루(건고추 포함)", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_dom_kim, title: "외식업 국내산 사용 비중 김치", tbl: DT_114054_126, org: "114", se: F, periods: 2, itm: "^국산비중$", want: ["^김치$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_ch_big, title: "외식업 식재료 구매경로 식재료 유통 대기업", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^식재료 유통 대기업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fs_ch_corp, title: "외식업 식재료 구매경로 식재료 유통법인", tbl: DT_114054_101, org: "114", se: F, periods: 2, itm: "^품목별 식재료 구매 행태$", want: ["^식재료 유통법인$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
@@ -6097,6 +6097,38 @@ sources:
       - {id: mri_pest, title: "버섯 재배업에서 가장 시급히 개선할 점 — 병충해 방제", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병충해"], unit: "%", survey: 임업경영실태조사}
       - {id: mri_dem, title: "버섯 재배업에서 가장 시급히 개선할 점 — 표고버섯 수요 확대", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^표고버섯 수요"], unit: "%", survey: 임업경영실태조사}
       - {id: mri_cost, title: "버섯 재배업에서 가장 시급히 개선할 점 — 생산비 절감", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산비 절감"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsu_all, title: "외식업체 가업승계 비율 — 전체", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^전체$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_kor, title: "외식업체 가업승계 비율 — 한식", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^한식$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_chn, title: "외식업체 가업승계 비율 — 중식", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^중식$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_jpn, title: "외식업체 가업승계 비율 — 일식", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^일식$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_wst, title: "외식업체 가업승계 비율 — 서양식", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^서양식$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_cant, title: "외식업체 가업승계 비율 — 기관 구내식당업", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^기관 구내식당업$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_bak, title: "외식업체 가업승계 비율 — 제과점", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^제과점$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_piz, title: "외식업체 가업승계 비율 — 피자·햄버거·샌드위치 및 유사 음식점업", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^피자·햄버거·샌드위치 및 유사 음식점업$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_chk, title: "외식업체 가업승계 비율 — 치킨전문점", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^치킨전문점$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_kim, title: "외식업체 가업승계 비율 — 김밥 및 기타 간이 음식점업", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^김밥 및 기타 간이 음식점업$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_bar, title: "외식업체 가업승계 비율 — 주점업", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^주점업$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_cafe, title: "외식업체 가업승계 비율 — 비알코올 음료점업", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^비알코올 음료점업$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_fr, title: "외식업체 가업승계 비율 — 프랜차이즈", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^프랜차이즈$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fsu_nfr, title: "외식업체 가업승계 비율 — 비프랜차이즈", tbl: DT_114054_018, org: "114", periods: 3, itm: "^가업승계 여부$", want: ["^비프랜차이즈$", "^승계$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_rice, title: "음식점 식재료비 구성 — 쌀", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^쌀$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_grain, title: "음식점 식재료비 구성 — 곡류(쌀 제외)", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^곡류\\(쌀 제외\\)$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_veg, title: "음식점 식재료비 구성 — 채소", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^채소$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_meat, title: "음식점 식재료비 구성 — 축산물", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^축산물$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_fish, title: "음식점 식재료비 구성 — 수산물", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^수산물$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_proc, title: "음식점 식재료비 구성 — 가공식품(공산품)", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^가공식품"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_fruit, title: "음식점 식재료비 구성 — 과일", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^과일$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_bev, title: "음식점 식재료비 구성 — 주류·음료", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^주류/음료$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fcs_etc, title: "음식점 식재료비 구성 — 기타", tbl: DT_114054_031, org: "114", periods: 3, itm: "^식재료비 사용 비중$", want: ["^전체$", "^기타$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_ck, title: "외식업체 경영상 애로사항 — 구인난(조리·주방)", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^구인난-조리"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_hall, title: "외식업체 경영상 애로사항 — 구인난(홀서빙·카운터)", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^구인난-홀"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_food, title: "외식업체 경영상 애로사항 — 식재료비 상승", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^식재료비 상승$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_rent, title: "외식업체 경영상 애로사항 — 임차료 상승", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^임차료 상승$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_wage, title: "외식업체 경영상 애로사항 — 인건비 상승", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^인건비 상승$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_reg, title: "외식업체 경영상 애로사항 — 제도적 규제", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^제도적 규제$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fdif_comp, title: "외식업체 경영상 애로사항 — 경쟁심화", tbl: DT_114054_025, org: "114", periods: 3, itm: "^경영상 애로사항$", want: ["^전체$", "^경쟁심화$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fpf_opm, title: "외식업체 매출액 대비 영업이익률", tbl: DT_114054_029, org: "114", periods: 3, itm: "^매출액 대비 영업이익률$", want: ["^전체$"], unit: "%", survey: 외식업체 경영실태조사}
+      - {id: fpf_cost, title: "외식업체 매출 대비 식재료비·인건비 비율", tbl: DT_114054_029, org: "114", periods: 3, itm: "^매출 대비 식재료 및 인건비 비율$", want: ["^전체$"], unit: "%", survey: 외식업체 경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

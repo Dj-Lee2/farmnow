@@ -7806,6 +7806,32 @@ sources:
       - {id: rag_own_50, title: "경영주 50대 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^50대$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
       - {id: rag_own_60, title: "경영주 60대 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^60대$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
       - {id: rag_own_70, title: "경영주 70대 이상 논벼 농가 — 자작지(내 땅)", tbl: DT_1EC0014, itm: "^경영개황$", want: ["^70대이상$", "^자작지$"], unit: ㎡, survey: 농산물생산비조사}
+      - {id: slw_hh, title: "농가 평균 가구원", tbl: DT_1SA1701, itm: "^가구원$", want: ["^평균$"], unit: 명, survey: 농가경제조사}
+      - {id: slw_fam, title: "농가 평균 가족농업 종사자", tbl: DT_1SA1701, itm: "^가족농업 종사자$", want: ["^평균$"], unit: 명, survey: 농가경제조사}
+      - {id: slw_reg, title: "농가 평균 가족농업 종사자 — 상시", tbl: DT_1SA1701, itm: "^상시종사자$", want: ["^평균$"], unit: 명, survey: 농가경제조사}
+      - {id: slw_tmp, title: "농가 평균 가족농업 종사자 — 임시", tbl: DT_1SA1701, itm: "^임시종사자$", want: ["^평균$"], unit: 명, survey: 농가경제조사}
+      - {id: slw_all, title: "농가 평균 자영농업 노동투하량", tbl: DT_1SA1701, itm: "^자영농업노동투하량$", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: slw_fhr, title: "자영농업 노동투하량 — 가족노동(품앗이 포함)", tbl: DT_1SA1701, itm: "^가족노동", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: slw_hire, title: "자영농업 노동투하량 — 고용노동(일손돕기 포함)", tbl: DT_1SA1701, itm: "^고용노동", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: slw_dir, title: "자영농업 노동투하량 — 직접노동", tbl: DT_1SA1701, itm: "^직접노동$", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: slw_ind, title: "자영농업 노동투하량 — 간접노동", tbl: DT_1SA1701, itm: "^간접노동$", want: ["^평균$"], unit: 시간, survey: 농가경제조사}
+      - {id: gsc_all, title: "귀산촌 가구", tbl: DT_1A02040, itm: "^가구수$", want: ["^계$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_1, title: "귀산촌 가구 — 1인 가구", tbl: DT_1A02040, itm: "^가구수$", want: ["^1인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_2, title: "귀산촌 가구 — 2인 가구", tbl: DT_1A02040, itm: "^가구수$", want: ["^2인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_3, title: "귀산촌 가구 — 3인 가구", tbl: DT_1A02040, itm: "^가구수$", want: ["^3인가구$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_4, title: "귀산촌 가구 — 4인 이상 가구", tbl: DT_1A02040, itm: "^가구수$", want: ["^4인가구이상$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_bs, title: "귀산촌 가구 — 부산", tbl: DT_1A02040, itm: "^가구수$", want: ["^부산"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_dg, title: "귀산촌 가구 — 대구", tbl: DT_1A02040, itm: "^가구수$", want: ["^대구"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_ic, title: "귀산촌 가구 — 인천", tbl: DT_1A02040, itm: "^가구수$", want: ["^인천"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_us, title: "귀산촌 가구 — 울산", tbl: DT_1A02040, itm: "^가구수$", want: ["^울산"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_gg, title: "귀산촌 가구 — 경기", tbl: DT_1A02040, itm: "^가구수$", want: ["^경기"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_gw, title: "귀산촌 가구 — 강원", tbl: DT_1A02040, itm: "^가구수$", want: ["^강원"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_cb, title: "귀산촌 가구 — 충북", tbl: DT_1A02040, itm: "^가구수$", want: ["^충청북도|^충북"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_cn, title: "귀산촌 가구 — 충남", tbl: DT_1A02040, itm: "^가구수$", want: ["^충청남도|^충남"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_jb, title: "귀산촌 가구 — 전북", tbl: DT_1A02040, itm: "^가구수$", want: ["^전라북도|^전북"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_jn, title: "귀산촌 가구 — 전남", tbl: DT_1A02040, itm: "^가구수$", want: ["^전라남도|^전남"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_gb, title: "귀산촌 가구 — 경북", tbl: DT_1A02040, itm: "^가구수$", want: ["^경상북도|^경북"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsc_gn, title: "귀산촌 가구 — 경남", tbl: DT_1A02040, itm: "^가구수$", want: ["^경상남도|^경남"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

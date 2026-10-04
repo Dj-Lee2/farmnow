@@ -6231,6 +6231,54 @@ sources:
       - {id: fyi_r_gb, title: "경북 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650837$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
       - {id: fyi_r_gn, title: "경남 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650838$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
       - {id: fyi_r_me, title: "특·광역시 임가소득", tbl: DT_136023_11492, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213650839$", C2: "^13102136508X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_tot, title: "임가 자산(연도말)", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_fix, title: "임가 고정자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.93$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_cur, title: "임가 유동자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.94$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_land, title: "임가 토지 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_fac, title: "임가 시설물 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.13$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_mach, title: "임가 기계·기구·비품 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.80$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_plant, title: "임가 대식물 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.82$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_inv, title: "임가 재고자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.87$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_dep, title: "임가 예금 등", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_l_for, title: "임가 임지 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.23$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_l_pad, title: "임가 논 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.26$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_l_fld, title: "임가 밭 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.29$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_l_res, title: "임가 대지 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631676$", C2: "^13102136316X\\.32$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_tot, title: "임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_fix, title: "임가 고정부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.8$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_cur, title: "임가 유동부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.9$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_bank, title: "임가 금융기관 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.11$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_ind, title: "임가 개인 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.12$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_u_for, title: "임가 임업용 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.15$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_u_side, title: "임가 겸업용 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.16$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_u_hh, title: "임가 가계용 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_u_etc, title: "임가 기타용 차입금", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631348$", C2: "^13102136313X\\.18$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_a_u49, title: "경영주 49세 이하 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631697$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_a_u49, title: "경영주 49세 이하 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631351$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_a_50, title: "경영주 50대 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631629$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_a_50, title: "경영주 50대 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631329$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_a_60, title: "경영주 60대 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631630$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_a_60, title: "경영주 60대 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631330$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_a_70, title: "경영주 70세 이상 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631631$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_a_70, title: "경영주 70세 이상 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631331$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_gg, title: "경기 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363168$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_gg, title: "경기 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363138$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_gw, title: "강원 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363169$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_gw, title: "강원 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363139$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_cb, title: "충북 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631610$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_cb, title: "충북 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631310$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_cn, title: "충남 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631611$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_cn, title: "충남 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631311$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_jb, title: "전북 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631612$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_jb, title: "전북 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631312$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_jn, title: "전남 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631613$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_jn, title: "전남 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631313$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_gb, title: "경북 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631614$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_gb, title: "경북 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631314$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_gn, title: "경남 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631615$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_gn, title: "경남 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631315$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yas_r_me, title: "특·광역시 임가 자산", tbl: DT_136023_11485, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631616$", C2: "^13102136316X\\.96$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ydb_r_me, title: "특·광역시 임가 부채", tbl: DT_136023_11474, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631316$", C2: "^13102136313X\\.49$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

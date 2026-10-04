@@ -6955,6 +6955,31 @@ sources:
       - {id: fwy_ffruit, title: 근로자 고용 농업경영체 품목별 작년 판매액 평균 · 노지 과수, tbl: DT_111014_C103, org: "111", itm: "^작년 기준 농업경영체의 생산 품목별 판매액$", want: ["^노지 과수$", "^평균$"], unit: "만원", survey: 외국인고용실태조사(농업)}
       - {id: fwy_gfruit, title: 근로자 고용 농업경영체 품목별 작년 판매액 평균 · 시설 과수, tbl: DT_111014_C103, org: "111", itm: "^작년 기준 농업경영체의 생산 품목별 판매액$", want: ["^시설 과수$", "^평균$"], unit: "만원", survey: 외국인고용실태조사(농업)}
       - {id: fwy_live, title: 근로자 고용 농업경영체 품목별 작년 판매액 평균 · 축산, tbl: DT_111014_C103, org: "111", itm: "^작년 기준 농업경영체의 생산 품목별 판매액$", want: ["^축산$", "^평균$"], unit: "만원", survey: 외국인고용실태조사(농업)}
+      - {id: gwu_all, title: 전국 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^총계$", "^총계$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_agr, title: 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^총계$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_life, title: 생활용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^총계$", "^생활용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_ind, title: 공업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^총계$", "^공업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_etc, title: 기타 용도 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^총계$", "^기타$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwf_all, title: 전국 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^총계$", "^총계$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_agr, title: 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^총계$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwu_gg, title: 경기 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^경기", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_gw, title: 강원 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^강원", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_cb, title: 충북 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^충청북도$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_cn, title: 충남 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^충청남도$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_jb, title: 전북 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^전북|^전라북도$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_jn, title: 전남 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^전라남도$|^전남", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_gb, title: 경북 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^경상북도$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_gn, title: 경남 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^경상남도$", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwu_jj, title: 제주 농어업용 지하수 연간 이용량, tbl: DT_MLTM_998, org: "106", periods: 3, itm: "^시도별 지하수이용 현황$", want: ["^제주", "^농.어업용$"], unit: ㎥, survey: 지하수조사연보}
+      - {id: gwf_gg, title: 경기 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^경기", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_gw, title: 강원 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^강원", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_cb, title: 충북 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^충청북도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_cn, title: 충남 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^충청남도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_jb, title: 전북 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^전북|^전라북도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_jn, title: 전남 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^전라남도$|^전남", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_gb, title: 경북 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^경상북도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_gn, title: 경남 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^경상남도$", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
+      - {id: gwf_jj, title: 제주 농어업용 지하수 시설 수, tbl: DT_MLTM_990, org: "106", periods: 3, itm: "^시도별 지하수시설 현황$", want: ["^제주", "^농.어업용$"], unit: 곳, survey: 지하수조사연보}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

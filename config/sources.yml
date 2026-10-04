@@ -7110,6 +7110,39 @@ sources:
       - {id: lc_pp_c, title: "도시 1인당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균.1인당.$"], unit: "만원", survey: 농어업인 복지실태조사}
       - {id: lc_hh_f, title: "농어가 가구당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균.가구당.$"], unit: "만원", survey: 농어업인 복지실태조사}
       - {id: lc_pp_f, title: "농어가 1인당 월 평균 생활비", tbl: DT_11430045_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균.1인당.$"], unit: "만원", survey: 농어업인 복지실태조사}
+      - {id: lei_art_v, title: "농어촌 주민의 주된 문화·여가활동 — 문화예술관람활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화예술관람활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_art_p, title: "농어촌 주민의 주된 문화·여가활동 — 문화예술참여활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화예술참여활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_spt_v, title: "농어촌 주민의 주된 문화·여가활동 — 스포츠관람활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^스포츠관람활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_spt_p, title: "농어촌 주민의 주된 문화·여가활동 — 스포츠참여활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^스포츠참여활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_tour, title: "농어촌 주민의 주된 문화·여가활동 — 관광", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_hob, title: "농어촌 주민의 주된 문화·여가활동 — 취미오락활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^취미오락활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_soc, title: "농어촌 주민의 주된 문화·여가활동 — 사회활동", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^사회활동$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_rest, title: "농어촌 주민의 주된 문화·여가활동 — 휴식", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^휴식$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_tv, title: "농어촌 주민의 주된 문화·여가활동 — TV 시청 및 라디오 청취", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^TV 시청 및 라디오 청취$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_tv_c, title: "도시 주민의 주된 문화·여가활동 — TV 시청 및 라디오 청취", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^TV 시청 및 라디오 청취$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lei_tour_c, title: "도시 주민의 주된 문화·여가활동 — 관광", tbl: DT_11430054_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^관광$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_equip, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 장비 및 재료 구입이 어려움", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^장비 및 재료 구입이 어려움$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_edu, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 관련 교육 또는 프로그램이 없음", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^관련 교육 또는 프로그램이 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_inst, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 강사 및 전문가가 없음", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^강사 및 전문가가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_trans, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 교통이 불편", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^교통이 불편$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_info, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 관련 정보를 얻기가 어려움", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^관련 정보를 얻기가 어려움$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_ppl, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 함께할 사람을 만나기 어려움", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^함께할 사람을 만나기 어려움$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_fac, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 적합한 시설·장소가 없음", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^적합한 시설.장소가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_none, title: "농어촌 희망 문화·여가활동의 지역적 제약요인 — 해당없음", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^해당없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_fac_c, title: "도시 희망 문화·여가활동의 지역적 제약요인 — 적합한 시설·장소가 없음", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^적합한 시설.장소가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lb_trans_c, title: "도시 희망 문화·여가활동의 지역적 제약요인 — 교통이 불편", tbl: DT_11430082_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^교통이 불편$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: lsat_avg, title: "농어촌 문화·여가생활 만족도(100점 환산)", tbl: DT_11437062_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^평균$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: lsat_avg_c, title: "도시 문화·여가생활 만족도(100점 환산)", tbl: DT_11437062_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^평균$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: lsat_avg_f, title: "농어가 문화·여가생활 만족도(100점 환산)", tbl: DT_11437062_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^평균$"], unit: "점", survey: 농어업인 복지실태조사}
+      - {id: wsv_inc, title: "농어촌 주민이 필요로 하는 복지서비스 — 소득 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^소득 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_house, title: "농어촌 주민이 필요로 하는 복지서비스 — 주거 관련 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주거 관련 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_med, title: "농어촌 주민이 필요로 하는 복지서비스 — 보건의료·건강관리 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건의료.건강관리 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_care, title: "농어촌 주민이 필요로 하는 복지서비스 — 보육 및 교육 관련 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보육 및 교육 관련 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_cult, title: "농어촌 주민이 필요로 하는 복지서비스 — 문화·여가 향유 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화.여가 향유 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_daily, title: "농어촌 주민이 필요로 하는 복지서비스 — 일상생활 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^일상생활 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_job, title: "농어촌 주민이 필요로 하는 복지서비스 — 고용(취업) 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^고용.취업. 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_none, title: "농어촌 주민이 필요로 하는 복지서비스 — 필요한 서비스가 없음", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^필요한 서비스가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: wsv_med_f, title: "농어가가 필요로 하는 복지서비스 — 보건의료·건강관리 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^보건의료.건강관리 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

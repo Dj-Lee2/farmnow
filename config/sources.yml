@@ -6429,6 +6429,31 @@ sources:
       - {id: lgy_y4, title: "표고자목 평균 재배 연한 — 4년", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^4년$"], unit: "%", survey: 임업경영실태조사}
       - {id: lgy_y5, title: "표고자목 평균 재배 연한 — 5년", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^5년$"], unit: "%", survey: 임업경영실태조사}
       - {id: lgy_o6, title: "표고자목 평균 재배 연한 — 6년 이상", tbl: DT_136034_2024_Q012, org: "136", periods: 1, itm: ".", want: ["^6년 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mcs_tot, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 합계", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^합계$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_wood, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 표고자목·톱밥배지 구입비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^표고지목 구입비"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_spawn, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 종균비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^종균비$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_labor, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 인건비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_mat, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 기타재료비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타재료비$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_util, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 수도광열비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수도광열비$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_rent, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 임차료", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차료$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_rep, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 수선비", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수선비$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_etc, title: "버섯 재배 임가 1가구당 한 해 투입비용 — 기타", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_t_log, title: "버섯 재배 임가 1가구당 한 해 투입비용 합계 — 원목표고(노지)", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^합계$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_t_saw, title: "버섯 재배 임가 1가구당 한 해 투입비용 합계 — 톱밥배지 표고", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^합계$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mcs_t_fac, title: "버섯 재배 임가 1가구당 한 해 투입비용 합계 — 원목표고(시설)", tbl: DT_136022_9975, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^합계$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mwl_fert, title: "버섯 재배 임가의 폐골목(다 쓴 배지·원목) 처리방법 — 톱밥 유기질비료", tbl: DT_136022_9954, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥 유기질비료$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwl_fire, title: "버섯 재배 임가의 폐골목(다 쓴 배지·원목) 처리방법 — 화목", tbl: DT_136022_9954, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^화목$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwl_none, title: "버섯 재배 임가의 폐골목(다 쓴 배지·원목) 처리방법 — 특별한 용도 없음", tbl: DT_136022_9954, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^특별한 용도 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfd_own, title: "버섯 재배 임가의 생산비 조달 방법 — 자부담", tbl: DT_136022_9969, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfd_gsub, title: "버섯 재배 임가의 생산비 조달 방법 — 정부 보조", tbl: DT_136022_9969, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 보조$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfd_etc, title: "버섯 재배 임가의 생산비 조달 방법 — 기타", tbl: DT_136022_9969, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpc_up, title: "버섯 재배 임가의 최근 3년간 생산량 변화 — 늘어나고 있음", tbl: DT_136022_10048, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^늘어나고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpc_same, title: "버섯 재배 임가의 최근 3년간 생산량 변화 — 현상 유지", tbl: DT_136022_10048, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현상 유지"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpc_down, title: "버섯 재배 임가의 최근 3년간 생산량 변화 — 줄어들고 있음", tbl: DT_136022_10048, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mst_none, title: "표고버섯 재배 임가의 생표고 평균 저장 기간 — 저장 안 함", tbl: DT_136022_9953, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^저장 안함$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mst_u1, title: "표고버섯 재배 임가의 생표고 평균 저장 기간 — 1개월 미만", tbl: DT_136022_9953, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1개월 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mst_m12, title: "표고버섯 재배 임가의 생표고 평균 저장 기간 — 1~2개월", tbl: DT_136022_9953, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1~2개월$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mst_o3, title: "표고버섯 재배 임가의 생표고 평균 저장 기간 — 3개월 이상", tbl: DT_136022_9953, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^3개월 이상$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

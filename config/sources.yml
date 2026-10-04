@@ -6358,6 +6358,46 @@ sources:
       - {id: yfc_b_nut, title: "수실류 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631224$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
       - {id: yfc_b_oth, title: "기타 재배업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631225$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
       - {id: yfc_b_tmb, title: "육림·목재수확업 임업고정자본", tbl: DT_136023_11495, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631250$", C2: "^13102136312X\\.3$"}, unit: 천원, survey: 임가경제조사}
+      - {id: foi_n, title: "산림산업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633416$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_fem, title: "산림산업 여성 대표 사업체 비율", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633416$", C2: "^13102136334X\\.8$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_g_inp, title: "투입재 산업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633417$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_g_prd, title: "임산물 생산업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633422$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_g_mfg, title: "임산물 가공품 제조업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633427$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_g_dst, title: "임산물 유통업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633437$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_g_rec, title: "산림 휴양·여가 서비스업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633443$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_g_svc, title: "산림 전문 서비스업 사업체 수", tbl: DT_136038_11457, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633447$", C2: "^13102136334X\\.(4|7)$"}, sum: true, unit: 개, survey: 산림산업실태조사}
+      - {id: foi_emp, title: "산림산업 사업체 종사자", tbl: DT_136038_11480, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633719$", C2: "^13102136337X\\.(4|7|10)$"}, sum: true, unit: 명, survey: 산림산업실태조사}
+      - {id: foi_reg, title: "산림산업 상용근로자(정규직)", tbl: DT_136038_11480, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633719$", C2: "^13102136337X\\.7$"}, unit: 명, survey: 산림산업실태조사}
+      - {id: foi_tmp, title: "산림산업 임시·일용근로자(비정규직)", tbl: DT_136038_11480, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633719$", C2: "^13102136337X\\.10$"}, unit: 명, survey: 산림산업실태조사}
+      - {id: foi_fgn, title: "산림산업 외국인 종사자", tbl: DT_136038_11463, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213634219$", C2: "^13102136342X\\.(4|7|10)$"}, sum: true, unit: 명, survey: 산림산업실태조사}
+      - {id: foi_s14, title: "산림산업 분야 종사자 1~4명 사업체 비율", tbl: DT_136038_11464, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213634115$", C2: "^13102136341X\\.3$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_rv1, title: "산림산업 분야 매출액 1억 미만 사업체 비율", tbl: DT_136038_11477, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632915$", C2: "^13102136329X\\.3$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_rv2, title: "산림산업 분야 매출액 1~5억 미만 사업체 비율", tbl: DT_136038_11477, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632915$", C2: "^13102136329X\\.4$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_rv3, title: "산림산업 분야 매출액 5~10억 미만 사업체 비율", tbl: DT_136038_11477, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632915$", C2: "^13102136329X\\.5$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_rv4, title: "산림산업 분야 매출액 10~30억 미만 사업체 비율", tbl: DT_136038_11477, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632915$", C2: "^13102136329X\\.6$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_rv5, title: "산림산업 분야 매출액 30억 이상 사업체 비율", tbl: DT_136038_11477, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632915$", C2: "^13102136329X\\.7$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_b2g, title: "산림산업 매출 중 정부·공공(B2G) 비중", tbl: DT_136038_11461, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213634413$", C2: "^13102136344X\\.3$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_b2b, title: "산림산업 매출 중 법인·사업자(B2B) 비중", tbl: DT_136038_11461, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213634413$", C2: "^13102136344X\\.4$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_b2c, title: "산림산업 매출 중 개인소비자(B2C) 비중", tbl: DT_136038_11461, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213634413$", C2: "^13102136344X\\.5$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_div, title: "산림산업 외 다른 산업도 하는 사업체 비율", tbl: DT_136038_11458, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633343$", C2: "^13102136333X\\.32$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_dep, title: "산림산업 매출 비중 70% 이상 사업체 비율", tbl: DT_136038_11478, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632815$", C2: "^13102136328X\\.7$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_seoul, title: "서울 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.3$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_busan, title: "부산 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.4$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_daegu, title: "대구 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.5$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_incheon, title: "인천 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.6$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_gwangju, title: "광주 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.7$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_daejeon, title: "대전 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.8$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_ulsan, title: "울산 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.9$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_sejong, title: "세종 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.10$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_gg, title: "경기 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.11$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_gw, title: "강원 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.12$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_cb, title: "충북 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.13$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_cn, title: "충남 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.14$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_jb, title: "전북 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.15$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_jn, title: "전남 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.16$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_gb, title: "경북 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.17$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_gn, title: "경남 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.18$"}, unit: "%", survey: 산림산업실태조사}
+      - {id: foi_r_jj, title: "제주 소재 산림산업 사업체 비율", tbl: DT_136038_11476, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213633027$", C2: "^13102136330X\\.19$"}, unit: "%", survey: 산림산업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

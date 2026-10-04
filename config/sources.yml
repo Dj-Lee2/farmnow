@@ -5938,6 +5938,43 @@ sources:
       - {id: ccd_visit, title: 농어가의 영유아 보육·교육 어려움 — 방문교육(학습지 등)을 받기가 어렵다, tbl: DT_11437040_2025, org: "143", se: F, periods: 1, itm: "^영유아 보육/교육의 어려움$", want: ["^농어가$", "^방문교육\\(학습지 등\\)을 받기가 어렵다$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: ccd_night, title: 농어가의 영유아 보육·교육 어려움 — 야간시간에 이용가능한 자녀 돌봄시설이 부족하다, tbl: DT_11437040_2025, org: "143", se: F, periods: 1, itm: "^영유아 보육/교육의 어려움$", want: ["^농어가$", "^야간시간에 이용가능한 자녀 돌봄시설이 부족하다$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: ccd_none, title: 농어가의 영유아 보육·교육 어려움 — 특별한 어려움이 없음, tbl: DT_11437040_2025, org: "143", se: F, periods: 1, itm: "^영유아 보육/교육의 어려움$", want: ["^농어가$", "^특별한 어려움이 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: ift_paddy, title: 논 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^논$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: ift_field, title: 밭 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^밭$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: ift_orch, title: 과수 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^과수$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: ift_gh, title: 시설 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^시설$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: ift_cow, title: 소 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^소$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: ift_hen, title: 닭 농업인 업무상 손상 발생률, tbl: DT_14303_E1410, org: "143", se: F, periods: 2, itm: "^업무상 손상 발생률$", want: ["^닭$"], unit: "%", survey: 농업인 업무상 손상조사}
+      - {id: dft_paddy, title: 논 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^논$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dft_field, title: 밭 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^밭$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dft_orch, title: 과수 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^과수$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dft_gh, title: 시설 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^시설$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dft_cow, title: 소 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^소$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: dft_hen, title: 닭 농업인 업무상 질병 유병률, tbl: DT_14303_E1308, org: "143", se: F, periods: 2, itm: "^업무상 질병 유병률$", want: ["^닭$"], unit: "%", survey: 농업인 업무상 질병조사}
+      - {id: ink_all, title: 농업인 업무상 손상 건수(손상 종류), tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^총계$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_frac, title: 골절 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^골절$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_musc, title: 근육·인대 파열 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^근육/인대 파열\\(좌상\\)$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_bruise, title: 타박상·멍 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^타박상/멍$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_cut, title: 베임(열상) 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^베임\\(열상/개방상\\)$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_disc, title: 허리·목 디스크 파열 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^허리/목 디스크 파열$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_sprain, title: 삠·접질림(염좌) 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^삠/접질림\\(염좌\\)$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_amp, title: 신체 절단 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^신체 절단$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_conc, title: 일시적 의식상실(뇌진탕 등) 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^일시적인 의식상실\\(뇌진탕 등\\)$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_scr, title: 긁힘·찰과상 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^긁힘/찰과상$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_bite, title: 동물에 물림 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^동물에 물림\\(교상\\)$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_stab, title: 찔림 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^찔림$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: ink_pest, title: 농약 중독 업무상 손상 건수, tbl: DT_14303_E1429, org: "143", se: F, periods: 2, itm: "^업무상 손상건수$", want: ["^농약 중독$"], unit: "건", survey: 농업인 업무상 손상조사}
+      - {id: lds_tot, title: 농업인 수(경사지 사다리 이용 조사), tbl: DT_14303_E1417, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^총계$"], unit: "명", survey: 농업인 업무상 손상조사}
+      - {id: lds_most, title: 경사진 곳에서 사다리를 대부분 쓰는 농업인, tbl: DT_14303_E1417, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^대부분$"], unit: "명", survey: 농업인 업무상 손상조사}
+      - {id: lds_often, title: 경사진 곳에서 사다리를 자주 쓰는 농업인, tbl: DT_14303_E1417, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^자주$"], unit: "명", survey: 농업인 업무상 손상조사}
+      - {id: lds_some, title: 경사진 곳에서 사다리를 가끔 쓰는 농업인, tbl: DT_14303_E1417, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^가끔$"], unit: "명", survey: 농업인 업무상 손상조사}
+      - {id: lds_none, title: 경사진 곳에서 사다리를 쓰지 않는 농업인, tbl: DT_14303_E1417, org: "143", se: F, periods: 1, itm: "^농업인 수$", want: ["^없음$"], unit: "명", survey: 농업인 업무상 손상조사}
+      - {id: er_exp, title: 농어가의 응급실 이용 경험, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^응급실 이용 경험층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_exp_non, title: 비농어가의 응급실 이용 경험, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^비농어가$", "^응급실 이용 경험층$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_farm, title: 농어가의 응급실 이용 원인 — 농작업 안전사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^농작업 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_farm_non, title: 비농어가의 응급실 이용 원인 — 농작업 안전사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^비농어가$", "^농작업 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_traf, title: 농어가의 응급실 이용 원인 — 교통사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^교통사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_home, title: 농어가의 응급실 이용 원인 — 가정 내 안전사고, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^가정내 안전사고$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: er_emg, title: 농어가의 응급실 이용 원인 — 응급질환 발생, tbl: DT_11437016_2025, org: "143", se: F, periods: 1, itm: "^응급실 이용 경험 및 의료서비스 이용 원인$", want: ["^농어가$", "^응급질환발생$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

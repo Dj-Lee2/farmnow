@@ -7378,6 +7378,41 @@ sources:
       - {id: rtp_nev_all, title: "은퇴계획 — 건강이 허락하는 한 은퇴하지 않겠다(농어촌 전체)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^건강이 허락하는 한"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: rtp_done_all, title: "은퇴계획 — 이미 은퇴했음(농어촌 전체)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^합계$", "^이미 은퇴했음$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: rtp_done_o70, title: "은퇴계획 — 이미 은퇴했음(70대 이상)", tbl: DT_11430019_2025, org: "143", se: F, periods: 1, itm: ".", want: ["^70대 이상$", "^이미 은퇴했음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_c, title: "주된 문화·여가활동 동반자 — 혼자(도시)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_r, title: "주된 문화·여가활동 동반자 — 혼자(농어촌)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_eup, title: "주된 문화·여가활동 동반자 — 혼자(읍)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_myn, title: "주된 문화·여가활동 동반자 — 혼자(면)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_f, title: "주된 문화·여가활동 동반자 — 혼자(농어가)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_nf, title: "주된 문화·여가활동 동반자 — 혼자(비농어가)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_y30, title: "주된 문화·여가활동 동반자 — 혼자(30대 이하)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_o70, title: "주된 문화·여가활동 동반자 — 혼자(70대 이상)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_m, title: "주된 문화·여가활동 동반자 — 혼자(남)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^남$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_alone_w, title: "주된 문화·여가활동 동반자 — 혼자(여)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^여$", "^혼자$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_fam_r, title: "주된 문화·여가활동 동반자 — 가족·친지(농어촌)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^가족·친지$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_fam_c, title: "주된 문화·여가활동 동반자 — 가족·친지(도시)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^가족·친지$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_frd_r, title: "주된 문화·여가활동 동반자 — 친구(농어촌)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^친구$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_nbr_r, title: "주된 문화·여가활동 동반자 — 이웃 주민(농어촌)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^이웃 주민$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_nbr_o70, title: "주된 문화·여가활동 동반자 — 이웃 주민(70대 이상)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^이웃 주민$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: cmp_club_r, title: "주된 문화·여가활동 동반자 — 동호회 등(농어촌)", tbl: DT_11430055_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^동호회 등 공통의 관심사항을 가진 사람들$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_c, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(도시)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_r, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(농어촌)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_eup, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(읍)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_myn, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(면)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_f, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(농어가)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_y30, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(30대 이하)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_vil_o70, title: "주된 문화·여가활동 장소 위치 — 우리 마을 내(70대 이상)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^우리 마을 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_emd_r, title: "주된 문화·여가활동 장소 위치 — 우리 읍/면 내(농어촌)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^우리 읍/면 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_sgg_r, title: "주된 문화·여가활동 장소 위치 — 우리 시/군 내(농어촌)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^우리 시/군 내$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: loc_oth_r, title: "주된 문화·여가활동 장소 위치 — 다른 시/군(농어촌)", tbl: DT_11430058_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^다른 시/군$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_c, title: "주된 문화·여가활동 빈도 — 주 4회 이상(도시)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_r, title: "주된 문화·여가활동 빈도 — 주 4회 이상(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_myn, title: "주된 문화·여가활동 빈도 — 주 4회 이상(면)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_f, title: "주된 문화·여가활동 빈도 — 주 4회 이상(농어가)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_y30, title: "주된 문화·여가활동 빈도 — 주 4회 이상(30대 이하)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^30대 이하$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w4_o70, title: "주된 문화·여가활동 빈도 — 주 4회 이상(70대 이상)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^70대 이상$", "^주 4회 이상$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w23_r, title: "주된 문화·여가활동 빈도 — 주 2~3회(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주 2~3회$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_w1_r, title: "주된 문화·여가활동 빈도 — 주 1회 정도(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^주 1회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: frq_m13_r, title: "주된 문화·여가활동 빈도 — 월 1~3회 정도(농어촌)", tbl: DT_11430056_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^월 1~3회 정도$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

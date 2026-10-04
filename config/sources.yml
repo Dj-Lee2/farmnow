@@ -6777,6 +6777,38 @@ sources:
       - {id: rvp_some, title: 귀농인 마을 회의·행사 가끔 참여, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rvp_rare, title: 귀농인 마을 회의·행사 거의 참여 안 함, tbl: DT_114055_A036, org: "114", itm: "^마을 회의나 행사 참여 정도 및 이유$", want: ["^거의 참여하지"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: rem_y, title: 귀농 가구 인력 고용함, tbl: DT_114055_A070, org: "114", itm: "^인력 고용$", want: ["^예$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxa_y, title: 귀농 가구 농업생산 외 경제활동 함, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^예\\("], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_proc, title: 귀농 가구 농업 외 경제활동 · 농산물 가공, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농산물 가공$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_sell, title: 귀농 가구 농업 외 경제활동 · 농산물·가공식품 직접 판매, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농산물/가공식품 직접"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_tour, title: 귀농 가구 농업 외 경제활동 · 농촌관광 사업, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농촌관광 사업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_wage, title: 귀농 가구 농업 외 경제활동 · 농업 임금 노동, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^농업 임금 노동"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_self, title: 귀농 가구 농업 외 경제활동 · 자영업, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^자영업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_job, title: 귀농 가구 농업 외 경제활동 · 일반 직장 취업, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^일반 직장 취업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_temp, title: 귀농 가구 농업 외 경제활동 · 임시직, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^임시직"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rxt_day, title: 귀농 가구 농업 외 경제활동 · 비농업 일용직, tbl: DT_114055_A027, org: "114", itm: "^농업생산활동 이외에 경제활동$", want: ["^비농업 부문 일용직"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_proc, title: 귀농 가구 향후 하고 싶은 경제활동 · 농산물 가공, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^농산물 가공"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_sell, title: 귀농 가구 향후 하고 싶은 경제활동 · 직접 판매, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^농산물\\(가공식품\\) 직접"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_tour, title: 귀농 가구 향후 하고 싶은 경제활동 · 농촌관광 사업, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^농촌 관광 사업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_wage, title: 귀농 가구 향후 하고 싶은 경제활동 · 농업 임금 노동, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^농업 임금 노동"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_self, title: 귀농 가구 향후 하고 싶은 경제활동 · 자영업, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^자영업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_job, title: 귀농 가구 향후 하고 싶은 경제활동 · 일반 직장 취업, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^일반 직장 취업"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_temp, title: 귀농 가구 향후 하고 싶은 경제활동 · 임시직, tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^임시직"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rwx_none, title: 귀농 가구 향후 하고 싶은 경제활동 · 계획 없음(농사 전념), tbl: DT_114055_A028, org: "114", itm: "^향후 하고 싶은 경제활동$", want: ["^다른 경제활동 계획 없음"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_info, title: 귀농인 지역 활동 어려움 · 참여 정보 부족, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^지역활동 참여에 대한 정보 부족"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_time, title: 귀농인 지역 활동 어려움 · 시간 부족, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^시간 부족"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_hlth, title: 귀농인 지역 활동 어려움 · 건강·체력 부족, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^건강 및 체력 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_tts, title: 귀농인 지역 활동 어려움 · 기존 지역민 텃세, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^기존 지역민의 텃세$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_trans, title: 귀농인 지역 활동 어려움 · 교통수단 부족, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^교통 수단의 부족$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_grp, title: 귀농인 지역 활동 어려움 · 관심 단체 없음, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^지역 내 관심단체 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rla_none, title: 귀농인 지역 활동 어려움 · 어려움 없음, tbl: DT_114055_A041, org: "114", itm: "^지역 내 활동수행에서 겪는 어려움$", want: ["^어려움 없음$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rog_lead, title: 귀농인 지역 농업·농민단체 주도적·적극 참여, tbl: DT_114055_A037, org: "114", itm: "^지역 농업/농민단체 참여 정도 및 이유$", want: ["^주도적이고"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rog_vocal, title: 귀농인 지역 농업·농민단체 자주 참여·의견 개진, tbl: DT_114055_A037, org: "114", itm: "^지역 농업/농민단체 참여 정도 및 이유$", want: ["^자주 참여하며"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rog_quiet, title: 귀농인 지역 농업·농민단체 자주 참여·의견은 안 냄, tbl: DT_114055_A037, org: "114", itm: "^지역 농업/농민단체 참여 정도 및 이유$", want: ["^자주 참여하나"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rog_some, title: 귀농인 지역 농업·농민단체 가끔 참여, tbl: DT_114055_A037, org: "114", itm: "^지역 농업/농민단체 참여 정도 및 이유$", want: ["^가끔 참여함$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rog_rare, title: 귀농인 지역 농업·농민단체 거의 참여 안 함, tbl: DT_114055_A037, org: "114", itm: "^지역 농업/농민단체 참여 정도 및 이유$", want: ["^거의 참여하지"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnf_biz, title: 귀농 가구 농외소득 경험 · 겸업소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^농업 이외 사업에서"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnf_wage, title: 귀농 가구 농외소득 경험 · 근로소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^근로소득"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: rnf_prop, title: 귀농 가구 농외소득 경험 · 재산소득, tbl: DT_114055_A071, org: "114", itm: "^농외소득 항목$", want: ["^재산소득"], unit: "%", survey: 귀농귀촌실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

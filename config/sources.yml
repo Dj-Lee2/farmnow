@@ -6070,6 +6070,33 @@ sources:
       - {id: shk_r_gg, title: "표고버섯 접종목 생산지역별 이용량 — 경기", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^경기$"], unit: ㎥, survey: 임업경영실태조사}
       - {id: shk_r_gw, title: "표고버섯 접종목 생산지역별 이용량 — 강원", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^강원$"], unit: ㎥, survey: 임업경영실태조사}
       - {id: shk_r_gn, title: "표고버섯 접종목 생산지역별 이용량 — 경남", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^경남$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: mro_vg, title: "버섯 재배 임가가 보는 재배업 전망 — 매우 좋아질 것", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^① 매우 좋아질"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_g, title: "버섯 재배 임가가 보는 재배업 전망 — 다소 나아질 것", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^② 다소 나아질"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_s, title: "버섯 재배 임가가 보는 재배업 전망 — 현 상태 유지", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_b, title: "버섯 재배 임가가 보는 재배업 전망 — 다소 나빠질 것", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④ 다소 나빠질"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_vb, title: "버섯 재배 임가가 보는 재배업 전망 — 매우 나빠질 것", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^⑤ 매우 나빠질"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_good, title: "버섯 재배 임가가 보는 재배업 전망 — 좋아질 것(매우+다소)", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_bad, title: "버섯 재배 임가가 보는 재배업 전망 — 나빠질 것(매우+다소)", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④\\+⑤"], unit: "%", survey: 임업경영실태조사}
+      - {id: mro_sc, title: "버섯 재배업 전망 점수(100점 만점) — 전체", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(100점\\)"], unit: 점, survey: 임업경영실태조사}
+      - {id: mro_sc_log, title: "버섯 재배업 전망 점수(100점 만점) — 원목표고(노지)", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^평균\\(100점\\)"], unit: 점, survey: 임업경영실태조사}
+      - {id: mro_sc_saw, title: "버섯 재배업 전망 점수(100점 만점) — 톱밥배지 표고", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^평균\\(100점\\)"], unit: 점, survey: 임업경영실태조사}
+      - {id: mro_sc_fac, title: "버섯 재배업 전망 점수(100점 만점) — 원목표고(시설)", tbl: DT_136022_9972, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^평균\\(100점\\)"], unit: 점, survey: 임업경영실태조사}
+      - {id: mrb_dem, title: "버섯 재배업 전망이 나빠질 주된 이유 — 수요 감소(경기불황 등)", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_lab, title: "버섯 재배업 전망이 나빠질 주된 이유 — 노동력 부족", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_chn, title: "버섯 재배업 전망이 나빠질 주된 이유 — 중국산 수입", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중국산"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_over, title: "버섯 재배업 전망이 나빠질 주된 이유 — 생산자 과잉", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산자 과잉"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_clim, title: "버섯 재배업 전망이 나빠질 주된 이유 — 기후변화에 의한 생육부진", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_comp, title: "버섯 재배업 전망이 나빠질 주된 이유 — 경쟁력 부족", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^경쟁력 부족"], unit: "%", survey: 임업경영실태조사}
+      - {id: mrb_mkt, title: "버섯 재배업 전망이 나빠질 주된 이유 — 판로 부족", tbl: DT_136022_9973, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 부족"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_tech, title: "버섯 재배업에서 가장 시급히 개선할 점 — 재배기술 개발", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배기술 개발"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_var, title: "버섯 재배업에서 가장 시급히 개선할 점 — 우량품종 개발", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^우량품종"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_coop, title: "버섯 재배업에서 가장 시급히 개선할 점 — 계통출하에 의한 판매", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^계통출하"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_mat, title: "버섯 재배업에서 가장 시급히 개선할 점 — 원자재 수급", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^원자재 수급"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_fac, title: "버섯 재배업에서 가장 시급히 개선할 점 — 생산시설 확장", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산시설 확장"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_heat, title: "버섯 재배업에서 가장 시급히 개선할 점 — 냉난방비 지원", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^냉난방비"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_pest, title: "버섯 재배업에서 가장 시급히 개선할 점 — 병충해 방제", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병충해"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_dem, title: "버섯 재배업에서 가장 시급히 개선할 점 — 표고버섯 수요 확대", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^표고버섯 수요"], unit: "%", survey: 임업경영실태조사}
+      - {id: mri_cost, title: "버섯 재배업에서 가장 시급히 개선할 점 — 생산비 절감", tbl: DT_136022_10133, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산비 절감"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

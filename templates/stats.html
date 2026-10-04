@@ -2076,7 +2076,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동', 178) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도', 188) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2309,6 +2309,19 @@
   {{ hcard('여가 장소까지 편도 평균 소요시간', [('개인차량 이용', K.ttm_avg_car), ('30대 이하', K.ttm_avg_y30), ('도시', K.ttm_avg_c), ('대중교통 이용', K.ttm_avg_bus), ('읍', K.ttm_avg_eup), ('농어촌 전체', K.ttm_avg_r), ('면', K.ttm_avg_myn), ('농어가', K.ttm_avg_f), ('걸어서', K.ttm_avg_walk), ('70대 이상', K.ttm_avg_o70)], '분', '문화·여가활동 참여자 · 주된 활동 장소까지 한 번 가는 데 걸리는 시간', none, '#2458d6') }}
   {{ hcard('농어촌 주민의 여가 장소까지 편도 소요시간 분포', [('5분 미만', K.ttm_u5_r), ('5~10분', K.ttm_u10_r), ('10~20분', K.ttm_u20_r), ('20~30분', K.ttm_u30_r), ('30분~1시간', K.ttm_u60_r), ('1시간 이상', K.ttm_o60_r)], '%', '농어촌 문화·여가활동 참여자 대비', none, '#b04a07') }}
   {{ hcard('농어촌 주민이 앞으로 해보고 싶은 여가활동', [('스포츠 참여', K.wsh_spo_r), ('취미오락', K.wsh_hob_r), ('관광', K.wsh_tour_r), ('휴식', K.wsh_rest_r), ('사회활동', K.wsh_soc_r), ('문화예술 참여', K.wsh_artp_r), ('문화예술 관람', K.wsh_artv_r)], '%', '농어촌 응답자 대비 · 관광은 도시 ' ~ ('{:.1f}'.format(K.wsh_tour_c.vals[-1]) ~ '%' if K.wsh_tour_c else '-') ~ ' · 농어가 ' ~ ('{:.1f}'.format(K.wsh_tour_f.vals[-1]) ~ '%' if K.wsh_tour_f else '-') ~ ' · 70대 이상 ' ~ ('{:.1f}'.format(K.wsh_tour_o70.vals[-1]) ~ '%' if K.wsh_tour_o70 else '-'), none, '#2a8a5a') }}
+ </div>
+ <h3 class="sg-sub">앞으로 바라는 문화·여가활동 — 누구와, 얼마나 자주 <small>희망 문화·여가활동의 주된 동반자·빈도 · 도시·농어촌·연령대 비교 · 농어업인 복지실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('wcp_alone_r', 'zh1', ('앞으로 여가를 혼자 하고 싶다는 농어촌 주민 · 도시 ' ~ num(K.wcp_alone_c.vals[-1], '%')|striptags ~ ' · 지금 혼자 하는 비율 ' ~ num(K.cmp_alone_r.vals[-1], '%')|striptags) if K.wcp_alone_c and K.cmp_alone_r else none, '#5c6bc2') }}
+  {{ card('wcp_frd_r', 'zh2', ('앞으로 여가를 친구와 하고 싶다는 농어촌 주민 · 지금 친구와 하는 비율 ' ~ num(K.cmp_frd_r.vals[-1], '%')|striptags ~ ' · 가족·친지 희망 ' ~ num(K.wcp_fam_r.vals[-1], '%')|striptags) if K.cmp_frd_r and K.wcp_fam_r else none, '#2a8a5a') }}
+  {{ card('wcp_nbr_o70', 'zh3', ('앞으로 여가를 이웃 주민과 하고 싶다는 70대 이상 · 농어촌 전체 ' ~ num(K.wcp_nbr_r.vals[-1], '%')|striptags ~ ' · 동호회 등 ' ~ num(K.wcp_club_r.vals[-1], '%')|striptags) if K.wcp_nbr_r and K.wcp_club_r else none, '#b04a07') }}
+  {{ card('wfq_w4_r', 'zh4', ('여가를 주 4회 이상 하고 싶다는 농어촌 주민 · 도시 ' ~ num(K.wfq_w4_c.vals[-1], '%')|striptags ~ ' · 지금 주 4회 이상 ' ~ num(K.frq_w4_r.vals[-1], '%')|striptags) if K.wfq_w4_c and K.frq_w4_r else none, '#2458d6') }}
+  {{ card('wfq_w4_o70', 'zh5', ('여가를 주 4회 이상 하고 싶다는 70대 이상 농어촌 주민 · 30대 이하 ' ~ num(K.wfq_w4_y30.vals[-1], '%')|striptags ~ ' · 면 ' ~ num(K.wfq_w4_myn.vals[-1], '%')|striptags) if K.wfq_w4_y30 and K.wfq_w4_myn else none, '#c0392b') }}
+  {{ card('wfq_w23_r', 'zh6', ('여가를 주 2~3회 하고 싶다는 농어촌 주민 · 주 1회 ' ~ num(K.wfq_w1_r.vals[-1], '%')|striptags ~ ' · 월 1~3회 ' ~ num(K.wfq_m13_r.vals[-1], '%')|striptags) if K.wfq_w1_r and K.wfq_m13_r else none, '#1c7a45') }}
+  {{ hcard('농어촌 주민이 바라는 여가 동반자', [('혼자', K.wcp_alone_r), ('친구', K.wcp_frd_r), ('가족·친지', K.wcp_fam_r), ('이웃 주민', K.wcp_nbr_r), ('동호회 등', K.wcp_club_r), ('직장 동료', K.wcp_cow_r)], '%', '농어촌 응답자 대비 · 가족·친지는 도시 ' ~ ('{:.1f}'.format(K.wcp_fam_c.vals[-1]) ~ '%' if K.wcp_fam_c else '-'), none, '#2a8a5a') }}
+  {{ hcard('앞으로 여가를 혼자 하고 싶다는 비율', [('도시', K.wcp_alone_c), ('여', K.wcp_alone_w), ('면', K.wcp_alone_myn), ('70대 이상', K.wcp_alone_o70), ('비농어가', K.wcp_alone_nf), ('농어촌 전체', K.wcp_alone_r), ('농어가', K.wcp_alone_f), ('읍', K.wcp_alone_eup), ('남', K.wcp_alone_m), ('30대 이하', K.wcp_alone_y30)], '%', '응답자 대비', none, '#5c6bc2') }}
+  {{ hcard('여가를 주 4회 이상 하고 싶다는 비율', [('70대 이상', K.wfq_w4_o70), ('면', K.wfq_w4_myn), ('농어가', K.wfq_w4_f), ('농어촌 전체', K.wfq_w4_r), ('도시', K.wfq_w4_c), ('읍', K.wfq_w4_eup), ('30대 이하', K.wfq_w4_y30)], '%', '응답자 대비', none, '#2458d6') }}
+  {{ hcard('농어촌 주민이 바라는 여가 빈도', [('주 4회 이상', K.wfq_w4_r), ('주 2~3회', K.wfq_w23_r), ('주 1회 정도', K.wfq_w1_r), ('월 1~3회', K.wfq_m13_r), ('2~3개월에 1회', K.wfq_m23_r), ('4~6개월에 1회', K.wfq_m46_r), ('연 1회 정도', K.wfq_y1_r)], '%', '농어촌 응답자 대비', none, '#1c7a45') }}
  </div>
  </div></details>
 

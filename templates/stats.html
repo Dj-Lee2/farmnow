@@ -2726,7 +2726,7 @@
   {{ rcard('준공 사업비 중 국고 비중', K.lbd_nat, K.lbd_cost, 'lb6', '국고보조금 ÷ 준공 사업비 · 배수개선은 대부분 국고, 경지정리는 대부분 지방비', '#2458d6') }}
   {{ card('ufb_ha', 'lb7', ('관정 ' ~ K.ufb_well.vals[-1]|big ~ '개 · 물을 대는 밭 ' ~ K.ufb_irr.vals[-1]|big ~ 'ha · 그해 끝난 ' ~ K.ufb_n.vals[-1]|big ~ '개 지구') if K.ufb_well and K.ufb_irr and K.ufb_n else none, '#2458d6') }}
   {{ rcard('밭기반 정비 사업비 중 지방비 비중', K.ufb_loc, K.ufb_cost, 'lb8', '시·도와 시·군 부담 ÷ 총사업비 · 지방이양 사업이라 대부분 지방비', '#2458d6') }}
-  {{ qcard('밭기반 정비 1ha당 사업비', K.ufb_cost, K.ufb_ha, 'lb9', '총사업비 ÷ 정비 면적 · 용수원·경작로·배수로를 함께 갖춤', 1, '천원', '#2458d6') }}
+  {{ qcard('밭기반 정비 1ha당 사업비', K.ufb_cost, K.ufb_ha, 'lb9', '총사업비 ÷ 정비 면적 · 용수원·경작로·배수로를 함께 갖춤', 0.1, '만원', '#2458d6') }}
   {{ hcard('사업별 기반개량 사업비', [('수리시설 개보수', K.lbi_rep), ('배수개선', K.lbi_drn), ('경지정리(대구획)', K.lbi_cons), ('방조제 개보수', K.lbi_sea), ('기계화 경작로 확포장', K.lbi_road), ('밭기반 정비', K.lbi_upl)], '천원', '괄호는 기반개량 사업비 중 비중 · 오른쪽은 전년 대비', K.lbi_tot.vals[-1] if K.lbi_tot else none, '#5b8bd9') }}
   {{ hcard('시·도별 기반개량 사업비', [('전남', K.lbi_jn), ('전북', K.lbi_jb), ('충남', K.lbi_cn), ('경남', K.lbi_gn), ('경북', K.lbi_gb), ('경기', K.lbi_gg), ('농식품부·농어촌공사', K.lbi_krc), ('충북', K.lbi_cb), ('강원', K.lbi_gw), ('제주', K.lbi_jj)], '천원', '괄호는 기반개량 사업비 중 비중 · 나머지는 광역시·세종 · 오른쪽은 전년 대비', K.lbi_tot.vals[-1] if K.lbi_tot else none, '#5b8bd9') }}
   {{ hcard('사업 종류별 준공 면적', [('배수개선', K.lbd_drn_ha), ('경지정리', K.lbd_cons_ha), ('개간', K.lbd_rec_ha)], 'ha', '괄호는 전체 준공 면적 중 비중 · 해마다 끝나는 지구가 달라 등락이 큼 · 오른쪽은 전년 대비', K.lbd_ha.vals[-1] if K.lbd_ha else none, '#5b8bd9') }}

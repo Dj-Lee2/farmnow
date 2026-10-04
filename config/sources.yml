@@ -7741,6 +7741,41 @@ sources:
       - {id: fsi_amt_oth, title: "외식업 업종별 월평균 식재료 구매금액 — 기타 음식점", tbl: DT_114054_120, org: "114", se: F, periods: 2, itm: "^업종 중분류별 식재료 구매 행태$", want: ["^월평균 구매금액$", "^기타 음식점업$"], unit: 만원, survey: 외식업체 식재료 구매 실태조사}
       - {id: fsi_amt_bar, title: "외식업 업종별 월평균 식재료 구매금액 — 주점", tbl: DT_114054_120, org: "114", se: F, periods: 2, itm: "^업종 중분류별 식재료 구매 행태$", want: ["^월평균 구매금액$", "^주점업$"], unit: 만원, survey: 외식업체 식재료 구매 실태조사}
       - {id: fsi_amt_cafe, title: "외식업 업종별 월평균 식재료 구매금액 — 비알코올 음료점", tbl: DT_114054_120, org: "114", se: F, periods: 2, itm: "^업종 중분류별 식재료 구매 행태$", want: ["^월평균 구매금액$", "^비알코올 음료점업$"], unit: 만원, survey: 외식업체 식재료 구매 실태조사}
+      - {id: rmu_all, title: "귀농 후 도시재이주자 (5년 차 이내)", tbl: DT_1A02045, itm: "^계$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_y1, title: "귀농 후 도시재이주자 — 1년 차", tbl: DT_1A02045, itm: "^1년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_y2, title: "귀농 후 도시재이주자 — 2년 차", tbl: DT_1A02045, itm: "^2년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_y3, title: "귀농 후 도시재이주자 — 3년 차", tbl: DT_1A02045, itm: "^3년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_y4, title: "귀농 후 도시재이주자 — 4년 차", tbl: DT_1A02045, itm: "^4년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_y5, title: "귀농 후 도시재이주자 — 5년 차", tbl: DT_1A02045, itm: "^5년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_u40, title: "귀농 후 도시재이주자 — 30대 이하", tbl: DT_1A02045, itm: "^계$", want: ["^30대 이하$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_40, title: "귀농 후 도시재이주자 — 40대", tbl: DT_1A02045, itm: "^계$", want: ["^40대"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_50, title: "귀농 후 도시재이주자 — 50대", tbl: DT_1A02045, itm: "^계$", want: ["^50대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_60, title: "귀농 후 도시재이주자 — 60대", tbl: DT_1A02045, itm: "^계$", want: ["^60대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_70, title: "귀농 후 도시재이주자 — 70세 이상", tbl: DT_1A02045, itm: "^계$", want: ["^70세 이상$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_m, title: "귀농 후 도시재이주자 — 남자", tbl: DT_1A02045, itm: "^계$", want: ["^남자$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rmu_f, title: "귀농 후 도시재이주자 — 여자", tbl: DT_1A02045, itm: "^계$", want: ["^여자$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_all, title: "귀촌 후 도시재이주자 (5년 차 이내)", tbl: DT_1A02047, itm: "^계$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_y1, title: "귀촌 후 도시재이주자 — 1년 차", tbl: DT_1A02047, itm: "^1년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_y2, title: "귀촌 후 도시재이주자 — 2년 차", tbl: DT_1A02047, itm: "^2년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_y3, title: "귀촌 후 도시재이주자 — 3년 차", tbl: DT_1A02047, itm: "^3년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_y4, title: "귀촌 후 도시재이주자 — 4년 차", tbl: DT_1A02047, itm: "^4년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_y5, title: "귀촌 후 도시재이주자 — 5년 차", tbl: DT_1A02047, itm: "^5년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_u40, title: "귀촌 후 도시재이주자 — 30대 이하", tbl: DT_1A02047, itm: "^계$", want: ["^30대 이하$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_40, title: "귀촌 후 도시재이주자 — 40대", tbl: DT_1A02047, itm: "^계$", want: ["^40대"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_50, title: "귀촌 후 도시재이주자 — 50대", tbl: DT_1A02047, itm: "^계$", want: ["^50대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_60, title: "귀촌 후 도시재이주자 — 60대", tbl: DT_1A02047, itm: "^계$", want: ["^60대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcu_70, title: "귀촌 후 도시재이주자 — 70세 이상", tbl: DT_1A02047, itm: "^계$", want: ["^70세 이상$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_all, title: "귀촌 후 농업개시자 (5년 차 이내)", tbl: DT_1A02043, itm: "^계$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_y1, title: "귀촌 후 농업개시자 — 1년 차", tbl: DT_1A02043, itm: "^1년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_y2, title: "귀촌 후 농업개시자 — 2년 차", tbl: DT_1A02043, itm: "^2년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_y3, title: "귀촌 후 농업개시자 — 3년 차", tbl: DT_1A02043, itm: "^3년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_y4, title: "귀촌 후 농업개시자 — 4년 차", tbl: DT_1A02043, itm: "^4년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_y5, title: "귀촌 후 농업개시자 — 5년 차", tbl: DT_1A02043, itm: "^5년 차$", periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_u40, title: "귀촌 후 농업개시자 — 30대 이하", tbl: DT_1A02043, itm: "^계$", want: ["^30대 이하$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_40, title: "귀촌 후 농업개시자 — 40대", tbl: DT_1A02043, itm: "^계$", want: ["^40대"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_50, title: "귀촌 후 농업개시자 — 50대", tbl: DT_1A02043, itm: "^계$", want: ["^50대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_60, title: "귀촌 후 농업개시자 — 60대", tbl: DT_1A02043, itm: "^계$", want: ["^60대$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: rcf_70, title: "귀촌 후 농업개시자 — 70세 이상", tbl: DT_1A02043, itm: "^계$", want: ["^70세 이상$"], periods: 2, unit: 명, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

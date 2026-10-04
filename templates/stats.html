@@ -2054,7 +2054,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스', 108) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도', 117) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2196,6 +2196,18 @@
   {{ hcard('농어촌 주민의 주된 문화·여가활동', [('TV 시청·라디오 청취', K.lei_tv), ('휴식', K.lei_rest), ('스포츠 참여', K.lei_spt_p), ('사회활동', K.lei_soc), ('취미·오락', K.lei_hob), ('관광', K.lei_tour), ('문화예술 참여', K.lei_art_p), ('문화예술 관람', K.lei_art_v), ('스포츠 관람', K.lei_spt_v)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#5c6bc2') }}
   {{ hcard('원하는 여가를 하기 어려운 지역적 이유', [('해당 없음', K.lb_none), ('적합한 시설·장소가 없음', K.lb_fac), ('교통이 불편', K.lb_trans), ('함께할 사람을 만나기 어려움', K.lb_ppl), ('교육·프로그램이 없음', K.lb_edu), ('정보를 얻기 어려움', K.lb_info), ('장비·재료 구입이 어려움', K.lb_equip), ('강사·전문가가 없음', K.lb_inst)], '%', '농어촌 주민 전체 · 하나만 응답', none, '#b04a07') }}
   {{ hcard('농어촌 주민이 가장 필요로 하는 복지서비스', [('필요한 서비스 없음', K.wsv_none), ('소득 지원', K.wsv_inc), ('주거 관련', K.wsv_house), ('일상생활 지원', K.wsv_daily), ('보건의료·건강관리', K.wsv_med), ('문화·여가 향유 지원', K.wsv_cult), ('보육·교육 관련', K.wsv_care), ('고용(취업) 지원', K.wsv_job)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#d23a32') }}
+ </div>
+ <h3 class="sg-sub">농어촌 생활 부문별 중요도와 만족도 <small>보건의료·복지·교육·문화·기초생활기반·안전·환경·이웃·경제활동·정보화 10개 부문을 얼마나 중요하게 여기고 얼마나 만족하는지(100점 환산) · 도시·농어촌·농어가·이주민 비교 · 농어업인 복지실태조사(2023)</small></h3>
+ <div class="sg-g">
+  {{ card('rsat_tot', 'rs1', ('농어촌 생활 종합만족도(100점) · 도시 ' ~ num(K.rsat_tot_c.vals[-1], '점')|striptags ~ ' · 농어가 ' ~ num(K.rsat_tot_f.vals[-1], '점')|striptags) if K.rsat_tot_c and K.rsat_tot_f else none, '#1c7a45') }}
+  {{ card('rsat_med', 'rs2', ('가장 중요한 부문 보건의료 만족도 · 중요도 ' ~ num(K.rimp_med.vals[-1], '점')|striptags ~ ' · 도시 만족도 ' ~ num(K.rsat_med_c.vals[-1], '점')|striptags) if K.rimp_med and K.rsat_med_c else none, '#d23a32') }}
+  {{ card('rsat_cul', 'rs3', ('만족도 가장 낮은 문화·여가 여건 · 중요도 ' ~ num(K.rimp_cul.vals[-1], '점')|striptags ~ ' · 도시 만족도 ' ~ num(K.rsat_cul_c.vals[-1], '점')|striptags) if K.rimp_cul and K.rsat_cul_c else none, '#5c6bc2') }}
+  {{ card('rsat_edu', 'rs4', ('교육 여건 만족도 · 중요도 ' ~ num(K.rimp_edu.vals[-1], '점')|striptags ~ ' · 도시 만족도 ' ~ num(K.rsat_edu_c.vals[-1], '점')|striptags) if K.rimp_edu and K.rsat_edu_c else none, '#2458d6') }}
+  {{ card('rsat_eco', 'rs5', ('경제활동 여건(일자리·소득) 만족도 · 중요도 ' ~ num(K.rimp_eco.vals[-1], '점')|striptags ~ ' · 도시 만족도 ' ~ num(K.rsat_eco_c.vals[-1], '점')|striptags) if K.rimp_eco and K.rsat_eco_c else none, '#b04a07') }}
+  {{ card('rsat_env', 'rs6', ('만족도 가장 높은 환경·경관 · 도시 ' ~ num(K.rsat_env_c.vals[-1], '점')|striptags ~ ' · 중요도 ' ~ num(K.rimp_env.vals[-1], '점')|striptags) if K.rsat_env_c and K.rimp_env else none, '#7a6a3a') }}
+  {{ hcard('농어촌 주민이 꼽은 생활 부문별 중요도', [('보건의료', K.rimp_med), ('복지서비스', K.rimp_wel), ('안전', K.rimp_safe), ('경제활동 여건', K.rimp_eco), ('기초생활기반', K.rimp_base), ('환경·경관', K.rimp_env), ('이웃과의 관계', K.rimp_nbr), ('정보화 여건', K.rimp_info), ('교육 여건', K.rimp_edu), ('문화·여가 여건', K.rimp_cul)], '점', '농어촌 주민 전체 · 100점 환산', none, '#2458d6') }}
+  {{ hcard('농어촌 생활 부문별 만족도', [('환경·경관', K.rsat_env), ('안전', K.rsat_safe), ('이웃과의 관계', K.rsat_nbr), ('정보화 여건', K.rsat_info), ('복지서비스', K.rsat_wel), ('기초생활기반', K.rsat_base), ('경제활동 여건', K.rsat_eco), ('보건의료', K.rsat_med), ('교육 여건', K.rsat_edu), ('문화·여가 여건', K.rsat_cul)], '점', '농어촌 주민 전체 · 100점 환산 · 종합만족도 ' ~ ('{:.1f}'.format(K.rsat_tot.vals[-1]) ~ '점' if K.rsat_tot else '-'), none, '#1c7a45') }}
+  {{ hcard('누가 더 만족하나 — 생활 종합만족도', [('도시', K.rsat_tot_c), ('선주민', K.rsat_tot_nat), ('농어가', K.rsat_tot_f), ('읍', K.rsat_tot_eup), ('농어촌 전체', K.rsat_tot), ('비농어가', K.rsat_tot_nf), ('이주민', K.rsat_tot_mig), ('면', K.rsat_tot_myn)], '점', '100점 환산 · 이주민=다른 지역에서 옮겨 온 주민', none, '#7a6a3a') }}
  </div>
  </div></details>
 

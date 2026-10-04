@@ -7142,6 +7142,39 @@ sources:
       - {id: wsv_daily, title: "농어촌 주민이 필요로 하는 복지서비스 — 일상생활 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^일상생활 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: wsv_job, title: "농어촌 주민이 필요로 하는 복지서비스 — 고용(취업) 지원 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^고용.취업. 지원 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
       - {id: wsv_none, title: "농어촌 주민이 필요로 하는 복지서비스 — 필요한 서비스가 없음", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^필요한 서비스가 없음$"], unit: "%", survey: 농어업인 복지실태조사}
+      - {id: rimp_med, title: "농어촌 생활 부문별 중요도 — 보건의료(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건의료$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_wel, title: "농어촌 생활 부문별 중요도 — 복지서비스(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^복지서비스$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_edu, title: "농어촌 생활 부문별 중요도 — 교육 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^교육 여건$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_cul, title: "농어촌 생활 부문별 중요도 — 문화·여가 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화.여가 여건$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_base, title: "농어촌 생활 부문별 중요도 — 기초생활기반(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^기초생활기반$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_safe, title: "농어촌 생활 부문별 중요도 — 안전(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^안전$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_env, title: "농어촌 생활 부문별 중요도 — 환경·경관(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^환경.경관$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_nbr, title: "농어촌 생활 부문별 중요도 — 이웃과의 관계(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^이웃과의 관계$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_eco, title: "농어촌 생활 부문별 중요도 — 경제활동 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^경제활동 여건$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rimp_info, title: "농어촌 생활 부문별 중요도 — 정보화 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^정보화 여건$"], codes: {C2: "^0002"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot, title: "농어촌 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_med, title: "농어촌 생활 부문별 만족도 — 보건의료(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^보건의료$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_wel, title: "농어촌 생활 부문별 만족도 — 복지서비스(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^복지서비스$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_edu, title: "농어촌 생활 부문별 만족도 — 교육 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^교육 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_cul, title: "농어촌 생활 부문별 만족도 — 문화·여가 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^문화.여가 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_base, title: "농어촌 생활 부문별 만족도 — 기초생활기반(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^기초생활기반$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_safe, title: "농어촌 생활 부문별 만족도 — 안전(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^안전$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_env, title: "농어촌 생활 부문별 만족도 — 환경·경관(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^환경.경관$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_nbr, title: "농어촌 생활 부문별 만족도 — 이웃과의 관계(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^이웃과의 관계$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_eco, title: "농어촌 생활 부문별 만족도 — 경제활동 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^경제활동 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_info, title: "농어촌 생활 부문별 만족도 — 정보화 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어촌$", "^정보화 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_c, title: "도시 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_eup, title: "읍 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^읍$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_myn, title: "면 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^면$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_f, title: "농어가 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_nf, title: "비농어가 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^비농어가$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_mig, title: "이주민 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^이주민$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_tot_nat, title: "선주민 생활 종합만족도(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^선주민$", "^종합만족도$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_med_c, title: "도시 생활 부문별 만족도 — 보건의료(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^보건의료$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_edu_c, title: "도시 생활 부문별 만족도 — 교육 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^교육 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_cul_c, title: "도시 생활 부문별 만족도 — 문화·여가 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^문화.여가 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_env_c, title: "도시 생활 부문별 만족도 — 환경·경관(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^환경.경관$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
+      - {id: rsat_eco_c, title: "도시 생활 부문별 만족도 — 경제활동 여건(100점 환산)", tbl: DT_11430251_2023, org: "143", periods: 1, itm: ".", want: ["^도시$", "^경제활동 여건$"], codes: {C2: "^0003"}, unit: "점", survey: 농어업인 복지실태조사}
       - {id: wsv_med_f, title: "농어가가 필요로 하는 복지서비스 — 보건의료·건강관리 서비스", tbl: DT_11430305_2023, org: "143", periods: 1, itm: ".", want: ["^농어가$", "^보건의료.건강관리 서비스$"], unit: "%", survey: 농어업인 복지실태조사}
   - id: naver_market
     name: 네이버 증권 시세

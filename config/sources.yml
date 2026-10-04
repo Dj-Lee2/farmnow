@@ -6030,6 +6030,46 @@ sources:
       - {id: cmk_dd, title: "한우 1++등급 경락가격 — 도드람", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^도드람$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: cmk_gr, title: "한우 1++등급 경락가격 — 농협고령", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^경락가격$", want: ["^한우$", "^1\\+\\+$", "^농협고령$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: cmk_n, title: "한우 1++등급 경락 두수 — 전국 도매시장", tbl: DT_APGS_009, org: "323", se: M, periods: 12, itm: "^두수$", want: ["^한우$", "^1\\+\\+$", "^계$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: lrp_kind, title: 농지 임차료 지불 형태 — 현물, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^10$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_kfix, title: 농지 임차료 지불 형태 — 현물 정액, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^101$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_krate, title: 농지 임차료 지불 형태 — 현물 정율, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^102$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_cash, title: 농지 임차료 지불 형태 — 현금, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^20$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_cfix, title: 농지 임차료 지불 형태 — 현금 정액, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^201$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_crate, title: 농지 임차료 지불 형태 — 현금 정율, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^202$"}, unit: "%", survey: 농가경제조사}
+      - {id: lrp_free, title: 농지 임차료 지불 형태 — 무상 임차, tbl: DT_1EQ003, itm: "^임차료 지불 형태$", want: [".*"], codes: {C1: "^30$"}, unit: "%", survey: 농가경제조사}
+      - {id: rc_sm_own, title: "쌀가공식품 판매방식 비중 직영 영업소(점포)", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^직영 영업소\\(점포\\)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_dir, title: "쌀가공식품 판매방식 비중 소비자 직접 판매", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^소비자 직접 판매$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_oem, title: "쌀가공식품 판매방식 비중 OEM(주문자 상표 생산)", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^OEM$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_odm, title: "쌀가공식품 판매방식 비중 ODM(제조자 개발 생산)", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^ODM$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_pb, title: "쌀가공식품 판매방식 비중 PB(유통업체 자체 상표)", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^PB$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_cons, title: "쌀가공식품 판매방식 비중 위탁판매", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^위탁판매$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_etc, title: "쌀가공식품 판매방식 비중 기타", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^기타$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_dir_tk, title: "쌀가공식품 판매방식 비중 소비자 직접 판매 — 쌀떡류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^소비자 직접 판매$", want: ["^쌀떡류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_dir_ck, title: "쌀가공식품 판매방식 비중 소비자 직접 판매 — 쌀과자류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^소비자 직접 판매$", want: ["^쌀과자류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_dir_lq, title: "쌀가공식품 판매방식 비중 소비자 직접 판매 — 주류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^소비자 직접 판매$", want: ["^주류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_dir_rb, title: "쌀가공식품 판매방식 비중 소비자 직접 판매 — 가공밥류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^소비자 직접 판매$", want: ["^가공밥류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_cons_tk, title: "쌀가공식품 판매방식 비중 위탁판매 — 쌀떡류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^위탁판매$", want: ["^쌀떡류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_cons_ck, title: "쌀가공식품 판매방식 비중 위탁판매 — 쌀과자류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^위탁판매$", want: ["^쌀과자류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_cons_lq, title: "쌀가공식품 판매방식 비중 위탁판매 — 주류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^위탁판매$", want: ["^주류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rc_sm_cons_rb, title: "쌀가공식품 판매방식 비중 위탁판매 — 가공밥류", tbl: DT_446001_A032, org: "466", periods: 2, itm: "^위탁판매$", want: ["^가공밥류$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: shk_n_all, title: "표고버섯 접종목 이용 임가 — 전체", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^임가수$", want: ["^전체$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: shk_v_all, title: "표고버섯 접종목 이용량 — 전체", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^이용량$", want: ["^전체$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_n_u30, title: "표고버섯 접종목 이용 임가 — 30㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^임가수$", want: ["^30㎥ 미만$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: shk_v_u30, title: "표고버섯 접종목 이용량 — 30㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^이용량$", want: ["^30㎥ 미만$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_n_u100, title: "표고버섯 접종목 이용 임가 — 30㎥~100㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^임가수$", want: ["^30㎥~100㎥ 미만$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: shk_v_u100, title: "표고버섯 접종목 이용량 — 30㎥~100㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^이용량$", want: ["^30㎥~100㎥ 미만$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_n_u500, title: "표고버섯 접종목 이용 임가 — 100㎥~500㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^임가수$", want: ["^100㎥~500㎥ 미만$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: shk_v_u500, title: "표고버섯 접종목 이용량 — 100㎥~500㎥ 미만", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^이용량$", want: ["^100㎥~500㎥ 미만$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_n_o500, title: "표고버섯 접종목 이용 임가 — 500㎥ 이상", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^임가수$", want: ["^500㎥ 이상$"], unit: 개소, survey: 임업경영실태조사}
+      - {id: shk_v_o500, title: "표고버섯 접종목 이용량 — 500㎥ 이상", tbl: DT_136034_2024_Q006, org: "136", periods: 3, itm: "^이용량$", want: ["^500㎥ 이상$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_jn, title: "표고버섯 접종목 생산지역별 이용량 — 전남", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^전남$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_cn, title: "표고버섯 접종목 생산지역별 이용량 — 충남", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^충남$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_gb, title: "표고버섯 접종목 생산지역별 이용량 — 경북", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^경북$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_jb, title: "표고버섯 접종목 생산지역별 이용량 — 전북", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^전북$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_cb, title: "표고버섯 접종목 생산지역별 이용량 — 충북", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^충북$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_gg, title: "표고버섯 접종목 생산지역별 이용량 — 경기", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^경기$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_gw, title: "표고버섯 접종목 생산지역별 이용량 — 강원", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^강원$"], unit: ㎥, survey: 임업경영실태조사}
+      - {id: shk_r_gn, title: "표고버섯 접종목 생산지역별 이용량 — 경남", tbl: DT_136034_2024_Q007, org: "136", periods: 3, itm: "^이용량$", want: ["^경남$"], unit: ㎥, survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

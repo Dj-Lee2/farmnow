@@ -2054,7 +2054,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식', 68) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안', 79) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2144,6 +2144,20 @@
   {{ hcard('대기 오염의 주된 원인', [('미세먼지', K.rea_dust), ('지역공장 매연·배출먼지', K.rea_fac), ('자동차 배기가스', K.rea_car), ('기타', K.rea_etc), ('쓰레기 등 소각', K.rea_burn)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#7a5cc2') }}
   {{ hcard('악취의 주된 원인', [('축사', K.rod_barn), ('쓰레기 투기·매립', K.rod_trash), ('공장', K.rod_fac), ('하수 처리장', K.rod_sew), ('기타', K.rod_etc)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#b0503a') }}
   {{ hcard('사는 지역에서 가장 개선해야 할 환경문제', [('특별히 없다', K.rim_none), ('쓰레기', K.rim_trash), ('소음과 진동', K.rim_noise), ('악취', K.rim_odor), ('대기 오염', K.rim_air), ('수질 오염', K.rim_water), ('토양 오염', K.rim_soil)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">농어촌에 먼저 필요한 정책과 농어업의 가치 <small>농어촌지역에 가장 먼저 필요한 정책, 농어업·농어촌의 가장 중요한 가치, 경관을 지키는 방안(하나만 응답) · 농어촌 주민 전체와 농어가 비교 · 농어업인 복지실태조사(2024)</small></h3>
+ <div class="sg-g">
+  {{ card('rpo_job', 'lp1', ('우선 필요정책 1위 경제·일자리 기반 · 농어가 ' ~ num(K.rpo_job_f.vals[-1], '%')|striptags) if K.rpo_job_f else none, '#b0503a') }}
+  {{ card('rpo_fac', 'lp2', ('생활서비스 시설 확충 · 농어가 ' ~ num(K.rpo_fac_f.vals[-1], '%')|striptags ~ ' · 주거·정주여건 ' ~ num(K.rpo_house.vals[-1], '%')|striptags) if K.rpo_fac_f and K.rpo_house else none, '#5c6bc2') }}
+  {{ card('rpo_fut', 'lp3', ('농업의 미래 보호를 1순위로 · 농어가 ' ~ num(K.rpo_fut_f.vals[-1], '%')|striptags) if K.rpo_fut_f else none, '#1c7a45') }}
+  {{ card('rvl_nat', 'lp4', ('농어업 가치 1위 자연환경·경관 보전 · 농어가 ' ~ num(K.rvl_nat_f.vals[-1], '%')|striptags) if K.rvl_nat_f else none, '#2f8a5a') }}
+  {{ card('rvl_food', 'lp5', ('식량의 안정적 공급 · 국토 균형 발전 ' ~ num(K.rvl_bal.vals[-1], '%')|striptags ~ ' · 기후변화 완화 ' ~ num(K.rvl_clim.vals[-1], '%')|striptags) if K.rvl_bal and K.rvl_clim else none, '#7a6a3a') }}
+  {{ card('lsc_infra', 'lp6', ('경관 보전 방안 1위 인프라 지원 · 인식 강화 ' ~ num(K.lsc_aware.vals[-1], '%')|striptags ~ ' · 금전적 보상 ' ~ num(K.lsc_pay.vals[-1], '%')|striptags) if K.lsc_aware and K.lsc_pay else none, '#2458d6') }}
+  {{ hcard('농어촌지역에 가장 먼저 필요한 정책 — 주민 전체', [('경제·일자리 기반 활성화', K.rpo_job), ('생활서비스 시설 확충', K.rpo_fac), ('주거·정주여건 개선', K.rpo_house), ('환경·경관 보전·관리', K.rpo_env), ('농업의 미래 보호', K.rpo_fut), ('주민 교육·건강 증진', K.rpo_edu), ('생활서비스 제공·공동체 육성', K.rpo_svc)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#b0503a') }}
+  {{ hcard('농어촌지역에 가장 먼저 필요한 정책 — 농어가', [('경제·일자리 기반 활성화', K.rpo_job_f), ('생활서비스 시설 확충', K.rpo_fac_f), ('주거·정주여건 개선', K.rpo_house_f), ('농업의 미래 보호', K.rpo_fut_f), ('환경·경관 보전·관리', K.rpo_env_f), ('주민 교육·건강 증진', K.rpo_edu_f), ('생활서비스 제공·공동체 육성', K.rpo_svc_f)], '%', '농어가 · 하나만 응답 · 합 100', none, '#7a6a3a') }}
+  {{ hcard('농어업·농어촌의 가장 중요한 가치 — 주민 전체', [('자연환경·경관 보전', K.rvl_nat), ('국토 균형 발전', K.rvl_bal), ('식량의 안정적 공급', K.rvl_food), ('농어업 유산 보존·계승', K.rvl_her), ('관광·체험·치유·휴양 공간', K.rvl_tour), ('기후변화 완화·탄소저감', K.rvl_clim)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#2f8a5a') }}
+  {{ hcard('농어업·농어촌의 가장 중요한 가치 — 농어가', [('자연환경·경관 보전', K.rvl_nat_f), ('국토 균형 발전', K.rvl_bal_f), ('농어업 유산 보존·계승', K.rvl_her_f), ('식량의 안정적 공급', K.rvl_food_f), ('관광·체험·치유·휴양 공간', K.rvl_tour_f), ('기후변화 완화·탄소저감', K.rvl_clim_f)], '%', '농어가 · 하나만 응답 · 합 100', none, '#1c7a45') }}
+  {{ hcard('농어촌 경관을 지키는 방안', [('지역·환경개발 인프라 지원', K.lsc_infra), ('경관 유지·보전 인식 강화', K.lsc_aware), ('경관보전직불제 등 금전적 보상', K.lsc_pay), ('주민의 자발적 참여', K.lsc_vol)], '%', '농어촌 주민 전체 · 하나만 응답 · 합 100', none, '#2458d6') }}
  </div>
  </div></details>
 

@@ -8233,6 +8233,33 @@ sources:
       - {id: remp_kf, title: "대한민국 농촌 지역 취업자 여자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^대한민국$", "^여자$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
       - {id: remp_us, title: "미국 농촌 지역 취업자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^미국$", "^전체$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
       - {id: remp_cn, title: "중국 농촌 지역 취업자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^중국$", "^전체$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
+      - {id: wcat_wd, title: "세계 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^세계$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_kr, title: "대한민국 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^대한민국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_jp, title: "일본 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^일본$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_cn, title: "중국 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^중국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_us, title: "미국 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^미국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_in, title: "인도 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^인도$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_br, title: "브라질 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^브라질$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_au, title: "오스트레일리아 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^오스트레일리아$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_nz, title: "뉴질랜드 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^뉴질랜드$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wcat_fr, title: "프랑스 소 사육 두수", tbl: DT_2KAA409, itm: "^소$", want: ["^프랑스$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_wd, title: "세계 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^세계$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_kr, title: "대한민국 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^대한민국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_jp, title: "일본 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^일본$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_cn, title: "중국 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^중국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_us, title: "미국 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^미국$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_de, title: "독일 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^독일$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_es, title: "스페인 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^스페인$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_vn, title: "베트남 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^베트남$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wpig_dk, title: "덴마크 돼지 사육 두수", tbl: DT_2KAA410, itm: "^돼지$", want: ["^덴마크$"], unit: 마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_wd, title: "세계 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^세계$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_kr, title: "대한민국 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^대한민국$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_jp, title: "일본 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^일본$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_cn, title: "중국 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^중국$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_us, title: "미국 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^미국$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_br, title: "브라질 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^브라질$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_in, title: "인도 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^인도$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: wchk_id, title: "인도네시아 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^인도네시아$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

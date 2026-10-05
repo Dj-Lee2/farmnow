@@ -9104,6 +9104,39 @@ sources:
       - {id: hf_ga, title: "건강기능식품 마늘 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^마늘$"], unit: "천원", survey: 건강기능식품 생산실적}
       - {id: hf_bn, title: "건강기능식품 바나바잎 추출물 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^바나바잎 추출물$"], unit: "천원", survey: 건강기능식품 생산실적}
       - {id: hf_hg, title: "건강기능식품 홍국 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^홍국$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: fbs_t_direct, title: "식품제조업 국산 원료 산지 직구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_farm, title: "식품제조업 국산 원료 개별농가에서 직구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^개별농가$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_corp, title: "식품제조업 국산 원료 농업법인에서 직구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^농업법인$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_coll, title: "식품제조업 국산 원료 산지수집상에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^산지수집상$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_coop, title: "식품제조업 국산 원료 산지 농수축협에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^산지 농수축협$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_self, title: "식품제조업 국산 원료 자체생산", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^자체생산$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_whs, title: "식품제조업 국산 원료 도매시장에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^도매시장$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_apc, title: "식품제조업 국산 원료 농수산물 종합유통센터에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^농수산물\\s+종합유통\\s+센터$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_trad, title: "식품제조업 국산 원료 재래시장에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^재래시장$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_vend, title: "식품제조업 국산 원료 중간도매·벤더업체에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^중간도매/벤더업체$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_mfr, title: "식품제조업 국산 원료 원재료 제조업체에서 구매", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^원재료제조업체$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_t_cont, title: "식품제조업 국산 원료 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^전 체$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_rice, title: "식품제조업 국산 쌀 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^쌀$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_cab, title: "식품제조업 국산 배추 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^배추$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_rad, title: "식품제조업 국산 무 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^무$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_soy, title: "식품제조업 국산 대두 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^대두$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_pepp, title: "식품제조업 국산 고춧가루 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^고춧가루$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_gar, title: "식품제조업 국산 마늘 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^마늘\\(깐마늘포함\\)$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_oni, title: "식품제조업 국산 양파 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^양파$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_pot, title: "식품제조업 국산 감자 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^감자$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_gin, title: "식품제조업 국산 인삼 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^인삼$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_apl, title: "식품제조업 국산 사과 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^사과$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_milk, title: "식품제조업 국산 원유 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^원유$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_d_pork, title: "식품제조업 국산 돼지고기 산지 직구매 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^돼지고기$", "^산지 직구매$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_rice, title: "식품제조업 국산 쌀 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^쌀$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_cab, title: "식품제조업 국산 배추 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^배추$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_rad, title: "식품제조업 국산 무 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^무$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_soy, title: "식품제조업 국산 대두 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^대두$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_gar, title: "식품제조업 국산 마늘 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^마늘\\(깐마늘포함\\)$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_gin, title: "식품제조업 국산 인삼 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^인삼$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_apl, title: "식품제조업 국산 사과 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^사과$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_milk, title: "식품제조업 국산 원유 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^원유$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: fbs_c_pork, title: "식품제조업 국산 돼지고기 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^돼지고기$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -8405,7 +8405,6 @@ sources:
       - {id: rcl_hb, title: "홍보지구 사업비", tbl: DT_311001_024, org: "311", periods: 3, itm: "^농지확대개발사업\\(간척 및 매립\\)$", want: ["^홍보$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
       - {id: rcl_ys31, title: "영산강Ⅲ-1지구 사업비", tbl: DT_311001_024, org: "311", periods: 3, itm: "^농지확대개발사업\\(간척 및 매립\\)$", want: ["^영산강Ⅲ-1$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
       - {id: rcl_ssa, title: "서산A지구 사업비", tbl: DT_311001_024, org: "311", periods: 3, itm: "^농지확대개발사업\\(간척 및 매립\\)$", want: ["^서산A$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
-      - {id: rcl_gg2, title: "금강Ⅱ지구 사업비", tbl: DT_311001_024, org: "311", periods: 3, itm: "^농지확대개발사업\\(간척 및 매립\\)$", want: ["^금강Ⅱ$", "^계$"], unit: 천원, survey: 농업생산기반정비사업 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

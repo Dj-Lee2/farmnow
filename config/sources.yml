@@ -8482,6 +8482,41 @@ sources:
       - {id: flh_t_sap, title: "수액 1ha당 총 노동시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
       - {id: flh_h_sap, title: "수액 1ha당 고용노동 시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
       - {id: flh_v_sap, title: "수액 1ha당 수확작업 시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_shn, title: "원목표고(노지) 1만 본당 총 노동시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_shn, title: "원목표고(노지) 1만 본당 고용노동 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_shn, title: "원목표고(노지) 1만 본당 수확작업 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_shf, title: "원목표고(시설) 1만 본당 총 노동시간", tbl: DT_136036_11603, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_shf, title: "원목표고(시설) 1만 본당 고용노동 시간", tbl: DT_136036_11603, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_shf, title: "원목표고(시설) 1만 본당 수확작업 시간", tbl: DT_136036_11603, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_sws, title: "톱밥배지표고 1만 봉당 총 노동시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_sws, title: "톱밥배지표고 1만 봉당 고용노동 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_sws, title: "톱밥배지표고 1만 봉당 수확작업 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_mok, title: "목이버섯 1만 봉당 총 노동시간", tbl: DT_136036_11582, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_mok, title: "목이버섯 1만 봉당 고용노동 시간", tbl: DT_136036_11582, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_mok, title: "목이버섯 1만 봉당 수확작업 시간", tbl: DT_136036_11582, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_weed, title: "원목표고(노지) 1만 본당 제초작업 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_shade, title: "원목표고(노지) 1만 본당 차광막 설치 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^차광막설치$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_water, title: "원목표고(노지) 1만 본당 관수작업 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^관수작업", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_pack, title: "원목표고(노지) 1만 본당 선별·포장 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^선별 및 포장$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_carry, title: "원목표고(노지) 1만 본당 운반·저장 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^운반 및 저장$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_dry, title: "원목표고(노지) 1만 본당 건조작업 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^건조작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_drill, title: "원목표고(노지) 1만 본당 드릴작업(천공) 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^드릴작업", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_tidy, title: "원목표고(노지) 1만 본당 재배지 정리 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^재배지 정리", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_disp, title: "원목표고(노지) 1만 본당 표고목 폐기 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^표고목 폐기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_turn, title: "원목표고(노지) 1만 본당 표고목 뒤집기 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^표고목 뒤집기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_inoc, title: "원목표고(노지) 1만 본당 종균 접종 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^종균 접종$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_pn_stand, title: "원목표고(노지) 1만 본당 표고목 세우기 시간", tbl: DT_136036_11589, org: "136", itm: "^값$", want: ["^표고목 세우기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_water, title: "톱밥배지표고 1만 봉당 관수작업 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^관수작업", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_house, title: "톱밥배지표고 1만 봉당 하우스 관리 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^하우스관리", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_pack, title: "톱밥배지표고 1만 봉당 선별·포장 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^선별 및 포장$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_carry, title: "톱밥배지표고 1만 봉당 운반·저장 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^운반 및 저장$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_dry, title: "톱밥배지표고 1만 봉당 건조작업 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^건조작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_punch, title: "톱밥배지표고 1만 봉당 타공 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^타공$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_unload, title: "톱밥배지표고 1만 봉당 배지 하역 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^배지하역$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_stack, title: "톱밥배지표고 1만 봉당 배지 운반·쌓기 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^배지운반및쌓기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_disp, title: "톱밥배지표고 1만 봉당 배지 폐기 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^배지폐기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_thin, title: "톱밥배지표고 1만 봉당 솎아내기 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^솎아내기$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_ps_tidy, title: "톱밥배지표고 1만 봉당 재배지 정리 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^재배지 정리", "^계$"], unit: 시간, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -8517,6 +8517,39 @@ sources:
       - {id: flh_ps_disp, title: "톱밥배지표고 1만 봉당 배지 폐기 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^배지폐기$", "^계$"], unit: 시간, survey: 임산물생산조사}
       - {id: flh_ps_thin, title: "톱밥배지표고 1만 봉당 솎아내기 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^솎아내기$", "^계$"], unit: 시간, survey: 임산물생산조사}
       - {id: flh_ps_tidy, title: "톱밥배지표고 1만 봉당 재배지 정리 시간", tbl: DT_136036_11593, org: "136", itm: "^값$", want: ["^재배지 정리", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sdr_tot, title: "종자업체 연구용 포장 평균 면적", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^평균$", "^계$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_open, title: "종자업체 연구용 포장 평균 면적 노지", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^평균$", "^노지$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_glass, title: "종자업체 연구용 포장 평균 면적 유리온실", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^평균$", "^유리온실$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_vinyl, title: "종자업체 연구용 포장 평균 면적 비닐온실", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^평균$", "^비닐온실$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_s, title: "소규모 종자업체 연구용 포장 평균 면적", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^소규모$", "^계$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_sm, title: "중소규모 종자업체 연구용 포장 평균 면적", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^중소규모$", "^계$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_m, title: "중규모 종자업체 연구용 포장 평균 면적", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^중규모$", "^계$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdr_l, title: "대규모 종자업체 연구용 포장 평균 면적", tbl: DT_114052_008A, org: "114", se: F, periods: 2, itm: "^포장면적$", want: ["^대규모$", "^계$"], unit: ㎡, survey: 종자업실태조사}
+      - {id: sdh_conv, title: "종자업체 관행육종인력", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^관행육종인력$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_bio, title: "종자업체 생명공학인력", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^생명공학인력$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_conv_u40, title: "종자업체 관행육종인력 39세 이하", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^관행육종인력$", "^39세 이하$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_conv_40, title: "종자업체 관행육종인력 40대", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^관행육종인력$", "^40대$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_conv_50, title: "종자업체 관행육종인력 50대", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^관행육종인력$", "^50대$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_conv_60, title: "종자업체 관행육종인력 60세 이상", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^관행육종인력$", "^60세 이상$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_bio_hs, title: "종자업체 생명공학인력 고졸이하", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^생명공학인력$", "^고졸이하$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_bio_ug, title: "종자업체 생명공학인력 대졸", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^생명공학인력$", "^대졸$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdh_bio_grad, title: "종자업체 생명공학인력 대학원", tbl: DT_114052_011, org: "114", se: F, periods: 2, itm: "^인원수$", want: ["^생명공학인력$", "^대학원$"], unit: 명, survey: 종자업실태조사}
+      - {id: sdg_tot, title: "종자업체(육종 지원 수혜 표)", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^수혜여부$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_yes, title: "육종 관련 협력·지원 받은 종자업체", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^받았음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_no, title: "육종 관련 협력·지원 받지 않은 종자업체", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^받지 않았음$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_pt, title: "육종 지원 내용 공공기관기술지원", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^공공기관기술지원$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_pf, title: "육종 지원 내용 공공기관자금지원", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^공공기관자금지원$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_ut, title: "육종 지원 내용 학교·민간연구소 기술지원", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^학교·민간연구소 기술지원$"], unit: 개, survey: 종자업실태조사}
+      - {id: sdg_uf, title: "육종 지원 내용 학교·민간연구소 자금지원", tbl: DT_114052_014, org: "114", se: F, periods: 2, itm: "^종자업체의 육종 관련 협력·지원 수혜여부 및 수혜내용$", want: ["^학교·민간연구소 자금지원$"], unit: 개, survey: 종자업실태조사}
+      - {id: nuc_tot, title: "육묘업체 취급묘 평균 작목 수", tbl: DT_114052_B18, org: "114", se: F, periods: 2, itm: "^작목군별 취급묘 평균 작목수$", want: ["^평균$", "^계$"], unit: 작목, survey: 육묘업실태조사}
+      - {id: nuc_food, title: "육묘업체 취급묘 평균 작목 수 식량작물", tbl: DT_114052_B18, org: "114", se: F, periods: 2, itm: "^작목군별 취급묘 평균 작목수$", want: ["^평균$", "^식량작물$"], unit: 작목, survey: 육묘업실태조사}
+      - {id: nuc_veg, title: "육묘업체 취급묘 평균 작목 수 채소", tbl: DT_114052_B18, org: "114", se: F, periods: 2, itm: "^작목군별 취급묘 평균 작목수$", want: ["^평균$", "^채소$"], unit: 작목, survey: 육묘업실태조사}
+      - {id: nuc_flow, title: "육묘업체 취급묘 평균 작목 수 화훼", tbl: DT_114052_B18, org: "114", se: F, periods: 2, itm: "^작목군별 취급묘 평균 작목수$", want: ["^평균$", "^화훼$"], unit: 작목, survey: 육묘업실태조사}
+      - {id: nuc_etc, title: "육묘업체 취급묘 평균 작목 수 기타", tbl: DT_114052_B18, org: "114", se: F, periods: 2, itm: "^작목군별 취급묘 평균 작목수$", want: ["^평균$", "^기타$"], unit: 작목, survey: 육묘업실태조사}
+      - {id: nup_rice, title: "벼 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^벼$"], unit: 만판, survey: 육묘업실태조사}
+      - {id: nup_bean, title: "콩 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^콩$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nup_corn, title: "옥수수 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^옥수수$"], unit: 만주, survey: 육묘업실태조사}
+      - {id: nup_etc, title: "기타 식량작물 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^기타$"], unit: 만주, survey: 육묘업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -9069,6 +9069,41 @@ sources:
       - {id: gkx_pfc, title: "국가 과불화탄소(PFCs) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^PFCs$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_sf6, title: "국가 육불화황(SF₆) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^SF6$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_nf3, title: "국가 삼불화질소(NF₃) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^NF₃$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
+      - {id: fmb_tot, title: "식품제조업 농축수산물 구매액 합계", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^총 구매금액$", want: ["^전 체$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_dom, title: "식품제조업 국산 농축수산물 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^전 체$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_imp, title: "식품제조업 수입 농축수산물 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^수입산 구매금액$", want: ["^전 체$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_rice, title: "식품제조업 국산 쌀 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^쌀$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_cab, title: "식품제조업 국산 배추 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^배추$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_rad, title: "식품제조업 국산 무 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^무$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_gar, title: "식품제조업 국산 마늘 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^마늘\\(깐마늘포함\\)$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_pepp, title: "식품제조업 국산 고춧가루 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^고춧가루$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_pep, title: "식품제조업 국산 건고추 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^건고추$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_soy, title: "식품제조업 국산 대두 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^대두$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_pot, title: "식품제조업 국산 감자 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^감자$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_oni, title: "식품제조업 국산 양파 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^양파$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_gin, title: "식품제조업 국산 인삼 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^인삼$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_rgin, title: "식품제조업 국산 홍삼 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^홍삼$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_apl, title: "식품제조업 국산 사과 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^사과$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_stb, title: "식품제조업 국산 딸기 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^딸기$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_pear, title: "식품제조업 국산 배 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^배$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_milk, title: "식품제조업 국산 원유 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^원유$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_pork, title: "식품제조업 국산 돼지고기 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^돼지고기$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_chk, title: "식품제조업 국산 닭고기 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^닭고기$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_egg, title: "식품제조업 국산 계란 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^계란$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_beef, title: "식품제조업 국산 쇠고기 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^쇠고기$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: fmb_d_duck, title: "식품제조업 국산 오리고기 구매액", tbl: DT_114010_B001, org: "114", periods: 3, itm: "^국산 구매금액$", want: ["^오리고기$"], unit: "백만원", survey: 식품산업 원료소비 실태조사(구매액)}
+      - {id: hf_tot, title: "건강기능식품 매출액 합계", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^계$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_exp, title: "건강기능식품 수출액 합계", tbl: DT_145010_009, org: "145", periods: 3, itm: "^수출액$", want: ["^계$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_rgx, title: "건강기능식품 홍삼 수출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^수출액$", want: ["^홍삼$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_rg, title: "건강기능식품 홍삼 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^홍삼$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_gt, title: "건강기능식품 녹차추출물 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^녹차추출물$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_pp, title: "건강기능식품 프로폴리스추출물 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^프로폴리스추출물$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_al, title: "건강기능식품 알로에 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^알로에$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_gs, title: "건강기능식품 인삼 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^인삼$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_gk, title: "건강기능식품 은행잎 추출물 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^은행잎 추출물$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_ga, title: "건강기능식품 마늘 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^마늘$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_bn, title: "건강기능식품 바나바잎 추출물 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^바나바잎 추출물$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hf_hg, title: "건강기능식품 홍국 매출액", tbl: DT_145010_009, org: "145", periods: 3, itm: "^매출액$", want: ["^홍국$"], unit: "천원", survey: 건강기능식품 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

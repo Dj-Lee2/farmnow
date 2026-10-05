@@ -8260,6 +8260,34 @@ sources:
       - {id: wchk_br, title: "브라질 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^브라질$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
       - {id: wchk_in, title: "인도 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^인도$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
       - {id: wchk_id, title: "인도네시아 닭 사육 두수", tbl: DT_2KAA412, itm: "^닭$", want: ["^인도네시아$"], unit: 천마리, survey: 국제통계(FAO 가축사육)}
+      - {id: fcn_kr, title: "대한민국 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_kr_n, title: "대한민국 비료 소비량(질소질)", tbl: DT_2KAA415, itm: "^질소질$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_kr_p, title: "대한민국 비료 소비량(인산질)", tbl: DT_2KAA415, itm: "^인산질$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_kr_k, title: "대한민국 비료 소비량(칼리질)", tbl: DT_2KAA415, itm: "^칼리질$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_cn, title: "중국 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_in, title: "인도 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^인도$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_br, title: "브라질 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^브라질$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_ca, title: "캐나다 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^캐나다$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_au, title: "오스트레일리아 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^오스트레일리아$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_ru, title: "러시아 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^러시아$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_fr, title: "프랑스 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^프랑스$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_de, title: "독일 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^독일$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_es, title: "스페인 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^스페인$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_jp, title: "일본 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_nl, title: "네덜란드 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^네덜란드$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: fcn_nz, title: "뉴질랜드 비료 소비량", tbl: DT_2KAA415, itm: "^전체$", want: ["^뉴질랜드$"], unit: 톤, survey: 국제통계(FAO 비료 소비)}
+      - {id: agva_kr, title: "대한민국 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^대한민국$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_jp, title: "일본 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^일본$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_cn, title: "중국 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^중국$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_us, title: "미국 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^미국$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_in, title: "인도 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^인도$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_id, title: "인도네시아 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^인도네시아$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_br, title: "브라질 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^브라질$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_fr, title: "프랑스 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^프랑스$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_de, title: "독일 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^독일$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_it, title: "이탈리아 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^이탈리아$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_es, title: "스페인 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^스페인$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agva_nl, title: "네덜란드 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^네덜란드$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

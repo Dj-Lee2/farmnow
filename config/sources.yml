@@ -8149,6 +8149,40 @@ sources:
       - {id: lbr_in, title: "인도 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^인도$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
       - {id: lbr_us, title: "미국 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^미국$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
       - {id: lbr_fr, title: "프랑스 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^프랑스$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
+      - {id: agl_wd, title: "세계 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^세계$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_kr, title: "대한민국 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_jp, title: "일본 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_cn, title: "중국 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_us, title: "미국 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_nl, title: "네덜란드 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_de, title: "독일 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_fr, title: "프랑스 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_in, title: "인도 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_nz, title: "뉴질랜드 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agl_uk, title: "영국 국토 대비 농업면적 비율", tbl: DT_2KAA401, itm: "^농업면적$", want: ["^영국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_kr, title: "대한민국 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_jp, title: "일본 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_cn, title: "중국 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_us, title: "미국 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_de, title: "독일 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_fr, title: "프랑스 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_nz, title: "뉴질랜드 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: frs_in, title: "인도 국토 대비 숲(임야) 비율", tbl: DT_2FA23037, itm: "^임야 점유율$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_kr, title: "대한민국 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_jp, title: "일본 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_cn, title: "중국 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_us, title: "미국 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_in, title: "인도 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_nl, title: "네덜란드 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_de, title: "독일 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: ilr_fr, title: "프랑스 농경지 중 관개 면적 비율", tbl: DT_2FA23038, itm: "^경작지 면적.관개용 토지. 점유율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_kr, title: "대한민국 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_jp, title: "일본 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_cn, title: "중국 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_us, title: "미국 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_fr, title: "프랑스 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_it, title: "이탈리아 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^이탈리아$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pmc_nz, title: "뉴질랜드 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

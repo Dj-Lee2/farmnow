@@ -9207,6 +9207,46 @@ sources:
       - {id: sk_age_3, title: "양잠 경영주 51~60세", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^51~60세$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
       - {id: sk_age_4, title: "양잠 경영주 61~70세", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^61~70세$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
       - {id: sk_age_5, title: "양잠 경영주 71세 이상", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^71세이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: spc_p_med, title: "약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_p_msh, title: "버섯류 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^버섯류$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_p_bev, title: "기호작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^기호작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_f_med, title: "약용작물 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^약용작물$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_a_med, title: "약용작물 재배 면적", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^전체면적$", want: ["^전국$", "^약용작물$"], unit: ha, survey: 특용작물생산현황}
+      - {id: spc_f_msh, title: "버섯류 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^버섯류$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_a_msh, title: "버섯류 재배 면적", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^전체면적$", want: ["^전국$", "^버섯류$"], unit: ha, survey: 특용작물생산현황}
+      - {id: spc_m_ddk, title: "더덕(경작지) 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^양유.더덕.-경작지$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_gng, title: "생강 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^건강.생강.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_yam, title: "마(산약) 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^산약.마.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_omj, title: "오미자(경작지) 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^오미자-경작지$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_bbj, title: "복분자 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^복분자.복분자딸기.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_drj, title: "도라지(경작지) 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^길경.도라지.-경작지$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_jak, title: "작약 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^작약$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_dgw, title: "참당귀 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^당귀.참당귀.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_sbp, title: "식방풍 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^식방풍.갯기름나물.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_yul, title: "율무 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^의이인.율무.$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_cgu, title: "천궁 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^천궁$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_jhw, title: "지황 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^지황$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_ggj, title: "구기자 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^구기자$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_m_hgi, title: "황기 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^황기$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_mf_ddk, title: "더덕(경작지) 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^양유.더덕.-경작지$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_mf_gng, title: "생강 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^건강.생강.$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_mf_omj, title: "오미자(경작지) 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^오미자-경작지$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_mf_bbj, title: "복분자 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^복분자.복분자딸기.$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_mf_drj, title: "도라지(경작지) 재배 농가", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^농가수$", want: ["^전국$", "^길경.도라지.-경작지$"], unit: 호, survey: 특용작물생산현황}
+      - {id: spc_ms_oys, title: "느타리 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^느타리$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_ms_kae, title: "새송이 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^새송이$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_ms_eno, title: "팽이 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^팽이$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_ms_btn, title: "양송이 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^양송이$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_tea, title: "차 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전국$", "^차$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_gg, title: "경기도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^경기도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_gw, title: "강원특별자치도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^(강원도|강원특별자치도)$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_cb, title: "충청북도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^충청북도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_cn, title: "충청남도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^충청남도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_jb, title: "전북특별자치도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^(전라북도|전북특별자치도)$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_jn, title: "전라남도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^전라남도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_gb, title: "경상북도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^경상북도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_gn, title: "경상남도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^경상남도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: spc_r_jj, title: "특별자치도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^제주(도|특별자치도)$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

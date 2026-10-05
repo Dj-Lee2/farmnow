@@ -8821,6 +8821,33 @@ sources:
       - {id: lsz_bf_h1, title: "육우 20~49두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_bf_h2, title: "육우 50~99두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_bf_h3, title: "육우 100두 이상 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: cdt_st_cw, title: "한우 거세우 평균 도체중", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^도체중$"], unit: "kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_st_bf, title: "한우 거세우 평균 등지방두께", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^등지방$"], unit: "㎜", survey: 축산물 등급판정 통계}
+      - {id: cdt_st_ea, title: "한우 거세우 평균 등심단면적", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^등심면적$"], unit: "㎠", survey: 축산물 등급판정 통계}
+      - {id: cdt_st_mb, title: "한우 거세우 평균 근내지방도", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^근내지방$"], unit: "점", survey: 축산물 등급판정 통계}
+      - {id: cdt_st_pr, title: "한우 거세우 평균 경락단가", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^경락단가$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_cw_cw, title: "한우 암소 평균 도체중", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^암$", "^도체중$"], unit: "kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_cw_bf, title: "한우 암소 평균 등지방두께", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^암$", "^등지방$"], unit: "㎜", survey: 축산물 등급판정 통계}
+      - {id: cdt_cw_ea, title: "한우 암소 평균 등심단면적", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^암$", "^등심면적$"], unit: "㎠", survey: 축산물 등급판정 통계}
+      - {id: cdt_cw_mb, title: "한우 암소 평균 근내지방도", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^암$", "^근내지방$"], unit: "점", survey: 축산물 등급판정 통계}
+      - {id: cdt_cw_pr, title: "한우 암소 평균 경락단가", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^암$", "^경락단가$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_dy_cw, title: "젖소 평균 도체중", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^젖소$", "^전체$", "^도체중$"], unit: "kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_yw_cw, title: "육우 평균 도체중", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^육우$", "^전체$", "^도체중$"], unit: "kg", survey: 축산물 등급판정 통계}
+      - {id: cdt_yw_mb, title: "육우 평균 근내지방도", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^육우$", "^전체$", "^근내지방$"], unit: "점", survey: 축산물 등급판정 통계}
+      - {id: prr_tot, title: "시도별 돼지 도축 전국", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^전국$"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_dg, title: "대구 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^대구"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_ic, title: "인천 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^인천"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_dj, title: "대전 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^대전"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_us, title: "울산 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^울산"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_gg, title: "경기 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^경기"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_gw, title: "강원 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^강원"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_cb, title: "충북 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^충청북도$|^충북"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_cn, title: "충남 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^충청남도$|^충남"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_jb, title: "전북 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^전북|^전라북도$"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_gb, title: "경북 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^경상북도$|^경북"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_gn, title: "경남 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^경상남도$|^경남"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_jj, title: "제주 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^제주"], unit: 두, survey: 축산물 도축실적}
+      - {id: prr_jn, title: "전남·광주 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 두, survey: 축산물 도축실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

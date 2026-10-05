@@ -8061,6 +8061,44 @@ sources:
       - {id: ifp_in, title: "인도 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^인도$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
       - {id: ifp_th, title: "태국 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^태국$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
       - {id: ifp_vn, title: "베트남 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^베트남$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: iyr_wd, title: "세계 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^세계$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_kr, title: "대한민국 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_jp, title: "일본 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^일본$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_cn, title: "중국 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^중국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_vn, title: "베트남 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^베트남$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_us, title: "미국 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^미국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_in, title: "인도 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^인도$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_th, title: "태국 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^태국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyr_it, title: "이탈리아 쌀 1ha당 수량", tbl: DT_2KAA403, itm: "^경작면적당 생산량$", want: ["^이탈리아$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(쌀 생산량)}
+      - {id: iyb_wd, title: "세계 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^세계$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyb_kr, title: "대한민국 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyb_jp, title: "일본 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^일본$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyb_de, title: "독일 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^독일$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyb_fr, title: "프랑스 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^프랑스$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyb_us, title: "미국 보리 1ha당 수량", tbl: DT_2KAA404, itm: "^경작면적당 생산량$", want: ["^미국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(보리 생산량)}
+      - {id: iyw_wd, title: "세계 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^세계$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_kr, title: "대한민국 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_jp, title: "일본 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^일본$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_cn, title: "중국 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^중국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_fr, title: "프랑스 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^프랑스$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_de, title: "독일 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^독일$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iyw_us, title: "미국 밀 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^미국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_wd, title: "세계 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^세계$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_kr, title: "대한민국 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_cn, title: "중국 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^중국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_us, title: "미국 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^미국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_br, title: "브라질 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^브라질$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: iym_fr, title: "프랑스 옥수수 1ha당 수량", tbl: DT_2KAA405, itm: "^경작면적당 생산량$", want: ["^프랑스$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(밀·옥수수 생산량)}
+      - {id: apx_wd, title: "세계 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^세계$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_kr, title: "대한민국 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^대한민국$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_jp, title: "일본 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^일본$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_in, title: "인도 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^인도$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_vn, title: "베트남 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^베트남$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_us, title: "미국 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^미국$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_br, title: "브라질 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^브라질$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_fr, title: "프랑스 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^프랑스$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_de, title: "독일 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^독일$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: apx_nl, title: "네덜란드 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^네덜란드$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -9341,6 +9341,30 @@ sources:
       - {id: vgr_p_lot, title: "연근 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^연근$", "^노지$"], unit: 톤, survey: 채소류생산실적}
       - {id: vgr_p_bur, title: "우엉 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^우엉$"], unit: 톤, survey: 채소류생산실적}
       - {id: vgr_p_tar, title: "토란 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^토란$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_a_tot, title: "조미채소류 재배 면적", tbl: DT_114018_006, org: "114", periods: 3, itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgs_p_tot, title: "조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_p_gh, title: "조미채소류 시설 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_p_pep, title: "건고추 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^건고추$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_p_gar, title: "마늘 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^마늘$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_p_oni, title: "양파 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^양파$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_a_gng, title: "생강 재배 면적(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^면적$", want: ["^생강$", "^노지$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgs_p_gng, title: "생강 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^생강$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_a_lgo, title: "대파 재배 면적(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^면적$", want: ["^대파$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgs_p_lgo, title: "대파 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^대파$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_a_sgo, title: "쪽파 재배 면적(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^면적$", want: ["^쪽파$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgs_p_sgo, title: "쪽파 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^쪽파$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_a_gon, title: "파 재배 면적(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^면적$", want: ["^파$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgs_p_gon, title: "파 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^파$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_p_lgo_gh, title: "대파 시설 생산량(조미채소류 생산실적)", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^대파$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_gg, title: "경기도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^경기도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_gw, title: "강원특별자치도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^(강원도|강원특별자치도)$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_cb, title: "충청북도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^충청북도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_cn, title: "충청남도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^충청남도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_jb, title: "전북특별자치도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^(전라북도|전북특별자치도)$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_jn, title: "전라남도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^전라남도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_gb, title: "경상북도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^경상북도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_gn, title: "경상남도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^경상남도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgs_r_jj, title: "제주특별자치도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^제주특별자치도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

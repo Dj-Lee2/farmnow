@@ -9715,6 +9715,45 @@ sources:
       - {id: ove_cab_cb, title: "충북 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
       - {id: ove_cab_gg, title: "경기 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^경기"], unit: ha, survey: 농작물생산조사}
       - {id: ove_cab_cn, title: "충남 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: orc_etc, title: "기타과수 재배면적", tbl: DT_1ET0014, itm: "^●\\s*기타과수$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_pers, title: "감(단감+떫은감) 재배면적", tbl: DT_1ET0014, itm: "^●\\s*감$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_pear_young, title: "배 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*배\\(미과\\)$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_peach_young, title: "복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", unit: ha, survey: 농작물생산조사}
+      - {id: orc_grape_young, title: "포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", unit: ha, survey: 농작물생산조사}
+      - {id: obp_jn, title: "전남 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: obp_cn, title: "충남 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: obp_gg, title: "경기 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: obp_gb, title: "경북 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: obp_jb, title: "전북 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: obp_gn, title: "경남 배 재배면적", tbl: DT_1ET0014, itm: "^●\\s*배$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_gb, title: "경북 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_cb, title: "충북 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_jb, title: "전북 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_gg, title: "경기 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_jn, title: "전남 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opc_gw, title: "강원 복숭아 재배면적", tbl: DT_1ET0014, itm: "^●\\s*복숭아$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogr_gb, title: "경북 포도 재배면적", tbl: DT_1ET0014, itm: "^●\\s*포도$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogr_gg, title: "경기 포도 재배면적", tbl: DT_1ET0014, itm: "^●\\s*포도$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogr_cb, title: "충북 포도 재배면적", tbl: DT_1ET0014, itm: "^●\\s*포도$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogr_jb, title: "전북 포도 재배면적", tbl: DT_1ET0014, itm: "^●\\s*포도$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogr_cn, title: "충남 포도 재배면적", tbl: DT_1ET0014, itm: "^●\\s*포도$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: osw_gn, title: "경남 단감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*단감$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: osw_jn, title: "전남 단감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*단감$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: osw_gb, title: "경북 단감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*단감$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: osw_us, title: "울산 단감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*단감$", want: ["^울산광역시$"], unit: ha, survey: 농작물생산조사}
+      - {id: oas_gb, title: "경북 떫은감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*떫은감$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oas_jn, title: "전남 떫은감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*떫은감$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oas_gn, title: "경남 떫은감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*떫은감$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oas_jb, title: "전북 떫은감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*떫은감$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: oas_cb, title: "충북 떫은감 재배면적", tbl: DT_1ET0014, itm: "^●\\s*떫은감$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opm_gb, title: "경북 자두 재배면적", tbl: DT_1ET0014, itm: "^●\\s*자두$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opm_dg, title: "대구 자두 재배면적", tbl: DT_1ET0014, itm: "^●\\s*자두$", want: ["^대구광역시$"], unit: ha, survey: 농작물생산조사}
+      - {id: opm_cb, title: "충북 자두 재배면적", tbl: DT_1ET0014, itm: "^●\\s*자두$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opm_gn, title: "경남 자두 재배면적", tbl: DT_1ET0014, itm: "^●\\s*자두$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: omt_jn, title: "전남 매실 재배면적", tbl: DT_1ET0014, itm: "^●\\s*매실$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: omt_gn, title: "경남 매실 재배면적", tbl: DT_1ET0014, itm: "^●\\s*매실$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: omt_gg, title: "경기 매실 재배면적", tbl: DT_1ET0014, itm: "^●\\s*매실$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: omt_gb, title: "경북 매실 재배면적", tbl: DT_1ET0014, itm: "^●\\s*매실$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

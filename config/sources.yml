@@ -9033,6 +9033,35 @@ sources:
       - {id: gco_dd_co2, title: "독도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
       - {id: gco_dd_ch4, title: "독도 대기 메탄(CH₄) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
       - {id: gco_am_cfc11, title: "안면도 대기 염화불화탄소(CFC-11) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^염화불화탄소11$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: ghr_b_gg, title: "경기 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.74164$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_gw, title: "강원 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.76973$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_cb, title: "충북 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.79782$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_cn, title: "충남 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.82591$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_jb, title: "전북 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.85400$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_jn, title: "전남 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.88209$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_gb, title: "경북 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.91018$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_gn, title: "경남 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.93827$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_b_jj, title: "제주 작물 잔사 소각 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["작물잔사소각"], codes: {C1: "A\\.96636$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_gg, title: "경기 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.74218$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_gw, title: "강원 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.77027$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_cb, title: "충북 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.79836$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_cn, title: "충남 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.82645$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_jb, title: "전북 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.85454$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_jn, title: "전남 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.88263$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_gb, title: "경북 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.91072$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_gn, title: "경남 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.93881$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_li_jj, title: "제주 석회 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["석회시용"], codes: {C1: "A\\.96690$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_gg, title: "경기 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.74272$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_gw, title: "강원 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.77081$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_cb, title: "충북 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.79890$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_cn, title: "충남 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.82699$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_jb, title: "전북 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.85508$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_jn, title: "전남 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.88317$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_gb, title: "경북 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.91126$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_gn, title: "경남 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.93935$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_u_jj, title: "제주 요소 시용 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["요소시용"], codes: {C1: "A\\.96744$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: gco_am_cfc12, title: "안면도 대기 염화불화탄소(CFC-12) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^염화불화탄소12$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: gco_am_cfc113, title: "안면도 대기 염화불화탄소(CFC-113) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^염화불화탄소113$"], unit: ppt, survey: 기상청 지구대기감시}
       - {id: gkx_co2, title: "국가 이산화탄소(CO₂) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^CO₂$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_ch4, title: "국가 메탄(CH₄) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^CH₄$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_n2o, title: "국가 아산화질소(N₂O) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^N₂O$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}

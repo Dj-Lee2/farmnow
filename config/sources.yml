@@ -8183,6 +8183,35 @@ sources:
       - {id: pmc_fr, title: "프랑스 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
       - {id: pmc_it, title: "이탈리아 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^이탈리아$"], unit: "%", survey: 국제통계(FAO 토지이용)}
       - {id: pmc_nz, title: "뉴질랜드 농업면적 중 영구작물(과수 등) 비율", tbl: DT_2FA23040, itm: "^영구 작물용 토지 면적$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: agdp_kr, title: "대한민국 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_jp, title: "일본 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_cn, title: "중국 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_us, title: "미국 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_in, title: "인도 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_vn, title: "베트남 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^베트남$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_de, title: "독일 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_fr, title: "프랑스 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_nl, title: "네덜란드 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_nz, title: "뉴질랜드 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_dk, title: "덴마크 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^덴마크$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agdp_au, title: "오스트레일리아 GDP 중 농림어업 비중", tbl: DT_2FA23052, itm: "^농업 임업 및 어업의 GDP 비중$", want: ["^오스트레일리아$"], unit: "%", survey: 국제통계(FAO 농업경제)}
+      - {id: agv_kr, title: "대한민국 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_jp, title: "일본 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_cn, title: "중국 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^중국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_us, title: "미국 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^미국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_in, title: "인도 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^인도$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_fr, title: "프랑스 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^프랑스$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_nl, title: "네덜란드 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: agv_nz, title: "뉴질랜드 농업 생산액", tbl: DT_2FA23016, itm: "^농업 생산액$", want: ["^뉴질랜드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_kr, title: "대한민국 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_jp, title: "일본 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_cn, title: "중국 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^중국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_us, title: "미국 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^미국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_in, title: "인도 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^인도$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_fr, title: "프랑스 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^프랑스$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_nl, title: "네덜란드 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: lvv_nz, title: "뉴질랜드 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^뉴질랜드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: crv_kr, title: "대한민국 농작물 생산액", tbl: DT_2FA23017, itm: "^농작물 생산액$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

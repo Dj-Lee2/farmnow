@@ -8030,6 +8030,37 @@ sources:
       - {id: lcv_gh_gb, title: "경북 면적 중 시설재배지 비율", tbl: DT_106N_36_1100001, org: "106", periods: 1, itm: "토지피복지도", want: ["^비율$"], codes: {C1: "(^|\\.)50240$", C2: "(^|\\.)10060$"}, unit: "%", survey: 토지피복지도 통계}
       - {id: lcv_gh_gn, title: "경남 면적 중 시설재배지 비율", tbl: DT_106N_36_1100001, org: "106", periods: 1, itm: "토지피복지도", want: ["^비율$"], codes: {C1: "(^|\\.)50264$", C2: "(^|\\.)10060$"}, unit: "%", survey: 토지피복지도 통계}
       - {id: lcv_gh_jj, title: "제주 면적 중 시설재배지 비율", tbl: DT_106N_36_1100001, org: "106", periods: 1, itm: "토지피복지도", want: ["^비율$"], codes: {C1: "(^|\\.)50287$", C2: "(^|\\.)10060$"}, unit: "%", survey: 토지피복지도 통계}
+      - {id: wst_kr, title: "대한민국 물 부족 수준", tbl: DT_2UNS0066, periods: 6, itm: "^전체$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_kr_ag, title: "대한민국 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_kr_in, title: "대한민국 물 부족 수준 — 산업", tbl: DT_2UNS0066, periods: 6, itm: "^산업$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_kr_sv, title: "대한민국 물 부족 수준 — 서비스", tbl: DT_2UNS0066, periods: 6, itm: "^서비스$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_jp, title: "일본 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_cn, title: "중국 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_us, title: "미국 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_in, title: "인도 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^인도$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_il, title: "이스라엘 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^이스라엘$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_es, title: "스페인 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^스페인$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_it, title: "이탈리아 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^이탈리아$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_dk, title: "덴마크 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^덴마크$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_fr, title: "프랑스 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_de, title: "독일 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: wst_ag_nl, title: "네덜란드 물 부족 수준 — 농업", tbl: DT_2UNS0066, periods: 6, itm: "^농업$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(UN SDG 물 부족)}
+      - {id: aoi_kr, title: "대한민국 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^대한민국$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_jp, title: "일본 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^일본$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_uk, title: "영국 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^영국$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_cn, title: "중국 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^중국$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_ca, title: "캐나다 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^캐나다$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_dk, title: "덴마크 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^덴마크$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_de, title: "독일 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^독일$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_us, title: "미국 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^미국$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_nl, title: "네덜란드 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^네덜란드$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: aoi_nz, title: "뉴질랜드 정부지출 농업지향성 지수", tbl: DT_2UNS0016, periods: 6, itm: "^농업지향성 지수$", want: ["^뉴질랜드$"], unit: "지수", survey: 국제통계(UN SDG 농업지향성)}
+      - {id: ifp_kr, title: "대한민국 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^대한민국$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: ifp_jp, title: "일본 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^일본$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: ifp_cn, title: "중국 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^중국$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: ifp_in, title: "인도 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^인도$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: ifp_th, title: "태국 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^태국$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
+      - {id: ifp_vn, title: "베트남 쌀 가격 이상치 지표", tbl: DT_2UNS0164, periods: 6, itm: "^쌀$", want: ["^베트남$"], unit: "지수", survey: 국제통계(UN SDG 식품가격 이상치)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

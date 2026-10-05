@@ -9535,6 +9535,27 @@ sources:
       - {id: fpl_de, title: "독일 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
       - {id: fpl_fr, title: "프랑스 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
       - {id: fpl_nz, title: "뉴질랜드 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: nkr_all, title: "북한 벼 재배면적 전체", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^전체$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_py, title: "북한 평양 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^평양직할시$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_ry, title: "북한 양강도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^양강도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_rs, title: "북한 라선 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^라선특별시$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_np, title: "북한 남포 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^남포특별시$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_kc, title: "북한 개성 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^개성특별시$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_pn, title: "북한 평안남도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^평안남도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_pb, title: "북한 평안북도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^평안북도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_jg, title: "북한 자강도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^자강도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_hn, title: "북한 황해남도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^황해남도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_hb, title: "북한 황해북도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^황해북도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_gw, title: "북한 강원도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^강원도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_hgn, title: "북한 함경남도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^함경남도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: nkr_hgb, title: "북한 함경북도 벼 재배면적", tbl: DT_1ZGA531, itm: "^벼 재배면적$", want: ["^함경북도$"], unit: ha, survey: 북한벼재배면적조사}
+      - {id: fkb_kr, title: "대한민국 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_kp, title: "북한 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^북한$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_jp, title: "일본 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_cn, title: "중국 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_us, title: "미국 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_de, title: "독일 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fkb_fr, title: "프랑스 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

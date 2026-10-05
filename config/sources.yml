@@ -9172,6 +9172,41 @@ sources:
       - {id: hfi_us_ag, title: "미국산 수입식품 농·임산물 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^미국$", "^농·임산물$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
       - {id: hfi_jp_tot, title: "일본산 수입식품 계 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^일본$", "^계$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
       - {id: hfi_jp_ag, title: "일본산 수입식품 농·임산물 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^일본$", "^농·임산물$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: sk_f_tot, title: "양잠·오디 재배 농가", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_f_silk, title: "누에 기르는 농가", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 양잠$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_f_odi, title: "오디 재배 농가", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 오디$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_a_tot, title: "뽕밭 면적", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^뽕밭면적 계$", want: ["(도|시)$"], sum: true, unit: ha, survey: 기능성양잠산업현황}
+      - {id: sk_a_silk, title: "누에용 뽕밭 면적", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^뽕밭면적 누에$", want: ["(도|시)$"], sum: true, unit: ha, survey: 기능성양잠산업현황}
+      - {id: sk_a_odi, title: "오디용 뽕밭 면적", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^뽕밭면적 오디$", want: ["(도|시)$"], sum: true, unit: ha, survey: 기능성양잠산업현황}
+      - {id: sk_rear, title: "누에 사육량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^누에사육량$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sk_p_cocoon, title: "누에고치 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 누에고치$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_frz, title: "냉동건조누에 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 냉동건조누에$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_hot, title: "열풍건조누에 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 열풍건조누에$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_raw, title: "생누에 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 생누에$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_hong, title: "홍잠(익힌 숙잠) 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 홍잠$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_leaf, title: "뽕잎 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 뽕잎$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_odi, title: "오디 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 오디$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_p_dung, title: "잠분(누에똥) 생산량", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^생산량 잠분$", want: ["(도|시)$"], sum: true, unit: kg, survey: 기능성양잠산업현황}
+      - {id: sk_r_gg, title: "양잠·오디 농가(경기)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(경기도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_gw, title: "양잠·오디 농가(강원)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(강원특별자치도|강원도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_cb, title: "양잠·오디 농가(충북)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(충청북도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_cn, title: "양잠·오디 농가(충남)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(충청남도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_jb, title: "양잠·오디 농가(전북)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(전북특별자치도|전라북도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_jn, title: "양잠·오디 농가(전남)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(전라남도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_gb, title: "양잠·오디 농가(경북)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(경상북도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_r_gn, title: "양잠·오디 농가(경남)", tbl: DT_114_2013_S0028, org: "114", periods: 3, itm: "^재배농가수 계$", want: ["^(경상남도)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_tot, title: "양잠 농가 소득 조사 농가", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_1, title: "양잠 농가 소득 1천만 원 이하", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^1천만원이하$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_2, title: "양잠 농가 소득 1천만~3천만 원", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^1~3천만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_3, title: "양잠 농가 소득 3천만~5천만 원", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^3~5천만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_4, title: "양잠 농가 소득 5천만~1억 원", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^5천만~1억$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_inc_5, title: "양잠 농가 소득 1억 원 이상", tbl: DT_114_2016_S0003, org: "114", periods: 3, itm: "^1억이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_tot, title: "양잠 경영주(전체)", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_1, title: "양잠 경영주 40세 미만", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^40세미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_2, title: "양잠 경영주 41~50세", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^41~50세$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_3, title: "양잠 경영주 51~60세", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^51~60세$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_4, title: "양잠 경영주 61~70세", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^61~70세$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sk_age_5, title: "양잠 경영주 71세 이상", tbl: DT_114_2016_S0002, org: "114", periods: 3, itm: "^71세이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -3363,7 +3363,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축', 266) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이', 279) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -3574,6 +3574,22 @@
   {{ hcard('곤충 사육시설 종류별 면적', [('태양광 곤충사육사', K.ins_fa_solar), ('판넬', K.ins_fa_panel), ('철골(콘크리트)', K.ins_fa_steel), ('비닐하우스', K.ins_fa_vinyl), ('기타', K.ins_fa_etc), ('컨테이너', K.ins_fa_cont)], '㎡', '괄호는 전체 사육시설 면적 중 비중', K.ins_fa_area.vals[-1] if K.ins_fa_area else none, '#c77b30') }}
   {{ hcard('곤충 가공·유통 용도별 판매액', [('사료용', K.ins_pu_feed), ('식용', K.ins_pu_food), ('애완·학습용', K.ins_pu_pet), ('천적용', K.ins_pu_bio), ('화분매개용', K.ins_pu_poll), ('환경정화용', K.ins_pu_env), ('기타', K.ins_pu_etc)], '백만원', '곤충을 가공하거나 받아서 판 금액 · 천적·화분매개용은 친환경 농사에 쓰는 곤충', none, '#1c7a45') }}
   {{ hcard('곤충 농가 사업 형태·겸업 여부', [('농가형', K.ins_bt_farm), ('업체형', K.ins_bt_co), ('단체·법인형', K.ins_bt_corp), ('주업', K.ins_mj_main), ('겸업', K.ins_mj_dual), ('부업', K.ins_mj_side)], '호', '위 셋은 사업 형태, 아래 셋은 곤충 사육이 본업인지 · 괄호는 응답 농가 중 비중', K.ins_bt_tot.vals[-1] if K.ins_bt_tot else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">양잠 — 누에·오디·뽕밭 <small>누에를 기르거나 오디를 따는 농가·뽕밭 면적·누에 산물 생산량·농가 소득 구간·경영주 나이 · 농림축산식품부 기능성 양잠산업 현황 · 오른쪽은 1년 전 대비</small></h3>
+ <div class="sg-g">
+  {{ card('sk_f_tot', 'yj1', ('누에 ' ~ num(K.sk_f_silk.vals[-1], '호')|striptags ~ ' · 오디 ' ~ num(K.sk_f_odi.vals[-1], '호')|striptags ~ ' · 둘 다 하는 농가 포함') if K.sk_f_silk and K.sk_f_odi else none, '#7a6a3a') }}
+  {{ card('sk_a_tot', 'yj2', ('누에용 ' ~ num(K.sk_a_silk.vals[-1], 'ha')|striptags ~ ' · 오디용 ' ~ num(K.sk_a_odi.vals[-1], 'ha')|striptags) if K.sk_a_silk and K.sk_a_odi else none, '#1c7a45') }}
+  {{ card('sk_p_odi', 'yj3', '뽕나무 열매 · 생과·즙·잼으로 팔림', '#8e3a6e') }}
+  {{ card('sk_rear', 'yj4', ('누에 기르는 농가 ' ~ num(K.sk_f_silk.vals[-1], '호')|striptags ~ ' · 1상자는 누에씨 약 2만 마리') if K.sk_f_silk else none, '#7a6a3a') }}
+  {{ qcard('누에 농가 1호당 사육량', K.sk_rear, K.sk_f_silk, 'yj5', '누에 사육량 ÷ 누에 기르는 농가', 1, '상자', '#7a6a3a') }}
+  {{ qcard('오디용 뽕밭 10a당 오디 생산량', K.sk_p_odi, K.sk_a_odi, 'yj6', '오디 생산량 ÷ 오디용 뽕밭 면적', 0.1, 'kg', '#8e3a6e') }}
+  {{ card('sk_p_raw', 'yj7', ('누에고치 ' ~ num(K.sk_p_cocoon.vals[-1], 'kg')|striptags ~ ' · 실보다 건강식품 원료로 많이 팖') if K.sk_p_cocoon else none, '#c77b30') }}
+  {{ rcard('양잠 경영주 중 71세 이상 비중', K.sk_age_5, K.sk_age_tot, 'yj8', ('40세 미만 ' ~ num(K.sk_age_1.vals[-1], '호')|striptags) if K.sk_age_1 else '', '#c0392b') }}
+  {{ rcard('양잠 농가 중 소득 1천만 원 이하 비중', K.sk_inc_1, K.sk_inc_tot, 'yj9', ('1억 원 이상 ' ~ num(K.sk_inc_5.vals[-1], '호')|striptags) if K.sk_inc_5 else '', '#c77b30') }}
+  {{ hcard('누에·뽕 산물별 생산량', [('생누에', K.sk_p_raw), ('뽕잎', K.sk_p_leaf), ('냉동건조누에', K.sk_p_frz), ('누에고치', K.sk_p_cocoon), ('열풍건조누에', K.sk_p_hot), ('홍잠(익힌 숙잠)', K.sk_p_hong), ('잠분(누에똥)', K.sk_p_dung)], 'kg', '오디는 따로 카드로 · 오른쪽은 1년 전 대비', none, '#c77b30') }}
+  {{ hcard('도별 양잠·오디 농가', [('전북', K.sk_r_jb), ('경북', K.sk_r_gb), ('전남', K.sk_r_jn), ('경남', K.sk_r_gn), ('경기', K.sk_r_gg), ('충북', K.sk_r_cb), ('충남', K.sk_r_cn), ('강원', K.sk_r_gw)], '호', '괄호는 전국 농가 중 비중 · 오른쪽은 1년 전 대비', K.sk_f_tot.vals[-1] if K.sk_f_tot else none, '#7a6a3a') }}
+  {{ hcard('양잠 농가 소득 구간', [('1천만 원 이하', K.sk_inc_1), ('1천만~3천만 원', K.sk_inc_2), ('3천만~5천만 원', K.sk_inc_3), ('5천만~1억 원', K.sk_inc_4), ('1억 원 이상', K.sk_inc_5)], '호', '양잠·오디로 버는 소득 · 괄호는 응답 농가 중 비중 · 오른쪽은 1년 전 대비', K.sk_inc_tot.vals[-1] if K.sk_inc_tot else none, '#c77b30') }}
+  {{ hcard('양잠 경영주 나이', [('40세 미만', K.sk_age_1), ('41~50세', K.sk_age_2), ('51~60세', K.sk_age_3), ('61~70세', K.sk_age_4), ('71세 이상', K.sk_age_5)], '호', '괄호는 응답 농가 중 비중 · 오른쪽은 1년 전 대비', K.sk_age_tot.vals[-1] if K.sk_age_tot else none, '#c0392b') }}
  </div>
  <h3 class="sg-sub">도축 실적 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('sl_cow', 'g48', '한우·육우·젖소 합계 · 축산물 도축실적', '#c77b30', yoy(K.sl_cow_yoy)) }}{{ card('sl_pig', 'g49', '축산물 도축실적', '#c77b30', yoy(K.sl_pig_yoy)) }}{{ card('sl_chick', 'g50', '축산물 도축실적', '#c77b30', yoy(K.sl_chick_yoy)) }}{{ card('sl_duck', 'g51', '축산물 도축실적', '#c77b30', yoy(K.sl_duck_yoy)) }}{% for k, uid in [('cow', 'g52'), ('pig', 'g53')] %}{% set c = K['sl_' ~ k ~ '_cum'] %}{% set r = K['sl_' ~ k ~ '_cumr'] %}{% if c and r %}{% set lab = r.years|map('prd')|list %}

@@ -9556,6 +9556,35 @@ sources:
       - {id: fkb_us, title: "미국 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
       - {id: fkb_de, title: "독일 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
       - {id: fkb_fr, title: "프랑스 보호지역 안 담수 핵심생물다양성지역 비율", tbl: DT_2UNS0112, itm: "^보호구역비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: xcr_tot, title: "기타작물 재배면적 합계", tbl: DT_1ET0016, itm: "^기타작물계$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr, title: "사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg, title: "인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_tob, title: "담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_flw, title: "노지 화훼 재배면적", tbl: DT_1ET0016, itm: "^화훼$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_etc, title: "그 밖의 작물 재배면적", tbl: DT_1ET0016, itm: "^기타작물$", unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_pd, title: "논 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_up, title: "밭 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^밭$"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_pd, title: "논 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_up, title: "밭 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^밭$"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_jn, title: "전남 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_jb, title: "전북 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_cn, title: "충남 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_gn, title: "경남 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^경상남|^경남"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_gb, title: "경북 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_gg, title: "경기 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^경기"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_gw, title: "강원 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_cb, title: "충북 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_fdr_jj, title: "제주 사료작물 재배면적", tbl: DT_1ET0016, itm: "^사료작물$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_gw, title: "강원 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_gg, title: "경기 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^경기"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_cb, title: "충북 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_cn, title: "충남 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_jb, title: "전북 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_gsg_gb, title: "경북 인삼 재배면적", tbl: DT_1ET0016, itm: "^인삼$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_tob_cb, title: "충북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_tob_gb, title: "경북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_tob_jn, title: "전남 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: xcr_tob_jb, title: "전북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

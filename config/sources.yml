@@ -8288,6 +8288,34 @@ sources:
       - {id: agva_it, title: "이탈리아 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^이탈리아$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
       - {id: agva_es, title: "스페인 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^스페인$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
       - {id: agva_nl, title: "네덜란드 농림어업 부가가치", tbl: DT_2FA23053, itm: "^농업 임업 및 어업의 가치$", want: ["^네덜란드$"], unit: 백만달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_kr, title: "대한민국 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_jp, title: "일본 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_cn, title: "중국 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^중국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_us, title: "미국 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^미국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_in, title: "인도 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^인도$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_br, title: "브라질 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^브라질$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_fr, title: "프랑스 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^프랑스$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_de, title: "독일 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^독일$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_nl, title: "네덜란드 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_vn, title: "베트남 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^베트남$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_id, title: "인도네시아 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^인도네시아$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: fdv_tr, title: "튀르키예 식량 생산액", tbl: DT_2FA23018, itm: "^식량 생산액$", want: ["^튀르키예$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: tob_wd, title: "세계 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^세계$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_cn, title: "중국 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_br, title: "브라질 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^브라질$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_id, title: "인도네시아 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^인도네시아$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_zw, title: "짐바브웨 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^짐바브웨$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_us, title: "미국 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^미국$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_tr, title: "튀르키예 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^튀르키예$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: tob_jp, title: "일본 잎담배 생산량", tbl: DT_2KAA408, itm: "^미가공담배$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_wd, title: "세계 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^세계$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_br, title: "브라질 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^브라질$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_vn, title: "베트남 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^베트남$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_co, title: "콜롬비아 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^콜롬비아$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_id, title: "인도네시아 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^인도네시아$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_et, title: "에티오피아 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^에티오피아$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_in, title: "인도 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^인도$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: cof_cn, title: "중국 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -7976,6 +7976,29 @@ sources:
       - {id: rzf_rent_s10p, title: "논벼 10ha이상 농가 — 차용지(빌린 땅)", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^차용지$"], unit: ㎡, survey: 농산물생산비조사}
       - {id: rzf_rice_s10p, title: "논벼 10ha이상 농가 — 논벼 재배면적", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^논벼 재배면적$"], unit: ㎡, survey: 농산물생산비조사}
       - {id: rzf_yld_s10p, title: "논벼 10ha이상 농가 — 주산물(벼) 수량", tbl: DT_1EC0002, itm: "^경영개황$", want: ["^10\\.0ha이상$", "^주산물 수량$"], unit: kg, survey: 농산물생산비조사}
+      - {id: gwq_no3_rur, title: "지하수 질산성질소 — 농촌지하수관측망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200015$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_no3_gen, title: "지하수 질산성질소 — 일반지역(시도)", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200007$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_no3_pol, title: "지하수 질산성질소 — 오염우려지역(환경청)", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200003$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_no3_nat, title: "지하수 질산성질소 — 국가 오염측정망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200019$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_no3_kw, title: "지하수 질산성질소 — 국가 관리측정망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200011$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_no3_avg, title: "지하수 질산성질소 — 전체 측정망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^질산성질소", want: ["^평균$"], codes: {C1: "4100001$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_cl_rur, title: "지하수 염소이온 — 농촌지하수관측망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^염소이온", codes: {C1: "4200015$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_cl_gen, title: "지하수 염소이온 — 일반지역(시도)", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^염소이온", codes: {C1: "4200007$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwq_ph_rur, title: "지하수 pH — 농촌지하수관측망", tbl: DT_106T_032087, org: "106", periods: 6, itm: "^pH$", codes: {C1: "4200015$"}, unit: pH, survey: 지하수수질측정망}
+      - {id: gwr_no3_all, title: "전국 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200002$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_gg, title: "경기 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200038$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_gw, title: "강원 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200042$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_cb, title: "충북 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200046$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_cn, title: "충남 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200050$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_jb, title: "전북 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200054$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_jn, title: "전남 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200058$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_gb, title: "경북 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200062$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_gn, title: "경남 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200066$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: gwr_no3_jj, title: "제주 지하수 질산성질소 평균", tbl: DT_106T_032044, org: "106", periods: 6, itm: "^질산성질소", codes: {C1: "4200070$"}, unit: mg/L, survey: 지하수수질측정망}
+      - {id: sce_pts, title: "토양오염실태조사 조사 지점 수", tbl: DT_106N_20_0200001, org: "106", periods: 6, itm: "^토양오염실태조사결과", want: ["^초과현황$", "^조사지점수$"], codes: {C2: "1100001$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sce_wn, title: "토양오염 우려기준 초과 지점 수", tbl: DT_106N_20_0200001, org: "106", periods: 6, itm: "^토양오염실태조사결과", want: ["^초과현황$", "^지점수$"], codes: {C2: "1200003$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sce_wr, title: "토양오염 우려기준 초과 비율", tbl: DT_106N_20_0200001, org: "106", periods: 6, itm: "^토양오염실태조사결과", want: ["^초과현황$", "^비율$"], codes: {C2: "1200004$"}, unit: "%", survey: 토양오염실태조사}
+      - {id: sce_an, title: "토양오염 대책기준 초과 지점 수", tbl: DT_106N_20_0200001, org: "106", periods: 6, itm: "^토양오염실태조사결과", want: ["^초과현황$", "^지점수$"], codes: {C2: "1200006$"}, unit: 곳, survey: 토양오염실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

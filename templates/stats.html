@@ -2243,7 +2243,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원', 201) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·경작지 가뭄 노출·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원', 212) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2295,6 +2295,20 @@
   {{ card('smx_zn_pd', 'tx7', ('밭 ' ~ (('{:.2f}' if K.smx_zn_fd.vals[-1] < 1 else '{:.1f}').format(K.smx_zn_fd.vals[-1])) ~ ' · 과수원 ' ~ (('{:.2f}' if K.smx_zn_or.vals[-1] < 1 else '{:.1f}').format(K.smx_zn_or.vals[-1])) ~ ' · 우려기준(1지역) 300 mg/kg') if K.smx_zn_fd and K.smx_zn_or else none, '#7a6a3a') }}
   {{ card('smx_ni_pd', 'tx8', ('밭 ' ~ (('{:.2f}' if K.smx_ni_fd.vals[-1] < 1 else '{:.1f}').format(K.smx_ni_fd.vals[-1])) ~ ' · 과수원 ' ~ (('{:.2f}' if K.smx_ni_or.vals[-1] < 1 else '{:.1f}').format(K.smx_ni_or.vals[-1])) ~ ' · 우려기준(1지역) 100 mg/kg') if K.smx_ni_fd and K.smx_ni_or else none, '#7a6a3a') }}
   {{ card('smx_ph_pd', 'tx9', ('밭 ' ~ '{:.1f}'.format(K.smx_ph_fd.vals[-1]) ~ ' · 과수원 ' ~ '{:.1f}'.format(K.smx_ph_or.vals[-1]) ~ ' · 가장 산성인 지점') if K.smx_ph_fd and K.smx_ph_or else none, '#2458d6') }}
+ </div>
+ <h3 class="sg-sub">지하수 수질 — 질산성질소·염소이온과 토양오염 우려기준 초과 <small>환경부 지하수수질측정망·토양오염실태조사 · 측정망 관정 평균 농도 · 질산성질소 먹는물 기준 10 mg/L · 오른쪽은 전년 대비</small></h3>
+ <div class="sg-g">
+  {{ card('gwq_no3_rur', 'gwq1', ('농촌지하수관측망 관정 평균 · 전체 측정망 ' ~ '{:.1f}'.format(K.gwq_no3_avg.vals[-1]) ~ ' mg/L') if K.gwq_no3_avg else none, '#2458d6') }}
+  {{ card('gwr_no3_all', 'gwq2', '시도가 운영하는 일반지역 관정 평균 · 비료·가축분뇨가 스며들면 높아짐', '#2458d6') }}
+  {{ qcard('농촌 지하수 질산성질소 ÷ 일반지역', K.gwq_no3_rur, K.gwq_no3_gen, 'gwq3', '농촌지하수관측망 평균 ÷ 시도 일반지역 평균 · 1보다 크면 농촌 관정이 더 높음', 1, '배', '#2458d6') }}
+  {{ card('gwq_no3_nat', 'gwq4', '환경공단 국가지하수 오염측정망 평균 · 오염 우려가 큰 곳 위주', '#7a6a3a') }}
+  {{ card('gwq_cl_rur', 'gwq5', ('농촌지하수관측망 평균 · 해안 관정의 바닷물 영향이 큼 · 일반지역 ' ~ '{:.1f}'.format(K.gwq_cl_gen.vals[-1]) ~ ' mg/L') if K.gwq_cl_gen else none, '#5c6bc2') }}
+  {{ card('gwq_ph_rur', 'gwq6', '농촌지하수관측망 평균 · 먹는물 기준 5.8~8.5', '#3a8f6a') }}
+  {{ card('sce_wr', 'gwq7', ('조사 ' ~ K.sce_pts.vals[-1]|big ~ '곳 중 ' ~ K.sce_wn.vals[-1]|big ~ '곳 · 공장·폐기물·광산 등 오염 우려 지역 조사') if K.sce_pts and K.sce_wn else none, '#7a6a3a') }}
+  {{ card('sce_an', 'gwq8', '우려기준보다 높은 대책기준까지 넘은 곳 · 정화 대상', '#d23a32') }}
+  {{ card('sce_pts', 'gwq9', '토양오염실태조사로 흙을 떠서 분석한 지점', '#b07a3a') }}
+  {{ hcard('측정망별 지하수 질산성질소', [('농촌지하수관측망', K.gwq_no3_rur), ('오염우려지역(환경청)', K.gwq_no3_pol), ('일반지역(시도)', K.gwq_no3_gen), ('국가 오염측정망', K.gwq_no3_nat), ('국가 관리측정망', K.gwq_no3_kw)], 'mg/L', '관정 평균 농도 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
+  {{ hcard('도별 지하수 질산성질소', [('경기', K.gwr_no3_gg), ('충북', K.gwr_no3_cb), ('충남', K.gwr_no3_cn), ('전북', K.gwr_no3_jb), ('전남', K.gwr_no3_jn), ('강원', K.gwr_no3_gw), ('경북', K.gwr_no3_gb), ('경남', K.gwr_no3_gn), ('제주', K.gwr_no3_jj)], 'mg/L', '시도 일반지역 관정 평균 · 오른쪽은 전년 대비', none, '#6b8fd6') }}
  </div>
  <h3 class="sg-sub">경작지 가뭄 노출 <small>경작지 토양수분의 장기 평균 대비 차이 · 음수일수록 건조</small></h3>
  <div class="sg-g">

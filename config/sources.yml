@@ -9585,6 +9585,38 @@ sources:
       - {id: xcr_tob_gb, title: "경북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
       - {id: xcr_tob_jn, title: "전남 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
       - {id: xcr_tob_jb, title: "전북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: fvy_wm_o, title: "노지 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지수박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_wm_g, title: "시설 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설수박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_om_o, title: "노지 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^노지참외:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_om_g, title: "시설 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^시설참외:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_stb_o, title: "노지 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^노지딸기:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_stb_g, title: "시설 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^시설딸기:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_cuc_o, title: "노지 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^노지오이:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_cuc_g, title: "시설 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^시설오이:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_pmk_o, title: "노지 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지호박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_pmk_g, title: "시설 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설호박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_tom_g, title: "시설 토마토 10a당 생산량", tbl: DT_1ET0027, itm: "^시설토마토:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvr_stb, title: "딸기 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm, title: "수박 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_om, title: "참외 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^참외:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom, title: "토마토 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_gn, title: "경남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_cn, title: "충남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_jn, title: "전남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_gb, title: "경북 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_jb, title: "전북 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_stb_cb, title: "충북 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_jb, title: "전북 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_cn, title: "충남 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_cb, title: "충북 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_gn, title: "경남 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_gb, title: "경북 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm_jn, title: "전남 수박 생산량", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_om_gb, title: "경북 참외 생산량", tbl: DT_1ET0027, itm: "^참외:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom_cn, title: "충남 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom_jb, title: "전북 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom_gw, title: "강원 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom_gn, title: "경남 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

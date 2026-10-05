@@ -9688,6 +9688,33 @@ sources:
       - {id: ove_pep_gw, title: "강원 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
       - {id: ove_pep_jb, title: "전북 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
       - {id: ove_pep_cb, title: "충북 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_rad, title: "노지 무 재배면적", tbl: DT_1ET0013, itm: "^무 *계$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab, title: "노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_scal, title: "노지 파 재배면적", tbl: DT_1ET0013, itm: "^파$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_ging, title: "노지 생강 재배면적", tbl: DT_1ET0013, itm: "^생강$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_cabb, title: "노지 양배추 재배면적", tbl: DT_1ET0013, itm: "^양배추$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_spn, title: "노지 시금치 재배면적", tbl: DT_1ET0013, itm: "^시금치$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_let, title: "노지 상추 재배면적", tbl: DT_1ET0013, itm: "^상추$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_wm, title: "노지 수박 재배면적", tbl: DT_1ET0013, itm: "^수박$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_carr, title: "노지 당근 재배면적", tbl: DT_1ET0013, itm: "^당근$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_gb, title: "경북 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_gn, title: "경남 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^경상남|^경남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_jn, title: "전남 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_cn, title: "충남 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_jj, title: "제주 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_jb, title: "전북 노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_jn, title: "전남 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_gn, title: "경남 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^경상남|^경남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_gb, title: "경북 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_jb, title: "전북 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_jj, title: "제주 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_cn, title: "충남 노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_gw, title: "강원 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_jn, title: "전남 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_gb, title: "경북 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_cb, title: "충북 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_gg, title: "경기 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^경기"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_cab_cn, title: "충남 노지 배추 재배면적", tbl: DT_1ET0013, itm: "^배추계$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

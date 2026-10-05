@@ -8677,6 +8677,38 @@ sources:
       - {id: fxu_j_a5x, title: "경영주 50~59세 농가 농업용 고정자산", tbl: DT_1EA1604, itm: "^농업용-연도말$", want: ["^경영주연령-50 - 59세$"], unit: 천원, survey: 농가경제조사}
       - {id: fxu_j_a6x, title: "경영주 60~69세 농가 농업용 고정자산", tbl: DT_1EA1604, itm: "^농업용-연도말$", want: ["^경영주연령-60 - 69세$"], unit: 천원, survey: 농가경제조사}
       - {id: fxu_j_a70, title: "경영주 70세 이상 농가 농업용 고정자산", tbl: DT_1EA1604, itm: "^농업용-연도말$", want: ["^경영주연령-70세 이상$"], unit: 천원, survey: 농가경제조사}
+      # 비육돈 두당 사육비 비목별·사육 규모별(DT_1EE306)
+      - {id: phd_feed, title: 비육돈 두당 사료비, tbl: DT_1EE306, itm: "^평균$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_stock, title: 비육돈 두당 가축비(자돈값), tbl: DT_1EE306, itm: "^평균$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_manure, title: 비육돈 두당 분뇨처리비, tbl: DT_1EE306, itm: "^평균$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_vet, title: 비육돈 두당 방역치료비, tbl: DT_1EE306, itm: "^평균$", want: ["^방역치료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_hire, title: 비육돈 두당 고용노동비, tbl: DT_1EE306, itm: "^평균$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_fuel, title: 비육돈 두당 수도광열비, tbl: DT_1EE306, itm: "^평균$", want: ["^수도광열비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_dep, title: 비육돈 두당 감가상각비, tbl: DT_1EE306, itm: "^평균$", want: ["^감가상각비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_gen, title: 비육돈 두당 일반비 소계, tbl: DT_1EE306, itm: "^평균$", want: ["^일반비소계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_own, title: 비육돈 두당 자가노동비, tbl: DT_1EE306, itm: "^평균$", want: ["^자가노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_cap, title: 비육돈 두당 자본용역비, tbl: DT_1EE306, itm: "^평균$", want: ["^자본용역비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phd_land, title: 비육돈 두당 토지용역비, tbl: DT_1EE306, itm: "^평균$", want: ["^토지용역비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_cost_0, title: "비육돈 1,000두 미만 두당 사육비", tbl: DT_1EE306, itm: "^1000두미만$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_cost_1, title: "비육돈 1,000~1,999두 두당 사육비", tbl: DT_1EE306, itm: "^1000~1999두$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_cost_2, title: "비육돈 2,000~2,999두 두당 사육비", tbl: DT_1EE306, itm: "^2000~2999두$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_cost_3, title: "비육돈 3,000두 이상 두당 사육비", tbl: DT_1EE306, itm: "^3000두이상$", want: ["^비용합계$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_feed_0, title: "비육돈 1,000두 미만 두당 사료비", tbl: DT_1EE306, itm: "^1000두미만$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_feed_1, title: "비육돈 1,000~1,999두 두당 사료비", tbl: DT_1EE306, itm: "^1000~1999두$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_feed_2, title: "비육돈 2,000~2,999두 두당 사료비", tbl: DT_1EE306, itm: "^2000~2999두$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_feed_3, title: "비육돈 3,000두 이상 두당 사료비", tbl: DT_1EE306, itm: "^3000두이상$", want: ["^사료비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_stock_0, title: "비육돈 1,000두 미만 두당 가축비", tbl: DT_1EE306, itm: "^1000두미만$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_stock_1, title: "비육돈 1,000~1,999두 두당 가축비", tbl: DT_1EE306, itm: "^1000~1999두$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_stock_2, title: "비육돈 2,000~2,999두 두당 가축비", tbl: DT_1EE306, itm: "^2000~2999두$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_stock_3, title: "비육돈 3,000두 이상 두당 가축비", tbl: DT_1EE306, itm: "^3000두이상$", want: ["^가축비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_manure_0, title: "비육돈 1,000두 미만 두당 분뇨처리비", tbl: DT_1EE306, itm: "^1000두미만$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_manure_1, title: "비육돈 1,000~1,999두 두당 분뇨처리비", tbl: DT_1EE306, itm: "^1000~1999두$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_manure_2, title: "비육돈 2,000~2,999두 두당 분뇨처리비", tbl: DT_1EE306, itm: "^2000~2999두$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_manure_3, title: "비육돈 3,000두 이상 두당 분뇨처리비", tbl: DT_1EE306, itm: "^3000두이상$", want: ["^분뇨처리비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_hire_0, title: "비육돈 1,000두 미만 두당 고용노동비", tbl: DT_1EE306, itm: "^1000두미만$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_hire_1, title: "비육돈 1,000~1,999두 두당 고용노동비", tbl: DT_1EE306, itm: "^1000~1999두$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_hire_2, title: "비육돈 2,000~2,999두 두당 고용노동비", tbl: DT_1EE306, itm: "^2000~2999두$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
+      - {id: phs_hire_3, title: "비육돈 3,000두 이상 두당 고용노동비", tbl: DT_1EE306, itm: "^3000두이상$", want: ["^고용노동비$"], unit: 원, survey: 축산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

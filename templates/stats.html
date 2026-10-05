@@ -3244,7 +3244,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수', 201) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비', 210) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -3273,6 +3273,18 @@
   {{ card('pgk_stock', 'g90', ('자돈(새끼 돼지) 값 · 생산비 중 ' ~ '{:.0f}'.format(K.pgk_stock.vals[-1] / K.pgk_cost.vals[-1] * 100) ~ '%') if K.pgk_cost else '자돈(새끼 돼지) 값', '#c77b30') }}
   {{ hcard('비육돈 생체 100kg당 비목별 생산비', [('사료비', K.pgk_feed), ('가축비', K.pgk_stock), ('고용노동비', K.pgk_hire), ('분뇨처리비', K.pgk_manure), ('방역치료비', K.pgk_vet), ('수도광열비', K.pgk_fuel), ('자가노동비', K.pgk_own), ('감가상각비', K.pgk_dep)], '원', '괄호는 생산비 중 비중 · 오른쪽은 전년 대비', K.pgk_cost.vals[-1] if K.pgk_cost else none, '#c77b30') }}
   {{ hcard('비육돈 사육 규모별 생체 100kg당 생산비', [('1,000두 미만', K.pgk_s0), ('1,000~1,999두', K.pgk_s1), ('2,000~2,999두', K.pgk_s2), ('3,000두 이상', K.pgk_s3)], '원', ('평균 ' ~ num(K.pgk_cost.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.pgk_cost else '', none, '#b04a07') }}
+ </div>
+ <h3 class="sg-sub">비육돈 두당 사육비 구성·사육 규모별 <small>출하 1두당 · 축산물생산비조사</small></h3>
+ <div class="sg-g">
+  {{ card('phd_feed', 'phd1', ('두당 사육비 중 ' ~ '{:.0f}'.format(K.phd_feed.vals[-1] / K.pig_cost.vals[-1] * 100) ~ '% · 배합사료값') if K.pig_cost else '배합사료값', '#b04a07') }}
+  {{ card('phd_stock', 'phd2', ('자돈(새끼 돼지) 값 · 두당 사육비 중 ' ~ '{:.0f}'.format(K.phd_stock.vals[-1] / K.pig_cost.vals[-1] * 100) ~ '%') if K.pig_cost else '자돈(새끼 돼지) 값', '#c77b30') }}
+  {{ rcard('비육돈 두당 사육비 중 분뇨처리비 비중', K.phd_manure, K.pig_cost, 'phd3', ('두당 분뇨처리비 ' ~ num(K.phd_manure.vals[-1], '원')|striptags) if K.phd_manure else '', '#3a8f6a') }}
+  {{ hcard('비육돈 두당 비목별 사육비', [('사료비', K.phd_feed), ('가축비', K.phd_stock), ('고용노동비', K.phd_hire), ('분뇨처리비', K.phd_manure), ('방역치료비', K.phd_vet), ('수도광열비', K.phd_fuel), ('자본용역비', K.phd_cap), ('자가노동비', K.phd_own), ('감가상각비', K.phd_dep), ('토지용역비', K.phd_land)], '원', '괄호는 두당 사육비 중 비중 · 오른쪽은 전년 대비', K.pig_cost.vals[-1] if K.pig_cost else none, '#c77b30') }}
+  {{ hcard('비육돈 사육 규모별 두당 사육비', [('1,000두 미만', K.phs_cost_0), ('1,000~1,999두', K.phs_cost_1), ('2,000~2,999두', K.phs_cost_2), ('3,000두 이상', K.phs_cost_3)], '원', ('평균 ' ~ num(K.pig_cost.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.pig_cost else '', none, '#b04a07') }}
+  {{ hcard('비육돈 사육 규모별 두당 사료비', [('1,000두 미만', K.phs_feed_0), ('1,000~1,999두', K.phs_feed_1), ('2,000~2,999두', K.phs_feed_2), ('3,000두 이상', K.phs_feed_3)], '원', ('평균 ' ~ num(K.phd_feed.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.phd_feed else '', none, '#b04a07') }}
+  {{ hcard('비육돈 사육 규모별 두당 가축비(자돈값)', [('1,000두 미만', K.phs_stock_0), ('1,000~1,999두', K.phs_stock_1), ('2,000~2,999두', K.phs_stock_2), ('3,000두 이상', K.phs_stock_3)], '원', ('평균 ' ~ num(K.phd_stock.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.phd_stock else '', none, '#c77b30') }}
+  {{ hcard('비육돈 사육 규모별 두당 분뇨처리비', [('1,000두 미만', K.phs_manure_0), ('1,000~1,999두', K.phs_manure_1), ('2,000~2,999두', K.phs_manure_2), ('3,000두 이상', K.phs_manure_3)], '원', ('평균 ' ~ num(K.phd_manure.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.phd_manure else '', none, '#3a8f6a') }}
+  {{ hcard('비육돈 사육 규모별 두당 고용노동비', [('1,000두 미만', K.phs_hire_0), ('1,000~1,999두', K.phs_hire_1), ('2,000~2,999두', K.phs_hire_2), ('3,000두 이상', K.phs_hire_3)], '원', ('평균 ' ~ num(K.phd_hire.vals[-1], '원')|striptags ~ ' · 오른쪽은 전년 대비') if K.phd_hire else '', none, '#c77b30') }}
  </div>
  <h3 class="sg-sub">계란·육계 생산비 구성 <small>계란 100개·육계 생체 10kg당 · 축산물생산비조사</small></h3>
  <div class="sg-g">

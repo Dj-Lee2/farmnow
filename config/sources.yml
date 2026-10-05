@@ -8888,6 +8888,42 @@ sources:
       - {id: gwe_a_ij, title: "인제군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^인제군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
       - {id: gwe_a_gs, title: "고성군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^고성군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
       - {id: gwe_a_yy, title: "양양군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^양양군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gge_farm, title: "경기 친환경 농산물 출하 농가", tbl: DT_21002E042, org: "210", periods: 5, itm: "^농가수$", want: ["^합계$", "^농산물$"], unit: 가구, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_area, title: "경기 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^합계$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_ship, title: "경기 친환경 농산물 출하량", tbl: DT_21002E042, org: "210", periods: 5, itm: "^출하량$", want: ["^합계$", "^농산물$"], unit: 톤, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_org_area, title: "경기 유기농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^합계$", "^유기농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_nop_area, title: "경기 무농약농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^합계$", "^무농약농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a05, title: "평택시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^평택시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a09, title: "시흥시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^시흥시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a13, title: "용인시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^용인시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a14, title: "이천시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^이천시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a15, title: "안성시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^안성시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a16, title: "김포시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^김포시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a17, title: "화성시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^화성시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a18, title: "광주시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^광주시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a19, title: "양평군(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^양평군$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a22, title: "고양시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^고양시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a24, title: "남양주시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^남양주시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a25, title: "파주시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^파주시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a28, title: "연천군(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^연천군$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a29, title: "가평군(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^가평군$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: gge_a30, title: "여주시(경기) 친환경 농산물 출하 면적", tbl: DT_21002E042, org: "210", periods: 5, itm: "^면적$", want: ["^여주시$", "^농산물$"], unit: ha, survey: 경기도 친환경농축산물 출하현황}
+      - {id: cbe_farm, title: "충북 친환경 농산물 출하 농가", tbl: DT_F37, org: "212", periods: 5, itm: "^농가수$", want: ["^계\\s*$", "^농산물$"], unit: 가구, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_area, title: "충북 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^계\\s*$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_ship, title: "충북 친환경 농산물 출하량", tbl: DT_F37, org: "212", periods: 5, itm: "^출하량$", want: ["^계\\s*$", "^농산물$"], unit: 톤, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_org_area, title: "충북 유기농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^계\\s*$", "^유기농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_nop_area, title: "충북 무농약농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^계\\s*$", "^무농약농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a00, title: "청주시 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^청주시$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a01, title: "충주시 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^충주시$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a02, title: "제천시 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^제천시$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a03, title: "보은군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^보은군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a04, title: "옥천군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^옥천군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a05, title: "영동군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^영동군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a06, title: "증평군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^증평군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a07, title: "진천군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^진천군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a08, title: "괴산군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^괴산군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a09, title: "음성군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^음성군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
+      - {id: cbe_a10, title: "단양군 친환경 농산물 출하 면적", tbl: DT_F37, org: "212", periods: 5, itm: "^면적$", want: ["^단양군$", "^농산물$"], unit: ha, survey: 충청북도 친환경 농·축산물 출하현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -9514,6 +9514,27 @@ sources:
       - {id: fab_de, title: "독일 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^독일$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
       - {id: fab_fr, title: "프랑스 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^프랑스$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
       - {id: fab_nz, title: "뉴질랜드 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^뉴질랜드$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_kr, title: "대한민국 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_jp, title: "일본 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_cn, title: "중국 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_us, title: "미국 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_de, title: "독일 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_fr, title: "프랑스 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fcr_nz, title: "뉴질랜드 연간 산림면적 변화율", tbl: DT_2UNS0385, itm: "^연간 산림면적 변화율$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_kr, title: "대한민국 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_jp, title: "일본 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_cn, title: "중국 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_us, title: "미국 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_de, title: "독일 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_fr, title: "프랑스 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fmg_nz, title: "뉴질랜드 장기관리계획 대상 산림면적 비율", tbl: DT_2UNS0386, itm: "^장기관리계획 대상 산림면적 비율$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_kr, title: "대한민국 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_jp, title: "일본 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_cn, title: "중국 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_us, title: "미국 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_de, title: "독일 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_fr, title: "프랑스 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fpl_nz, title: "뉴질랜드 법적 보호구역 안 산림면적 비율", tbl: DT_2UNS0114, itm: "^산림면적비율$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(UN SDG 15.2.1)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

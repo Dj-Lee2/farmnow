@@ -8212,6 +8212,27 @@ sources:
       - {id: lvv_nl, title: "네덜란드 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
       - {id: lvv_nz, title: "뉴질랜드 가축 생산액", tbl: DT_2FA23019, itm: "^가축 생산액$", want: ["^뉴질랜드$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
       - {id: crv_kr, title: "대한민국 농작물 생산액", tbl: DT_2FA23017, itm: "^농작물 생산액$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농업경제)}
+      - {id: nf_kr, title: "대한민국 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_jp, title: "일본 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_cn, title: "중국 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_us, title: "미국 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_de, title: "독일 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_fr, title: "프랑스 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_nz, title: "뉴질랜드 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: nf_in, title: "인도 숲 중 천연림 비율", tbl: DT_2FA23041, itm: "^천연림 구역 면적$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_kr, title: "대한민국 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^대한민국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_jp, title: "일본 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^일본$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_cn, title: "중국 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_us, title: "미국 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_de, title: "독일 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^독일$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_fr, title: "프랑스 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^프랑스$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_nz, title: "뉴질랜드 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: pf_in, title: "인도 숲 중 식수림(인공림) 비율", tbl: DT_2FA23042, itm: "^식수 숲 구역 면적$", want: ["^인도$"], unit: "%", survey: 국제통계(FAO 토지이용)}
+      - {id: remp_kr, title: "대한민국 농촌 지역 취업자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^대한민국$", "^전체$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
+      - {id: remp_km, title: "대한민국 농촌 지역 취업자 남자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^대한민국$", "^남자$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
+      - {id: remp_kf, title: "대한민국 농촌 지역 취업자 여자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^대한민국$", "^여자$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
+      - {id: remp_us, title: "미국 농촌 지역 취업자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^미국$", "^전체$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
+      - {id: remp_cn, title: "중국 농촌 지역 취업자(15세 이상)", tbl: DT_2FA23046, itm: "^연령별 농촌 지역 고용 현황", want: ["^중국$", "^전체$"], unit: 천명, survey: 국제통계(FAO 농촌고용)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

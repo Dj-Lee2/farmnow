@@ -9464,6 +9464,36 @@ sources:
       - {id: wpr_mze_kr, title: "대한민국 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
       - {id: wpr_mze_jp, title: "일본 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
       - {id: wpr_mze_cn, title: "중국 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: irf_n, title: "수리시설 전체 수(주·보조 수원공 포함)", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_auth, title: "수리시설 인가면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^인가면적$"], codes: {C2: "^B0102$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_ben, title: "수리시설 수혜면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^수혜면적$"], codes: {C2: "^B0103$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_unben, title: "수리시설 미수혜 면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^미수혜\\s*면적$"], codes: {C2: "^B07$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_rsv_full, title: "농업용 저수지 만수면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^만수면적$"], codes: {C2: "^B0205$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_rsv_n, title: "저수지 수(제원 현황)", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0201$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_pp_n, title: "양배수장 수(제원 현황)", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0301$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_weir_n, title: "보 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0401$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_weir_ha, title: "보 수혜면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^수혜면적$"], codes: {C2: "^B0402$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_weir_q, title: "보 취입수량", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^취입수량$"], codes: {C2: "^B0403$"}, unit: ㎥/s, survey: 농업생산기반시설 현황}
+      - {id: irf_cul_n, title: "집수암거 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0501$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_cul_ha, title: "집수암거 수혜면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^수혜면적$"], codes: {C2: "^B0502$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_cul_q, title: "집수암거 채수량", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^채수량$"], codes: {C2: "^B0503$"}, unit: ㎥/일, survey: 농업생산기반시설 현황}
+      - {id: irf_well_n, title: "관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_ha, title: "관정 수혜면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^수혜면적$"], codes: {C2: "^B0602$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_well_q, title: "관정 채수량", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^채수량$"], codes: {C2: "^B0603$"}, unit: ㎥/일, survey: 농업생산기반시설 현황}
+      - {id: irf_n_kr, title: "농어촌공사 관할 수리시설 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$", "^공사관할$"], codes: {C2: "^B0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_auth_kr, title: "농어촌공사 관할 인가면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^인가면적$", "^공사관할$"], codes: {C2: "^B0102$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_ben_kr, title: "농어촌공사 관할 수혜면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^수혜면적$", "^공사관할$"], codes: {C2: "^B0103$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_unben_kr, title: "농어촌공사 관할 미수혜 면적", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^미수혜\\s*면적$", "^공사관할$"], codes: {C2: "^B07$"}, unit: ha, survey: 농업생산기반시설 현황}
+      - {id: irf_well_n_kr, title: "농어촌공사 관할 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^시설수$", "^공사관할$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_q_kr, title: "농어촌공사 관할 관정 채수량", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^채수량$", "^공사관할$"], codes: {C2: "^B0603$"}, unit: ㎥/일, survey: 농업생산기반시설 현황}
+      - {id: irf_well_gg, title: "경기 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^경기도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_gw, title: "강원 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^(강원도|강원특별자치도)$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_cb, title: "충북 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^충청북도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_cn, title: "충남 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^충청남도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_jb, title: "전북 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^(전라북도|전북특별자치도)$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_jn, title: "전남 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^(전라남도|전남광주통합특별시)$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_gb, title: "경북 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^경상북도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: irf_well_gn, title: "경남 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^경상남도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

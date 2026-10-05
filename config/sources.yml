@@ -8316,6 +8316,28 @@ sources:
       - {id: cof_et, title: "에티오피아 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^에티오피아$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
       - {id: cof_in, title: "인도 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^인도$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
       - {id: cof_cn, title: "중국 생커피원두 생산량", tbl: DT_2KAA408, itm: "^생커피원두$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 농업생산)}
+      - {id: wps_kr, title: "대한민국 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_jp, title: "일본 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_cn, title: "중국 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_us, title: "미국 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^미국$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_id, title: "인도네시아 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^인도네시아$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_fr, title: "프랑스 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^프랑스$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_de, title: "독일 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^독일$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_it, title: "이탈리아 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^이탈리아$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_es, title: "스페인 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^스페인$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_nl, title: "네덜란드 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^네덜란드$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: wps_tr, title: "튀르키예 농약 사용량", tbl: DT_2FA23030, itm: "^농약 사용$", want: ["^튀르키예$"], unit: 톤, survey: 국제통계(FAO 농약 사용)}
+      - {id: aem_wd, title: "세계 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^세계$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_kr, title: "대한민국 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^대한민국$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_jp, title: "일본 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^일본$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_cn, title: "중국 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^중국$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_us, title: "미국 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^미국$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_in, title: "인도 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^인도$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_br, title: "브라질 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^브라질$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_fr, title: "프랑스 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^프랑스$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_de, title: "독일 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^독일$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_nl, title: "네덜란드 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: aem_il, title: "이스라엘 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^이스라엘$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

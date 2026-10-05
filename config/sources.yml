@@ -9442,6 +9442,28 @@ sources:
       - {id: gsh_us, title: "미국 정부 지출 중 농업 비중", tbl: DT_2FA23057, itm: "^정부 지출 중 농업 비중$", want: ["^미국$"], unit: "%", survey: 국제통계(FAO 정부 농업지출)}
       - {id: gsh_nl, title: "네덜란드 정부 지출 중 농업 비중", tbl: DT_2FA23057, itm: "^정부 지출 중 농업 비중$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(FAO 정부 농업지출)}
       - {id: gsh_cn, title: "중국 정부 지출 중 농업 비중", tbl: DT_2FA23057, itm: "^정부 지출 중 농업 비중$", want: ["^중국$"], unit: "%", survey: 국제통계(FAO 정부 농업지출)}
+      - {id: lar_agr_kr, title: "대한민국 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^대한민국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_agr_jp, title: "일본 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^일본$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_agr_cn, title: "중국 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^중국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_agr_us, title: "미국 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^미국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_agr_nl, title: "네덜란드 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^네덜란드$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_agr_fr, title: "프랑스 농업면적", tbl: DT_2FA23028, itm: "^농업면적$", want: ["^프랑스$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lsu_kr, title: "대한민국 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^대한민국$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lsu_jp, title: "일본 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^일본$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lsu_cn, title: "중국 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^중국$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lsu_us, title: "미국 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^미국$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lsu_nl, title: "네덜란드 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^네덜란드$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lsu_fr, title: "프랑스 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^프랑스$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: lar_crp_kr, title: "대한민국 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^대한민국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_crp_jp, title: "일본 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^일본$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_crp_cn, title: "중국 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^중국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_crp_us, title: "미국 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^미국$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_crp_nl, title: "네덜란드 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^네덜란드$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lar_crp_fr, title: "프랑스 농경지 면적", tbl: DT_2FA23028, itm: "^농경지$", want: ["^프랑스$"], unit: 천ha, survey: 국제통계(FAO 국토 이용)}
+      - {id: lsu_nz, title: "뉴질랜드 전체 가축 수(가축사육단위)", tbl: DT_2FA23044, itm: "^전체 가축 수$", want: ["^뉴질랜드$"], unit: LU, survey: 국제통계(FAO 가축 수)}
+      - {id: wpr_mze_kr, title: "대한민국 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_mze_jp, title: "일본 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_mze_cn, title: "중국 옥수수 생산량", tbl: DT_2FA23005, itm: "^옥수수 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -8848,6 +8848,46 @@ sources:
       - {id: prr_gn, title: "경남 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^경상남도$|^경남"], unit: 두, survey: 축산물 도축실적}
       - {id: prr_jj, title: "제주 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^제주"], unit: 두, survey: 축산물 도축실적}
       - {id: prr_jn, title: "전남·광주 돼지 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^돼지$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 두, survey: 축산물 도축실적}
+      - {id: crr_tot, title: "시도별 닭 도축 전국", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^전국$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_dg, title: "대구 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^대구"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_ic, title: "인천 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^인천"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_gg, title: "경기 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^경기"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_gw, title: "강원 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^강원"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_cb, title: "충북 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^충청북도$|^충북"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_cn, title: "충남 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^충청남도$|^충남"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_jb, title: "전북 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^전북|^전라북도$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_gb, title: "경북 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^경상북도$|^경북"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_gn, title: "경남 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^경상남도$|^경남"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_jj, title: "제주 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^제주"], unit: 마리, survey: 축산물 도축실적}
+      - {id: crr_jn, title: "전남·광주 닭 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^닭$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 마리, survey: 축산물 도축실적}
+      - {id: drr_tot, title: "시도별 오리 도축 전국", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^오리$", "^전국$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: drr_cb, title: "충북 오리 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^오리$", "^충청북도$|^충북"], unit: 마리, survey: 축산물 도축실적}
+      - {id: drr_jb, title: "전북 오리 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^오리$", "^전북|^전라북도$"], unit: 마리, survey: 축산물 도축실적}
+      - {id: drr_gn, title: "경남 오리 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^오리$", "^경상남도$|^경남"], unit: 마리, survey: 축산물 도축실적}
+      - {id: drr_jn, title: "전남·광주 오리 도축 마릿수", tbl: DT_114_2016_S0021, org: "114", se: M, periods: 24, itm: "도축실적$", want: ["^당월$", "^오리$", "^전남광주|^광주광역시$|^전라남도$"], sum: true, unit: 마리, survey: 축산물 도축실적}
+      - {id: gwe_farm, title: "강원 친환경 농산물 출하 농가", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^농가수$", want: ["^전체$", "^농산물$"], unit: 가구, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_area, title: "강원 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^전체$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_ship, title: "강원 친환경 농산물 출하량", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^출하량$", want: ["^전체$", "^농산물$"], unit: 톤, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_org_area, title: "강원 유기농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^전체$", "^유기농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_nop_area, title: "강원 무농약농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^전체$", "^무농약농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_cc, title: "춘천시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^춘천시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_wj, title: "원주시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^원주시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_gn, title: "강릉시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^강릉시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_dh, title: "동해시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^동해시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_tb, title: "태백시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^태백시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_sc, title: "속초시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^속초시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_sa, title: "삼척시 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^삼척시$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_hc, title: "홍천군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^홍천군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_hs, title: "횡성군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^횡성군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_yw, title: "영월군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^영월군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_pc, title: "평창군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^평창군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_js, title: "정선군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^정선군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_cw, title: "철원군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^철원군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_hw, title: "화천군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^화천군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_yg, title: "양구군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^양구군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_ij, title: "인제군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^인제군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_gs, title: "고성군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^고성군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
+      - {id: gwe_a_yy, title: "양양군 친환경 농산물 출하 면적", tbl: DT_211002_E050, org: "211", periods: 5, itm: "^면적$", want: ["^양양군$", "^농산물$"], unit: ha, survey: 강원특별자치도 친환경농·축산물 출하현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

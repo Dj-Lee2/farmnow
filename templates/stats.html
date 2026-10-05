@@ -2016,7 +2016,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량', 278) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원 시군별 친환경 출하', 282) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -2404,6 +2404,13 @@
   {{ rcard('분뇨찌꺼기 재활용 비율', K.sld_rec, K.sld_tot, 'sld2', '재활용 ÷ 처리량 합계', '#1c7a45') }}
   {{ rcard('분뇨찌꺼기 연료화 비율', K.sld_fuel, K.sld_tot, 'sld3', '연료화 ÷ 처리량 합계 · 소각·매립 대신 에너지로', '#c0763a') }}
   {{ hcard('분뇨찌꺼기 처리 방법', [('재활용', K.sld_rec), ('기타 처리', K.sld_etc), ('연료화', K.sld_fuel), ('소각', K.sld_inc), ('육상매립', K.sld_land)], '톤', '전국 연간 처리량 · 괄호는 처리량 합계 중 비율', K.sld_tot.vals[-1] if K.sld_tot else none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">강원 시군별 친환경 농산물 출하 <small>강원특별자치도 친환경농·축산물 출하현황 · 유기·무농약 인증 농산물 · 연간</small></h3>
+ <div class="sg-g">
+  {{ card('gwe_area', 'gwe1', ('유기 ' ~ K.gwe_org_area.vals[-1]|big ~ 'ha · 무농약 ' ~ K.gwe_nop_area.vals[-1]|big ~ 'ha') if K.gwe_org_area and K.gwe_nop_area else none, '#1c7a45') }}
+  {{ rcard('강원 친환경 출하 면적 중 유기 비율', K.gwe_org_area, K.gwe_area, 'gwe2', '유기농산물 면적 ÷ 친환경 농산물 면적', '#7a5cc2') }}
+  {{ card('gwe_farm', 'gwe3', ('출하량 ' ~ K.gwe_ship.vals[-1]|big ~ '톤') if K.gwe_ship else none, '#c77b30') }}
+  {{ hcard('강원 시군별 친환경 농산물 출하 면적', [('평창군', K.gwe_a_pc), ('홍천군', K.gwe_a_hc), ('삼척시', K.gwe_a_sa), ('화천군', K.gwe_a_hw), ('정선군', K.gwe_a_js), ('영월군', K.gwe_a_yw), ('강릉시', K.gwe_a_gn), ('양구군', K.gwe_a_yg), ('횡성군', K.gwe_a_hs), ('춘천시', K.gwe_a_cc), ('철원군', K.gwe_a_cw), ('인제군', K.gwe_a_ij), ('원주시', K.gwe_a_wj), ('고성군', K.gwe_a_gs), ('동해시', K.gwe_a_dh), ('양양군', K.gwe_a_yy), ('태백시', K.gwe_a_tb), ('속초시', K.gwe_a_sc)], 'ha', '괄호는 강원 전체 중 비중 · 오른쪽은 전년 대비', K.gwe_area.vals[-1] if K.gwe_area else none, '#1c7a45') }}
  </div>
 </div></details>
 
@@ -3244,7 +3251,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축', 261) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축', 266) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -3489,6 +3496,10 @@
  <h3 class="sg-sub">시도별 돼지 도축 마릿수 <small>월별 · 도축장 소재지 기준(사육지와 다를 수 있음) · 축산물 도축실적</small></h3>
  <div class="sg-g">{{ rcard('돼지 도축 중 충남 비중', K.prr_cn, K.prr_tot, 'pr1', ('전국 ' ~ num(K.prr_tot.vals[-1], '두')|striptags) if K.prr_tot else '전국 돼지 도축 중 충남', '#c77b30') }}{{ rcard('돼지 도축 중 경기 비중', K.prr_gg, K.prr_tot, 'pr2', ('경기 ' ~ num(K.prr_gg.vals[-1], '두')|striptags) if K.prr_gg else '전국 돼지 도축 중 경기', '#2458d6') }}{{ rcard('돼지 도축 중 제주 비중', K.prr_jj, K.prr_tot, 'pr3', ('제주 ' ~ num(K.prr_jj.vals[-1], '두')|striptags ~ ' · 섬 안에서 기르고 도축') if K.prr_jj else '전국 돼지 도축 중 제주', '#1c7a45') }}
   {{ hcard('시도별 돼지 도축 마릿수', [('충남', K.prr_cn), ('경기', K.prr_gg), ('충북', K.prr_cb), ('전북', K.prr_jb), ('전남·광주', K.prr_jn), ('경남', K.prr_gn), ('경북', K.prr_gb), ('제주', K.prr_jj), ('강원', K.prr_gw), ('인천', K.prr_ic), ('대구', K.prr_dg), ('대전', K.prr_dj), ('울산', K.prr_us)], '두', '괄호는 전국 중 비중 · 서울·부산·세종은 돼지 도축 없음 · 오른쪽은 전월 대비', K.prr_tot.vals[-1] if K.prr_tot else none, '#7a6a3a') }}</div>
+ <h3 class="sg-sub">시도별 닭·오리 도축 마릿수 <small>월별 · 도축장 소재지 기준(사육지와 다를 수 있음) · 축산물 도축실적</small></h3>
+ <div class="sg-g">{{ card('crr_tot', 'pk1', ('오리 ' ~ K.drr_tot.vals[-1]|big ~ '마리') if K.drr_tot else none, '#c77b30') }}{{ rcard('닭 도축 중 전북 비중', K.crr_jb, K.crr_tot, 'pk2', ('전북 ' ~ K.crr_jb.vals[-1]|big ~ '마리') if K.crr_jb else '전국 닭 도축 중 전북', '#b0503a') }}{{ rcard('오리 도축 중 전남·광주 비중', K.drr_jn, K.drr_tot, 'pk3', ('전남·광주 ' ~ K.drr_jn.vals[-1]|big ~ '마리') if K.drr_jn else '전국 오리 도축 중 전남·광주', '#2458d6') }}
+  {{ hcard('시도별 닭 도축 마릿수', [('전북', K.crr_jb), ('충남', K.crr_cn), ('경기', K.crr_gg), ('경북', K.crr_gb), ('충북', K.crr_cb), ('전남·광주', K.crr_jn), ('강원', K.crr_gw), ('대구', K.crr_dg), ('인천', K.crr_ic), ('제주', K.crr_jj), ('경남', K.crr_gn)], '마리', '괄호는 전국 중 비중 · 서울·부산·대전·울산·세종은 닭 도축 없음 · 오른쪽은 전월 대비', K.crr_tot.vals[-1] if K.crr_tot else none, '#c77b30') }}
+  {{ hcard('시도별 오리 도축 마릿수', [('전남·광주', K.drr_jn), ('전북', K.drr_jb), ('충북', K.drr_cb), ('경남', K.drr_gn)], '마리', '괄호는 전국 중 비중 · 이 네 곳 말고는 오리 도축장이 없음 · 오른쪽은 전월 대비', K.drr_tot.vals[-1] if K.drr_tot else none, '#2458d6') }}</div>
  <h3 class="sg-sub">유제품 — 국내 생산과 소비 <small>연간 · 소비량은 수입분을 포함한 국내 소비 · 유제품별 생산 및 소비 실적</small></h3>
  <div class="sg-g">{{ card('dpc_chs_c', 'dp1', ('자연치즈 ' ~ num(K.dpc_nchs_c.vals[-1], '톤')|striptags ~ ' · 가공치즈 포함') if K.dpc_nchs_c else none, '#c77b30') }}{{ rcard('치즈 국내 생산 비중', K.dpc_chs_p, K.dpc_chs_c, 'dp2', '국내 소비량 대비 국내 생산량 · 나머지는 수입', '#c77b30') }}{{ rcard('자연치즈 국내 생산 비중', K.dpc_nchs_p, K.dpc_nchs_c, 'dp3', '모차렐라·체다 같은 자연치즈는 대부분 수입', '#b0503a') }}
   {{ card('dpc_btr_c', 'dp4', ('국내 생산 ' ~ num(K.dpc_btr_p.vals[-1], '톤')|striptags) if K.dpc_btr_p else none, '#7a6a3a') }}{{ rcard('버터 국내 생산 비중', K.dpc_btr_p, K.dpc_btr_c, 'dp5', '국내 소비량 대비 국내 생산량', '#7a6a3a') }}{{ card('dpc_yog_p', 'dp6', '요구르트 · 액상·호상 합계', '#1c7a45') }}

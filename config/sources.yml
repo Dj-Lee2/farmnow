@@ -9137,6 +9137,41 @@ sources:
       - {id: fbs_c_apl, title: "식품제조업 국산 사과 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^사과$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
       - {id: fbs_c_milk, title: "식품제조업 국산 원유 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^원유$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
       - {id: fbs_c_pork, title: "식품제조업 국산 돼지고기 계약거래 비중", tbl: DT_114010_D00102, org: "114", periods: 3, itm: "구매처", want: ["^돼지고기$", "^계약거래\\s+비중$"], unit: "%", survey: 식품산업 원료소비 실태조사(구매처)}
+      - {id: hfp_tot, title: "건강기능식품 제조품목 수 합계", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_rg, title: "건강기능식품 홍삼 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^홍삼$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_gs, title: "건강기능식품 인삼 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^인삼$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_gt, title: "건강기능식품 녹차추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^녹차추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_al, title: "건강기능식품 알로에 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^알로에$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_pp, title: "건강기능식품 프로폴리스추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^프로폴리스추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_bn, title: "건강기능식품 바나바잎 추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^바나바잎 추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_gk, title: "건강기능식품 은행잎 추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^은행잎 추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_mk, title: "건강기능식품 매실추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^매실추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_ga, title: "건강기능식품 마늘 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^마늘$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_yj, title: "건강기능식품 영지버섯자실체추출물 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^영지버섯자실체추출물$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_hg, title: "건강기능식품 홍국 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^전체$", "^홍국$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_se, title: "서울 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(서울특별시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_bs, title: "부산 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(부산광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_dg, title: "대구 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(대구광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_ic, title: "인천 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(인천광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_gj, title: "광주 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(광주광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_dj, title: "대전 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(대전광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_us, title: "울산 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(울산광역시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_sj, title: "세종 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(세종특별자치시)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_gg, title: "경기 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(경기도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_gw, title: "강원 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(강원(특별자치)?도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_cb, title: "충북 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(충청북도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_cn, title: "충남 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(충청남도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_jb, title: "전북 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(전북특별자치도|전라북도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_jn, title: "전남 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(전라남도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_gb, title: "경북 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(경상북도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_gn, title: "경남 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(경상남도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfp_r_jj, title: "제주 건강기능식품 제조품목 수", tbl: DT_145010_010, org: "145", periods: 3, itm: "^건강기능식품 제조품목 현황$", want: ["^(제주(특별자치)?도)$", "^계$"], unit: "건", survey: 건강기능식품 제조품목 현황}
+      - {id: hfi_cn_tot, title: "중국산 수입식품 계 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^중국$", "^계$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: hfi_cn_ag, title: "중국산 수입식품 농·임산물 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^중국$", "^농·임산물$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: hfi_us_tot, title: "미국산 수입식품 계 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^미국$", "^계$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: hfi_us_ag, title: "미국산 수입식품 농·임산물 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^미국$", "^농·임산물$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: hfi_jp_tot, title: "일본산 수입식품 계 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^일본$", "^계$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
+      - {id: hfi_jp_ag, title: "일본산 수입식품 농·임산물 수입액", tbl: DT_145010_015, org: "145", periods: 3, itm: "^금액$", want: ["^일본$", "^농·임산물$"], unit: "천달러", survey: 주요 3개국 건강기능식품 수입현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

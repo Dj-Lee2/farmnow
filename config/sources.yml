@@ -9365,6 +9365,33 @@ sources:
       - {id: vgs_r_gb, title: "경상북도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^경상북도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
       - {id: vgs_r_gn, title: "경상남도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^경상남도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
       - {id: vgs_r_jj, title: "제주특별자치도 조미채소류 생산량", tbl: DT_114018_006, org: "114", periods: 3, itm: "^생산량$", want: ["^제주특별자치도$", "^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: wpr_ric_kr, title: "대한민국 쌀(벼) 생산량", tbl: DT_2FA23010, itm: "^쌀 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_ric_jp, title: "일본 쌀(벼) 생산량", tbl: DT_2FA23010, itm: "^쌀 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_ric_cn, title: "중국 쌀(벼) 생산량", tbl: DT_2FA23010, itm: "^쌀 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pot_kr, title: "대한민국 감자 생산량", tbl: DT_2FA23009, itm: "^감자 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pot_jp, title: "일본 감자 생산량", tbl: DT_2FA23009, itm: "^감자 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pot_cn, title: "중국 감자 생산량", tbl: DT_2FA23009, itm: "^감자 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_oni_kr, title: "대한민국 양파·샬롯 생산량", tbl: DT_2FA23007, itm: "^양파 및 샬롯.건조품. 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_oni_jp, title: "일본 양파·샬롯 생산량", tbl: DT_2FA23007, itm: "^양파 및 샬롯.건조품. 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_oni_cn, title: "중국 양파·샬롯 생산량", tbl: DT_2FA23007, itm: "^양파 및 샬롯.건조품. 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cab_kr, title: "대한민국 양배추 생산량", tbl: DT_2FA23002, itm: "^양배추 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cab_jp, title: "일본 양배추 생산량", tbl: DT_2FA23002, itm: "^양배추 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cab_cn, title: "중국 양배추 생산량", tbl: DT_2FA23002, itm: "^양배추 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pep_kr, title: "대한민국 풋고추·피망 생산량", tbl: DT_2FA23003, itm: "^고추 및 후추.녹색. 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pep_jp, title: "일본 풋고추·피망 생산량", tbl: DT_2FA23003, itm: "^고추 및 후추.녹색. 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_pep_cn, title: "중국 풋고추·피망 생산량", tbl: DT_2FA23003, itm: "^고추 및 후추.녹색. 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cuc_kr, title: "대한민국 오이 생산량", tbl: DT_2FA23004, itm: "^오이 및 작은오이 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cuc_jp, title: "일본 오이 생산량", tbl: DT_2FA23004, itm: "^오이 및 작은오이 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_cuc_cn, title: "중국 오이 생산량", tbl: DT_2FA23004, itm: "^오이 및 작은오이 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_tom_kr, title: "대한민국 토마토 생산량", tbl: DT_2FA23012, itm: "^토마토 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_tom_jp, title: "일본 토마토 생산량", tbl: DT_2FA23012, itm: "^토마토 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_tom_cn, title: "중국 토마토 생산량", tbl: DT_2FA23012, itm: "^토마토 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_wml_kr, title: "대한민국 수박 생산량", tbl: DT_2FA23014, itm: "^수박 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_wml_jp, title: "일본 수박 생산량", tbl: DT_2FA23014, itm: "^수박 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_wml_cn, title: "중국 수박 생산량", tbl: DT_2FA23014, itm: "^수박 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_soy_kr, title: "대한민국 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_soy_jp, title: "일본 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: wpr_soy_cn, title: "중국 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

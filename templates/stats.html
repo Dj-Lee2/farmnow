@@ -2437,7 +2437,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·경작지 가뭄 노출·물 부족 수준 국제 비교·정부지출 농업지향성·쌀 가격 이상치·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원', 221) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·시도별 농업 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·경작지 가뭄 노출·물 부족 수준 국제 비교·정부지출 농업지향성·쌀 가격 이상치·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원', 230) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -2465,6 +2465,18 @@
   {{ hcard('농업 온실가스 배출원별 구성', [('벼 재배', K.ghs_rice), ('가축 장내발효', K.ghs_ent), ('가축 분뇨처리', K.ghs_man), ('농경지 토양', K.ghs_soil), ('요소 시용', K.ghs_urea), ('작물잔사 소각', K.ghs_burn), ('석회 시용', K.ghs_lime)], '백만톤', 'CO₂ 환산 · 괄호는 농업 배출 중 비중 · 오른쪽은 전년 대비', K.ghs_agri.vals[-1] if K.ghs_agri else none, '#7a6a3a') }}
   {{ hcard('농업 온실가스 기체별 구성', [('메탄(CH₄)', K.ghm_ch4_agri), ('아산화질소(N₂O)', K.ghm_n2o_agri), ('이산화탄소(CO₂)', K.ghm_co2_agri)], '백만톤', 'CO₂ 환산 · 괄호는 농업 배출 중 비중 · 이산화탄소는 요소·석회 시용 · 오른쪽은 전년 대비', K.ghs_agri.vals[-1] if K.ghs_agri else none, '#b07a3a') }}
   {{ hcard('분야별 국가 온실가스 배출', [('에너지', K.ghs_energy), ('산업공정', K.ghs_ippu), ('농업', K.ghs_agri), ('폐기물', K.ghs_waste), ('토지이용·임업', K.ghs_lulucf)], '백만톤', 'CO₂ 환산 · 괄호는 총배출 중 비중 · 파란 막대는 흡수 · 오른쪽은 전년 대비', K.ghs_total.vals[-1] if K.ghs_total else none, '#7a6a3a') }}
+ </div>
+ <h3 class="sg-sub">시도별 농업 온실가스 — 벼논·가축 <small>국가 온실가스 인벤토리 지역별 직접배출 · CO₂ 환산</small></h3>
+ <div class="sg-g">
+  {{ card('ghr_a_cn', 'ghr1', ('전국 농업 배출의 ' ~ '{:.1f}'.format(K.ghr_a_cn.vals[-1] / (K.ghs_agri.vals[-1] * 1000) * 100) ~ '%') if K.ghs_agri and K.ghr_a_cn else none, '#7a6a3a') }}
+  {{ card('ghr_a_jn', 'ghr2', ('전국 농업 배출의 ' ~ '{:.1f}'.format(K.ghr_a_jn.vals[-1] / (K.ghs_agri.vals[-1] * 1000) * 100) ~ '% · 광주 제외 옛 전라남도') if K.ghs_agri and K.ghr_a_jn else none, '#7a6a3a') }}
+  {{ rcard('전남 농업 배출 중 벼 재배 비중', K.ghr_r_jn, K.ghr_a_jn, 'ghr3', '논 담수 상태의 메탄 · 전년 대비', '#2458d6') }}
+  {{ rcard('경북 농업 배출 중 가축 장내발효 비중', K.ghr_e_gb, K.ghr_a_gb, 'ghr4', '한우 등 되새김 가축의 소화 메탄 · 전년 대비', '#b0503a') }}
+  {{ rcard('전남 총배출 중 농업 비중', K.ghr_a_jn, K.ghr_t_jn, 'ghr5', '여수·광양 산업단지 배출이 커서 농업 몫은 작음 · 전년 대비', '#7a6a3a') }}
+  {{ rcard('제주 총배출 중 농업 비중', K.ghr_a_jj, K.ghr_t_jj, 'ghr6', '감귤·축산 중심 · 전년 대비', '#5a7a3a') }}
+  {{ hcard('시도별 농업 온실가스 배출', [('충남', K.ghr_a_cn), ('전남', K.ghr_a_jn), ('경북', K.ghr_a_gb), ('경기', K.ghr_a_gg), ('전북', K.ghr_a_jb), ('경남', K.ghr_a_gn), ('충북', K.ghr_a_cb), ('강원', K.ghr_a_gw), ('제주', K.ghr_a_jj), ('인천', K.ghr_a_ic), ('세종', K.ghr_a_sj), ('울산', K.ghr_a_us), ('대구', K.ghr_a_dg), ('광주', K.ghr_a_gj), ('부산', K.ghr_a_bs), ('대전', K.ghr_a_dj), ('서울', K.ghr_a_sl)], '천톤', 'CO₂ 환산 · 괄호는 전국 농업 배출 중 비중 · 오른쪽은 전년 대비', (K.ghs_agri.vals[-1] * 1000) if K.ghs_agri else none, '#7a6a3a') }}
+  {{ hcard('도별 벼 재배 온실가스 배출', [('전남', K.ghr_r_jn), ('충남', K.ghr_r_cn), ('전북', K.ghr_r_jb), ('경북', K.ghr_r_gb), ('경기', K.ghr_r_gg), ('경남', K.ghr_r_gn), ('충북', K.ghr_r_cb), ('강원', K.ghr_r_gw)], '천톤', 'CO₂ 환산 메탄 · 괄호는 전국 벼 재배 배출 중 비중 · 오른쪽은 전년 대비', (K.ghs_rice.vals[-1] * 1000) if K.ghs_rice else none, '#2458d6') }}
+  {{ hcard('도별 가축 장내발효 온실가스 배출', [('경북', K.ghr_e_gb), ('전남', K.ghr_e_jn), ('경기', K.ghr_e_gg), ('충남', K.ghr_e_cn), ('전북', K.ghr_e_jb), ('경남', K.ghr_e_gn), ('충북', K.ghr_e_cb), ('강원', K.ghr_e_gw), ('제주', K.ghr_e_jj)], '천톤', 'CO₂ 환산 메탄 · 괄호는 전국 장내발효 배출 중 비중 · 오른쪽은 전년 대비', (K.ghs_ent.vals[-1] * 1000) if K.ghs_ent else none, '#b0503a') }}
  </div>
  <h3 class="sg-sub">농경지 토양 <small>환경부 토양측정망 · 지목별 조사 지점 평균</small></h3>
  <div class="sg-g">

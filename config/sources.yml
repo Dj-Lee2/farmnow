@@ -8951,6 +8951,42 @@ sources:
       - {id: sge_cg_area, title: "칠곡군 친환경 농산물 출하 면적", tbl: DT_77901_E001066, org: "779", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_12$"}, unit: ha, survey: 경상북도 칠곡군 친환경 농·축산물 출하현황}
       - {id: sge_cg_org, title: "칠곡군 유기농산물 출하 면적", tbl: DT_77901_E001066, org: "779", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_16$"}, unit: ha, survey: 경상북도 칠곡군 친환경 농·축산물 출하현황}
       - {id: sge_cg_farm, title: "칠곡군 친환경 농산물 출하 농가", tbl: DT_77901_E001066, org: "779", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C1: "^I_11$"}, unit: 가구, survey: 경상북도 칠곡군 친환경 농·축산물 출하현황}
+      - {id: ghr_a_sl, title: "서울 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.51368$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_bs, title: "부산 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.54177$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_dg, title: "대구 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.56986$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_ic, title: "인천 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.59795$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_gj, title: "광주 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.62604$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_dj, title: "대전 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.65413$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_us, title: "울산 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.68222$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_sj, title: "세종 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.71031$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_gg, title: "경기 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.73840$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_gw, title: "강원 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.76649$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_cb, title: "충북 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.79458$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_cn, title: "충남 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.82267$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_jb, title: "전북 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.85076$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_jn, title: "전남 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.87885$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_gb, title: "경북 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.90694$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_gn, title: "경남 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.93503$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_a_jj, title: "제주 농업 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.96312$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_gg, title: "경기 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.74002$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_gw, title: "강원 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.76811$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_cb, title: "충북 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.79620$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_cn, title: "충남 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.82429$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_jb, title: "전북 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.85238$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_jn, title: "전남 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.88047$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_gb, title: "경북 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.90856$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_r_gn, title: "경남 벼 재배 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["벼재배"], codes: {C1: "A\\.93665$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_gg, title: "경기 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.73894$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_gw, title: "강원 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.76703$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_cb, title: "충북 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.79512$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_cn, title: "충남 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.82321$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_jb, title: "전북 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.85130$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_jn, title: "전남 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.87939$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_gb, title: "경북 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.90748$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_gn, title: "경남 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.93557$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_e_jj, title: "제주 가축 장내발효 온실가스 배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", want: ["장내발효"], codes: {C1: "A\\.96366$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_t_jn, title: "전남 온실가스 총배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.86589$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
+      - {id: ghr_t_jj, title: "제주 온실가스 총배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.95016$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -9494,6 +9494,26 @@ sources:
       - {id: irf_well_jn, title: "전남 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^(전라남도|전남광주통합특별시)$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
       - {id: irf_well_gb, title: "경북 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^경상북도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
       - {id: irf_well_gn, title: "경남 관정 수", tbl: DT_311001_008, org: "311", periods: 2, itm: "^수리시설별 제원현황$", want: ["^경상남도$", "^시설수$"], codes: {C2: "^B0601$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: tpa_kr, title: "대한민국 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^대한민국$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_jp, title: "일본 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^일본$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_cn, title: "중국 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^중국$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_us, title: "미국 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^미국$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_de, title: "독일 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^독일$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_fr, title: "프랑스 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^프랑스$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: tpa_nz, title: "뉴질랜드 육상 보호구역 비율", tbl: DT_2KAAF16, itm: "^육상보호구역$", want: ["^뉴질랜드$"], unit: "%", survey: 국제통계(보호구역)}
+      - {id: kba_kr, title: "대한민국 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^대한민국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: kba_jp, title: "일본 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^일본$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: kba_cn, title: "중국 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^중국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: kba_us, title: "미국 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^미국$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: kba_de, title: "독일 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^독일$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: kba_fr, title: "프랑스 보호지역 안 육상 핵심생물다양성지역 비율", tbl: DT_2UNS0113, itm: "^보호구역비율$", want: ["^프랑스$"], unit: "%", survey: 국제통계(UN SDG 15.1.2)}
+      - {id: fab_kr, title: "대한민국 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^대한민국$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_jp, title: "일본 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^일본$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_cn, title: "중국 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^중국$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_us, title: "미국 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^미국$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_de, title: "독일 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^독일$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_fr, title: "프랑스 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^프랑스$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
+      - {id: fab_nz, title: "뉴질랜드 숲 1ha당 지상부 생물량", tbl: DT_2UNS0236, itm: "^산림 지상 생물량", want: ["^뉴질랜드$"], unit: 톤/ha, survey: 국제통계(UN SDG 15.2.1)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

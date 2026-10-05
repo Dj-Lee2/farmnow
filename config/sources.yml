@@ -8749,6 +8749,46 @@ sources:
       - {id: dhs_cost_1, title: "젖소 50~69두 두당 사육비", tbl: DT_2EE302, itm: "^사육비$", want: ["^비용합계$", "^50~69두$"], unit: 원, survey: 축산물생산비조사}
       - {id: dhs_cost_2, title: "젖소 70~99두 두당 사육비", tbl: DT_2EE302, itm: "^사육비$", want: ["^비용합계$", "^70~99두$"], unit: 원, survey: 축산물생산비조사}
       - {id: dhs_cost_3, title: "젖소 100두 이상 두당 사육비", tbl: DT_2EE302, itm: "^사육비$", want: ["^비용합계$", "^100두이상$"], unit: 원, survey: 축산물생산비조사}
+      - {id: lsz_hw_ft, title: "한육우 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_hw_ht, title: "한육우 사육 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_f0, title: "한육우 20두 미만 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_hw_f1, title: "한육우 20~49두 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20~50 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_hw_f2, title: "한육우 50~99두 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^50~100 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_hw_f3, title: "한육우 100두 이상 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_hw_h0, title: "한육우 20두 미만 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h1, title: "한육우 20~49두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h2, title: "한육우 50~99두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h3, title: "한육우 100두 이상 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_ft, title: "젖소 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_dy_ht, title: "젖소 사육 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_f0, title: "젖소 20두 미만 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_dy_f1, title: "젖소 20~49두 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20~50 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_dy_f2, title: "젖소 50~99두 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^50~100 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_dy_f3, title: "젖소 100두 이상 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_dy_h0, title: "젖소 20두 미만 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h1, title: "젖소 20~49두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h2, title: "젖소 50~99두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h3, title: "젖소 100두 이상 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_f0, title: "돼지 1천 두 미만 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^1000 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_pg_f1, title: "돼지 1천~5천 두 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^1000~5000 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_pg_f2, title: "돼지 5천~1만 두 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^5000~10000 미만$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_pg_f3, title: "돼지 1만 두 이상 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^10000 이상$"], unit: 농장, survey: 가축동향조사}
+      - {id: lsz_pg_h0, title: "돼지 1천 두 미만 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^1000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h1, title: "돼지 1천~5천 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^1000~5000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h2, title: "돼지 5천~1만 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^5000~10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h3, title: "돼지 1만 두 이상 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_ft, title: "산란계 사육 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_ly_ht, title: "산란계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_ft, title: "육용계 사육 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_br_ht, title: "육용계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_f0, title: "산란계 1만 수 미만 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^10000 미만$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_ly_f1, title: "산란계 1만~3만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^10000~30000 미만$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_ly_f2, title: "산란계 3만~5만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^30000~50000 미만$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_ly_f3, title: "산란계 5만 수 이상 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^50000 이상$"], unit: 가구, survey: 가축동향조사}
+      - {id: lsz_ly_h0, title: "산란계 1만 수 미만 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h1, title: "산란계 1만~3만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h2, title: "산란계 3만~5만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h3, title: "산란계 5만 수 이상 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

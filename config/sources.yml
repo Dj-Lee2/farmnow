@@ -9018,21 +9018,21 @@ sources:
       - {id: ghr_t_cn, title: "충남 온실가스 총배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.80971$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
       - {id: ghr_t_jb, title: "전북 온실가스 총배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.83780$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
       - {id: ghr_t_gb, title: "경북 온실가스 총배출량", tbl: DT_106N_99_2800026, org: "106", periods: 10, itm: "^배출량$", codes: {C1: "A\\.89398$"}, unit: 천톤, survey: 국가 온실가스 인벤토리(지역별 직접배출)}
-      - {id: gco_am_co2, title: "안면도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
-      - {id: gco_am_ch4, title: "안면도 대기 메탄(CH₄) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_am_n2o, title: "안면도 대기 아산화질소(N₂O) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_am_sf6, title: "안면도 대기 육불화황(SF₆) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
-      - {id: gco_gs_co2, title: "제주 고산 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
-      - {id: gco_gs_ch4, title: "제주 고산 대기 메탄(CH₄) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_gs_n2o, title: "제주 고산 대기 아산화질소(N₂O) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_gs_sf6, title: "제주 고산 대기 육불화황(SF₆) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
-      - {id: gco_ul_co2, title: "울릉도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
-      - {id: gco_ul_ch4, title: "울릉도 대기 메탄(CH₄) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_ul_n2o, title: "울릉도 대기 아산화질소(N₂O) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_ul_sf6, title: "울릉도 대기 육불화황(SF₆) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
-      - {id: gco_dd_co2, title: "독도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
-      - {id: gco_dd_ch4, title: "독도 대기 메탄(CH₄) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
-      - {id: gco_am_cfc11, title: "안면도 대기 염화불화탄소(CFC-11) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 60, itm: "온실가스$", want: ["^염화불화탄소11$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: gco_am_co2, title: "안면도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
+      - {id: gco_am_ch4, title: "안면도 대기 메탄(CH₄) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_am_n2o, title: "안면도 대기 아산화질소(N₂O) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_am_sf6, title: "안면도 대기 육불화황(SF₆) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: gco_gs_co2, title: "제주 고산 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
+      - {id: gco_gs_ch4, title: "제주 고산 대기 메탄(CH₄) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_gs_n2o, title: "제주 고산 대기 아산화질소(N₂O) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_gs_sf6, title: "제주 고산 대기 육불화황(SF₆) 농도", tbl: DT_14103_B000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: gco_ul_co2, title: "울릉도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
+      - {id: gco_ul_ch4, title: "울릉도 대기 메탄(CH₄) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_ul_n2o, title: "울릉도 대기 아산화질소(N₂O) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^아산화질소$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_ul_sf6, title: "울릉도 대기 육불화황(SF₆) 농도", tbl: DT_14103_C000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^육불화황$"], unit: ppt, survey: 기상청 지구대기감시}
+      - {id: gco_dd_co2, title: "독도 대기 이산화탄소(CO₂) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^이산화탄소$"], unit: ppm, survey: 기상청 지구대기감시}
+      - {id: gco_dd_ch4, title: "독도 대기 메탄(CH₄) 농도", tbl: DT_14103_D000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^메탄$"], unit: ppb, survey: 기상청 지구대기감시}
+      - {id: gco_am_cfc11, title: "안면도 대기 염화불화탄소(CFC-11) 농도", tbl: DT_14103_A000, org: "141", se: M, periods: 24, itm: "온실가스$", want: ["^염화불화탄소11$"], unit: ppt, survey: 기상청 지구대기감시}
       - {id: gkx_co2, title: "국가 이산화탄소(CO₂) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^CO₂$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_ch4, title: "국가 메탄(CH₄) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^CH₄$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}
       - {id: gkx_n2o, title: "국가 아산화질소(N₂O) 배출량", tbl: DT_106N_99_2800021, org: "106", periods: 10, itm: "^배출량$", want: ["^N₂O$"], unit: 백만톤, survey: 국가 온실가스 인벤토리(종류별)}

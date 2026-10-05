@@ -9247,6 +9247,34 @@ sources:
       - {id: spc_r_gb, title: "경상북도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^경상북도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
       - {id: spc_r_gn, title: "경상남도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^경상남도$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
       - {id: spc_r_jj, title: "특별자치도 약용작물 생산량", tbl: DT_114_2012_S0095, org: "114", periods: 3, itm: "^생산량$", want: ["^제주(도|특별자치도)$", "^약용작물$"], unit: 톤, survey: 특용작물생산현황}
+      - {id: skm_tot, title: "누에용 뽕밭 규모별 농가(계)", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_1, title: "누에용 뽕밭 0.1ha 미만 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^0.1ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_2, title: "누에용 뽕밭 0.1~0.4ha 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^0.1~0.4ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_3, title: "누에용 뽕밭 0.4~0.8ha 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^0.4~0.8ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_4, title: "누에용 뽕밭 0.8~2.0ha 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^(0.8~1.2|1.2~1.6|1.6~2.0)ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_5, title: "누에용 뽕밭 2.0ha 이상 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^2.0ha이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skm_08p, title: "누에용 뽕밭 0.8ha 이상 농가", tbl: DT_114_2013_S0030, org: "114", periods: 3, itm: "^((0.8~1.2|1.2~1.6|1.6~2.0)ha미만|2.0ha이상)$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_tot, title: "오디용 뽕밭 규모별 농가(계)", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_1, title: "오디용 뽕밭 0.1ha 미만 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^0.1ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_2, title: "오디용 뽕밭 0.1~0.4ha 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^0.1~0.4ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_3, title: "오디용 뽕밭 0.4~0.8ha 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^0.4~0.8ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_4, title: "오디용 뽕밭 0.8~2.0ha 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^(0.8~1.2|1.2~1.6|1.6~2.0)ha미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_5, title: "오디용 뽕밭 2.0ha 이상 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^2.0ha이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sko_04m, title: "오디용 뽕밭 0.4ha 미만 농가", tbl: DT_114_2013_S0031, org: "114", periods: 3, itm: "^(0.1ha미만|0.1~0.4ha미만)$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_tot, title: "누에 사육 규모별 농가(계)", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^계$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_1, title: "누에 6상자 미만 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^6상자미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_2, title: "누에 6~11상자 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^6~11상자미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_3, title: "누에 11~21상자 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^(11~16|16~21)상자미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_4, title: "누에 21~51상자 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^(21~31|31~51)상자미만$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_5, title: "누에 51상자 이상 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^(51~100상자미만|100상자이상)$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: skb_6, title: "누에 100상자 이상 기르는 농가", tbl: DT_114_2013_S0032, org: "114", periods: 3, itm: "^100상자이상$", want: ["(도|시)$"], sum: true, unit: 호, survey: 기능성양잠산업현황}
+      - {id: sks_orig_p, title: "누에씨 원종 생산량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^원종 생산량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_orig_s, title: "누에씨 원종 보급량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^원종 보급량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_spr_p, title: "봄누에씨(보급종) 생산량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^보급종 봄누에씨 생산량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_spr_s, title: "봄누에씨(보급종) 보급량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^보급종 봄누에씨 보급량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_aut_p, title: "가을누에씨(보급종) 생산량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^보급종 가을누에씨 생산량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_aut_s, title: "가을누에씨(보급종) 보급량", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^보급종 가을누에씨 보급량\\(당년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
+      - {id: sks_plan, title: "이듬해 보급종 누에씨 생산계획", tbl: DT_114_2013_S0033, org: "114", periods: 3, itm: "^보급종 (봄|가을)누에씨 생산계획량\\(익년\\)$", want: ["(도|시)$"], sum: true, unit: 상자, survey: 기능성양잠산업현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

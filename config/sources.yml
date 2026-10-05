@@ -9617,6 +9617,46 @@ sources:
       - {id: fvr_tom_jb, title: "전북 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_tom_gw, title: "강원 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_tom_gn, title: "경남 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfy_spr, title: "봄배추(일반) 10a당 생산량", tbl: DT_1ET0028, itm: "^일반봄배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_hl, title: "고랭지 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^고랭지배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_aut, title: "노지 가을배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_win, title: "노지 겨울배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지겨울배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_gh, title: "시설 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_cab, title: "양배추 10a당 생산량", tbl: DT_1ET0028, itm: "^양배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_spn_o, title: "노지 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^노지시금치:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_spn_g, title: "시설 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^시설시금치:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_let_o, title: "노지 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지상추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_let_g, title: "시설 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설상추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_spr, title: "봄무(일반) 10a당 생산량", tbl: DT_1ET0029, itm: "^일반봄무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_hl, title: "고랭지 무 10a당 생산량", tbl: DT_1ET0029, itm: "^고랭지무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_aut, title: "가을 일반무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을일반무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_yng, title: "가을 총각무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을총각무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_win, title: "노지 겨울무 10a당 생산량", tbl: DT_1ET0029, itm: "^노지겨울무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_gh, title: "시설 무 10a당 생산량", tbl: DT_1ET0029, itm: "^시설무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_car, title: "당근 10a당 생산량", tbl: DT_1ET0029, itm: "^당근:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfp_aut, title: "노지 가을배추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_jn, title: "전남 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_cb, title: "충북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_gb, title: "경북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_gw, title: "강원 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_jb, title: "전북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_cn, title: "충남 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_aut_gg, title: "경기 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_letg, title: "시설 상추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_letg_jb, title: "전북 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_letg_cn, title: "충남 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_letg_gg, title: "경기 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut, title: "노지 가을무 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_jb, title: "전북 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_jn, title: "전남 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_gg, title: "경기 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_cn, title: "충남 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_gw, title: "강원 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut_cb, title: "충북 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_car, title: "당근 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_car_jj, title: "제주 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^제주"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_car_gn, title: "경남 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_car_gw, title: "강원 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

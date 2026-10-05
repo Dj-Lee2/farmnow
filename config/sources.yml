@@ -8126,6 +8126,29 @@ sources:
       - {id: lsd_us, title: "미국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^미국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
       - {id: lsd_nz, title: "뉴질랜드 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^뉴질랜드$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
       - {id: lsd_uk, title: "영국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^영국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: appi_kr, title: "대한민국 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^대한민국$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_jp, title: "일본 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^일본$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_cn, title: "중국 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^중국$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_us, title: "미국 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^미국$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_in, title: "인도 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^인도$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_vn, title: "베트남 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^베트남$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_de, title: "독일 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^독일$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_fr, title: "프랑스 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^프랑스$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: appi_nl, title: "네덜란드 농업 생산자 물가지수", tbl: DT_2FA23025, itm: "^농업 생산자 가격지수$", want: ["^네덜란드$"], unit: "2014~16=100", survey: 국제통계(농업 생산자 물가지수)}
+      - {id: itea_wd, title: "세계 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^세계$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_kr, title: "대한민국 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_jp, title: "일본 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^일본$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_cn, title: "중국 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^중국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_in, title: "인도 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^인도$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_lk, title: "스리랑카 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^스리랑카$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_vn, title: "베트남 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^베트남$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_ke, title: "케냐 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^케냐$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: itea_tr, title: "튀르키예 찻잎 1ha당 수량", tbl: DT_2KAA407, itm: "^경작면적당 ?생산량$", want: ["^튀르키예$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(찻잎·홉 생산량)}
+      - {id: lbr_kr, title: "대한민국 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^대한민국$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
+      - {id: lbr_cn, title: "중국 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^중국$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
+      - {id: lbr_in, title: "인도 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^인도$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
+      - {id: lbr_us, title: "미국 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^미국$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
+      - {id: lbr_fr, title: "프랑스 유전자원 보존 지역품종 수", tbl: DT_2UNS0013, itm: "^지역 품종 수$", want: ["^프랑스$"], unit: 개, survey: 국제통계(UN 지속가능발전목표)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

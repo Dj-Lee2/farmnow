@@ -9657,6 +9657,37 @@ sources:
       - {id: rfp_car_jj, title: "제주 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^제주"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_car_gn, title: "경남 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_car_gw, title: "강원 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
+      - {id: ove_tot, title: "노지 채소 재배면적 합계", tbl: DT_1ET0013, itm: "^합계$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_fru, title: "노지 과채류 재배면적", tbl: DT_1ET0013, itm: "^과채류$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_root, title: "노지 근채류 재배면적", tbl: DT_1ET0013, itm: "^근채류$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_leaf, title: "노지 엽채류 재배면적", tbl: DT_1ET0013, itm: "^엽채류$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_spice, title: "노지 조미채소 재배면적", tbl: DT_1ET0013, itm: "^조미채소$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_etc, title: "노지 기타채소 재배면적", tbl: DT_1ET0013, itm: "^기타채소$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_pd, title: "논 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_up, title: "밭 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^밭$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_spice_pd, title: "논 조미채소 재배면적", tbl: DT_1ET0013, itm: "^조미채소$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic, title: "노지 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_pd, title: "논 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion, title: "노지 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_pd, title: "논 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_garlic_up, title: "밭 마늘 재배면적", tbl: DT_1ET0013, itm: "^마늘$", want: ["^밭$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_onion_up, title: "밭 양파 재배면적", tbl: DT_1ET0013, itm: "^양파$", want: ["^밭$"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep, title: "노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_jn, title: "전남 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_gb, title: "경북 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_cn, title: "충남 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_gw, title: "강원 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_jb, title: "전북 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_gg, title: "경기 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^경기"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_gn, title: "경남 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^경상남|^경남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_cb, title: "충북 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_tot_jj, title: "제주 노지 채소 재배면적", tbl: DT_1ET0013, itm: "^합계$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_jn, title: "전남 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_gb, title: "경북 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_cn, title: "충남 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^충청남|^충남"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_gw, title: "강원 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^강원"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_jb, title: "전북 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
+      - {id: ove_pep_cb, title: "충북 노지 고추 재배면적", tbl: DT_1ET0013, itm: "^고추$", want: ["^충청북|^충북"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

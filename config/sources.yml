@@ -8099,6 +8099,33 @@ sources:
       - {id: apx_fr, title: "프랑스 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^프랑스$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
       - {id: apx_de, title: "독일 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^독일$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
       - {id: apx_nl, title: "네덜란드 농업생산지수", tbl: DT_2KAA402, itm: "^농업생산지수$", want: ["^네덜란드$"], unit: "2014~16=100", survey: 국제통계(농업생산지수)}
+      - {id: ipt_wd, title: "세계 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^세계$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_kr, title: "대한민국 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_jp, title: "일본 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^일본$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_cn, title: "중국 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^중국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_us, title: "미국 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^미국$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_de, title: "독일 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^독일$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_nl, title: "네덜란드 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^네덜란드$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_nz, title: "뉴질랜드 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^뉴질랜드$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: ipt_in, title: "인도 감자 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^인도$"], codes: {ITM_ID: "^T02$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_wd, title: "세계 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^세계$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_kr, title: "대한민국 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^대한민국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_jp, title: "일본 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^일본$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_cn, title: "중국 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^중국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_us, title: "미국 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^미국$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_vn, title: "베트남 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^베트남$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: isp_au, title: "오스트레일리아 고구마 1ha당 수량", tbl: DT_2KAA406, itm: "^경작면적당 ?생산량$", want: ["^오스트레일리아$"], codes: {ITM_ID: "^T04$"}, unit: kg/ha, survey: 국제통계(감자·고구마 생산량)}
+      - {id: lsd_kr, title: "대한민국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^대한민국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_nl, title: "네덜란드 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^네덜란드$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_jp, title: "일본 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^일본$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_dk, title: "덴마크 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^덴마크$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_in, title: "인도 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^인도$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_de, title: "독일 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^독일$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_fr, title: "프랑스 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^프랑스$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_cn, title: "중국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^중국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_us, title: "미국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^미국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_nz, title: "뉴질랜드 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^뉴질랜드$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
+      - {id: lsd_uk, title: "영국 농지 1ha당 가축 수", tbl: DT_2FA23043, itm: "^농지 면적당 총 가축 수$", want: ["^영국$"], unit: LU/ha, survey: FAO 국제통계(농지 면적당 가축 수)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

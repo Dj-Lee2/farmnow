@@ -8338,6 +8338,37 @@ sources:
       - {id: aem_de, title: "독일 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^독일$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
       - {id: aem_nl, title: "네덜란드 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^네덜란드$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
       - {id: aem_il, title: "이스라엘 농업부문 고용 비중", tbl: DT_2AQ352, itm: "^농업부문 고용$", want: ["^이스라엘$"], unit: "%", survey: 국제통계(세계은행 농업투입)}
+      - {id: flp_n, title: "농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^전국$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flp_amt, title: "농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^전국$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flp_med, title: "농지연금 수급금액 중위수", tbl: DT_1PEN_042, itm: "^중위수$", want: ["^전국$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flp_hn, title: "주택연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^전국$", "^주택연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpa_65, title: "농지연금 수급자 · 65~69세", tbl: DT_1PEN_006, itm: "^연금수급자$", want: ["^65~69세$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpa_70, title: "농지연금 수급자 · 70~74세", tbl: DT_1PEN_006, itm: "^연금수급자$", want: ["^70~74세$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpa_75, title: "농지연금 수급자 · 75~79세", tbl: DT_1PEN_006, itm: "^연금수급자$", want: ["^75~79세$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpa_80, title: "농지연금 수급자 · 80세 이상", tbl: DT_1PEN_006, itm: "^연금수급자$", want: ["^80세 이상$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpb_1, title: "농지연금 수급자 · 월 25만원 미만", tbl: DT_1PEN_007, itm: "^연금수급자$", want: ["^25만원 미만$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpb_2, title: "농지연금 수급자 · 월 25~50만원", tbl: DT_1PEN_007, itm: "^연금수급자$", want: ["^25~50만원$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpb_3, title: "농지연금 수급자 · 월 50~100만원", tbl: DT_1PEN_007, itm: "^연금수급자$", want: ["^50~100만원$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpb_4, title: "농지연금 수급자 · 월 100~200만원", tbl: DT_1PEN_007, itm: "^연금수급자$", want: ["^100~200만원$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpb_5, title: "농지연금 수급자 · 월 200만원 이상", tbl: DT_1PEN_007, itm: "^연금수급자$", want: ["^200만원 이상$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_gg, title: "경기 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^경기도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_gw, title: "강원 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^강원(특별자치)?도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_cb, title: "충북 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^충청북도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_cn, title: "충남 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^충청남도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_jb, title: "전북 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^전(라북도|북특별자치도)$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_jn, title: "전남 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^전라남도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_gb, title: "경북 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^경상북도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_gn, title: "경남 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^경상남도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpr_jj, title: "제주 농지연금 수급자", tbl: DT_1PEN_042, itm: "^연금수급자$", want: ["^제주(특별자치)?도$", "^농지연금$"], unit: 천명, survey: 통계청 연금통계}
+      - {id: flpm_gg, title: "경기 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^경기도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_gw, title: "강원 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^강원(특별자치)?도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_cb, title: "충북 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^충청북도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_cn, title: "충남 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^충청남도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_jb, title: "전북 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^전(라북도|북특별자치도)$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_jn, title: "전남 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^전라남도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_gb, title: "경북 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^경상북도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_gn, title: "경남 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^경상남도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
+      - {id: flpm_jj, title: "제주 농지연금 월평균 수급금액", tbl: DT_1PEN_042, itm: "^월평균 수급금액$", want: ["^제주(특별자치)?도$", "^농지연금$"], unit: 천원, survey: 통계청 연금통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

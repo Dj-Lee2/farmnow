@@ -3244,7 +3244,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수', 237) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별', 249) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -3265,6 +3265,21 @@
   {{ hcard('돼지 사육 규모별 마릿수', [('1천 두 미만', K.lsz_pg_h0), ('1천~5천 두', K.lsz_pg_h1), ('5천~1만 두', K.lsz_pg_h2), ('1만 두 이상', K.lsz_pg_h3)], '마리', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.pig.vals[-1] if K.pig else none, '#a0527a') }}
   {{ hcard('산란계 사육 규모별 가구 수', [('1만 수 미만', K.lsz_ly_f0), ('1만~3만 수', K.lsz_ly_f1), ('3만~5만 수', K.lsz_ly_f2), ('5만 수 이상', K.lsz_ly_f3)], '가구', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_ly_ft.vals[-1] if K.lsz_ly_ft else none, '#c79a2e') }}
   {{ hcard('산란계 사육 규모별 마릿수', [('1만 수 미만', K.lsz_ly_h0), ('1만~3만 수', K.lsz_ly_h1), ('3만~5만 수', K.lsz_ly_h2), ('5만 수 이상', K.lsz_ly_h3)], '마리', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_ly_ht.vals[-1] if K.lsz_ly_ht else none, '#c79a2e') }}
+ </div>
+ <h3 class="sg-sub">사육 규모별 가구·마릿수 — 육용계·오리·육우 <small>분기 · 전국 · 가축동향조사</small></h3>
+ <div class="sg-g">
+  {{ card('lsz_br_ht', 'lsz7', ('가구 ' ~ K.lsz_br_ft.vals[-1]|big ~ '곳 · 가구당 평균 ' ~ '{:,.0f}'.format(K.lsz_br_ht.vals[-1] / K.lsz_br_ft.vals[-1]) ~ '수') if K.lsz_br_ht and K.lsz_br_ft and K.lsz_br_ft.vals[-1] else none, '#c79a2e') }}
+  {{ rcard('육용계 5만 수 이상 가구의 마릿수 비중', K.lsz_br_h3, K.lsz_br_ht, 'lsz8', '가구 수로는 ' ~ (('{:.1f}'.format(K.lsz_br_f3.vals[-1] / K.lsz_br_ft.vals[-1] * 100) ~ '%') if K.lsz_br_f3 and K.lsz_br_ft and K.lsz_br_ft.vals[-1] else '-'), '#c79a2e') }}
+  {{ card('lsz_dkm_ht', 'lsz9', ('가구 ' ~ K.lsz_dkm_ft.vals[-1]|big ~ '곳 · 출하 주기에 따라 분기별 변동 큼') if K.lsz_dkm_ft else none, '#3a8a7a') }}
+  {{ card('lsz_dkb_ht', 'lsz10', ('종오리 가구 ' ~ K.lsz_dkb_ft.vals[-1]|big ~ '곳 · 가구당 평균 ' ~ '{:,.0f}'.format(K.lsz_dkb_ht.vals[-1] / K.lsz_dkb_ft.vals[-1]) ~ '수') if K.lsz_dkb_ht and K.lsz_dkb_ft and K.lsz_dkb_ft.vals[-1] else none, '#3a8a7a') }}
+  {{ card('lsz_bf_ht', 'lsz11', ('농장 ' ~ K.lsz_bf_ft.vals[-1]|big ~ '곳 · 젖소 수컷 비육') if K.lsz_bf_ft else none, '#8a5a3a') }}
+  {{ rcard('육우 100두 이상 농장의 마릿수 비중', K.lsz_bf_h3, K.lsz_bf_ht, 'lsz12', '농장 수로는 ' ~ (('{:.1f}'.format(K.lsz_bf_f3.vals[-1] / K.lsz_bf_ft.vals[-1] * 100) ~ '%') if K.lsz_bf_f3 and K.lsz_bf_ft and K.lsz_bf_ft.vals[-1] else '-'), '#8a5a3a') }}
+  {{ hcard('육용계 사육 규모별 가구 수', [('1만 수 미만', K.lsz_br_f0), ('1만~3만 수', K.lsz_br_f1), ('3만~5만 수', K.lsz_br_f2), ('5만 수 이상', K.lsz_br_f3)], '가구', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_br_ft.vals[-1] if K.lsz_br_ft else none, '#c79a2e') }}
+  {{ hcard('육용계 사육 규모별 마릿수', [('1만 수 미만', K.lsz_br_h0), ('1만~3만 수', K.lsz_br_h1), ('3만~5만 수', K.lsz_br_h2), ('5만 수 이상', K.lsz_br_h3)], '마리', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_br_ht.vals[-1] if K.lsz_br_ht else none, '#c79a2e') }}
+  {{ hcard('육용오리 사육 규모별 가구 수', [('5천 수 미만', K.lsz_dkm_f0), ('5천~1만 수', K.lsz_dkm_f1), ('1만~3만 수', K.lsz_dkm_f2), ('3만~5만 수', K.lsz_dkm_f3), ('5만 수 이상', K.lsz_dkm_f4)], '가구', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_dkm_ft.vals[-1] if K.lsz_dkm_ft else none, '#3a8a7a') }}
+  {{ hcard('육용오리 사육 규모별 마릿수', [('5천 수 미만', K.lsz_dkm_h0), ('5천~1만 수', K.lsz_dkm_h1), ('1만~3만 수', K.lsz_dkm_h2), ('3만~5만 수', K.lsz_dkm_h3), ('5만 수 이상', K.lsz_dkm_h4)], '마리', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_dkm_ht.vals[-1] if K.lsz_dkm_ht else none, '#3a8a7a') }}
+  {{ hcard('육우 사육 규모별 농장 수', [('20두 미만', K.lsz_bf_f0), ('20~49두', K.lsz_bf_f1), ('50~99두', K.lsz_bf_f2), ('100두 이상', K.lsz_bf_f3)], '농장', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_bf_ft.vals[-1] if K.lsz_bf_ft else none, '#8a5a3a') }}
+  {{ hcard('육우 사육 규모별 마릿수', [('20두 미만', K.lsz_bf_h0), ('20~49두', K.lsz_bf_h1), ('50~99두', K.lsz_bf_h2), ('100두 이상', K.lsz_bf_h3)], '마리', '괄호는 전체 중 비중 · 오른쪽은 전 분기 대비', K.lsz_bf_ht.vals[-1] if K.lsz_bf_ht else none, '#8a5a3a') }}
  </div>
  <h3 class="sg-sub">생산비·수익성·우유 <small>한 마리·우유 100ℓ 기준</small></h3>
  <div class="sg-g">{% set hn = K.hw_net %}{{ card('hw_net', 'g28', ('총수입 ' ~ num(K.hw_rev.vals[-1], '원')|striptags ~ ' · 비용 ' ~ num(K.hw_cost.vals[-1], '원')|striptags) if K.hw_rev and K.hw_cost else none, '#2458d6' if hn and hn.vals[-1] < 0 else '#1c7a45') }}{{ card('pig_net', 'g21', ('총수입 ' ~ '{:,.1f}'.format(K.pig_rev.vals[-1] / 1e4) ~ '만 · 비용 ' ~ '{:,.1f}'.format(K.pig_cost.vals[-1] / 1e4) ~ '만 원') if K.pig_rev and K.pig_cost else none) }}{{ card('dairy_net', 'g22') }}{{ card('calf_cost', 'g23', none, '#b04a07') }}{{ card('milk_cost', 'g29', ('1ℓ당 약 ' ~ '{:,.0f}'.format(K.milk_cost.vals[-1] / 100) ~ '원 · 사료비 비중 ' ~ '{:.0f}'.format(K.milk_feed.vals[-1] / K.milk_cost.vals[-1] * 100) ~ '%') if K.milk_feed else none, '#b04a07') }}{{ card('raw_milk', 'g27', '전국 원유(집유) 생산량') }}{{ card('hw_inc', 'g30', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('br_net', 'g31', ('10수당 총수입 ' ~ '{:,.0f}'.format(K.br_rev.vals[-1]) ~ '원') if K.br_rev else none) }}{{ card('pig_inc', 'g47', '총수입 − 일반비(자가노동·자본용역 제외)') }}</div>

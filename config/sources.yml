@@ -8550,6 +8550,42 @@ sources:
       - {id: nup_bean, title: "콩 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^콩$"], unit: 만주, survey: 육묘업실태조사}
       - {id: nup_corn, title: "옥수수 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^옥수수$"], unit: 만주, survey: 육묘업실태조사}
       - {id: nup_etc, title: "기타 식량작물 묘 생산량", tbl: DT_114052_B20, org: "114", se: F, periods: 2, itm: "^전체 생산량$", want: ["^기타$"], unit: 만주, survey: 육묘업실태조사}
+      # 영농형태·경지규모별 농업노동 투하량(DT_1EA1701), 재배 규모별 논벼 10a당 소득(DT_1EC0011)
+      - {id: lft_ric, title: "논벼 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-논벼$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_frt, title: "과수 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-과수$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_veg, title: "채소 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-채소$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_spc, title: "특용작물 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-특용작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_flw, title: "화훼 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-화훼$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_fld, title: "일반밭작물 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-일반밭작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_liv, title: "축산 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-축산$"], unit: 시간, survey: 농가경제조사}
+      - {id: lft_etc, title: "기타 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^영농형태-기타$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_ric, title: "논벼 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-논벼$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_frt, title: "과수 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-과수$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_veg, title: "채소 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-채소$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_spc, title: "특용작물 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-특용작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_flw, title: "화훼 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-화훼$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_fld, title: "일반밭작물 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-일반밭작물$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_liv, title: "축산 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-축산$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfh_etc, title: "기타 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^영농형태-기타$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s05, title: "경지 0.5ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-0\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s1, title: "경지 0.5-1.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s15, title: "경지 1.0-1.5ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s2, title: "경지 1.5-2.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s3, title: "경지 2.0-3.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s5, title: "경지 3.0-5.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s7, title: "경지 5.0-7.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s10, title: "경지 7.0-10.0ha 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfz_s10p, title: "경지 10.0ha 이상 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경지규모-10\\.0ha 이상$"], unit: 시간, survey: 농가경제조사}
+      - {id: rsn_s05, title: "논벼 0.5ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^0\\.5ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s1, title: "논벼 0.5-1.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^0\\.5-1\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s15, title: "논벼 1.0-1.5ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^1\\.0-1\\.5ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s2, title: "논벼 1.5-2.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^1\\.5-2\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s25, title: "논벼 2.0-2.5ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^2\\.0-2\\.5ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s3, title: "논벼 2.5-3.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^2\\.5-3\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s5, title: "논벼 3.0-5.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^3\\.0-5\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s7, title: "논벼 5.0-7.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s10, title: "논벼 7.0-10.0ha미만 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^소득$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rsn_s10p, title: "논벼 10.0ha이상 농가 — 10a당 소득", tbl: DT_1EC0011, itm: "^10a당$", want: ["^10\\.0ha이상$", "^소득$"], unit: 원, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

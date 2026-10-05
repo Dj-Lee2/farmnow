@@ -9392,6 +9392,31 @@ sources:
       - {id: wpr_soy_kr, title: "대한민국 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^대한민국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
       - {id: wpr_soy_jp, title: "일본 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^일본$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
       - {id: wpr_soy_cn, title: "중국 대두 생산량", tbl: DT_2FA23011, itm: "^대두 생산량$", want: ["^중국$"], unit: 톤, survey: 국제통계(FAO 작물생산)}
+      - {id: fat_ex_kr, title: "대한민국 농산물 수출액", tbl: DT_2FA23021, itm: "^수출$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_ex_jp, title: "일본 농산물 수출액", tbl: DT_2FA23021, itm: "^수출$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_ex_cn, title: "중국 농산물 수출액", tbl: DT_2FA23021, itm: "^수출$", want: ["^중국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_ex_us, title: "미국 농산물 수출액", tbl: DT_2FA23021, itm: "^수출$", want: ["^미국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_ex_nl, title: "네덜란드 농산물 수출액", tbl: DT_2FA23021, itm: "^수출$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_im_kr, title: "대한민국 농산물 수입액", tbl: DT_2FA23021, itm: "^수입$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_im_jp, title: "일본 농산물 수입액", tbl: DT_2FA23021, itm: "^수입$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_im_cn, title: "중국 농산물 수입액", tbl: DT_2FA23021, itm: "^수입$", want: ["^중국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_im_us, title: "미국 농산물 수입액", tbl: DT_2FA23021, itm: "^수입$", want: ["^미국$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fat_im_nl, title: "네덜란드 농산물 수입액", tbl: DT_2FA23021, itm: "^수입$", want: ["^네덜란드$"], unit: 천달러, survey: 국제통계(FAO 농산물 교역)}
+      - {id: kcl_kr, title: "대한민국 1인 1일 식량공급량", tbl: DT_2FA23020, itm: "^전체 식량공급량$", want: ["^대한민국$"], unit: kcal, survey: 국제통계(FAO 식량공급)}
+      - {id: kcl_cn, title: "중국 1인 1일 식량공급량", tbl: DT_2FA23020, itm: "^전체 식량공급량$", want: ["^중국$"], unit: kcal, survey: 국제통계(FAO 식량공급)}
+      - {id: kcl_us, title: "미국 1인 1일 식량공급량", tbl: DT_2FA23020, itm: "^전체 식량공급량$", want: ["^미국$"], unit: kcal, survey: 국제통계(FAO 식량공급)}
+      - {id: kcl_fr, title: "프랑스 1인 1일 식량공급량", tbl: DT_2FA23020, itm: "^전체 식량공급량$", want: ["^프랑스$"], unit: kcal, survey: 국제통계(FAO 식량공급)}
+      - {id: kcl_in, title: "인도 1인 1일 식량공급량", tbl: DT_2FA23020, itm: "^전체 식량공급량$", want: ["^인도$"], unit: kcal, survey: 국제통계(FAO 식량공급)}
+      - {id: fax_ex_kr, title: "대한민국 농산물 수출 지수", tbl: DT_2FA23024, itm: "^수출 지수$", want: ["^대한민국$"], unit: 2014~16=100, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fax_im_kr, title: "대한민국 농산물 수입 지수", tbl: DT_2FA23024, itm: "^수입 지수$", want: ["^대한민국$"], unit: 2014~16=100, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fax_ex_jp, title: "일본 농산물 수출 지수", tbl: DT_2FA23024, itm: "^수출 지수$", want: ["^일본$"], unit: 2014~16=100, survey: 국제통계(FAO 농산물 교역)}
+      - {id: fax_im_jp, title: "일본 농산물 수입 지수", tbl: DT_2FA23024, itm: "^수입 지수$", want: ["^일본$"], unit: 2014~16=100, survey: 국제통계(FAO 농산물 교역)}
+      - {id: lvx_ex_kr, title: "대한민국 가축 수출액", tbl: DT_2FA23022, itm: "^수출$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 가축 교역)}
+      - {id: lvx_im_kr, title: "대한민국 가축 수입액", tbl: DT_2FA23022, itm: "^수입$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 가축 교역)}
+      - {id: lvx_ex_jp, title: "일본 가축 수출액", tbl: DT_2FA23022, itm: "^수출$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 가축 교역)}
+      - {id: lvx_im_jp, title: "일본 가축 수입액", tbl: DT_2FA23022, itm: "^수입$", want: ["^일본$"], unit: 천달러, survey: 국제통계(FAO 가축 교역)}
+      - {id: fpx_ex_kr, title: "대한민국 임산물 수출액", tbl: DT_2FA23054, itm: "^수출$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 임산물 교역)}
+      - {id: fpx_im_kr, title: "대한민국 임산물 수입액", tbl: DT_2FA23054, itm: "^수입$", want: ["^대한민국$"], unit: 천달러, survey: 국제통계(FAO 임산물 교역)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

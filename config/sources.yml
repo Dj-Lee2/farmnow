@@ -9304,6 +9304,43 @@ sources:
       - {id: vgy_p_ash, title: "신선초 생산량(양채류 생산실적)", tbl: DT_114018_007, org: "114", periods: 3, itm: "^생산량$", want: ["^신선초$"], unit: 톤, survey: 채소류생산실적}
       - {id: vgo_a, title: "기타채소류 재배 면적", tbl: DT_114018_008, org: "114", periods: 3, itm: "^면적$", want: ["^계$"], unit: ha, survey: 채소류생산실적}
       - {id: vgo_p, title: "기타채소류 생산량", tbl: DT_114018_008, org: "114", periods: 3, itm: "^생산량$", want: ["^계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_a_tot, title: "과채류 재배 면적", tbl: DT_114018_005, org: "114", periods: 3, itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgf_p_tot, title: "과채류 생산량", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_gh, title: "과채류 시설 생산량", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_wm, title: "수박 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^수박$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_om, title: "참외 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^참외$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_cuc, title: "오이 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^오이$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_pmk, title: "호박 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^호박$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_stb, title: "딸기 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^딸기$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_egp, title: "가지 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^가지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_mel, title: "멜론 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^멜론$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_tom, title: "토마토 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^토마토$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_gpp, title: "풋고추 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^풋고추$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgf_p_ppk, title: "파프리카 생산량(과채류 생산실적)", tbl: DT_114018_005, org: "114", periods: 3, itm: "^생산량$", want: ["^파프리카$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_a_tot, title: "엽채류 재배 면적", tbl: DT_114018_004, org: "114", periods: 3, itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgl_p_tot, title: "엽채류 생산량", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_gh, title: "엽채류 시설 생산량", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$", "^시설$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_cspr, title: "봄배추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^봄배추"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_chl, title: "고랭지배추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^고랭지배추$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_caut, title: "가을배추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^가을배추$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_cwin, title: "겨울배추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^겨울배추$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_cab, title: "양배추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^양배추$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_spn, title: "시금치 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^시금치$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_let, title: "상추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^상추$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_wdr, title: "미나리 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^미나리$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_crd, title: "쑥갓 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^쑥갓$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgl_p_chv, title: "부추 생산량(엽채류 생산실적)", tbl: DT_114018_004, org: "114", periods: 3, itm: "^생산량$", want: ["^부추$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_a_tot, title: "근채류 재배 면적", tbl: DT_114018_003, org: "114", periods: 3, itm: "^면적$", want: ["^합계$"], unit: ha, survey: 채소류생산실적}
+      - {id: vgr_p_tot, title: "근채류 생산량", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^합계$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_rspr, title: "봄무 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^봄무"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_rhl, title: "고랭지무 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^고랭지무$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_raut, title: "가을무 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^가을무$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_rwin, title: "겨울무 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^겨울무$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_ryng, title: "총각무 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^총각무$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_car, title: "당근 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^당근$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_lot, title: "연근 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^연근$", "^노지$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_bur, title: "우엉 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^우엉$"], unit: 톤, survey: 채소류생산실적}
+      - {id: vgr_p_tar, title: "토란 생산량(근채류 생산실적)", tbl: DT_114018_003, org: "114", periods: 3, itm: "^생산량$", want: ["^토란$"], unit: 톤, survey: 채소류생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

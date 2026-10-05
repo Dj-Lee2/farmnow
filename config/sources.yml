@@ -8443,6 +8443,45 @@ sources:
       - {id: fop_r_gb, title: "경북 임산물 총 생산액", tbl: DT_136006_10878, org: "136", periods: 2, itm: "^값$", want: ["^경상북도$", "^총 생산액\\(원\\)$"], codes: {C2: "X\\.192$"}, unit: 원, survey: 임산물생산조사}
       - {id: fop_r_gn, title: "경남 임산물 총 생산액", tbl: DT_136006_10878, org: "136", periods: 2, itm: "^값$", want: ["^경상남도$", "^총 생산액\\(원\\)$"], codes: {C2: "X\\.192$"}, unit: 원, survey: 임산물생산조사}
       - {id: fop_r_jj, title: "제주 임산물 총 생산액", tbl: DT_136006_10878, org: "136", periods: 2, itm: "^값$", want: ["^제주(특별자치)?도$", "^총 생산액\\(원\\)$"], codes: {C2: "X\\.192$"}, unit: 원, survey: 임산물생산조사}
+      - {id: flh_t_ddk, title: "더덕 1ha당 총 노동시간", tbl: DT_136036_11616, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_ddk, title: "더덕 1ha당 고용노동 시간", tbl: DT_136036_11616, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_ddk, title: "더덕 1ha당 수확작업 시간", tbl: DT_136036_11616, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_drj, title: "도라지 1ha당 총 노동시간", tbl: DT_136036_11626, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_drj, title: "도라지 1ha당 고용노동 시간", tbl: DT_136036_11626, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_drj, title: "도라지 1ha당 수확작업 시간", tbl: DT_136036_11626, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_frn, title: "고사리 1ha당 총 노동시간", tbl: DT_136036_11543, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_frn, title: "고사리 1ha당 고용노동 시간", tbl: DT_136036_11543, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_frn, title: "고사리 1ha당 수확작업 시간", tbl: DT_136036_11543, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_dur, title: "두릅 1ha당 총 노동시간", tbl: DT_136036_11553, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_dur, title: "두릅 1ha당 고용노동 시간", tbl: DT_136036_11553, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_dur, title: "두릅 1ha당 수확작업 시간", tbl: DT_136036_11553, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_sanm, title: "산마늘 1ha당 총 노동시간", tbl: DT_136036_11560, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_sanm, title: "산마늘 1ha당 고용노동 시간", tbl: DT_136036_11560, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_sanm, title: "산마늘 1ha당 수확작업 시간", tbl: DT_136036_11560, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_gom, title: "곰취 1ha당 총 노동시간", tbl: DT_136036_11621, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_gom, title: "곰취 1ha당 고용노동 시간", tbl: DT_136036_11621, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_gom, title: "곰취 1ha당 수확작업 시간", tbl: DT_136036_11621, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_cha, title: "참취 1ha당 총 노동시간", tbl: DT_136036_11577, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_cha, title: "참취 1ha당 고용노동 시간", tbl: DT_136036_11577, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_cha, title: "참취 1ha당 수확작업 시간", tbl: DT_136036_11577, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_cnm, title: "참나물 1ha당 총 노동시간", tbl: DT_136036_11598, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_cnm, title: "참나물 1ha당 고용노동 시간", tbl: DT_136036_11598, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_cnm, title: "참나물 1ha당 수확작업 시간", tbl: DT_136036_11598, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_gdr, title: "곤드레 1ha당 총 노동시간", tbl: DT_136036_11494, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_gdr, title: "곤드레 1ha당 고용노동 시간", tbl: DT_136036_11494, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_gdr, title: "곤드레 1ha당 수확작업 시간", tbl: DT_136036_11494, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_dok, title: "독활 1ha당 총 노동시간", tbl: DT_136036_11548, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_dok, title: "독활 1ha당 고용노동 시간", tbl: DT_136036_11548, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_dok, title: "독활 1ha당 수확작업 시간", tbl: DT_136036_11548, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_wch, title: "원추리 1ha당 총 노동시간", tbl: DT_136036_11570, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_wch, title: "원추리 1ha당 고용노동 시간", tbl: DT_136036_11570, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_wch, title: "원추리 1ha당 수확작업 시간", tbl: DT_136036_11570, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_ma, title: "마 1ha당 총 노동시간", tbl: DT_136036_11586, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_ma, title: "마 1ha당 고용노동 시간", tbl: DT_136036_11586, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_ma, title: "마 1ha당 수확작업 시간", tbl: DT_136036_11586, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_t_sap, title: "수액 1ha당 총 노동시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_h_sap, title: "수액 1ha당 고용노동 시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: flh_v_sap, title: "수액 1ha당 수확작업 시간", tbl: DT_136036_11565, org: "136", itm: "^값$", want: ["^수확작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -8617,6 +8617,38 @@ sources:
       - {id: rsp_s7, title: "논벼 5.0-7.0ha미만 농가 — 10a당 순수익", tbl: DT_1EC0011, itm: "^10a당$", want: ["^5\\.0-7\\.0ha미만$", "^순수익$"], unit: 원, survey: 농산물생산비조사}
       - {id: rsp_s10, title: "논벼 7.0-10.0ha미만 농가 — 10a당 순수익", tbl: DT_1EC0011, itm: "^10a당$", want: ["^7\\.0-10\\.0ha미만$", "^순수익$"], unit: 원, survey: 농산물생산비조사}
       - {id: rsp_s10p, title: "논벼 10.0ha이상 농가 — 10a당 순수익", tbl: DT_1EC0011, itm: "^10a당$", want: ["^10\\.0ha이상$", "^순수익$"], unit: 원, survey: 농산물생산비조사}
+      # 전·겸업·주부업·경영주 연령·경지규모별 농업노동 투하량(DT_1EA1701)
+      - {id: lfj_full, title: "전업 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^전·겸업별-전업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_p1, title: "1종겸업 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^전·겸업별-1종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_p2, title: "2종겸업 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^전·겸업별-2종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_pro, title: "주·부업 전문 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^주·부업별-전문$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_gen, title: "주·부업 일반 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^주·부업별-일반$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_sub, title: "주·부업 부업 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^주·부업별-부업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_slf, title: "주·부업 자급 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^주·부업별-자급$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_a50, title: "경영주 50세 미만 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경영주연령-50세 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_a5x, title: "경영주 50~59세 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경영주연령-50 - 59세$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_a6x, title: "경영주 60~69세 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경영주연령-60 - 69세$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfj_a70, title: "경영주 70세 이상 농가 자영농업 노동투하량", tbl: DT_1EA1701, itm: "^자영농업노동투하량$", want: ["^경영주연령-70세 이상$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_full, title: "전업 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^전·겸업별-전업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_p1, title: "1종겸업 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^전·겸업별-1종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_p2, title: "2종겸업 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^전·겸업별-2종겸업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_pro, title: "주·부업 전문 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^주·부업별-전문$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_gen, title: "주·부업 일반 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^주·부업별-일반$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_sub, title: "주·부업 부업 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^주·부업별-부업$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_slf, title: "주·부업 자급 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^주·부업별-자급$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_a50, title: "경영주 50세 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경영주연령-50세 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_a5x, title: "경영주 50~59세 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경영주연령-50 - 59세$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_a6x, title: "경영주 60~69세 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경영주연령-60 - 69세$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfg_a70, title: "경영주 70세 이상 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경영주연령-70세 이상$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s05, title: "경지 0.5ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-0\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s1, title: "경지 0.5-1.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-0\\.5-1\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s15, title: "경지 1.0-1.5ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-1\\.0-1\\.5ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s2, title: "경지 1.5-2.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-1\\.5-2\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s3, title: "경지 2.0-3.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-2\\.0-3\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s5, title: "경지 3.0-5.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-3\\.0-5\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s7, title: "경지 5.0-7.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-5\\.0-7\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s10, title: "경지 7.0-10.0ha 미만 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-7\\.0-10\\.0ha 미만$"], unit: 시간, survey: 농가경제조사}
+      - {id: lfgz_s10p, title: "경지 10.0ha 이상 농가 고용노동 투하량", tbl: DT_1EA1701, itm: "^고용노동\\(일손돕기포함\\)$", want: ["^경지규모-10\\.0ha 이상$"], unit: 시간, survey: 농가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

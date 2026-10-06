@@ -10846,6 +10846,34 @@ sources:
       - {id: hfm_self, title: "영림업 임가 산림관리 방식 — 직접관리", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직접관리$"], unit: "%", survey: 임업경영실태조사}
       - {id: hfm_agent, title: "영림업 임가 산림관리 방식 — 위탁관리(관리인고용)", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^위탁관리\\(관리인고용\\)$"], unit: "%", survey: 임업경영실태조사}
       - {id: hfm_none, title: "영림업 임가 산림관리 방식 — 없음", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_peer, title: "밤재배업 사업정보 획득 경로 — 동종업무 종사자", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^동종업무 종사자를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_coop, title: "밤재배업 사업정보 획득 경로 — 산림조합·영농단체", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합/영농단체를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_gov, title: "밤재배업 사업정보 획득 경로 — 정부·지자체 공무원", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 지자체 공무원을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_inst, title: "밤재배업 사업정보 획득 경로 — 산림행정·연구기관", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림행정.연구기관을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_web, title: "밤재배업 사업정보 획득 경로 — 인터넷 등 온라인", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인터넷 등 온라인 매체를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_expert, title: "밤재배업 사업정보 획득 경로 — 전문 강사·기술자", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전문 강사 또는 기술자를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_book, title: "밤재배업 사업정보 획득 경로 — 전문 서적", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전문 서적을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_dealer, title: "밤재배업 사업정보 획득 경로 — 수집상·도소매상", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상이나 도소매상을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcpi_none, title: "밤재배업 사업정보 획득 경로 — 정보를 얻지 못함", tbl: DT_136022_9842, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정보를 얻지 못하고 있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_peer, title: "버섯재배업 사업정보 획득 경로 — 동종업무 종사자", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^동종업무 종사자를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_coop, title: "버섯재배업 사업정보 획득 경로 — 산림조합·영농단체", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합/영농단체를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_gov, title: "버섯재배업 사업정보 획득 경로 — 정부·지자체 공무원", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 지자체 공무원을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_inst, title: "버섯재배업 사업정보 획득 경로 — 산림행정·연구기관", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림행정.연구기관을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_web, title: "버섯재배업 사업정보 획득 경로 — 인터넷 등 온라인", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인터넷 등 온라인 매체를 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_dealer, title: "버섯재배업 사업정보 획득 경로 — 수집상·도소매상", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상이나 도소매상을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpi_none, title: "버섯재배업 사업정보 획득 경로 — 정보를 얻지 못함", tbl: DT_136022_10088, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정보를 얻지 못하고 있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_assoc, title: "산채·약초 재배업 사업정보 획득 경로 — 영농단체·생약협회 등", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^영농단체 생약협회 등 관련단체를 통해서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_near, title: "산채·약초 재배업 사업정보 획득 경로 — 주변 사람", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주변 사람$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_web, title: "산채·약초 재배업 사업정보 획득 경로 — 온라인(웹·블로그 등)", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^온라인에서\\(웹 블로그 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_media, title: "산채·약초 재배업 사업정보 획득 경로 — 신문·매스컴", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^신문 매스컴 등을 통해서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_dealer, title: "산채·약초 재배업 사업정보 획득 경로 — 수집상·도소매상", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상이나 도소매상을 통해서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hepi_none, title: "산채·약초 재배업 사업정보 획득 경로 — 정보를 얻지 못함", tbl: DT_136022_9942, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정보를 얻지 못하고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_base, title: "버섯재배업 가장 시급한 산림정책 — 생산기반의 확충", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산기반의 확충$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_dist, title: "버섯재배업 가장 시급한 산림정책 — 유통구조의 개선", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^유통구조의 개선$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_tech, title: "버섯재배업 가장 시급한 산림정책 — 경쟁력 제고를 위한 신기술 개발 확대", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^경쟁력 제고를 위한 신기술 개발 확대$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_mod, title: "버섯재배업 가장 시급한 산림정책 — 생산시스템의 현대화", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산시스템의 현대화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_mkt, title: "버섯재배업 가장 시급한 산림정책 — 새로운 시장 개척", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^새로운 시장 개척$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmpol_val, title: "버섯재배업 가장 시급한 산림정책 — 고부가가치의 버섯제품 개발", tbl: DT_136022_10080, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고부가가치의 버섯제품 개발$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

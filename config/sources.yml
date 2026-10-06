@@ -10797,6 +10797,29 @@ sources:
       - {id: shst_foot, title: "숙박형 산림휴양 활동 숲속 족욕·스파", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲속 족욕"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shst_star, title: "숙박형 산림휴양 활동 별 관찰", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^별 관찰$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shst_harvest, title: "숙박형 산림휴양 활동 임산물 수확체험", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산나물 등"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: gsp_all, title: "귀산촌인", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_m, title: "귀산촌인 — 남자", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^남자$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_f, title: "귀산촌인 — 여자", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^여자$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a20, title: "귀산촌인 — 29세 이하", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^0 - 29세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a30, title: "귀산촌인 — 30대", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^30 - 39세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a40, title: "귀산촌인 — 40대", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^40 - 49세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a50, title: "귀산촌인 — 50대", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^50 - 59세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a60, title: "귀산촌인 — 60대", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^60 - 69세$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_a70, title: "귀산촌인 — 70세 이상", tbl: DT_1A02034, itm: "^귀산촌인수$", want: ["^계$", "^70세 이상$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_hh, title: "귀산촌 가구주", tbl: DT_1A02034, itm: "^귀산촌가구주수$", want: ["^계$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_hf, title: "귀산촌 가구주 — 여자", tbl: DT_1A02034, itm: "^귀산촌가구주수$", want: ["^여자$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsp_mem, title: "귀산촌 동반가구원", tbl: DT_1A02034, itm: "^동반가구원수$", want: ["^계$", "^계$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsm_in, title: "귀산촌인 이주 유형 — 시도 안 이동", tbl: DT_1A02038, itm: "^귀산촌인수$", want: ["^전국$", "^시도내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsm_cg, title: "귀산촌인 이주 유형 — 시도 안 시군 간 이동", tbl: DT_1A02038, itm: "^귀산촌인수$", want: ["^전국$", "^시군간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsm_urb, title: "귀산촌인 이주 유형 — 도농통합시 안 이동", tbl: DT_1A02038, itm: "^귀산촌인수$", want: ["^전국$", "^도농통합시내이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsm_out, title: "귀산촌인 이주 유형 — 시도 간 이동", tbl: DT_1A02038, itm: "^귀산촌인수$", want: ["^전국$", "^시도간이동$"], periods: 3, unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsr_job, title: "귀산촌 가구 전입 사유 — 직업", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^직업$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_fam, title: "귀산촌 가구 전입 사유 — 가족", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^가족$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_house, title: "귀산촌 가구 전입 사유 — 주택", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^주택$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_edu, title: "귀산촌 가구 전입 사유 — 교육", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^교육$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_env, title: "귀산촌 가구 전입 사유 — 주거환경", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^주거환경$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_nat, title: "귀산촌 가구 전입 사유 — 자연환경", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^자연환경$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: gsr_etc, title: "귀산촌 가구 전입 사유 — 기타", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^기타$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -11412,6 +11412,32 @@ sources:
       - {id: age_dy_u1, title: "젖소 연령별 마릿수 1세 미만", tbl: DT_1EO242, se: Q, periods: 12, itm: "^1세미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
       - {id: age_dy_m12, title: "젖소 연령별 마릿수 1~2세", tbl: DT_1EO242, se: Q, periods: 12, itm: "^1~2세$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
       - {id: age_dy_2p, title: "젖소 연령별 마릿수 2세 이상", tbl: DT_1EO242, se: Q, periods: 12, itm: "^2세이상$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_all_tot, title: "종계 용도·월령별 마릿수 종계 합계", tbl: DT_1EO412, se: Q, periods: 12, itm: "^종계:합계$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_all_u3, title: "종계 용도·월령별 마릿수 종계 3개월 미만", tbl: DT_1EO412, se: Q, periods: 12, itm: "^종계:3개월미만$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_all_m36, title: "종계 용도·월령별 마릿수 종계 3~6개월", tbl: DT_1EO412, se: Q, periods: 12, itm: "^종계:3~6개월미만$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_all_6p, title: "종계 용도·월령별 마릿수 종계 6개월 이상", tbl: DT_1EO412, se: Q, periods: 12, itm: "^종계:6개월이상$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_bro_tot, title: "종계 용도·월령별 마릿수 육용(원)종계 합계", tbl: DT_1EO412, se: Q, periods: 12, itm: "^육용\\(원\\)종계:합계$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_bro_u3, title: "종계 용도·월령별 마릿수 육용(원)종계 3개월 미만", tbl: DT_1EO412, se: Q, periods: 12, itm: "^육용\\(원\\)종계:3개월미만$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_bro_m36, title: "종계 용도·월령별 마릿수 육용(원)종계 3~6개월", tbl: DT_1EO412, se: Q, periods: 12, itm: "^육용\\(원\\)종계:3~6개월미만$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_bro_6p, title: "종계 용도·월령별 마릿수 육용(원)종계 6개월 이상", tbl: DT_1EO412, se: Q, periods: 12, itm: "^육용\\(원\\)종계:6개월이상$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_lay_tot, title: "종계 용도·월령별 마릿수 산란(원)종계 합계", tbl: DT_1EO412, se: Q, periods: 12, itm: "^산란\\(원\\)종계:합계$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_lay_6p, title: "종계 용도·월령별 마릿수 산란(원)종계 6개월 이상", tbl: DT_1EO412, se: Q, periods: 12, itm: "^산란\\(원\\)종계:6개월이상$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_nat_tot, title: "종계 용도·월령별 마릿수 토종닭(원)종계 합계", tbl: DT_1EO412, se: Q, periods: 12, itm: "^토종닭\\(원\\)종계:합계$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: bs_nat_6p, title: "종계 용도·월령별 마릿수 토종닭(원)종계 6개월 이상", tbl: DT_1EO412, se: Q, periods: 12, itm: "^토종닭\\(원\\)종계:6개월이상$", want: ["전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_b_tot, title: "오리 용도·월령별 마릿수 종오리 계", tbl: DT_1EO112, se: Q, periods: 12, itm: "^종오리-계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_b_u6, title: "오리 용도·월령별 마릿수 종오리 6개월 미만", tbl: DT_1EO112, se: Q, periods: 12, itm: "^종오리-6개월미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_b_6p, title: "오리 용도·월령별 마릿수 종오리 6개월 이상", tbl: DT_1EO112, se: Q, periods: 12, itm: "^종오리-6개월이상$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_m_tot, title: "오리 용도·월령별 마릿수 육용오리 계", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_m_u45, title: "오리 용도·월령별 마릿수 육용오리 45일 미만", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-45일미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkg_m_45p, title: "오리 용도·월령별 마릿수 육용오리 45일 이상", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-45일이상$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_gg, title: "시도별 육용오리 마릿수 경기도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(경기도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_gw, title: "시도별 육용오리 마릿수 강원", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(강원)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_cb, title: "시도별 육용오리 마릿수 충청북도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(충청북도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_cn, title: "시도별 육용오리 마릿수 충청남도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(충청남도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_jb, title: "시도별 육용오리 마릿수 전북", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(전북|전라북도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_jn, title: "시도별 육용오리 마릿수 전라남도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(전라남도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_gb, title: "시도별 육용오리 마릿수 경상북도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(경상북도)"], unit: 마리, survey: 가축동향조사}
+      - {id: dkr_gn, title: "시도별 육용오리 마릿수 경상남도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(경상남도)"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

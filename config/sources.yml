@@ -11090,6 +11090,39 @@ sources:
       - {id: kns_all, title: "영양섭취부족자 분율 1세이상", tbl: DT_11702_N031, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
       - {id: kns_65, title: "영양섭취부족자 분율 65세이상", tbl: DT_11702_N031, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^65세이상$"], unit: "%", survey: 국민건강영양조사}
       - {id: kns_over, title: "에너지·지방 과잉섭취자 분율 1세이상", tbl: DT_11702_N032, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_kcal, title: "에너지 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^에너지$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_prot, title: "단백질 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^단백질$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_ca, title: "칼슘 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^칼슘$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_k, title: "칼륨 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^칼륨$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_na, title: "나트륨 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^나트륨$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_fe, title: "철 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^철$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_vara, title: "비타민A(RAE) 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^비타민A.RAE.$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_vitc, title: "비타민C 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^비타민C$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_fib, title: "식이섬유 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^식이섬유$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_fol, title: "엽산 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^엽산$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_mg, title: "마그네슘 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^마그네슘$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_vitd, title: "비타민D 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^비타민D$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kir_ribo, title: "리보플라빈 섭취기준 대비 섭취비율 19세이상", tbl: DT_11702_N239, org: "177", periods: 3, itm: "^비율$", want: ["^전체$", "^리보플라빈$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_prot, title: "단백질 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^단백질$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_ca, title: "칼슘 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^칼슘$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_fe, title: "철 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^철$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_vara, title: "비타민A(RAE) 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^비타민A.RAE.$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_vitc, title: "비타민C 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^비타민C$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_fol, title: "엽산 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^엽산$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_mg, title: "마그네슘 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^마그네슘$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_zn, title: "아연 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^아연$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kiu_ribo, title: "리보플라빈 평균필요량 미만 섭취자 분율 19세이상", tbl: DT_11702_N240, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^리보플라빈$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_all, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 1세이상", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_m, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 남자 1세이상", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^남자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_f, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 여자 1세이상", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^여자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_20s, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 19-29세", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^19-29세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_30s, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 30-39세", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^30-39세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_40s, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 40-49세", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^40-49세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_50s, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 50-59세", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^50-59세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_60s, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 60-69세", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^60-69세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_70, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 70세이상", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^70세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_urban, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 동", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^동$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kna_rural, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 읍면", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^읍면$"], unit: "%", survey: 국민건강영양조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

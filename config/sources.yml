@@ -11181,6 +11181,34 @@ sources:
       - {id: keo_rural, title: "하루 1회 이상 외식률 읍면", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^읍면$"], unit: "%", survey: 국민건강영양조사}
       - {id: keo_m, title: "하루 1회 이상 외식률 남자 1세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^남자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
       - {id: keo_f, title: "하루 1회 이상 외식률 여자 1세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^여자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: fsb_tot, title: "식품접객업체 수 총계", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^총계$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_cafe, title: "식품접객업체 수 휴게음식점", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^휴게음식점$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_bake, title: "식품접객업체 수 제과점", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^제과점$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_rest, title: "식품접객업체 수 일반음식점", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^일반음식점$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_dan, title: "식품접객업체 수 단란주점", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^단란주점$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_yu, title: "식품접객업체 수 유흥주점", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^유흥주점$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsb_meal, title: "식품접객업체 수 위탁급식영업", tbl: DT_145012_A001, org: "145", periods: 3, itm: "^업체수$", want: ["^합계$", "^위탁급식영업$"], unit: "개", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_mon, title: "식품접객업체 위생 감시건수", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^감시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_vio, title: "식품접객업체 위반건수", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^위반내용$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_vio_rest, title: "식품접객업체 위반건수 일반음식점", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^위반내용$", "^일반음식점$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_vio_cafe, title: "식품접객업체 위반건수 휴게음식점", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^위반내용$", "^휴게음식점$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_vio_meal, title: "식품접객업체 위반건수 위탁급식영업", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^위반내용$", "^위탁급식영업$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_fac, title: "식품접객업체 위반 내용 시설위반", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^시설위반$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_stor, title: "식품접객업체 위반 내용 보존 및 유통기준위반", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^보존 및 유통기준위반$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_hyg, title: "식품접객업체 위반 내용 건강진단등 개인위생", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^건강진단등 개인위생$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_youth, title: "식품접객업체 위반 내용 청소년불법고용 출입등", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^청소년불법고용 출입등$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_vice, title: "식품접객업체 위반 내용 퇴폐영업", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^퇴폐영업$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_hand, title: "식품접객업체 위반 내용 위생적 취급기준", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^위생적 취급기준$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_comp, title: "식품접객업체 위반 내용 영업자준수사항", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^영업자준수사항$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsv_etc, title: "식품접객업체 위반 내용 기타", tbl: DT_145012_A002, org: "145", periods: 3, itm: "^위반건수$", want: ["^기타$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_tot, title: "식품접객업체 행정처분 총계", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^총계$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_cancel, title: "식품접객업체 행정처분 허가취소 및 영업소폐쇄", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^허가취소 및 영업소폐쇄$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_susp, title: "식품접객업체 행정처분 영업정지", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^영업정지$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_fix, title: "식품접객업체 행정처분 시설개수", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^시설개수$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_order, title: "식품접객업체 행정처분 시정명령", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^시정명령$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_fine, title: "식품접객업체 행정처분 과태료", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^과태료$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_pen, title: "식품접객업체 행정처분 과징금", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^과징금$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsa_sue, title: "식품접객업체 행정처분 고발", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^고발$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

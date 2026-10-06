@@ -11573,6 +11573,31 @@ sources:
       - {id: cvp_yield, title: "밤 재배 임가의 선호 품종 — 수확량이 많은 품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수확량이 많은 품종$"], unit: "%", survey: 임업경영실태조사}
       - {id: cvp_qual, title: "밤 재배 임가의 선호 품종 — 과실 품질이 좋은 품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^과실의 품질"], unit: "%", survey: 임업경영실태조사}
       - {id: cvp_new, title: "밤 재배 임가의 선호 품종 — 신품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^신품종$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xic_tot, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 합계", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^합계$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_fert, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 비료비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^비료비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_pest, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 농약비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농약비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_mat, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 기타재료비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타재료비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_util, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 수도광열비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수도광열비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_rent, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 임차료", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차료$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_rep, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 수선비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수선비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_labor, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 인건비", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xic_etc, title: "잣·대추·호두 등 기타 수실류 재배 임가 1가구당 한 해 투입비용 — 기타", tbl: DT_136022_10162, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xvo_good, title: "잣·대추·호두 등 기타 수실류 재배 임가의 업종 전망 — 좋아질 것(①+②)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①[+]②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_keep, title: "잣·대추·호두 등 기타 수실류 재배 임가의 업종 전망 — 현 상태를 유지할 것", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태를 유지할 것$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_bad, title: "잣·대추·호두 등 기타 수실류 재배 임가의 업종 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_avg, title: "잣·대추·호두 등 기타 수실류 재배 임가의 업종 전망 — 평균(100점)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균[(]100점[)]$"], unit: "점", survey: 임업경영실태조사}
+      - {id: xvo_bad_pine, title: "잣 재배 임가의 업종 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^잣재배업$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_bad_jjb, title: "대추 재배 임가의 업종 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^대추재배업$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_bad_wal, title: "호두 재배 임가의 업종 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^호두재배업$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xvo_bad_oth, title: "기타 유실수 재배 임가의 업종 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_10168, org: "136", periods: 3, itm: "^값$", want: ["^기타유실수$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xpn_up, title: "잣·대추·호두 등 기타 수실류 재배 임가의 재배계획 — 늘릴 것", tbl: DT_136022_10172, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xpn_keep, title: "잣·대추·호두 등 기타 수실류 재배 임가의 재배계획 — 현 상태를 유지할 것", tbl: DT_136022_10172, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현 상태를 유지할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xpn_down, title: "잣·대추·호두 등 기타 수실류 재배 임가의 재배계획 — 줄일 것", tbl: DT_136022_10172, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄일 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xpn_stop, title: "잣·대추·호두 등 기타 수실류 재배 임가의 재배계획 — 중단할 것", tbl: DT_136022_10172, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중단할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xhv_self, title: "잣·대추·호두 등 기타 수실류 재배 임가가 수확한 주된 방법 — 본인이 직접 수확", tbl: DT_136022_10166, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^본인이 직접 수확$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xhv_cont, title: "잣·대추·호두 등 기타 수실류 재배 임가가 수확한 주된 방법 — 작업단 도급", tbl: DT_136022_10166, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^작업단 도급$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xhv_pre, title: "잣·대추·호두 등 기타 수실류 재배 임가가 수확한 주된 방법 — 입도선매", tbl: DT_136022_10166, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^입도선매$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xhv_none, title: "잣·대추·호두 등 기타 수실류 재배 임가가 수확한 주된 방법 — 수확하지 않음", tbl: DT_136022_10166, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수확하지 않음$"], unit: "%", survey: 임업경영실태조사}
       - {id: cmw_herb_s1, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(2ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^2ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
       - {id: cmw_herb_s2, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(2~4ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^2~4ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
       - {id: cmw_herb_s3, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(4~8ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^4~8ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}

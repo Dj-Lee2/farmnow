@@ -10311,6 +10311,33 @@ sources:
       - {id: vgm_oni_byv, title: "양파 생산농가 전국 평균 — 부산물 평가액", tbl: DT_1EC0051, itm: "^경영개황", want: ["^부산물 평가액$"], unit: 원, survey: 농산물생산비조사}
       - {id: vgm_pep_byv, title: "고추 생산농가 전국 평균 — 부산물 평가액", tbl: DT_1EC0061, itm: "^경영개황", want: ["^부산물 평가액$"], unit: 원, survey: 농산물생산비조사}
       - {id: vgm_soy_byv, title: "콩 생산농가 전국 평균 — 부산물 평가액", tbl: DT_1EC0081, itm: "^경영개황", want: ["^부산물 평가액$"], unit: 원, survey: 농산물생산비조사}
+      - {id: cfx_all, title: "소비자 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_veg, title: "소비자 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_frt, title: "소비자 신선과실지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^신선과실$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_xfr, title: "소비자물가 신선식품 제외 지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^신선식품제외$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_cab, title: "소비자물가 배추", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^배추$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_rad, title: "소비자물가 무", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^무$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_oni, title: "소비자물가 양파", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^양파$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_gar, title: "소비자물가 마늘", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^마늘$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_wel, title: "소비자물가 파", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^파$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_ptt, title: "소비자물가 감자", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^감자$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_let, title: "소비자물가 상추", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^상추$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_cuc, title: "소비자물가 오이", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^오이$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_tom, title: "소비자물가 토마토", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^토마토$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_gpep, title: "소비자물가 풋고추", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^풋고추$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_car, title: "소비자물가 당근", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^당근$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_swp, title: "소비자물가 고구마", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^고구마$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_spn, title: "소비자물가 시금치", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^시금치$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_mush, title: "소비자물가 버섯", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^버섯$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_per, title: "소비자물가 깻잎", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^깻잎$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_apl, title: "소비자물가 사과", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^사과$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_pear, title: "소비자물가 배", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^배$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_stb, title: "소비자물가 딸기", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^딸기$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_grp, title: "소비자물가 포도", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^포도$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_pch, title: "소비자물가 복숭아", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^복숭아$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_tang, title: "소비자물가 귤", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^귤$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_pers, title: "소비자물가 감", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^감$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfx_wml, title: "소비자물가 수박", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^수박$"], unit: "2020=100", survey: 소비자물가조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

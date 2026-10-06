@@ -10651,6 +10651,41 @@ sources:
       - {id: shuh_neu, title: "일상형 산림휴양이 건강에 미치는 영향 영향없음(5점)", tbl: DT_136037_D150, org: "136", periods: 3, itm: ".", want: ["^전체$", "^영향없음"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shuh_neg, title: "일상형 산림휴양이 건강에 미치는 영향 부정(0~4점)", tbl: DT_136037_D150, org: "136", periods: 3, itm: ".", want: ["^전체$", "^부정"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shuh_avg, title: "일상형 산림휴양이 건강에 미치는 영향 평균 점수(10점 만점)", tbl: DT_136037_D150, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_rec, title: "자연휴양림 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^자연휴양림$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_bath, title: "산림욕장 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림욕장$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_heal, title: "치유의숲 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^치유의숲$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_trail, title: "숲길 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_kid, title: "유아숲체험원 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_camp, title: "숲속야영장 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲속야영장$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_arb, title: "수목원 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^수목원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: sha_garden, title: "정원 인지율", tbl: DT_136037_D4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^정원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_rec, title: "자연휴양림 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^자연휴양림$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_bath, title: "산림욕장 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림욕장$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_heal, title: "치유의숲 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^치유의숲$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_trail, title: "숲길 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_kid, title: "유아숲체험원 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_camp, title: "숲속야영장 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲속야영장$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_arb, title: "수목원 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^수목원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shw_garden, title: "정원 향후 이용의향률", tbl: DT_136037_D8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^정원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_view, title: "숙박형 산림휴양 지역 선택 이유 수려한 자연경관", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^수려한 자연경관$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_trans, title: "숙박형 산림휴양 지역 선택 이유 이동·교통 편의성", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^이동 및 교통"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_fun, title: "숙박형 산림휴양 지역 선택 이유 다양한 볼거리·즐길거리·먹거리", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^다양한 볼거리"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_facil, title: "숙박형 산림휴양 지역 선택 이유 시설 편리성·쾌적성", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^시설의 편리성"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_cheap, title: "숙박형 산림휴양 지역 선택 이유 저렴한 여행경비", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^저렴한 여행경비$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_link, title: "숙박형 산림휴양 지역 선택 이유 주변 관광지와 연계성", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주변 관광지"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_edu, title: "숙박형 산림휴양 지역 선택 이유 교육성", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^교육성"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shr_etc, title: "숙박형 산림휴양 지역 선택 이유 기타", tbl: DT_136037_D12, org: "136", periods: 3, itm: ".", want: ["^전체$", "^기타$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shm_heal, title: "산림치유 프로그램 이용 경험률", tbl: DT_136037_D100, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림치유 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shm_guide, title: "숲해설 프로그램 이용 경험률", tbl: DT_136037_D100, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲해설 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shm_kid, title: "유아숲체험 프로그램 이용 경험률", tbl: DT_136037_D100, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shm_trail, title: "숲길체험 프로그램 이용 경험률", tbl: DT_136037_D100, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shm_sport, title: "산림레포츠체험 프로그램 이용 경험률", tbl: DT_136037_D100, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림레포츠체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_gw, title: "숙박형 산림휴양 방문 지역 강원", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*강원$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_gg, title: "숙박형 산림휴양 방문 지역 경기", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*경기$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_gn, title: "숙박형 산림휴양 방문 지역 경남", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*경남$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_gb, title: "숙박형 산림휴양 방문 지역 경북", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*경북$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_jn, title: "숙박형 산림휴양 방문 지역 전남", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*전남$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shg_jj, title: "숙박형 산림휴양 방문 지역 제주", tbl: DT_136037_D11, org: "136", periods: 3, itm: ".", want: ["^전체$", "^\\s*제주$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

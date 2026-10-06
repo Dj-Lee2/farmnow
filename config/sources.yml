@@ -11494,6 +11494,36 @@ sources:
       - {id: mwd_ssari, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 싸리버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^싸리버섯$"], unit: "%", survey: 임업경영실태조사}
       - {id: mwd_sang, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 상황버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^상황버섯$"], unit: "%", survey: 임업경영실태조사}
       - {id: mwd_mok, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 목이버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^목이버섯$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcd_u15, title: "식용 임산물 채취 임가의 한 해 채취일수 — 15일 미만", tbl: DT_136022_9848, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^15일 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcd_h1, title: "식용 임산물 채취 임가의 한 해 채취일수 — 15일 이상 1개월 미만", tbl: DT_136022_9848, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^15일 이상 1개월 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcd_m12, title: "식용 임산물 채취 임가의 한 해 채취일수 — 1개월 이상 2개월 미만", tbl: DT_136022_9848, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1개월 이상 2개월 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcd_2p, title: "식용 임산물 채취 임가의 한 해 채취일수 — 2개월 이상", tbl: DT_136022_9848, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2개월 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcd_avg, title: "식용 임산물 채취 임가의 한 해 평균 채취일수", tbl: DT_136022_9848, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "일", survey: 임업경영실태조사}
+      - {id: gst_yes, title: "생산한 임산물 재고가 있는 식용 임산물 채취 임가 비율", tbl: DT_136022_9734, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gcs_tot, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 합계", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^합계$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_mat, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 재료비", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재료비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_util, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 수도광열비", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수도광열비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_rent, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 임차료", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차료$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_rep, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 수선비", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수선비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_labor, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 인건비", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gcs_etc, title: "식용 임산물 채취 임가 1가구당 한 해 채취업 투입비용 — 기타", tbl: DT_136022_9781, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: gol_good, title: "식용 임산물 채취 임가의 채취업 전망 — 좋아질 것(①+②)", tbl: DT_136022_9794, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①[+]②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gol_keep, title: "식용 임산물 채취 임가의 채취업 전망 — 현 상태를 유지할 것", tbl: DT_136022_9794, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태를 유지할 것$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gol_bad, title: "식용 임산물 채취 임가의 채취업 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_9794, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gol_avg, title: "식용 임산물 채취 임가의 채취업 전망 — 평균(100점)", tbl: DT_136022_9794, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균[(]100점[)]$"], unit: "점", survey: 임업경영실태조사}
+      - {id: gsl_nh, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 농협", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농협$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_sj, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 산림조합", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_col, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 수집상", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_proc, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 가공업체", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가공업체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_whl, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 도소매상", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^도소매상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_dir, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 직거래", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직거래$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gsl_etc, title: "식용 임산물 채취 임가의 주요 판매처 비율 — 기타", tbl: DT_136022_9778, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ghp_own, title: "식용 임산물 채취 임가가 채취·판매를 함께한 인력 — 경영주가 직접 수확", tbl: DT_136022_9743, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^경영주가 직접 수확$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ghp_fam, title: "식용 임산물 채취 임가가 채취·판매를 함께한 인력 — 가족과 함께", tbl: DT_136022_9743, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가족과 함께$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ghp_grp, title: "식용 임산물 채취 임가가 채취·판매를 함께한 인력 — 부락 내 조 단위", tbl: DT_136022_9743, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부락 내 조 단위$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ghp_hire, title: "식용 임산물 채취 임가가 채취·판매를 함께한 인력 — 고용인부와 함께", tbl: DT_136022_9743, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용인부와 함께$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gwg_m, title: "식용 임산물 채취 임가 고용노동 남성 1인당 하루평균노동비", tbl: DT_136022_9851, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동남성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
+      - {id: gwg_w, title: "식용 임산물 채취 임가 고용노동 여성 1인당 하루평균노동비", tbl: DT_136022_9851, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동여성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

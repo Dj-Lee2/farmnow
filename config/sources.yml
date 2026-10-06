@@ -9903,6 +9903,29 @@ sources:
       - {id: eas_gb, title: "경북 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^경상북도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
       - {id: eas_gn, title: "경남 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^경상남도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
       - {id: eas_jj, title: "제주 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: oay_gb, title: "경북 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_gn, title: "경남 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_cb, title: "충북 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_gw, title: "강원 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_jb, title: "전북 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_cn, title: "충남 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_gg, title: "경기 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oay_dg, title: "대구 사과 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*사과\\(미과\\)$", want: ["^대구광역시$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_gb, title: "경북 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_cb, title: "충북 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_jb, title: "전북 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_gg, title: "경기 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_jn, title: "전남 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: opy_gw, title: "강원 복숭아 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*복숭아\\(미과\\)$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogy_gb, title: "경북 포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogy_gg, title: "경기 포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogy_cb, title: "충북 포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogy_jb, title: "전북 포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: ogy_cn, title: "충남 포도 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*포도\\(미과\\)$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oby_jn, title: "전남 배 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*배\\(미과\\)$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oby_cn, title: "충남 배 미과수 재배면적", tbl: DT_1ET0014, itm: "^-\\s*배\\(미과\\)$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oyj_jn, title: "전남 유자 재배면적", tbl: DT_1ET0014, itm: "^●\\s*유자$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: oyj_gn, title: "경남 유자 재배면적", tbl: DT_1ET0014, itm: "^●\\s*유자$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

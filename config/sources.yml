@@ -9814,6 +9814,35 @@ sources:
       - {id: ove_rad_aut_jb, title: "전북 노지 가을무 재배면적", tbl: DT_1ET0013, itm: "^가을무$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
       - {id: ove_spn_pd, title: "논 노지 시금치 재배면적", tbl: DT_1ET0013, itm: "^시금치$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
       - {id: ove_carr_pd, title: "논 노지 당근 재배면적", tbl: DT_1ET0013, itm: "^당근$", want: ["^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: ssr_log_all, title: "원목표고 재배규모 — 전국", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_saw_all, title: "톱밥표고 재배규모 — 전국", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_log_jn, title: "원목표고 재배규모 — 전남(광주 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0207$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_cn, title: "원목표고 재배규모 — 충남(대전·세종 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0205$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_gb, title: "원목표고 재배규모 — 경북(대구 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0209$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_jb, title: "원목표고 재배규모 — 전북", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0206$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_gg, title: "원목표고 재배규모 — 경기(서울 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0202$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_gn, title: "원목표고 재배규모 — 경남(부산·울산 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0208$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_cb, title: "원목표고 재배규모 — 충북", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0204$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_log_jj, title: "원목표고 재배규모 — 제주", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0210$", C2: "^B0203$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssr_saw_cn, title: "톱밥표고 재배규모 — 충남(대전·세종 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0205$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_cb, title: "톱밥표고 재배규모 — 충북", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0204$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_gg, title: "톱밥표고 재배규모 — 경기(서울 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0202$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_gb, title: "톱밥표고 재배규모 — 경북(대구 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0209$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_gw, title: "톱밥표고 재배규모 — 강원", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0203$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_gn, title: "톱밥표고 재배규모 — 경남(부산·울산 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0208$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_jb, title: "톱밥표고 재배규모 — 전북", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0206$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssr_saw_jn, title: "톱밥표고 재배규모 — 전남(광주 포함)", tbl: DT_136034_2024_Q001, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0207$", C2: "^B0303$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_log, title: "톱밥 생산에 쓴 원목 이용량 — 전국", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0102$"}, unit: ㎥, survey: 임업경영실태조사}
+      - {id: ssm_saw, title: "톱밥배지 생산에 쓴 톱밥 이용량 — 전국", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0202$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_n_saw, title: "톱밥배지 생산에 톱밥을 쓴 임가 — 전국", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0201$"}, unit: 개소, survey: 임업경영실태조사}
+      - {id: ssm_med, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 전국", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_n_med, title: "톱밥표고 생산에 톱밥배지를 쓴 임가 — 전국", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0301$"}, unit: 개소, survey: 임업경영실태조사}
+      - {id: ssm_med_cn, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 충남(대전·세종 포함)", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0205$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_med_cb, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 충북", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0204$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_med_gg, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 경기(서울 포함)", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0202$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_med_gb, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 경북(대구 포함)", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0209$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_med_gn, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 경남(부산·울산 포함)", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0208$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
+      - {id: ssm_med_gw, title: "톱밥표고 생산에 쓴 톱밥배지 이용량 — 강원", tbl: DT_136034_2024_Q005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0203$", C2: "^B0302$"}, unit: 톤, survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

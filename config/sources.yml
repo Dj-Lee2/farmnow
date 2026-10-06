@@ -11027,6 +11027,37 @@ sources:
       - {id: shcg_gb, title: "당일형 산림휴양 방문 지역 경북", tbl: DT_136037_C3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^경북$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shcg_gn, title: "당일형 산림휴양 방문 지역 경남", tbl: DT_136037_C3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^경남$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shcg_jn, title: "당일형 산림휴양 방문 지역 전남", tbl: DT_136037_C3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^전남$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbk_wd, title: "일상형 산림휴양 방문 시기 주중", tbl: DT_136037_B7, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주중$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbk_we, title: "일상형 산림휴양 방문 시기 주말", tbl: DT_136037_B7, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주말$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbk_hol, title: "일상형 산림휴양 방문 시기 공휴일(휴가 포함)", tbl: DT_136037_B7, org: "136", periods: 3, itm: ".", want: ["^전체$", "^공휴일"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shck_wd, title: "당일형 산림휴양 방문 시기 주중", tbl: DT_136037_C22, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주중$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shck_we, title: "당일형 산림휴양 방문 시기 주말", tbl: DT_136037_C22, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주말$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shck_hol, title: "당일형 산림휴양 방문 시기 공휴일(휴가 포함)", tbl: DT_136037_C22, org: "136", periods: 3, itm: ".", want: ["^전체$", "^공휴일"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_dawn, title: "일상형 산림휴양 주중 시간대 새벽(6시 이전)", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^새벽"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_am1, title: "일상형 산림휴양 주중 시간대 오전 6~9시", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오전.6시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_am2, title: "일상형 산림휴양 주중 시간대 오전 9~12시", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오전.9시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_pm1, title: "일상형 산림휴양 주중 시간대 오후 12~15시", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오후.12시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_pm2, title: "일상형 산림휴양 주중 시간대 오후 15~18시", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오후.15시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbt_eve, title: "일상형 산림휴양 주중 시간대 저녁·밤(18시 이후)", tbl: DT_136037_B771, org: "136", periods: 3, itm: ".", want: ["^전체$", "^저녁"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_dawn, title: "일상형 산림휴양 주말 시간대 새벽(6시 이전)", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^새벽"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_am1, title: "일상형 산림휴양 주말 시간대 오전 6~9시", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오전.6시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_am2, title: "일상형 산림휴양 주말 시간대 오전 9~12시", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오전.9시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_pm1, title: "일상형 산림휴양 주말 시간대 오후 12~15시", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오후.12시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_pm2, title: "일상형 산림휴양 주말 시간대 오후 15~18시", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^오후.15시"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbu_eve, title: "일상형 산림휴양 주말 시간대 저녁·밤(18시 이후)", tbl: DT_136037_B772, org: "136", periods: 3, itm: ".", want: ["^전체$", "^저녁"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcm_spr, title: "당일형 산림휴양 방문 시기 봄(3~5월)", tbl: DT_136037_C2, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(3월|4월|5월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcm_sum, title: "당일형 산림휴양 방문 시기 여름(6~8월)", tbl: DT_136037_C2, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(6월|7월|8월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcm_aut, title: "당일형 산림휴양 방문 시기 가을(9~11월)", tbl: DT_136037_C2, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(9월|10월|11월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcm_win, title: "당일형 산림휴양 방문 시기 겨울(12~2월)", tbl: DT_136037_C2, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(12월|1월|2월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shdm_spr, title: "숙박형 산림휴양 방문 시기 봄(3~5월)", tbl: DT_136037_D10, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(3월|4월|5월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shdm_sum, title: "숙박형 산림휴양 방문 시기 여름(6~8월)", tbl: DT_136037_D10, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(6월|7월|8월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shdm_aut, title: "숙박형 산림휴양 방문 시기 가을(9~11월)", tbl: DT_136037_D10, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(9월|10월|11월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shdm_win, title: "숙박형 산림휴양 방문 시기 겨울(12~2월)", tbl: DT_136037_D10, org: "136", periods: 3, itm: ".", want: ["^전체$", "^(12월|1월|2월)$"], sum: true, unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbm_walk, title: "일상형 산림휴양 도보 편도 평균 이동시간", tbl: DT_136037_B41, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbm_bike, title: "일상형 산림휴양 자전거 편도 평균 이동시간", tbl: DT_136037_B42, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbm_car, title: "일상형 산림휴양 자가용 편도 평균 이동시간", tbl: DT_136037_B43, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbm_bus, title: "일상형 산림휴양 대중교통 편도 평균 이동시간", tbl: DT_136037_B434, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbm_walk30, title: "일상형 산림휴양 도보 편도 30분 미만", tbl: DT_136037_B41, org: "136", periods: 3, itm: ".", want: ["^전체$", "^30분 미만$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

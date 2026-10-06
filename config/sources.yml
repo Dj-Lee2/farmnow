@@ -10433,6 +10433,42 @@ sources:
       - {id: kr5_sea_cab, title: "한식 해산물 요리 전문점 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: kr5_sea_chili, title: "한식 해산물 요리 전문점 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: kr5_sea_kim, title: "한식 해산물 요리 전문점 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_meat, title: "전체 외식업체 육류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_egg, title: "전체 외식업체 계란 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^계란$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_grain, title: "전체 외식업체 곡류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^곡류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_sea, title: "전체 외식업체 수산물류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^수산물류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_veg, title: "전체 외식업체 채소류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_fruit, title: "전체 외식업체 과일류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^과일류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_jang, title: "전체 외식업체 장류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^장류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_all_proc, title: "전체 외식업체 가공식품류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^가공식품류$", want: ["^전체$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_meat, title: "한식 육류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_egg, title: "한식 계란 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^계란$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_grain, title: "한식 곡류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^곡류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_sea, title: "한식 수산물류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^수산물류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_veg, title: "한식 채소류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_fruit, title: "한식 과일류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^과일류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_jang, title: "한식 장류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^장류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_kor_proc, title: "한식 가공식품류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^가공식품류$", want: ["^한식$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_meat, title: "기관 구내식당 육류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_egg, title: "기관 구내식당 계란 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^계란$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_grain, title: "기관 구내식당 곡류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^곡류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_sea, title: "기관 구내식당 수산물류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^수산물류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_veg, title: "기관 구내식당 채소류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_fruit, title: "기관 구내식당 과일류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^과일류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_jang, title: "기관 구내식당 장류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^장류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fih_inst_proc, title: "기관 구내식당 가공식품류 취급하는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^가공식품류$", want: ["^기관 구내식당업$", "^취급 식재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_meat, title: "전체 외식업체 육류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_egg, title: "전체 외식업체 계란 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^계란$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_grain, title: "전체 외식업체 곡류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^곡류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_sea, title: "전체 외식업체 수산물류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^수산물류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_veg, title: "전체 외식업체 채소류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_fruit, title: "전체 외식업체 과일류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^과일류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_jang, title: "전체 외식업체 장류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^장류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_all_proc, title: "전체 외식업체 가공식품류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^가공식품류$", want: ["^전체$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_kor_meat, title: "한식 육류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^한식$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_kor_veg, title: "한식 채소류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^한식$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_inst_meat, title: "기관 구내식당 육류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^육류$", want: ["^기관 구내식당업$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fim_inst_veg, title: "기관 구내식당 채소류 주재료로 쓰는 업체 비율", tbl: DT_114054_099, org: "114", se: F, periods: 3, itm: "^채소류$", want: ["^기관 구내식당업$", "^취급 식재료 중 주재료$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

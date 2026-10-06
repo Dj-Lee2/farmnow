@@ -11438,6 +11438,42 @@ sources:
       - {id: dkr_jn, title: "시도별 육용오리 마릿수 전라남도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(전라남도)"], unit: 마리, survey: 가축동향조사}
       - {id: dkr_gb, title: "시도별 육용오리 마릿수 경상북도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(경상북도)"], unit: 마리, survey: 가축동향조사}
       - {id: dkr_gn, title: "시도별 육용오리 마릿수 경상남도", tbl: DT_1EO112, se: Q, periods: 12, itm: "^육용오리-계$", want: ["^(경상남도)"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_gg, title: "시도별 한우 마릿수 경기", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_gg, title: "시도별 한우 1세 미만 마릿수 경기", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_gw, title: "시도별 한우 마릿수 강원", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_gw, title: "시도별 한우 1세 미만 마릿수 강원", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_cb, title: "시도별 한우 마릿수 충북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_cb, title: "시도별 한우 1세 미만 마릿수 충북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_cn, title: "시도별 한우 마릿수 충남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_cn, title: "시도별 한우 1세 미만 마릿수 충남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_jb, title: "시도별 한우 마릿수 전북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_jb, title: "시도별 한우 1세 미만 마릿수 전북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_jn, title: "시도별 한우 마릿수 전남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_jn, title: "시도별 한우 1세 미만 마릿수 전남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_gb, title: "시도별 한우 마릿수 경북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_gb, title: "시도별 한우 1세 미만 마릿수 경북", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_gn, title: "시도별 한우 마릿수 경남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_gn, title: "시도별 한우 1세 미만 마릿수 경남", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hsd_jj, title: "시도별 한우 마릿수 제주", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hcf_jj, title: "시도별 한우 1세 미만 마릿수 제주", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_gg, title: "시도별 돼지 마릿수 경기", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^경기"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_gg, title: "시도별 돼지 8개월 이상 암컷 마릿수 경기", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^경기"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_gw, title: "시도별 돼지 마릿수 강원", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^강원"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_gw, title: "시도별 돼지 8개월 이상 암컷 마릿수 강원", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^강원"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_cb, title: "시도별 돼지 마릿수 충북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(충청북도|충북)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_cb, title: "시도별 돼지 8개월 이상 암컷 마릿수 충북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(충청북도|충북)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_cn, title: "시도별 돼지 마릿수 충남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(충청남도|충남)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_cn, title: "시도별 돼지 8개월 이상 암컷 마릿수 충남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(충청남도|충남)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_jb, title: "시도별 돼지 마릿수 전북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(전북|전라북도)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_jb, title: "시도별 돼지 8개월 이상 암컷 마릿수 전북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(전북|전라북도)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_jn, title: "시도별 돼지 마릿수 전남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(전라남도|전남)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_jn, title: "시도별 돼지 8개월 이상 암컷 마릿수 전남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(전라남도|전남)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_gb, title: "시도별 돼지 마릿수 경북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(경상북도|경북)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_gb, title: "시도별 돼지 8개월 이상 암컷 마릿수 경북", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(경상북도|경북)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_gn, title: "시도별 돼지 마릿수 경남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^(경상남도|경남)"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_gn, title: "시도별 돼지 8개월 이상 암컷 마릿수 경남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(경상남도|경남)"], unit: 마리, survey: 가축동향조사}
+      - {id: psd_jj, title: "시도별 돼지 마릿수 제주", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^제주"], unit: 마리, survey: 가축동향조사}
+      - {id: smw_jj, title: "시도별 돼지 8개월 이상 암컷 마릿수 제주", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^제주"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

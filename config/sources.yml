@@ -10092,6 +10092,36 @@ sources:
       - {id: sgy_hs, title: "화성 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^화성시$"], unit: kg, survey: 농작물생산조사}
       - {id: sgy_hn, title: "해남 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^해남군$"], unit: kg, survey: 농작물생산조사}
       - {id: sgy_nj, title: "나주 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^나주시$"], unit: kg, survey: 농작물생산조사}
+      - {id: nfc_tot, title: "노지 식량작물 재배면적(합계)", tbl: DT_1ET0012, itm: "^합계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_rice, title: "노지 벼 재배면적", tbl: DT_1ET0012, itm: "^벼계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_bar, title: "노지 맥류 재배면적", tbl: DT_1ET0012, itm: "^맥류$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_wht, title: "노지 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_grn, title: "노지 잡곡 재배면적", tbl: DT_1ET0012, itm: "^잡곡계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_pls, title: "노지 두류 재배면적", tbl: DT_1ET0012, itm: "^두류계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_soy, title: "노지 콩 재배면적", tbl: DT_1ET0012, itm: "^콩$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_rbn, title: "노지 팥 재배면적", tbl: DT_1ET0012, itm: "^팥$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_tub, title: "노지 서류 재배면적", tbl: DT_1ET0012, itm: "^서류계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_swp, title: "노지 고구마 재배면적", tbl: DT_1ET0012, itm: "^고구마$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_pot, title: "노지 감자 재배면적", tbl: DT_1ET0012, itm: "^감자계$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_psp, title: "봄감자 재배면적", tbl: DT_1ET0012, itm: "^봄감자$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_phl, title: "고랭지감자 재배면적", tbl: DT_1ET0012, itm: "^고랭지감자$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfc_pfa, title: "가을감자 재배면적", tbl: DT_1ET0012, itm: "^가을감자$", want: ["^계$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfp_tot, title: "논 식량작물 재배면적(합계)", tbl: DT_1ET0012, itm: "^합계$", want: ["^계$", "^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfp_soy, title: "논 콩 재배면적", tbl: DT_1ET0012, itm: "^콩$", want: ["^계$", "^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfp_wht, title: "논 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^계$", "^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfp_bar, title: "논 맥류 재배면적", tbl: DT_1ET0012, itm: "^맥류$", want: ["^계$", "^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrs_jn, title: "전남 노지 고구마 재배면적", tbl: DT_1ET0012, itm: "^고구마$", want: ["^전라남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrs_cn, title: "충남 노지 고구마 재배면적", tbl: DT_1ET0012, itm: "^고구마$", want: ["^충청남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrs_gg, title: "경기 노지 고구마 재배면적", tbl: DT_1ET0012, itm: "^고구마$", want: ["^경기도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrs_jb, title: "전북 노지 고구마 재배면적", tbl: DT_1ET0012, itm: "^고구마$", want: ["^전(라북도|북특별자치도)$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrw_jb, title: "전북 노지 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^전(라북도|북특별자치도)$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrw_jn, title: "전남 노지 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^전라남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrw_gn, title: "경남 노지 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^경상남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrw_gj, title: "광주 노지 밀 재배면적", tbl: DT_1ET0012, itm: "^밀$", want: ["^광주광역시$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrp_gw, title: "강원 노지 감자 재배면적", tbl: DT_1ET0012, itm: "^감자계$", want: ["^강원(도|특별자치도)$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrp_cn, title: "충남 노지 감자 재배면적", tbl: DT_1ET0012, itm: "^감자계$", want: ["^충청남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrp_jn, title: "전남 노지 감자 재배면적", tbl: DT_1ET0012, itm: "^감자계$", want: ["^전라남도$", "^합계$"], unit: ha, survey: 농작물생산조사}
+      - {id: nfrp_gb, title: "경북 노지 감자 재배면적", tbl: DT_1ET0012, itm: "^감자계$", want: ["^경상북도$", "^합계$"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

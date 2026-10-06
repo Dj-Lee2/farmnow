@@ -10154,6 +10154,39 @@ sources:
       - {id: rap_tot_50, title: "경영주 50대 — 10a당 논벼 생산비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^생산비 합계$", "^50대$"], unit: 원, survey: 농산물생산비조사}
       - {id: rap_tot_60, title: "경영주 60대 — 10a당 논벼 생산비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^생산비 합계$", "^60대$"], unit: 원, survey: 농산물생산비조사}
       - {id: rap_tot_70, title: "경영주 70대 이상 — 10a당 논벼 생산비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^생산비 합계$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_nat, title: "전국 평균 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전국평균$", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_gg, title: "경기 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경기", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_gw, title: "강원 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^강원", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_cb, title: "충북 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청북도$|^충북", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_cn, title: "충남 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청남도$|^충남", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_jb, title: "전북 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라북도$|^전북", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_jn, title: "전남 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라남도$|^전남", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_gb, title: "경북 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상북도$|^경북", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_pst_gn, title: "경남 — 10a당 농약비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상남도$|^경남", "^농약비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_nat, title: "전국 평균 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전국평균$", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_gg, title: "경기 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경기", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_gw, title: "강원 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^강원", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_cb, title: "충북 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청북도$|^충북", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_cn, title: "충남 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청남도$|^충남", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_jb, title: "전북 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라북도$|^전북", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_jn, title: "전남 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라남도$|^전남", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_gb, title: "경북 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상북도$|^경북", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lab_gn, title: "경남 — 10a당 노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상남도$|^경남", "^노동비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_nat, title: "전국 평균 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전국평균$", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_gg, title: "경기 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경기", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_gw, title: "강원 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^강원", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_cb, title: "충북 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청북도$|^충북", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_cn, title: "충남 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^충청남도$|^충남", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_jb, title: "전북 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라북도$|^전북", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_jn, title: "전남 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전라남도$|^전남", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_gb, title: "경북 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상북도$|^경북", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_out_gn, title: "경남 — 10a당 위탁영농비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^경상남도$|^경남", "^위탁영농비$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lself_nat, title: "전국 평균 — 10a당 자가노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전국평균$", "^자가$"], unit: 원, survey: 농산물생산비조사}
+      - {id: rdq_lhire_nat, title: "전국 평균 — 10a당 고용노동비", tbl: DT_1EC0004, itm: "^10a당$", want: ["^전국평균$", "^고용$"], unit: 원, survey: 농산물생산비조사}
+      - {id: raq_out_40, title: "경영주 40대 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: raq_out_50, title: "경영주 50대 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: raq_out_60, title: "경영주 60대 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: raq_out_70, title: "경영주 70대 이상 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

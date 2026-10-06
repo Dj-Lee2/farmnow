@@ -11209,6 +11209,40 @@ sources:
       - {id: fsa_fine, title: "식품접객업체 행정처분 과태료", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^과태료$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsa_pen, title: "식품접객업체 행정처분 과징금", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^과징금$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsa_sue, title: "식품접객업체 행정처분 고발", tbl: DT_145012_A005, org: "145", periods: 3, itm: "^건수$", want: ["^고발$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fzr_se, title: "인구 10만명당 식중독 환자수 서울", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^서울특별시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_bs, title: "인구 10만명당 식중독 환자수 부산", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^부산광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_dg, title: "인구 10만명당 식중독 환자수 대구", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^대구광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_ic, title: "인구 10만명당 식중독 환자수 인천", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^인천광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_gj, title: "인구 10만명당 식중독 환자수 광주", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^광주광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_dj, title: "인구 10만명당 식중독 환자수 대전", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^대전광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_us, title: "인구 10만명당 식중독 환자수 울산", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^울산광역시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_sj, title: "인구 10만명당 식중독 환자수 세종", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^세종특별자치시$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_gg, title: "인구 10만명당 식중독 환자수 경기", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^경기도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_gw, title: "인구 10만명당 식중독 환자수 강원", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^(강원도|강원특별자치도)$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_cb, title: "인구 10만명당 식중독 환자수 충북", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^충청북도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_cn, title: "인구 10만명당 식중독 환자수 충남", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^충청남도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_jb, title: "인구 10만명당 식중독 환자수 전북", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^(전라북도|전북특별자치도)$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_jn, title: "인구 10만명당 식중독 환자수 전남", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^전라남도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_gb, title: "인구 10만명당 식중독 환자수 경북", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^경상북도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_gn, title: "인구 10만명당 식중독 환자수 경남", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^경상남도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzr_jj, title: "인구 10만명당 식중독 환자수 제주", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^제주(특별자치)?도$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_se, title: "식중독 발생건수 서울", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^서울특별시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_bs, title: "식중독 발생건수 부산", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^부산광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_dg, title: "식중독 발생건수 대구", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^대구광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_ic, title: "식중독 발생건수 인천", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^인천광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_gj, title: "식중독 발생건수 광주", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^광주광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_dj, title: "식중독 발생건수 대전", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^대전광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_us, title: "식중독 발생건수 울산", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^울산광역시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_sj, title: "식중독 발생건수 세종", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^세종특별자치시$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_gg, title: "식중독 발생건수 경기", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^경기도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_gw, title: "식중독 발생건수 강원", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^(강원도|강원특별자치도)$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_cb, title: "식중독 발생건수 충북", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^충청북도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_cn, title: "식중독 발생건수 충남", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^충청남도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_jb, title: "식중독 발생건수 전북", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^(전라북도|전북특별자치도)$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_jn, title: "식중독 발생건수 전남", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^전라남도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_gb, title: "식중독 발생건수 경북", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^경상북도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_gn, title: "식중독 발생건수 경남", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^경상남도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzc_jj, title: "식중독 발생건수 제주", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^제주(특별자치)?도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -11548,6 +11548,37 @@ sources:
       - {id: mjb_forest, title: "버섯 재배 겸업 임가의 주 업종 — 다른 임업분야 종사", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^다른 임업분야 종사$"], unit: "%", survey: 임업경영실태조사}
       - {id: mjb_self, title: "버섯 재배 겸업 임가의 주 업종 — 자영업 등 기타", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자영업 등 기타$"], unit: "%", survey: 임업경영실태조사}
       - {id: mtr_avg, title: "원목표고 재배 임가의 평균 재배 그루수", tbl: DT_136022_9776, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "그루", survey: 임업경영실태조사}
+      - {id: cmw_mech, title: "밤 재배 임가의 풀베기 방식 — 기계(예초기) 사용", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기계[(]예초기[)]사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_grass, title: "밤 재배 임가의 풀베기 방식 — 초생재배", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^초생재배$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvo_good, title: "밤 재배 임가의 밤재배업 전망 — 좋아질 것(①+②)", tbl: DT_136022_9823, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①[+]②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvo_keep, title: "밤 재배 임가의 밤재배업 전망 — 현 상태를 유지할 것", tbl: DT_136022_9823, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태를 유지할 것$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvo_bad, title: "밤 재배 임가의 밤재배업 전망 — 나빠질 것(④+⑤)", tbl: DT_136022_9823, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvo_avg, title: "밤 재배 임가의 밤재배업 전망 — 평균(100점)", tbl: DT_136022_9823, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균[(]100점[)]$"], unit: "점", survey: 임업경영실태조사}
+      - {id: cpn_up, title: "밤 재배 임가의 재배계획 — 늘릴 것", tbl: DT_136022_9826, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^① 늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpn_keep, title: "밤 재배 임가의 재배계획 — 현 상태 유지", tbl: DT_136022_9826, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^② 현 상태를 유지할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpn_down, title: "밤 재배 임가의 재배계획 — 줄일 것", tbl: DT_136022_9826, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 줄일 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpn_stop, title: "밤 재배 임가의 재배계획 — 중단할 것", tbl: DT_136022_9826, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④ 중단할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cic_tot, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 합계", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^합계$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_fert, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 비료비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^비료비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_pest, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 농약비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농약비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_mat, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 기타재료비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타재료비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_util, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 수도광열비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수도광열비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_rent, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 임차료", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차료$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_rep, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 수선비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수선비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_labor, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 인건비", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cic_etc, title: "밤 재배 임가 1가구당 한 해 밤재배업 투입비용 — 기타", tbl: DT_136022_9813, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cfu_self, title: "밤 재배 임가의 생산비 조달 방법 — 자부담", tbl: DT_136022_9822, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cfu_gsub, title: "밤 재배 임가의 생산비 조달 방법 — 정부 보조", tbl: DT_136022_9822, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 보조$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvp_yield, title: "밤 재배 임가의 선호 품종 — 수확량이 많은 품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수확량이 많은 품종$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvp_qual, title: "밤 재배 임가의 선호 품종 — 과실 품질이 좋은 품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^과실의 품질"], unit: "%", survey: 임업경영실태조사}
+      - {id: cvp_new, title: "밤 재배 임가의 선호 품종 — 신품종", tbl: DT_136022_9836, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^신품종$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_s1, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(2ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^2ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_s2, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(2~4ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^2~4ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_s3, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(4~8ha 미만)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^4~8ha 미만$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_cc, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(충청권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^충청권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_jl, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(전라권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^전라권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cmw_herb_gs, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(경상권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

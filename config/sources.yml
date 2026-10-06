@@ -10403,6 +10403,36 @@ sources:
       - {id: lvf_ly_b1, title: "산란계 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^산란계$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: lvf_dk_b1, title: "오리 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^오리$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
       - {id: lvf_bf_all, title: "육우 사육 농가", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
+      - {id: kr5_all_beef, title: "한식 전체 국내산 사용 비중 소고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^소고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_all_pork, title: "한식 전체 국내산 사용 비중 돼지고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^돼지고기$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_all_rice, title: "한식 전체 국내산 사용 비중 쌀", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^쌀$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_all_cab, title: "한식 전체 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_all_chili, title: "한식 전체 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_all_kim, title: "한식 전체 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_beef, title: "한식 일반 음식점 국내산 사용 비중 소고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^소고기$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_pork, title: "한식 일반 음식점 국내산 사용 비중 돼지고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^돼지고기$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_rice, title: "한식 일반 음식점 국내산 사용 비중 쌀", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^쌀$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_cab, title: "한식 일반 음식점 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_chili, title: "한식 일반 음식점 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_gen_kim, title: "한식 일반 음식점 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$", "^한식 일반 음식점업$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_beef, title: "한식 면 요리 전문점 국내산 사용 비중 소고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^소고기$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_pork, title: "한식 면 요리 전문점 국내산 사용 비중 돼지고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^돼지고기$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_rice, title: "한식 면 요리 전문점 국내산 사용 비중 쌀", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^쌀$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_cab, title: "한식 면 요리 전문점 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_chili, title: "한식 면 요리 전문점 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_nod_kim, title: "한식 면 요리 전문점 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$", "^한식 면 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_beef, title: "한식 육류 요리 전문점 국내산 사용 비중 소고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^소고기$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_pork, title: "한식 육류 요리 전문점 국내산 사용 비중 돼지고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^돼지고기$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_rice, title: "한식 육류 요리 전문점 국내산 사용 비중 쌀", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^쌀$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_cab, title: "한식 육류 요리 전문점 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_chili, title: "한식 육류 요리 전문점 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_mt_kim, title: "한식 육류 요리 전문점 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$", "^한식 육류 요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_beef, title: "한식 해산물 요리 전문점 국내산 사용 비중 소고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^소고기$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_pork, title: "한식 해산물 요리 전문점 국내산 사용 비중 돼지고기", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^돼지고기$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_rice, title: "한식 해산물 요리 전문점 국내산 사용 비중 쌀", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^쌀$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_cab, title: "한식 해산물 요리 전문점 국내산 사용 비중 배추", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^배추$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_chili, title: "한식 해산물 요리 전문점 국내산 사용 비중 고춧가루", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^고춧가루\\(건고추 포함\\)$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: kr5_sea_kim, title: "한식 해산물 요리 전문점 국내산 사용 비중 김치", tbl: DT_114054_127, org: "114", se: F, periods: 3, itm: "^국산비중$", want: ["^김치$", "^한식 해산물요리 전문점$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

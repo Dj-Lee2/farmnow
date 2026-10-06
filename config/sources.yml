@@ -11243,6 +11243,40 @@ sources:
       - {id: fzc_gb, title: "식중독 발생건수 경북", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^경상북도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
       - {id: fzc_gn, title: "식중독 발생건수 경남", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^경상남도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
       - {id: fzc_jj, title: "식중독 발생건수 제주", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^제주(특별자치)?도$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fsg_se, title: "식품접객업체 위생 감시건수 서울", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^서울특별시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_bs, title: "식품접객업체 위생 감시건수 부산", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^부산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_dg, title: "식품접객업체 위생 감시건수 대구", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^대구광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_ic, title: "식품접객업체 위생 감시건수 인천", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^인천광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_gj, title: "식품접객업체 위생 감시건수 광주", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^광주광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_dj, title: "식품접객업체 위생 감시건수 대전", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^대전광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_us, title: "식품접객업체 위생 감시건수 울산", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^울산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_sj, title: "식품접객업체 위생 감시건수 세종", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^세종특별자치시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_gg, title: "식품접객업체 위생 감시건수 경기", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^경기도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_gw, title: "식품접객업체 위생 감시건수 강원", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^(강원도|강원특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_cb, title: "식품접객업체 위생 감시건수 충북", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^충청북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_cn, title: "식품접객업체 위생 감시건수 충남", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^충청남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_jb, title: "식품접객업체 위생 감시건수 전북", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^(전라북도|전북특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_jn, title: "식품접객업체 위생 감시건수 전남", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^전라남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_gb, title: "식품접객업체 위생 감시건수 경북", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_gn, title: "식품접객업체 위생 감시건수 경남", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsg_jj, title: "식품접객업체 위생 감시건수 제주", tbl: DT_145012_A003, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_se, title: "식품접객업체 위반건수 서울", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^서울특별시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_bs, title: "식품접객업체 위반건수 부산", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^부산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_dg, title: "식품접객업체 위반건수 대구", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^대구광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_ic, title: "식품접객업체 위반건수 인천", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^인천광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_gj, title: "식품접객업체 위반건수 광주", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^광주광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_dj, title: "식품접객업체 위반건수 대전", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^대전광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_us, title: "식품접객업체 위반건수 울산", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^울산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_sj, title: "식품접객업체 위반건수 세종", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^세종특별자치시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_gg, title: "식품접객업체 위반건수 경기", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^경기도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_gw, title: "식품접객업체 위반건수 강원", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^(강원도|강원특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_cb, title: "식품접객업체 위반건수 충북", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^충청북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_cn, title: "식품접객업체 위반건수 충남", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^충청남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_jb, title: "식품접객업체 위반건수 전북", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^(전라북도|전북특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_jn, title: "식품접객업체 위반건수 전남", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^전라남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_gb, title: "식품접객업체 위반건수 경북", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_gn, title: "식품접객업체 위반건수 경남", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsw_jj, title: "식품접객업체 위반건수 제주", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

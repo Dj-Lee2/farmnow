@@ -10010,6 +10010,36 @@ sources:
       - {id: sfq_cit_jj, title: "제주 시설 감귤 재배면적", tbl: DT_1ET0017, itm: "^●\\s*감귤$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
       - {id: sfq_grp_gb, title: "경북 시설 포도 재배면적", tbl: DT_1ET0017, itm: "^●\\s*포도$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
       - {id: sfq_grp_cb, title: "충북 시설 포도 재배면적", tbl: DT_1ET0017, itm: "^●\\s*포도$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: spx_tot, title: "노지 특용작물 재배면적(합계)", tbl: DT_1ET0015, itm: "^특용작물계$", unit: ha, survey: 농작물생산조사}
+      - {id: spx_paddy, title: "논 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^계$", "^논$"], unit: ha, survey: 농작물생산조사}
+      - {id: spx_ses, title: "노지 참깨 재배면적", tbl: DT_1ET0015, itm: "^참깨$", unit: ha, survey: 농작물생산조사}
+      - {id: spx_per, title: "노지 들깨 재배면적", tbl: DT_1ET0015, itm: "^들깨$", unit: ha, survey: 농작물생산조사}
+      - {id: spx_pnt, title: "노지 땅콩 재배면적", tbl: DT_1ET0015, itm: "^땅콩$", unit: ha, survey: 농작물생산조사}
+      - {id: spx_oth, title: "노지 기타 특용작물 재배면적", tbl: DT_1ET0015, itm: "^기타특용$", unit: ha, survey: 농작물생산조사}
+      - {id: spx_med, title: "노지 약용작물 재배면적", tbl: DT_1ET0015, itm: "^약용작물$", unit: ha, survey: 농작물생산조사}
+      - {id: sar_gg, title: "경기 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_gw, title: "강원 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_cb, title: "충북 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_cn, title: "충남 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_jb, title: "전북 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_jn, title: "전남 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_gb, title: "경북 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_gn, title: "경남 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^경상남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: sar_jj, title: "제주 노지 특용작물 재배면적", tbl: DT_1ET0015, itm: "^특용작물계$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_per_gg, title: "경기 노지 들깨 재배면적", tbl: DT_1ET0015, itm: "^들깨$", want: ["^경기도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_per_cn, title: "충남 노지 들깨 재배면적", tbl: DT_1ET0015, itm: "^들깨$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_per_gw, title: "강원 노지 들깨 재배면적", tbl: DT_1ET0015, itm: "^들깨$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_per_cb, title: "충북 노지 들깨 재배면적", tbl: DT_1ET0015, itm: "^들깨$", want: ["^충청북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_ses_jn, title: "전남 노지 참깨 재배면적", tbl: DT_1ET0015, itm: "^참깨$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_ses_gb, title: "경북 노지 참깨 재배면적", tbl: DT_1ET0015, itm: "^참깨$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_pnt_jb, title: "전북 노지 땅콩 재배면적", tbl: DT_1ET0015, itm: "^땅콩$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_pnt_cn, title: "충남 노지 땅콩 재배면적", tbl: DT_1ET0015, itm: "^땅콩$", want: ["^충청남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_pnt_gb, title: "경북 노지 땅콩 재배면적", tbl: DT_1ET0015, itm: "^땅콩$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_med_gb, title: "경북 노지 약용작물 재배면적", tbl: DT_1ET0015, itm: "^약용작물$", want: ["^경상북도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_med_gw, title: "강원 노지 약용작물 재배면적", tbl: DT_1ET0015, itm: "^약용작물$", want: ["^강원(도|특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_med_jn, title: "전남 노지 약용작물 재배면적", tbl: DT_1ET0015, itm: "^약용작물$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_oth_jn, title: "전남 노지 기타 특용작물 재배면적", tbl: DT_1ET0015, itm: "^기타특용$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
+      - {id: saq_oth_jj, title: "제주 노지 기타 특용작물 재배면적", tbl: DT_1ET0015, itm: "^기타특용$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

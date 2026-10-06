@@ -4096,7 +4096,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨', 288) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨·축종별 전업·경영주 나이·판매 규모별 사육 농가', 298) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -4394,6 +4394,19 @@
   {{ hcard('말산업 활성화를 위해 정부에 바라는 점(1순위)', [('승마 복합단지 등 기반시설', K.hgv_infra), ('말 수요확충·승마 대중화', K.hgv_dem), ('현장 전문 인력 양성', K.hgv_hr), ('연구개발(R&D) 강화', K.hgv_rnd), ('말 유통체계 구축', K.hgv_dist), ('육성재원 확보', K.hgv_fund), ('정보 시스템 구축', K.hgv_info), ('수출시장 개척', K.hgv_exp), ('말 생산·육성 기술', K.hgv_tech)], '%', '사업체 응답 비율 · 나머지는 기타·무응답 · 오른쪽은 1년 전 대비(%p)', none, '#1c7a45') }}</div>
  <h3 class="sg-sub">번식우·산란계·오리</h3>
  <div class="sg-g">{% set cn = K.cow_net %}{{ card('cow_net', 'g41', ('총수입 ' ~ num(K.cow_rev.vals[-1], '원')|striptags ~ ' · 송아지 생산 농가 평균') if K.cow_rev else none, '#2458d6' if cn and cn.vals[-1] < 0 else '#1c7a45') }}{{ card('cow_inc', 'g42', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('cow_birth', 'g43', '가임 암소 중 송아지를 낳은 비율') }}{{ card('ly_net', 'g44', ('수당 소득 ' ~ '{:,.0f}'.format(K.ly_inc.vals[-1]) ~ '원 · 산란계 1마리 기준') if K.ly_inc else none) }}{{ card('ly_inc', 'g45', '총수입 − 일반비(자가노동·자본용역 제외)') }}{{ card('duck', 'g46', ('농가 ' ~ K.duck_farms.vals[-1]|big ~ '곳 · 계절에 따라 크게 변함') if K.duck_farms else none) }}</div>
+ </div>
+ <h3 class="sg-sub">축종별 사육 농가 — 전업·경영주 나이·판매 규모 <small>연간 · 농림어업조사 · 가축사육 농가(가구) 중 비율 · 전업은 가구원 모두 농업만 하는 농가 · 판매금액은 지난 1년 농축산물 판매 합계 · 오른쪽은 전년 대비</small></h3>
+ <div class="sg-g">
+  {{ rcard('한우 농가 중 전업농', K.lvf_hw_ft, K.mn_hw_all, 'lvf1', '전업 한우 사육 농가 ÷ 한우 사육 농가', '#7a5c3a') }}
+  {{ rcard('한우 농가 중 경영주 65세 이상', K.lvf_hw_o65, K.mn_hw_all, 'lvf2', '경영주 65세 이상 한우 농가 ÷ 한우 사육 농가', '#7a5c3a') }}
+  {{ rcard('한우 농가 중 판매 1억원 이상', K.lvf_hw_b1, K.mn_hw_all, 'lvf3', '연 판매 1억원 이상 한우 농가 ÷ 한우 사육 농가', '#7a5c3a') }}
+  {{ rcard('젖소 농가 중 판매 1억원 이상', K.lvf_dy_b1, K.mn_dy_all, 'lvf4', '연 판매 1억원 이상 젖소암컷 사육 농가 ÷ 젖소암컷 사육 농가', '#3a6a8a') }}
+  {{ rcard('돼지 농가 중 전업농', K.lvf_pg_ft, K.mn_pg_all, 'lvf5', '전업 돼지 사육 농가 ÷ 돼지 사육 농가', '#c77b30') }}
+  {{ rcard('산란계 농가 중 경영주 65세 이상', K.lvf_ly_o65, K.mn_ly_all, 'lvf6', '경영주 65세 이상 산란계 농가 ÷ 산란계 사육 농가 · 소규모로 닭을 치는 고령 농가가 많음', '#b04a07') }}
+  {{ hcard('축종별 전업농 비율', [('한우', K.lvf_hw_ft|ratio(K.mn_hw_all)), ('육우', K.lvf_bf_ft|ratio(K.lvf_bf_all)), ('젖소', K.lvf_dy_ft|ratio(K.mn_dy_all)), ('돼지', K.lvf_pg_ft|ratio(K.mn_pg_all)), ('육계', K.lvf_br_ft|ratio(K.mn_br_all)), ('산란계', K.lvf_ly_ft|ratio(K.mn_ly_all)), ('오리', K.lvf_dk_ft|ratio(K.mn_dk_all))], '%', '축종별 사육 농가 중 전업농 · 오른쪽은 전년 대비', none, '#7a6a3a') }}
+  {{ hcard('축종별 경영주 65세 이상 농가 비율', [('한우', K.lvf_hw_o65|ratio(K.mn_hw_all)), ('육우', K.lvf_bf_o65|ratio(K.lvf_bf_all)), ('젖소', K.lvf_dy_o65|ratio(K.mn_dy_all)), ('돼지', K.lvf_pg_o65|ratio(K.mn_pg_all)), ('육계', K.lvf_br_o65|ratio(K.mn_br_all)), ('산란계', K.lvf_ly_o65|ratio(K.mn_ly_all)), ('오리', K.lvf_dk_o65|ratio(K.mn_dk_all))], '%', '축종별 사육 농가 중 경영주 65세 이상 · 오른쪽은 전년 대비', none, '#a0603a') }}
+  {{ hcard('축종별 경영주 50세 미만 농가 비율', [('한우', K.lvf_hw_u50|ratio(K.mn_hw_all)), ('육우', K.lvf_bf_u50|ratio(K.lvf_bf_all)), ('젖소', K.lvf_dy_u50|ratio(K.mn_dy_all)), ('돼지', K.lvf_pg_u50|ratio(K.mn_pg_all)), ('육계', K.lvf_br_u50|ratio(K.mn_br_all)), ('산란계', K.lvf_ly_u50|ratio(K.mn_ly_all)), ('오리', K.lvf_dk_u50|ratio(K.mn_dk_all))], '%', '축종별 사육 농가 중 경영주 50세 미만 · 오른쪽은 전년 대비', none, '#3a8a5a') }}
+  {{ hcard('축종별 판매 1억원 이상 농가 비율', [('한우', K.lvf_hw_b1|ratio(K.mn_hw_all)), ('육우', K.lvf_bf_b1|ratio(K.lvf_bf_all)), ('젖소', K.lvf_dy_b1|ratio(K.mn_dy_all)), ('돼지', K.lvf_pg_b1|ratio(K.mn_pg_all)), ('육계', K.lvf_br_b1|ratio(K.mn_br_all)), ('산란계', K.lvf_ly_b1|ratio(K.mn_ly_all)), ('오리', K.lvf_dk_b1|ratio(K.mn_dk_all))], '%', '축종별 사육 농가 중 연 판매금액 1억원 이상 · 오른쪽은 전년 대비', none, '#3a6a8a') }}
  </div>
  <h3 class="sg-sub">세계 속 우리 가축 — 소·돼지·닭 사육 두수 <small>FAO 기반 국제통계(가축사육) · 연말 기준 사육 두수 · 소는 한우·육우·젖소 합계 · 괄호는 세계 중 비중 · 오른쪽은 전년 대비</small></h3>
  <div class="sg-g">

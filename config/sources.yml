@@ -10374,6 +10374,35 @@ sources:
       - {id: cfr_v_gb, title: "경북 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상북도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
       - {id: cfr_v_gn, title: "경남 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상남도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
       - {id: cfr_v_jj, title: "제주 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^제주(특별자치)?도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: lvf_hw_ft, title: "한우 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^한우$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_bf_ft, title: "육우 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dy_ft, title: "젖소암컷 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^젖소암컷$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_pg_ft, title: "돼지 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^돼지$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_br_ft, title: "육계 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^육계$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_ly_ft, title: "산란계 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^산란계$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dk_ft, title: "오리 사육 농가 중 전업", tbl: DT_1EA1030, itm: "^오리$", want: ["^전업$"], unit: 가구, survey: 농림어업조사}
+      - {id: lvf_hw_o65, title: "한우 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^한우$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_bf_o65, title: "육우 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dy_o65, title: "젖소암컷 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^젖소암컷$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_pg_o65, title: "돼지 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^돼지$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_br_o65, title: "육계 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^육계$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_ly_o65, title: "산란계 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^산란계$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dk_o65, title: "오리 사육 농가 중 경영주 65세 이상", tbl: DT_1EA1030, itm: "^오리$", want: ["^경영주연령 : (65~69세|70~74세|75~79세|80세 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_hw_u50, title: "한우 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^한우$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_bf_u50, title: "육우 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dy_u50, title: "젖소암컷 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^젖소암컷$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_pg_u50, title: "돼지 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^돼지$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_br_u50, title: "육계 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^육계$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_ly_u50, title: "산란계 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^산란계$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dk_u50, title: "오리 사육 농가 중 경영주 50세 미만", tbl: DT_1EA1030, itm: "^오리$", want: ["^경영주연령 : (24세 이하|25~29세|30~34세|35~39세|40~44세|45~49세)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_hw_b1, title: "한우 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^한우$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_bf_b1, title: "육우 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dy_b1, title: "젖소암컷 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^젖소암컷$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_pg_b1, title: "돼지 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^돼지$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_br_b1, title: "육계 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^육계$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_ly_b1, title: "산란계 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^산란계$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_dk_b1, title: "오리 사육 농가 중 판매 1억원 이상", tbl: DT_1EA1030, itm: "^오리$", want: ["^판매금액 : (1~2억|2~5억원|5억원 이상)$"], sum: true, unit: 가구, survey: 농림어업조사}
+      - {id: lvf_bf_all, title: "육우 사육 농가", tbl: DT_1EA1030, itm: "^육우\\(젖소수컷포함\\)$", want: ["^전국$"], unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

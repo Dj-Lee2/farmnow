@@ -11058,6 +11058,38 @@ sources:
       - {id: shbm_car, title: "일상형 산림휴양 자가용 편도 평균 이동시간", tbl: DT_136037_B43, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shbm_bus, title: "일상형 산림휴양 대중교통 편도 평균 이동시간", tbl: DT_136037_B434, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "분", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shbm_walk30, title: "일상형 산림휴양 도보 편도 30분 미만", tbl: DT_136037_B41, org: "136", periods: 3, itm: ".", want: ["^전체$", "^30분 미만$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: kfd_grain, title: "1인 1일 곡류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^곡류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_potato, title: "1인 1일 감자·전분류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^감자·전분류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_sugar, title: "1인 1일 당류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^당류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_bean, title: "1인 1일 두류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^두류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_nut, title: "1인 1일 종실류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^종실류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_veg, title: "1인 1일 채소류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^채소류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_mush, title: "1인 1일 버섯류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^버섯류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_fruit, title: "1인 1일 과일류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^과일류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_sea, title: "1인 1일 해조류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^해조류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_drink, title: "1인 1일 음료류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^음료류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_alc, title: "1인 1일 주류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^주류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_meat, title: "1인 1일 육류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^육류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_egg, title: "1인 1일 난류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^난류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_fish, title: "1인 1일 어패류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^어패류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kfd_milk, title: "1인 1일 우유류 섭취량", tbl: DT_11702_N021, org: "177", periods: 10, itm: "^평균$", want: ["^우유류$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: knt_kcal, title: "1인 1일 에너지 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^에너지$", "^전체$"], unit: "kcal", survey: 국민건강영양조사}
+      - {id: knt_prot, title: "1인 1일 단백질 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^단백질$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: knt_fat, title: "1인 1일 지방 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^지방$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: knt_carb, title: "1인 1일 탄수화물 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^탄수화물$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: knt_fib, title: "1인 1일 식이섬유 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^식이섬유$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: knt_na, title: "1인 1일 나트륨 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^나트륨$", "^전체$"], unit: "mg", survey: 국민건강영양조사}
+      - {id: knt_k, title: "1인 1일 칼륨 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^칼륨$", "^전체$"], unit: "mg", survey: 국민건강영양조사}
+      - {id: knt_ca, title: "1인 1일 칼슘 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^칼슘$", "^전체$"], unit: "mg", survey: 국민건강영양조사}
+      - {id: knt_sug, title: "1인 1일 당 섭취량", tbl: DT_11702_N025, org: "177", periods: 10, itm: "^평균$", want: ["^당$", "^전체$"], unit: "g", survey: 국민건강영양조사}
+      - {id: kbf_all, title: "아침식사 결식률 1세이상", tbl: DT_11702_N033, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kbf_20s, title: "아침식사 결식률 19-29세", tbl: DT_11702_N033, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^19-29세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kbf_65, title: "아침식사 결식률 65세이상", tbl: DT_11702_N033, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^65세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kbf_rural, title: "아침식사 결식률 읍면", tbl: DT_11702_N033, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^읍면$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kbf_urban, title: "아침식사 결식률 동", tbl: DT_11702_N033, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^동$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kns_all, title: "영양섭취부족자 분율 1세이상", tbl: DT_11702_N031, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kns_65, title: "영양섭취부족자 분율 65세이상", tbl: DT_11702_N031, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^65세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: kns_over, title: "에너지·지방 과잉섭취자 분율 1세이상", tbl: DT_11702_N032, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

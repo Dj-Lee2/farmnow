@@ -11123,6 +11123,35 @@ sources:
       - {id: kna_70, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 70세이상", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^70세이상$"], unit: "%", survey: 국민건강영양조사}
       - {id: kna_urban, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 동", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^동$"], unit: "%", survey: 국민건강영양조사}
       - {id: kna_rural, title: "나트륨 만성질환위험감소섭취량 이상 섭취자 분율 읍면", tbl: DT_11702_N252, org: "177", periods: 3, itm: "^분율$", want: ["^전체$", "^읍면$"], unit: "%", survey: 국민건강영양조사}
+      - {id: fzd_cnt, title: "식중독 발생건수", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^건수$", want: ["^합계$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzd_pat, title: "식중독 환자수", tbl: DT_145012_A007, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzd_rate, title: "인구 10만명당 식중독 환자수", tbl: DT_145012_A012, org: "145", periods: 8, itm: "^십만명당 환자수$", want: ["^합계$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzd_sch_cnt, title: "학교 식중독 발생건수", tbl: DT_145012_A011, org: "145", periods: 8, itm: "^건수$", want: ["^합계$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzd_sch_pat, title: "학교 식중독 환자수", tbl: DT_145012_A011, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzd_id, title: "식중독 원인균 규명률", tbl: DT_145012_A013, org: "145", periods: 8, itm: "^규명률$", want: ["^합계$"], unit: "%", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_ecoli, title: "원인균별 식중독 환자수 병원성대장균", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^병원성대장균$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_salm, title: "원인균별 식중독 환자수 살모넬라", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^살모넬라$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_staph, title: "원인균별 식중독 환자수 황색포도상구균", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^황색포도상구균$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_perf, title: "원인균별 식중독 환자수 클로스트리디움 퍼프린젠스", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^클로스트리디움 퍼프린젠스$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_camp, title: "원인균별 식중독 환자수 캠필로박터제주니", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^캠필로박터제주니$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_vib, title: "원인균별 식중독 환자수 장염비브리오균", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^장염비브리오균$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_bac, title: "원인균별 식중독 환자수 바실러스세레우스", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^바실러스세레우스$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_noro, title: "원인균별 식중독 환자수 노로바이러스", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^노로바이러스$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_unk, title: "원인균별 식중독 환자수 불명", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^불명$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdb_etc, title: "원인균별 식중독 환자수 기타", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^기타$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdn_ecoli, title: "원인균별 식중독 발생건수 병원성대장균", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^병원성대장균$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdn_noro, title: "원인균별 식중독 발생건수 노로바이러스", tbl: DT_145012_A009, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^노로바이러스$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdf_rest, title: "시설별 식중독 발생건수 식품접객업체", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^식품접객업체$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdf_meal, title: "시설별 식중독 발생건수 집단급식소", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^집단급식소$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdf_home, title: "시설별 식중독 발생건수 가정집", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^가정집$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdf_etc, title: "시설별 식중독 발생건수 기타", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^기타$"], unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdp_rest, title: "시설별 식중독 환자수 식품접객업체", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^식품접객업체$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdp_meal, title: "시설별 식중독 환자수 집단급식소", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^집단급식소$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdp_home, title: "시설별 식중독 환자수 가정집", tbl: DT_145012_A010, org: "145", periods: 8, itm: "^환자수$", want: ["^합계$", "^가정집$"], unit: "명", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdm_spr, title: "계절별 식중독 발생건수 봄(3~5월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(3월|4월|5월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdm_sum, title: "계절별 식중독 발생건수 여름(6~8월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(6월|7월|8월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdm_aut, title: "계절별 식중독 발생건수 가을(9~11월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(9월|10월|11월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: fzdm_win, title: "계절별 식중독 발생건수 겨울(12~2월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(12월|1월|2월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

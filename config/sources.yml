@@ -10219,6 +10219,34 @@ sources:
       - {id: agf_pst_50, title: "경영주 50대 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
       - {id: agf_pst_60, title: "경영주 60대 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
       - {id: agf_pst_70, title: "경영주 70대 이상 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: oqn_40, title: "경영주 40대 — 논벼 10a당 질소질비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqn_50, title: "경영주 50대 — 논벼 10a당 질소질비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqn_60, title: "경영주 60대 — 논벼 10a당 질소질비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqn_70, title: "경영주 70대 이상 — 논벼 10a당 질소질비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^질소질$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqc_40, title: "경영주 40대 — 논벼 10a당 복합비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqc_50, title: "경영주 50대 — 논벼 10a당 복합비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqc_60, title: "경영주 60대 — 논벼 10a당 복합비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqc_70, title: "경영주 70대 이상 — 논벼 10a당 복합비료", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^복합비료$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqh_40, title: "경영주 40대 — 논벼 10a당 고용 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^고용$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqh_50, title: "경영주 50대 — 논벼 10a당 고용 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^고용$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqh_60, title: "경영주 60대 — 논벼 10a당 고용 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^고용$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqh_70, title: "경영주 70대 이상 — 논벼 10a당 고용 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^고용$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqd_40, title: "경영주 40대 — 논벼 10a당 동력 사용 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^동력사용시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqd_50, title: "경영주 50대 — 논벼 10a당 동력 사용 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^동력사용시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqd_60, title: "경영주 60대 — 논벼 10a당 동력 사용 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^동력사용시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqd_70, title: "경영주 70대 이상 — 논벼 10a당 동력 사용 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^동력사용시간$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqa_nat, title: "전국 평균 — 논벼 10a당 자가 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^전국평균$", "^자가$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqa_40, title: "경영주 40대 — 논벼 10a당 자가 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^자가$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqa_50, title: "경영주 50대 — 논벼 10a당 자가 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^자가$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqa_60, title: "경영주 60대 — 논벼 10a당 자가 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^자가$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqa_70, title: "경영주 70대 이상 — 논벼 10a당 자가 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^자가$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqz_nat, title: "전국 평균 — 논벼 10a당 종자·종묘", tbl: DT_1EC0016, itm: "^10a당$", want: ["^전국평균$", "^종자·종묘$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqz_40, title: "경영주 40대 — 논벼 10a당 종자·종묘", tbl: DT_1EC0016, itm: "^10a당$", want: ["^40대$", "^종자·종묘$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqz_50, title: "경영주 50대 — 논벼 10a당 종자·종묘", tbl: DT_1EC0016, itm: "^10a당$", want: ["^50대$", "^종자·종묘$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqz_60, title: "경영주 60대 — 논벼 10a당 종자·종묘", tbl: DT_1EC0016, itm: "^10a당$", want: ["^60대$", "^종자·종묘$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqz_70, title: "경영주 70대 이상 — 논벼 10a당 종자·종묘", tbl: DT_1EC0016, itm: "^10a당$", want: ["^70대이상$", "^종자·종묘$"], unit: kg, survey: 농산물생산비조사}
+      - {id: oqh_nat, title: "전국 평균 — 논벼 10a당 고용 노동 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^전국평균$", "^고용$"], unit: 시간, survey: 농산물생산비조사}
+      - {id: oqd_nat, title: "전국 평균 — 논벼 10a당 동력 사용 시간", tbl: DT_1EC0016, itm: "^10a당$", want: ["^전국평균$", "^동력사용시간$"], unit: 시간, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

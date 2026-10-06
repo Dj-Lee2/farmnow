@@ -10507,6 +10507,38 @@ sources:
       - {id: skf_2, title: "외국인 근로자가 주로 하는 일 — 약간의 실무 지식과 기술이 필요한 일", tbl: DT_111014_C087, org: "111", itm: "^주 업무 수행$", want: ["^전체$", "^약간의 실무 지식과 기술이 필요한 일$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: skf_3, title: "외국인 근로자가 주로 하는 일 — 상당한 실무 지식과 기술이 필요한 일", tbl: DT_111014_C087, org: "111", itm: "^주 업무 수행$", want: ["^전체$", "^상당한 실무 지식과 기술이 필요한 일$"], unit: "%", survey: 외국인고용실태조사(농업)}
       - {id: skf_4, title: "외국인 근로자가 주로 하는 일 — 전문 지식과 기술이 필요한 일", tbl: DT_111014_C087, org: "111", itm: "^주 업무 수행$", want: ["^전체$", "^전문 지식과 기술이 필요한 일$"], unit: "%", survey: 외국인고용실태조사(농업)}
+      - {id: pfc_price, title: "가공식품 구입 시 고려 기준 가격", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_taste, title: "가공식품 구입 시 고려 기준 맛", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^맛$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_safe, title: "가공식품 구입 시 고려 기준 안전성", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^안전성$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_qual, title: "가공식품 구입 시 고려 기준 품질", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^품질$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_nutr, title: "가공식품 구입 시 고려 기준 영양(건강)", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양\\(건강\\)$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_fresh, title: "가공식품 구입 시 고려 기준 신선도", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^신선도"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_buy, title: "가공식품 구입 시 고려 기준 구입의 편리성", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입의 편리성$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_cook, title: "가공식품 구입 시 고려 기준 조리의 편리성", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^조리의 편리성$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_y20_price, title: "가공식품 구입 시 고려 기준 가격 — 20대", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^20대$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_y20_safe, title: "가공식품 구입 시 고려 기준 안전성 — 20대", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^20대$", "^안전성$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_o60_price, title: "가공식품 구입 시 고려 기준 가격 — 60대 이상", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^60대 이상$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfc_o60_safe, title: "가공식품 구입 시 고려 기준 안전성 — 60대 이상", tbl: DT_114053_002, org: "114", periods: 3, itm: "^비율$", want: ["^60대 이상$", "^안전성$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_town, title: "가공식품 주 구입처 동네 슈퍼마켓·식자재마트", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^동네 슈퍼마켓 식자재마트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_ssm, title: "가공식품 주 구입처 대기업 슈퍼마켓", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^대기업에서 운영하는 슈퍼마켓$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_eco, title: "가공식품 주 구입처 친환경 식품 전문점", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^친환경 식품 전문점$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_cvs, title: "가공식품 주 구입처 편의점", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^편의점$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_local, title: "가공식품 주 구입처 로컬푸드 마켓", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^오프라인 독립된 로컬푸드 마켓$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_trad, title: "가공식품 주 구입처 전통시장", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전통 시장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_mart, title: "가공식품 주 구입처 대형마트", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^오프라인 대형마트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_dept, title: "가공식품 주 구입처 백화점", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^백화점$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_online, title: "가공식품 주 구입처 온라인 쇼핑몰", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^온라인 쇼핑몰$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfs_tvhs, title: "가공식품 주 구입처 TV 홈쇼핑", tbl: DT_114053_003_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^TV 홈쇼핑$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_meat, title: "지출액 기준 많이 구입하는 가공식품 육류가공품", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^육류가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_milk, title: "지출액 기준 많이 구입하는 가공식품 유가공품", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^유가공품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_snack, title: "지출액 기준 많이 구입하는 가공식품 과자류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^과자류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_noodle, title: "지출액 기준 많이 구입하는 가공식품 면류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^면류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_bev, title: "지출액 기준 많이 구입하는 가공식품 음료류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^음료류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_kimchi, title: "지출액 기준 많이 구입하는 가공식품 김치·절임류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^김치 및 절임류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_hmr, title: "지출액 기준 많이 구입하는 가공식품 간편식(HMR)", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^간편식\\(HMR\\)$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_bread, title: "지출액 기준 많이 구입하는 가공식품 빵·떡류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^빵 및 떡류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_coffee, title: "지출액 기준 많이 구입하는 가공식품 커피·차", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^커피 및 차$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pfg_jang, title: "지출액 기준 많이 구입하는 가공식품 장류", tbl: DT_114053_004, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^장류$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

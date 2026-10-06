@@ -11277,6 +11277,40 @@ sources:
       - {id: fsw_gb, title: "식품접객업체 위반건수 경북", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsw_gn, title: "식품접객업체 위반건수 경남", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsw_jj, title: "식품접객업체 위반건수 제주", tbl: DT_145012_A004, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_se, title: "식품접객업체 행정처분 서울", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^서울특별시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_bs, title: "식품접객업체 행정처분 부산", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^부산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_dg, title: "식품접객업체 행정처분 대구", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^대구광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_ic, title: "식품접객업체 행정처분 인천", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^인천광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_gj, title: "식품접객업체 행정처분 광주", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^광주광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_dj, title: "식품접객업체 행정처분 대전", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^대전광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_us, title: "식품접객업체 행정처분 울산", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^울산광역시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_sj, title: "식품접객업체 행정처분 세종", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^세종특별자치시$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_gg, title: "식품접객업체 행정처분 경기", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경기도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_gw, title: "식품접객업체 행정처분 강원", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^(강원도|강원특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_cb, title: "식품접객업체 행정처분 충북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^충청북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_cn, title: "식품접객업체 행정처분 충남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^충청남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_jb, title: "식품접객업체 행정처분 전북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^(전라북도|전북특별자치도)$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_jn, title: "식품접객업체 행정처분 전남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^전라남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_gb, title: "식품접객업체 행정처분 경북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_gn, title: "식품접객업체 행정처분 경남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsy_jj, title: "식품접객업체 행정처분 제주", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^총계$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_se, title: "식품접객업체 허가취소·영업소폐쇄 서울", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^서울특별시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_bs, title: "식품접객업체 허가취소·영업소폐쇄 부산", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^부산광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_dg, title: "식품접객업체 허가취소·영업소폐쇄 대구", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^대구광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_ic, title: "식품접객업체 허가취소·영업소폐쇄 인천", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^인천광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_gj, title: "식품접객업체 허가취소·영업소폐쇄 광주", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^광주광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_dj, title: "식품접객업체 허가취소·영업소폐쇄 대전", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^대전광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_us, title: "식품접객업체 허가취소·영업소폐쇄 울산", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^울산광역시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_sj, title: "식품접객업체 허가취소·영업소폐쇄 세종", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^세종특별자치시$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_gg, title: "식품접객업체 허가취소·영업소폐쇄 경기", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경기도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_gw, title: "식품접객업체 허가취소·영업소폐쇄 강원", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^(강원도|강원특별자치도)$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_cb, title: "식품접객업체 허가취소·영업소폐쇄 충북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^충청북도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_cn, title: "식품접객업체 허가취소·영업소폐쇄 충남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^충청남도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_jb, title: "식품접객업체 허가취소·영업소폐쇄 전북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^(전라북도|전북특별자치도)$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_jn, title: "식품접객업체 허가취소·영업소폐쇄 전남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^전라남도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_gb, title: "식품접객업체 허가취소·영업소폐쇄 경북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_gn, title: "식품접객업체 허가취소·영업소폐쇄 경남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: fsyc_jj, title: "식품접객업체 허가취소·영업소폐쇄 제주", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

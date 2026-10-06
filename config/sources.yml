@@ -10070,6 +10070,28 @@ sources:
       - {id: mgq_oth_jn, title: "전남 기타 잡곡 재배면적", tbl: DT_1ET0024, itm: "^기타잡곡:면적$", want: ["^전라남도$"], unit: ha, survey: 농작물생산조사}
       - {id: mgq_oth_jj, title: "제주 기타 잡곡 재배면적", tbl: DT_1ET0024, itm: "^기타잡곡:면적$", want: ["^제주"], unit: ha, survey: 농작물생산조사}
       - {id: mgq_oth_jb, title: "전북 기타 잡곡 재배면적", tbl: DT_1ET0024, itm: "^기타잡곡:면적$", want: ["^전(라북도|북특별자치도)$"], unit: ha, survey: 농작물생산조사}
+      - {id: sgr_a, title: "논벼 재배면적(시군별 표 전국)", tbl: DT_1ET0034, itm: "^논벼:재배면적$", unit: ha, survey: 농작물생산조사}
+      - {id: sgr_p, title: "논벼 생산량(시군별 표 전국, 정곡)", tbl: DT_1ET0034, itm: "^논벼:생산량$", unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_y, title: "논벼 10a당 생산량(시군별 표 전국)", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", unit: kg, survey: 농작물생산조사}
+      - {id: sgt_p10, title: "논벼 생산량 상위 10개 시군 합계", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^(당진시|해남군|서산시|익산시|김제시|영암군|상주시|군산시|정읍시|화성시)$"], sum: true, unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_dj, title: "당진 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^당진시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_hn, title: "해남 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^해남군$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_ss, title: "서산 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^서산시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_is, title: "익산 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^익산시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_gj, title: "김제 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^김제시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_ya, title: "영암 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^영암군$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_sj, title: "상주 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^상주시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_gs, title: "군산 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^군산시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_ju, title: "정읍 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^정읍시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_hs, title: "화성 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^화성시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_gc, title: "고창 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^고창군$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgr_ns, title: "논산 논벼 생산량", tbl: DT_1ET0034, itm: "^논벼:생산량$", want: ["^논산시$"], unit: 톤, survey: 농작물생산조사}
+      - {id: sgy_dj, title: "당진 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^당진시$"], unit: kg, survey: 농작물생산조사}
+      - {id: sgy_sj, title: "상주 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^상주시$"], unit: kg, survey: 농작물생산조사}
+      - {id: sgy_ys, title: "예산 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^예산군$"], unit: kg, survey: 농작물생산조사}
+      - {id: sgy_hs, title: "화성 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^화성시$"], unit: kg, survey: 농작물생산조사}
+      - {id: sgy_hn, title: "해남 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^해남군$"], unit: kg, survey: 농작물생산조사}
+      - {id: sgy_nj, title: "나주 논벼 10a당 생산량", tbl: DT_1ET0034, itm: "^논벼:10a당 생산량$", want: ["^나주시$"], unit: kg, survey: 농작물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

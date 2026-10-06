@@ -11345,6 +11345,45 @@ sources:
       - {id: rce_60p, title: "쌀가공식품 부문 종사자 수 60대 이상", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^60대 이상$"], unit: "명", survey: 쌀가공식품산업 실태조사}
       - {id: rce_m, title: "쌀가공식품 부문 종사자 수 남성", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^남성$"], unit: "명", survey: 쌀가공식품산업 실태조사}
       - {id: rce_f, title: "쌀가공식품 부문 종사자 수 여성", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^여성$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_se, title: "쌀가공업체 소재지 비중 서울", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^서울$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_bs, title: "쌀가공업체 소재지 비중 부산", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^부산$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_dg, title: "쌀가공업체 소재지 비중 대구", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^대구$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_ic, title: "쌀가공업체 소재지 비중 인천", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^인천$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_gj, title: "쌀가공업체 소재지 비중 광주", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^광주$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_dj, title: "쌀가공업체 소재지 비중 대전", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^대전$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_us, title: "쌀가공업체 소재지 비중 울산", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^울산$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_sj, title: "쌀가공업체 소재지 비중 세종", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^세종$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_gg, title: "쌀가공업체 소재지 비중 경기", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^경기$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_gw, title: "쌀가공업체 소재지 비중 강원", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^강원$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_cb, title: "쌀가공업체 소재지 비중 충북", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^충북$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_cn, title: "쌀가공업체 소재지 비중 충남", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^충남$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_jb, title: "쌀가공업체 소재지 비중 전북", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^전북$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_jn, title: "쌀가공업체 소재지 비중 전남", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^전남$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_gb, title: "쌀가공업체 소재지 비중 경북", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^경북$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_gn, title: "쌀가공업체 소재지 비중 경남", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^경남$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_loc_jj, title: "쌀가공업체 소재지 비중 제주", tbl: DT_446001_A004, org: "466", periods: 2, itm: "^제주$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_org_ind, title: "쌀가공업체 조직형태 비중 개인사업체", tbl: DT_446001_A005, org: "466", periods: 2, itm: "^개인사업체$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_org_corp, title: "쌀가공업체 조직형태 비중 회사법인", tbl: DT_446001_A005, org: "466", periods: 2, itm: "^회사법인$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_org_np, title: "쌀가공업체 조직형태 비중 비법인단체", tbl: DT_446001_A005, org: "466", periods: 2, itm: "^비법인단체$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_size_micro, title: "쌀가공업체 사업체 유형 비중 소상공인", tbl: DT_446001_A007, org: "466", periods: 2, itm: "^소상공인$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_size_small, title: "쌀가공업체 사업체 유형 비중 소기업", tbl: DT_446001_A007, org: "466", periods: 2, itm: "^소기업$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_size_mid, title: "쌀가공업체 사업체 유형 비중 중기업", tbl: DT_446001_A007, org: "466", periods: 2, itm: "^중기업$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_size_mmid, title: "쌀가공업체 사업체 유형 비중 중견기업", tbl: DT_446001_A007, org: "466", periods: 2, itm: "^중견기업$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_size_big, title: "쌀가공업체 사업체 유형 비중 대기업", tbl: DT_446001_A007, org: "466", periods: 2, itm: "^대기업$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_start_p90, title: "쌀가공식품 시작연도 비중 1990년 이전", tbl: DT_446001_A003, org: "466", periods: 2, itm: "^1990년 이전$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_start_90s, title: "쌀가공식품 시작연도 비중 1990년대", tbl: DT_446001_A003, org: "466", periods: 2, itm: "^1990년\\s*~\\s*1999년$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_start_00s, title: "쌀가공식품 시작연도 비중 2000년대", tbl: DT_446001_A003, org: "466", periods: 2, itm: "^2000년\\s*~\\s*2009년$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_start_10s, title: "쌀가공식품 시작연도 비중 2010년대", tbl: DT_446001_A003, org: "466", periods: 2, itm: "^2010년\\s*~\\s*2019년$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_start_20p, title: "쌀가공식품 시작연도 비중 2020년 이후", tbl: DT_446001_A003, org: "466", periods: 2, itm: "^2020년 이후$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_sp_up, title: "쌀가공업체 주 생산품 판매가격 1년 전보다 상승", tbl: DT_446001_A019, org: "466", periods: 2, itm: "^상승$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_sp_same, title: "쌀가공업체 주 생산품 판매가격 1년 전보다 비슷", tbl: DT_446001_A019, org: "466", periods: 2, itm: "^(비슷|동일)$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_sp_down, title: "쌀가공업체 주 생산품 판매가격 1년 전보다 하락", tbl: DT_446001_A019, org: "466", periods: 2, itm: "^하락$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_dry, title: "쌀가루 제품별 평균 수율 건식미분", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^건식미분$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_grit, title: "쌀가루 제품별 평균 수율 그릿츠", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^그릿츠$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_wet, title: "쌀가루 제품별 평균 수율 습식·반습식", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^습식/반습식$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_alpha, title: "쌀가루 제품별 평균 수율 알파미분", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^알파미분$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_roast, title: "쌀가루 제품별 평균 수율 볶음미분", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^볶음미분$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rk_yld_mix, title: "쌀가루 제품별 평균 수율 프리믹스", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^프리믹스$"], unit: "%", survey: 쌀가공식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

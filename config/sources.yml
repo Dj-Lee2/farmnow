@@ -10777,6 +10777,26 @@ sources:
       - {id: shpa_kid, title: "산림휴양·복지 프로그램 인지율 유아숲체험", tbl: DT_136037_D9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shpa_trail, title: "산림휴양·복지 프로그램 인지율 숲길체험", tbl: DT_136037_D9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
       - {id: shpa_sport, title: "산림휴양·복지 프로그램 인지율 산림레포츠체험", tbl: DT_136037_D9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림레포츠체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnx_other, title: "산림휴양 미경험 이유(흥미 없음) 다른 여가활동에 흥미", tbl: DT_136037_A51, org: "136", periods: 3, itm: ".", want: ["^전체$", "^다른 여가활동을 하느라"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnx_leisure, title: "산림휴양 미경험 이유(흥미 없음) 여가활동 자체에 흥미 없음", tbl: DT_136037_A51, org: "136", periods: 3, itm: ".", want: ["^전체$", "^여가활동 자체에 흥미"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnx_noprog, title: "산림휴양 미경험 이유(흥미 없음) 흥미 있는 시설·프로그램 없음", tbl: DT_136037_A51, org: "136", periods: 3, itm: ".", want: ["^전체$", "^흥미 있는 산림복지시설"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnt_noleis, title: "산림휴양 미경험 이유(시간 없음) 여가 즐길 시간 없음", tbl: DT_136037_A52, org: "136", periods: 3, itm: ".", want: ["^전체$", "^여가활동 자체를 즐길 시간"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnt_other, title: "산림휴양 미경험 이유(시간 없음) 다른 여가활동 하느라", tbl: DT_136037_A52, org: "136", periods: 3, itm: ".", want: ["^전체$", "^다른 여가활동을 하느라"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shnt_move, title: "산림휴양 미경험 이유(시간 없음) 시설까지 이동 시간 여의치 않음", tbl: DT_136037_A52, org: "136", periods: 3, itm: ".", want: ["^전체$", "^하고 싶으나 관련 시설"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_view, title: "숙박형 산림휴양 활동 자연풍경감상", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^자연풍경감상$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_hike, title: "숙박형 산림휴양 활동 등산", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^등산$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_walk, title: "숙박형 산림휴양 활동 하이킹(산책)", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^하이킹"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_picnic, title: "숙박형 산림휴양 활동 소풍(피크닉)", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^소풍"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_trek, title: "숙박형 산림휴양 활동 트레킹", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^트레킹$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_bath, title: "숙박형 산림휴양 활동 산림욕", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림욕$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_water, title: "숙박형 산림휴양 활동 수상활동", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^수상활동"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_camp, title: "숙박형 산림휴양 활동 야영(캠핑)", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^야영"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_eco, title: "숙박형 산림휴양 활동 동식물 관찰·학습", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^동식물 관찰"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_life, title: "숙박형 산림휴양 활동 숲속생활 체험", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲속생활 체험$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_spot, title: "숙박형 산림휴양 활동 명소탐방", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^명소탐방$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_foot, title: "숙박형 산림휴양 활동 숲속 족욕·스파", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲속 족욕"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_star, title: "숙박형 산림휴양 활동 별 관찰", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^별 관찰$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shst_harvest, title: "숙박형 산림휴양 활동 임산물 수확체험", tbl: DT_136037_A3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산나물 등"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

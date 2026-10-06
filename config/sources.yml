@@ -10338,6 +10338,42 @@ sources:
       - {id: cfx_tang, title: "소비자물가 귤", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^귤$"], unit: "2020=100", survey: 소비자물가조사}
       - {id: cfx_pers, title: "소비자물가 감", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^감$"], unit: "2020=100", survey: 소비자물가조사}
       - {id: cfx_wml, title: "소비자물가 수박", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전국$", "^수박$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_seo, title: "서울 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^서울특별시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_bus, title: "부산 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^부산광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_dgu, title: "대구 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^대구광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_ich, title: "인천 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^인천광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_gwj, title: "광주 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^광주광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_djn, title: "대전 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^대전광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_uls, title: "울산 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^울산광역시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_sej, title: "세종 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^세종특별자치시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_jgt, title: "전남광주통합 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전남광주통합특별시$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_gg, title: "경기 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경기도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_gw, title: "강원 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^강원(특별자치)?도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_cb, title: "충북 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^충청북도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_cn, title: "충남 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^충청남도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_jb, title: "전북 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전(라북도|북특별자치도)$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_jn, title: "전남 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전라남도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_gb, title: "경북 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상북도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_gn, title: "경남 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상남도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_f_jj, title: "제주 신선식품지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^제주(특별자치)?도$", "^신선식품$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_seo, title: "서울 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^서울특별시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_bus, title: "부산 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^부산광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_dgu, title: "대구 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^대구광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_ich, title: "인천 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^인천광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_gwj, title: "광주 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^광주광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_djn, title: "대전 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^대전광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_uls, title: "울산 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^울산광역시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_sej, title: "세종 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^세종특별자치시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_jgt, title: "전남광주통합 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전남광주통합특별시$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_gg, title: "경기 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경기도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_gw, title: "강원 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^강원(특별자치)?도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_cb, title: "충북 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^충청북도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_cn, title: "충남 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^충청남도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_jb, title: "전북 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전(라북도|북특별자치도)$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_jn, title: "전남 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^전라남도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_gb, title: "경북 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상북도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_gn, title: "경남 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^경상남도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
+      - {id: cfr_v_jj, title: "제주 신선채소지수", tbl: DT_1J22004, se: M, periods: 25, itm: "^소비자물가지수$", want: ["^제주(특별자치)?도$", "^신선채소$"], unit: "2020=100", survey: 소비자물가조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

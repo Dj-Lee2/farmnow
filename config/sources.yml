@@ -10187,6 +10187,38 @@ sources:
       - {id: raq_out_50, title: "경영주 50대 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
       - {id: raq_out_60, title: "경영주 60대 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
       - {id: raq_out_70, title: "경영주 70대 이상 — 10a당 위탁영농비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^위탁영농비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_rev_nat, title: "전국 평균 — 논벼 10a당 총수입", tbl: DT_1EC0017, itm: "^10a당$", want: ["^총수입$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_rev_40, title: "경영주 40대 — 논벼 10a당 총수입", tbl: DT_1EC0017, itm: "^10a당$", want: ["^총수입$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_rev_50, title: "경영주 50대 — 논벼 10a당 총수입", tbl: DT_1EC0017, itm: "^10a당$", want: ["^총수입$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_rev_60, title: "경영주 60대 — 논벼 10a당 총수입", tbl: DT_1EC0017, itm: "^10a당$", want: ["^총수입$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_rev_70, title: "경영주 70대 이상 — 논벼 10a당 총수입", tbl: DT_1EC0017, itm: "^10a당$", want: ["^총수입$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_cst_nat, title: "전국 평균 — 논벼 10a당 경영비", tbl: DT_1EC0017, itm: "^10a당$", want: ["^경영비$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_cst_40, title: "경영주 40대 — 논벼 10a당 경영비", tbl: DT_1EC0017, itm: "^10a당$", want: ["^경영비$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_cst_50, title: "경영주 50대 — 논벼 10a당 경영비", tbl: DT_1EC0017, itm: "^10a당$", want: ["^경영비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_cst_60, title: "경영주 60대 — 논벼 10a당 경영비", tbl: DT_1EC0017, itm: "^10a당$", want: ["^경영비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_cst_70, title: "경영주 70대 이상 — 논벼 10a당 경영비", tbl: DT_1EC0017, itm: "^10a당$", want: ["^경영비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_inc_nat, title: "전국 평균 — 논벼 10a당 소득", tbl: DT_1EC0017, itm: "^10a당$", want: ["^소득$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_inc_40, title: "경영주 40대 — 논벼 10a당 소득", tbl: DT_1EC0017, itm: "^10a당$", want: ["^소득$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_inc_50, title: "경영주 50대 — 논벼 10a당 소득", tbl: DT_1EC0017, itm: "^10a당$", want: ["^소득$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_inc_60, title: "경영주 60대 — 논벼 10a당 소득", tbl: DT_1EC0017, itm: "^10a당$", want: ["^소득$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_inc_70, title: "경영주 70대 이상 — 논벼 10a당 소득", tbl: DT_1EC0017, itm: "^10a당$", want: ["^소득$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_net_nat, title: "전국 평균 — 논벼 10a당 순수익", tbl: DT_1EC0017, itm: "^10a당$", want: ["^순수익$", "^전국평균$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_net_40, title: "경영주 40대 — 논벼 10a당 순수익", tbl: DT_1EC0017, itm: "^10a당$", want: ["^순수익$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_net_50, title: "경영주 50대 — 논벼 10a당 순수익", tbl: DT_1EC0017, itm: "^10a당$", want: ["^순수익$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_net_60, title: "경영주 60대 — 논벼 10a당 순수익", tbl: DT_1EC0017, itm: "^10a당$", want: ["^순수익$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agi_net_70, title: "경영주 70대 이상 — 논벼 10a당 순수익", tbl: DT_1EC0017, itm: "^10a당$", want: ["^순수익$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_frt_40, title: "경영주 40대 — 10a당 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^비료비$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_frt_50, title: "경영주 50대 — 10a당 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^비료비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_frt_60, title: "경영주 60대 — 10a당 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^비료비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_frt_70, title: "경영주 70대 이상 — 10a당 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^비료비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_org_40, title: "경영주 40대 — 10a당 유기질 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^유기질$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_org_50, title: "경영주 50대 — 10a당 유기질 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^유기질$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_org_60, title: "경영주 60대 — 10a당 유기질 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^유기질$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_org_70, title: "경영주 70대 이상 — 10a당 유기질 비료비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^유기질$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_pst_40, title: "경영주 40대 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^40대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_pst_50, title: "경영주 50대 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^50대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_pst_60, title: "경영주 60대 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^60대$"], unit: 원, survey: 농산물생산비조사}
+      - {id: agf_pst_70, title: "경영주 70대 이상 — 10a당 농약비", tbl: DT_1EC0015, itm: "^10a당$", want: ["^농약비$", "^70대이상$"], unit: 원, survey: 농산물생산비조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

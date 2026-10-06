@@ -9875,6 +9875,34 @@ sources:
       - {id: ecs_gb, title: "경북 친환경 농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^경상북도( 소계)?$", "^계$"], unit: 톤, survey: 친환경농산물인증현황}
       - {id: ecs_gn, title: "경남 친환경 농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^경상남도( 소계)?$", "^계$"], unit: 톤, survey: 친환경농산물인증현황}
       - {id: ecs_jj, title: "제주 친환경 농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: 톤, survey: 친환경농산물인증현황}
+      # 도별 유기농산물 출하량(DT_1YL20121)·도별 유기축산 농가·축산 인증 출하량(DT_1YL20131)
+      - {id: ezs_gg, title: "경기 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^경기도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_gw, title: "강원 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^강원(도|특별자치도)( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_cb, title: "충북 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^충청북도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_cn, title: "충남 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^충청남도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_jb, title: "전북 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^(전라북도|전북특별자치도)( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_jn, title: "전남 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^(전라남도|전남광주통합특별시)( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_gb, title: "경북 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^경상북도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_gn, title: "경남 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^경상남도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: ezs_jj, title: "제주 유기농산물 출하량", tbl: DT_1YL20121, periods: 6, itm: "^출하량$", want: ["^제주특별자치도( 소계)?$", "^유기농산물$"], unit: 톤, survey: 친환경농산물인증현황}
+      - {id: eao_gg, title: "경기 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^경기도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_gw, title: "강원 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^강원(도|특별자치도)( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_cb, title: "충북 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^충청북도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_cn, title: "충남 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^충청남도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_jb, title: "전북 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^(전라북도|전북특별자치도)( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_jn, title: "전남 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^(전라남도|전남광주통합특별시)( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_gb, title: "경북 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상북도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_gn, title: "경남 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^경상남도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eao_jj, title: "제주 유기축산 인증 농가", tbl: DT_1YL20131, itm: "^농가수$", want: ["^제주특별자치도( 소계)?$", "^유기축산물$"], unit: 호, survey: 친환경축산물인증현황}
+      - {id: eas_gg, title: "경기 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^경기도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_gw, title: "강원 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^강원(도|특별자치도)( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_cb, title: "충북 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^충청북도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_cn, title: "충남 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^충청남도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_jb, title: "전북 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^(전라북도|전북특별자치도)( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_jn, title: "전남 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^(전라남도|전남광주통합특별시)( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_gb, title: "경북 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^경상북도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_gn, title: "경남 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^경상남도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
+      - {id: eas_jj, title: "제주 친환경 축산물 출하량", tbl: DT_1YL20131, itm: "^출하량$", want: ["^제주특별자치도( 소계)?$", "^계$"], unit: 톤, survey: 친환경축산물인증현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

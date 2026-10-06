@@ -10922,6 +10922,43 @@ sources:
       - {id: cpl_up, title: "식용임산물 채취업 계획 — ①+②", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②$"], unit: "%", survey: 임업경영실태조사}
       - {id: cpl_down, title: "식용임산물 채취업 계획 — ③+④", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③\\+④$"], unit: "%", survey: 임업경영실태조사}
       - {id: cpl_avg, title: "식용임산물 채취업 계획 — 평균(4점)", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(4점\\)$"], unit: "점", survey: 임업경영실태조사}
+      - {id: fx_all, title: "최근 1년 전체 식품소비 지출이 늘었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전체 식품소비 지출$", "^(약간 증가|매우 증가)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fx_out, title: "최근 1년 외식 지출이 늘었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^외식 지출$", "^(약간 증가|매우 증가)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fx_dlv, title: "최근 1년 배달·테이크아웃 지출이 늘었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^배달 테이크아웃 지출$", "^(약간 증가|매우 증가)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fx_agri, title: "최근 1년 농수축산물 지출이 늘었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^농수축산물 지출$", "^(약간 증가|매우 증가)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fx_proc, title: "최근 1년 가공식품 지출이 늘었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가공식품 지출$", "^(약간 증가|매우 증가)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fx_alldn, title: "최근 1년 전체 식품소비 지출이 줄었다", tbl: DT_114053_006_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전체 식품소비 지출$", "^(매우 감소|약간 감소)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fxr_price, title: "식품 지출 변화 이유 — 식품 물가·가격 변화", tbl: DT_114053_007_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(가격 변화|식품 물가 변화)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fxr_inc, title: "식품 지출 변화 이유 — 가구 소득 변화", tbl: DT_114053_007_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가구의 소득 변화$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fxr_pat, title: "식품 지출 변화 이유 — 식생활 패턴·구성 변화", tbl: DT_114053_007_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(식생활 패턴 변화|식생활 구성 변화)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fxr_qual, title: "식품 지출 변화 이유 — 소비하는 품질 수준 변화", tbl: DT_114053_007_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(품질\\(맛 영양 안전\\) 변화|소비하는 품질수준 변화)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fxr_ext, title: "식품 지출 변화 이유 — 금리·에너지 등 식품 외 물가", tbl: DT_114053_007_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^금리 및 에너지 가격 등 식품 이외 물가 변화\\s*$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: opf_wk, title: "온라인 가공식품 구입 주기 주 1회 이상", tbl: DT_114053_010, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(매일 1회 이상|주 4~6회|주 2~3회|주 1회)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: opf_2w, title: "온라인 가공식품 구입 주기 2주일에 1회", tbl: DT_114053_010, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^2주일에 1회$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: opf_m1, title: "온라인 가공식품 구입 주기 1달에 1회", tbl: DT_114053_010, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^1달에 1회$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: opf_lt, title: "온라인 가공식품 구입 주기 월 1회 미만", tbl: DT_114053_010, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(월 1회 미만|그보다 드물게)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_div, title: "온라인으로 가공식품을 사는 이유 — 다양하고 특별한 식품", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^다양하고 특별한 식품을 구입할 수 있어서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_time, title: "온라인으로 가공식품을 사는 이유 — 시간 절약·시간 제약 없음", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 시간을 절약하고 시간의 제약을 받지 않아서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_price, title: "온라인으로 가공식품을 사는 이유 — 가격이 저렴", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격이 저렴하니까$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_qual, title: "온라인으로 가공식품을 사는 이유 — 품질이 좋아서", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^품질이 좋아서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_info, title: "온라인으로 가공식품을 사는 이유 — 상품정보 비교가 쉬워서", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^상품정보를 비교·확인하기 쉬워서\\s*$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_dlv, title: "온라인으로 가공식품을 사는 이유 — 배달해 주므로", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^배달해 주므로$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_ret, title: "온라인으로 가공식품을 사는 이유 — 반품이 쉬워서", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^반품하기 쉬워서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: onr_ntc, title: "온라인으로 가공식품을 사는 이유 — 비대면 구입", tbl: DT_114053_011_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^비대면 구입이 가능해서$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: osat_all, title: "온라인 구입 가공식품 만족도(5점) 전반적 만족도", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전반적 만족도$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: osat_price, title: "온라인 구입 가공식품 만족도(5점) 가격", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: osat_qual, title: "온라인 구입 가공식품 만족도(5점) 품질", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^품질$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: osat_dlv, title: "온라인 구입 가공식품 만족도(5점) 배송", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^\\s*배송$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: osat_ret, title: "온라인 구입 가공식품 만족도(5점) 교환·반품 서비스", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^교환·반품 서비스$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: osat_allok, title: "온라인 구입 가공식품 전반적으로 만족한다", tbl: DT_114053_014_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전반적 만족도$", "^(만족하는 편이다|매우 만족한다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_food, title: "온라인으로 식품을 사는 곳 — 온라인 식품 전문몰", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^온라인 식품 전문몰$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_eco, title: "온라인으로 식품을 사는 곳 — 친환경 전문점 온라인 매장", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^친환경 전문점 온라인 매장$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_local, title: "온라인으로 식품을 사는 곳 — 특산물 온라인 매장", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^특산물 온라인 매장$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_mart, title: "온라인으로 식품을 사는 곳 — 대형마트·백화점·홈쇼핑 온라인 매장", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^대형마트/백화점/\\s*홈쇼핑 온라인 매장$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_mall, title: "온라인으로 식품을 사는 곳 — 온라인 쇼핑몰", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^온라인 쇼핑몰$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_sns, title: "온라인으로 식품을 사는 곳 — SNS 구매", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^SNS 구매$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_abroad, title: "온라인으로 식품을 사는 곳 — 해외직구 사이트", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^해외직구 사이트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: owh_quick, title: "온라인으로 식품을 사는 곳 — 퀵커머스", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^퀵커머스$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

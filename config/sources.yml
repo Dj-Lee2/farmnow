@@ -11384,6 +11384,34 @@ sources:
       - {id: rk_yld_alpha, title: "쌀가루 제품별 평균 수율 알파미분", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^알파미분$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rk_yld_roast, title: "쌀가루 제품별 평균 수율 볶음미분", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^볶음미분$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rk_yld_mix, title: "쌀가루 제품별 평균 수율 프리믹스", tbl: DT_446001_A028, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^프리믹스$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: age_ly_tot, title: "산란계 월령별 마릿수 합계", tbl: DT_1EO415, se: Q, periods: 12, itm: "^산란계:합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_ly_u3, title: "산란계 월령별 마릿수 3개월 미만", tbl: DT_1EO415, se: Q, periods: 12, itm: "^산란계:3개월미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_ly_m36, title: "산란계 월령별 마릿수 3~6개월", tbl: DT_1EO415, se: Q, periods: 12, itm: "^산란계:3~6개월$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_ly_6p, title: "산란계 월령별 마릿수 6개월 이상", tbl: DT_1EO415, se: Q, periods: 12, itm: "^산란계:6개월이상$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_tot, title: "육용계 용도·월령별 마릿수 육용계 합계", tbl: DT_1EO414, se: Q, periods: 12, itm: "^육용계:합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_bro, title: "육용계 용도·월령별 마릿수 육계", tbl: DT_1EO414, se: Q, periods: 12, itm: "^육계:합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_sam, title: "육용계 용도·월령별 마릿수 삼계", tbl: DT_1EO414, se: Q, periods: 12, itm: "^삼계:합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_nat, title: "육용계 용도·월령별 마릿수 토종닭", tbl: DT_1EO414, se: Q, periods: 12, itm: "^토종닭:합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_bro_u1, title: "육용계 용도·월령별 마릿수 육계 1개월 미만", tbl: DT_1EO414, se: Q, periods: 12, itm: "^육계:1개월미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_br_nat_u70, title: "육용계 용도·월령별 마릿수 토종닭 70일 미만", tbl: DT_1EO414, se: Q, periods: 12, itm: "^토종닭:70일미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_tot, title: "돼지 월령별 마릿수 합계", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_u2, title: "돼지 월령별 마릿수 2개월 미만", tbl: DT_1EO312, se: Q, periods: 12, itm: "^2개월미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_m24, title: "돼지 월령별 마릿수 2~4개월", tbl: DT_1EO312, se: Q, periods: 12, itm: "^2~4개월$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_m46, title: "돼지 월령별 마릿수 4~6개월", tbl: DT_1EO312, se: Q, periods: 12, itm: "^4~6개월$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_m68, title: "돼지 월령별 마릿수 6~8개월", tbl: DT_1EO312, se: Q, periods: 12, itm: "^6~8개월:계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_8p, title: "돼지 월령별 마릿수 8개월 이상", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_pg_8p_f, title: "돼지 월령별 마릿수 8개월 이상 암컷", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_tot, title: "한우 연령·성별 마릿수 합계", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_u1, title: "한우 연령·성별 마릿수 1세 미만", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1세미만$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_m12, title: "한우 연령·성별 마릿수 1~2세", tbl: DT_1EO222, se: Q, periods: 12, itm: "^1~2세$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_2p, title: "한우 연령·성별 마릿수 2세 이상", tbl: DT_1EO222, se: Q, periods: 12, itm: "^2세이상$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_f, title: "한우 연령·성별 마릿수 암컷", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^전국$", "^암컷$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_m, title: "한우 연령·성별 마릿수 수컷", tbl: DT_1EO222, se: Q, periods: 12, itm: "^합계$", want: ["^전국$", "^수컷$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_hw_2p_f, title: "한우 연령·성별 마릿수 2세 이상 암컷", tbl: DT_1EO222, se: Q, periods: 12, itm: "^2세이상$", want: ["^전국$", "^암컷$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_dy_tot, title: "젖소 연령별 마릿수 합계", tbl: DT_1EO242, se: Q, periods: 12, itm: "^합계$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_dy_u1, title: "젖소 연령별 마릿수 1세 미만", tbl: DT_1EO242, se: Q, periods: 12, itm: "^1세미만$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_dy_m12, title: "젖소 연령별 마릿수 1~2세", tbl: DT_1EO242, se: Q, periods: 12, itm: "^1~2세$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
+      - {id: age_dy_2p, title: "젖소 연령별 마릿수 2세 이상", tbl: DT_1EO242, se: Q, periods: 12, itm: "^2세이상$", want: ["^전국$"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

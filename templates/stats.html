@@ -2032,7 +2032,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군', 296) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군·도별 유기 비중·친환경 농가·출하', 310) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -2046,6 +2046,23 @@
  <h3 class="sg-sub">도별 친환경 인증 면적 <small>유기+무농약</small></h3>
  <div class="sg-g">
   {{ hcard('도별 친환경 인증 면적', [('전남', K.ecr_jn), ('경기', K.ecr_gg), ('전북', K.ecr_jb), ('경남', K.ecr_gn), ('충남', K.ecr_cn), ('경북', K.ecr_gb), ('강원', K.ecr_gw), ('충북', K.ecr_cb), ('제주', K.ecr_jj)], 'ha', '괄호는 전국 인증 면적 중 비율 · 오른쪽은 전년 대비', K.eco_area.vals[-1] if K.eco_area else none, '#1c7a45') }}
+ </div>
+ <h3 class="sg-sub">유기 인증 비중과 도별 친환경 농가·출하 <small>친환경농산물인증현황 · 유기+무농약 · 비중은 도 인증 면적 중 유기 면적</small></h3>
+ <div class="sg-g">
+  {{ card('eco_cnt', 'ez1', ('유기 ' ~ K.eco_cnt_org.vals[-1]|big ~ '건 · 인증 1건에 여러 농가가 함께 들기도 함') if K.eco_cnt_org else none) }}
+  {{ card('eco_farms_org', 'ez2', ('유기 인증 농가 · 전체 인증 농가의 ' ~ '{:.1f}'.format(K.eco_farms_org.vals[-1] / K.eco_farms.vals[-1] * 100) ~ '%') if K.eco_farms and K.eco_farms.vals[-1] else '유기 인증 농가') }}
+  {{ card('eco_ship_org', 'ez3', ('유기농산물 출하 · 인증 농산물 출하량의 ' ~ '{:.1f}'.format(K.eco_ship_org.vals[-1] / K.eco_ship.vals[-1] * 100) ~ '%') if K.eco_ship and K.eco_ship.vals[-1] else none, '#3d7a2a') }}
+  {{ rcard('전남 유기 인증 비중', K.ecz_jn, K.ecr_jn, 'ez4', '전남 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_jn.vals[-1]|big if K.ecz_jn else '') ~ ' ha', '#1c7a45') }}
+  {{ rcard('전북 유기 인증 비중', K.ecz_jb, K.ecr_jb, 'ez5', '전북 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_jb.vals[-1]|big if K.ecz_jb else '') ~ ' ha', '#2f8f5b') }}
+  {{ rcard('충남 유기 인증 비중', K.ecz_cn, K.ecr_cn, 'ez6', '충남 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_cn.vals[-1]|big if K.ecz_cn else '') ~ ' ha', '#3d7a2a') }}
+  {{ rcard('경남 유기 인증 비중', K.ecz_gn, K.ecr_gn, 'ez7', '경남 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_gn.vals[-1]|big if K.ecz_gn else '') ~ ' ha', '#1f6f6a') }}
+  {{ rcard('강원 유기 인증 비중', K.ecz_gw, K.ecr_gw, 'ez8', '강원 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_gw.vals[-1]|big if K.ecz_gw else '') ~ ' ha', '#2a6f97') }}
+  {{ rcard('충북 유기 인증 비중', K.ecz_cb, K.ecr_cb, 'ez9', '충북 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_cb.vals[-1]|big if K.ecz_cb else '') ~ ' ha', '#4a7a3a') }}
+  {{ rcard('경북 유기 인증 비중', K.ecz_gb, K.ecr_gb, 'ez10', '경북 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_gb.vals[-1]|big if K.ecz_gb else '') ~ ' ha', '#6a7a2a') }}
+  {{ rcard('제주 유기 인증 비중', K.ecz_jj, K.ecr_jj, 'ez11', '제주 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_jj.vals[-1]|big if K.ecz_jj else '') ~ ' ha', '#1f5f8a') }}
+  {{ rcard('경기 유기 인증 비중', K.ecz_gg, K.ecr_gg, 'ez12', '경기 친환경 인증 면적 중 유기 · 유기 ' ~ (K.ecz_gg.vals[-1]|big if K.ecz_gg else '') ~ ' ha', '#5a6f3a') }}
+  {{ hcard('도별 친환경 인증 농가', [('전남', K.ecf_jn), ('경기', K.ecf_gg), ('경남', K.ecf_gn), ('충남', K.ecf_cn), ('전북', K.ecf_jb), ('경북', K.ecf_gb), ('충북', K.ecf_cb), ('강원', K.ecf_gw), ('제주', K.ecf_jj)], '호', '유기+무농약 · 괄호는 전국 인증 농가 중 비율 · 오른쪽은 전년 대비', K.eco_farms.vals[-1] if K.eco_farms else none, '#1c7a45') }}
+  {{ hcard('도별 친환경 농산물 출하량', [('전남', K.ecs_jn), ('경북', K.ecs_gb), ('경기', K.ecs_gg), ('경남', K.ecs_gn), ('충북', K.ecs_cb), ('충남', K.ecs_cn), ('제주', K.ecs_jj), ('전북', K.ecs_jb), ('강원', K.ecs_gw)], '톤', '유기+무농약 · 괄호는 전국 출하량 중 비율 · 오른쪽은 전년 대비', K.eco_ship.vals[-1] if K.eco_ship else none, '#3d7a2a') }}
  </div>
  <h3 class="sg-sub">친환경 축산 인증 — 유형·도별 <small>유기축산+무항생제 · 친환경축산물인증현황</small></h3>
  <div class="sg-g">

@@ -11311,6 +11311,40 @@ sources:
       - {id: fsyc_gb, title: "식품접객업체 허가취소·영업소폐쇄 경북", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상북도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsyc_gn, title: "식품접객업체 허가취소·영업소폐쇄 경남", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^경상남도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
       - {id: fsyc_jj, title: "식품접객업체 허가취소·영업소폐쇄 제주", tbl: DT_145012_A006, org: "145", periods: 3, itm: "^건수$", want: ["^제주(특별자치)?도$", "^허가취소 및 영업소폐쇄$"], unit: "건", survey: 식품의약품안전처 식품접객업체 현황}
+      - {id: rpf_firm, title: "쌀가루 생산업체 수(추정)", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^추정 사업체수$"], unit: "개", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_tot, title: "쌀가루 생산제품별 쌀 사용량 합계", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^합계$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_dry, title: "쌀가루 생산제품별 쌀 사용량 건식미분", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^건식미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_grit, title: "쌀가루 생산제품별 쌀 사용량 그릿츠", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^그릿츠$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_wet, title: "쌀가루 생산제품별 쌀 사용량 습식·반습식", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^습식/반습식$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_alpha, title: "쌀가루 생산제품별 쌀 사용량 알파미분", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^알파미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_roast, title: "쌀가루 생산제품별 쌀 사용량 볶음미분", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^볶음미분$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_etc, title: "쌀가루 생산제품별 쌀 사용량 기타", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^기타$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_use_mix, title: "쌀가루 생산제품별 쌀 사용량 프리믹스", tbl: DT_446001_A039, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^프리믹스$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_tot, title: "쌀가루 판매 용도별 쌀 사용량 합계", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^합계$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_liq, title: "쌀가루 판매 용도별 쌀 사용량 주류용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^주류용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_yeot, title: "쌀가루 판매 용도별 쌀 사용량 엿용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^엿용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_bake, title: "쌀가루 판매 용도별 쌀 사용량 제과·제빵용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^제과/제빵용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_tteok, title: "쌀가루 판매 용도별 쌀 사용량 떡용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^떡용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_noodle, title: "쌀가루 판매 용도별 쌀 사용량 면용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^면용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_jang, title: "쌀가루 판매 용도별 쌀 사용량 장류용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^장류용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_tea, title: "쌀가루 판매 용도별 쌀 사용량 다류용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^다류용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_sun, title: "쌀가루 판매 용도별 쌀 사용량 선식용", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^선식용$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_pur_etc, title: "쌀가루 판매 용도별 쌀 사용량 기타", tbl: DT_446001_A040, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^기타$"], unit: "톤", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_tot, title: "쌀가루 품목별 매출액 전체", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^전체$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_dry, title: "쌀가루 품목별 매출액 건식미분", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^건식미분$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_grit, title: "쌀가루 품목별 매출액 그릿츠", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^그릿츠$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_wet, title: "쌀가루 품목별 매출액 습식·반습식", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^습식/반습식$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_alpha, title: "쌀가루 품목별 매출액 알파미분", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^알파미분$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_roast, title: "쌀가루 품목별 매출액 볶음미분", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^볶음미분$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rpf_rev_mix, title: "쌀가루 품목별 매출액 프리믹스", tbl: DT_446001_A025, org: "466", periods: 2, itm: "^쌀가루 생산판매 현황$", want: ["^프리믹스$"], unit: "백만원", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_tot, title: "쌀가공식품 부문 종사자 수 전체", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^전체$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_u30, title: "쌀가공식품 부문 종사자 수 30세 미만", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^30세 미만$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_30s, title: "쌀가공식품 부문 종사자 수 30대", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^30대$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_40s, title: "쌀가공식품 부문 종사자 수 40대", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^40대$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_50s, title: "쌀가공식품 부문 종사자 수 50대", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^50대$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_60p, title: "쌀가공식품 부문 종사자 수 60대 이상", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^60대 이상$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_m, title: "쌀가공식품 부문 종사자 수 남성", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^남성$"], unit: "명", survey: 쌀가공식품산업 실태조사}
+      - {id: rce_f, title: "쌀가공식품 부문 종사자 수 여성", tbl: DT_446001_A011, org: "466", periods: 2, itm: "^종사자 수$", want: ["^여성$"], unit: "명", survey: 쌀가공식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -10820,6 +10820,32 @@ sources:
       - {id: gsr_env, title: "귀산촌 가구 전입 사유 — 주거환경", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^주거환경$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
       - {id: gsr_nat, title: "귀산촌 가구 전입 사유 — 자연환경", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^자연환경$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
       - {id: gsr_etc, title: "귀산촌 가구 전입 사유 — 기타", tbl: DT_1A02042, itm: "^가구수$", want: ["^전국$", "^기타$"], periods: 3, unit: 가구, survey: 귀농어귀촌인통계}
+      - {id: hreg_mush, title: "버섯재배업 임가 중 임업경영체 등록 비율", tbl: DT_136022_10097, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^등록했다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hreg_chest, title: "밤재배업 임가 중 임업경영체 등록 비율", tbl: DT_136022_9843, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^등록했다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hreg_etc, title: "기타임산물(산채·약초)재배업 임가 중 임업경영체 등록 비율", tbl: DT_136022_9943, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^등록했다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hreg_orn, title: "관상산림식물재배업 임가 중 임업경영체 등록 비율", tbl: DT_136022_9996, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^등록했다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcon_yes, title: "산채·약초 재배 임가 중 같은 작물을 이어 짓는(연작) 비율", tbl: DT_136022_9777, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_land, title: "산채·약초 연작 이유 — 재배지 부족", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배지 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_crop, title: "산채·약초 연작 이유 — 작물 특성상", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^작물 특성상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_alt, title: "산채·약초 연작 이유 — 대체 작물 부족", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^대체 작물 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_easy, title: "산채·약초 연작 이유 — 편한 재배", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^편한 재배$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_yield, title: "산채·약초 연작 이유 — 많은 생산량", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^많은 생산량$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hcr_inc, title: "산채·약초 연작 이유 — 높은 소득", tbl: DT_136022_9882, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^높은 소득$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hom_profit, title: "관상산림식물 재배 동기 — 높은 수익성", tbl: DT_136022_9988, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^높은 수익성$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hom_demand, title: "관상산림식물 재배 동기 — 높은 수요에 따른 판매 용이", tbl: DT_136022_9988, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^높은 수요에 따른 판매 용이$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hom_gov, title: "관상산림식물 재배 동기 — 정부 또는 지자체 권장", tbl: DT_136022_9988, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 또는 지자체 권장$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hom_noalt, title: "관상산림식물 재배 동기 — 마땅한 대체재가 없어서", tbl: DT_136022_9988, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^마땅한 대체재가 없어서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hom_skill, title: "관상산림식물 재배 동기 — 관련 경험과 기술이 있어서", tbl: DT_136022_9988, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^관련 경험과 기술이 있어서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_mgmt, title: "영림업 임가 산림 소유 동기 — 임업소득 등 산림경영", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임업소득 등 산림경영$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_inh, title: "영림업 임가 산림 소유 동기 — 유산 상속", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^유산 상속$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_grave, title: "영림업 임가 산림 소유 동기 — 묘지용", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^묘지용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_estate, title: "영림업 임가 산림 소유 동기 — 부동산 투자", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부동산 투자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_hobby, title: "영림업 임가 산림 소유 동기 — 취미 노후생활", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^취미 노후생활$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_etc, title: "영림업 임가 산림 소유 동기 — 기타", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfo_none, title: "영림업 임가 산림 소유 동기 — 없음", tbl: DT_136022_9889, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfm_self, title: "영림업 임가 산림관리 방식 — 직접관리", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직접관리$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfm_agent, title: "영림업 임가 산림관리 방식 — 위탁관리(관리인고용)", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^위탁관리\\(관리인고용\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfm_none, title: "영림업 임가 산림관리 방식 — 없음", tbl: DT_136022_9881, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없음$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

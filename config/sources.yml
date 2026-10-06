@@ -11524,6 +11524,30 @@ sources:
       - {id: ghp_hire, title: "식용 임산물 채취 임가가 채취·판매를 함께한 인력 — 고용인부와 함께", tbl: DT_136022_9743, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용인부와 함께$"], unit: "%", survey: 임업경영실태조사}
       - {id: gwg_m, title: "식용 임산물 채취 임가 고용노동 남성 1인당 하루평균노동비", tbl: DT_136022_9851, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동남성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
       - {id: gwg_w, title: "식용 임산물 채취 임가 고용노동 여성 1인당 하루평균노동비", tbl: DT_136022_9851, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동여성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
+      - {id: gfn_self, title: "식용 임산물 채취 임가의 생산비 조달 방법 — 자부담", tbl: DT_136022_9847, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gfn_gsub, title: "식용 임산물 채취 임가의 생산비 조달 방법 — 정부 보조", tbl: DT_136022_9847, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 보조$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gfn_bank, title: "식용 임산물 채취 임가의 생산비 조달 방법 — 금융기관 융자", tbl: DT_136022_9847, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^금융기관 융자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmf_full, title: "식용 임산물 채취 임가의 경영형태 — 전업", tbl: DT_136022_9706, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmf_main, title: "식용 임산물 채취 임가의 경영형태 — 주업", tbl: DT_136022_9706, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmf_side, title: "식용 임산물 채취 임가의 경영형태 — 부업", tbl: DT_136022_9706, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gpp_fern, title: "식용 임산물 채취 임가가 주로 판매한 가공품(1+2+3순위) — 건고사리", tbl: DT_136022_9732, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^건고사리$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gpp_chwi, title: "식용 임산물 채취 임가가 주로 판매한 가공품(1+2+3순위) — 건취나물", tbl: DT_136022_9732, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^건취나물$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gpp_etc, title: "식용 임산물 채취 임가가 주로 판매한 가공품(1+2+3순위) — 기타", tbl: DT_136022_9732, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: msw_yes, title: "원목표고 재배 임가의 톱밥배지 표고 재배 전향 의향 — 있다", tbl: DT_136022_9759, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: msw_yes_fac, title: "원목표고 재배 임가의 톱밥배지 표고 재배 전향 의향 — 있다(원목표고(시설))", tbl: DT_136022_9759, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mtf_cn, title: "톱밥배지 표고 재배 임가의 재배형태 — 중국식", tbl: DT_136022_9762, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중국식$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mtf_tw, title: "톱밥배지 표고 재배 임가의 재배형태 — 대만식", tbl: DT_136022_9762, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^대만식$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mtf_jp, title: "톱밥배지 표고 재배 임가의 재배형태 — 일본식", tbl: DT_136022_9762, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^일본식$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mbw_kg, title: "톱밥배지 표고 재배 임가의 톱밥배지 평균 중량", tbl: DT_136022_9767, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 평균 중량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: mbw_n, title: "톱밥배지 표고 재배 임가의 톱밥배지 수량", tbl: DT_136022_9767, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 수량$"], unit: "개", survey: 임업경영실태조사}
+      - {id: mmf_full, title: "버섯 재배 임가의 경영형태 — 전업", tbl: DT_136022_9719, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mmf_main, title: "버섯 재배 임가의 경영형태 — 주업", tbl: DT_136022_9719, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mmf_side, title: "버섯 재배 임가의 경영형태 — 부업", tbl: DT_136022_9719, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mjb_agri, title: "버섯 재배 겸업 임가의 주 업종 — 농업", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mjb_wage, title: "버섯 재배 겸업 임가의 주 업종 — 회사원 등 월급근로자", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^회사원 등 월급근로자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mjb_forest, title: "버섯 재배 겸업 임가의 주 업종 — 다른 임업분야 종사", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^다른 임업분야 종사$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mjb_self, title: "버섯 재배 겸업 임가의 주 업종 — 자영업 등 기타", tbl: DT_136022_9721, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자영업 등 기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mtr_avg, title: "원목표고 재배 임가의 평균 재배 그루수", tbl: DT_136022_9776, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "그루", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

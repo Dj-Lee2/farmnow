@@ -10897,6 +10897,31 @@ sources:
       - {id: obr_clim, title: "관상산림식물 재배업 전망이 나빠질 것으로 본 주된 이유 — 기후변화 등에 의한 생육부진", tbl: DT_136022_9981, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화 등에 의한 생육부진$"], unit: "%", survey: 임업경영실태조사}
       - {id: obr_pest, title: "관상산림식물 재배업 전망이 나빠질 것으로 본 주된 이유 — 병해충 등 자연재해 증가", tbl: DT_136022_9981, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병해충 등 자연재해 증가$"], unit: "%", survey: 임업경영실태조사}
       - {id: obr_mkt, title: "관상산림식물 재배업 전망이 나빠질 것으로 본 주된 이유 — 판로 부족", tbl: DT_136022_9981, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hld_rice, title: "산채·약초 재배지 지목 구성 — 논(답)", tbl: DT_136022_9765, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^논\\(답\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hld_field, title: "산채·약초 재배지 지목 구성 — 밭(전)", tbl: DT_136022_9765, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^밭\\(전\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hld_forest, title: "산채·약초 재배지 지목 구성 — 임야(임)", tbl: DT_136022_9765, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임야\\(임\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hhv_self, title: "산채·약용식물 수확 방법 — 직접 수확", tbl: DT_136022_9766, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직접 수확$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hhv_hire, title: "산채·약용식물 수확 방법 — 인부 고용", tbl: DT_136022_9766, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인부 고용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hhv_field, title: "산채·약용식물 수확 방법 — 포전 매매(밭떼기)", tbl: DT_136022_9766, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^포전 매매\\(밭떼기\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cle_none, title: "식용임산물 채취 지역 임차 여부 — 임차 없음", tbl: DT_136022_9854, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cle_free, title: "식용임산물 채취 지역 임차 여부 — 무상 임차", tbl: DT_136022_9854, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^무상 임차$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cle_paid, title: "식용임산물 채취 지역 임차 여부 — 유상으로 임차", tbl: DT_136022_9854, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^유상으로 임차$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cct_1, title: "식용임산물 채취지 임차 평균 계약기간 — 1년", tbl: DT_136022_9856, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cct_3, title: "식용임산물 채취지 임차 평균 계약기간 — 3년", tbl: DT_136022_9856, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^3년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cct_5, title: "식용임산물 채취지 임차 평균 계약기간 — 5년 이상", tbl: DT_136022_9856, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^5년 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_dem, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 수요감소(경기불황 등)", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소\\(경기불황 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_lab, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 노동력 부족", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_clim, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 기후변화 등에 의한 생육부진", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화 등에 의한 생육부진$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_pest, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 병해충 등 자연재해 증가", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병해충 등 자연재해 증가$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_comp, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 경쟁력 부족", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^경쟁력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cwr_mkt, title: "식용임산물 채취업 전망이 나빠질 것으로 본 주된 이유 — 판로 부족", tbl: DT_136022_9869, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_1, title: "식용임산물 채취업 계획 — ① 늘릴 것이다", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^① 늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_2, title: "식용임산물 채취업 계획 — ② 현 상태를 유지할 것이다", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^② 현 상태를 유지할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_3, title: "식용임산물 채취업 계획 — ③ 줄일 것이다", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 줄일 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_4, title: "식용임산물 채취업 계획 — ④ 중단할 것이다", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④ 중단할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_up, title: "식용임산물 채취업 계획 — ①+②", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_down, title: "식용임산물 채취업 계획 — ③+④", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③\\+④$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cpl_avg, title: "식용임산물 채취업 계획 — 평균(4점)", tbl: DT_136022_9871, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(4점\\)$"], unit: "점", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

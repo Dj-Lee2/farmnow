@@ -2997,7 +2997,7 @@
  </div>
  <h3 class="sg-sub">소비자 신선식품 물가 · 품목별 <small>월별 · 통계청 소비자물가조사 · 2020=100 · 장바구니 값과 농가 출하값 비교</small></h3>
  <div class="sg-g">
-  {{ card('cfx_all', 'cfx1', '신선 어개·채소·과실 · 신선식품 제외 ' ~ num(K.cfx_xfr.vals[-1], '2020=100')|striptags ~ ' · ' ~ (('1년 전보다 ' ~ '{:+.1f}'.format((K.cfx_all.vals[-1] / K.cfx_all.vals[-13] - 1) * 100) ~ '%') if K.cfx_all and K.cfx_all.vals|length > 12 and K.cfx_all.vals[-13] else '') if K.cfx_xfr else none, '#c77b30') }}
+  {{ card('cfx_all', 'cfx1', '신선 어개·채소·과실 · 신선식품 제외 ' ~ '{:.1f}'.format(K.cfx_xfr.vals[-1]) ~ ' · ' ~ (('1년 전보다 ' ~ '{:+.1f}'.format((K.cfx_all.vals[-1] / K.cfx_all.vals[-13] - 1) * 100) ~ '%') if K.cfx_all and K.cfx_all.vals|length > 12 and K.cfx_all.vals[-13] else '') if K.cfx_xfr else none, '#c77b30') }}
   {{ card('cfx_veg', 'cfx2', (('1년 전보다 ' ~ '{:+.1f}'.format((K.cfx_veg.vals[-1] / K.cfx_veg.vals[-13] - 1) * 100) ~ '%') if K.cfx_veg and K.cfx_veg.vals|length > 12 and K.cfx_veg.vals[-13] else none), '#1c7a45') }}
   {{ card('cfx_frt', 'cfx3', (('1년 전보다 ' ~ '{:+.1f}'.format((K.cfx_frt.vals[-1] / K.cfx_frt.vals[-13] - 1) * 100) ~ '%') if K.cfx_frt and K.cfx_frt.vals|length > 12 and K.cfx_frt.vals[-13] else none), '#d23a32') }}
   {{ qcard('배추 소비자물가 ÷ 생산자물가', K.cfx_cab, K.ppi_cab, 'cfx4', '두 지수 모두 2020=100 · 100보다 크면 2020년보다 장바구니 값이 농가 출하값보다 더 오름', 100, '%', '#1c7a45') }}

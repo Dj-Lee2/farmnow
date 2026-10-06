@@ -11152,6 +11152,35 @@ sources:
       - {id: fzdm_sum, title: "계절별 식중독 발생건수 여름(6~8월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(6월|7월|8월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
       - {id: fzdm_aut, title: "계절별 식중독 발생건수 가을(9~11월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(9월|10월|11월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
       - {id: fzdm_win, title: "계절별 식중독 발생건수 겨울(12~2월)", tbl: DT_145012_A008, org: "145", periods: 8, itm: "^건수$", want: ["^합계$", "^(12월|1월|2월)$"], sum: true, unit: "건", survey: 식품의약품안전처 식중독 통계}
+      - {id: ysd_bf, title: "청소년 주5일 이상 아침식사 결식률", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주5일 이상 아침식사 결식률$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_fruit, title: "청소년 1일 1회 이상 과일 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 1회 이상 과일 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_veg, title: "청소년 1일 3회 이상 채소 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 3회 이상 채소 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_milk, title: "청소년 1일 1회 이상 우유 및 유제품 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 1회 이상 우유 및 유제품 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_ff, title: "청소년 주3회 이상 패스트푸드 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 패스트푸드 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_sweet, title: "청소년 주3회 이상 단맛음료 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 단맛음료 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_caf, title: "청소년 주3회 이상 고카페인 음료 섭취율", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 고카페인 음료 섭취율$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_fruit_m, title: "청소년 1일 1회 이상 과일 섭취율 남학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 1회 이상 과일 섭취율$", "^남학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_fruit_f, title: "청소년 1일 1회 이상 과일 섭취율 여학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 1회 이상 과일 섭취율$", "^여학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_veg_m, title: "청소년 1일 3회 이상 채소 섭취율 남학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 3회 이상 채소 섭취율$", "^남학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_veg_f, title: "청소년 1일 3회 이상 채소 섭취율 여학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^1일 3회 이상 채소 섭취율$", "^여학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_ff_m, title: "청소년 주3회 이상 패스트푸드 섭취율 남학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 패스트푸드 섭취율$", "^남학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_ff_f, title: "청소년 주3회 이상 패스트푸드 섭취율 여학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 패스트푸드 섭취율$", "^여학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_sweet_m, title: "청소년 주3회 이상 단맛음료 섭취율 남학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 단맛음료 섭취율$", "^남학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: ysd_sweet_f, title: "청소년 주3회 이상 단맛음료 섭취율 여학생", tbl: DT_117109_005, org: "177", periods: 7, itm: "^백분율$", want: ["^주3회 이상 단맛음료 섭취율$", "^여학생$"], unit: "%", survey: 청소년건강패널조사}
+      - {id: yhb_ff_mid, title: "중학교 주3회 이상 패스트푸드 섭취율", tbl: DT_117_12_Y047, org: "177", periods: 10, itm: "^섭취율$", want: ["^중학교$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: yhb_ff_high, title: "고등학교 주3회 이상 패스트푸드 섭취율", tbl: DT_117_12_Y047, org: "177", periods: 10, itm: "^섭취율$", want: ["^고등학교$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: yhb_bf_mid, title: "중학교 주5일 이상 아침식사 결식률", tbl: DT_117_12_Y040, org: "177", periods: 10, itm: "^결식률$", want: ["^중학교$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: yhb_bf_high, title: "고등학교 주5일 이상 아침식사 결식률", tbl: DT_117_12_Y040, org: "177", periods: 10, itm: "^결식률$", want: ["^고등학교$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: yhb_bf_m, title: "청소년 주5일 이상 아침식사 결식률 남학생", tbl: DT_117_12_Y040, org: "177", periods: 10, itm: "^결식률$", want: ["^남학생$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: yhb_bf_f, title: "청소년 주5일 이상 아침식사 결식률 여학생", tbl: DT_117_12_Y040, org: "177", periods: 10, itm: "^결식률$", want: ["^여학생$"], unit: "%", survey: 청소년건강행태조사}
+      - {id: keo_all, title: "하루 1회 이상 외식률 1세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_20s, title: "하루 1회 이상 외식률 19-29세", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^19-29세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_30s, title: "하루 1회 이상 외식률 30-39세", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^30-39세$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_65, title: "하루 1회 이상 외식률 65세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^65세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_urban, title: "하루 1회 이상 외식률 동", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^동$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_rural, title: "하루 1회 이상 외식률 읍면", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^전체$", "^읍면$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_m, title: "하루 1회 이상 외식률 남자 1세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^남자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
+      - {id: keo_f, title: "하루 1회 이상 외식률 여자 1세이상", tbl: DT_11702_N043, org: "177", periods: 10, itm: "^분율$", want: ["^여자$", "^1세이상$"], unit: "%", survey: 국민건강영양조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

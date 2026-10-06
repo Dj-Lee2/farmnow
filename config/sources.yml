@@ -10959,6 +10959,43 @@ sources:
       - {id: owh_sns, title: "온라인으로 식품을 사는 곳 — SNS 구매", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^SNS 구매$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: owh_abroad, title: "온라인으로 식품을 사는 곳 — 해외직구 사이트", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^해외직구 사이트$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: owh_quick, title: "온라인으로 식품을 사는 곳 — 퀵커머스", tbl: DT_114053_120_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^퀵커머스$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: shtr_walk, title: "일상형 산림휴양 교통수단 도보", tbl: DT_136037_B3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^도보$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shtr_bike, title: "일상형 산림휴양 교통수단 자전거", tbl: DT_136037_B3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^자전거$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shtr_car, title: "일상형 산림휴양 교통수단 자가용", tbl: DT_136037_B3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^자가용$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shtr_bus, title: "일상형 산림휴양 교통수단 대중교통", tbl: DT_136037_B3, org: "136", periods: 3, itm: ".", want: ["^전체$", "^대중교통$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbp_health, title: "일상형 산림휴양 목적 건강 증진", tbl: DT_136037_B6, org: "136", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbp_rest, title: "일상형 산림휴양 목적 휴양·휴식", tbl: DT_136037_B6, org: "136", periods: 3, itm: ".", want: ["^전체$", "^휴양"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbp_hobby, title: "일상형 산림휴양 목적 취미·레포츠", tbl: DT_136037_B6, org: "136", periods: 3, itm: ".", want: ["^전체$", "^취미"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbp_friend, title: "일상형 산림휴양 목적 친목", tbl: DT_136037_B6, org: "136", periods: 3, itm: ".", want: ["^전체$", "^친목"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbp_cure, title: "일상형 산림휴양 목적 질병 치유", tbl: DT_136037_B6, org: "136", periods: 3, itm: ".", want: ["^전체$", "^질병"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbs_mid, title: "일상형 산림휴양 만족도 보통(4~6점)", tbl: DT_136037_B8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^보통\\("], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbs_good, title: "일상형 산림휴양 만족도 만족(7~10점)", tbl: DT_136037_B8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^만족\\("], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shbs_avg, title: "일상형 산림휴양 만족도 평균 점수(10점 만점)", tbl: DT_136037_B8, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_view, title: "당일형 산림휴양 지역 선택 이유 수려한 자연경관", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^수려한"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_move, title: "당일형 산림휴양 지역 선택 이유 이동·교통 편의", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^이동"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_fun, title: "당일형 산림휴양 지역 선택 이유 볼거리·즐길거리·먹거리", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^다양한"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_fac, title: "당일형 산림휴양 지역 선택 이유 시설 편리성·쾌적성", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^시설의"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_cheap, title: "당일형 산림휴양 지역 선택 이유 저렴한 경비", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^저렴한"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcr_link, title: "당일형 산림휴양 지역 선택 이유 주변 관광지 연계", tbl: DT_136037_C4, org: "136", periods: 3, itm: ".", want: ["^전체$", "^주변"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_1, title: "당일형 산림휴양 연간 방문 1회", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^1회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_2, title: "당일형 산림휴양 연간 방문 2회", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^2회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_3, title: "당일형 산림휴양 연간 방문 3회", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^3회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_4, title: "당일형 산림휴양 연간 방문 4회", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^4회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_5, title: "당일형 산림휴양 연간 방문 5회 이상", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^5회 이상$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcn_avg, title: "당일형 산림휴양 연간 방문 연평균 횟수", tbl: DT_136037_C5, org: "136", periods: 3, itm: ".", want: ["^전체$", "^연평균$"], unit: "회", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcs_mid, title: "당일형 산림휴양 만족도 보통(4~6점)", tbl: DT_136037_C9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^보통\\("], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcs_good, title: "당일형 산림휴양 만족도 만족(7~10점)", tbl: DT_136037_C9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^만족\\("], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shcs_avg, title: "당일형 산림휴양 만족도 평균 점수(10점 만점)", tbl: DT_136037_C9, org: "136", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsd_1, title: "숙박형 산림휴양 숙박 일정 1박 2일", tbl: DT_136037_D13, org: "136", periods: 3, itm: ".", want: ["^전체$", "^1박 2일$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsd_2, title: "숙박형 산림휴양 숙박 일정 2박 3일", tbl: DT_136037_D13, org: "136", periods: 3, itm: ".", want: ["^전체$", "^2박 3일$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsd_3, title: "숙박형 산림휴양 숙박 일정 3박 4일", tbl: DT_136037_D13, org: "136", periods: 3, itm: ".", want: ["^전체$", "^3박 4일$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsd_4, title: "숙박형 산림휴양 숙박 일정 4박 5일 이상", tbl: DT_136037_D13, org: "136", periods: 3, itm: ".", want: ["^전체$", "^4박 5일 이상$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_1, title: "숙박형 산림휴양 연간 숙박 1회", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^1회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_2, title: "숙박형 산림휴양 연간 숙박 2회", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^2회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_3, title: "숙박형 산림휴양 연간 숙박 3회", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^3회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_4, title: "숙박형 산림휴양 연간 숙박 4회", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^4회$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_5, title: "숙박형 산림휴양 연간 숙박 5회 이상", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^5회 이상$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shsc_avg, title: "숙박형 산림휴양 연간 숙박 연평균 횟수", tbl: DT_136037_D14, org: "136", periods: 3, itm: ".", want: ["^전체$", "^연평균$"], unit: "회", survey: 국민 산림휴양·복지활동 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

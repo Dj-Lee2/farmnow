@@ -11474,6 +11474,26 @@ sources:
       - {id: smw_gn, title: "시도별 돼지 8개월 이상 암컷 마릿수 경남", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^(경상남도|경남)"], unit: 마리, survey: 가축동향조사}
       - {id: psd_jj, title: "시도별 돼지 마릿수 제주", tbl: DT_1EO312, se: Q, periods: 12, itm: "^합계$", want: ["^제주"], unit: 마리, survey: 가축동향조사}
       - {id: smw_jj, title: "시도별 돼지 8개월 이상 암컷 마릿수 제주", tbl: DT_1EO312, se: Q, periods: 12, itm: "^8개월이상:암컷$", want: ["^제주"], unit: 마리, survey: 가축동향조사}
+      - {id: mup_up, title: "버섯 재배 임가의 재배계획 — 늘릴 것", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_keep, title: "버섯 재배 임가의 재배계획 — 현 상태 유지", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현 상태를 유지할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_down, title: "버섯 재배 임가의 재배계획 — 줄일 것", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄일 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_stop, title: "버섯 재배 임가의 재배계획 — 중단할 것", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중단할 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_up_saw, title: "버섯 재배 임가의 재배계획 — 늘릴 것(톱밥배지 표고)", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_up_log, title: "버섯 재배 임가의 재배계획 — 늘릴 것(원목표고(노지))", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mup_up_fac, title: "버섯 재배 임가의 재배계획 — 늘릴 것(원목표고(시설))", tbl: DT_136022_10069, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^늘릴 것이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mlb_wm, title: "버섯 재배 임가 고용노동 남성 1인당 하루평균노동비", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동남성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
+      - {id: mlb_ww, title: "버섯 재배 임가 고용노동 여성 1인당 하루평균노동비", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동여성 1인당 하루평균노동비$"], unit: "천원", survey: 임업경영실태조사}
+      - {id: mlb_nm, title: "버섯 재배 임가 고용노동 남성 총인원수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동남성 총인원수$"], unit: "명", survey: 임업경영실태조사}
+      - {id: mlb_nw, title: "버섯 재배 임가 고용노동 여성 총인원수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동여성 총인원수$"], unit: "명", survey: 임업경영실태조사}
+      - {id: mlb_dm, title: "버섯 재배 임가 고용노동 남성 1인당 평균작업일수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동남성 1인당 평균작업일수$"], unit: "일", survey: 임업경영실태조사}
+      - {id: mlb_dw, title: "버섯 재배 임가 고용노동 여성 1인당 평균작업일수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^고용노동여성 1인당 평균작업일수$"], unit: "일", survey: 임업경영실태조사}
+      - {id: mlb_sm, title: "버섯 재배 임가 자가노동 남성 1인당 평균작업일수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자가노동남성 1인당 평균작업일수$"], unit: "일", survey: 임업경영실태조사}
+      - {id: mlb_sw, title: "버섯 재배 임가 자가노동 여성 1인당 평균작업일수", tbl: DT_136022_9964, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자가노동여성 1인당 평균작업일수$"], unit: "일", survey: 임업경영실태조사}
+      - {id: mwd_none, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 없음", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwd_neung, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 능이버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^능이버섯$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwd_ssari, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 싸리버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^싸리버섯$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwd_sang, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 상황버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^상황버섯$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mwd_mok, title: "식용임산물 채취 임가가 송이 말고 채취한 버섯 — 목이버섯", tbl: DT_136022_9738, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^목이버섯$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

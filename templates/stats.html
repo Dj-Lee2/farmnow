@@ -5154,7 +5154,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨·축종별 전업·경영주 나이·판매 규모별 사육 농가·가축 월령·연령 구조·종계·오리 월령과 지역·시도별 한우 송아지·모돈 비중·말산업 승마시설·방목지·보험·사육부지·자격증·안전사고·마사·마장 면적·퇴비보관시설·비연관 겸업·임시 마사·연관 겸업·말 미보유 운영업종', 373) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨·축종별 전업·경영주 나이·판매 규모별 사육 농가·가축 월령·연령 구조·종계·오리 월령과 지역·시도별 한우 송아지·모돈 비중·말산업 승마시설·방목지·보험·사육부지·자격증·안전사고·마사·마장 면적·퇴비보관시설·비연관 겸업·임시 마사·연관 겸업·말 미보유 운영업종·반려동물 양육률·종류·양육비·사체 처리', 382) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -5552,6 +5552,18 @@
   {{ hcard('나라별 소 사육 두수', [('브라질', K.wcat_br), ('인도', K.wcat_in), ('미국', K.wcat_us), ('중국', K.wcat_cn), ('오스트레일리아', K.wcat_au), ('프랑스', K.wcat_fr), ('뉴질랜드', K.wcat_nz), ('대한민국', K.wcat_kr), ('일본', K.wcat_jp)], '마리', '괄호는 세계 중 비중 · 오른쪽은 전년 대비', K.wcat_wd.vals[-1] if K.wcat_wd else none, '#7a5c3a') }}
   {{ hcard('나라별 돼지 사육 두수', [('중국', K.wpig_cn), ('미국', K.wpig_us), ('스페인', K.wpig_es), ('베트남', K.wpig_vn), ('독일', K.wpig_de), ('덴마크', K.wpig_dk), ('대한민국', K.wpig_kr), ('일본', K.wpig_jp)], '마리', '괄호는 세계 중 비중 · 오른쪽은 전년 대비', K.wpig_wd.vals[-1] if K.wpig_wd else none, '#c77b30') }}
   {{ hcard('나라별 닭 사육 두수', [('중국', K.wchk_cn), ('인도네시아', K.wchk_id), ('브라질', K.wchk_br), ('미국', K.wchk_us), ('인도', K.wchk_in), ('일본', K.wchk_jp), ('대한민국', K.wchk_kr)], '천마리', '괄호는 세계 중 비중 · 오른쪽은 전년 대비', K.wchk_wd.vals[-1] if K.wchk_wd else none, '#b04a07') }}
+</div>
+<h3 class="sg-sub">반려동물 — 양육률·종류·양육비·사체 처리 <small>농림축산식품부 반려동물 양육 실태조사(2025) · 전국 3,000가구 응답 기준 · 종류는 복수응답</small></h3>
+ <div class="sg-g">
+  {{ card('pet_own', 'pet1', ('도시지역 ' ~ num(K.pet_urb.vals[-1], '%')|striptags ~ ' · 농어촌(읍면) ' ~ num(K.pet_rur.vals[-1], '%')|striptags ~ ' · 과거에 길러 본 가구 ' ~ num(K.pet_past.vals[-1], '%')|striptags) if K.pet_urb and K.pet_rur and K.pet_past else none, '#c77b30') }}
+  {{ card('ptx_tot', 'pet2', ('반려견 ' ~ num(K.ptx_dog.vals[-1], '원')|striptags ~ ' · 반려묘 ' ~ num(K.ptx_cat.vals[-1], '원')|striptags ~ ' · 농어촌 ' ~ num(K.ptx_rur.vals[-1], '원')|striptags) if K.ptx_dog and K.ptx_cat and K.ptx_rur else none, '#1c7a45') }}
+  {{ card('ptx_illy', 'pet3', ('마리당 월평균 ' ~ num(K.ptx_ill.vals[-1], '원')|striptags ~ ' · 사고·상해·질병 치료비') if K.ptx_ill else none, '#b0503a') }}
+  {{ card('pet_reg', 'pet4', ('반려견 기르는 가구 기준 · 실내에서 기른다 ' ~ num(K.pet_indoor.vals[-1], '%')|striptags) if K.pet_indoor else none, '#2f8fa3') }}
+  {{ card('pet_dneut', 'pet5', ('반려묘 중성화 ' ~ num(K.pet_cneut.vals[-1], '%')|striptags) if K.pet_cneut else none, '#7a5cc2') }}
+  {{ card('pet_small', 'pet6', ('중형견 ' ~ num(K.pet_mid.vals[-1], '%')|striptags ~ ' · 대형견 ' ~ num(K.pet_big.vals[-1], '%')|striptags) if K.pet_mid and K.pet_big else none, '#7a6a3a') }}
+  {{ hcard('기르는 반려동물 종류', [('개', K.ptk_dog), ('고양이', K.ptk_cat), ('어류', K.ptk_fish), ('설치류·포유류', K.ptk_rod), ('조류', K.ptk_bird), ('파충류', K.ptk_rep)], '%', '반려동물 기르는 가구 기준 · 복수응답', none, '#c77b30') }}
+  {{ hcard('반려동물 월평균 양육비 구성', [('사료·간식비', K.ptx_feed), ('병원비', K.ptx_vet), ('미용·위생관리비', K.ptx_groom), ('용품 구매비', K.ptx_goods), ('위탁·돌봄서비스', K.ptx_care)], '원', '반려동물 기르는 가구의 한 달 평균 · 항목 합 = 월평균 양육비', none, '#1c7a45') }}
+  {{ hcard('반려동물이 죽었을 때 처리 방법', [('직접 땅에 묻음', K.ptd_bury), ('동물장묘업체 이용', K.ptd_crem), ('동물병원 위탁', K.ptd_vet), ('종량제 봉투 배출', K.ptd_bag)], '%', '반려동물 죽음을 겪은 가구 기준 · 나머지는 기타', none, '#7a6a3a') }}
  </div></details>
 
  <script>(()=>{const g=[...document.querySelectorAll('.sg-grp')],b=document.getElementById('sgAll');if(!b)return;

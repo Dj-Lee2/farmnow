@@ -13581,6 +13581,39 @@ sources:
       - {id: aqh_norif, title: "양식업 장비 보유율 · 김발 뒤집기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^김발 뒤집기$"], unit: "%", survey: 양식업 기계화 실태조사}
       - {id: aqh_harv, title: "양식업 장비 보유율 · 수확기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^수확기$"], unit: "%", survey: 양식업 기계화 실태조사}
       - {id: aqh_wash, title: "양식업 장비 보유율 · 자동 세척기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^자동 세척기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: pet_n, title: "반려동물 조사 대상 가구", tbl: DT_114063_001, org: "114", periods: 3, itm: "^사례수$", want: ["^전체$"], unit: 가구, survey: 반려동물 양육 실태조사}
+      - {id: pet_own, title: "현재 반려동물을 기르는 가구", tbl: DT_114063_001, org: "114", periods: 3, itm: "^현재 거주지에서 양육하고 있다$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_urb, title: "도시지역 반려동물 양육 가구", tbl: DT_114063_001, org: "114", periods: 3, itm: "^현재 거주지에서 양육하고 있다$", want: ["^도시지역$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_rur, title: "농어촌(읍면) 반려동물 양육 가구", tbl: DT_114063_001, org: "114", periods: 3, itm: "^현재 거주지에서 양육하고 있다$", want: ["^농어촌 지역"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_past, title: "과거 반려동물 양육 경험", tbl: DT_114063_002, org: "114", periods: 3, itm: "^반려동물 양육경험 있음$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_dog, title: "기르는 반려동물 종류 · 개", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^개$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_cat, title: "기르는 반려동물 종류 · 고양이", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^고양이$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_fish, title: "기르는 반려동물 종류 · 어류", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^어류$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_rod, title: "기르는 반려동물 종류 · 설치류·포유류", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^설치류/포유류$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_bird, title: "기르는 반려동물 종류 · 조류", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^조류$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptk_rep, title: "기르는 반려동물 종류 · 파충류", tbl: DT_114063_006, org: "114", periods: 3, itm: "^반려동물 종류별$", want: ["^전체$", "^파충류$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptd_bury, title: "반려동물 사체 처리 · 직접 땅에 묻음", tbl: DT_114063_004, org: "114", periods: 3, itm: "^사체 처리방법$", want: ["^전체$", "^직접 땅에 묻음$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptd_crem, title: "반려동물 사체 처리 · 동물장묘업체를 이용", tbl: DT_114063_004, org: "114", periods: 3, itm: "^사체 처리방법$", want: ["^전체$", "^동물장묘업체를 이용$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptd_vet, title: "반려동물 사체 처리 · 동물병원에 위탁처리", tbl: DT_114063_004, org: "114", periods: 3, itm: "^사체 처리방법$", want: ["^전체$", "^동물병원에 위탁처리$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptd_bag, title: "반려동물 사체 처리 · 종량제 봉투에 담아 배출", tbl: DT_114063_004, org: "114", periods: 3, itm: "^사체 처리방법$", want: ["^전체$", "^종량제 봉투에 담아 배출$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_dneut, title: "반려견 중성화 수술", tbl: DT_114063_012, org: "114", periods: 3, itm: "^수술$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_cneut, title: "반려묘 중성화 수술", tbl: DT_114063_018, org: "114", periods: 3, itm: "^수술$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_indoor, title: "반려견 실내 양육", tbl: DT_114063_013, org: "114", periods: 3, itm: "^실내$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_reg, title: "반려견 동물등록 완료", tbl: DT_114063_015, org: "114", periods: 3, itm: "^등록했다$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_small, title: "성견 시 반려견 체급 · 소형견", tbl: DT_114063_014, org: "114", periods: 3, itm: "^소형견$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_mid, title: "성견 시 반려견 체급 · 중형견", tbl: DT_114063_014, org: "114", periods: 3, itm: "^중형견$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_big, title: "성견 시 반려견 체급 · 대형견", tbl: DT_114063_014, org: "114", periods: 3, itm: "^대형견$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptx_feed, title: "반려동물 월평균 양육비 · 사료 및 간식비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^사료 및 간식비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_groom, title: "반려동물 월평균 양육비 · 미용 및 위생관리비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^미용 및 위생관리비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_goods, title: "반려동물 월평균 양육비 · 용품 구매비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^용품 구매비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_care, title: "반려동물 월평균 양육비 · 위탁·돌봄서비스 이용비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^위탁·돌봄서비스 이용비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_vet, title: "반려동물 월평균 양육비 · 병원비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^병원비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_tot, title: "반려동물 월평균 양육비 · 월평균양육비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^월평균양육비"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_dog, title: "반려견 월평균 양육비", tbl: DT_114063_020, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^월평균양육비$"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_cat, title: "반려묘 월평균 양육비", tbl: DT_114063_021, org: "114", periods: 3, itm: "^양육비용별$", want: ["^전체$", "^월평균양육비$"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_rur, title: "농어촌 반려동물 월평균 양육비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^농어촌 지역", "^월평균양육비$"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_ill, title: "반려동물 마리당 월평균 사고·질병 비용", tbl: DT_114063_022, org: "114", periods: 3, itm: "^사고상해질병비용$", want: ["^전체$", "^마리당 월평균$"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: ptx_illy, title: "가구당 연평균 사고·질병 비용", tbl: DT_114063_022, org: "114", periods: 3, itm: "^사고상해질병비용$", want: ["^전체$", "^가구당 연평균$"], unit: 원, survey: 반려동물 양육 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -13108,6 +13108,28 @@ sources:
       - {id: hnd_far, title: "말산업 향후 필요 인력 — 장제사", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^장제사$"], unit: "명", survey: 말산업실태조사}
       - {id: hnd_coach, title: "말산업 향후 필요 인력 — 승마교관", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^승마교관$"], unit: "명", survey: 말산업실태조사}
       - {id: hnd_off, title: "말산업 향후 필요 인력 — 사무직·기술직", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^사무직/기술직$"], unit: "명", survey: 말산업실태조사}
+      - {id: mxs_nh, title: "버섯 재배 임가의 주요 판매처 비율 — 농협", tbl: DT_136022_9893, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농협$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxs_sj, title: "버섯 재배 임가의 주요 판매처 비율 — 산림조합", tbl: DT_136022_9893, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxs_col, title: "버섯 재배 임가의 주요 판매처 비율 — 수집상", tbl: DT_136022_9893, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxs_ws, title: "버섯 재배 임가의 주요 판매처 비율 — 도소매상", tbl: DT_136022_9893, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^도소매상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxs_dir, title: "버섯 재배 임가의 주요 판매처 비율 — 직거래", tbl: DT_136022_9893, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직거래$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxy_avg, title: "버섯 재배 임가의 평균 종사기간", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 년, survey: 임업경영실태조사}
+      - {id: mxy_u10, title: "버섯 재배 임가의 종사기간 — 10년 미만", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^10년 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxy_10, title: "버섯 재배 임가의 종사기간 — 10~19년", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^10~19년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxy_20, title: "버섯 재배 임가의 종사기간 — 20~29년", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^20~29년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxy_30, title: "버섯 재배 임가의 종사기간 — 30~39년", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^30~39년$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mxy_40, title: "버섯 재배 임가의 종사기간 — 40년 이상", tbl: DT_136022_9736, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^40년 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxi_avg, title: "조경수 재배 임가의 조경수 재배업 총수입 평균", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: oxi_b1, title: "조경수 재배업 총수입 구간별 임가 비율 — 2천만원 미만", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxi_b2, title: "조경수 재배업 총수입 구간별 임가 비율 — 2천~4천만원", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천~4천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxi_b3, title: "조경수 재배업 총수입 구간별 임가 비율 — 4천~6천만원", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^4천~6천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxi_b4, title: "조경수 재배업 총수입 구간별 임가 비율 — 6천~8천만원", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^6천~8천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxi_b6, title: "조경수 재배업 총수입 구간별 임가 비율 — 1억원 이상", tbl: DT_136022_9850, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1억원 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxc_plan, title: "조경수 컨테이너 재배 — 재배할 계획이 있다", tbl: DT_136022_9769, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배할 계획이 있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxc_no, title: "조경수 컨테이너 재배 — 재배하지 않고 계획도 없다", tbl: DT_136022_9769, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배하지 않고"], unit: "%", survey: 임업경영실태조사}
+      - {id: oxa_tot, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 재배지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배지$"], unit: ㎡, survey: 임업경영실태조사}
+      - {id: oxa_own, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 소유지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^소유지$"], unit: ㎡, survey: 임업경영실태조사}
+      - {id: oxa_rent, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 임차지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차지$"], unit: ㎡, survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

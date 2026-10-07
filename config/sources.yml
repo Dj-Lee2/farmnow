@@ -13130,6 +13130,40 @@ sources:
       - {id: oxa_tot, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 재배지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배지$"], unit: ㎡, survey: 임업경영실태조사}
       - {id: oxa_own, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 소유지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^소유지$"], unit: ㎡, survey: 임업경영실태조사}
       - {id: oxa_rent, title: "관상산림식물 재배 임가의 평균 재배지 면적 — 임차지", tbl: DT_136022_9729, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차지$"], unit: ㎡, survey: 임업경영실태조사}
+      - {id: ylo_good, title: "영림·목재수확 임가가 보는 영림업·목재수확업 전망 — 좋아질 것(매우+다소)", tbl: DT_136022_10060, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylo_same, title: "영림·목재수확 임가가 보는 영림업·목재수확업 전망 — 현 상태 유지", tbl: DT_136022_10060, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylo_bad, title: "영림·목재수확 임가가 보는 영림업·목재수확업 전망 — 나빠질 것(다소+매우)", tbl: DT_136022_10060, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④\\+⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylo_sc, title: "영림업·목재수확업 전망 점수(100점 만점)", tbl: DT_136022_10060, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(100점\\)$"], unit: 점, survey: 임업경영실태조사}
+      - {id: ylp_inc, title: "영림·목재수확 임가의 앞으로 사업 계획 — 늘릴 것", tbl: DT_136022_10063, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^① 늘릴"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylp_keep, title: "영림·목재수확 임가의 앞으로 사업 계획 — 현 상태 유지", tbl: DT_136022_10063, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^② 현 상태"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylp_dec, title: "영림·목재수확 임가의 앞으로 사업 계획 — 줄일 것", tbl: DT_136022_10063, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 줄일"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylp_stop, title: "영림·목재수확 임가의 앞으로 사업 계획 — 중단할 것", tbl: DT_136022_10063, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④ 중단"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_mkt, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 판로 부족", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_dem, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 수요 감소(경기불황 등)", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_lab, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 노동력 부족", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_pol, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 정부·지자체 지원 축소", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 및 지자체 지원 축소$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_clim, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 기후변화 등에 의한 생육부진", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_pest, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 병해충 등 자연재해 증가", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병해충"], unit: "%", survey: 임업경영실태조사}
+      - {id: ywb_comp, title: "영림업·목재수확업 전망이 나빠질 주된 이유 — 경쟁력 부족", tbl: DT_136022_10062, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^경쟁력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylf_self, title: "영림·목재수확 임가의 생산비 조달 방법 — 자부담", tbl: DT_136022_10014, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylf_sub, title: "영림·목재수확 임가의 생산비 조달 방법 — 정부 보조", tbl: DT_136022_10014, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 보조$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylf_bloan, title: "영림·목재수확 임가의 생산비 조달 방법 — 금융기관 융자", tbl: DT_136022_10014, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^금융기관 융자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylf_adv, title: "영림·목재수확 임가의 생산비 조달 방법 — 수집상 선도금", tbl: DT_136022_10014, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상 선도금$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_nh, title: "영림·목재수확 임가의 주요 판매처 비율 — 농협", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농협$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_sj, title: "영림·목재수확 임가의 주요 판매처 비율 — 산림조합", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_col, title: "영림·목재수확 임가의 주요 판매처 비율 — 수집상", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_proc, title: "영림·목재수확 임가의 주요 판매처 비율 — 가공업체", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가공업체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_ws, title: "영림·목재수확 임가의 주요 판매처 비율 — 도소매상", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^도소매상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yls_dir, title: "영림·목재수확 임가의 주요 판매처 비율 — 직거래", tbl: DT_136022_10015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직거래$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_nh, title: "감 재배 임가의 주요 판매처 비율 — 농협", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농협$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_sj, title: "감 재배 임가의 주요 판매처 비율 — 산림조합", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_col, title: "감 재배 임가의 주요 판매처 비율 — 수집상", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_proc, title: "감 재배 임가의 주요 판매처 비율 — 가공업체", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가공업체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_ws, title: "감 재배 임가의 주요 판매처 비율 — 도소매상", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^도소매상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gms_dir, title: "감 재배 임가의 주요 판매처 비율 — 직거래", tbl: DT_136022_10066, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직거래$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmp_got, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 곶감", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^곶감$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmp_mal, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 감말랭이", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^감말랭이$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmp_etc, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 기타", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

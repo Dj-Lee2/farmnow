@@ -13648,6 +13648,46 @@ sources:
       - {id: ptq_csc, title: "반려묘 중성화 필요성 · 5점 평균", tbl: DT_114063_025, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^5점 평균$"], unit: 점, survey: 반려동물 양육 실태조사}
       - {id: ptq_dneed, title: "반려견 중성화가 필요하다(어느 정도+매우)", tbl: DT_114063_024, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^(어느 정도|매우) 필요하다$"], sum: true, unit: "%", survey: 반려동물 양육 실태조사}
       - {id: ptq_cneed, title: "반려묘 중성화가 필요하다(어느 정도+매우)", tbl: DT_114063_025, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^(어느 정도|매우) 필요하다$"], sum: true, unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: soc_cd, title: "토양오염 우려지역 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: soc_cu, title: "토양오염 우려지역 구리 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^구리 Cu$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: soc_as, title: "토양오염 우려지역 비소 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^비소 As$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: soc_pb, title: "토양오염 우려지역 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: soc_zn, title: "토양오염 우려지역 아연 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^아연 Zn$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: soc_ni, title: "토양오염 우려지역 니켈 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^니켈 Ni$"], codes: {C1: "4200004$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: sop_ind, title: "토양오염실태조사 산업단지·공장지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200024$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_trf, title: "토양오염실태조사 교통관련시설지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200080$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_kid, title: "토양오염실태조사 어린이 놀이시설 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200112$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_wst, title: "토양오염실태조사 폐기물 처리·재활용시설 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200064$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_res, title: "토양오염실태조사 산업단지 주변 주거지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200096$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_ore, title: "토양오염실태조사 원광석·고철 보관·사용지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200044$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_ldv, title: "토양오염실태조사 토지개발지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200092$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_acc, title: "토양오염실태조사 사고·민원 발생지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200088$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_rail, title: "토양오염실태조사 철도시설·폐침목 사용지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200084$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_fac, title: "토양오염실태조사 공장폐수 유입지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200028$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_cln, title: "토양오염실태조사 정화토양 사용지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200148$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: sop_gw, title: "토양오염실태조사 지하수 오염지역 지점 수", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^지점수$"], codes: {C1: "4200068$"}, unit: 곳, survey: 토양오염실태조사}
+      - {id: scd_trf, title: "교통관련시설지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200080$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_kid, title: "어린이 놀이시설 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200112$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_wst, title: "폐기물 처리·재활용시설 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200064$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_res, title: "산업단지 주변 주거지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200096$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_ore, title: "원광석·고철 보관·사용지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200044$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_ldv, title: "토지개발지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200092$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_acc, title: "사고·민원 발생지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200088$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_rail, title: "철도시설·폐침목 사용지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200084$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_fac, title: "공장폐수 유입지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200028$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_cln, title: "정화토양 사용지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200148$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: scd_gw, title: "지하수 오염지역 토양 카드뮴 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^카드뮴 Cd$"], codes: {C1: "4200068$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_trf, title: "교통관련시설지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200080$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_kid, title: "어린이 놀이시설 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200112$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_wst, title: "폐기물 처리·재활용시설 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200064$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_res, title: "산업단지 주변 주거지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200096$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_ore, title: "원광석·고철 보관·사용지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200044$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_ldv, title: "토지개발지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200092$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_acc, title: "사고·민원 발생지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200088$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_rail, title: "철도시설·폐침목 사용지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200084$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_fac, title: "공장폐수 유입지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200028$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_cln, title: "정화토양 사용지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200148$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: spb_gw, title: "지하수 오염지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200068$"}, unit: mg/kg, survey: 토양오염실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

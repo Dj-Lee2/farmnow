@@ -11665,6 +11665,38 @@ sources:
       - {id: xir_var, title: "기타 수실류 재배를 늘리려는 이유 — 시장성 있는 품종 보유", tbl: DT_136022_10173, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시장성 있는 품종 보유$"], unit: "%", survey: 임업경영실태조사}
       - {id: cwl_avg, title: "밤 재배 임가 1가구당 작업로 설치 면적(평균)", tbl: DT_136022_9819, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "m", survey: 임업경영실태조사}
       - {id: cdr_labor, title: "밤 재배를 줄이거나 중단하려는 이유 — 인건비 상승 및 노동력 부족", tbl: DT_136022_9828, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비 상승 및 노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ycf_in, title: "임가 현금 수입 — 소득수지 수입 합계", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_fin, title: "임가 현금 수입 — 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_oin, title: "임가 현금 수입 — 임외수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363154$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_trn, title: "임가 현금 수입 — 이전수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363155$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_ext, title: "임가 현금 수입 — 비경상수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363156$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_out, title: "임가 현금 지출 — 소득수지 지출 합계(임업·임외 지출)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631558$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_fout, title: "임가 현금 지출 — 임업지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631515$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_oout, title: "임가 현금 지출 — 임외지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631516$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_hh, title: "임가 현금 지출 — 가계 지출 합계", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631559$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_cons, title: "임가 현금 지출 — 소비지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631518$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_ncons, title: "임가 현금 지출 — 비소비지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631519$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_fa_buy, title: "임가 현금흐름 — 고정자산 구입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631521$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_fa_sell, title: "임가 현금흐름 — 고정자산 매각", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363158$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_dbt_up, title: "임가 현금흐름 — 부채의 증가(차입)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631510$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_dbt_dn, title: "임가 현금흐름 — 부채의 감소(상환)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631523$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_ca_up, title: "임가 현금흐름 — 유동자산 증가(예금·적금 등)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631522$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_ca_dn, title: "임가 현금흐름 — 유동자산 감소", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363159$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_cash_b, title: "임가 현금 — 연초 보유액", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631555$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_cash_e, title: "임가 현금 — 연말 보유액", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631561$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycf_tot, title: "임가 한 해 자금 조달 총액", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631563$", C2: "^13102136315X\\.104$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ymo_01, title: "임가 1월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^1월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_02, title: "임가 2월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^2월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_03, title: "임가 3월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^3월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_04, title: "임가 4월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^4월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_05, title: "임가 5월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^5월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_06, title: "임가 6월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^6월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_07, title: "임가 7월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^7월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_08, title: "임가 8월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^8월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_09, title: "임가 9월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^9월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_10, title: "임가 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_11, title: "임가 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ymo_12, title: "임가 12월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^12월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -12641,6 +12641,36 @@ sources:
       - {id: cwj_mch, title: "귀촌 후 근로소득을 얻은 직업 — 장치·기계 조작 및 조립 종사자", tbl: DT_114055_B080, org: "114", itm: "^근로소득 직무$", want: ["^장치"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cwj_lab, title: "귀촌 후 근로소득을 얻은 직업 — 단순노무 종사자", tbl: DT_114055_B080, org: "114", itm: "^근로소득 직무$", want: ["^단순노무"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: cwj_mil, title: "귀촌 후 근로소득을 얻은 직업 — 군인", tbl: DT_114055_B080, org: "114", itm: "^근로소득 직무$", want: ["^군인$"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: ofa_mic_sp, title: "악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_mic_fd, title: "악취개선제 미생물제 급이·급수 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^급이/급수$"], codes: {C2: "^00103$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_env_sp, title: "악취개선제 비미생물제(환경개선제) 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^살포$"], codes: {C2: "^00201$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_env_fd, title: "악취개선제 비미생물제(환경개선제) 급이·급수 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^급이/급수$"], codes: {C2: "^00203$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_pro_sp, title: "악취개선제 생균제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^살포$"], codes: {C2: "^00301$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_pro_fd, title: "악취개선제 생균제 급이·급수 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^급이/급수$"], codes: {C2: "^00303$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_enz_sp, title: "악취개선제 효소제(EM) 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^살포$"], codes: {C2: "^00401$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_enz_fd, title: "악취개선제 효소제(EM) 급이·급수 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^급이/급수$"], codes: {C2: "^00403$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofa_none, title: "악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^전체$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofn_hw, title: "한·육우 악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^한·육우$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofn_dy, title: "젖소 악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^젖소$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofn_pg, title: "돼지 악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^돼지$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofn_ck, title: "닭 악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^닭$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofn_dk, title: "오리 악취개선제 살포하지 않음 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^오리$", "^살포하지 않음$"], codes: {C2: "^006$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofm_hw, title: "한·육우 악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^한·육우$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofm_dy, title: "젖소 악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^젖소$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofm_pg, title: "돼지 악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^돼지$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofm_ck, title: "닭 악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^닭$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: ofm_dk, title: "오리 악취개선제 미생물제 살포 농장", tbl: DT_114059_012, org: "114", itm: "^악취개선제", want: ["^오리$", "^살포$"], codes: {C2: "^00101$"}, unit: 호, survey: 가축분뇨처리통계}
+      - {id: shpr_heal, title: "산림휴양·복지 프로그램 사전예약제 이용 경험률 산림치유 프로그램", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림치유 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpr_guide, title: "산림휴양·복지 프로그램 사전예약제 이용 경험률 숲해설 프로그램", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲해설 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpr_kid, title: "산림휴양·복지 프로그램 사전예약제 이용 경험률 유아숲체험 프로그램", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpr_trail, title: "산림휴양·복지 프로그램 사전예약제 이용 경험률 숲길체험 프로그램", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpr_sport, title: "산림휴양·복지 프로그램 사전예약제 이용 경험률 산림레포츠체험 프로그램", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림레포츠체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpr_kid30, title: "30대 유아숲체험 프로그램 사전예약제 이용 경험률", tbl: DT_136037_D110, org: "136", periods: 3, itm: ".", want: ["^30~39세$", "^유아숲체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpc_heal, title: "산림휴양·복지 프로그램 산림복지서비스 이용권 사용 경험률 산림치유 프로그램", tbl: DT_136037_D120, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림치유 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpc_guide, title: "산림휴양·복지 프로그램 산림복지서비스 이용권 사용 경험률 숲해설 프로그램", tbl: DT_136037_D120, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲해설 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpc_kid, title: "산림휴양·복지 프로그램 산림복지서비스 이용권 사용 경험률 유아숲체험 프로그램", tbl: DT_136037_D120, org: "136", periods: 3, itm: ".", want: ["^전체$", "^유아숲체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpc_trail, title: "산림휴양·복지 프로그램 산림복지서비스 이용권 사용 경험률 숲길체험 프로그램", tbl: DT_136037_D120, org: "136", periods: 3, itm: ".", want: ["^전체$", "^숲길체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
+      - {id: shpc_sport, title: "산림휴양·복지 프로그램 산림복지서비스 이용권 사용 경험률 산림레포츠체험 프로그램", tbl: DT_136037_D120, org: "136", periods: 3, itm: ".", want: ["^전체$", "^산림레포츠체험 프로그램$"], unit: "%", survey: 국민 산림휴양·복지활동 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

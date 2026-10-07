@@ -12548,6 +12548,35 @@ sources:
       - {id: dby_jeot, title: 최근 1년 젓갈류 구입이 늘었다(약간+매우 증가), tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^젓갈류$", "^(약간|매우) 증가$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: dby_seaweed, title: 최근 1년 해조가공품(김 등) 구입이 늘었다(약간+매우 증가), tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^해조가공품$", "^(약간|매우) 증가$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: dby_dried, title: 최근 1년 건어물(염건수산물) 구입이 늘었다(약간+매우 증가), tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^염건수산동물$", "^(약간|매우) 증가$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: sgs_none, title: "송이버섯 채취 임가가 증수를 위해 실시한 사업 — 실시한 사업 없음", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^실시한 사업 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_soil, title: "송이버섯 채취 임가가 증수를 위해 실시한 사업 — 흙 덮기 또는 컵 씌우기", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^흙 덮기 또는 컵 씌우기$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_thin, title: "송이버섯 채취 임가가 증수를 위해 실시한 사업 — 숲가꾸기(식생 정리·간벌·가지치기 등)", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^숲가꾸기\\(식생 정리 간벌 가지치기 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_leaf, title: "송이버섯 채취 임가가 증수를 위해 실시한 사업 — 낙엽 긁기", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^낙엽 긁기$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sga_avg, title: "송이버섯 증수 사업 대상 평균 면적 — 전체", tbl: DT_136022_9791, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: ㎡, survey: 임업경영실태조사}
+      - {id: sgw_none, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 없음", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_mach, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 임업기계장비 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임업기계장비 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_rent, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 임차비 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임차비 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_leaf, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 낙엽 긁기 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^낙엽 긁기 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fac, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 생산(재배)시설 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산\\(재배\\)시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_road, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 임도시설 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임도시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fert, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 비료·토양개량제 등 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^비료 토양개량제 등 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_land, title: "송이버섯 채취 임가가 지원받고 싶은 사업 — 임야매입자금 지원", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임야매입자금 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_none_gw, title: "송이버섯 증수 사업을 하지 않은 채취 임가 비율 — 강원권", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^강원권$", "^실시한 사업 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_thin_gw, title: "송이버섯 증수 사업으로 숲가꾸기를 한 채취 임가 비율 — 강원권", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^강원권$", "^숲가꾸기\\(식생 정리 간벌 가지치기 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fac_gw, title: "송이버섯 채취 임가가 지원받고 싶은 사업 생산(재배)시설 — 강원권", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^강원권$", "^생산\\(재배\\)시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_road_gw, title: "송이버섯 채취 임가가 지원받고 싶은 사업 임도시설 — 강원권", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^강원권$", "^임도시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_none_gs, title: "송이버섯 증수 사업을 하지 않은 채취 임가 비율 — 경상권", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^실시한 사업 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_thin_gs, title: "송이버섯 증수 사업으로 숲가꾸기를 한 채취 임가 비율 — 경상권", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^숲가꾸기\\(식생 정리 간벌 가지치기 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fac_gs, title: "송이버섯 채취 임가가 지원받고 싶은 사업 생산(재배)시설 — 경상권", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^생산\\(재배\\)시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_road_gs, title: "송이버섯 채취 임가가 지원받고 싶은 사업 임도시설 — 경상권", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^임도시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_none_a60, title: "송이버섯 증수 사업을 하지 않은 채취 임가 비율 — 60대", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^60대$", "^실시한 사업 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_thin_a60, title: "송이버섯 증수 사업으로 숲가꾸기를 한 채취 임가 비율 — 60대", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^60대$", "^숲가꾸기\\(식생 정리 간벌 가지치기 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fac_a60, title: "송이버섯 채취 임가가 지원받고 싶은 사업 생산(재배)시설 — 60대", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^60대$", "^생산\\(재배\\)시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_road_a60, title: "송이버섯 채취 임가가 지원받고 싶은 사업 임도시설 — 60대", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^60대$", "^임도시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_none_a70, title: "송이버섯 증수 사업을 하지 않은 채취 임가 비율 — 70세 이상", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^70세 이상$", "^실시한 사업 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgs_thin_a70, title: "송이버섯 증수 사업으로 숲가꾸기를 한 채취 임가 비율 — 70세 이상", tbl: DT_136022_9788, org: "136", periods: 3, itm: "^값$", want: ["^70세 이상$", "^숲가꾸기\\(식생 정리 간벌 가지치기 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_fac_a70, title: "송이버섯 채취 임가가 지원받고 싶은 사업 생산(재배)시설 — 70세 이상", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^70세 이상$", "^생산\\(재배\\)시설 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgw_road_a70, title: "송이버섯 채취 임가가 지원받고 싶은 사업 임도시설 — 70세 이상", tbl: DT_136022_9899, org: "136", periods: 3, itm: "^값$", want: ["^70세 이상$", "^임도시설 지원$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

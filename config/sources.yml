@@ -13614,6 +13614,40 @@ sources:
       - {id: ptx_rur, title: "농어촌 반려동물 월평균 양육비", tbl: DT_114063_019, org: "114", periods: 3, itm: "^양육비용별$", want: ["^농어촌 지역", "^월평균양육비$"], unit: 원, survey: 반려동물 양육 실태조사}
       - {id: ptx_ill, title: "반려동물 마리당 월평균 사고·질병 비용", tbl: DT_114063_022, org: "114", periods: 3, itm: "^사고상해질병비용$", want: ["^전체$", "^마리당 월평균$"], unit: 원, survey: 반려동물 양육 실태조사}
       - {id: ptx_illy, title: "가구당 연평균 사고·질병 비용", tbl: DT_114063_022, org: "114", periods: 3, itm: "^사고상해질병비용$", want: ["^전체$", "^가구당 연평균$"], unit: 원, survey: 반려동물 양육 실태조사}
+      - {id: pet_death, title: "반려동물 죽음 경험", tbl: DT_114063_003, org: "114", periods: 3, itm: "^예$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_need, title: "동물장묘업체 미이용 이유 · 이용 필요성을 못 느껴서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^이용 필요성"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_cost, title: "동물장묘업체 미이용 이유 · 비용이 많이 들어서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^비용이 많이"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_far, title: "동물장묘업체 미이용 이유 · 거리가 멀어서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^거리가 멀어서"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_time, title: "동물장묘업체 미이용 이유 · 방문할 시간이 없어서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^방문할 시간이"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_none, title: "동물장묘업체 미이용 이유 · 예전에는 업체가 없어서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^예전에는 업체가"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_unk, title: "동물장묘업체 미이용 이유 · 업체가 있는지 몰라서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^동물장묘업체가 있는지"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_fam, title: "동물장묘업체 미이용 이유 · 가족이 원하지 않아서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^가족이 원하지"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptb_gov, title: "동물장묘업체 미이용 이유 · 관공서에서 해결해줘서", tbl: DT_114063_005, org: "114", periods: 3, itm: "^미이용 이유$", want: ["^전체$", "^관공서에서"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_need, title: "반려견 동물등록을 안 한 이유 · 필요성을 느끼지 못해서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^등록할 필요성"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_lazy, title: "반려견 동물등록을 안 한 이유 · 등록하기 귀찮아서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^등록하기 귀찮"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_proc, title: "반려견 동물등록을 안 한 이유 · 방법·절차가 복잡해서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^동물등록 방법"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_peer, title: "반려견 동물등록을 안 한 이유 · 지인들도 등록하지 않아서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^지인들도"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_unk, title: "반려견 동물등록을 안 한 이유 · 제도를 알지 못해서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^동물등록 제도를"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_cost, title: "반려견 동물등록을 안 한 이유 · 등록비용이 부담돼서", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^등록비용이"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptr_young, title: "반려견 동물등록을 안 한 이유 · 태어난 지 2개월 미만", tbl: DT_114063_016, org: "114", periods: 3, itm: "^등록하지 않은 이유$", want: ["^전체$", "^태어난 지 2개월"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_skin, title: "최근 1년 반려동물 병원 이용 원인 · 피부 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^피부 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_dig, title: "최근 1년 반려동물 병원 이용 원인 · 소화기 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^소화기 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_chk, title: "최근 1년 반려동물 병원 이용 원인 · 각종 검진", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^각종 검진"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_acc, title: "최근 1년 반려동물 병원 이용 원인 · 사고·상해", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^사고/상해"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_dent, title: "최근 1년 반려동물 병원 이용 원인 · 치과 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^치과 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_eye, title: "최근 1년 반려동물 병원 이용 원인 · 안과 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^안과계 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_surg, title: "최근 1년 반려동물 병원 이용 원인 · 외과 수술(디스크·슬개골 등)", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^외과 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_resp, title: "최근 1년 반려동물 병원 이용 원인 · 호흡기 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^호흡기 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_neut, title: "최근 1년 반려동물 병원 이용 원인 · 중성화 수술", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^중성화 수술$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pti_uri, title: "최근 1년 반려동물 병원 이용 원인 · 비뇨기계 질환", tbl: DT_114063_023, org: "114", periods: 3, itm: "^사고상해질병원인별$", want: ["^전체$", "^비뇨기계 질환"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptc_dog, title: "가구당 기르는 반려견 수", tbl: DT_114063_007, org: "114", periods: 3, itm: "^양육 수$", want: ["^전체$", "^개$"], unit: 마리, survey: 반려동물 양육 실태조사}
+      - {id: ptc_cat, title: "가구당 기르는 반려묘 수", tbl: DT_114063_007, org: "114", periods: 3, itm: "^양육 수$", want: ["^전체$", "^고양이$"], unit: 마리, survey: 반려동물 양육 실태조사}
+      - {id: pet_dfem, title: "반려견 성별 · 암컷", tbl: DT_114063_011, org: "114", periods: 3, itm: "^암컷$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: pet_cfem, title: "반려묘 성별 · 암컷", tbl: DT_114063_017, org: "114", periods: 3, itm: "^암컷$", want: ["^전체$"], unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptq_dsc, title: "반려견 중성화 필요성 · 5점 평균", tbl: DT_114063_024, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^5점 평균$"], unit: 점, survey: 반려동물 양육 실태조사}
+      - {id: ptq_csc, title: "반려묘 중성화 필요성 · 5점 평균", tbl: DT_114063_025, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^5점 평균$"], unit: 점, survey: 반려동물 양육 실태조사}
+      - {id: ptq_dneed, title: "반려견 중성화가 필요하다(어느 정도+매우)", tbl: DT_114063_024, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^(어느 정도|매우) 필요하다$"], sum: true, unit: "%", survey: 반려동물 양육 실태조사}
+      - {id: ptq_cneed, title: "반려묘 중성화가 필요하다(어느 정도+매우)", tbl: DT_114063_025, org: "114", periods: 3, itm: "^중성화 필요여부$", want: ["^전체$", "^(어느 정도|매우) 필요하다$"], sum: true, unit: "%", survey: 반려동물 양육 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

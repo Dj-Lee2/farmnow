@@ -5154,7 +5154,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨·축종별 전업·경영주 나이·판매 규모별 사육 농가·가축 월령·연령 구조·종계·오리 월령과 지역·시도별 한우 송아지·모돈 비중·말산업 승마시설·방목지·보험·사육부지·자격증·안전사고·마사·마장 면적·퇴비보관시설·비연관 겸업·임시 마사·연관 겸업·말 미보유 운영업종·반려동물 양육률·종류·양육비·사체 처리', 382) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
+ <details class="sg-grp" id="g-live">{% call head('g-live', '축산', '사육 마릿수·도축·배합사료·원유·생산비·규모별 순수익·한우·비육돈 100kg당 생산비 구성·계란·육계 생산비 구성·규모별 생산비·번식우·산란계·오리·육우·우유·번식우 생산비·가축 사육 현황·육우 규모별 수익성·사육비 속 고용·광열·이자·축산 고용 근로자·전력 사용·곤충 사육 농가·판매액·사육시설·용도별 판매·소 품종·닭 종류·시도별 도축·소 등급판정·경락가격·육질·육량·도매시장별 한우 경락가·유제품 생산·소비·시도별 원유 생산·말 사육두수·말산업 사업체·종사자·경영 전망·정부에 바라는 점·국제 소·돼지·닭 사육 두수·비육돈 두당 사육비 구성·규모별 두당 사육비·한우 비육우·젖소 두당 사육비·사육 규모별 농장·마릿수·육용계·오리·육우 규모별·소 도체 성적·시도별 돼지 도축·닭·오리 도축·양잠·오디 농가·뽕밭·누에 산물·양잠 소득·경영주 나이·누에 사육 규모·뽕밭 규모·누에씨·축종별 전업·경영주 나이·판매 규모별 사육 농가·가축 월령·연령 구조·종계·오리 월령과 지역·시도별 한우 송아지·모돈 비중·말산업 승마시설·방목지·보험·사육부지·자격증·안전사고·마사·마장 면적·퇴비보관시설·비연관 겸업·임시 마사·연관 겸업·말 미보유 운영업종·반려동물 양육률·종류·양육비·사체 처리·장묘업체·동물등록 미이용 이유·병원 이용 원인·중성화 인식', 391) %}{{ kv('한우', K.hanwoo) }}{{ kv('돼지', K.pig) }}{{ kv('한우 비육우 순수익', K.hw_net) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">사육 현황 <small>분기</small></h3>
  <div class="sg-g">{{ card('hanwoo', 'g16', ('농장 ' ~ K.hanwoo_farms.vals[-1]|big ~ '곳') if K.hanwoo_farms else none) }}{{ card('pig', 'g26', ('농장 ' ~ K.pig_farms.vals[-1]|big ~ '곳') if K.pig_farms else none) }}{{ card('beef', 'g17') }}{{ card('dairy', 'g18') }}{{ card('chicken', 'g19', '산란계·육계 합계') }}{{ card('eggs', 'g20', '산란계 하루 평균 식용란') }}</div>
@@ -5564,6 +5564,18 @@
   {{ hcard('기르는 반려동물 종류', [('개', K.ptk_dog), ('고양이', K.ptk_cat), ('어류', K.ptk_fish), ('설치류·포유류', K.ptk_rod), ('조류', K.ptk_bird), ('파충류', K.ptk_rep)], '%', '반려동물 기르는 가구 기준 · 복수응답', none, '#c77b30') }}
   {{ hcard('반려동물 월평균 양육비 구성', [('사료·간식비', K.ptx_feed), ('병원비', K.ptx_vet), ('미용·위생관리비', K.ptx_groom), ('용품 구매비', K.ptx_goods), ('위탁·돌봄서비스', K.ptx_care)], '원', '반려동물 기르는 가구의 한 달 평균 · 항목 합 = 월평균 양육비', none, '#1c7a45') }}
   {{ hcard('반려동물이 죽었을 때 처리 방법', [('직접 땅에 묻음', K.ptd_bury), ('동물장묘업체 이용', K.ptd_crem), ('동물병원 위탁', K.ptd_vet), ('종량제 봉투 배출', K.ptd_bag)], '%', '반려동물 죽음을 겪은 가구 기준 · 나머지는 기타', none, '#7a6a3a') }}
+ </div>
+<h3 class="sg-sub">반려동물 — 장묘업체·동물등록을 안 한 이유, 병원에 간 까닭과 중성화 인식 <small>농림축산식품부 반려동물 양육 실태조사(2025) · 장묘업체 미이용 이유는 업체를 쓰지 않은 가구, 동물등록 이유는 등록하지 않은 반려견 가구, 병원 이용 원인은 최근 1년 사고·질병을 겪은 가구 기준(복수응답)</small></h3>
+ <div class="sg-g">
+  {{ card('pet_death', 'ptb1', ('장묘업체를 쓰지 않은 이유 1위: 필요성을 못 느껴서 ' ~ num(K.ptb_need.vals[-1], '%')|striptags) if K.ptb_need else none, '#7a6a3a') }}
+  {{ card('ptb_cost', 'ptb2', ('거리가 멀어서 ' ~ num(K.ptb_far.vals[-1], '%')|striptags ~ ' · 방문할 시간이 없어서 ' ~ num(K.ptb_time.vals[-1], '%')|striptags) if K.ptb_far and K.ptb_time else none, '#b0503a') }}
+  {{ card('ptr_need', 'ptb3', ('등록하기 귀찮아서 ' ~ num(K.ptr_lazy.vals[-1], '%')|striptags ~ ' · 방법·절차가 복잡해서 ' ~ num(K.ptr_proc.vals[-1], '%')|striptags) if K.ptr_lazy and K.ptr_proc else none, '#2f8fa3') }}
+  {{ card('pti_skin', 'ptb4', ('소화기 질환 ' ~ num(K.pti_dig.vals[-1], '%')|striptags ~ ' · 각종 검진 ' ~ num(K.pti_chk.vals[-1], '%')|striptags) if K.pti_dig and K.pti_chk else none, '#c77b30') }}
+  {{ card('ptq_dneed', 'ptb5', ('5점 평균 ' ~ num(K.ptq_dsc.vals[-1], '점')|striptags ~ ' · 반려묘는 ' ~ num(K.ptq_cneed.vals[-1], '%')|striptags ~ '(' ~ num(K.ptq_csc.vals[-1], '점')|striptags ~ ')') if K.ptq_dsc and K.ptq_cneed and K.ptq_csc else none, '#7a5cc2') }}
+  {{ card('ptc_dog', 'ptb6', ('반려묘 ' ~ num(K.ptc_cat.vals[-1], '마리')|striptags ~ ' · 암컷 비율 반려견 ' ~ num(K.pet_dfem.vals[-1], '%')|striptags ~ ' · 반려묘 ' ~ num(K.pet_cfem.vals[-1], '%')|striptags) if K.ptc_cat and K.pet_dfem and K.pet_cfem else none, '#1c7a45') }}
+  {{ hcard('동물장묘업체를 쓰지 않은 이유', [('필요성을 못 느껴서', K.ptb_need), ('비용이 많이 들어서', K.ptb_cost), ('거리가 멀어서', K.ptb_far), ('방문할 시간이 없어서', K.ptb_time), ('예전엔 업체가 없어서', K.ptb_none), ('업체가 있는지 몰라서', K.ptb_unk), ('가족이 원하지 않아서', K.ptb_fam), ('관공서에서 해결', K.ptb_gov)], '%', '반려동물 죽음을 겪고 장묘업체를 쓰지 않은 가구 기준 · 합 100', none, '#7a6a3a') }}
+  {{ hcard('반려견 동물등록을 하지 않은 가장 큰 이유', [('필요성을 못 느껴서', K.ptr_need), ('귀찮아서', K.ptr_lazy), ('방법·절차가 복잡해서', K.ptr_proc), ('지인들도 안 해서', K.ptr_peer), ('제도를 몰라서', K.ptr_unk), ('등록비용 부담', K.ptr_cost), ('태어난 지 2개월 미만', K.ptr_young)], '%', '동물등록을 하지 않은 반려견 가구 기준 · 합 100', none, '#2f8fa3') }}
+  {{ hcard('최근 1년 반려동물 병원 이용 원인', [('피부 질환', K.pti_skin), ('소화기 질환', K.pti_dig), ('각종 검진', K.pti_chk), ('사고·상해', K.pti_acc), ('치과 질환', K.pti_dent), ('안과 질환', K.pti_eye), ('외과 수술(디스크·슬개골)', K.pti_surg), ('호흡기 질환', K.pti_resp), ('중성화 수술', K.pti_neut), ('비뇨기계 질환', K.pti_uri)], '%', '최근 1년 사고·상해·질병을 겪은 가구 기준 · 복수응답', none, '#c77b30') }}
  </div></details>
 
  <script>(()=>{const g=[...document.querySelectorAll('.sg-grp')],b=document.getElementById('sgAll');if(!b)return;

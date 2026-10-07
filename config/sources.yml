@@ -13164,6 +13164,32 @@ sources:
       - {id: gmp_got, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 곶감", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^곶감$"], unit: "%", survey: 임업경영실태조사}
       - {id: gmp_mal, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 감말랭이", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^감말랭이$"], unit: "%", survey: 임업경영실태조사}
       - {id: gmp_etc, title: "감 재배 임가가 주로 판매한 가공품(1순위) — 기타", tbl: DT_136022_10070, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yrd_price, title: "영림·목재수확업을 줄이거나 중단하려는 주된 이유 — 가격하락·낮은 수익률", tbl: DT_136022_10072, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가격하락 및 낮은 수익률$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yrd_lab, title: "영림·목재수확업을 줄이거나 중단하려는 주된 이유 — 인건비 상승·노동력 부족", tbl: DT_136022_10072, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비 상승 및 노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yrd_mkt, title: "영림·목재수확업을 줄이거나 중단하려는 주된 이유 — 판로 확보의 어려움", tbl: DT_136022_10072, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 확보의 어려움$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yrd_conv, title: "영림·목재수확업을 줄이거나 중단하려는 주된 이유 — 산지 용도 전환", tbl: DT_136022_10072, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산지 용도 전환$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylg_dem, title: "영림·목재수확업 전망이 좋아질 것으로 본 주된 이유 — 수요증가(경기호황 등)", tbl: DT_136022_10061, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요증가\\(경기호황 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylg_sub, title: "영림·목재수확업 전망이 좋아질 것으로 본 주된 이유 — 정부·지자체 지원 확대", tbl: DT_136022_10061, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 및 지자체 지원 확대$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylg_mkt, title: "영림·목재수확업 전망이 좋아질 것으로 본 주된 이유 — 판로 안정화", tbl: DT_136022_10061, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 안정화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ylg_reg, title: "영림·목재수확업 전망이 좋아질 것으로 본 주된 이유 — 규제 완화", tbl: DT_136022_10061, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^규제 완화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmm_got, title: "감 재배 임가가 판매한 가공품(1+2+3순위) — 곶감", tbl: DT_136022_10068, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^곶감$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmm_mal, title: "감 재배 임가가 판매한 가공품(1+2+3순위) — 감말랭이", tbl: DT_136022_10068, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^감말랭이$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gmm_yeon, title: "감 재배 임가가 판매한 가공품(1+2+3순위) — 연시", tbl: DT_136022_10068, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^연시$"], unit: "%", survey: 임업경영실태조사}
+      - {id: erx_avg, title: "식용임산물 채취 임가의 연간 총 임차료(평균)", tbl: DT_136022_9787, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: bz2_down, title: "2년 후 업황 전망 악화", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_same, title: "2년 후 업황 전망 동일", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_up, title: "2년 후 업황 전망 개선", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_pdown, title: "작물재배·축산업 2년 후 업황 전망 악화", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_idown, title: "농산업 투입재 산업 2년 후 업황 전망 악화", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_pup, title: "작물재배·축산업 2년 후 업황 전망 개선", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz2_iup, title: "농산업 투입재 산업 2년 후 업황 전망 개선", tbl: DT_114056_2024_0034, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_down, title: "3년 후 업황 전망 악화", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_same, title: "3년 후 업황 전망 동일", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_up, title: "3년 후 업황 전망 개선", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_pdown, title: "작물재배·축산업 3년 후 업황 전망 악화", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_idown, title: "농산업 투입재 산업 3년 후 업황 전망 악화", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_pup, title: "작물재배·축산업 3년 후 업황 전망 개선", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bz3_iup, title: "농산업 투입재 산업 3년 후 업황 전망 개선", tbl: DT_114056_2024_0035, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

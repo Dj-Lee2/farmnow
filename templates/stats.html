@@ -1931,7 +1931,7 @@
   {{ card('fgv_pr_pers', 'fgv3', ('감 재배 임가 · 판로 확보 ' ~ '{:.1f}'.format(K.fgv_mk_pers.vals[-1]) ~ '%') if K.fgv_mk_pers else '감 재배 임가', '#c77b30') }}
   {{ card('fgv_var_mush', 'fgv4', ('표고 등 버섯 재배 임가 · 원목·종묘 구입비 지원 ' ~ '{:.1f}'.format(K.fgv_sd_mush.vals[-1]) ~ '%') if K.fgv_sd_mush else '표고 등 버섯 재배 임가', '#7a5cc2') }}
   {{ card('fgv_fire_gath', 'fgv5', ('송이 등 채취 임가 · 임도시설 확충 ' ~ '{:.1f}'.format(K.fgv_rd_gath.vals[-1]) ~ '%') if K.fgv_rd_gath else '송이 등 채취 임가', '#b0503a') }}
-  {{ card('fgv_rd_wood', 'fgv6', ('조림·벌채 임가 · 직불금 ' ~ '{:.1f}'.format(K.fgv_dp_wood.vals[-1]) ~ '%') if K.fgv_dp_wood else '조림·벌채 임가', '#7a6a3a') }}
+  {{ card('fgv_dp_herb', 'fgv6', ('산채·약초 등 재배 임가 · 노동력 지원 ' ~ '{:.1f}'.format(K.fgv_lb_herb.vals[-1]) ~ '%') if K.fgv_lb_herb else '산채·약초 등 재배 임가', '#7a6a3a') }}
   {{ hcard('업종별 안정적인 판로 확보를 바라는 임가 비율', [('관상 산림식물', K.fgv_mk_orn), ('감', K.fgv_mk_pers), ('기타 수실류', K.fgv_mk_etc), ('산채·약초', K.fgv_mk_herb)], '%', '전체 임가 중 · 오른쪽은 직전 응답 연도 대비', none, '#1f5f8a') }}
   {{ hcard('업종별 퇴비·비료비 지원을 바라는 임가 비율', [('감', K.fgv_fz_pers), ('밤', K.fgv_fz_chest), ('산채·약초', K.fgv_fz_herb), ('기타 수실류', K.fgv_fz_etc)], '%', '전체 임가 중 · 오른쪽은 직전 응답 연도 대비', none, '#1c7a45') }}
   {{ hcard('업종별 가격 안정화·소비 촉진 홍보를 바라는 임가 비율', [('감 가격 안정화', K.fgv_pr_pers), ('산채·약초 가격 안정화', K.fgv_pr_herb), ('영림·목재수확 가격 안정화', K.fgv_pr_wood), ('기타 수실류 가격 안정화', K.fgv_pr_etc), ('감 소비 홍보', K.fgv_pm_pers), ('기타 수실류 소비 홍보', K.fgv_pm_etc), ('산채·약초 소비 홍보', K.fgv_pm_herb)], '%', '전체 임가 중 · 오른쪽은 직전 응답 연도 대비', none, '#c77b30') }}

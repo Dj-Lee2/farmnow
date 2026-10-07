@@ -12360,6 +12360,36 @@ sources:
       - {id: tqv_safe, title: "과일·채소가공품 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_125_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: tqv_new, title: "과일·채소가공품 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_125_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: tqv_conv, title: "과일·채소가공품 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_125_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqt_price, title: "연식품(두부·묵 등) 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_135_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqt_hlth, title: "연식품(두부·묵 등) 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_135_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqt_safe, title: "연식품(두부·묵 등) 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_135_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqt_new, title: "연식품(두부·묵 등) 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_135_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqt_conv, title: "연식품(두부·묵 등) 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_135_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqg_price, title: "곡물가공품 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_125_2019_15, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqg_hlth, title: "곡물가공품 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_125_2019_15, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqg_safe, title: "곡물가공품 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_125_2019_15, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqg_new, title: "곡물가공품 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_125_2019_15, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqg_conv, title: "곡물가공품 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_125_2019_15, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqn_price, title: "면류 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_134_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqn_hlth, title: "면류 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_134_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqn_safe, title: "면류 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_134_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqn_new, title: "면류 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_134_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqn_conv, title: "면류 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_134_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqb_price, title: "빵·떡류 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_131_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqb_hlth, title: "빵·떡류 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_131_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqb_safe, title: "빵·떡류 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_131_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqb_new, title: "빵·떡류 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_131_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqb_conv, title: "빵·떡류 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_131_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqs_price, title: "조미식품 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_138_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqs_hlth, title: "조미식품 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_138_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqs_safe, title: "조미식품 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_138_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqs_new, title: "조미식품 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_138_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqs_conv, title: "조미식품 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_138_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqo_price, title: "유지류 소비 트렌드 동조 — 가격만 저렴하면 산다", tbl: DT_114053_129_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "가격만 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqo_hlth, title: "유지류 소비 트렌드 동조 — 건강(영양)에 좋은 제품을 산다", tbl: DT_114053_129_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqo_safe, title: "유지류 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_129_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqo_new, title: "유지류 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_129_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: tqo_conv, title: "유지류 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_129_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

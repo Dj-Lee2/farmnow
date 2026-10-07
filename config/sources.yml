@@ -12280,6 +12280,33 @@ sources:
       - {id: hki_home, title: "건강기능식품 정보 얻는 곳 — 홈쇼핑 판매 정보", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^홈쇼핑"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hki_sns, title: "건강기능식품 정보 얻는 곳 — SNS(블로그·유튜브 등)", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^SNS"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hki_tv, title: "건강기능식품 정보 얻는 곳 — TV·라디오·신문잡지 광고", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^TV"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_vit, title: "가장 많이 사는 건강기능식품 — 비타민 및 무기질", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^비타민 및 무기질$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_probio, title: "가장 많이 사는 건강기능식품 — 유산균류", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^유산균류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_gins, title: "가장 많이 사는 건강기능식품 — 인삼류(홍삼 포함)", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^인삼류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_epa, title: "가장 많이 사는 건강기능식품 — EPA·DHA 함유 유지(오메가3)", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^EPA 및 DHA"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_lutein, title: "가장 많이 사는 건강기능식품 — 루테인(마리골드꽃 추출물)", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^마리골드꽃"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_milk, title: "가장 많이 사는 건강기능식품 — 밀크씨슬", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^밀크씨슬$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_coll, title: "가장 많이 사는 건강기능식품 — 콜라겐", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^콜라겐$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_prot, title: "가장 많이 사는 건강기능식품 — 단백질", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^단백질$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkb_prop, title: "가장 많이 사는 건강기능식품 — 프로폴리스", tbl: DT_114053_069_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^프로폴리스$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_online, title: "건강기능식품 주 구입처 — 국내 온라인 쇼핑몰", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^국내 온라인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_mart, title: "건강기능식품 주 구입처 — 오프라인 대형마트", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^오프라인 대형마트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_pharm, title: "건강기능식품 주 구입처 — 약국", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^약국$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_tvhome, title: "건강기능식품 주 구입처 — TV 홈쇼핑", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^TV 홈쇼핑$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_visit, title: "건강기능식품 주 구입처 — 방문판매", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^방문판매$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkp_direct, title: "건강기능식품 주 구입처 — 해외 직구 사이트", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^해외 직구"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_qual, title: "건강기능식품 주 구입처를 고른 이유 — 품질 좋은 제품을 살 수 있어서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^우수한 품질"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_cheap, title: "건강기능식품 주 구입처를 고른 이유 — 값이 더 싸서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격이 더 저렴"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_event, title: "건강기능식품 주 구입처를 고른 이유 — 할인행사가 잦아서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^이벤트"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_trust, title: "건강기능식품 주 구입처를 고른 이유 — 유명하고 믿을 만해서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^유명하고 신뢰"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_near, title: "건강기능식품 주 구입처를 고른 이유 — 가깝거나 교통이 편해서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^거리가 가깝"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkr_recom, title: "건강기능식품 주 구입처를 고른 이유 — 주변 사람이 추천해서", tbl: DT_114053_071_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^주변사람이 추천"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_know, title: "건강기능식품을 알고 있다 — 전체", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_heard, title: "건강기능식품을 들어본 적은 있다 — 전체", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^들어본 적은 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_no, title: "건강기능식품을 모른다 — 전체", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^모른다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_y20, title: "건강기능식품을 알고 있다 — 20대", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^20대$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_y60, title: "건강기능식품을 알고 있다 — 60대 이상", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^60대 이상$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkc_eup, title: "건강기능식품을 알고 있다 — 읍면", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^읍면$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

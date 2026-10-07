@@ -12307,6 +12307,29 @@ sources:
       - {id: hkc_y20, title: "건강기능식품을 알고 있다 — 20대", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^20대$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkc_y60, title: "건강기능식품을 알고 있다 — 60대 이상", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^60대 이상$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkc_eup, title: "건강기능식품을 알고 있다 — 읍면", tbl: DT_114053_121_2019, org: "114", periods: 3, itm: ".", want: ["^읍면$", "^알고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkx_vit, title: "최근 1년 건강기능식품 구입 경험 있음 — 비타민 및 무기질", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입있음$", "^비타민 및 무기질$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkx_probio, title: "최근 1년 건강기능식품 구입 경험 있음 — 유산균류", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입있음$", "^유산균류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkx_gins, title: "최근 1년 건강기능식품 구입 경험 있음 — 인삼류(홍삼 포함)", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입있음$", "^인삼류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkx_epa, title: "최근 1년 건강기능식품 구입 경험 있음 — EPA·DHA 함유 유지(오메가3)", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입있음$", "^EPA 및 DHA"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkx_prot, title: "최근 1년 건강기능식품 구입 경험 있음 — 단백질", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입있음$", "^단백질$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkv_vit, title: "최근 1년 건강기능식품 구입 변화(5점, 3=비슷) — 비타민 및 무기질", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$", "^비타민 및 무기질$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkv_probio, title: "최근 1년 건강기능식품 구입 변화(5점, 3=비슷) — 유산균류", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$", "^유산균류$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkv_gins, title: "최근 1년 건강기능식품 구입 변화(5점, 3=비슷) — 인삼류(홍삼 포함)", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$", "^인삼류$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkv_epa, title: "최근 1년 건강기능식품 구입 변화(5점, 3=비슷) — EPA·DHA 함유 유지(오메가3)", tbl: DT_114053_066_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$", "^EPA 및 DHA"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hka_price, title: "건강기능식품 구입 시 우선 확인 — 가격", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_vol, title: "건강기능식품 구입 시 우선 확인 — 용량", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^용량$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_brand, title: "건강기능식품 구입 시 우선 확인 — 브랜드·제조사", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^브랜드"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_date, title: "건강기능식품 구입 시 우선 확인 — 제조일자·소비기한", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^제조일자"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_cert, title: "건강기능식품 구입 시 우선 확인 — 품질인증표시", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^품질인증표시$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_origin, title: "건강기능식품 구입 시 우선 확인 — 원산지", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_nutr, title: "건강기능식품 구입 시 우선 확인 — 영양성분", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^영양성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_add, title: "건강기능식품 구입 시 우선 확인 — 식품첨가물", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^식품첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_raw, title: "건강기능식품 구입 시 우선 확인 — 원재료·성분 함량", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^원재료"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_func, title: "건강기능식품 구입 시 우선 확인 — 기능성 표시·효능", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^기능성 표시"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_warn, title: "건강기능식품 구입 시 우선 확인 — 섭취주의사항", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^섭취주의사항"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_review, title: "건강기능식품 구입 시 우선 확인 — 구매후기·평점", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구매후기"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_design, title: "건강기능식품 구입 시 우선 확인 — 포장 디자인", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^포장 디자인$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hka_store, title: "건강기능식품 구입 시 우선 확인 — 보관방법", tbl: DT_114053_067_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^보관방법$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

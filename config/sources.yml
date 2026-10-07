@@ -12420,6 +12420,34 @@ sources:
       - {id: tqe_safe, title: "알가공품 소비 트렌드 동조 — 원료 품질·안전성이 확보된 제품을 산다", tbl: DT_114053_123_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^알가공품$", "^원료의 품질"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: tqe_new, title: "알가공품 소비 트렌드 동조 — 다양하고 새로운 맛의 제품을 산다", tbl: DT_114053_123_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^알가공품$", "^다양하고"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: tqe_conv, title: "알가공품 소비 트렌드 동조 — 소포장·조리 간편 제품을 산다", tbl: DT_114053_123_2019, org: "114", periods: 3, itm: ".", want: ["^전체$", "^알가공품$", "^소포장"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fsq_chest, title: 생산한 밤을 저장하는 임가 비율, tbl: DT_136022_9810, org: "136", itm: "^값$", want: ["^있다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsq_chest_ful, title: 생산한 밤을 저장하는 전업 임가 비율, tbl: DT_136022_9810, org: "136", itm: "^값$", want: ["^있다$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsq_chest_par, title: 생산한 밤을 저장하는 겸업 임가 비율, tbl: DT_136022_9810, org: "136", itm: "^값$", want: ["^있다$", "^겸업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsq_pers, title: 생산한 감을 저장하는 임가 비율, tbl: DT_136022_10049, org: "136", itm: "^값$", want: ["^있다$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsq_jujube, title: 생산한 대추를 저장하는 임가 비율, tbl: DT_136022_10156, org: "136", itm: "^값$", want: ["^있다$", "^대추재배업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsq_walnut, title: 생산한 호두를 저장하는 임가 비율, tbl: DT_136022_10156, org: "136", itm: "^값$", want: ["^있다$", "^호두재배업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsj_chest_simple, title: "밤 저장 목적 — 수확기에 단순 저장", tbl: DT_136022_9812, org: "136", itm: "^값$", want: ["^수확기에 단순 저장$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsj_chest_timing, title: "밤 저장 목적 — 출하시기 조절", tbl: DT_136022_9812, org: "136", itm: "^값$", want: ["^출하시기 조절", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsj_chest_stock, title: "밤 저장 목적 — 판매하지 못한 재고", tbl: DT_136022_9812, org: "136", itm: "^값$", want: ["^판매하지 못해서", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsj_pers_simple, title: "감 저장 목적 — 수확기에 단순 저장", tbl: DT_136022_10046, org: "136", itm: "^값$", want: ["^수확기에 단순 저장$", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: fsj_pers_timing, title: "감 저장 목적 — 출하시기 조절", tbl: DT_136022_10046, org: "136", itm: "^값$", want: ["^출하시기 조절", "^전체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: wfv_all, title: 외식업체 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_kor, title: 한식 음식점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^한식$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_chn, title: 중식 음식점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^중식$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_jpn, title: 일식 음식점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^일식$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_wst, title: 서양식 음식점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^서양식$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_cant, title: 기관 구내식당 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^기관 구내식당업$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_chk, title: 치킨 전문점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^치킨 전문점$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_bak, title: 제과점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^제과점$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfv_caf, title: 비알코올 음료점 월평균 음식물 쓰레기 발생량, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^비알코올 음료점업$", "^평균$"], codes: {C2: "^C0106$"}, unit: 리터, survey: 외식업체 경영실태조사}
+      - {id: wfc_all, title: 외식업체 월평균 음식물 쓰레기 처리비용, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], codes: {C2: "^C0207$"}, unit: 만원, survey: 외식업체 경영실태조사}
+      - {id: wfc_fran, title: 프랜차이즈 외식업체 월평균 음식물 쓰레기 처리비용, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^프랜차이즈$", "^평균$"], codes: {C2: "^C0207$"}, unit: 만원, survey: 외식업체 경영실태조사}
+      - {id: wfc_nfran, title: 비프랜차이즈 외식업체 월평균 음식물 쓰레기 처리비용, tbl: DT_114054_097, org: "114", periods: 3, itm: ".", want: ["^비프랜차이즈$", "^평균$"], codes: {C2: "^C0207$"}, unit: 만원, survey: 외식업체 경영실태조사}
+      - {id: sqp_fishcake, title: 최근 1년 어육가공품(어묵·맛살 등) 구입 경험, tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^어육가공품$", "^구입 있음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: sqp_can, title: 최근 1년 수산물통조림 구입 경험, tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^수산물통조림$", "^구입 있음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: sqp_jeot, title: 최근 1년 젓갈류 구입 경험, tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^젓갈류$", "^구입 있음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: sqp_seaweed, title: 최근 1년 해조가공품(조미김 등) 구입 경험, tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^해조가공품$", "^구입 있음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: sqp_dried, title: 최근 1년 염건수산동물(건오징어·멸치 등) 구입 경험, tbl: DT_114053_019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^염건수산동물$", "^구입 있음$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -13345,6 +13345,28 @@ sources:
       - {id: hsk_avg, title: "산채·약초 재배 임가의 재고량 — 평균", tbl: DT_136022_9920, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "kg", survey: 임업경영실태조사}
       - {id: hsk_veg, title: "산채·약초 재배 임가의 재고 보유 — 산채 재배업", tbl: DT_136022_9920, org: "136", periods: 3, itm: "^값$", want: ["^산채 재배업$", "^있다$"], unit: "%", survey: 임업경영실태조사}
       - {id: hsk_herb, title: "산채·약초 재배 임가의 재고 보유 — 약용식물 재배업", tbl: DT_136022_9920, org: "136", periods: 3, itm: "^값$", want: ["^약용식물 재배업$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hpr_vf_p, title: "산채·약초 재배 임가 1가구당 생채 산채 생산량", tbl: DT_136022_9891, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vf_sr, title: "산채·약초 재배 임가 1가구당 생채 산채 판매량(원물)", tbl: DT_136022_9891, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량원물$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vf_sp, title: "산채·약초 재배 임가 1가구당 생채 산채 판매량(가공)", tbl: DT_136022_9891, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량가공$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vf_ir, title: "산채·약초 재배 임가 1가구당 생채 산채 판매수입(원물)", tbl: DT_136022_9891, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익원물$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_vf_ip, title: "산채·약초 재배 임가 1가구당 생채 산채 판매수입(가공)", tbl: DT_136022_9891, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익가공$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_vd_p, title: "산채·약초 재배 임가 1가구당 건채 산채 생산량", tbl: DT_136022_9908, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vd_sr, title: "산채·약초 재배 임가 1가구당 건채 산채 판매량(원물)", tbl: DT_136022_9908, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량원물$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vd_sp, title: "산채·약초 재배 임가 1가구당 건채 산채 판매량(가공)", tbl: DT_136022_9908, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량가공$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_vd_ir, title: "산채·약초 재배 임가 1가구당 건채 산채 판매수입(원물)", tbl: DT_136022_9908, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익원물$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_vd_ip, title: "산채·약초 재배 임가 1가구당 건채 산채 판매수입(가공)", tbl: DT_136022_9908, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익가공$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_mf_p, title: "산채·약초 재배 임가 1가구당 생채 약용식물 생산량", tbl: DT_136022_9916, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_mf_sr, title: "산채·약초 재배 임가 1가구당 생채 약용식물 판매량(원물)", tbl: DT_136022_9916, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량원물$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_mf_sp, title: "산채·약초 재배 임가 1가구당 생채 약용식물 판매량(가공)", tbl: DT_136022_9916, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량가공$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_mf_ir, title: "산채·약초 재배 임가 1가구당 생채 약용식물 판매수입(원물)", tbl: DT_136022_9916, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익원물$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_mf_ip, title: "산채·약초 재배 임가 1가구당 생채 약용식물 판매수입(가공)", tbl: DT_136022_9916, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익가공$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_md_p, title: "산채·약초 재배 임가 1가구당 건채 약용식물 생산량", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_md_sr, title: "산채·약초 재배 임가 1가구당 건채 약용식물 판매량(원물)", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량원물$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_md_sp, title: "산채·약초 재배 임가 1가구당 건채 약용식물 판매량(가공)", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량가공$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: hpr_md_ir, title: "산채·약초 재배 임가 1가구당 건채 약용식물 판매수입(원물)", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익원물$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hpr_md_ip, title: "산채·약초 재배 임가 1가구당 건채 약용식물 판매수입(가공)", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익가공$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: hss_yes, title: "산채·약초 재배 임가의 산양삼 생산 판매 여부 — 판매함", tbl: DT_136022_9926, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매함$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hss_no, title: "산채·약초 재배 임가의 산양삼 생산 판매 여부 — 판매하지 않음", tbl: DT_136022_9926, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매하지 않음$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

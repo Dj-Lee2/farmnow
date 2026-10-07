@@ -13521,6 +13521,35 @@ sources:
       - {id: ajb_new, title: "농림어업 신규일자리", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^신규일자리$"], unit: 만개, survey: 일자리행정통계}
       - {id: ajb_born, title: "농림어업 신규일자리 · 기업생성", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^기업생성$"], unit: 만개, survey: 일자리행정통계}
       - {id: ajb_exp, title: "농림어업 신규일자리 · 사업확장", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^사업확장$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ffr_n, title: "산불 발생 건수", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^건수$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_area, title: "산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_vol, title: "산불 피해 재적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^재적$"], unit: ㎥, survey: 산림청 산불통계}
+      - {id: ffr_dmg, title: "산불 피해액", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^피해액$"], unit: 천원, survey: 산림청 산불통계}
+      - {id: ffr_dead, title: "산불 사망자", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^사망$"], unit: 명, survey: 산림청 산불통계}
+      - {id: ffr_inj, title: "산불 부상자", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^부상$"], unit: 명, survey: 산림청 산불통계}
+      - {id: ffr_c_hike, title: "산불 원인 — 입산자실화", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^입산자실화$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_field, title: "산불 원인 — 논밭두렁등소각", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^논밭두렁등소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_trash, title: "산불 원인 — 쓰레기소각", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^쓰레기소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_cig, title: "산불 원인 — 담뱃불실화", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^담뱃불실화$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_grave, title: "산불 원인 — 성묘객실화", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^성묘객실화$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_bldg, title: "산불 원인 — 건축물화재", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^건축물화재$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_kid, title: "산불 원인 — 어린이불장난", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^어린이불장난$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_c_etc, title: "산불 원인 — 기타", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^총계$", "^기타$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffr_a_gb, title: "경북 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^경상북도$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_gn, title: "경남 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^경상남도$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_us, title: "울산 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^울산광역시$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_gw, title: "강원 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^강원", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_cn, title: "충남 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^충청남도$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_jn, title: "전남 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^전라남도$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffr_a_gg, title: "경기 산불 피해 면적", tbl: TX_13601_A020, org: "136", periods: 6, itm: "^산불피해$", want: ["^경기도$", "^면적$"], unit: ha, survey: 산림청 산불통계}
+      - {id: ffa_n, title: "산불 발생 건수 10년 평균", tbl: TX_13625_A000, org: "136", periods: 6, itm: "^건수$", want: ["^10년 평균$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffa_area, title: "산불 피해 면적 10년 평균", tbl: TX_13625_A000, org: "136", periods: 6, itm: "^면적$", want: ["^10년 평균$"], unit: ha, survey: 산림청 산불통계}
+      - {id: nrd_total, title: "국가 전체 연구개발비", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^총계$", "^연구개발비$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: nrd_agri, title: "농업 목적 연구개발비", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^총계$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: nrd_env, title: "환경 목적 연구개발비", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^총계$", "^환경$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: nrd_agri_pub, title: "농업 목적 연구개발비 · 공공연구기관", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^공공연구기관$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: nrd_agri_univ, title: "농업 목적 연구개발비 · 대학", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^대학$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: nrd_agri_biz, title: "농업 목적 연구개발비 · 기업체", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^기업체$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

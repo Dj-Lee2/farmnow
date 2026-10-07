@@ -13446,6 +13446,29 @@ sources:
       - {id: chpf_adj, title: "춘천 복숭아 홍수출하 대비 · 그 외 출하시기 조정", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^그 외 출하시기 조정"], unit: "%", survey: 춘천시 전략작물 실태조사}
       - {id: chpf_dry, title: "춘천 복숭아 홍수출하 대비 · 건조", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^건조$"], unit: "%", survey: 춘천시 전략작물 실태조사}
       - {id: chpf_proc, title: "춘천 복숭아 홍수출하 대비 · 건조이외 가공", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^건조이외 가공"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_vt_side, title: "춘천 토마토 농가 환기시설 · 측창", tbl: DT_651006_C005, org: "651", periods: 3, itm: "^토마토 재배 환기시설 설치 현황$", want: ["^전체$", "^측창$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_vt_roof, title: "춘천 토마토 농가 환기시설 · 천창", tbl: DT_651006_C005, org: "651", periods: 3, itm: "^토마토 재배 환기시설 설치 현황$", want: ["^전체$", "^천창$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_vt_fan, title: "춘천 토마토 농가 환기시설 · 강제환기장치", tbl: DT_651006_C005, org: "651", periods: 3, itm: "^토마토 재배 환기시설 설치 현황$", want: ["^전체$", "^강제환기장치$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_vt_conv, title: "춘천 토마토 농가 환기시설 · 대류 휀", tbl: DT_651006_C005, org: "651", periods: 3, itm: "^토마토 재배 환기시설 설치 현황$", want: ["^전체$", "^대류 휀$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_md_sub, title: "춘천 토마토 현대화에 필요한 지원 · 자금보조", tbl: DT_651006_C007, org: "651", periods: 3, itm: "^토마토 영농 현대화\\(기계화\\)를 위해 필요한 지원 사업$", want: ["^전체$", "^자금보조$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_md_loan, title: "춘천 토마토 현대화에 필요한 지원 · 자금대출", tbl: DT_651006_C007, org: "651", periods: 3, itm: "^토마토 영농 현대화\\(기계화\\)를 위해 필요한 지원 사업$", want: ["^전체$", "^자금대출$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_md_rent, title: "춘천 토마토 현대화에 필요한 지원 · 임대사업", tbl: DT_651006_C007, org: "651", periods: 3, itm: "^토마토 영농 현대화\\(기계화\\)를 위해 필요한 지원 사업$", want: ["^전체$", "^임대사업$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_md_coop, title: "춘천 토마토 현대화에 필요한 지원 · 공동이용조직", tbl: DT_651006_C007, org: "651", periods: 3, itm: "^토마토 영농 현대화\\(기계화\\)를 위해 필요한 지원 사업$", want: ["^전체$", "^공동이용조직$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_md_no, title: "춘천 토마토 현대화에 필요한 지원 · 필요없음", tbl: DT_651006_C007, org: "651", periods: 3, itm: "^토마토 영농 현대화\\(기계화\\)를 위해 필요한 지원 사업$", want: ["^전체$", "^필요없음$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_mc_mgr, title: "춘천 토마토 농가 농기계 보유율 · 관리기", tbl: DT_651006_C006, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^관리기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_mc_till, title: "춘천 토마토 농가 농기계 보유율 · 경운기", tbl: DT_651006_C006, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^경운기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_mc_trac, title: "춘천 토마토 농가 농기계 보유율 · 트랙터", tbl: DT_651006_C006, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^트랙터$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_mc_truck, title: "춘천 토마토 농가 농기계 보유율 · 화물트럭", tbl: DT_651006_C006, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^화물트럭$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_mc_spray, title: "춘천 토마토 농가 농기계 보유율 · 살분무기", tbl: DT_651006_C006, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^살분무기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_mgr, title: "춘천 복숭아 농가 농기계 보유율 · 관리기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^관리기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_till, title: "춘천 복숭아 농가 농기계 보유율 · 경운기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^경운기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_trac, title: "춘천 복숭아 농가 농기계 보유율 · 트랙터", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^트랙터$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_truck, title: "춘천 복숭아 농가 농기계 보유율 · 화물트럭", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^화물트럭$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_spray, title: "춘천 복숭아 농가 농기계 보유율 · 살분무기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^살분무기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_ss, title: "춘천 복숭아 농가 농기계 보유율 · SS기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^SS기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpm_sort, title: "춘천 복숭아 농가 농기계 보유율 · 선별기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^선별기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpk_exp, title: "춘천 복숭아 농가 경영주 평균 농업 경력", tbl: DT_651006_K002, org: "651", periods: 3, itm: "^경영주 농업 경력$", want: ["^전체$", "^평균$"], unit: 년, survey: 춘천시 전략작물 실태조사}
+      - {id: chpk_area, title: "춘천 복숭아 농가 평균 경작 면적", tbl: DT_651006_L001, org: "651", periods: 3, itm: "^소유형태별 경작 면적$", want: ["^전체$", "^합계$", "^평균$"], unit: a, survey: 춘천시 전략작물 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

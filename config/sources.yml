@@ -12218,6 +12218,36 @@ sources:
       - {id: pck_bev, title: "음료류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pck_alc, title: "주류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pck_hmr, title: "간편식(HMR) 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_yes, title: "건강기능식품을 지금 먹고 있다 — 전체", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^전체$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_dong, title: "건강기능식품을 지금 먹고 있다 — 동 지역", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^동$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_eup, title: "건강기능식품을 지금 먹고 있다 — 읍면 지역", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^읍면$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_m, title: "건강기능식품을 지금 먹고 있다 — 남성", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^남성$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_f, title: "건강기능식품을 지금 먹고 있다 — 여성", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^여성$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_y20, title: "건강기능식품을 지금 먹고 있다 — 20대", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^20대$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_y30, title: "건강기능식품을 지금 먹고 있다 — 30대", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^30대$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_y40, title: "건강기능식품을 지금 먹고 있다 — 40대", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^40대$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_y50, title: "건강기능식품을 지금 먹고 있다 — 50대", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^50대$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_y60, title: "건강기능식품을 지금 먹고 있다 — 60대 이상", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^60대 이상$", "^먹고 있다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkt_no, title: "건강기능식품을 지금 먹고 있지 않다 — 전체", tbl: DT_114053_074, org: "114", periods: 3, itm: ".", want: ["^전체$", "^먹고 있지 않다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_grow, title: "건강기능식품을 먹는 이유 — 성장 발달", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^성장 발달"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_cure, title: "건강기능식품을 먹는 이유 — 질병 치료", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^질병치료"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_learn, title: "건강기능식품을 먹는 이유 — 학습능력 개선", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^학습능력"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_prev, title: "건강기능식품을 먹는 이유 — 질병 예방", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^질병예방"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_beauty, title: "건강기능식품을 먹는 이유 — 미용(피부·체중조절)", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^미용효과"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_fatig, title: "건강기능식품을 먹는 이유 — 피로 회복", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^피로회복"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkw_health, title: "건강기능식품을 먹는 이유 — 건강(체력) 증진", tbl: DT_114053_076, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강\\(체력\\)증진"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hks_avg, title: "최근 1년 건강기능식품 지출액 평균", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], codes: {C2: "^J08$"}, unit: "원", survey: 가공식품소비자태도조사}
+      - {id: hks_u5, title: "최근 1년 건강기능식품 지출 5만원 미만", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "만원"], codes: {C2: "^J0(11|3)$"}, sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hks_510, title: "최근 1년 건강기능식품 지출 5만~10만원", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "만원"], codes: {C2: "^J04$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hks_1015, title: "최근 1년 건강기능식품 지출 10만~15만원", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "만원"], codes: {C2: "^J05$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hks_1520, title: "최근 1년 건강기능식품 지출 15만~20만원", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "만원"], codes: {C2: "^J06$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hks_20up, title: "최근 1년 건강기능식품 지출 20만원 이상", tbl: DT_114053_070, org: "114", periods: 3, itm: ".", want: ["^전체$", "만원"], codes: {C2: "^J07$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkg_gift, title: "산 건강기능식품 중 선물용 비중 평균", tbl: DT_114053_068, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], codes: {C2: "^K09$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkg_home, title: "산 건강기능식품 중 가구 섭취용 비중 평균", tbl: DT_114053_068, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], codes: {C2: "^K15$"}, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hko_up, title: "향후 1년 건강기능식품 구입 늘릴 것", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^(약간|매우) 증가할 것이다$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hko_keep, title: "향후 1년 건강기능식품 구입 현 수준 유지", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^현 수준을 유지할 것이다$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hko_down, title: "향후 1년 건강기능식품 구입 줄일 것", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^(약간|매우) 감소할 것이다$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hko_avg, title: "향후 1년 건강기능식품 구입 변화 예상(5점 만점)", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -12907,6 +12907,42 @@ sources:
       - {id: fcw_shl, title: "원목표고(노지) 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
       - {id: fcw_ddk, title: "더덕 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^더덕$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
       - {id: fcw_drj, title: "도라지 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^도라지$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      # 농축산식품산업 실태조사 2024(DT_114056_2024_*): 업종별 사업체 수·종사자·수출입 여부·업황·경영 애로
+      - {id: bzs_all, title: "농축산식품산업 사업체 수(전체)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^전체$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_inp, title: "농축산식품산업 사업체 수(농산업 투입재)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농산업 투입재 산업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_prod, title: "농축산식품산업 사업체 수(작물재배·축산)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_mfg, title: "농축산식품산업 사업체 수(농식품 제조)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농식품 및 관련 제품 제조업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_trade, title: "농축산식품산업 사업체 수(농식품 도소매)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농식품 동물 및 관련 도소매업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_trans, title: "농축산식품산업 사업체 수(농식품 운송)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농식품 동물 운송 및 관련 서비스업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_rest, title: "농축산식품산업 사업체 수(음식점·주점)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^음식점 및 주점업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_leis, title: "농축산식품산업 사업체 수(숙박·여가·치유)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농산업 관련 숙박 여가 및 치유 서비스업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzs_svc, title: "농축산식품산업 사업체 수(농산업 기타 서비스)", tbl: DT_114056_2024_0001, org: "114", se: F, periods: 1, itm: "^사업체수$", want: ["^농산업 관련 기타 서비스업$"], unit: "개", survey: 농축산식품산업 실태조사}
+      - {id: bzw_all, title: "농축산식품산업 종사자 수(전체)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^전체$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_inp, title: "농축산식품산업 종사자 수(농산업 투입재)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농산업 투입재 산업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_prod, title: "농축산식품산업 종사자 수(작물재배·축산)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_mfg, title: "농축산식품산업 종사자 수(농식품 제조)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농식품 및 관련 제품 제조업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_trade, title: "농축산식품산업 종사자 수(농식품 도소매)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농식품 동물 및 관련 도소매업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_trans, title: "농축산식품산업 종사자 수(농식품 운송)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농식품 동물 운송 및 관련 서비스업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_rest, title: "농축산식품산업 종사자 수(음식점·주점)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^음식점 및 주점업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_leis, title: "농축산식품산업 종사자 수(숙박·여가·치유)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농산업 관련 숙박 여가 및 치유 서비스업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzw_svc, title: "농축산식품산업 종사자 수(농산업 기타 서비스)", tbl: DT_114056_2024_0009, org: "114", se: F, periods: 1, itm: "^연간 종사자$", want: ["^농산업 관련 기타 서비스업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzx_all, title: "수출하는 농축산식품 사업체 비율(전체)", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수출$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_inp, title: "수출하는 농축산식품 사업체 비율(농산업 투입재)", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수출$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_prod, title: "수출하는 농축산식품 사업체 비율(작물재배·축산)", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수출$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_mfg, title: "수출하는 농축산식품 사업체 비율(농식품 제조)", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수출$", want: ["^농식품 및 관련 제품 제조업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_svc, title: "수출하는 농축산식품 사업체 비율(농산업 기타 서비스)", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수출$", want: ["^농산업 관련 기타 서비스업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_imp, title: "수입하는 농축산식품 사업체 비율", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^수입$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzx_none, title: "수출·수입 모두 없는 농축산식품 사업체 비율", tbl: DT_114056_2024_0028, org: "114", se: F, periods: 1, itm: "^해외 수출.수입 모두 없음$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzk_down, title: "작년보다 올해 업황 악화", tbl: DT_114056_2024_0032, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzk_same, title: "작년보다 올해 업황 동일", tbl: DT_114056_2024_0032, org: "114", se: F, periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzk_up, title: "작년보다 올해 업황 개선", tbl: DT_114056_2024_0032, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_raw, title: "경영 애로 1순위 — 원자재 가격 상승", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^원자재 가격 상승$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_econ, title: "경영 애로 1순위 — 경기 변동의 영향", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^경기 변동의 영향$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_tax, title: "경영 애로 1순위 — 금융 및 세제 부담", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^금융 및 세제 부담$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_fund, title: "경영 애로 1순위 — 자금조달의 어려움", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^자금조달의 어려움$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_pay, title: "경영 애로 1순위 — 판매대금 회수의 지연", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^판매대금 회수의 지연$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_hire, title: "경영 애로 1순위 — 인력 채용의 어려움", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^인력 채용의 어려움$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzp_reg, title: "경영 애로 1순위 — 각종 규제 문제", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^각종 규제 문제$"], unit: "%", survey: 농축산식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

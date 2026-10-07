@@ -11991,6 +11991,41 @@ sources:
       - {id: creg_none, title: "귀촌 가구 등록 사항 — 등록 사항 없음", tbl: DT_114055_B004, org: "114", itm: "^등록 사항$", want: ["^등록 완료$", "^없음$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: creg_ing_fbo, title: "귀촌 가구 등록 사항 — 농업경영체 등록 중", tbl: DT_114055_B004, org: "114", itm: "^등록 사항$", want: ["^등록 중$", "^농업경영체$"], unit: "%", survey: 귀농귀촌실태조사}
       - {id: creg_ing_flr, title: "귀촌 가구 등록 사항 — 농지대장 등록 중", tbl: DT_114055_B004, org: "114", itm: "^등록 사항$", want: ["^등록 중$", "^농지대장"], unit: "%", survey: 귀농귀촌실태조사}
+      - {id: pco_meat, title: "육류·알가공품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_sea, title: "조미·염건 수산가공품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_kim, title: "김치·절임류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_jang, title: "장류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_oil, title: "유지류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_milk, title: "유가공품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_brd, title: "빵·떡류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_snk, title: "과자류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_ndl, title: "면류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_grn, title: "곡물가공품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_tofu, title: "연식품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_sauce, title: "조미식품 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_cof, title: "커피·차 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_bev, title: "음료류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_alc, title: "주류 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pco_hmr, title: "간편식(HMR) 살 때 원산지를 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_meat, title: "육류·알가공품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_sea, title: "조미·염건 수산가공품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_kim, title: "김치·절임류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_jang, title: "장류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_oil, title: "유지류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_milk, title: "유가공품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_brd, title: "빵·떡류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_snk, title: "과자류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_ndl, title: "면류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_grn, title: "곡물가공품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_tofu, title: "연식품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_sauce, title: "조미식품 살 때 가격을 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_cof, title: "커피·차 살 때 가격을 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_bev, title: "음료류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_alc, title: "주류 살 때 가격을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcp_hmr, title: "간편식(HMR) 살 때 가격을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcok_y, title: "김치·절임류 살 때 원산지를 가장 먼저 확인 — 30대", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^30대$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcok_m, title: "김치·절임류 살 때 원산지를 가장 먼저 확인 — 50대", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^50대$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcok_o, title: "김치·절임류 살 때 원산지를 가장 먼저 확인 — 60대 이상", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^60대 이상$", "^원산지$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

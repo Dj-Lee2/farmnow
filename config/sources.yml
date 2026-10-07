@@ -12090,6 +12090,38 @@ sources:
       - {id: pcm_bev, title: "음료류 살 때 브랜드·제조사를 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^브랜드/상표/제조사$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pcm_alc, title: "주류 살 때 브랜드·제조사를 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^브랜드/상표/제조사$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pcm_hmr, title: "간편식(HMR) 살 때 브랜드·제조사를 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^브랜드/상표/제조사$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_meat, title: "육류·알가공품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_sea, title: "조미·염건 수산가공품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_kim, title: "김치·절임류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_jang, title: "장류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_oil, title: "유지류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_milk, title: "유가공품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_brd, title: "빵·떡류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_snk, title: "과자류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_ndl, title: "면류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_grn, title: "곡물가공품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_tofu, title: "연식품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_sauce, title: "조미식품 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_cof, title: "커피·차 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_bev, title: "음료류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_alc, title: "주류 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pce_hmr, title: "간편식(HMR) 살 때 영양성분을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양 ?성분$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_meat, title: "육류·알가공품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_sea, title: "조미·염건 수산가공품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_kim, title: "김치·절임류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_jang, title: "장류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_oil, title: "유지류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_milk, title: "유가공품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_brd, title: "빵·떡류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_snk, title: "과자류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_ndl, title: "면류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_grn, title: "곡물가공품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_tofu, title: "연식품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_sauce, title: "조미식품 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_cof, title: "커피·차 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_bev, title: "음료류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_alc, title: "주류 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pca_hmr, title: "간편식(HMR) 살 때 식품첨가물을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^식품 ?첨가물$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

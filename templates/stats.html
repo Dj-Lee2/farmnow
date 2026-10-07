@@ -2558,7 +2558,7 @@
   {{ card('bzx_none', 'bzb3', '대부분 내수만 하는 사업체', '#7a5c3a') }}
   {{ card('bzk_down', 'bzb4', '작년 대비 올해 농축산식품 분야 업황이 나빠졌다는 응답', '#d0672a') }}
   {{ card('bzk_same', 'bzb5', '작년과 비슷하다는 응답', '#7a5c3a') }}
-  {{ card('bzk_up', 'bzb6', '좋아졌다는 응답 · 악화 응답의 약 ' ~ '{:.1f}'.format(K.bzk_down.vals[-1] / K.bzk_up.vals[-1]) ~ '배가 나빠졌다고 봄' if K.bzk_down and K.bzk_up and K.bzk_up.vals[-1] else none, '#1c7a45') }}
+  {{ card('bzk_up', 'bzb6', '좋아졌다는 응답 · 나빠졌다는 응답이 이보다 ' ~ '{:.1f}'.format(K.bzk_down.vals[-1] / K.bzk_up.vals[-1]) ~ '배 많음' if K.bzk_down and K.bzk_up and K.bzk_up.vals[-1] else none, '#1c7a45') }}
   {{ hcard('업종별 수출하는 사업체 비율', [('농식품 제조', K.bzx_mfg), ('농산업 투입재', K.bzx_inp), ('작물재배·축산', K.bzx_prod), ('농산업 기타 서비스', K.bzx_svc)], '%', '도소매·운송·음식점·숙박·여가는 0.0%', none, '#1c7a45') }}
   {{ hcard('경영 분야 가장 큰 애로(1순위)', [('원자재 가격 상승', K.bzp_raw), ('경기 변동의 영향', K.bzp_econ), ('금융·세제 부담', K.bzp_tax), ('자금조달의 어려움', K.bzp_fund), ('판매대금 회수 지연', K.bzp_pay), ('인력 채용의 어려움', K.bzp_hire), ('각종 규제', K.bzp_reg)], '%', '전체 사업체 중 하나만 응답', none, '#d0672a') }}
  </div>

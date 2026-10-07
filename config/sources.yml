@@ -12761,6 +12761,41 @@ sources:
       - {id: ihf_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_10146, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
       - {id: ifi_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_10147, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
       - {id: ifl_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_10147, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sfo_frn_m, title: "고사리(산지재배) 1ha당 유기질 비료비", tbl: DT_136036_11541, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_frn_f, title: "고사리(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11542, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_dur_m, title: "두릅(산지재배) 1ha당 유기질 비료비", tbl: DT_136036_11551, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_dur_f, title: "두릅(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11552, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_smn_m, title: "산마늘(산지재배) 1ha당 유기질 비료비", tbl: DT_136036_11558, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_smn_f, title: "산마늘(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11559, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_wch_f, title: "원추리(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11568, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_cha_f, title: "참취(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11575, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_cha_g, title: "참취(시설재배) 1ha당 유기질 비료비", tbl: DT_136036_11576, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfo_cnm_g, title: "참나물(시설재배) 1ha당 유기질 비료비", tbl: DT_136036_11597, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_frn_m, title: "고사리(산지재배) 1ha당 소득", tbl: DT_136036_11541, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_frn_f, title: "고사리(노지재배) 1ha당 소득", tbl: DT_136036_11542, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_dur_m, title: "두릅(산지재배) 1ha당 소득", tbl: DT_136036_11551, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_dur_f, title: "두릅(노지재배) 1ha당 소득", tbl: DT_136036_11552, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_smn_m, title: "산마늘(산지재배) 1ha당 소득", tbl: DT_136036_11558, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_smn_f, title: "산마늘(노지재배) 1ha당 소득", tbl: DT_136036_11559, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_wch_f, title: "원추리(노지재배) 1ha당 소득", tbl: DT_136036_11568, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_cha_f, title: "참취(노지재배) 1ha당 소득", tbl: DT_136036_11575, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_cha_g, title: "참취(시설재배) 1ha당 소득", tbl: DT_136036_11576, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfi_cnm_g, title: "참나물(시설재배) 1ha당 소득", tbl: DT_136036_11597, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_mt_mok, title: "목이버섯 1만 봉당 재료비", tbl: DT_136036_11596, org: "136", itm: "^값$", want: ["^재료비$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_ut_mok, title: "목이버섯 1만 봉당 수도광열비", tbl: DT_136036_11596, org: "136", itm: "^값$", want: ["^수도광열비$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_mt_sws, title: "톱밥배지표고 1만 봉당 재료비", tbl: DT_136036_11592, org: "136", itm: "^값$", want: ["^재료비$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_ut_sws, title: "톱밥배지표고 1만 봉당 수도광열비", tbl: DT_136036_11592, org: "136", itm: "^값$", want: ["^수도광열비$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_frn_m, title: "고사리(산지재배) 1ha당 무기질 비료비", tbl: DT_136036_11541, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_frn_f, title: "고사리(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11542, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_dur_m, title: "두릅(산지재배) 1ha당 무기질 비료비", tbl: DT_136036_11551, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_dur_f, title: "두릅(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11552, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_smn_f, title: "산마늘(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11559, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_wch_f, title: "원추리(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11568, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_cha_f, title: "참취(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11575, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_cha_g, title: "참취(시설재배) 1ha당 무기질 비료비", tbl: DT_136036_11576, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sfm_cnm_g, title: "참나물(시설재배) 1ha당 무기질 비료비", tbl: DT_136036_11597, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_in_mok, title: "목이버섯 1만 봉당 소득", tbl: DT_136036_11596, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: mip_in_sws, title: "톱밥배지표고 1만 봉당 소득", tbl: DT_136036_11592, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

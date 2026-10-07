@@ -13550,6 +13550,37 @@ sources:
       - {id: nrd_agri_pub, title: "농업 목적 연구개발비 · 공공연구기관", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^공공연구기관$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
       - {id: nrd_agri_univ, title: "농업 목적 연구개발비 · 대학", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^대학$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
       - {id: nrd_agri_biz, title: "농업 목적 연구개발비 · 기업체", tbl: DT_KBA0099, org: "127", periods: 5, itm: "^연구수행주체별 연구개발비", want: ["^기업체$", "^농업$"], unit: 백만원, survey: 연구개발활동조사}
+      - {id: aqm_n, title: "양식업 기계화 조사 대상 어업경영자", tbl: DT_146010_30001, org: "146", periods: 3, itm: "^양식업 기계 활용 수준$", want: ["^전체$", "^어업경영자수$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqm_tool, title: "양식업 기계 활용 수준 · 도구화", tbl: DT_146010_30001, org: "146", periods: 3, itm: "^양식업 기계 활용 수준$", want: ["^전체$", "^도구화$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqm_mech, title: "양식업 기계 활용 수준 · 기계화", tbl: DT_146010_30001, org: "146", periods: 3, itm: "^양식업 기계 활용 수준$", want: ["^전체$", "^기계화$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqm_auto, title: "양식업 기계 활용 수준 · 자동화", tbl: DT_146010_30001, org: "146", periods: 3, itm: "^양식업 기계 활용 수준$", want: ["^전체$", "^자동화$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqm_smart, title: "양식업 기계 활용 수준 · 스마트화", tbl: DT_146010_30001, org: "146", periods: 3, itm: "^양식업 기계 활용 수준$", want: ["^전체$", "^스마트화$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_seed, title: "양식업 작업 단계별 기계화율 · 종묘입식", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^종묘입식$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_feed, title: "양식업 작업 단계별 기계화율 · 급이", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^급이$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_water, title: "양식업 작업 단계별 기계화율 · 수질관리", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^수질관리$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_dis, title: "양식업 작업 단계별 기계화율 · 질병관리", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^질병관리$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_grow, title: "양식업 작업 단계별 기계화율 · 생육관리", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^생육관리$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_oxy, title: "양식업 작업 단계별 기계화율 · 산소관리", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^산소관리$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqr_ship, title: "양식업 작업 단계별 기계화율 · 출하", tbl: DT_146010_30002, org: "146", periods: 3, itm: "^응답비율$", want: ["^전체$", "^출하$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aql_seed, title: "양식업 작업 단계별 노동 강도 · 종묘입식", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^종묘입식$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_feed, title: "양식업 작업 단계별 노동 강도 · 급이", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^급이$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_water, title: "양식업 작업 단계별 노동 강도 · 수질관리", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^수질관리$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_dis, title: "양식업 작업 단계별 노동 강도 · 질병관리", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^질병관리$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_grow, title: "양식업 작업 단계별 노동 강도 · 생육관리", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^생육관리$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_oxy, title: "양식업 작업 단계별 노동 강도 · 산소관리", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^산소관리$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aql_ship, title: "양식업 작업 단계별 노동 강도 · 출하", tbl: DT_146010_30003, org: "146", periods: 3, itm: "^척도 평균값$", want: ["^전체$", "^출하$"], unit: 점, survey: 양식업 기계화 실태조사}
+      - {id: aqh_feedr, title: "양식업 장비 보유율 · 자동 사료 공급기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^자동 사료 공급기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_mix, title: "양식업 장비 보유율 · 사료 배합기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^사료 배합기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_aer, title: "양식업 장비 보유율 · 수차(에어브로워)", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^수차"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_heat, title: "양식업 장비 보유율 · 히트펌프", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^히트펌프$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_filt, title: "양식업 장비 보유율 · 여과기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^여과기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_ster, title: "양식업 장비 보유율 · 살균소독기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^살균소독기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_envm, title: "양식업 장비 보유율 · 양식환경 모니터링 장비", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^양식환경 모니터링"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_cctv, title: "양식업 장비 보유율 · 영상 모니터링 장치", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^영상 모니터링"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_nori, title: "양식업 장비 보유율 · 김 채취기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^김 채취기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_norif, title: "양식업 장비 보유율 · 김발 뒤집기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^김발 뒤집기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_harv, title: "양식업 장비 보유율 · 수확기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^수확기$"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqh_wash, title: "양식업 장비 보유율 · 자동 세척기", tbl: DT_146010_30004, org: "146", periods: 3, itm: "^보유$", want: ["^자동 세척기$"], unit: "%", survey: 양식업 기계화 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

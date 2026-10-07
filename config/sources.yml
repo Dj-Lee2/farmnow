@@ -12186,6 +12186,38 @@ sources:
       - {id: pcg_bev, title: "음료류 살 때 포장 재활용 여부를 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?재활용"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pcg_alc, title: "주류 살 때 포장 재활용 여부를 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?재활용"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: pcg_hmr, title: "간편식(HMR) 살 때 포장 재활용 여부를 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?재활용"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_meat, title: "육류·알가공품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_sea, title: "조미·염건 수산가공품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_kim, title: "김치·절임류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_jang, title: "장류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_oil, title: "유지류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_milk, title: "유가공품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_brd, title: "빵·떡류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_snk, title: "과자류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_ndl, title: "면류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_grn, title: "곡물가공품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_tofu, title: "연식품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_sauce, title: "조미식품 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_cof, title: "커피·차 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_bev, title: "음료류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_alc, title: "주류 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pcj_hmr, title: "간편식(HMR) 살 때 포장 디자인을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^포장 ?디자인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_meat, title: "육류·알가공품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_018_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_sea, title: "조미·염건 수산가공품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_020_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_kim, title: "김치·절임류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_024_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_jang, title: "장류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_028_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_oil, title: "유지류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_030_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_milk, title: "유가공품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_032_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_brd, title: "빵·떡류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_034_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_snk, title: "과자류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_036_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_ndl, title: "면류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_038_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_grn, title: "곡물가공품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_040_2019_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_tofu, title: "연식품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_040_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_sauce, title: "조미식품 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_046_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_cof, title: "커피·차 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_048_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_bev, title: "음료류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_050_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_alc, title: "주류 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_052_2019, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: pck_hmr, title: "간편식(HMR) 살 때 보관방법을 가장 먼저 확인", tbl: DT_114053_056, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^보관 ?방법"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

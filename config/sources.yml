@@ -12700,6 +12700,39 @@ sources:
       - {id: fgv_pm_etc, title: "기타 수실류 임가가 산림청에 바라는 점 — 소비 촉진 홍보 지원", tbl: DT_136022_10191, org: "136", itm: "^값$", want: ["^소비 촉진을 위한 홍보 지원$", "^비율$"], unit: "%", survey: 임업경영실태조사}
       - {id: fgv_var_mush, title: "버섯 임가가 산림청에 바라는 점 — 신품종 개발·보급", tbl: DT_136022_10092, org: "136", itm: "^값$", want: ["^신품종 개발 및 보급$", "^비율$"], unit: "%", survey: 임업경영실태조사}
       - {id: fgv_fire_gath, title: "식용 임산물 채취 임가가 산림청에 바라는 점 — 산불 예방 등 송이 보호", tbl: DT_136022_9887, org: "136", itm: "^값$", want: ["^산불 예방 등 송이 보호$", "^비율$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_avg, title: "버섯 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_ft, title: "버섯 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_pt, title: "버섯 재배 임가 평균 가구총수입 — 겸업", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^겸업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_saw, title: "버섯 재배 임가 평균 가구총수입 — 톱밥배지 표고", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_logo, title: "버섯 재배 임가 평균 가구총수입 — 원목표고(노지)", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_logf, title: "버섯 재배 임가 평균 가구총수입 — 원목표고(시설)", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mhi_b1, title: "버섯 재배 임가 가구총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_b2, title: "버섯 재배 임가 가구총수입 구간 비율 — 2천~4천만원 미만", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천~4천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_b3, title: "버섯 재배 임가 가구총수입 구간 비율 — 4천~6천만원 미만", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^4천~6천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_b4, title: "버섯 재배 임가 가구총수입 구간 비율 — 6천~8천만원 미만", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^6천~8천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_b5, title: "버섯 재배 임가 가구총수입 구간 비율 — 8천만~1억원 미만", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^8천만~1억원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mhi_b6, title: "버섯 재배 임가 가구총수입 구간 비율 — 1억원 이상", tbl: DT_136022_9786, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1억원 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_avg, title: "버섯 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_ft, title: "버섯 재배 임가 평균 임업총수입 — 전업", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_pt, title: "버섯 재배 임가 평균 임업총수입 — 겸업", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^겸업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_saw, title: "버섯 재배 임가 평균 임업총수입 — 톱밥배지 표고", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^톱밥배지 표고$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_logo, title: "버섯 재배 임가 평균 임업총수입 — 원목표고(노지)", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(노지\\)$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_logf, title: "버섯 재배 임가 평균 임업총수입 — 원목표고(시설)", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^원목표고\\(시설\\)$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: mfi_b1, title: "버섯 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_b2, title: "버섯 재배 임가 임업총수입 구간 비율 — 2천~4천만원 미만", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천~4천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_b3, title: "버섯 재배 임가 임업총수입 구간 비율 — 4천~6천만원 미만", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^4천~6천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_b4, title: "버섯 재배 임가 임업총수입 구간 비율 — 6천~8천만원 미만", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^6천~8천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_b5, title: "버섯 재배 임가 임업총수입 구간 비율 — 8천만~1억원 미만", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^8천만~1억원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mfi_b6, title: "버섯 재배 임가 임업총수입 구간 비율 — 1억원 이상", tbl: DT_136022_9858, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1억원 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpp_pow, title: "버섯 재배 임가가 많이 판매한 가공품(복수 응답) — 표고가루", tbl: DT_136022_9895, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^표고가루$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpp_slice, title: "버섯 재배 임가가 많이 판매한 가공품(복수 응답) — 슬라이스", tbl: DT_136022_9895, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^슬라이스$"], unit: "%", survey: 임업경영실태조사}
+      - {id: mpp_dry, title: "버섯 재배 임가가 많이 판매한 가공품(복수 응답) — 건표고", tbl: DT_136022_9895, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^건표고$"], unit: "%", survey: 임업경영실태조사}
+      - {id: bhw_avg, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 전체", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: bhw_ft, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 전업", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: bhw_pt, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 겸업", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^겸업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: bhw_cc, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 충청권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^충청권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: bhw_jl, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 전라권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^전라권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: bhw_gs, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 경상권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

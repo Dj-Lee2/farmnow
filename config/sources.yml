@@ -12890,6 +12890,23 @@ sources:
       - {id: fcl_frn, title: "고사리 경영비 중 임차료", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^고사리$", "^임차료$"], unit: 천원, survey: 임산물생산조사}
       - {id: fcl_dok, title: "독활 경영비 중 임차료", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^독활$", "^임차료$"], unit: 천원, survey: 임산물생산조사}
       - {id: fcl_dur, title: "두릅 경영비 중 임차료", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^두릅$", "^임차료$"], unit: 천원, survey: 임산물생산조사}
+      - {id: dkc_coop, title: "독활 생물 판매처 농협 비율", tbl: DT_136036_11549, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dkc_coll, title: "독활 생물 판매처 산지 수집상 비율", tbl: DT_136036_11549, org: "136", itm: "^값$", want: ["^산지 수집상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dkc_whole, title: "독활 생물 판매처 도매상 비율", tbl: DT_136036_11549, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: dkc_ds, title: "독활 생물 판매처 직접 판매 비율", tbl: DT_136036_11549, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: mac_coop, title: "마 생물 판매처 농협 비율", tbl: DT_136036_11587, org: "136", itm: "^값$", want: ["^농협$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: mac_whole, title: "마 생물 판매처 도매상 비율", tbl: DT_136036_11587, org: "136", itm: "^값$", want: ["^도매상$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: mac_onl, title: "마 생물 판매처 인터넷 판매 비율", tbl: DT_136036_11587, org: "136", itm: "^값$", want: ["^인터넷 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: mac_ds, title: "마 생물 판매처 직접 판매 비율", tbl: DT_136036_11587, org: "136", itm: "^값$", want: ["^직접 판매$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: mac_etc, title: "마 생물 판매처 기타 비율", tbl: DT_136036_11587, org: "136", itm: "^값$", want: ["^기타$", "^생물$"], unit: "%", survey: 임산물생산조사}
+      - {id: fcw_sap, title: "수액 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^수액$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_cha, title: "참취 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_gdr, title: "곤드레 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^곤드레$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_cnm, title: "참나물 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^참나물$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_ma, title: "마 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^마$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_shl, title: "원목표고(노지) 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_ddk, title: "더덕 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^더덕$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcw_drj, title: "도라지 경영비 중 위탁영농비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^도라지$", "^위탁영농비$"], unit: 천원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

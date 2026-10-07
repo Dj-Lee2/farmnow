@@ -12796,6 +12796,33 @@ sources:
       - {id: sfm_cnm_g, title: "참나물(시설재배) 1ha당 무기질 비료비", tbl: DT_136036_11597, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: mip_in_mok, title: "목이버섯 1만 봉당 소득", tbl: DT_136036_11596, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: mip_in_sws, title: "톱밥배지표고 1만 봉당 소득", tbl: DT_136036_11592, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/10000봉[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sls_frn_m, title: "고사리(산지재배) 1ha당 총 노동시간", tbl: DT_136036_11544, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_frn_f, title: "고사리(노지재배) 1ha당 총 노동시간", tbl: DT_136036_11545, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_dur_m, title: "두릅(산지재배) 1ha당 총 노동시간", tbl: DT_136036_11554, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_dur_f, title: "두릅(노지재배) 1ha당 총 노동시간", tbl: DT_136036_11555, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_smn_m, title: "산마늘(산지재배) 1ha당 총 노동시간", tbl: DT_136036_11561, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_smn_f, title: "산마늘(노지재배) 1ha당 총 노동시간", tbl: DT_136036_11562, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_wch_f, title: "원추리(노지재배) 1ha당 총 노동시간", tbl: DT_136036_11571, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_cha_f, title: "참취(노지재배) 1ha당 총 노동시간", tbl: DT_136036_11578, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: sls_cha_g, title: "참취(시설재배) 1ha당 총 노동시간", tbl: DT_136036_11579, org: "136", itm: "^값$", want: ["^계$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_frn_m, title: "고사리(산지재배) 1ha당 고용노동 시간", tbl: DT_136036_11544, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_frn_f, title: "고사리(노지재배) 1ha당 고용노동 시간", tbl: DT_136036_11545, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_dur_m, title: "두릅(산지재배) 1ha당 고용노동 시간", tbl: DT_136036_11554, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_dur_f, title: "두릅(노지재배) 1ha당 고용노동 시간", tbl: DT_136036_11555, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_smn_m, title: "산마늘(산지재배) 1ha당 고용노동 시간", tbl: DT_136036_11561, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_smn_f, title: "산마늘(노지재배) 1ha당 고용노동 시간", tbl: DT_136036_11562, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_wch_f, title: "원추리(노지재배) 1ha당 고용노동 시간", tbl: DT_136036_11571, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_cha_f, title: "참취(노지재배) 1ha당 고용노동 시간", tbl: DT_136036_11578, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slg_cha_g, title: "참취(시설재배) 1ha당 고용노동 시간", tbl: DT_136036_11579, org: "136", itm: "^값$", want: ["^계$", "^고용노동$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_frn_m, title: "고사리(산지재배) 1ha당 제초작업 시간", tbl: DT_136036_11544, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_frn_f, title: "고사리(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11545, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_dur_m, title: "두릅(산지재배) 1ha당 제초작업 시간", tbl: DT_136036_11554, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_dur_f, title: "두릅(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11555, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_smn_m, title: "산마늘(산지재배) 1ha당 제초작업 시간", tbl: DT_136036_11561, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_smn_f, title: "산마늘(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11562, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_wch_f, title: "원추리(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11571, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_cha_f, title: "참취(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11578, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: slj_cha_g, title: "참취(시설재배) 1ha당 제초작업 시간", tbl: DT_136036_11579, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -13469,6 +13469,33 @@ sources:
       - {id: chpm_sort, title: "춘천 복숭아 농가 농기계 보유율 · 선별기", tbl: DT_651006_M003, org: "651", periods: 3, itm: "^보유율$", want: ["^전체$", "^선별기$"], unit: "%", survey: 춘천시 전략작물 실태조사}
       - {id: chpk_exp, title: "춘천 복숭아 농가 경영주 평균 농업 경력", tbl: DT_651006_K002, org: "651", periods: 3, itm: "^경영주 농업 경력$", want: ["^전체$", "^평균$"], unit: 년, survey: 춘천시 전략작물 실태조사}
       - {id: chpk_area, title: "춘천 복숭아 농가 평균 경작 면적", tbl: DT_651006_L001, org: "651", periods: 3, itm: "^소유형태별 경작 면적$", want: ["^전체$", "^합계$", "^평균$"], unit: a, survey: 춘천시 전략작물 실태조사}
+      - {id: ajb_total, title: "농림어업 일자리", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_y29, title: "농림어업 일자리 · 29세 이하", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^(19세 이하|20~24세|25~29세)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_a30, title: "농림어업 일자리 · 30대", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^(30~34세|35~39세)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_a40, title: "농림어업 일자리 · 40대", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^(40~44세|45~49세)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_a50, title: "농림어업 일자리 · 50대", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^(50~54세|55~59세)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_a60, title: "농림어업 일자리 · 60대", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^(60~64세|65~69세)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_a70, title: "농림어업 일자리 · 70세 이상", tbl: DT_1EP_3028, org: "101", periods: 3, itm: "^일자리$", want: ["^70세 이상$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_m, title: "농림어업 일자리 · 남자", tbl: DT_1EP_3024, org: "101", periods: 3, itm: "^일자리$", want: ["^남자$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_f, title: "농림어업 일자리 · 여자", tbl: DT_1EP_3024, org: "101", periods: 3, itm: "^일자리$", want: ["^여자$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_t1, title: "농림어업 일자리 · 근속 1년 미만", tbl: DT_1EP_3030, org: "101", periods: 3, itm: "^일자리$", want: ["^1년미만$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_t13, title: "농림어업 일자리 · 근속 1~3년", tbl: DT_1EP_3030, org: "101", periods: 3, itm: "^일자리$", want: ["^(1~2년 미만|2~3년 미만)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_t310, title: "농림어업 일자리 · 근속 3~10년", tbl: DT_1EP_3030, org: "101", periods: 3, itm: "^일자리$", want: ["^(3~5년 미만|5~10년 미만)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_t10, title: "농림어업 일자리 · 근속 10년 이상", tbl: DT_1EP_3030, org: "101", periods: 3, itm: "^일자리$", want: ["^(10~20년 미만|20년 이상)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_s1, title: "농림어업 일자리 · 종사자 1~4명 기업", tbl: DT_1EP_3020, org: "101", periods: 3, itm: "^일자리$", want: ["^1~4명$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_s5, title: "농림어업 일자리 · 종사자 5~9명 기업", tbl: DT_1EP_3020, org: "101", periods: 3, itm: "^일자리$", want: ["^5~9명$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_s10, title: "농림어업 일자리 · 종사자 10~49명 기업", tbl: DT_1EP_3020, org: "101", periods: 3, itm: "^일자리$", want: ["^(10~29명|30~49명)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_s50, title: "농림어업 일자리 · 종사자 50명 이상 기업", tbl: DT_1EP_3020, org: "101", periods: 3, itm: "^일자리$", want: ["^(50~99명|100~199명|200~299명|300~999명|1000명 이상)$", "^총 계$", "^농업 임업 및 어업$"], sum: true, unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_gone, title: "농림어업 소멸일자리", tbl: DT_1EP_3020, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^소멸일자리$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_wage, title: "농림어업 임금일자리", tbl: DT_1EP_3031, org: "101", periods: 3, itm: "^일자리$", want: ["^임금일자리$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_nwage, title: "농림어업 비임금일자리", tbl: DT_1EP_3031, org: "101", periods: 3, itm: "^일자리$", want: ["^비임금일자리$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_corp, title: "농림어업 일자리 · 회사법인", tbl: DT_1EP_3011, org: "101", periods: 3, itm: "^일자리$", want: ["^회사법인$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_ncorp, title: "농림어업 일자리 · 회사 이외 법인", tbl: DT_1EP_3011, org: "101", periods: 3, itm: "^일자리$", want: ["^회사이외법인$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_ind, title: "농림어업 일자리 · 개인기업체", tbl: DT_1EP_3011, org: "101", periods: 3, itm: "^일자리$", want: ["^개인기업체$", "^총 계$", "^농업 임업 및 어업$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajm_all, title: "1년 사이 농림어업 근로자", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
+      - {id: ajm_stay, title: "1년 사이 같은 일자리 유지", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^유지자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
+      - {id: ajm_move, title: "1년 사이 다른 일자리로 이동", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^이동자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
+      - {id: ajm_in, title: "1년 사이 새로 들어온 근로자", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^진입자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

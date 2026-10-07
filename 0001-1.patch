@@ -1,0 +1,117 @@
+From e9324a1f977bc99e346c2e2457abd550c88a0595 Mon Sep 17 00:00:00 2001
+From: Dj-Lee2 <215002302+Dj-Lee2@users.noreply.github.com>
+Date: Thu, 8 Oct 2026 05:22:31 +0900
+Subject: [PATCH] =?UTF-8?q?=ED=86=B5=EA=B3=84=20=ED=83=AD:=20=EC=88=AF?=
+ =?UTF-8?q?=C2=B7=EB=AA=A9=EC=B4=88=EC=95=A1=20=EC=9A=A9=EB=8F=84=EB=B3=84?=
+ =?UTF-8?q?=20=EC=83=9D=EC=82=B0=C2=B7=EC=97=85=EC=B2=B4=C2=B7=EB=A7=A4?=
+ =?UTF-8?q?=EC=B6=9C=C2=B7=EC=88=98=EC=9E=85,=20=EC=9B=90=EB=AA=A9?=
+ =?UTF-8?q?=ED=91=9C=EA=B3=A0=201=EB=A7=8C=20=EB=B3=B8=EB=8B=B9=20?=
+ =?UTF-8?q?=EC=83=9D=EC=82=B0=EB=9F=89=C2=B7=EB=8B=A8=EA=B0=80=C2=B7?=
+ =?UTF-8?q?=EB=B9=84=EC=9A=A9=20=EC=B6=94=EA=B0=80?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ config/sources.yml   | 42 ++++++++++++++++++++++++++++++++++++++++++
+ templates/stats.html | 24 +++++++++++++++++++++++-
+ 2 files changed, 65 insertions(+), 1 deletion(-)
+
+diff --git a/config/sources.yml b/config/sources.yml
+index b7455ed..77c0e33 100644
+--- a/config/sources.yml
++++ b/config/sources.yml
+@@ -13367,6 +13367,48 @@ sources:
+       - {id: hpr_md_ip, title: "산채·약초 재배 임가 1가구당 건채 약용식물 판매수입(가공)", tbl: DT_136022_11015, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수익가공$"], unit: "만원", survey: 임업경영실태조사}
+       - {id: hss_yes, title: "산채·약초 재배 임가의 산양삼 생산 판매 여부 — 판매함", tbl: DT_136022_9926, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매함$"], unit: "%", survey: 임업경영실태조사}
+       - {id: hss_no, title: "산채·약초 재배 임가의 산양삼 생산 판매 여부 — 판매하지 않음", tbl: DT_136022_9926, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매하지 않음$"], unit: "%", survey: 임업경영실태조사}
++      - {id: cwv_prod, title: "목초액·죽초액 생산량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A02$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cwv_sale, title: "목초액·죽초액 판매량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A03$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cwv_agp, title: "농업용 목초액·죽초액 생산량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0202$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cwv_ags, title: "농업용 목초액·죽초액 판매량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0302$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cwv_lvp, title: "축산용 목초액·죽초액 생산량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0203$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cwv_hhp, title: "가정용 목초액·죽초액 생산량", tbl: DT_136034_2024_O021, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A0205$"}, unit: ℓ, survey: 목재이용실태조사}
++      - {id: cch_prod, title: "숯 생산량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B02$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cch_sale, title: "숯 판매량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B03$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cch_fuel, title: "연료용 숯 생산량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0201$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cch_agri, title: "농업용 숯 생산량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0202$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cch_ind, title: "공업용 숯 생산량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0204$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cch_home, title: "가정용 숯 생산량", tbl: DT_136034_2024_O020, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$", C2: "^B0205$"}, unit: ㎏, survey: 목재이용실태조사}
++      - {id: cco_all, title: "숯·목초액 생산업체 수", tbl: DT_136034_2024_O002, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A01$"}, unit: 개소, survey: 목재이용실태조사}
++      - {id: cco_log, title: "국산 원목으로 숯을 만드는 업체 수", tbl: DT_136034_2024_O002, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A02$"}, unit: 개소, survey: 목재이용실태조사}
++      - {id: cco_saw, title: "톱밥으로 숯을 만드는 업체 수", tbl: DT_136034_2024_O002, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A06$"}, unit: 개소, survey: 목재이용실태조사}
++      - {id: cco_bam, title: "대나무로 숯을 만드는 업체 수", tbl: DT_136034_2024_O002, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A05$"}, unit: 개소, survey: 목재이용실태조사}
++      - {id: cco_wv, title: "목초액 생산업체 수", tbl: DT_136034_2024_O002, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A07$"}, unit: 개소, survey: 목재이용실태조사}
++      - {id: crv_all, title: "숯·목초액 생산업체 매출액 총액", tbl: DT_136034_2024_O011, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A08$", C2: "^B01$"}, unit: 백만원, survey: 목재이용실태조사}
++      - {id: crv_chr, title: "숯 매출액 총액", tbl: DT_136034_2024_O011, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A08$", C2: "^B02$"}, unit: 백만원, survey: 목재이용실태조사}
++      - {id: crv_wv, title: "목초액 매출액 총액", tbl: DT_136034_2024_O011, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A08$", C2: "^B03$"}, unit: 백만원, survey: 목재이용실태조사}
++      - {id: cim_q, title: "숯 수입물량", tbl: DT_136034_2024_O031, org: "136", periods: 3, itm: "^수입물량$", want: ["^데이터$"], unit: 톤, survey: 목재이용실태조사}
++      - {id: cim_amt, title: "숯 수입금액", tbl: DT_136034_2024_O031, org: "136", periods: 3, itm: "^수입금액$", want: ["^데이터$"], unit: 천달러, survey: 목재이용실태조사}
++      - {id: cim_p, title: "숯 수입단가", tbl: DT_136034_2024_O031, org: "136", periods: 3, itm: "^수입단가$", want: ["^데이터$"], unit: $/톤, survey: 목재이용실태조사}
++      - {id: ccp_chr, title: "숯 생산업체 평균 최대 생산가능량", tbl: DT_136034_2024_O005, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A05$"}, unit: 톤, survey: 목재이용실태조사}
++      - {id: ccp_wv, title: "목초액 생산업체 평균 최대 생산가능량", tbl: DT_136034_2024_O006, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A08$"}, unit: ㎘, survey: 목재이용실태조사}
++      - {id: cdy_avg, title: "숯·목초액 생산업체 월평균 가동일 수", tbl: DT_136034_2024_O007, org: "136", periods: 3, itm: ".", want: [".*"], codes: {C1: "^A06$"}, unit: 일, survey: 목재이용실태조사}
++      - {id: shp_fp_l, title: "원목표고(노지) 1만 본당 생표고 생산량", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
++      - {id: shp_dp_l, title: "원목표고(노지) 1만 본당 건표고 생산량", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^건물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
++      - {id: shp_fu_l, title: "원목표고(노지) 생표고 kg당 단가", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
++      - {id: shp_du_l, title: "원목표고(노지) 건표고 kg당 단가", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^건물$", "^단가$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_ut_l, title: "원목표고(노지) 1만 본당 수도광열비", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^수도광열비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_mt_l, title: "원목표고(노지) 1만 본당 재료비", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^재료비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_fd_l, title: "원목표고(노지) 1만 본당 영농시설상각비", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^영농시설상각비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shv_l, title: "원목표고(노지) 1만 본당 부가가치", tbl: DT_136036_11588, org: "136", itm: "^값$", want: ["^부가가치$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shp_fp_f, title: "원목표고(시설) 1만 본당 생표고 생산량", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
++      - {id: shp_dp_f, title: "원목표고(시설) 1만 본당 건표고 생산량", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^건물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
++      - {id: shp_fu_f, title: "원목표고(시설) 생표고 kg당 단가", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
++      - {id: shp_du_f, title: "원목표고(시설) 건표고 kg당 단가", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^건물$", "^단가$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_ut_f, title: "원목표고(시설) 1만 본당 수도광열비", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^수도광열비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_mt_f, title: "원목표고(시설) 1만 본당 재료비", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^재료비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shc_fd_f, title: "원목표고(시설) 1만 본당 영농시설상각비", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^영농시설상각비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
++      - {id: shv_f, title: "원목표고(시설) 1만 본당 부가가치", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^부가가치$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
+   - id: naver_market
+     name: 네이버 증권 시세
+     org: 네이버 증권
+diff --git a/templates/stats.html b/templates/stats.html
+index b44fb05..3f72ef1 100644
+--- a/templates/stats.html
++++ b/templates/stats.html
+@@ -2710,7 +2710,7 @@
+  </div>
+  </div></details>
+ 
+- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·산나물 재배형태별 비료비·소득·버섯 재료비·수도광열비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군·도별 유기 비중·친환경 농가·출하·도별 유기 출하 비중·유기축산 농가·축산 출하·경영주 연령별 복합비료·질소질·볍씨·고용·동력 시간·악취개선제 종류·사용 방법', 352) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
++ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·산나물 재배형태별 비료비·소득·버섯 재료비·수도광열비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군·도별 유기 비중·친환경 농가·출하·도별 유기 출하 비중·유기축산 농가·축산 출하·경영주 연령별 복합비료·질소질·볍씨·고용·동력 시간·악취개선제 종류·사용 방법·숯·목초액 용도별 생산·업체·매출·숯 수입·원목표고 1만 본당 생산량·단가·비용', 368) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+  <div class="sg-body">
+  <h3 class="sg-sub">친환경 인증·비료</h3>
+  <div class="sg-g">
+@@ -3200,6 +3200,28 @@
+   {{ hcard('시군별 유기농산물 출하 면적', [('장흥군', K.sge_jh_org), ('홍성군', K.sge_hs_org), ('아산시', K.sge_as_org), ('무주군', K.sge_mj_org), ('김제시', K.sge_gj_org), ('당진시', K.sge_dj_org), ('금산군', K.sge_gs_org), ('칠곡군', K.sge_cg_org), ('청도군', K.sge_cd_org)], 'ha', '유기 인증만 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
+   {{ hcard('시군별 친환경 농산물 출하 농가', [('장흥군', K.sge_jh_farm), ('아산시', K.sge_as_farm), ('홍성군', K.sge_hs_farm), ('청도군', K.sge_cd_farm), ('금산군', K.sge_gs_farm), ('무주군', K.sge_mj_farm), ('김제시', K.sge_gj_farm), ('당진시', K.sge_dj_farm), ('칠곡군', K.sge_cg_farm)], '가구', '오른쪽은 전년 대비', none, '#c77b30') }}
+  </div>
++ <h3 class="sg-sub">숯·목초액 생산업체와 농업용 목초액 <small>참나무 등 원목을 구워 숯을 만들 때 연기를 식혀 받는 목초액·죽초액의 용도별 생산·판매량, 숯 용도별 생산량, 생산업체 수·매출·가동일, 숯 수입 · 산림청 목재이용실태조사</small></h3>
++ <div class="sg-g">
++  {{ card('cwv_prod', 'cwv1', ('농업용 ' ~ K.cwv_agp.vals[-1]|big ~ 'ℓ(' ~ '{:.1f}'.format(K.cwv_agp.vals[-1] / K.cwv_prod.vals[-1] * 100) ~ '%) · 판매량 ' ~ K.cwv_sale.vals[-1]|big ~ 'ℓ') if K.cwv_agp and K.cwv_sale else none, '#1c7a45') }}
++  {{ card('cwv_ags', 'cwv2', ('농업용 생산량 ' ~ K.cwv_agp.vals[-1]|big ~ 'ℓ · 목초액 생산업체 ' ~ '{:,.0f}'.format(K.cco_wv.vals[-1]) ~ '곳') if K.cwv_agp and K.cco_wv else none, '#3a8f6a') }}
++  {{ card('cch_prod', 'cwv3', ('연료용 ' ~ '{:.1f}'.format(K.cch_fuel.vals[-1] / K.cch_prod.vals[-1] * 100) ~ '% · 농업용 ' ~ K.cch_agri.vals[-1]|big ~ '㎏') if K.cch_fuel and K.cch_agri else none, '#5a5a5a') }}
++  {{ card('crv_all', 'cwv4', ('숯 ' ~ num(K.crv_chr.vals[-1], '백만원')|striptags ~ ' · 목초액 ' ~ num(K.crv_wv.vals[-1], '백만원')|striptags) if K.crv_chr and K.crv_wv else none, '#a0702a') }}
++  {{ card('cdy_avg', 'cwv5', ('숯 최대 생산가능량 평균 ' ~ '{:,.1f}'.format(K.ccp_chr.vals[-1]) ~ '톤 · 목초액 ' ~ '{:,.1f}'.format(K.ccp_wv.vals[-1]) ~ '㎘') if K.ccp_chr and K.ccp_wv else none, '#7a5cc2') }}
++  {{ card('cim_q', 'cwv6', ('수입금액 ' ~ num(K.cim_amt.vals[-1], '천달러')|striptags ~ ' · 톤당 ' ~ '{:,.0f}'.format(K.cim_p.vals[-1]) ~ '달러 · 국내 생산의 약 ' ~ '{:,.0f}'.format(K.cim_q.vals[-1] * 1000 / K.cch_prod.vals[-1]) ~ '배') if K.cim_amt and K.cim_p and K.cch_prod else none, '#1f5f8a') }}
++  {{ hcard('목초액·죽초액 용도별 생산량', [('농업용', K.cwv_agp), ('축산용', K.cwv_lvp), ('가정용', K.cwv_hhp)], 'ℓ', '괄호는 전체 생산량 중 비중 · 연료·공업·치료용은 없음 · 오른쪽은 전년 대비', K.cwv_prod.vals[-1] if K.cwv_prod else none, '#1c7a45') }}
++  {{ hcard('숯 용도별 생산량', [('연료용', K.cch_fuel), ('가정용', K.cch_home), ('농업용', K.cch_agri), ('공업용', K.cch_ind)], '㎏', '괄호는 전체 생산량 중 비중 · 축산용은 없음 · 오른쪽은 전년 대비', K.cch_prod.vals[-1] if K.cch_prod else none, '#5a5a5a') }}
++  {{ hcard('원료별 숯·목초액 생산업체 수', [('국산 원목으로 숯', K.cco_log), ('목초액 생산', K.cco_wv), ('톱밥으로 숯', K.cco_saw), ('대나무로 숯', K.cco_bam)], '개소', '한 업체가 여러 형태를 겸할 수 있음 · 괄호는 전체 업체 중 비중 · 오른쪽은 전년 대비', K.cco_all.vals[-1] if K.cco_all else none, '#a0702a') }}
++ </div>
++ <h3 class="sg-sub">원목표고 1만 본당 생산량·단가와 비용 <small>참나무 원목에 표고 종균을 넣어 기르는 노지·시설 재배의 표고목 1만 본당 생표고·건표고 생산량과 kg당 단가, 수도광열비·재료비·영농시설상각비, 부가가치 · 산림청 임산물생산조사</small></h3>
++ <div class="sg-g">
++  {{ card('shp_fp_l', 'shp1', ('건표고 ' ~ num(K.shp_dp_l.vals[-1], 'kg')|striptags ~ ' · 생표고 kg당 ' ~ '{:,.0f}'.format(K.shp_fu_l.vals[-1]) ~ '원') if K.shp_dp_l and K.shp_fu_l else none, '#a0605a') }}
++  {{ card('shp_fp_f', 'shp2', ('건표고 ' ~ num(K.shp_dp_f.vals[-1], 'kg')|striptags ~ ' · 생표고 kg당 ' ~ '{:,.0f}'.format(K.shp_fu_f.vals[-1]) ~ '원') if K.shp_dp_f and K.shp_fu_f else none, '#7a5cc2') }}
++  {{ card('shv_f', 'shp3', ('노지 ' ~ num(K.shv_l.vals[-1], '원')|striptags ~ ' · 시설 영농시설상각비 ' ~ num(K.shc_fd_f.vals[-1], '원')|striptags) if K.shv_l and K.shc_fd_f else none, '#3a8f6a') }}
++  {{ hcard('원목표고 1만 본당 생산량', [('시설 — 생표고', K.shp_fp_f), ('노지 — 생표고', K.shp_fp_l), ('시설 — 건표고', K.shp_dp_f), ('노지 — 건표고', K.shp_dp_l)], 'kg', '표고목 1만 본 기준 · 오른쪽은 전년 대비', none, '#a0605a') }}
++  {{ hcard('원목표고 kg당 판매 단가', [('시설 — 건표고', K.shp_du_f), ('노지 — 건표고', K.shp_du_l), ('노지 — 생표고', K.shp_fu_l), ('시설 — 생표고', K.shp_fu_f)], '원', '조사 임가가 받은 평균 단가 · 오른쪽은 전년 대비', none, '#c77b30') }}
++  {{ hcard('원목표고 1만 본당 수도광열비·재료비·영농시설상각비', [('시설 — 영농시설상각비', K.shc_fd_f), ('시설 — 수도광열비', K.shc_ut_f), ('노지 — 수도광열비', K.shc_ut_l), ('노지 — 영농시설상각비', K.shc_fd_l), ('노지 — 재료비', K.shc_mt_l), ('시설 — 재료비', K.shc_mt_f)], '원', '표고목 1만 본 기준 · 오른쪽은 전년 대비', none, '#5a5a5a') }}
++  {{ hcard('원목표고 1만 본당 부가가치', [('시설', K.shv_f), ('노지', K.shv_l)], '원', '총수입에서 중간재비를 뺀 값 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
++ </div>
+ </div></details>
+ 
+  <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·시도별 농업 배출·가축분뇨·농경지 토양 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·경작지 가뭄 노출·물 부족 수준 국제 비교·정부지출 농업지향성·쌀 가격 이상치·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원·기체별 국가 배출·대기 온실가스 농도·요소·석회 시용·잔사 소각 배출', 274) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+-- 
+2.47.3
+

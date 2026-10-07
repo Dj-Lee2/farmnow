@@ -13409,6 +13409,43 @@ sources:
       - {id: shc_mt_f, title: "원목표고(시설) 1만 본당 재료비", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^재료비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: shc_fd_f, title: "원목표고(시설) 1만 본당 영농시설상각비", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^영농시설상각비$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
       - {id: shv_f, title: "원목표고(시설) 1만 본당 부가가치", tbl: DT_136036_11591, org: "136", itm: "^값$", want: ["^부가가치$", "^금액[(]원/10000본[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: chtm_exp, title: "춘천 토마토 농가 경영주 평균 농업 경력", tbl: DT_651006_A002, org: "651", periods: 3, itm: "^경영주 농업 경력$", want: ["^전체$", "^평균$"], unit: 년, survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_area, title: "춘천 토마토 농가 평균 경작 면적", tbl: DT_651006_B001, org: "651", periods: 3, itm: "^소유형태별 경작 면적$", want: ["^전체$", "^합계$", "^평균$"], unit: a, survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_ht_oil, title: "춘천 토마토 농가 난방장치 · 기름보일러", tbl: DT_651006_C004, org: "651", periods: 3, itm: "^토마토 재배 난방장치 설치 현황$", want: ["^전체$", "^기름보일러"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_ht_none, title: "춘천 토마토 농가 난방장치 · 난방하지 않음", tbl: DT_651006_C004, org: "651", periods: 3, itm: "^토마토 재배 난방장치 설치 현황$", want: ["^전체$", "^난방하지 않음"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_ht_geo, title: "춘천 토마토 농가 난방장치 · 지중난방", tbl: DT_651006_C004, org: "651", periods: 3, itm: "^토마토 재배 난방장치 설치 현황$", want: ["^전체$", "^지중난방"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_ht_elec, title: "춘천 토마토 농가 난방장치 · 전기보일러", tbl: DT_651006_C004, org: "651", periods: 3, itm: "^토마토 재배 난방장치 설치 현황$", want: ["^전체$", "^전기보일러"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_ht_gas, title: "춘천 토마토 농가 난방장치 · 가스보일러", tbl: DT_651006_C004, org: "651", periods: 3, itm: "^토마토 재배 난방장치 설치 현황$", want: ["^전체$", "^가스보일러"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_px_up, title: "춘천 토마토 농가 가격 전망 · 좋아질 것", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^좋아질 것$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_px_same, title: "춘천 토마토 농가 가격 전망 · 비슷할 것", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^비슷할 것$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_px_down, title: "춘천 토마토 농가 가격 전망 · 나빠질 것", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^나빠질 것$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_pr_cons, title: "춘천 토마토 가격이 나빠질 이유 · 소비위축", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^소비위축$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_pr_cost, title: "춘천 토마토 가격이 나빠질 이유 · 생산비 증가", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^생산비 증가$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_pr_pol, title: "춘천 토마토 가격이 나빠질 이유 · 농업발전 정책의 불투명", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^농업발전 정책의 불투명$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_pr_area, title: "춘천 토마토 가격이 나빠질 이유 · 재배면적 증가", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^재배면적 증가$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_pr_imp, title: "춘천 토마토 가격이 나빠질 이유 · 농산물 수입개방", tbl: DT_651006_E007, org: "651", periods: 3, itm: "^향후 토마토 가격 전망", want: ["^전체$", "^농산물 수입개방$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_sub, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 보조금 지급", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^보조금 지급$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_mkt, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 안정적출하처 확보", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^안정적출하처 확보$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_var, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 신품종 개발보급", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^신품종 개발보급$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_tech, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 신재배 기술개발 보급", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^신재배 기술개발 보급$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_brand, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 브랜드 특성화", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^브랜드 특성화$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_sp_loan, title: "춘천 토마토 농업 발전에 먼저 필요한 사업 · 농가 융자금 확대", tbl: DT_651006_E008, org: "651", periods: 3, itm: "^토마토 농업 발전을", want: ["^전체$", "^농가 융자금 확대$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chtm_succ, title: "춘천 토마토 농가 5년 안 경영이양 계획 있음", tbl: DT_651006_E006, org: "651", periods: 3, itm: "^향후 5년 이내 경영이양", want: ["^전체$", "^예$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_sale, title: "춘천 복숭아 농가 평균 총판매액", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^총판매액$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_exp, title: "춘천 복숭아 농가 평균 총지출", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^총지출$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_chem, title: "춘천 복숭아 농가 평균 농약비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^농약비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_fert, title: "춘천 복숭아 농가 평균 비료비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^비료비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_mat, title: "춘천 복숭아 농가 평균 제재료비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^제재료비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_lab, title: "춘천 복숭아 농가 평균 인건비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^인건비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_rent, title: "춘천 복숭아 농가 평균 임차비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^임차비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_seed, title: "춘천 복숭아 농가 평균 묘목비", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^묘목비$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_etc, title: "춘천 복숭아 농가 평균 기타", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^기타$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpc_inc, title: "춘천 복숭아 농가 평균 소득", tbl: DT_651006_N005, org: "651", periods: 3, itm: "^평균금액$", want: ["^전체$", "^소득$"], unit: 만원, survey: 춘천시 전략작물 실태조사}
+      - {id: chpf_none, title: "춘천 복숭아 홍수출하 대비 · 활용안함", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^활용안함"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpf_cold, title: "춘천 복숭아 홍수출하 대비 · 저온저장고 활용", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^저온저장고 활용"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpf_adj, title: "춘천 복숭아 홍수출하 대비 · 그 외 출하시기 조정", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^그 외 출하시기 조정"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpf_dry, title: "춘천 복숭아 홍수출하 대비 · 건조", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^건조$"], unit: "%", survey: 춘천시 전략작물 실태조사}
+      - {id: chpf_proc, title: "춘천 복숭아 홍수출하 대비 · 건조이외 가공", tbl: DT_651006_N004, org: "651", periods: 3, itm: "^복숭아 홍수출하 예방 대책$", want: ["^전체$", "^건조이외 가공"], unit: "%", survey: 춘천시 전략작물 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

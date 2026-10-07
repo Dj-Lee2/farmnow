@@ -11604,6 +11604,43 @@ sources:
       - {id: cmw_herb_cc, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(충청권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^충청권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
       - {id: cmw_herb_jl, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(전라권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^전라권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
       - {id: cmw_herb_gs, title: "밤 재배 임가의 풀베기 방식 — 제초제 사용(경상권)", tbl: DT_136022_9821, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^제초제 사용$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_up, title: "밤 재배 임가의 3년간 생산량 변화 — 늘어나고 있음", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^늘어나고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_keep, title: "밤 재배 임가의 3년간 생산량 변화 — 현상 유지", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현상 유지 [(]변화 없음[)]$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_down, title: "밤 재배 임가의 3년간 생산량 변화 — 줄어들고 있음", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_down_cc, title: "밤 재배 임가의 3년간 생산량 변화 — 줄어들고 있음(충청권)", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^충청권$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_down_jl, title: "밤 재배 임가의 3년간 생산량 변화 — 줄어들고 있음(전라권)", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^전라권$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: chq_down_gs, title: "밤 재배 임가의 3년간 생산량 변화 — 줄어들고 있음(경상권)", tbl: DT_136022_9829, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cbw_dem, title: "밤재배업 전망이 나빠질 것으로 본 주된 이유 — 수요감소(경기불황 등)", tbl: DT_136022_9825, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소"], unit: "%", survey: 임업경영실태조사}
+      - {id: cbw_labor, title: "밤재배업 전망이 나빠질 것으로 본 주된 이유 — 노동력 부족", tbl: DT_136022_9825, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cbw_clim, title: "밤재배업 전망이 나빠질 것으로 본 주된 이유 — 기후변화 등에 의한 생육부진", tbl: DT_136022_9825, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화 등에 의한 생육부진$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cbw_pest, title: "밤재배업 전망이 나빠질 것으로 본 주된 이유 — 병해충 등 자연재해 증가", tbl: DT_136022_9825, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병해충 등 자연재해 증가$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xbr_clim, title: "기타 수실류 재배업 전망이 나빠질 것으로 본 주된 이유 — 기후변화 등에 의한 생육부진", tbl: DT_136022_10170, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기후변화 등에 의한 생육부진$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xbr_pest, title: "기타 수실류 재배업 전망이 나빠질 것으로 본 주된 이유 — 병해충 등 자연재해 증가", tbl: DT_136022_10170, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^병해충 등 자연재해 증가$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xbr_labor, title: "기타 수실류 재배업 전망이 나빠질 것으로 본 주된 이유 — 노동력 부족", tbl: DT_136022_10170, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xbr_dem, title: "기타 수실류 재배업 전망이 나빠질 것으로 본 주된 이유 — 수요감소(경기불황 등)", tbl: DT_136022_10170, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소"], unit: "%", survey: 임업경영실태조사}
+      - {id: xbr_mkt, title: "기타 수실류 재배업 전망이 나빠질 것으로 본 주된 이유 — 판로 부족", tbl: DT_136022_10170, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xdr_price, title: "기타 수실류 재배를 줄이려는 이유 — 가격하락 및 낮은 수익률", tbl: DT_136022_10174, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가격하락 및 낮은 수익률$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xdr_labor, title: "기타 수실류 재배를 줄이려는 이유 — 인건비 상승 및 노동력 부족", tbl: DT_136022_10174, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비 상승 및 노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xdr_tech, title: "기타 수실류 재배를 줄이려는 이유 — 기술 부족", tbl: DT_136022_10174, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기술 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xdr_mkt, title: "기타 수실류 재배를 줄이려는 이유 — 판로 확보의 어려움", tbl: DT_136022_10174, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 확보의 어려움$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xdr_info, title: "기타 수실류 재배를 줄이려는 이유 — 수요 및 가격정보 부족", tbl: DT_136022_10174, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요 및 가격정보 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_gov, title: "기타 수실류 재배업에 종사하게 된 계기 — 국가(지자체)의 적극적인 권유와 지원", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^국가[(]지자체[)]의 적극적인 권유와 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_peer, title: "기타 수실류 재배업에 종사하게 된 계기 — 주변 재배자의 권유", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주변 재배자의 권유$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_par, title: "기타 수실류 재배업에 종사하게 된 계기 — 부모로부터 이어받아", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부모로부터 이어받아$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_par_pine, title: "잣 재배업에 종사하게 된 계기 — 부모로부터 이어받아", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^잣재배업$", "^부모로부터 이어받아$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_par_jjb, title: "대추 재배업에 종사하게 된 계기 — 부모로부터 이어받아", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^대추재배업$", "^부모로부터 이어받아$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_par_wal, title: "호두 재배업에 종사하게 된 계기 — 부모로부터 이어받아", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^호두재배업$", "^부모로부터 이어받아$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xst_par_oth, title: "기타 유실수 재배업에 종사하게 된 계기 — 부모로부터 이어받아", tbl: DT_136022_10171, org: "136", periods: 3, itm: "^값$", want: ["^기타유실수$", "^부모로부터 이어받아$"], unit: "%", survey: 임업경영실태조사}
+      - {id: xwi_all, title: "기타 수실류 재배 임가가 관리면적에서 바라는 한 해 수입 — 평균", tbl: DT_136022_10184, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xwi_pine, title: "잣 재배 임가가 관리면적에서 바라는 한 해 수입 — 평균", tbl: DT_136022_10184, org: "136", periods: 3, itm: "^값$", want: ["^잣재배업$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xwi_jjb, title: "대추 재배 임가가 관리면적에서 바라는 한 해 수입 — 평균", tbl: DT_136022_10184, org: "136", periods: 3, itm: "^값$", want: ["^대추재배업$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xwi_wal, title: "호두 재배 임가가 관리면적에서 바라는 한 해 수입 — 평균", tbl: DT_136022_10184, org: "136", periods: 3, itm: "^값$", want: ["^호두재배업$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: xwi_oth, title: "기타 유실수 재배 임가가 관리면적에서 바라는 한 해 수입 — 평균", tbl: DT_136022_10184, org: "136", periods: 3, itm: "^값$", want: ["^기타유실수$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: tsp_prod, title: "톱밥배지 표고 재배 임가 1가구당 한 해 생산량", tbl: DT_136022_9870, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 - 생산량$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: tsp_sraw, title: "톱밥배지 표고 재배 임가 1가구당 한 해 판매량 — 원물", tbl: DT_136022_9870, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 판매량 - 원물$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: tsp_sproc, title: "톱밥배지 표고 재배 임가 1가구당 한 해 판매량 — 가공", tbl: DT_136022_9870, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 판매량 - 가공$"], unit: "kg", survey: 임업경영실태조사}
+      - {id: tsp_iraw, title: "톱밥배지 표고 재배 임가 1가구당 한 해 판매수입 — 원물", tbl: DT_136022_9870, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 판매 수입 - 원물$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: tsp_iproc, title: "톱밥배지 표고 재배 임가 1가구당 한 해 판매수입 — 가공", tbl: DT_136022_9870, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^톱밥배지 판매 수입 - 가공$"], unit: "만원", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

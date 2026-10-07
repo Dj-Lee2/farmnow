@@ -12943,6 +12943,38 @@ sources:
       - {id: bzp_pay, title: "경영 애로 1순위 — 판매대금 회수의 지연", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^판매대금 회수의 지연$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzp_hire, title: "경영 애로 1순위 — 인력 채용의 어려움", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^인력 채용의 어려움$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzp_reg, title: "경영 애로 1순위 — 각종 규제 문제", tbl: DT_114056_2024_0036, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^각종 규제 문제$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzy_u30, title: "농축산식품산업 종사자 — 30대 이하", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^30대 이하$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_40, title: "농축산식품산업 종사자 — 40대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^40대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_50, title: "농축산식품산업 종사자 — 50대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^50대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_60, title: "농축산식품산업 종사자 — 60대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^60대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_70, title: "농축산식품산업 종사자 — 70대 이상", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^70대 이상$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_all, title: "농축산식품산업 1년 이상 종사자(연령대 합계)", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^전체$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_pu30, title: "작물재배·축산업 종사자 — 30대 이하", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^30대 이하$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_p40, title: "작물재배·축산업 종사자 — 40대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^40대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_p50, title: "작물재배·축산업 종사자 — 50대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^50대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_p60, title: "작물재배·축산업 종사자 — 60대", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^60대$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzy_p70, title: "작물재배·축산업 종사자 — 70대 이상", tbl: DT_114056_2024_0021, org: "114", se: F, periods: 1, itm: "^연령대별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^70대 이상$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_off, title: "농축산식품산업 종사자 — 사무 관리직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^사무 관리직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_prod, title: "농축산식품산업 종사자 — 생산 기능직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^생산 기능직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_sales, title: "농축산식품산업 종사자 — 영업 판매직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^영업 판매직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_rnd, title: "농축산식품산업 종사자 — 연구 개발직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^연구 개발직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_tech, title: "농축산식품산업 종사자 — 전문 기술직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^전문 기술직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_labor, title: "농축산식품산업 종사자 — 단순 노무직", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^단순 노무직$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzj_all, title: "농축산식품산업 1년 이상 종사자(직무 합계)", tbl: DT_114056_2024_0024, org: "114", se: F, periods: 1, itm: "^직무별 종사자$", want: ["^전체$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzr_all, title: "연구개발 실적이 있는 농축산식품 사업체 비율(전체)", tbl: DT_114056_2024_0030, org: "114", se: F, periods: 1, itm: "^예$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzr_inp, title: "연구개발 실적이 있는 농축산식품 사업체 비율(농산업 투입재)", tbl: DT_114056_2024_0030, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzr_mfg, title: "연구개발 실적이 있는 농축산식품 사업체 비율(농식품 제조)", tbl: DT_114056_2024_0030, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농식품 및 관련 제품 제조업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzo_down, title: "내년 업황 전망 악화", tbl: DT_114056_2024_0033, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzo_same, title: "내년 업황 전망 동일", tbl: DT_114056_2024_0033, org: "114", se: F, periods: 1, itm: "^동일$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzo_up, title: "내년 업황 전망 개선", tbl: DT_114056_2024_0033, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzo_pdown, title: "작물재배·축산업 내년 업황 전망 악화", tbl: DT_114056_2024_0033, org: "114", se: F, periods: 1, itm: "^악화$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzo_pup, title: "작물재배·축산업 내년 업황 전망 개선", tbl: DT_114056_2024_0033, org: "114", se: F, periods: 1, itm: "^개선$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_cost, title: "기술 분야 애로 1순위 — 초기 투자비용의 부담", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^초기 투자비용의 부담$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_fac, title: "기술 분야 애로 1순위 — 생산시설 및 연구기자재 노후·부족", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^생산시설 및 연구기자재 노후·부족$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_comp, title: "기술 분야 애로 1순위 — 기술경쟁력 부족", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^기술경쟁력 부족$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_staff, title: "기술 분야 애로 1순위 — 전문 인력 부족", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^전문 인력 부족$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_xchg, title: "기술 분야 애로 1순위 — 기술 교류 부족", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^기술 교류 부족$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzt_proto, title: "기술 분야 애로 1순위 — 시제품 제작 부담 및 시장 테스트 부족", tbl: DT_114056_2024_0039, org: "114", se: F, periods: 1, itm: "^애로사항별$", want: ["^전체$", "^시제품 제작 부담 및 시장 테스트 부족$"], unit: "%", survey: 농축산식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

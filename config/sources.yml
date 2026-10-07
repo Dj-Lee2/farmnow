@@ -13064,6 +13064,50 @@ sources:
       - {id: bzv_g_phigh, title: "농축산식품 사업체 성장 단계 2021~2023 — 고도성장기(농작물 생산·축산)", tbl: DT_114056_2021_0018, org: "114", se: Y, periods: 3, itm: "^성장단계비중$", want: ["^농작물 생산 및 축산업$", "^고도성장기$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzv_g_pmature, title: "농축산식품 사업체 성장 단계 2021~2023 — 성숙기(농작물 생산·축산)", tbl: DT_114056_2021_0018, org: "114", se: Y, periods: 3, itm: "^성장단계비중$", want: ["^농작물 생산 및 축산업$", "^성숙기$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzv_g_pdecl, title: "농축산식품 사업체 성장 단계 2021~2023 — 쇠퇴기(농작물 생산·축산)", tbl: DT_114056_2021_0018, org: "114", se: Y, periods: 3, itm: "^성장단계비중$", want: ["^농작물 생산 및 축산업$", "^쇠퇴기$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: hrf_tot, title: "승마시설 — 총계", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_dir, title: "승마시설 — 직접 운영", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^직접운영$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_cons, title: "승마시설 — 위탁 운영", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^위탁운영$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_pub, title: "승마시설 — 공공", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^공공$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_priv, title: "승마시설 — 민간", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^민간$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_youth, title: "승마시설 — 유소년 승마단 운영", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^총계$", "^유소년 승마단 운영$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_jj, title: "승마시설 — 제주", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^제주$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_gg, title: "승마시설 — 경기", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^경기$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_gb, title: "승마시설 — 경북", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^경북$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_cn, title: "승마시설 — 충남", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^충남$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_gn, title: "승마시설 — 경남", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^경남$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrf_jb, title: "승마시설 — 전북", tbl: DT_114051N_053, org: "114", periods: 3, itm: "^승마시설 현황", want: ["^전북$", "^총계$"], unit: "개", survey: 말산업실태조사}
+      - {id: hrw_tot, title: "지역별 말산업 종사자 — 총계", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^총계$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_race, title: "지역별 말산업 종사자 — 경마 분야", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^총계$", "^경마분야$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_nrace, title: "지역별 말산업 종사자 — 경마 외 분야", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^총계$", "^경마 외 분야$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_bs, title: "지역별 말산업 종사자 — 부산", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^부산$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_gg, title: "지역별 말산업 종사자 — 경기", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^경기$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_jj, title: "지역별 말산업 종사자 — 제주", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^제주$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_gn, title: "지역별 말산업 종사자 — 경남", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^경남$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_gb, title: "지역별 말산업 종사자 — 경북", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^경북$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hrw_cn, title: "지역별 말산업 종사자 — 충남", tbl: DT_114051N_016, org: "114", periods: 3, itm: "^지역별 말산업 종사자수$", want: ["^충남$", "^총계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hpx_bad, title: "말산업 사업체 — 지난 1년 경영이 나빠졌다", tbl: DT_114051N_037, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "나빠졌다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hpx_same, title: "말산업 사업체 — 지난 1년 경영이 비슷하다", tbl: DT_114051N_037, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "^비슷하다$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpx_good, title: "말산업 사업체 — 지난 1년 경영이 좋아졌다", tbl: DT_114051N_037, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "좋아졌다$"], sum: true, unit: "%", survey: 말산업실태조사}
+      - {id: hpx_bad2, title: "말산업 사업체 — 지난 1년 경영이 많이 나빠졌다", tbl: DT_114051N_037, org: "114", periods: 3, itm: "^체감하는 경영 현황", want: ["^전체$", "^많이 나빠졌다$"], unit: "%", survey: 말산업실태조사}
+      - {id: hns_liab, title: "말산업 사업체 보험 가입(중복응답) — 영업자 배상책임 보험", tbl: DT_114051N_034, org: "114", periods: 3, itm: "^보험 가입 현황", want: ["^전체$", "^영업자 배상책임 보험$"], unit: "%", survey: 말산업실태조사}
+      - {id: hns_horse, title: "말산업 사업체 보험 가입(중복응답) — 말 상해 보험", tbl: DT_114051N_034, org: "114", periods: 3, itm: "^보험 가입 현황", want: ["^전체$", "^말 상해 보험$"], unit: "%", survey: 말산업실태조사}
+      - {id: hns_race, title: "말산업 사업체 보험 가입(중복응답) — 경주마 보험", tbl: DT_114051N_034, org: "114", periods: 3, itm: "^보험 가입 현황", want: ["^전체$", "^경주마 보험$"], unit: "%", survey: 말산업실태조사}
+      - {id: hns_rider, title: "말산업 사업체 보험 가입(중복응답) — 기승자 상해 보험", tbl: DT_114051N_034, org: "114", periods: 3, itm: "^보험 가입 현황", want: ["^전체$", "^기승자 상해 보험$"], unit: "%", survey: 말산업실태조사}
+      - {id: hns_none, title: "말산업 사업체 보험 가입(중복응답) — 가입한 보험 없음", tbl: DT_114051N_034, org: "114", periods: 3, itm: "^보험 가입 현황", want: ["^전체$", "^가입한 보험 없음$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_avg, title: "말산업 사업체 방목지(초지) 평균 면적", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^평균$"], unit: "㎡", survey: 말산업실태조사}
+      - {id: hpa_u5k, title: "말산업 방목지(초지) 면적 — 5천㎡ 미만", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^5천㎡ 미만$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_5k, title: "말산업 방목지(초지) 면적 — 5천~1만㎡ 미만", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^5천~1만㎡ 미만$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_10k, title: "말산업 방목지(초지) 면적 — 1만~5만㎡ 미만", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^1만~5만㎡ 미만$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_50k, title: "말산업 방목지(초지) 면적 — 5만~10만㎡ 미만", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^5만~10만㎡ 미만$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_100k, title: "말산업 방목지(초지) 면적 — 10만~30만㎡ 미만", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^10만~30만㎡ 미만$"], unit: "%", survey: 말산업실태조사}
+      - {id: hpa_300k, title: "말산업 방목지(초지) 면적 — 30만㎡ 이상", tbl: DT_114051N_054, org: "114", periods: 3, itm: "^방목지 면적\\(초지\\)$", want: ["^전체$", "^30만㎡ 이상$"], unit: "%", survey: 말산업실태조사}
+      - {id: hnd_tot, title: "말산업 향후 필요 인력 — 합계", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^합계$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_trn, title: "말산업 향후 필요 인력 — 말조련사", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^말조련사$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_grm, title: "말산업 향후 필요 인력 — 말관리사", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^말관리사$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_vet, title: "말산업 향후 필요 인력 — 수의사", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^수의사$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_far, title: "말산업 향후 필요 인력 — 장제사", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^장제사$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_coach, title: "말산업 향후 필요 인력 — 승마교관", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^승마교관$"], unit: "명", survey: 말산업실태조사}
+      - {id: hnd_off, title: "말산업 향후 필요 인력 — 사무직·기술직", tbl: DT_114051N_033, org: "114", periods: 3, itm: "^향후 필요 인력 수$", want: ["^전체$", "^사무직/기술직$"], unit: "명", survey: 말산업실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

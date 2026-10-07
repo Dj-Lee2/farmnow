@@ -13496,6 +13496,31 @@ sources:
       - {id: ajm_stay, title: "1년 사이 같은 일자리 유지", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^유지자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
       - {id: ajm_move, title: "1년 사이 다른 일자리로 이동", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^이동자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
       - {id: ajm_in, title: "1년 사이 새로 들어온 근로자", tbl: DT_1JTJ_A007, org: "101", periods: 3, itm: "^근로자수$", want: ["^1년내이동$", "^진입자$", "^농업 임업 및 어업$"], unit: 천명, survey: 일자리행정통계}
+      - {id: aqw_total, title: "농림어업 임금근로 일자리(분기)", tbl: DT_1FL_7007, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^계$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_m, title: "농림어업 임금근로 일자리 · 남자(분기)", tbl: DT_1FL_7007, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^남자$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_f, title: "농림어업 임금근로 일자리 · 여자(분기)", tbl: DT_1FL_7007, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^여자$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_agri, title: "농업 임금근로 일자리(분기)", tbl: DT_1FL_7001, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_for, title: "임업 임금근로 일자리(분기)", tbl: DT_1FL_7001, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^임업$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_fish, title: "어업 임금근로 일자리(분기)", tbl: DT_1FL_7001, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^어업$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_food, title: "식료품 제조업 임금근로 일자리(분기)", tbl: DT_1FL_7001, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^식료품 제조업$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_bev, title: "음료 제조업 임금근로 일자리(분기)", tbl: DT_1FL_7001, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^음료 제조업$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_a20, title: "농림어업 임금근로 일자리 · 20대 이하(분기)", tbl: DT_1FL_7008, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^20대이하$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_a30, title: "농림어업 임금근로 일자리 · 30대(분기)", tbl: DT_1FL_7008, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^30대$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_a40, title: "농림어업 임금근로 일자리 · 40대(분기)", tbl: DT_1FL_7008, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^40대$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_a50, title: "농림어업 임금근로 일자리 · 50대(분기)", tbl: DT_1FL_7008, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^50대$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_a60, title: "농림어업 임금근로 일자리 · 60대 이상(분기)", tbl: DT_1FL_7008, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^농업 임업 및 어업$", "^60대이상$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_cont, title: "농림어업 임금근로 일자리 · 지속(분기)", tbl: DT_1FL_7010, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^총 계$", "^농업 임업 및 어업$", "^지속$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_newh, title: "농림어업 임금근로 일자리 · 신규채용(분기)", tbl: DT_1FL_7010, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^총 계$", "^농업 임업 및 어업$", "^신규채용$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_n60, title: "농림어업 신규채용 일자리 · 60대 이상(분기)", tbl: DT_1FL_7010, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^60대이상$", "^농업 임업 및 어업$", "^신규채용$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: aqw_n20, title: "농림어업 신규채용 일자리 · 20대 이하(분기)", tbl: DT_1FL_7010, org: "101", se: Q, periods: 9, itm: "^임금근로 일자리수$", want: ["^20대이하$", "^농업 임업 및 어업$", "^신규채용$"], unit: 만개, survey: 임금근로일자리동향}
+      - {id: ajb_big, title: "농림어업 일자리 · 대기업", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^대기업$", "^농업 임업 및 어업$", "^총 계$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_sme, title: "농림어업 일자리 · 중소기업", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^중소기업$", "^농업 임업 및 어업$", "^총 계$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_npo, title: "농림어업 일자리 · 비영리기업", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^비영리기업$", "^농업 임업 및 어업$", "^총 계$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_cont, title: "농림어업 지속일자리", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^지속일자리$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_repl, title: "농림어업 대체일자리", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^대체일자리$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_new, title: "농림어업 신규일자리", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^신규일자리$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_born, title: "농림어업 신규일자리 · 기업생성", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^기업생성$"], unit: 만개, survey: 일자리행정통계}
+      - {id: ajb_exp, title: "농림어업 신규일자리 · 사업확장", tbl: DT_1EP_3016, org: "101", periods: 3, itm: "^일자리$", want: ["^총 계$", "^농업 임업 및 어업$", "^사업확장$"], unit: 만개, survey: 일자리행정통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -11770,6 +11770,45 @@ sources:
       - {id: ycg_in_70, title: "경영주 70세 이상 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.92$"}, unit: 천원, survey: 임가경제조사}
       - {id: ycg_fin_70, title: "경영주 70세 이상 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.92$"}, unit: 천원, survey: 임가경제조사}
       - {id: ycg_hh_70, title: "경영주 70세 이상 임가 현금 가계 지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631559$", C2: "^13102136315X\\.92$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ysm_gam_01, title: "임가 감 1월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^1월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_02, title: "임가 감 2월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^2월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_03, title: "임가 감 3월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^3월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_04, title: "임가 감 4월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^4월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_05, title: "임가 감 5월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^5월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_06, title: "임가 감 6월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^6월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_07, title: "임가 감 7월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^7월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_08, title: "임가 감 8월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^8월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_09, title: "임가 감 9월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^9월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_10, title: "임가 감 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_11, title: "임가 감 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_gam_12, title: "임가 감 12월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^12월$", "^감$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_01, title: "임가 밤 1월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^1월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_02, title: "임가 밤 2월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^2월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_03, title: "임가 밤 3월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^3월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_04, title: "임가 밤 4월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^4월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_05, title: "임가 밤 5월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^5월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_06, title: "임가 밤 6월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^6월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_07, title: "임가 밤 7월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^7월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_08, title: "임가 밤 8월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^8월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_09, title: "임가 밤 9월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^9월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_10, title: "임가 밤 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_11, title: "임가 밤 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_bam_12, title: "임가 밤 12월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^12월$", "^밤$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_01, title: "임가 조경수 1월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^1월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_02, title: "임가 조경수 2월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^2월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_03, title: "임가 조경수 3월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^3월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_04, title: "임가 조경수 4월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^4월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_05, title: "임가 조경수 5월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^5월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_06, title: "임가 조경수 6월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^6월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_07, title: "임가 조경수 7월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^7월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_08, title: "임가 조경수 8월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^8월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_09, title: "임가 조경수 9월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^9월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_10, title: "임가 조경수 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_11, title: "임가 조경수 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_lsc_12, title: "임가 조경수 12월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^12월$", "^조경수$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_sn_04, title: "임가 산나물 4월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^4월$", "^산나물$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_jj_10, title: "임가 대추 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "^대추$"], unit: 시간, survey: 임가경제조사}
+      - {id: ysm_med_11, title: "임가 약용 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "^약용$"], unit: 시간, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

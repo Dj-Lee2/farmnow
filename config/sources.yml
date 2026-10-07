@@ -12248,6 +12248,38 @@ sources:
       - {id: hko_keep, title: "향후 1년 건강기능식품 구입 현 수준 유지", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^현 수준을 유지할 것이다$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hko_down, title: "향후 1년 건강기능식품 구입 줄일 것", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^(약간|매우) 감소할 것이다$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: hko_avg, title: "향후 1년 건강기능식품 구입 변화 예상(5점 만점)", tbl: DT_114053_079, org: "114", periods: 3, itm: ".", want: ["^전체$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_price, title: "건강기능식품 만족도 — 가격(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_taste, title: "건강기능식품 만족도 — 맛(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^맛$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_safe, title: "건강기능식품 만족도 — 안전성(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^안전성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_nutr, title: "건강기능식품 만족도 — 영양·기능성(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^영양/기능성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_conv, title: "건강기능식품 만족도 — 편리성(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^편리성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_div, title: "건강기능식품 만족도 — 다양성(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^다양성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_all, title: "건강기능식품 만족도 — 전반적 만족도(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^전반적인 만족도$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hkm_ok, title: "건강기능식품 전반적으로 만족한다", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^전반적인 만족도$", "^(만족하는 편이다|매우 만족한다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_need, title: "건강기능식품을 먹지 않는 이유 — 필요를 느끼지 못해서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^필요를 느끼지"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_trust, title: "건강기능식품을 먹지 않는 이유 — 효과·효능을 믿을 수 없어서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^품질\\(효과"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_info, title: "건강기능식품을 먹지 않는 이유 — 정보가 부족해서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강기능식품 및 건강 식품에 대한 정보"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_store, title: "건강기능식품을 먹지 않는 이유 — 주위에 파는 곳이 없어서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^주위에 파는"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_price, title: "건강기능식품을 먹지 않는 이유 — 값이 비싸서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격이 비싸서"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_safe, title: "건강기능식품을 먹지 않는 이유 — 안전성이 의심돼서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^안전성이 의심"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_form, title: "건강기능식품을 먹지 않는 이유 — 형태가 먹기 불편해서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^형태가 먹기"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_safe, title: "국산 건강기능식품 불편사항 — 제품 안전성 의심", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^제품의 안전성"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_new, title: "국산 건강기능식품 불편사항 — 잦은 신제품 출시", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^잦은 신제품"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_small, title: "국산 건강기능식품 불편사항 — 소용량 제품 부족", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^소용량"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_taste, title: "국산 건강기능식품 불편사항 — 맛·향·크기 거부감", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^맛 향 크기"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_none, title: "국산 건강기능식품 불편사항 — 불편 없음", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^없음$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_func, title: "국산 건강기능식품 불편사항 — 기능성 내용 의심", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^기능성 내용"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_uncert, title: "국산 건강기능식품 불편사항 — 인증 안 받은 제품 유통 의심", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^인증받지 않은"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_info, title: "국산 건강기능식품 불편사항 — 구입처·구입방법 정보 부족", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^구입처 및 구입방법"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_price, title: "국산 건강기능식품 불편사항 — 수입산보다 비싼 값", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^수입산 건강기능식품에 비해"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hku_side, title: "국산 건강기능식품 불편사항 — 이상 사례·부작용", tbl: DT_114053_073, org: "114", periods: 3, itm: ".", want: ["^전체$", "^이상 사례"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_pack, title: "건강기능식품 정보 얻는 곳 — 제품 포장재 설명·브랜드", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^제품 포장재"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_family, title: "건강기능식품 정보 얻는 곳 — 가족·지인 추천", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가족/지인"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_clerk, title: "건강기능식품 정보 얻는 곳 — 마트·백화점 점원 설명", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^마트 백화점"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_pharm, title: "건강기능식품 정보 얻는 곳 — 약국 약사 설명", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^약국의 약사"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_home, title: "건강기능식품 정보 얻는 곳 — 홈쇼핑 판매 정보", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^홈쇼핑"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_sns, title: "건강기능식품 정보 얻는 곳 — SNS(블로그·유튜브 등)", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^SNS"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hki_tv, title: "건강기능식품 정보 얻는 곳 — TV·라디오·신문잡지 광고", tbl: DT_114053_072, org: "114", periods: 3, itm: ".", want: ["^전체$", "^TV"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

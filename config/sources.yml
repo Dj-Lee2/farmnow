@@ -12733,6 +12733,34 @@ sources:
       - {id: bhw_cc, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 충청권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^충청권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
       - {id: bhw_jl, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 전라권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^전라권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
       - {id: bhw_gs, title: "밤 재배 임가의 밤 관리면적 내 희망 수입금액 — 경상권", tbl: DT_136022_9832, org: "136", periods: 3, itm: "^값$", want: ["^경상권$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihi_bam, title: "밤 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_9799, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_bam, title: "밤 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_9799, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_bam, title: "밤 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_9800, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_bam, title: "밤 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9800, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_gam, title: "감 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_10078, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_gam, title: "감 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_10078, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_gam, title: "감 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_10077, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_gam, title: "감 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_10077, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_herb, title: "산채·약초 등 기타임산물 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_9903, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_herb, title: "산채·약초 등 기타임산물 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_9903, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_herb, title: "산채·약초 등 기타임산물 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_9907, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_herb, title: "산채·약초 등 기타임산물 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9907, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_orn, title: "관상산림식물 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_9783, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_orn, title: "관상산림식물 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_9783, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_orn, title: "관상산림식물 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_9785, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_orn, title: "관상산림식물 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9785, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_gath, title: "식용임산물 채취 임가 평균 가구총수입 — 전체", tbl: DT_136022_9753, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_gath, title: "식용임산물 채취 임가 평균 가구총수입 — 전업", tbl: DT_136022_9753, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_gath, title: "식용임산물 채취 임가 평균 임업총수입 — 전체", tbl: DT_136022_9754, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_gath, title: "식용임산물 채취 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_9754, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_ylim, title: "영림·목재수확 임가 평균 가구총수입 — 전체", tbl: DT_136022_9971, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_ylim, title: "영림·목재수확 임가 평균 가구총수입 — 전업", tbl: DT_136022_9971, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_ylim, title: "영림·목재수확 임가 평균 임업총수입 — 전체", tbl: DT_136022_10001, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_ylim, title: "영림·목재수확 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_10001, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ihi_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 평균 가구총수입 — 전체", tbl: DT_136022_10146, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ihf_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 평균 가구총수입 — 전업", tbl: DT_136022_10146, org: "136", periods: 3, itm: "^값$", want: ["^전업$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifi_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 평균 임업총수입 — 전체", tbl: DT_136022_10147, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: 만원, survey: 임업경영실태조사}
+      - {id: ifl_nut, title: "잣·대추·호두 등 기타 수실류 재배 임가 임업총수입 구간 비율 — 2천만원 미만", tbl: DT_136022_10147, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2천만원 미만$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

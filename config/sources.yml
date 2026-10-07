@@ -12823,6 +12823,40 @@ sources:
       - {id: slj_wch_f, title: "원추리(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11571, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
       - {id: slj_cha_f, title: "참취(노지재배) 1ha당 제초작업 시간", tbl: DT_136036_11578, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
       - {id: slj_cha_g, title: "참취(시설재배) 1ha당 제초작업 시간", tbl: DT_136036_11579, org: "136", itm: "^값$", want: ["^제초작업$", "^계$"], unit: 시간, survey: 임산물생산조사}
+      - {id: fcm_sanm, title: "산마늘 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^산마늘$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_sap, title: "수액 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^수액$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_wch, title: "원추리 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원추리$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_cha, title: "참취 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_gdr, title: "곤드레 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^곤드레$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_mok, title: "목이버섯 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^목이버섯$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_cnm, title: "참나물 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^참나물$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_ma, title: "마 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^마$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_shl, title: "원목표고(노지) 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_shf, title: "원목표고(시설) 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_sws, title: "톱밥배지표고 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_ddk, title: "더덕 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^더덕$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_gom, title: "곰취 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_drj, title: "도라지 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^도라지$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_frn, title: "고사리 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^고사리$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_dok, title: "독활 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^독활$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fcm_dur, title: "두릅 경영비 중 중간재비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^두릅$", "^중간재비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_sanm, title: "산마늘 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^산마늘$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_sap, title: "수액 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^수액$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_wch, title: "원추리 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원추리$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_cha, title: "참취 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^취나물.참취.$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_gdr, title: "곤드레 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^곤드레$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_mok, title: "목이버섯 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^목이버섯$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_cnm, title: "참나물 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^참나물$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_ma, title: "마 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^마$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_shl, title: "원목표고(노지) 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.노지.$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_shf, title: "원목표고(시설) 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^원목표고.시설.$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_sws, title: "톱밥배지표고 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^톱밥배지표고$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_ddk, title: "더덕 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^더덕$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_gom, title: "곰취 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^취나물.곰취.$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_drj, title: "도라지 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^도라지$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_frn, title: "고사리 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^고사리$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_dok, title: "독활 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^독활$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
+      - {id: fch_dur, title: "두릅 경영비 중 고용노력비", tbl: DT_136036_11533, org: "136", itm: "^값$", want: ["^두릅$", "^고용노력비$"], unit: 천원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

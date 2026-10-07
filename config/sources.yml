@@ -11697,6 +11697,40 @@ sources:
       - {id: ymo_10, title: "임가 10월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^10월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
       - {id: ymo_11, title: "임가 11월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^11월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
       - {id: ymo_12, title: "임가 12월 임업노동 투하시간", tbl: DT_136023_9535, org: "136", periods: 3, itm: "^값$", want: ["^12월$", "."], sum: true, unit: 시간, survey: 임가경제조사}
+      - {id: ycw_ft_in, title: "전업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.103$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_ft_fin, title: "전업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.103$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_ft_hh, title: "전업 임가 현금 가계 지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631559$", C2: "^13102136315X\\.103$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_m_in, title: "겸업 중 임업주업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.50$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_m_fin, title: "겸업 중 임업주업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.50$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_m_hh, title: "겸업 중 임업주업 임가 현금 가계 지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631559$", C2: "^13102136315X\\.50$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_s_in, title: "겸업 중 임업부업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_s_fin, title: "겸업 중 임업부업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycw_s_hh, title: "겸업 중 임업부업 임가 현금 가계 지출", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631559$", C2: "^13102136315X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_chest, title: "밤 재배업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.80$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_lsc, title: "조경재업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.81$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_tim, title: "육림·목재수확업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.108$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_gat, title: "채취업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.83$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_nut, title: "수실류 재배업(밤·감 제외) 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.84$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_oth, title: "기타 재배업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.85$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_mush, title: "버섯 재배업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.86$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_in_psm, title: "감 재배업 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.87$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_chest, title: "밤 재배업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.80$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_lsc, title: "조경재업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.81$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_tim, title: "육림·목재수확업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.108$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_gat, title: "채취업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.83$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_nut, title: "수실류 재배업(밤·감 제외) 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.84$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_oth, title: "기타 재배업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.85$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_mush, title: "버섯 재배업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.86$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycu_fin_psm, title: "감 재배업 임가 현금 임업수입", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363153$", C2: "^13102136315X\\.87$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_gg, title: "경기 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_gw, title: "강원 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.67$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_cb, title: "충북 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.68$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_cn, title: "충남 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.69$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_jb, title: "전북 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.70$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_jn, title: "전남 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.71$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_gb, title: "경북 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.72$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_gn, title: "경남 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.73$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycr_in_mc, title: "특·광역시 임가 현금 수입(소득수지 수입 합계)", tbl: DT_136023_11496, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631553$", C2: "^13102136315X\\.74$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

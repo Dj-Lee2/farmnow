@@ -13295,6 +13295,35 @@ sources:
       - {id: hnu_slt, title: "말 미보유 말산업 사업체 운영업종(복수응답) — 말 도축업", tbl: DT_114051N_041, org: "114", periods: 3, itm: "^\\(미보유\\) 운영업종", want: ["^전체$", "^말 도축업$"], unit: "%", survey: 말산업실태조사}
       - {id: hnu_brk, title: "말 미보유 말산업 사업체 운영업종(복수응답) — 말 중개업", tbl: DT_114051N_041, org: "114", periods: 3, itm: "^\\(미보유\\) 운영업종", want: ["^전체$", "^말 중개업$"], unit: "%", survey: 말산업실태조사}
       - {id: hnu_dsp, title: "말 미보유 말산업 사업체 운영업종(복수응답) — 폐마 처리업", tbl: DT_114051N_041, org: "114", periods: 3, itm: "^\\(미보유\\) 운영업종", want: ["^전체$", "^폐마 처리업$"], unit: "%", survey: 말산업실태조사}
+      - {id: hmf_full, title: "산채·약초 재배 임가의 경영 형태 — 전업", tbl: DT_136022_9710, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmf_main, title: "산채·약초 재배 임가의 경영 형태 — 주업", tbl: DT_136022_9710, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hmf_side, title: "산채·약초 재배 임가의 경영 형태 — 부업", tbl: DT_136022_9710, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hnr_dmg, title: "산채·약초 재배 임가의 연작을 하지 않는 이유 — 연작피해 발생", tbl: DT_136022_9897, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^연작피해 발생$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hnr_land, title: "산채·약초 재배 임가의 연작을 하지 않는 이유 — 재배지 부족", tbl: DT_136022_9897, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배지 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hnr_low, title: "산채·약초 재배 임가의 연작을 하지 않는 이유 — 적은 생산량", tbl: DT_136022_9897, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^적은 생산량$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hnr_inc, title: "산채·약초 재배 임가의 연작을 하지 않는 이유 — 낮은 소득", tbl: DT_136022_9897, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^낮은 소득$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfn_self, title: "산채·약초 재배 임가의 생산비 조달 방법 — 자부담", tbl: DT_136022_9930, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfn_sub, title: "산채·약초 재배 임가의 생산비 조달 방법 — 정부 보조", tbl: DT_136022_9930, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 보조$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hfn_bank, title: "산채·약초 재배 임가의 생산비 조달 방법 — 금융기관 융자", tbl: DT_136022_9930, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^금융기관 융자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hsm_buy, title: "산채·약초 재배 임가의 종묘 조달 방법 — 시장 농장 등에서 구입", tbl: DT_136022_9931, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시장 농장 등에서 구입$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hsm_own, title: "산채·약초 재배 임가의 종묘 조달 방법 — 직접 양묘", tbl: DT_136022_9931, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직접 양묘$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hsm_wild, title: "산채·약초 재배 임가의 종묘 조달 방법 — 자연생 채취", tbl: DT_136022_9931, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자연생 채취$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hsm_gift, title: "산채·약초 재배 임가의 종묘 조달 방법 — 지인에게 기증 받음", tbl: DT_136022_9931, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^지인에게 기증 받음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hsm_gov, title: "산채·약초 재배 임가의 종묘 조달 방법 — 정부 지자체 등 관련기관 지원", tbl: DT_136022_9931, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부 지자체 등 관련기관 지원$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hdn_price, title: "산채·약초 재배 임가의 재배를 줄이거나 중단하려는 주된 이유 — 가격하락 및 낮은 수익률", tbl: DT_136022_9938, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가격하락 및 낮은 수익률$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hdn_info, title: "산채·약초 재배 임가의 재배를 줄이거나 중단하려는 주된 이유 — 수요 및 가격정보 부족", tbl: DT_136022_9938, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요 및 가격정보 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hdn_labor, title: "산채·약초 재배 임가의 재배를 줄이거나 중단하려는 주된 이유 — 인건비 상승 및 노동력 부족", tbl: DT_136022_9938, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비 상승 및 노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hdn_mkt, title: "산채·약초 재배 임가의 재배를 줄이거나 중단하려는 주된 이유 — 판로 확보의 어려움", tbl: DT_136022_9938, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판로 확보의 어려움$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hdn_tech, title: "산채·약초 재배 임가의 재배를 줄이거나 중단하려는 주된 이유 — 기술 부족", tbl: DT_136022_9938, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기술 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hpv_up, title: "산채·약초 재배 임가의 3년간 생산량 변화 — 늘어나고 있음", tbl: DT_136022_9939, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^늘어나고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hpv_keep, title: "산채·약초 재배 임가의 3년간 생산량 변화 — 현상 유지 (변화 없음)", tbl: DT_136022_9939, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^현상 유지 \\(변화 없음\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hpv_down, title: "산채·약초 재배 임가의 3년간 생산량 변화 — 줄어들고 있음", tbl: DT_136022_9939, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^줄어들고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_nh, title: "산채·약초 재배 임가의 주요 판매처 비율 — 농협", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농협$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_sj, title: "산채·약초 재배 임가의 주요 판매처 비율 — 산림조합", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림조합$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_col, title: "산채·약초 재배 임가의 주요 판매처 비율 — 수집상", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수집상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_proc, title: "산채·약초 재배 임가의 주요 판매처 비율 — 가공업체", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가공업체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_ret, title: "산채·약초 재배 임가의 주요 판매처 비율 — 도소매상", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^도소매상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: hch_dir, title: "산채·약초 재배 임가의 주요 판매처 비율 — 직거래", tbl: DT_136022_9922, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^직거래$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

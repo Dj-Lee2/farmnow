@@ -2710,7 +2710,7 @@
  </div>
  </div></details>
 
- <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·산나물 재배형태별 비료비·소득·버섯 재료비·수도광열비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군·도별 유기 비중·친환경 농가·출하·도별 유기 출하 비중·유기축산 농가·축산 출하·경영주 연령별 복합비료·질소질·볍씨·고용·동력 시간·악취개선제 종류·사용 방법', 352) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
+ <details class="sg-grp" id="g-eco">{% call head('g-eco', '친환경·비료·농약', '유기·무농약 인증·도별 인증 면적·축산 인증·논벼·밭작물·규모별 비료 투입·경영주 연령별 투입·노동시간·비료·농약 사용량·농약 판매량·유기농 국제 비교·영농폐비닐·폐농약용기·권역별 발생량·볏짚·가축분뇨 처리·수거 방식·수거 주기·가금 분뇨 수거 주기·수거 방식별 주기·축사 기계·장비·축종별 축사 기계·살포·축사·처리시설 악취저감·방역시설·농장 내 분뇨 처리시설 용량·논벼 제초·방제 노동·비료 생산량·소비량·임산물 비료 투입·산나물·약초 비료·농약비·산나물 재배형태별 비료비·소득·버섯 재료비·수도광열비·임가 친환경·GAP 인증·복합비료·농약 월별 생산·출하·수출·밭작물 비료비·농약비·노동비·축산 인증 유형·도별·밭작물 비료 종류별·유기가공식품 인지·구입·신뢰·구입 이유·만족도·구입처·품목군·확인사항·육묘업체 판매액·판매처·경영비·시설·지원·종자업체 판매액·육종·수출입·품종개발비·로열티·육묘 인력 연령·경력·종자업체 종사자·해외채종·건물 연면적·채소묘 생산·접목묘·종자업체 판로·사업 형태·겸업 소득·예비묘·분뇨찌꺼기 재활용·연료화·국제 농약 사용량·종자업체 연구 포장·육종 인력·육종 지원·육묘 취급 작목·식량작물 묘 생산량·강원·경기·충북 시군별 친환경 출하·친환경 주산지 시군·도별 유기 비중·친환경 농가·출하·도별 유기 출하 비중·유기축산 농가·축산 출하·경영주 연령별 복합비료·질소질·볍씨·고용·동력 시간·악취개선제 종류·사용 방법·숯·목초액 용도별 생산·업체·매출·숯 수입·원목표고 1만 본당 생산량·단가·비용', 368) %}{{ kv('친환경 인증 면적', K.eco_area) }}{{ kv('인증 농가', K.eco_farms) }}{{ kv('농약 1ha당', K.pe_kr) }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">친환경 인증·비료</h3>
  <div class="sg-g">
@@ -3199,6 +3199,28 @@
   {{ hcard('시군별 친환경 농산물 출하 면적', [('장흥군', K.sge_jh_area), ('아산시', K.sge_as_area), ('홍성군', K.sge_hs_area), ('무주군', K.sge_mj_area), ('김제시', K.sge_gj_area), ('당진시', K.sge_dj_area), ('청도군', K.sge_cd_area), ('금산군', K.sge_gs_area), ('칠곡군', K.sge_cg_area)], 'ha', '오른쪽은 전년 대비', none, '#1c7a45') }}
   {{ hcard('시군별 유기농산물 출하 면적', [('장흥군', K.sge_jh_org), ('홍성군', K.sge_hs_org), ('아산시', K.sge_as_org), ('무주군', K.sge_mj_org), ('김제시', K.sge_gj_org), ('당진시', K.sge_dj_org), ('금산군', K.sge_gs_org), ('칠곡군', K.sge_cg_org), ('청도군', K.sge_cd_org)], 'ha', '유기 인증만 · 오른쪽은 전년 대비', none, '#7a5cc2') }}
   {{ hcard('시군별 친환경 농산물 출하 농가', [('장흥군', K.sge_jh_farm), ('아산시', K.sge_as_farm), ('홍성군', K.sge_hs_farm), ('청도군', K.sge_cd_farm), ('금산군', K.sge_gs_farm), ('무주군', K.sge_mj_farm), ('김제시', K.sge_gj_farm), ('당진시', K.sge_dj_farm), ('칠곡군', K.sge_cg_farm)], '가구', '오른쪽은 전년 대비', none, '#c77b30') }}
+ </div>
+ <h3 class="sg-sub">숯·목초액 생산업체와 농업용 목초액 <small>참나무 등 원목을 구워 숯을 만들 때 연기를 식혀 받는 목초액·죽초액의 용도별 생산·판매량, 숯 용도별 생산량, 생산업체 수·매출·가동일, 숯 수입 · 산림청 목재이용실태조사</small></h3>
+ <div class="sg-g">
+  {{ card('cwv_prod', 'cwv1', ('농업용 ' ~ K.cwv_agp.vals[-1]|big ~ 'ℓ(' ~ '{:.1f}'.format(K.cwv_agp.vals[-1] / K.cwv_prod.vals[-1] * 100) ~ '%) · 판매량 ' ~ K.cwv_sale.vals[-1]|big ~ 'ℓ') if K.cwv_agp and K.cwv_sale else none, '#1c7a45') }}
+  {{ card('cwv_ags', 'cwv2', ('농업용 생산량 ' ~ K.cwv_agp.vals[-1]|big ~ 'ℓ · 목초액 생산업체 ' ~ '{:,.0f}'.format(K.cco_wv.vals[-1]) ~ '곳') if K.cwv_agp and K.cco_wv else none, '#3a8f6a') }}
+  {{ card('cch_prod', 'cwv3', ('연료용 ' ~ '{:.1f}'.format(K.cch_fuel.vals[-1] / K.cch_prod.vals[-1] * 100) ~ '% · 농업용 ' ~ K.cch_agri.vals[-1]|big ~ '㎏') if K.cch_fuel and K.cch_agri else none, '#5a5a5a') }}
+  {{ card('crv_all', 'cwv4', ('숯 ' ~ num(K.crv_chr.vals[-1], '백만원')|striptags ~ ' · 목초액 ' ~ num(K.crv_wv.vals[-1], '백만원')|striptags) if K.crv_chr and K.crv_wv else none, '#a0702a') }}
+  {{ card('cdy_avg', 'cwv5', ('숯 최대 생산가능량 평균 ' ~ '{:,.1f}'.format(K.ccp_chr.vals[-1]) ~ '톤 · 목초액 ' ~ '{:,.1f}'.format(K.ccp_wv.vals[-1]) ~ '㎘') if K.ccp_chr and K.ccp_wv else none, '#7a5cc2') }}
+  {{ card('cim_q', 'cwv6', ('수입금액 ' ~ num(K.cim_amt.vals[-1], '천달러')|striptags ~ ' · 톤당 ' ~ '{:,.0f}'.format(K.cim_p.vals[-1]) ~ '달러 · 국내 생산의 약 ' ~ '{:,.0f}'.format(K.cim_q.vals[-1] * 1000 / K.cch_prod.vals[-1]) ~ '배') if K.cim_amt and K.cim_p and K.cch_prod else none, '#1f5f8a') }}
+  {{ hcard('목초액·죽초액 용도별 생산량', [('농업용', K.cwv_agp), ('축산용', K.cwv_lvp), ('가정용', K.cwv_hhp)], 'ℓ', '괄호는 전체 생산량 중 비중 · 연료·공업·치료용은 없음 · 오른쪽은 전년 대비', K.cwv_prod.vals[-1] if K.cwv_prod else none, '#1c7a45') }}
+  {{ hcard('숯 용도별 생산량', [('연료용', K.cch_fuel), ('가정용', K.cch_home), ('농업용', K.cch_agri), ('공업용', K.cch_ind)], '㎏', '괄호는 전체 생산량 중 비중 · 축산용은 없음 · 오른쪽은 전년 대비', K.cch_prod.vals[-1] if K.cch_prod else none, '#5a5a5a') }}
+  {{ hcard('원료별 숯·목초액 생산업체 수', [('국산 원목으로 숯', K.cco_log), ('목초액 생산', K.cco_wv), ('톱밥으로 숯', K.cco_saw), ('대나무로 숯', K.cco_bam)], '개소', '한 업체가 여러 형태를 겸할 수 있음 · 괄호는 전체 업체 중 비중 · 오른쪽은 전년 대비', K.cco_all.vals[-1] if K.cco_all else none, '#a0702a') }}
+ </div>
+ <h3 class="sg-sub">원목표고 1만 본당 생산량·단가와 비용 <small>참나무 원목에 표고 종균을 넣어 기르는 노지·시설 재배의 표고목 1만 본당 생표고·건표고 생산량과 kg당 단가, 수도광열비·재료비·영농시설상각비, 부가가치 · 산림청 임산물생산조사</small></h3>
+ <div class="sg-g">
+  {{ card('shp_fp_l', 'shp1', ('건표고 ' ~ num(K.shp_dp_l.vals[-1], 'kg')|striptags ~ ' · 생표고 kg당 ' ~ '{:,.0f}'.format(K.shp_fu_l.vals[-1]) ~ '원') if K.shp_dp_l and K.shp_fu_l else none, '#a0605a') }}
+  {{ card('shp_fp_f', 'shp2', ('건표고 ' ~ num(K.shp_dp_f.vals[-1], 'kg')|striptags ~ ' · 생표고 kg당 ' ~ '{:,.0f}'.format(K.shp_fu_f.vals[-1]) ~ '원') if K.shp_dp_f and K.shp_fu_f else none, '#7a5cc2') }}
+  {{ card('shv_f', 'shp3', ('노지 ' ~ num(K.shv_l.vals[-1], '원')|striptags ~ ' · 시설 영농시설상각비 ' ~ num(K.shc_fd_f.vals[-1], '원')|striptags) if K.shv_l and K.shc_fd_f else none, '#3a8f6a') }}
+  {{ hcard('원목표고 1만 본당 생산량', [('시설 — 생표고', K.shp_fp_f), ('노지 — 생표고', K.shp_fp_l), ('시설 — 건표고', K.shp_dp_f), ('노지 — 건표고', K.shp_dp_l)], 'kg', '표고목 1만 본 기준 · 오른쪽은 전년 대비', none, '#a0605a') }}
+  {{ hcard('원목표고 kg당 판매 단가', [('시설 — 건표고', K.shp_du_f), ('노지 — 건표고', K.shp_du_l), ('노지 — 생표고', K.shp_fu_l), ('시설 — 생표고', K.shp_fu_f)], '원', '조사 임가가 받은 평균 단가 · 오른쪽은 전년 대비', none, '#c77b30') }}
+  {{ hcard('원목표고 1만 본당 수도광열비·재료비·영농시설상각비', [('시설 — 영농시설상각비', K.shc_fd_f), ('시설 — 수도광열비', K.shc_ut_f), ('노지 — 수도광열비', K.shc_ut_l), ('노지 — 영농시설상각비', K.shc_fd_l), ('노지 — 재료비', K.shc_mt_l), ('시설 — 재료비', K.shc_mt_f)], '원', '표고목 1만 본 기준 · 오른쪽은 전년 대비', none, '#5a5a5a') }}
+  {{ hcard('원목표고 1만 본당 부가가치', [('시설', K.shv_f), ('노지', K.shv_l)], '원', '총수입에서 중간재비를 뺀 값 · 오른쪽은 전년 대비', none, '#3a8f6a') }}
  </div>
 </div></details>
 

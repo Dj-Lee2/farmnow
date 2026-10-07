@@ -13688,6 +13688,45 @@ sources:
       - {id: spb_fac, title: "공장폐수 유입지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200028$"}, unit: mg/kg, survey: 토양오염실태조사}
       - {id: spb_cln, title: "정화토양 사용지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200148$"}, unit: mg/kg, survey: 토양오염실태조사}
       - {id: spb_gw, title: "지하수 오염지역 토양 납 평균", tbl: DT_106N_20_0100004, org: "106", periods: 6, itm: "오염원별 오염도", want: ["^평균$", "^납 Pb$"], codes: {C1: "4200068$"}, unit: mg/kg, survey: 토양오염실태조사}
+      - {id: aqu_cart, title: "양식 장비 사용률 · 운반차", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^운반차$", "^사용\\("], sum: true, unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqu_noril, title: "양식 장비 사용률 · 김 양륙 장비", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김 양륙 장비$", "^사용\\("], sum: true, unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqu_debr, title: "양식 장비 사용률 · 이물질 제거기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^이물질 제거기$", "^사용\\("], sum: true, unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_noril, title: "양식 장비 공용·임차 사용 비율 · 김 양륙 장비", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김 양륙 장비$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_norif, title: "양식 장비 공용·임차 사용 비율 · 김발 뒤집기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김발 뒤집기$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_cart, title: "양식 장비 공용·임차 사용 비율 · 운반차", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^운반차$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_debr, title: "양식 장비 공용·임차 사용 비율 · 이물질 제거기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^이물질 제거기$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_oyst, title: "양식 장비 공용·임차 사용 비율 · 굴류 코팅사 자동 분리기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^굴류 코팅사", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_mix, title: "양식 장비 공용·임차 사용 비율 · 사료 배합기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^사료 배합기$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_crane, title: "양식 장비 공용·임차 사용 비율 · 크레인", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^크레인$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_feedr, title: "양식 장비 공용·임차 사용 비율 · 자동 사료 공급기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^자동 사료 공급기$", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqs_aer, title: "양식 장비 공용·임차 사용 비율 · 수차(에어브로워)", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^수차", "^사용\\(공용"], unit: "%", survey: 양식업 기계화 실태조사}
+      - {id: aqn_envm, title: "양식 장비 평균 사용 대수 · 양식환경 모니터링 장비", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^양식환경 모니터링", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_cctv, title: "양식 장비 평균 사용 대수 · 영상 모니터링 장치", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^영상 모니터링", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_aer, title: "양식 장비 평균 사용 대수 · 수차(에어브로워)", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^수차", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_ster, title: "양식 장비 평균 사용 대수 · 살균소독기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^살균소독기$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_mix, title: "양식 장비 평균 사용 대수 · 사료 배합기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^사료 배합기$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_heat, title: "양식 장비 평균 사용 대수 · 히트펌프", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^히트펌프$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_filt, title: "양식 장비 평균 사용 대수 · 여과기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^여과기$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_feedr, title: "양식 장비 평균 사용 대수 · 자동 사료 공급기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^자동 사료 공급기$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqn_cart, title: "양식 장비 평균 사용 대수 · 운반차", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^운반차$", "^사용 대수$"], unit: 대, survey: 양식업 기계화 실태조사}
+      - {id: aqp_nori, title: "양식 장비 작업 소요 인력 · 김 채취기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김 채취기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_crane, title: "양식 장비 작업 소요 인력 · 크레인", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^크레인$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_noril, title: "양식 장비 작업 소요 인력 · 김 양륙 장비", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김 양륙 장비$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_norif, title: "양식 장비 작업 소요 인력 · 김발 뒤집기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김발 뒤집기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_oyst, title: "양식 장비 작업 소요 인력 · 굴류 코팅사 자동 분리기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^굴류 코팅사", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_debr, title: "양식 장비 작업 소요 인력 · 이물질 제거기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^이물질 제거기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_harv, title: "양식 장비 작업 소요 인력 · 수확기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^수확기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_mix, title: "양식 장비 작업 소요 인력 · 사료 배합기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^사료 배합기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqp_feedr, title: "양식 장비 작업 소요 인력 · 자동 사료 공급기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^자동 사료 공급기$", "^소요 인력$"], unit: 명, survey: 양식업 기계화 실태조사}
+      - {id: aqt_envm, title: "양식 장비 작업 시간 · 양식환경 모니터링 장비", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^양식환경 모니터링", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_cctv, title: "양식 장비 작업 시간 · 영상 모니터링 장치", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^영상 모니터링", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_aer, title: "양식 장비 작업 시간 · 수차(에어브로워)", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^수차", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_harv, title: "양식 장비 작업 시간 · 수확기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^수확기$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_conv, title: "양식 장비 작업 시간 · 컨베어벨트", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^컨베어벨트$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_nori, title: "양식 장비 작업 시간 · 김 채취기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^김 채취기$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_debr, title: "양식 장비 작업 시간 · 이물질 제거기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^이물질 제거기$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_filt, title: "양식 장비 작업 시간 · 여과기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^여과기$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
+      - {id: aqt_mix, title: "양식 장비 작업 시간 · 사료 배합기", tbl: DT_146010_30005, org: "146", periods: 3, itm: "^양식업 작업 단계별 기계화 정도$", want: ["^사료 배합기$", "^작업 시간$"], unit: 시간, survey: 양식업 기계화 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -15149,6 +15149,37 @@ sources:
       - {id: hmu_rtc, title: "간편식 즉석조리식품 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^즉석 조리 식품$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmu_fresh, title: "간편식 신선편의식품 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^신선편의식품$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmu_kit, title: "간편식 밀키트 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^간편조리세트[(]밀키트[)]$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hme_avg, title: "간편식 월평균 구입 지출액 — 평균", tbl: DT_114053_059, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^평균$"], unit: "원", survey: 가공식품소비자태도조사}
+      - {id: hme_10p, title: "간편식 월평균 구입 지출액 10만원 이상", tbl: DT_114053_059, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^10만원 이상$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hme_lt4, title: "간편식 월평균 구입 지출액 4만원 미만", tbl: DT_114053_059, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(1만원 미만|1만원~2만원 미만|2만원~4만원 미만)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmt_price, title: "간편식 만족도 — 가격 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_taste, title: "간편식 만족도 — 맛 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^맛$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_safe, title: "간편식 만족도 — 안전성 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^안전성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_nutr, title: "간편식 만족도 — 영양·건강 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^영양(/건강)?$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_conv, title: "간편식 만족도 — 편리성 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^편리성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_var, title: "간편식 만족도 — 다양성 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^다양성$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_all, title: "간편식 만족도 — 전반적인 만족도 평균 점수", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전반적인 만족도$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmt_all_ok, title: "간편식 전반적으로 만족(만족하는 편+매우 만족)", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^전반적인 만족도$", "^(만족하는 편이다|매우 만족한다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmt_price_ok, title: "간편식 가격에 만족(만족하는 편+매우 만족)", tbl: DT_114053_064, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^가격$", "^(만족하는 편이다|매우 만족한다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmy_up, title: "향후 1년 간편식 구입 늘릴 것", tbl: DT_114053_065, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가할 것이다|매우 증가할 것이다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmy_dn, title: "향후 1년 간편식 구입 줄일 것", tbl: DT_114053_065, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 감소할 것이다|매우 감소할 것이다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmy_avg, title: "향후 1년 간편식 구입 변화 예상 — 평균 점수", tbl: DT_114053_065, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
+      - {id: hmi_rice, title: "최근 1년 간편식 즉석 밥류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^즉석 밥류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_sauce, title: "최근 1년 간편식 소스·양념류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^소스/양념류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_soup, title: "최근 1년 간편식 즉석 국·찌개·탕류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^즉석 국류/찌개/탕류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_tteok, title: "최근 1년 간편식 즉석 떡볶이·면류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^즉석 떡볶이/면류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_porr, title: "최근 1년 간편식 죽·스프류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^죽/스프류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_meat, title: "최근 1년 간편식 육류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^육류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_fish, title: "최근 1년 간편식 수산물 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^수산물$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_dump, title: "최근 1년 간편식 만두·피자류 구입 늘었다", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^만두/피자류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_meal, title: "최근 1년 간편식 즉석섭취 식사류 구입 늘었다", tbl: DT_114053_053_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^즉석섭취 식사류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_side, title: "최근 1년 간편식 즉석섭취 반찬류 구입 늘었다", tbl: DT_114053_053_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^즉석섭취 반찬류$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_kkor, title: "최근 1년 간편식 한식 밀키트 구입 늘었다", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^한식밀키트$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_kasia, title: "최근 1년 간편식 동양식 밀키트 구입 늘었다", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^동양식밀키트$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_kwest, title: "최근 1년 간편식 서양식 밀키트 구입 늘었다", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^서양식밀키트$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_salad, title: "최근 1년 간편식 샐러드 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^샐러드$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_veg, title: "최근 1년 간편식 신선편의채소 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^신선편의채소$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmi_fruit, title: "최근 1년 간편식 신선편의과일 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^신선편의과일$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

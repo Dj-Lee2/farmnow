@@ -15310,6 +15310,36 @@ sources:
       - {id: fai_pkg_item, title: "기구·용기·포장지 생산실적 — 품목수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^품목수$", want: ["^기구·용기·포장지$"], unit: "개", survey: 식품 및 식품첨가물 생산실적}
       - {id: fai_pkg_dom, title: "기구·용기·포장지 생산실적 — 국내판매액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^국내판매액$", want: ["^기구·용기·포장지$"], unit: "십억원", survey: 식품 및 식품첨가물 생산실적}
       - {id: fai_pkg_exp, title: "기구·용기·포장지 생산실적 — 수출액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^수출액$", want: ["^기구·용기·포장지$"], unit: "백만달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: imf_all_n, title: "식품 등 수입신고 건수", tbl: DT_145_2012_H001, org: "145", periods: 3, itm: "^건수", want: ["^데이터$"], unit: "건", survey: 수입식품 통계}
+      - {id: imf_all_t, title: "식품 등 수입신고 중량", tbl: DT_145_2012_H001, org: "145", periods: 3, itm: "^중량$", want: ["^데이터$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_all_v, title: "식품 등 수입신고 금액", tbl: DT_145_2012_H001, org: "145", periods: 3, itm: "^금액$", want: ["^데이터$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_agf_v, title: "품목군별 수입신고 금액 — 농·임산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^농·임산물$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_proc_v, title: "품목군별 수입신고 금액 — 가공식품", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^가공식품$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_hf_v, title: "품목군별 수입신고 금액 — 건강기능식품", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^건강기능식품$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_add_v, title: "품목군별 수입신고 금액 — 식품첨가물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^식품첨가물$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_pkg_v, title: "품목군별 수입신고 금액 — 기구·용기·포장", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^기구 또는 용기·포장$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_live_v, title: "품목군별 수입신고 금액 — 축산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^축산물$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_sea_v, title: "품목군별 수입신고 금액 — 수산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^금액$", want: ["^수산물$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: imf_agf_t, title: "품목군별 수입신고 중량 — 농·임산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^농·임산물$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_proc_t, title: "품목군별 수입신고 중량 — 가공식품", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^가공식품$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_hf_t, title: "품목군별 수입신고 중량 — 건강기능식품", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^건강기능식품$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_add_t, title: "품목군별 수입신고 중량 — 식품첨가물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^식품첨가물$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_pkg_t, title: "품목군별 수입신고 중량 — 기구·용기·포장", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^기구 또는 용기·포장$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_live_t, title: "품목군별 수입신고 중량 — 축산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^축산물$"], unit: "톤", survey: 수입식품 통계}
+      - {id: imf_sea_t, title: "품목군별 수입신고 중량 — 수산물", tbl: DT_145_2012_H004, org: "145", periods: 3, itm: "^중량$", want: ["^수산물$"], unit: "톤", survey: 수입식품 통계}
+      - {id: ifk_all_n, title: "수입식품 부적합 건수 — 계", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^계$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_all_v, title: "수입식품 부적합 금액 — 계", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^금액$", want: ["^계$"], unit: "천달러", survey: 수입식품 통계}
+      - {id: ifk_agf_n, title: "품목군별 수입식품 부적합 건수 — 농·임산물", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^농·임산물$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_proc_n, title: "품목군별 수입식품 부적합 건수 — 가공식품", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^가공식품$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_hf_n, title: "품목군별 수입식품 부적합 건수 — 건강기능식품", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^건강기능식품$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_add_n, title: "품목군별 수입식품 부적합 건수 — 식품첨가물", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^식품첨가물$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_pkg_n, title: "품목군별 수입식품 부적합 건수 — 기구·용기·포장", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^기구 또는 용기·포장$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_live_n, title: "품목군별 수입식품 부적합 건수 — 축산물", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^축산물$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_sea_n, title: "품목군별 수입식품 부적합 건수 — 수산물", tbl: DT_145_2012_H009, org: "145", periods: 3, itm: "^건수$", want: ["^수산물$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_doc_n, title: "검사종류별 수입식품 부적합 건수 — 서류검사", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^서류검사$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_site_n, title: "검사종류별 수입식품 부적합 건수 — 현장검사", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^현장검사$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_lab_n, title: "검사종류별 수입식품 부적합 건수 — 정밀검사", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^정밀검사$"], unit: "건", survey: 수입식품 통계}
+      - {id: ifk_rand_n, title: "검사종류별 수입식품 부적합 건수 — 무작위표본", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^무작위표본$"], unit: "건", survey: 수입식품 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

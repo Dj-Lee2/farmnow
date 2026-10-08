@@ -14743,6 +14743,37 @@ sources:
       - {id: ks_sh_promo, title: "한식 음식점 창업 준비 때 가장 어려웠던 점 프로모션 방안", tbl: DT_114058_2023_B006, org: "114", periods: 3, itm: "애로사항\\(1순위\\)$", want: ["^전체$", "^프로모션 방안 결정$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_sh_perm, title: "한식 음식점 창업 준비 때 가장 어려웠던 점 인허가", tbl: DT_114058_2023_B006, org: "114", periods: 3, itm: "애로사항\\(1순위\\)$", want: ["^전체$", "^사업장 인허가 관련 사항$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_sh_etc, title: "한식 음식점 창업 준비 때 가장 어려웠던 점 기타", tbl: DT_114058_2023_B006, org: "114", periods: 3, itm: "애로사항\\(1순위\\)$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_none, title: "한식 음식점 배달 판매 현재 거의 하지 않음", tbl: DT_114058_2023_E009, org: "114", periods: 3, itm: "배달 : 현재$", want: ["^전체$", "^거의 하지 않음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_some, title: "한식 음식점 배달 판매 현재 일부 하고 있음", tbl: DT_114058_2023_E009, org: "114", periods: 3, itm: "배달 : 현재$", want: ["^전체$", "^일부 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_most, title: "한식 음식점 배달 판매 현재 대부분 하고 있음", tbl: DT_114058_2023_E009, org: "114", periods: 3, itm: "배달 : 현재$", want: ["^전체$", "^대부분 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_all, title: "한식 음식점 배달 판매 현재 모두 하고 있음", tbl: DT_114058_2023_E009, org: "114", periods: 3, itm: "배달 : 현재$", want: ["^전체$", "^모두 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_up, title: "한식 음식점 배달 판매 전망 증가(증가+매우 증가)", tbl: DT_114058_2023_E010, org: "114", periods: 3, itm: "배달 : 향후$", want: ["^전체$", "^(매우 )?증가$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_same, title: "한식 음식점 배달 판매 전망 비슷", tbl: DT_114058_2023_E010, org: "114", periods: 3, itm: "배달 : 향후$", want: ["^전체$", "^비슷$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_dlv_down, title: "한식 음식점 배달 판매 전망 감소(감소+매우 감소)", tbl: DT_114058_2023_E010, org: "114", periods: 3, itm: "배달 : 향후$", want: ["^전체$", "^(매우 )?감소$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_none, title: "한식 음식점 테이크아웃 판매 현재 거의 하지 않음", tbl: DT_114058_2023_E011, org: "114", periods: 3, itm: "테이크아웃 : 현재$", want: ["^전체$", "^거의 하지 않음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_some, title: "한식 음식점 테이크아웃 판매 현재 일부 하고 있음", tbl: DT_114058_2023_E011, org: "114", periods: 3, itm: "테이크아웃 : 현재$", want: ["^전체$", "^일부 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_most, title: "한식 음식점 테이크아웃 판매 현재 대부분 하고 있음", tbl: DT_114058_2023_E011, org: "114", periods: 3, itm: "테이크아웃 : 현재$", want: ["^전체$", "^대부분 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_all, title: "한식 음식점 테이크아웃 판매 현재 모두 하고 있음", tbl: DT_114058_2023_E011, org: "114", periods: 3, itm: "테이크아웃 : 현재$", want: ["^전체$", "^모두 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_up, title: "한식 음식점 테이크아웃 판매 전망 증가(증가+매우 증가)", tbl: DT_114058_2023_E012, org: "114", periods: 3, itm: "테이크아웃 : 향후$", want: ["^전체$", "^(매우 )?증가$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_same, title: "한식 음식점 테이크아웃 판매 전망 비슷", tbl: DT_114058_2023_E012, org: "114", periods: 3, itm: "테이크아웃 : 향후$", want: ["^전체$", "^비슷$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_tko_down, title: "한식 음식점 테이크아웃 판매 전망 감소(감소+매우 감소)", tbl: DT_114058_2023_E012, org: "114", periods: 3, itm: "테이크아웃 : 향후$", want: ["^전체$", "^(매우 )?감소$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_none, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 현재 거의 하지 않음", tbl: DT_114058_2023_E013, org: "114", periods: 3, itm: "RMR : 현재$", want: ["^전체$", "^거의 하지 않음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_some, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 현재 일부 하고 있음", tbl: DT_114058_2023_E013, org: "114", periods: 3, itm: "RMR : 현재$", want: ["^전체$", "^일부 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_most, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 현재 대부분 하고 있음", tbl: DT_114058_2023_E013, org: "114", periods: 3, itm: "RMR : 현재$", want: ["^전체$", "^대부분 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_all, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 현재 모두 하고 있음", tbl: DT_114058_2023_E013, org: "114", periods: 3, itm: "RMR : 현재$", want: ["^전체$", "^모두 하고 있음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_up, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 전망 증가(증가+매우 증가)", tbl: DT_114058_2023_E014, org: "114", periods: 3, itm: "RMR : 향후$", want: ["^전체$", "^(매우 )?증가$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_same, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 전망 비슷", tbl: DT_114058_2023_E014, org: "114", periods: 3, itm: "RMR : 향후$", want: ["^전체$", "^비슷$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rmr_down, title: "한식 음식점 RMR(포장 반조리 메뉴) 판매 전망 감소(감소+매우 감소)", tbl: DT_114058_2023_E014, org: "114", periods: 3, itm: "RMR : 향후$", want: ["^전체$", "^(매우 )?감소$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_rec, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 외국인 맞춤 레시피", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^외국인 맞춤 레시피 제공$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_menu, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 외국어 메뉴판 제작", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^외국어 메뉴판 제작 제공$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_guide, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 외국인 고객 응대 가이드", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^외국인 고객 응대 가이드제공$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_lang, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 외국어 교육", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^외국어 교육 지원$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_promo, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 판촉·홍보", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^판촉 홍보 지원$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_ext, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 사업장 외관 개선", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^사업장 외관 개선$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_tech, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 푸드테크(외국어) 장비 구입", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^푸드테크\\(외국어\\) 등 장비구입 지원$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_seat, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 온돌·좌식 구조 개선", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^온돌/좌식 구조 개선 지원$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_wc, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 화장실·내부 인테리어 개선", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^화장실 및 내부 인테리어 개선 지원$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fgs_etc, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 기타", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

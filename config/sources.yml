@@ -14914,6 +14914,35 @@ sources:
       - {id: jsj_forest, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 다른 임업 분야", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^다른 임업분야 종사$"], unit: "%", survey: 임업경영실태조사}
       - {id: jsj_self, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 자영업 등 기타", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자영업 등 기타$"], unit: "%", survey: 임업경영실태조사}
       - {id: jag_yes, title: "기타유실수 재배 임가 — 나무 수령을 조절함", tbl: DT_136022_10143, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^예$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ks_jg_use, title: "한식 음식점 장류 취급 업체", tbl: DT_114058_2023_D010, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^취급$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jg_dom, title: "한식 음식점 장류 국산 비중 평균", tbl: DT_114058_2023_D010, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jg_all, title: "한식 음식점 장류 전부 국산 쓰는 업체", tbl: DT_114058_2023_D010, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jg_none, title: "한식 음식점 장류 국산 전혀 안 쓰는 업체", tbl: DT_114058_2023_D010, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^0%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pf_use, title: "한식 음식점 가공식품류 취급 업체", tbl: DT_114058_2023_D016, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^취급$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pf_dom, title: "한식 음식점 가공식품류 국산 비중 평균", tbl: DT_114058_2023_D016, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pf_all, title: "한식 음식점 가공식품류 전부 국산 쓰는 업체", tbl: DT_114058_2023_D016, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pf_none, title: "한식 음식점 가공식품류 국산 전혀 안 쓰는 업체", tbl: DT_114058_2023_D016, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^0%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jb_whl, title: "한식 음식점 장류 구입처 — 도매상", tbl: DT_114058_2023_D011, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^도매상$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jb_mkt, title: "한식 음식점 장류 구입처 — 식자재 마트", tbl: DT_114058_2023_D011, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^식자재 마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jb_big, title: "한식 음식점 장류 구입처 — 일반 대형마트", tbl: DT_114058_2023_D011, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^일반 대형마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jb_farm, title: "한식 음식점 장류 구입처 — 산지 직거래", tbl: DT_114058_2023_D011, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^산지 직거래$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jb_web, title: "한식 음식점 장류 구입처 — 온라인 마트", tbl: DT_114058_2023_D011, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^온라인 마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fo_price, title: "한식 음식점이 외국산 식재료를 사는 이유(1순위) — 국산보다 싸서", tbl: DT_114058_2023_D019, org: "114", periods: 3, itm: "\\(1순위\\)$", want: ["^전체$", "^가격이"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fo_bulk, title: "한식 음식점이 외국산 식재료를 사는 이유(1순위) — 대량 확보가 쉬워서", tbl: DT_114058_2023_D019, org: "114", periods: 3, itm: "\\(1순위\\)$", want: ["^전체$", "^대량 확보"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fo_qual, title: "한식 음식점이 외국산 식재료를 사는 이유(1순위) — 맛·품질·규격이 일정해서", tbl: DT_114058_2023_D019, org: "114", periods: 3, itm: "\\(1순위\\)$", want: ["^전체$", "^맛/품질"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fo_season, title: "한식 음식점이 외국산 식재료를 사는 이유(1순위) — 국내 생산이 안 되는 시기가 있어서", tbl: DT_114058_2023_D019, org: "114", periods: 3, itm: "\\(1순위\\)$", want: ["^전체$", "^국내에서 생산되지"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_fo_prep, title: "한식 음식점이 외국산 식재료를 사는 이유(1순위) — 1차 가공이 잘 되어 있어서", tbl: DT_114058_2023_D019, org: "114", periods: 3, itm: "\\(1순위\\)$", want: ["^전체$", "^사용이 편리"], unit: "%", survey: 한식산업 실태조사}
+      - {id: sjr_all, title: "장류 국내 판매액(합계)", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^합계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_hgj, title: "한식간장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^한식간장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_ygj, title: "양조간장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^양조간장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_hdj, title: "한식된장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^한식된장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_dj, title: "된장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^된장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_gcj, title: "고추장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^고추장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_cgj, title: "청국장 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^청국장$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: sjr_mj, title: "한식메주 국내 판매액", tbl: TX_14503_B037, org: "145", periods: 3, itm: "^국내판매액$", want: ["^한식메주$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: kmc_all, title: "절임·조림류 국내 판매액(계)", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: kmc_kim, title: "김치 국내 판매액", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^김치$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: kmc_ginseng, title: "인삼·홍삼 당절임 국내 판매액", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^당절임\\((인삼|홍삼)\\)$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

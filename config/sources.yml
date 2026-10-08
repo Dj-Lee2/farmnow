@@ -15180,6 +15180,44 @@ sources:
       - {id: hmi_salad, title: "최근 1년 간편식 샐러드 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^샐러드$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmi_veg, title: "최근 1년 간편식 신선편의채소 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^신선편의채소$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmi_fruit, title: "최근 1년 간편식 신선편의과일 구입 늘었다", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(약간 증가|매우 증가)$", "^신선편의과일$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: fdi_sales, title: "식품산업(식품·첨가물 제조) 식품산업 매출액", tbl: TX_14503_A016, org: "145", periods: 3, itm: "총계$", want: ["^식품산업 매출액$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdi_dom, title: "식품산업(식품·첨가물 제조) 국내매출액", tbl: TX_14503_A016, org: "145", periods: 3, itm: "총계$", want: ["^국내매출액$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdi_exp, title: "식품산업(식품·첨가물 제조) 수출액", tbl: TX_14503_A016, org: "145", periods: 3, itm: "총계$", want: ["^수출액$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdi_prod, title: "식품산업(식품·첨가물 제조) 식품산업 생산액", tbl: TX_14503_A016, org: "145", periods: 3, itm: "총계$", want: ["^식품산업 생산액$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdi_firm, title: "식품 등 제조가공업 생산실적 보고 업체 수(전국)", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdi_emp, title: "식품 등 제조가공업 종업원 수(전국)", tbl: TX_14503_A002, org: "145", periods: 3, itm: "종업원수", want: ["^식품 등 제조가공업$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_gg, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 경기", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^경기도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_gw, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 강원", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^강원(도|특별자치도)$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_cb, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 충북", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^충청북도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_cn, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 충남", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^충청남도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_jb, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 전북", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^전(라북도|북특별자치도)$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_jn, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 전남", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^전라남도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_gb, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 경북", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^경상북도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_gn, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 경남", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^경상남도$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fdf_jj, title: "식품 등 제조가공업 생산실적 보고 업체 수 — 제주", tbl: TX_14503_A001, org: "145", periods: 3, itm: "업체수", want: ["^식품 등 제조가공업$", "^제주(도|특별자치도)$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_lt5_n, title: "식품업체 매출 5억원 미만(실적 없음 포함) — 업체 수 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^업체수점유율$", want: ["^(생산실적 없음|1억원 미만|1억-5억원)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_lt5_s, title: "식품업체 매출 5억원 미만(실적 없음 포함) — 매출액 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^매출액점유율$", want: ["^(생산실적 없음|1억원 미만|1억-5억원)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_mid_n, title: "식품업체 매출 5억~100억원 — 업체 수 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^업체수점유율$", want: ["^(5억-10억원|10억-20억원|20억-50억원|50억-100억원)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_mid_s, title: "식품업체 매출 5억~100억원 — 매출액 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^매출액점유율$", want: ["^(5억-10억원|10억-20억원|20억-50억원|50억-100억원)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_big_n, title: "식품업체 매출 100억원 이상 — 업체 수 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^업체수점유율$", want: ["^(100억-300억원|300억-500억원|500억-1000억원|1000억-2000억원|2000억-5000억원|5000억-1조원|1조원 이상)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_big_s, title: "식품업체 매출 100억원 이상 — 매출액 점유율", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^매출액점유율$", want: ["^(100억-300억원|300억-500억원|500억-1000억원|1000억-2000억원|2000억-5000억원|5000억-1조원|1조원 이상)$"], sum: true, unit: "%", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fbz_all_n, title: "식품업체 수(매출액 규모별 계)", tbl: TX_14503_A013, org: "145", periods: 3, itm: "^업체수$", want: ["^계$"], unit: "개", survey: 식품 및 식품첨가물 생산실적}
+      - {id: hmb_rice, title: "최근 1년 간편식 즉석 밥류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^즉석 밥류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_sauce, title: "최근 1년 간편식 소스·양념류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^소스/양념류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_soup, title: "최근 1년 간편식 즉석 국류·찌개·탕류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^즉석 국류/찌개/탕류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_tteok, title: "최근 1년 간편식 즉석 떡볶이·면류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^즉석 떡볶이/면류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_porr, title: "최근 1년 간편식 죽·스프류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^죽/스프류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_meat, title: "최근 1년 간편식 육류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^육류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_fish, title: "최근 1년 간편식 수산물 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^수산물$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_dump, title: "최근 1년 간편식 만두·피자류 구입 경험", tbl: DT_114053_053_01, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^만두/피자류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_meal, title: "최근 1년 간편식 즉석섭취 식사류 구입 경험", tbl: DT_114053_053_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^즉석섭취 식사류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_side, title: "최근 1년 간편식 즉석섭취 반찬류 구입 경험", tbl: DT_114053_053_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^즉석섭취 반찬류$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_kkor, title: "최근 1년 간편식 한식밀키트 구입 경험", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^한식밀키트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_kasia, title: "최근 1년 간편식 동양식밀키트 구입 경험", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^동양식밀키트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_kwest, title: "최근 1년 간편식 서양식밀키트 구입 경험", tbl: DT_114053_053_03, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^서양식밀키트$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_salad, title: "최근 1년 간편식 샐러드 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^샐러드$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_veg, title: "최근 1년 간편식 신선편의채소 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^신선편의채소$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmb_fruit, title: "최근 1년 간편식 신선편의과일 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^신선편의과일$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -14228,6 +14228,41 @@ sources:
       - {id: ypl_pes_gb, title: "경북 임가 임업용 농약비", tbl: DT_136023_9521, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369573$"}, unit: 천원, survey: 임가경제조사}
       - {id: ypl_pes_gn, title: "경남 임가 임업용 농약비", tbl: DT_136023_9522, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369673$"}, unit: 천원, survey: 임가경제조사}
       - {id: ypl_pes_me, title: "특·광역시 임가 임업용 농약비", tbl: DT_136023_9523, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213373273$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_gg, title: "경기 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363148$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_gw, title: "강원 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363149$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_cb, title: "충북 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631410$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_cn, title: "충남 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631411$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_jb, title: "전북 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631412$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_jn, title: "전남 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631413$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_gb, title: "경북 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631414$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_gn, title: "경남 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631415$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_out_me, title: "특·광역시 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631416$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_gg, title: "경기 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363148$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_gw, title: "강원 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363149$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_cb, title: "충북 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631410$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_cn, title: "충남 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631411$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_jb, title: "전북 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631412$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_jn, title: "전남 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631413$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_gb, title: "경북 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631414$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_gn, title: "경남 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631415$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_fix_me, title: "특·광역시 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631416$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_gg, title: "경기 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363148$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_gw, title: "강원 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363149$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_cb, title: "충북 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631410$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_cn, title: "충남 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631411$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_jb, title: "전북 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631412$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_jn, title: "전남 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631413$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_gb, title: "경북 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631414$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_land_gn, title: "경남 임가 토지 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631415$", C2: "^13102136314X\\.17$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_gg, title: "경기 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363148$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_gw, title: "강원 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363149$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_cb, title: "충북 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631410$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_cn, title: "충남 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631411$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_jb, title: "전북 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631412$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_jn, title: "전남 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631413$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_gb, title: "경북 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631414$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_gn, title: "경남 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631415$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycx_mach_me, title: "특·광역시 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631416$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

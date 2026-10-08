@@ -14315,6 +14315,37 @@ sources:
       - {id: lw_chk, title: "닭 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0031$"}, unit: kg, survey: 축산물 도축실적}
       - {id: lw_dk, title: "오리 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0032$"}, unit: kg, survey: 축산물 도축실적}
       - {id: lw_rb, title: "토끼 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0034$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: pga_p, title: "돼지 평균 경락가격", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: [], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_p1p, title: "돼지 1+등급 경락가격", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_p1, title: "돼지 1등급 경락가격", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_p2, title: "돼지 2등급 경락가격", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_pout, title: "돼지 등외 경락가격", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^등외$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_n, title: "돼지 등급판정 경락 두수", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: [], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_n1p, title: "돼지 등급판정 경락 두수 — 1+등급", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^1\\+$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_n1, title: "돼지 등급판정 경락 두수 — 1등급", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^1$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_n2, title: "돼지 등급판정 경락 두수 — 2등급", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^2$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_nout, title: "돼지 등급판정 경락 두수 — 등외", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^등외$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_bg, title: "돼지 경락 두수 — 부경축공", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^부경축공$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_jj, title: "돼지 경락 두수 — 제주축협", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^제주축협$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_gr, title: "돼지 경락 두수 — 농협고령", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^농협고령$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_dd, title: "돼지 경락 두수 — 도드람", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^도드람$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_nj, title: "돼지 경락 두수 — 농협나주", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^농협나주$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_es, title: "돼지 경락 두수 — 농협음성", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^농협음성$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_hs, title: "돼지 경락 두수 — 협신식품", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^협신식품$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_ss, title: "돼지 경락 두수 — 삼성식품", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^삼성식품$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_m_sh, title: "돼지 경락 두수 — 삼호축산", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^두수$", want: ["^삼호축산$"], unit: "두", survey: 축산물 등급판정 통계}
+      - {id: pga_a_jj, title: "돼지 1+등급 경락가격 — 제주축협", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^제주축협$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_a_gr, title: "돼지 1+등급 경락가격 — 농협고령", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^농협고령$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_a_dd, title: "돼지 1+등급 경락가격 — 도드람", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^도드람$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_a_nj, title: "돼지 1+등급 경락가격 — 농협나주", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^농협나주$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_a_ss, title: "돼지 1+등급 경락가격 — 삼성식품", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^삼성식품$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_a_sh, title: "돼지 1+등급 경락가격 — 삼호축산", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^1\\+$", "^삼호축산$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_jj, title: "돼지 2등급 경락가격 — 제주축협", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^제주축협$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_gr, title: "돼지 2등급 경락가격 — 농협고령", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^농협고령$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_dd, title: "돼지 2등급 경락가격 — 도드람", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^도드람$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_nj, title: "돼지 2등급 경락가격 — 농협나주", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^농협나주$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_ss, title: "돼지 2등급 경락가격 — 삼성식품", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^삼성식품$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: pga_b_sh, title: "돼지 2등급 경락가격 — 삼호축산", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^삼호축산$"], unit: "원/kg", survey: 축산물 등급판정 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -14818,6 +14818,27 @@ sources:
       - {id: cgo_nat, title: "식용임산물 채취 지역 소유별 비율 — 국유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^국유림$"], unit: "%", survey: 임업경영실태조사}
       - {id: cgo_pub, title: "식용임산물 채취 지역 소유별 비율 — 공유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^공유림$"], unit: "%", survey: 임업경영실태조사}
       - {id: cgo_priv, title: "식용임산물 채취 지역 소유별 비율 — 사유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^사유림$"], unit: "%", survey: 임업경영실태조사}
+      - {id: pdr_price, title: "감 재배를 줄이거나 그만두려는 주된 이유 — 가격 하락·낮은 수익률", tbl: DT_136022_10030, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^가격하락 및 낮은 수익률$"], unit: "%", survey: 임업경영실태조사}
+      - {id: pdr_labor, title: "감 재배를 줄이거나 그만두려는 주된 이유 — 인건비 상승·노동력 부족", tbl: DT_136022_10030, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인건비 상승 및 노동력 부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: pdr_tech, title: "감 재배를 줄이거나 그만두려는 주된 이유 — 기술 부족", tbl: DT_136022_10030, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^기술부족$"], unit: "%", survey: 임업경영실태조사}
+      - {id: plk_good, title: "감 재배업 전망 — 좋아질 것(매우+다소)", tbl: DT_136022_10035, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①[+]②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: plk_same, title: "감 재배업 전망 — 현 상태 유지", tbl: DT_136022_10035, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 현 상태를 유지할 것$"], unit: "%", survey: 임업경영실태조사}
+      - {id: plk_bad, title: "감 재배업 전망 — 나빠질 것(다소+매우)", tbl: DT_136022_10035, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④[+]⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: plk_s100, title: "감 재배업 전망 — 평균 점수(100점 만점)", tbl: DT_136022_10035, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균[(]100점[)]$"], unit: "점", survey: 임업경영실태조사}
+      - {id: grn_yes, title: "산림을 임차한 식용임산물 채취 임가 비율", tbl: DT_136022_9737, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: grn_avg, title: "식용임산물 채취 임가의 임차 산림 면적(평균)", tbl: DT_136022_9718, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "ha", survey: 임업경영실태조사}
+      - {id: gow_none, title: "식용임산물 채취 임가의 소유 산림 면적 — 소유 산림 없음", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^미소유$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gow_s1, title: "식용임산물 채취 임가의 소유 산림 면적 — 2ha 미만", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gow_s2, title: "식용임산물 채취 임가의 소유 산림 면적 — 2~4ha", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2~4ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gow_s3, title: "식용임산물 채취 임가의 소유 산림 면적 — 4~10ha", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^4~10ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gow_s4, title: "식용임산물 채취 임가의 소유 산림 면적 — 10ha 이상", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^10ha 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: gow_avg, title: "식용임산물 채취 임가의 소유 산림 면적(평균)", tbl: DT_136022_9735, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "ha", survey: 임업경영실태조사}
+      - {id: svp_yes, title: "수액 채취를 위해 나무를 심은 임가 비율", tbl: DT_136022_9730, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sst_jan, title: "수액 채취 시작 시기 — 2월 이전", tbl: DT_136022_9750, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2월 이전$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sst_f1, title: "수액 채취 시작 시기 — 2월 1~10일", tbl: DT_136022_9750, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2월 1~10일$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sst_f2, title: "수액 채취 시작 시기 — 2월 11~20일", tbl: DT_136022_9750, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2월 ?11~20일$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spa_plant, title: "수액 채취 장소 면적(평균) — 인공림(조림지)", tbl: DT_136022_9725, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인공림[(]조림지[)]$"], unit: "㎡", survey: 임업경영실태조사}
+      - {id: spa_nat, title: "수액 채취 장소 면적(평균) — 천연림", tbl: DT_136022_9725, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^천연림$"], unit: "㎡", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

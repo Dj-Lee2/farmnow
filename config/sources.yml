@@ -14605,6 +14605,29 @@ sources:
       - {id: drc_all_g, title: "자연재난 지원복구비(국고·지방비) · 전체", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^총계$"], unit: 천원, survey: 재해연보}
       - {id: drc_maf_g, title: "자연재난 지원복구비 · 농림축산식품부", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^농림축산식품부$"], unit: 천원, survey: 재해연보}
       - {id: drc_fo_g, title: "자연재난 지원복구비 · 산림청", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^산림청$"], unit: 천원, survey: 재해연보}
+      - {id: ks_mm_use, title: "한식 식품제조업체 육류 취급 업체", tbl: DT_114058_F024, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^취급$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mm_dom, title: "한식 식품제조업체 육류 국산 비중 평균", tbl: DT_114058_F024, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^국산 비중 평균$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mm_all, title: "한식 식품제조업체 육류 전부 국산 쓰는 업체", tbl: DT_114058_F024, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^100%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mm_none, title: "한식 식품제조업체 육류 국산 안 쓰는 업체", tbl: DT_114058_F024, org: "114", periods: 3, itm: "국산비중$", want: ["^전체$", "^0%$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_farm, title: "한식 식품제조업체 육류 구입처 산지조달", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^산지조달$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_whm, title: "한식 식품제조업체 육류 구입처 도매시장", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^도매시장$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_apc, title: "한식 식품제조업체 육류 구입처 농수산물종합유통센터", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^농수산물종합유통센터$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_imp, title: "한식 식품제조업체 육류 구입처 수입상사", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^수입상사$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_vend, title: "한식 식품제조업체 육류 구입처 중간도매/벤더업체", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^중간도매/벤더업체$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_mmb_etc, title: "한식 식품제조업체 육류 구입처 기타", tbl: DT_114058_F025, org: "114", periods: 3, itm: "구입처$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_haccp, title: "한식 식품제조업체 보유 식품인증 HACCP", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^안전관리인증\\(HACCP\\)$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_ks, title: "한식 식품제조업체 보유 식품인증 가공식품 KS", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^가공식품 한국산업표준\\(KS\\)$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_trad, title: "한식 식품제조업체 보유 식품인증 전통식품인증", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^전통식품인증$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_org, title: "한식 식품제조업체 보유 식품인증 유기(가공)식품 인증", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^유기(가공)?식품 인증$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_liq, title: "한식 식품제조업체 보유 식품인증 술 품질인증", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^술 품질인증제도$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_iso22, title: "한식 식품제조업체 보유 식품인증 ISO 22000", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^ISO 22000"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_myeong, title: "한식 식품제조업체 보유 식품인증 한국식품명인", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^한국식품명인제도$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_iso9, title: "한식 식품제조업체 보유 식품인증 ISO 9001", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^ISO 9001"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_fssc, title: "한식 식품제조업체 보유 식품인증 FSSC 22000", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^FSSC 22000"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ct_etc, title: "한식 식품제조업체 보유 식품인증 기타", tbl: DT_114058_F058, org: "114", periods: 3, itm: "식품인증 현황$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_sl_b2b, title: "한식 식품제조업체 한식제품 매출 비중 법인·사업자(B2B)", tbl: DT_114058_F010, org: "114", periods: 3, itm: "매출 형태별 비중$", want: ["^전체$", "^법인 및 사업자\\(B2B\\)$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_sl_b2c, title: "한식 식품제조업체 한식제품 매출 비중 개인소비자(B2C)", tbl: DT_114058_F010, org: "114", periods: 3, itm: "매출 형태별 비중$", want: ["^전체$", "^개인소비자\\(B2C\\)$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_sl_etc, title: "한식 식품제조업체 한식제품 매출 비중 기타", tbl: DT_114058_F010, org: "114", periods: 3, itm: "매출 형태별 비중$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

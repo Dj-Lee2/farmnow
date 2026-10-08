@@ -3057,8 +3057,8 @@
   {{ card('sny_gom_g', 'snq2', ('노지재배는 ' ~ num(K.sny_gom_f.vals[-1], 'kg')|striptags ~ ' · kg당 ' ~ num(K.snu_gom_g.vals[-1], '원')|striptags) if K.sny_gom_f and K.snu_gom_g else none, '#3a7a9a') }}
   {{ card('sno_gom_g', 'snq3', ('노지재배는 ' ~ num(K.sno_gom_f.vals[-1], '원')|striptags ~ ' · 시설 무기질 ' ~ num(K.snm_gom_g.vals[-1], '원')|striptags) if K.sno_gom_f and K.snm_gom_g else none, '#7a6a3a') }}
   {{ card('sni_gom_f', 'snq4', ('소득률 ' ~ '{:.1f}'.format(K.snr_gom_f.vals[-1]) ~ '% · 농약비 ' ~ num(K.snp_gom_f.vals[-1], '원')|striptags) if K.snr_gom_f and K.snp_gom_f else none, '#1c7a45') }}
-  {{ card('sni_cnm_f', 'snq5', ('소득률 ' ~ '{:.1f}'.format(K.snr_cnm_f.vals[-1]) ~ '% · 시설재배 소득 ' ~ num(K.sfi_cnm_g.vals[-1], '원')|striptags) if K.snr_cnm_f and K.sfi_cnm_g else none, '#1c7a45') }}
-  {{ card('sni_wch_g', 'snq6', ('소득률 ' ~ '{:.1f}'.format(K.snr_wch_g.vals[-1]) ~ '% · 노지재배 소득 ' ~ num(K.sfi_wch_f.vals[-1], '원')|striptags) if K.snr_wch_g and K.sfi_wch_f else none, '#1c7a45') }}
+  {{ card('snu_gom_f', 'snq5', ('시설재배는 ' ~ num(K.snu_gom_g.vals[-1], '원')|striptags ~ ' · 노지 생산량 ' ~ num(K.sny_gom_f.vals[-1], 'kg')|striptags) if K.snu_gom_g and K.sny_gom_f else none, '#a0605a') }}
+  {{ card('snp_gom_g', 'snq6', ('노지재배는 ' ~ num(K.snp_gom_f.vals[-1], '원')|striptags ~ ' · 참나물 노지 ' ~ num(K.snp_cnm_f.vals[-1], '원')|striptags ~ '(2024)') if K.snp_gom_f and K.snp_cnm_f else none, '#a04040') }}
   {{ hcard('재배형태별 소득률', [('곰취 시설', K.snr_gom_g), ('곰취 노지', K.snr_gom_f), ('원추리 시설', K.snr_wch_g), ('참나물 노지', K.snr_cnm_f)], '%', '조수입 중 소득 비율 · 오른쪽은 전년 대비(%p)', none, '#1c7a45') }}
   {{ hcard('재배형태별 1ha당 생물 생산량', [('곰취 시설', K.sny_gom_g), ('원추리 시설', K.sny_wch_g), ('참나물 노지', K.sny_cnm_f), ('곰취 노지', K.sny_gom_f)], 'kg', '생물(날것) 기준 · 오른쪽은 전년 대비', none, '#3a7a9a') }}
   {{ hcard('재배형태별 생물 kg당 단가', [('곰취 노지', K.snu_gom_f), ('곰취 시설', K.snu_gom_g), ('원추리 시설', K.snu_wch_g), ('참나물 노지', K.snu_cnm_f)], '원', '농가 판매 단가 · 오른쪽은 전년 대비', none, '#a0605a') }}

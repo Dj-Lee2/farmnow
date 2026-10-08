@@ -13937,6 +13937,36 @@ sources:
       - {id: fqk_brew, title: "발효주 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqk_spir, title: "증류주·합성주 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqk_bev, title: "비알코올 음료 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_gen_s1, title: "식품제조업 종사자 5인 미만 경기전반 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^경기전반$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_gen_s2, title: "식품제조업 종사자 5~9인 경기전반 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^경기전반$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_gen_s3, title: "식품제조업 종사자 10~49인 경기전반 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^경기전반$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_gen_s4, title: "식품제조업 종사자 50~299인 경기전반 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^경기전반$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_gen_s5, title: "식품제조업 종사자 300인 이상 경기전반 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^경기전반$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_sale_s1, title: "식품제조업 종사자 5인 미만 매출액 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^매출액$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_sale_s2, title: "식품제조업 종사자 5~9인 매출액 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^매출액$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_sale_s3, title: "식품제조업 종사자 10~49인 매출액 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^매출액$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_sale_s4, title: "식품제조업 종사자 50~299인 매출액 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^매출액$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_sale_s5, title: "식품제조업 종사자 300인 이상 매출액 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^매출액$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_prof_s1, title: "식품제조업 종사자 5인 미만 영업이익 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^영업이익$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_prof_s2, title: "식품제조업 종사자 5~9인 영업이익 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^영업이익$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_prof_s3, title: "식품제조업 종사자 10~49인 영업이익 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^영업이익$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_prof_s4, title: "식품제조업 종사자 50~299인 영업이익 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^영업이익$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_prof_s5, title: "식품제조업 종사자 300인 이상 영업이익 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^영업이익$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_fund_s1, title: "식품제조업 종사자 5인 미만 자금사정 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^자금사정$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_fund_s2, title: "식품제조업 종사자 5~9인 자금사정 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^자금사정$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_fund_s3, title: "식품제조업 종사자 10~49인 자금사정 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^자금사정$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_fund_s4, title: "식품제조업 종사자 50~299인 자금사정 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^자금사정$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_fund_s5, title: "식품제조업 종사자 300인 이상 자금사정 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^자금사정$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_raw_s1, title: "식품제조업 종사자 5인 미만 원자재 구입가격 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^원자재 구입가격$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_raw_s2, title: "식품제조업 종사자 5~9인 원자재 구입가격 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^원자재 구입가격$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_raw_s3, title: "식품제조업 종사자 10~49인 원자재 구입가격 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^원자재 구입가격$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_raw_s4, title: "식품제조업 종사자 50~299인 원자재 구입가격 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^원자재 구입가격$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_raw_s5, title: "식품제조업 종사자 300인 이상 원자재 구입가격 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^원자재 구입가격$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_emp_s1, title: "식품제조업 종사자 5인 미만 고용 현황지수", tbl: DT_114057_D01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_emp_s2, title: "식품제조업 종사자 5~9인 고용 현황지수", tbl: DT_114057_D02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_emp_s3, title: "식품제조업 종사자 10~49인 고용 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_emp_s4, title: "식품제조업 종사자 50~299인 고용 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqd_emp_s5, title: "식품제조업 종사자 300인 이상 고용 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -14152,6 +14152,46 @@ sources:
       - {id: snu_gom_g, title: "곰취(시설재배) 생물 kg당 단가", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
       - {id: snu_cnm_f, title: "참나물(노지재배) 생물 kg당 단가", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
       - {id: snu_wch_g, title: "원추리(시설재배) 생물 kg당 단가", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
+      - {id: cpo_rice, title: "논벼 등 식량작물 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^논벼 등 식량작물"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_vegf, title: "노지 채소 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^채소\\(노지\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_vegg, title: "시설 채소 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^채소\\(시설\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_frf, title: "노지 과수 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^과수\\(노지\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_frg, title: "시설 과수 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^과수\\(시설\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_flf, title: "노지 화훼 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^화훼\\(노지\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_flg, title: "시설 화훼 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^화훼\\(시설\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_spec, title: "특용작물 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^특용작물$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_mush, title: "버섯 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^버섯$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_feed, title: "사료작물 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^사료작물$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_seed, title: "종묘(종자·모종) 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^종묘"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_hanwoo, title: "한육우 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^소\\(한육우\\)$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_dairy, title: "젖소 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^젖소"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_pig, title: "돼지 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^돼지$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_chick, title: "닭 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^닭$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_duck, title: "오리 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^오리$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_bee, title: "꿀벌 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^꿀벌$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_proc, title: "일반가공 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^일반가공$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_rpc, title: "RPC(미곡종합처리장) 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^RPC"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_lpc, title: "LPC(축산물종합처리장) 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^LPC"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_adist, title: "농산물유통 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^농산물유통$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_ldist, title: "축산물유통 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^축산물유통$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_apc, title: "APC(산지유통센터) 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^APC"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_local, title: "로컬푸드 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^로컬푸드$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_stock, title: "농축산물 구매비축 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^농축산물구매비축$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_cons, title: "위탁영농 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^위탁영농$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_work, title: "농작업대행 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^농작업대행$"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_tour, title: "농어촌관광·휴양단지 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^농어촌관광"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_farmtour, title: "관광농원 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^관광농원"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_wknd, title: "주말농원 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^주말농원"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_mat, title: "영농자재 생산·공급 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^영농자재"], unit: 개, survey: 농업법인조사}
+      - {id: cpo_mach, title: "농기계 임대·수리 농업법인 수", tbl: DT_1E5201C, org: "114", itm: "^품목\\(서비스\\)별 법인수$", want: ["^농기계 임대"], unit: 개, survey: 농업법인조사}
+      - {id: cxa_1, title: "자산 1억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^1억 미만$"], codes: {C3: "^T21$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxa_2, title: "자산 1억~5억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^1억∼5억 미만$"], codes: {C3: "^T22$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxa_3, title: "자산 5억~10억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^5억∼10억 미만$"], codes: {C3: "^T23$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxa_4, title: "자산 10억 이상 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^10억 이상$"], codes: {C3: "^T24$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxd_1, title: "부채 1억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^1억 미만$"], codes: {C3: "^T31$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxd_2, title: "부채 1억~5억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^1억∼5억 미만$"], codes: {C3: "^T32$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxd_3, title: "부채 5억~10억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^5억∼10억 미만$"], codes: {C3: "^T33$"}, unit: 개, survey: 농업법인조사}
+      - {id: cxd_4, title: "부채 10억 이상 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^10억 이상$"], codes: {C3: "^T34$"}, unit: 개, survey: 농업법인조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

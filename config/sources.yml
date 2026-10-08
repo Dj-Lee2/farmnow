@@ -15113,6 +15113,42 @@ sources:
       - {id: apf_etc, title: "기타 동물성가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^기타 동물성가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
       - {id: apf_insect, title: "곤충가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^곤충가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
       - {id: apf_ext, title: "추출가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^추출가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_all, title: "수산가공식품류 국내 판매액(계)", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_surimi, title: "어육살·연육·어육반제품 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^(어육살|연육|어육반제품)$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_fishcake, title: "어묵 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^어묵$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_jeot, title: "젓갈·양념젓갈 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^(양념)?젓갈$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_sauce, title: "액젓·조미액젓 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^(조미)?액젓$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_dried, title: "건어포·조미건어포·기타 건포류 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^(조미건어포|건어포|기타 건포류)$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_gim, title: "조미김·가공김 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^(조미김|가공김[(]조미김 또는 구운김[)])$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: sfg_agar, title: "한천 판매액", tbl: DT_145003_A022, org: "145", periods: 3, itm: "^국내판매액$", want: ["^한천$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_all, title: "즉석식품류 국내 판매액(계)", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_raw, title: "생식제품·생식함유제품 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^생식(함유)?제품$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_lunch, title: "즉석섭취식품(도시락) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^즉석섭취식품[(]도시락[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_kimbap, title: "즉석섭취식품(김밥) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^즉석섭취식품[(]김밥[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_salad, title: "신선편의식품(샐러드) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^신선편의식품[(]샐러드[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_fresh, title: "신선편의식품(샐러드·새싹채소·절단과일·기타) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^신선편의식품"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_cook, title: "즉석조리식품(순대·국·탕·수프·기타) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^즉석조리식품"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_dumpling, title: "만두·만두피 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^만두(피)?$"], sum: true, unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: rtf_kit, title: "간편조리세트(밀키트) 판매액", tbl: DT_145003_A025, org: "145", periods: 3, itm: "^국내판매액$", want: ["^간편조리세트$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: ice_all, title: "빙과류 국내 판매액(계)", tbl: DT_145003_A016, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: ice_ice, title: "빙과 판매액", tbl: DT_145003_A016, org: "145", periods: 3, itm: "^국내판매액$", want: ["^빙과$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: ice_edible, title: "식용얼음 판매액", tbl: DT_145003_A016, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식용얼음$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: egp_all, title: "알가공품류(알함유가공품) 국내 판매액(계)", tbl: DT_145003_A021, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: dpk_all, title: "유가공품류(유함유가공품) 국내 판매액(계)", tbl: DT_145003_A062, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: oth_all, title: "기타식품류 국내 판매액(합계)", tbl: TX_14503_A070, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: oth_yeast, title: "효모식품 판매액", tbl: TX_14503_A070, org: "145", periods: 3, itm: "^국내판매액$", want: ["^효모식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: hmq_rte_hi, title: "간편식 즉석섭취식품 주 1회 이상 구입", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(매일 1회 이상|주 4~6회|주 2~3회|주 1회)$", "^즉석 섭취 식품$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_rte_no, title: "간편식 즉석섭취식품 구입하지 않음", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입하지 않음$", "^즉석 섭취 식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_rtc_hi, title: "간편식 즉석조리식품 주 1회 이상 구입", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(매일 1회 이상|주 4~6회|주 2~3회|주 1회)$", "^즉석 조리 식품$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_rtc_no, title: "간편식 즉석조리식품 구입하지 않음", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입하지 않음$", "^즉석 조리 식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_fresh_hi, title: "간편식 신선편의식품 주 1회 이상 구입", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(매일 1회 이상|주 4~6회|주 2~3회|주 1회)$", "^신선편의식품$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_fresh_no, title: "간편식 신선편의식품 구입하지 않음", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입하지 않음$", "^신선편의식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_kit_hi, title: "간편식 밀키트 주 1회 이상 구입", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^(매일 1회 이상|주 4~6회|주 2~3회|주 1회)$", "^간편조리세트[(]밀키트[)]$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmq_kit_no, title: "간편식 밀키트 구입하지 않음", tbl: DT_114053_058, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입하지 않음$", "^간편조리세트[(]밀키트[)]$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmu_rte, title: "간편식 즉석섭취식품 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^즉석 섭취 식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmu_rtc, title: "간편식 즉석조리식품 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^즉석 조리 식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmu_fresh, title: "간편식 신선편의식품 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^신선편의식품$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hmu_kit, title: "간편식 밀키트 주 용도 — 일상 식사용", tbl: DT_114053_062_02, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^일상 식사용$", "^간편조리세트[(]밀키트[)]$"], unit: "%", survey: 가공식품소비자태도조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

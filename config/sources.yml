@@ -15073,6 +15073,46 @@ sources:
       - {id: tsl_rdso, title: "지역특산주 제조면허 — 증류식소주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^증류식소주$"], codes: {C2: "^A012$"}, unit: "개", survey: 국세통계}
       - {id: tsl_rgen, title: "지역특산주 제조면허 — 일반증류주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^일반증류주$"], codes: {C2: "^A014$"}, unit: "개", survey: 국세통계}
       - {id: tsl_rliq, title: "지역특산주 제조면허 — 리큐르", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^리큐르$"], codes: {C2: "^A015$"}, unit: "개", survey: 국세통계}
+      - {id: jsr_tax, title: "주세 납부할세액(합계)", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^납부할세액$"], unit: "백만원", survey: 국세통계}
+      - {id: jsr_amt, title: "주류 출고금액(주세 신고 합계)", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^출고금액$"], unit: "백만원", survey: 국세통계}
+      - {id: jsr_qty, title: "주류 출고량(주세 신고 합계)", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qtak, title: "주류 출고량 — 탁주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^탁주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qyak, title: "주류 출고량 — 약주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^약주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qbeer, title: "주류 출고량 — 맥주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^맥주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qdso, title: "주류 출고량 — 증류식소주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^증류식소주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qsoju, title: "주류 출고량 — 희석식 소주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^희석식 ?소주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qfruit, title: "주류 출고량 — 과실주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^과실주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qwhisky, title: "주류 출고량 — 위스키", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^위스키$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_qcheong, title: "주류 출고량 — 청주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^청주$", "^출고량$"], unit: "㎘", survey: 국세통계}
+      - {id: jsr_atak, title: "주류 출고금액 — 탁주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^탁주$", "^출고금액$"], unit: "백만원", survey: 국세통계}
+      - {id: jsr_afruit, title: "주류 출고금액 — 과실주", tbl: TX_13301_A188, org: "133", periods: 3, itm: "^주세 신고 현황$", want: ["^과실주$", "^출고금액$"], unit: "백만원", survey: 국세통계}
+      - {id: jsl_all, title: "주류 판매면허(총계)", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: [], unit: "개", survey: 국세통계}
+      - {id: jsl_gen, title: "주류 판매면허 — 종합주류도매", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^종합주류도매$"], unit: "개", survey: 국세통계}
+      - {id: jsl_spec, title: "주류 판매면허 — 특정주류도매", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^특정주류도매$"], unit: "개", survey: 국세통계}
+      - {id: jsl_imp, title: "주류 판매면허 — 수입주류전문도매", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^수입주류전문도매$"], unit: "개", survey: 국세통계}
+      - {id: jsl_rgen, title: "주류 판매면허 — 일반소매업", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^일반소매업$"], unit: "개", survey: 국세통계}
+      - {id: jsl_bar, title: "주류 판매면허 — 유흥음식점", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^유흥음식점$"], unit: "개", survey: 국세통계}
+      - {id: jsl_spr, title: "주류 판매면허 — 전문소매업", tbl: TX_13301_A203, org: "133", periods: 3, itm: "^주류 판매면허 종류별·지역별 현황$", want: ["^전문소매업$"], unit: "개", survey: 국세통계}
+      - {id: jgm_all, title: "주세 감면세액(합계)", tbl: TX_13301_A198, org: "133", periods: 3, itm: "^감면세액$", want: [], unit: "백만원", survey: 국세통계}
+      - {id: jgm_exp, title: "주세 감면세액 — 수출", tbl: TX_13301_A198, org: "133", periods: 3, itm: "^감면세액$", want: ["^수출$"], unit: "백만원", survey: 국세통계}
+      - {id: jgm_mil, title: "주세 감면세액 — 국군납품", tbl: TX_13301_A198, org: "133", periods: 3, itm: "^감면세액$", want: ["^국군납품$"], unit: "백만원", survey: 국세통계}
+      - {id: hgg_rev, title: "건강기능식품 등 매출액(산업 비중 기준)", tbl: DT_145010_005, org: "145", periods: 3, itm: "^건강기능식품 등 매출액$", want: ["^데이터$"], unit: "십억원", survey: 건강기능식품 생산실적}
+      - {id: hge_all, title: "건강기능식품 제조업체(종사자 규모 계)", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: [], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_s10, title: "종사자 10인 이하 업체", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: ["^(1~5인|6~10인)$"], sum: true, unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_s50, title: "종사자 11~50인 업체", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: ["^(11~20인|21~30인|31~50인)$"], sum: true, unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_s100, title: "종사자 51~100인 업체", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: ["^(51~80인|81~100인)$"], sum: true, unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_s300, title: "종사자 101~300인 업체", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: ["^(101~150인|151~200인|201~300인)$"], sum: true, unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_s500, title: "종사자 301인 이상 업체", tbl: DT_145010_006, org: "145", periods: 3, itm: "^업체수$", want: ["^301~500인 이상$"], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hge_v500, title: "종사자 301인 이상 업체의 매출 점유율", tbl: DT_145010_006, org: "145", periods: 3, itm: "^매출 점유율$", want: ["^301~500인 이상$"], unit: "%", survey: 건강기능식품 생산실적}
+      - {id: mtp_all, title: "식육가공품 국내 판매액(계)", tbl: DT_145003_A020, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: mtp_ster, title: "식육함유가공품(멸균) 판매액", tbl: DT_145003_A020, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식육함유가공품[(]멸균[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: mtp_past, title: "식육함유가공품(살균) 판매액", tbl: DT_145003_A020, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식육함유가공품[(]살균[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: mtp_raw, title: "식육함유가공품(비살균) 판매액", tbl: DT_145003_A020, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식육함유가공품[(]비살균[)]$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: apf_all, title: "동물성가공식품류 국내 판매액(계)", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: [], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: apf_egg, title: "기타식육 또는 기타알 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^기타식육 또는 기타알$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: apf_etc, title: "기타 동물성가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^기타 동물성가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: apf_insect, title: "곤충가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^곤충가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: apf_ext, title: "추출가공식품 판매액", tbl: DT_145003_A023, org: "145", periods: 3, itm: "^국내판매액$", want: ["^추출가공식품$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

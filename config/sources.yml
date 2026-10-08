@@ -14509,6 +14509,39 @@ sources:
       - {id: gsy_fa50, title: "귀산촌 여성 가구주 — 50대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^50 - 59세$"], unit: 명, survey: 귀농어귀촌인통계}
       - {id: gsy_fa60, title: "귀산촌 여성 가구주 — 60대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^60 - 69세$"], unit: 명, survey: 귀농어귀촌인통계}
       - {id: gsy_fa70, title: "귀산촌 여성 가구주 — 70세 이상", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^70세 이상$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: iz_ag_site, title: "산재보험 농업 사업장 수", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사업장수$", want: ["^농업$"], unit: "개소", survey: 산업재해현황}
+      - {id: iz_ag_wk, title: "산재보험 농업 사업장 근로자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^근로자수$", want: ["^농업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_ag_n, title: "농업 사업장 재해자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^재해자수$", want: ["^농업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_ag_rate, title: "농업 사업장 재해율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^재해율$", want: ["^농업$"], unit: "%", survey: 산업재해현황}
+      - {id: iz_ag_dead, title: "농업 사업장 사고·질병 사망자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사망자수$", want: ["^농업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_ag_dr, title: "농업 사업장 사망만인율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사망만인율$", want: ["^농업$"], unit: "‱", survey: 산업재해현황}
+      - {id: iz_fo_wk, title: "산재보험 임업 사업장 근로자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^근로자수$", want: ["^임업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_fo_n, title: "임업 사업장 재해자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^재해자수$", want: ["^임업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_fo_rate, title: "임업 사업장 재해율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^재해율$", want: ["^임업$"], unit: "%", survey: 산업재해현황}
+      - {id: iz_fo_dead, title: "임업 사업장 사고·질병 사망자", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사망자수$", want: ["^임업$"], unit: "명", survey: 산업재해현황}
+      - {id: iz_fo_dr, title: "임업 사업장 사망만인율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사망만인율$", want: ["^임업$"], unit: "‱", survey: 산업재해현황}
+      - {id: iz_all_rate, title: "전체 산업 재해율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^재해율$", want: ["^총계$"], unit: "%", survey: 산업재해현황}
+      - {id: iz_all_dr, title: "전체 산업 사망만인율", tbl: DT_11806_N000, org: "118", periods: 3, itm: "^사망만인율$", want: ["^총계$"], unit: "‱", survey: 산업재해현황}
+      - {id: izt_all, title: "농업 사업장 재해자 — 계", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^계$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_fall, title: "농업 사업장 재해자 — 떨어짐", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^떨어짐$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_slip, title: "농업 사업장 재해자 — 넘어짐", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^넘어짐$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_hit, title: "농업 사업장 재해자 — 부딪힘", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^부딪힘$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_obj, title: "농업 사업장 재해자 — 물체에 맞음", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^물체에 맞음$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_pinch, title: "농업 사업장 재해자 — 끼임", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^끼임$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_cut, title: "농업 사업장 재해자 — 절단·베임·찔림", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^절단·베임·찔림$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_roll, title: "농업 사업장 재해자 — 깔림·뒤집힘", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^깔림·뒤집힘$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_strain, title: "농업 사업장 재해자 — 불균형 및 무리한 동작", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^불균형 및 무리한 동작$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_animal, title: "농업 사업장 재해자 — 동물상해", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^동물상해$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_road, title: "농업 사업장 재해자 — 사업장외 교통사고", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^사업장외 교통사고$"], unit: "명", survey: 산업재해현황}
+      - {id: izt_dis, title: "농업 사업장 재해자 — 업무상질병", tbl: DT_11806_N011, org: "118", periods: 3, itm: "발생형태별", want: ["^농업$", "^업무상질병$"], unit: "명", survey: 산업재해현황}
+      - {id: iza_all, title: "농업 사업장 재해자 — 계", tbl: DT_11806_N003, org: "118", periods: 3, itm: "연령별", want: ["^농업$", "^계$"], unit: "명", survey: 산업재해현황}
+      - {id: iza_a60, title: "농업 사업장 재해자 — 60세 이상", tbl: DT_11806_N003, org: "118", periods: 3, itm: "연령별", want: ["^농업$", "^60세 이상$"], unit: "명", survey: 산업재해현황}
+      - {id: iza_a55, title: "농업 사업장 재해자 — 55~59세", tbl: DT_11806_N003, org: "118", periods: 3, itm: "연령별", want: ["^농업$", "^55~59세$"], unit: "명", survey: 산업재해현황}
+      - {id: iza_a50, title: "농업 사업장 재해자 — 50~54세", tbl: DT_11806_N003, org: "118", periods: 3, itm: "연령별", want: ["^농업$", "^50~54세$"], unit: "명", survey: 산업재해현황}
+      - {id: izd_all, title: "농업 사업장 업무상질병자 — 계", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^계$"], unit: "명", survey: 산업재해현황}
+      - {id: izd_body, title: "농업 사업장 업무상질병자 — 신체부담작업", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^신체부담작업$"], unit: "명", survey: 산업재해현황}
+      - {id: izd_back, title: "농업 사업장 업무상질병자 — 요통", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^요통$"], unit: "명", survey: 산업재해현황}
+      - {id: izd_cv, title: "농업 사업장 업무상질병자 — 뇌심혈관질환", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^뇌심혈관질환$"], unit: "명", survey: 산업재해현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

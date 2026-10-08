@@ -15244,6 +15244,40 @@ sources:
       - {id: gpe_tofu, title: "식품 품목군별 종업원 수 — 두부류·묵류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^두부류 또는 묵류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
       - {id: gpe_nood, title: "식품 품목군별 종업원 수 — 면류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^면류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
       - {id: gpe_alc, title: "식품 품목군별 종업원 수 — 주류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^주류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_all, title: "품목군별 수출액 — 식품 전체(계)", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^계$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_bake, title: "품목군별 수출액 — 과자·빵·떡류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^과자류 빵류 또는 떡류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_bev, title: "품목군별 수출액 — 음료류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^음료류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_seas, title: "품목군별 수출액 — 조미식품", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^조미식품$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_nood, title: "품목군별 수출액 — 면류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^면류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_inst, title: "품목군별 수출액 — 즉석식품류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^즉석식품류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_agp, title: "품목군별 수출액 — 농산가공식품류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^농산가공식품류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_alc, title: "품목군별 수출액 — 주류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^주류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_pick, title: "품목군별 수출액 — 절임·조림류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^절임류 또는 조림류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_jang, title: "품목군별 수출액 — 장류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^장류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_fish, title: "품목군별 수출액 — 수산가공식품류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^수산가공식품류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_oil, title: "품목군별 수출액 — 식용유지류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^식용유지류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_sugar, title: "품목군별 수출액 — 당류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^당류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fxp_choc, title: "품목군별 수출액 — 코코아·초콜릿류", tbl: DT_145003_A001, org: "145", periods: 3, itm: "생산실적 현황$", want: ["^코코아가공품류 또는 초콜릿류$", "^수출액$"], unit: "달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_all, title: "주류 품목별 국내 판매액 — 주류 전체(계)", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_tak, title: "주류 품목별 국내 판매액 — 탁주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^탁주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_yak, title: "주류 품목별 국내 판매액 — 약주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^약주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_chung, title: "주류 품목별 국내 판매액 — 청주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^청주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_fruit, title: "주류 품목별 국내 판매액 — 과실주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과실주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_beer, title: "주류 품목별 국내 판매액 — 맥주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^맥주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_soju, title: "주류 품목별 국내 판매액 — 소주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^소주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_dist, title: "주류 품목별 국내 판매액 — 일반증류주", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^일반증류주$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_liq, title: "주류 품목별 국내 판매액 — 리큐르", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^리큐르$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: lqd_whis, title: "주류 품목별 국내 판매액 — 위스키", tbl: DT_145003_A027, org: "145", periods: 3, itm: "^국내판매액$", want: ["^위스키$"], unit: "천원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: hfw_all, title: "건강기능식품 제조업체 종업원 — 전국", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^전체$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_gg, title: "건강기능식품 제조업체 종업원 — 경기", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^경기도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_gw, title: "건강기능식품 제조업체 종업원 — 강원", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^강원(특별자치)?도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_cb, title: "건강기능식품 제조업체 종업원 — 충북", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^충청북도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_cn, title: "건강기능식품 제조업체 종업원 — 충남", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^충청남도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_jb, title: "건강기능식품 제조업체 종업원 — 전북", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^(전라북도|전북특별자치도)$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_jn, title: "건강기능식품 제조업체 종업원 — 전남", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^전라남도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_gb, title: "건강기능식품 제조업체 종업원 — 경북", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^경상북도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_gn, title: "건강기능식품 제조업체 종업원 — 경남", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^경상남도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: hfw_jj, title: "건강기능식품 제조업체 종업원 — 제주", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^제주(특별자치)?도$"], unit: "명", survey: 건강기능식품 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

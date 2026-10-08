@@ -14441,6 +14441,32 @@ sources:
       - {id: lvc_rp_gb, title: "경북 농업법인 돼지 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상북도$", "^계$", "^돼지$"], unit: 마리, survey: 농업법인조사}
       - {id: lvc_rp_gn, title: "경남 농업법인 돼지 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상남도$", "^계$", "^돼지$"], unit: 마리, survey: 농업법인조사}
       - {id: lvc_rp_jj, title: "제주 농업법인 돼지 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^제주(특별자치)?도$", "^계$", "^돼지$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_gg, title: "경기 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경기도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_cb, title: "충북 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청북도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_cn, title: "충남 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청남도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_jb, title: "전북 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^(전북특별자치도|전라북도)$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_jn, title: "전남 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전라남도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_gb, title: "경북 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상북도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_gn, title: "경남 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상남도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rd_jj, title: "제주 농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^제주(특별자치)?도$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_rc_gg, title: "경기 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경기도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_gw, title: "강원 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^강원(특별자치)?도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_cb, title: "충북 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청북도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_cn, title: "충남 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청남도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_jb, title: "전북 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^(전북특별자치도|전라북도)$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_jn, title: "전남 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전라남도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_gb, title: "경북 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상북도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_gn, title: "경남 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상남도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rc_jj, title: "제주 농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^제주(특별자치)?도$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_rb_gg, title: "경기 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경기도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_gw, title: "강원 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^강원(특별자치)?도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_cb, title: "충북 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청북도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_cn, title: "충남 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^충청남도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_jb, title: "전북 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^(전북특별자치도|전라북도)$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_jn, title: "전남 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전라남도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_gb, title: "경북 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상북도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_gn, title: "경남 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^경상남도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_rb_jj, title: "제주 농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^제주(특별자치)?도$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
       - {id: bgw_kr, title: "한국 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^(한국|대한민국)$"], unit: TJ, survey: 국제통계(에너지)}
       - {id: bgw_de, title: "독일 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^독일$"], unit: TJ, survey: 국제통계(에너지)}
       - {id: bgw_us, title: "미국 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^미국$"], unit: TJ, survey: 국제통계(에너지)}

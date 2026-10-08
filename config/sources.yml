@@ -14297,6 +14297,24 @@ sources:
       - {id: yce_out_full, title: "전업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631445$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
       - {id: yce_out_main, title: "임업주업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631446$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
       - {id: yce_out_side, title: "임업부업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631447$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: lw_hw, title: "한우 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0010$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_hw_f, title: "한우 암소 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0011$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_hw_m, title: "한우 수소 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0012$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_dy, title: "젖소 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0013$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_dy_f, title: "젖소 암소 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0014$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_yw, title: "육우 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0016$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_yw_f, title: "육우 암소 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0017$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_yw_m, title: "육우 수소 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0018$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_pig, title: "돼지 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0022$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_pig_f, title: "돼지 암퇘지 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0023$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_pig_m, title: "돼지 수퇘지 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0024$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_hr, title: "말 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0025$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_hr_f, title: "말 암말 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0026$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_hr_m, title: "말 수말 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0027$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_sh, title: "양 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0028$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_chk, title: "닭 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0031$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_dk, title: "오리 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0032$"}, unit: kg, survey: 축산물 도축실적}
+      - {id: lw_rb, title: "토끼 평균 도축 생체중", tbl: DT_114_2016_S0025, org: "114", se: M, periods: 24, itm: "생체중량$", want: ["."], codes: {C1: "^13102130304A\\.0034$"}, unit: kg, survey: 축산물 도축실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

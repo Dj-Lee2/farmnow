@@ -14263,6 +14263,40 @@ sources:
       - {id: ycx_mach_gb, title: "경북 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631414$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
       - {id: ycx_mach_gn, title: "경남 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631415$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
       - {id: ycx_mach_me, title: "특·광역시 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631416$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_chest, title: "밤 재배업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631418$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_mush, title: "버섯 재배업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631419$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_lsc, title: "조경재업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631420$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_gath, title: "채취업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631422$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_nut, title: "수실류(밤·감 제외) 재배업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631423$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_etc, title: "기타 재배업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631424$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_out_pers, title: "감 재배업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631425$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_chest, title: "밤 재배업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631418$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_mush, title: "버섯 재배업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631419$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_lsc, title: "조경재업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631420$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_gath, title: "채취업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631422$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_nut, title: "수실류(밤·감 제외) 재배업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631423$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_etc, title: "기타 재배업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631424$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_fix_pers, title: "감 재배업 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631425$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_chest, title: "밤 재배업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631418$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_mush, title: "버섯 재배업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631419$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_lsc, title: "조경재업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631420$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_gath, title: "채취업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631422$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_nut, title: "수실류(밤·감 제외) 재배업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631423$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_etc, title: "기타 재배업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631424$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycb_mach_pers, title: "감 재배업 임가 기계·기구·비품 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631425$", C2: "^13102136314X\\.20$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_out_s1, title: "임지 1ha 미만 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631439$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_out_s2, title: "임지 1~5ha 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631440$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_out_s3, title: "임지 5~10ha 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631441$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_out_s4, title: "임지 10~20ha 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631442$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_out_s5, title: "임지 20ha 이상 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631443$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_fix_s1, title: "임지 1ha 미만 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631439$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_fix_s2, title: "임지 1~5ha 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631440$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_fix_s3, title: "임지 5~10ha 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631441$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_fix_s4, title: "임지 10~20ha 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631442$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ycz_fix_s5, title: "임지 20ha 이상 임가 고정자산 구입", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631443$", C2: "^13102136314X\\.56$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yce_out_full, title: "전업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631445$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yce_out_main, title: "임업주업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631446$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yce_out_side, title: "임업부업 임가 재산적 지출", tbl: DT_136023_11484, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631447$", C2: "^13102136314X\\.66$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

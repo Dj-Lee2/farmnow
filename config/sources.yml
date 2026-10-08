@@ -14474,6 +14474,41 @@ sources:
       - {id: bgw_it, title: "이탈리아 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^이탈리아$"], unit: TJ, survey: 국제통계(에너지)}
       - {id: bgw_fr, title: "프랑스 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^프랑스$"], unit: TJ, survey: 국제통계(에너지)}
       - {id: bgw_dk, title: "덴마크 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^덴마크$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: fyx_all, title: "전체 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^전체임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_own, title: "정보화기기 보유 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^정보화기기 보유임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_pc, title: "컴퓨터·노트북 보유 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^컴퓨터·노트북$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_sp, title: "스마트폰 보유 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^스마트폰$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_tab, title: "태블릿PC 보유 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^태블릿PC$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_use, title: "정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_pcu, title: "컴퓨터·노트북 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^컴퓨터·노트북 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_spu, title: "스마트폰 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^스마트폰 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_fac, title: "기기로 재배시설·산림을 관리하는 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^임업 재배시설 및 산림 관리$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_sale, title: "기기로 임산물을 파는 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^임산물판매$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_tour, title: "기기를 산촌관광사업에 쓰는 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^산촌관광사업$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_mgmt, title: "기기를 임업경영에 쓰는 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^임업경영$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_info, title: "기기로 임업 정보를 모으는 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전국$", "^임업관련정보수집$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_mt, title: "특광역시 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^특광역시$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_gg, title: "경기 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^경기도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_gw, title: "강원 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^강원(도|특별자치도)$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_cb, title: "충북 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^충청북도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_cn, title: "충남 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^충청남도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_jb, title: "전북 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^전(라북도|북특별자치도)$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_jn, title: "전남 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^(전라남도|전남광주통합특별시)$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_gb, title: "경북 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^경상북도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_gn, title: "경남 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^경상남도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: fyx_u_jj, title: "제주 정보화기기 활용 임가", tbl: DT_1FA7023, periods: 3, itm: "^임가$", want: ["^제주특별자치도$", "^정보화기기 활용임가$"], unit: 가구, survey: 임업조사}
+      - {id: gsy_ta20, title: "귀산촌 가구주 — 29세 이하", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^0 - 29세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_ta30, title: "귀산촌 가구주 — 30대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^30 - 39세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_ta40, title: "귀산촌 가구주 — 40대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^40 - 49세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_ta50, title: "귀산촌 가구주 — 50대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^50 - 59세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_ta60, title: "귀산촌 가구주 — 60대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^60 - 69세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_ta70, title: "귀산촌 가구주 — 70세 이상", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^계$", "^70세 이상$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa20, title: "귀산촌 여성 가구주 — 29세 이하", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^0 - 29세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa30, title: "귀산촌 여성 가구주 — 30대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^30 - 39세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa40, title: "귀산촌 여성 가구주 — 40대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^40 - 49세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa50, title: "귀산촌 여성 가구주 — 50대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^50 - 59세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa60, title: "귀산촌 여성 가구주 — 60대", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^60 - 69세$"], unit: 명, survey: 귀농어귀촌인통계}
+      - {id: gsy_fa70, title: "귀산촌 여성 가구주 — 70세 이상", tbl: DT_1A02039, periods: 3, itm: "^귀산촌가구주수$", want: ["^전국$", "^여자$", "^70세 이상$"], unit: 명, survey: 귀농어귀촌인통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

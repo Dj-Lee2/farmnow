@@ -14839,6 +14839,30 @@ sources:
       - {id: sst_f2, title: "수액 채취 시작 시기 — 2월 11~20일", tbl: DT_136022_9750, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^2월 ?11~20일$"], unit: "%", survey: 임업경영실태조사}
       - {id: spa_plant, title: "수액 채취 장소 면적(평균) — 인공림(조림지)", tbl: DT_136022_9725, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인공림[(]조림지[)]$"], unit: "㎡", survey: 임업경영실태조사}
       - {id: spa_nat, title: "수액 채취 장소 면적(평균) — 천연림", tbl: DT_136022_9725, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^천연림$"], unit: "㎡", survey: 임업경영실태조사}
+      # 임업경영실태조사 — 밤 재배 작업로·고용노동력·면적 증가·작목 대체·묘목, 대추 재배방법, 대추·호두 출하시기·저장 목적, 잣·기타유실수 생산 감소 이유
+      - {id: brd_done, title: "밤 재배 작업로 — 설치하였음", tbl: DT_136022_9818, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^설치하였음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: brd_plan, title: "밤 재배 작업로 — 설치 예정", tbl: DT_136022_9818, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^설치예정임$"], unit: "%", survey: 임업경영실태조사}
+      - {id: brd_no, title: "밤 재배 작업로 — 설치 예정 없음", tbl: DT_136022_9818, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^설치예정 없음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: blw_near, title: "밤 재배 고용노동력 확보 지역 — 인근 마을·지역", tbl: DT_136022_9816, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인근마을이나 지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: blw_city, title: "밤 재배 고용노동력 확보 지역 — 원거리 도시", tbl: DT_136022_9816, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^원거리 도시지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: blw_mix, title: "밤 재배 고용노동력 확보 지역 — 인근 마을+원거리 도시", tbl: DT_136022_9816, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^인근마을[+]원거리 도시지역$"], unit: "%", survey: 임업경영실태조사}
+      - {id: bex_yes, title: "밤 재배지 면적을 늘릴 의향이 있는 임가", tbl: DT_136022_9835, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: bsd_ps, title: "밤 묘목을 생산해 판매하는 임가", tbl: DT_136022_9833, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산하여 판매하고 있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: bsd_none, title: "밤 묘목을 생산·판매하지 않는 임가", tbl: DT_136022_9833, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산하지 않고 판매하지도 않는다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jmt_open, title: "대추 재배방법 — 노지", tbl: DT_136022_10139, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노지재배$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jmt_rain, title: "대추 재배방법 — 비가림", tbl: DT_136022_10139, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^비가림재배$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jmt_gh, title: "대추 재배방법 — 시설", tbl: DT_136022_10139, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시설재배$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsh_pre, title: "대추·호두 출하시기 — 수확~추석 이전", tbl: DT_136022_10157, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수확 ~ 추석 이전$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsh_chu, title: "대추·호두 출하시기 — 추석 연휴", tbl: DT_136022_10157, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^추석 연휴 판매$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsh_post, title: "대추·호두 출하시기 — 추석 이후~연말", tbl: DT_136022_10157, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^추석이후 ~ 12월 31일$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsh_new, title: "대추·호두 출하시기 — 1월 1일~설 이전", tbl: DT_136022_10157, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1월 1일~설 이전$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jst_simple, title: "대추·호두 저장 목적 — 수확기 단순 저장", tbl: DT_136022_10158, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수확기에 단순 저장$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jst_adj, title: "대추·호두 저장 목적 — 출하시기 조절", tbl: DT_136022_10158, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^출하시기 조절을 위해서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jst_stock, title: "대추·호두 저장 목적 — 팔지 못한 재고", tbl: DT_136022_10158, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매하지 못해서[(]재고[)]$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdr_clim, title: "잣·기타유실수 생산 감소 이유 — 재배에 맞지 않는 기후 변화", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배에 부적합한 기후로의 변화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdr_dem, title: "잣·기타유실수 생산 감소 이유 — 수요 감소로 규모 축소", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소로 인한 규모 축소$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdr_labor, title: "잣·기타유실수 생산 감소 이유 — 노동력 부족으로 규모 축소", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족으로 규모 축소$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jdr_pest, title: "잣·기타유실수 생산 감소 이유 — 나무 고사·병해충", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^(나무고사 및 병해충 피해|뿌리 병해충으로 인한 작물 피해|나무 고사)$"], sum: true, unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

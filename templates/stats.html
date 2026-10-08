@@ -3443,7 +3443,7 @@
  </div>
 </div></details>
 
- <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·시도별 농업 배출·가축분뇨·농경지 토양 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·오염원별 토양 중금속·경작지 가뭄 노출·물 부족 수준 국제 비교·정부지출 농업지향성·쌀 가격 이상치·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원·기체별 국가 배출·대기 온실가스 농도·요소·석회 시용·잔사 소각 배출·산불 원인별 발생·피해 면적·피해액·시도별 산불', 291) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
+ <details class="sg-grp" id="g-climate">{% call head('g-climate', '기후·토양·온실가스', '기온·강수량·농업 온실가스 배출·배출원별 농업 온실가스·메탄·아산화질소·분야별 국가 배출·시도별 농업 배출·가축분뇨·농경지 토양 배출·산림 흡수·관개용수·농경지 토양 산도·중금속·지목별 최고값·지하수 질산성질소·토양오염 우려기준 초과·오염원별 토양 중금속·경작지 가뭄 노출·물 부족 수준 국제 비교·정부지출 농업지향성·쌀 가격 이상치·임가 자연재해·병해충 피해·농업인 기후변화 영향 인식·기후변화 대응 방안·농어촌 오염 원인 인식·농어촌 우선 필요정책·농어업 가치 인식·경관 보전 방안·주택 난방·상하수도·생활여건 만족도·주로 이용하는 의료기관·응급실 이용·월 평균 생활비·생활안전 개선·문화·여가활동·여가 제약요인·여가 만족도·필요 복지서비스·생활 부문별 중요도·만족도·마을 경관·지역발전 인식·마을공동사업·이웃 교류·주거기준 미달·난방 기간·평생교육 의향·주택 점유형태·이주 희망 이유·여가 장소 교통수단·여가 동반자·장소 위치·빈도·여가 장소 종류·소요시간·희망 여가활동·희망 여가 동반자·빈도·지역사회단체 참여·미참여 이유·가뭄대책비 부처별·시도별 지원·기체별 국가 배출·대기 온실가스 농도·요소·석회 시용·잔사 소각 배출·산불 원인별 발생·피해 면적·피해액·시도별 산불·시도별 산불 건수 10년 평균 대비·달별 논밭두렁 소각 산불', 299) %}{% set gsh %}{% if K.ghg_agri and K.ghg_total %}{{ '{:.1f}'.format(K.ghg_agri.vals[-1] / K.ghg_total.vals[-1] * 100) }}<small>%</small>{% endif %}{% endset %}{{ kv('연평균 기온', K.temp) }}{{ kv('연강수량', K.rain) }}{{ kv('농업 배출 비중', K.ghg_agri, gsh, '') }}{% endcall %}
  <div class="sg-body">
  <h3 class="sg-sub">기후와 농업 온실가스</h3>
  <div class="sg-g">
@@ -3825,6 +3825,17 @@
   {{ rcard('산불 피해 면적 중 경북 비중', K.ffr_a_gb, K.ffr_area, 'ffr6', '경상북도 피해 면적 ÷ 전국', '#5c6bc2') }}
   {{ hcard('원인별 산불 발생 건수', [('입산자 실화', K.ffr_c_hike), ('쓰레기 소각', K.ffr_c_trash), ('건축물 화재', K.ffr_c_bldg), ('담뱃불 실화', K.ffr_c_cig), ('논밭두렁 등 소각', K.ffr_c_field), ('성묘객 실화', K.ffr_c_grave), ('어린이 불장난', K.ffr_c_kid), ('기타', K.ffr_c_etc)], '건', '괄호는 전체 건수 중 비중 · 오른쪽은 전년 대비', K.ffr_n.vals[-1] if K.ffr_n else none, '#c0392b') }}
   {{ hcard('시도별 산불 피해 면적', [('경북', K.ffr_a_gb), ('경남', K.ffr_a_gn), ('울산', K.ffr_a_us), ('강원', K.ffr_a_gw), ('경기', K.ffr_a_gg), ('전남', K.ffr_a_jn), ('충남', K.ffr_a_cn)], 'ha', '괄호는 전국 피해 면적 중 비중 · 오른쪽은 전년 대비', K.ffr_area.vals[-1] if K.ffr_area else none, '#b0503a') }}
+ </div>
+ <h3 class="sg-sub">산불 — 시도별 발생 건수와 봄철 논밭두렁 소각 <small>산림청 산불통계 · 시도별 그해 산불 건수와 10년 평균 비교 · 1~4월 원인별 발생 건수</small></h3>
+ <div class="sg-g">
+  {{ rcard('경기 산불 건수 ÷ 10년 평균', K.ffs_n_gg, K.ffs_m_gg, 'ffs1', ('그해 ' ~ '{:,.0f}'.format(K.ffs_n_gg.vals[-1]) ~ '건 · 10년 평균 ' ~ '{:,.1f}'.format(K.ffs_m_gg.vals[-1]) ~ '건') if K.ffs_n_gg and K.ffs_m_gg else '', '#c0392b') }}
+  {{ rcard('경북 산불 건수 ÷ 10년 평균', K.ffs_n_gb, K.ffs_m_gb, 'ffs2', ('그해 ' ~ '{:,.0f}'.format(K.ffs_n_gb.vals[-1]) ~ '건 · 10년 평균 ' ~ '{:,.1f}'.format(K.ffs_m_gb.vals[-1]) ~ '건') if K.ffs_n_gb and K.ffs_m_gb else '', '#b0503a') }}
+  {{ rcard('충남 산불 건수 ÷ 10년 평균', K.ffs_n_cn, K.ffs_m_cn, 'ffs3', ('그해 ' ~ '{:,.0f}'.format(K.ffs_n_cn.vals[-1]) ~ '건 · 10년 평균 ' ~ '{:,.1f}'.format(K.ffs_m_cn.vals[-1]) ~ '건') if K.ffs_n_cn and K.ffs_m_cn else '', '#b04a07') }}
+  {{ rcard('강원 산불 건수 ÷ 10년 평균', K.ffs_n_gw, K.ffs_m_gw, 'ffs4', ('그해 ' ~ '{:,.0f}'.format(K.ffs_n_gw.vals[-1]) ~ '건 · 10년 평균 ' ~ '{:,.1f}'.format(K.ffs_m_gw.vals[-1]) ~ '건') if K.ffs_n_gw and K.ffs_m_gw else '', '#c0763a') }}
+  {{ rcard('3월 산불 중 논밭두렁 등 소각 비중', K.fmo_f_03, K.fmo_a_03, 'ffs5', ('3월 ' ~ '{:,.0f}'.format(K.fmo_a_03.vals[-1]) ~ '건 · 쓰레기 소각 ' ~ '{:.1f}'.format(K.fmo_t_03.vals[-1] / K.fmo_a_03.vals[-1] * 100) ~ '%') if K.fmo_a_03 and K.fmo_t_03 else '', '#7a6a3a') }}
+  {{ rcard('4월 산불 중 논밭두렁 등 소각 비중', K.fmo_f_04, K.fmo_a_04, 'ffs6', ('4월 ' ~ '{:,.0f}'.format(K.fmo_a_04.vals[-1]) ~ '건 · 쓰레기 소각 ' ~ '{:.1f}'.format(K.fmo_t_04.vals[-1] / K.fmo_a_04.vals[-1] * 100) ~ '%') if K.fmo_a_04 and K.fmo_t_04 else '', '#5c6bc2') }}
+  {{ hcard('시도별 산불 발생 건수', [('경기', K.ffs_n_gg), ('경북', K.ffs_n_gb), ('충남', K.ffs_n_cn), ('강원', K.ffs_n_gw), ('경남', K.ffs_n_gn), ('전남', K.ffs_n_jn), ('전북', K.ffs_n_jb), ('충북', K.ffs_n_cb), ('대구', K.ffs_n_daegu), ('부산', K.ffs_n_busan), ('울산', K.ffs_n_ulsan), ('인천', K.ffs_n_incheon), ('서울', K.ffs_n_seoul), ('광주', K.ffs_n_gwangju), ('대전', K.ffs_n_daejeon), ('세종', K.ffs_n_sejong)], '건', '괄호는 전국 건수 중 비중 · 오른쪽은 전년 대비', K.ffr_n.vals[-1] if K.ffr_n else none, '#c0392b') }}
+  {{ hcard('달별 논밭두렁 등 소각 산불 건수', [('1월', K.fmo_f_01), ('2월', K.fmo_f_02), ('3월', K.fmo_f_03), ('4월', K.fmo_f_04)], '건', '1~4월 · 오른쪽은 전년 대비 · 영농부산물은 태우지 말고 파쇄', none, '#7a6a3a') }}
  </div>
  </div></details>
 

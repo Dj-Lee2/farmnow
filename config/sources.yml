@@ -14346,6 +14346,34 @@ sources:
       - {id: pga_b_nj, title: "돼지 2등급 경락가격 — 농협나주", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^농협나주$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: pga_b_ss, title: "돼지 2등급 경락가격 — 삼성식품", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^삼성식품$"], unit: "원/kg", survey: 축산물 등급판정 통계}
       - {id: pga_b_sh, title: "돼지 2등급 경락가격 — 삼호축산", tbl: DT_APGS_016, org: "323", se: M, periods: 24, itm: "^경락가격$", want: ["^2$", "^삼호축산$"], unit: "원/kg", survey: 축산물 등급판정 통계}
+      - {id: ffs_n_seoul, title: "서울 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^서울특별시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_busan, title: "부산 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^부산광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_daegu, title: "대구 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^대구광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_incheon, title: "인천 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^인천광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_gwangju, title: "광주 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^광주광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_daejeon, title: "대전 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^대전광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_ulsan, title: "울산 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^울산광역시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_sejong, title: "세종 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^세종특별자치시$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_gg, title: "경기 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^경기도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_gw, title: "강원 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^강원(특별자치)?도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_cb, title: "충북 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^충청북도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_cn, title: "충남 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^충청남도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_jb, title: "전북 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^(전북특별자치도|전라북도)$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_jn, title: "전남 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^전라남도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_gb, title: "경북 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^경상북도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_n_gn, title: "경남 산불 발생 건수", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^경상남도$", "^금년$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_m_gg, title: "경기 산불 발생 건수 10년 평균", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^경기도$", "^10년 ?평균$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_m_gw, title: "강원 산불 발생 건수 10년 평균", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^강원(특별자치)?도$", "^10년 ?평균$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_m_gb, title: "경북 산불 발생 건수 10년 평균", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^경상북도$", "^10년 ?평균$"], unit: 건, survey: 산림청 산불통계}
+      - {id: ffs_m_cn, title: "충남 산불 발생 건수 10년 평균", tbl: DT_13625_A011, org: "136", periods: 3, itm: "^건수$", want: ["^충청남도$", "^10년 ?평균$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_f_01, title: "1월 논밭두렁 등 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^1월$", "^논밭두렁등소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_f_02, title: "2월 논밭두렁 등 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^2월$", "^논밭두렁등소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_f_03, title: "3월 논밭두렁 등 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^3월$", "^논밭두렁등소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_f_04, title: "4월 논밭두렁 등 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^4월$", "^논밭두렁등소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_a_03, title: "3월 산불 발생 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^3월$", "^계$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_t_03, title: "3월 쓰레기 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^3월$", "^쓰레기소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_a_04, title: "4월 산불 발생 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^4월$", "^계$"], unit: 건, survey: 산림청 산불통계}
+      - {id: fmo_t_04, title: "4월 쓰레기 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^4월$", "^쓰레기소각$"], unit: 건, survey: 산림청 산불통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

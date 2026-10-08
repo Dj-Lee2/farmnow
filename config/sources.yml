@@ -15218,6 +15218,32 @@ sources:
       - {id: hmb_salad, title: "최근 1년 간편식 샐러드 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^샐러드$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmb_veg, title: "최근 1년 간편식 신선편의채소 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^신선편의채소$"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hmb_fruit, title: "최근 1년 간편식 신선편의과일 구입 경험", tbl: DT_114053_053_04, org: "114", periods: 3, itm: "^비율$", want: ["^전체$", "^구입 있음$", "^신선편의과일$"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: gpf_all, title: "식품 품목군별 생산실적 보고 업체 수 — 계", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^계$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_nong, title: "식품 품목군별 생산실적 보고 업체 수 — 농산가공식품류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^농산가공식품류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_bake, title: "식품 품목군별 생산실적 보고 업체 수 — 과자류·빵류·떡류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^과자류 빵류 또는 떡류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_jang, title: "식품 품목군별 생산실적 보고 업체 수 — 장류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^장류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_inst, title: "식품 품목군별 생산실적 보고 업체 수 — 즉석식품류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^즉석식품류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_fish, title: "식품 품목군별 생산실적 보고 업체 수 — 수산가공식품류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^수산가공식품류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_meat, title: "식품 품목군별 생산실적 보고 업체 수 — 식육가공품·포장육", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^식육가공품 및 포장육$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_bev, title: "식품 품목군별 생산실적 보고 업체 수 — 음료류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^음료류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_seas, title: "식품 품목군별 생산실적 보고 업체 수 — 조미식품", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^조미식품$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_pick, title: "식품 품목군별 생산실적 보고 업체 수 — 절임류·조림류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^절임류 또는 조림류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_tofu, title: "식품 품목군별 생산실적 보고 업체 수 — 두부류·묵류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^두부류 또는 묵류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_nood, title: "식품 품목군별 생산실적 보고 업체 수 — 면류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^면류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpf_alc, title: "식품 품목군별 생산실적 보고 업체 수 — 주류", tbl: TX_14503_A004, org: "145", periods: 3, itm: "업체수", want: ["^주류$", "^전국$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_all, title: "식품 품목군별 종업원 수 — 계", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^계$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_nong, title: "식품 품목군별 종업원 수 — 농산가공식품류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^농산가공식품류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_bake, title: "식품 품목군별 종업원 수 — 과자류·빵류·떡류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^과자류 빵류 또는 떡류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_jang, title: "식품 품목군별 종업원 수 — 장류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^장류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_inst, title: "식품 품목군별 종업원 수 — 즉석식품류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^즉석식품류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_fish, title: "식품 품목군별 종업원 수 — 수산가공식품류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^수산가공식품류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_meat, title: "식품 품목군별 종업원 수 — 식육가공품·포장육", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^식육가공품 및 포장육$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_bev, title: "식품 품목군별 종업원 수 — 음료류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^음료류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_seas, title: "식품 품목군별 종업원 수 — 조미식품", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^조미식품$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_pick, title: "식품 품목군별 종업원 수 — 절임류·조림류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^절임류 또는 조림류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_tofu, title: "식품 품목군별 종업원 수 — 두부류·묵류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^두부류 또는 묵류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_nood, title: "식품 품목군별 종업원 수 — 면류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^면류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
+      - {id: gpe_alc, title: "식품 품목군별 종업원 수 — 주류", tbl: TX_14503_A006, org: "145", periods: 3, itm: "종업원수", want: ["^주류$", "^전국$"], unit: "명", survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

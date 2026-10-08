@@ -14797,6 +14797,27 @@ sources:
       - {id: ks_kit_100, title: "한식 음식점 주방 면적 50~100㎡", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^50m²-100m² 미만$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_kit_300, title: "한식 음식점 주방 면적 100~300㎡", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^100m²-300m² 미만$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_kit_avg, title: "한식 음식점 주방 면적 평균", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^평균$"], unit: "㎡", survey: 한식산업 실태조사}
+      - {id: sgf_self, title: "송이버섯 증수 사업 재원 — 자기부담", tbl: DT_136022_9859, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자기부담$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sgl_avg, title: "송이버섯 증수 사업 투자비 중 융자·자기부담 비용(평균)", tbl: DT_136022_9860, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: stl_avg, title: "송이버섯 채취 도구 구입·운송비(평균)", tbl: DT_136022_9862, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: omx_avg, title: "송이 이외 채취 버섯으로 얻은 총수입(평균)", tbl: DT_136022_9720, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: spm_solo, title: "수액 채취 방법·판매 형태 — 혼자 채취·혼자 판매", tbl: DT_136022_9724, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^혼자서 채취하고 판매한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spm_sco, title: "수액 채취 방법·판매 형태 — 혼자 채취·공동 판매", tbl: DT_136022_9724, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^혼자서 채취하고 공동으로 판매한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spp_ok, title: "국유림 수액 채취 허가기간 의견 — 적절했다", tbl: DT_136022_9728, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^적절했다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spp_dk, title: "국유림 수액 채취 허가기간 의견 — 모르겠다", tbl: DT_136022_9728, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^모르겠다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spp_late, title: "국유림 수액 채취 허가기간 의견 — 너무 늦었다", tbl: DT_136022_9728, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^너무 늦었다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: scl_no, title: "수액 집수형 채취 방식 사용 — 하지 않는다", tbl: DT_136022_9746, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^하지 않는다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: scl_part, title: "수액 집수형 채취 방식 사용 — 일부 사용", tbl: DT_136022_9746, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^일부 사용한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: scl_all, title: "수액 집수형 채취 방식 사용 — 전부 사용", tbl: DT_136022_9746, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전부 사용한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sci_yes, title: "수액 집수형 채취 방식 사용 의향 — 있다", tbl: DT_136022_9748, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sci_no, title: "수액 집수형 채취 방식 사용 의향 — 없다", tbl: DT_136022_9748, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^없다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: sci_dk, title: "수액 집수형 채취 방식 사용 의향 — 모르겠다", tbl: DT_136022_9748, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^모르겠다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: spq_prod, title: "수액 채취 임가 평균 생산량", tbl: DT_136022_9761, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^생산량$"], unit: "ℓ", survey: 임업경영실태조사}
+      - {id: spq_sraw, title: "수액 채취 임가 평균 판매량(원물)", tbl: DT_136022_9761, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매량[(]원물[)]$"], unit: "ℓ", survey: 임업경영실태조사}
+      - {id: spq_rraw, title: "수액 채취 임가 평균 판매수입(원물)", tbl: DT_136022_9761, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^판매수입[(]원물[)]$"], unit: "만원", survey: 임업경영실태조사}
+      - {id: cgo_nat, title: "식용임산물 채취 지역 소유별 비율 — 국유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^국유림$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cgo_pub, title: "식용임산물 채취 지역 소유별 비율 — 공유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^공유림$"], unit: "%", survey: 임업경영실태조사}
+      - {id: cgo_priv, title: "식용임산물 채취 지역 소유별 비율 — 사유림", tbl: DT_136022_9853, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^사유림$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

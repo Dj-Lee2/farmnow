@@ -14374,6 +14374,45 @@ sources:
       - {id: fmo_t_03, title: "3월 쓰레기 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^3월$", "^쓰레기소각$"], unit: 건, survey: 산림청 산불통계}
       - {id: fmo_a_04, title: "4월 산불 발생 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^4월$", "^계$"], unit: 건, survey: 산림청 산불통계}
       - {id: fmo_t_04, title: "4월 쓰레기 소각 산불 건수", tbl: TX_13625_A003, org: "136", periods: 3, itm: "^발생건수$", want: ["^4월$", "^쓰레기소각$"], unit: 건, survey: 산림청 산불통계}
+      - {id: bgs_e_kr, title: "전국 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^전국$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_seoul, title: "서울 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^서울$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_busan, title: "부산 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^부산$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_daegu, title: "대구 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^대구$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_incheon, title: "인천 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^인천$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_gwangju, title: "광주 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^광주$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_daejeon, title: "대전 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^대전$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_ulsan, title: "울산 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^울산$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_sejong, title: "세종 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^세종$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_gg, title: "경기 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^경기$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_gw, title: "강원 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^강원$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_cb, title: "충북 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^충북$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_cn, title: "충남 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^충남$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_jb, title: "전북 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^전북$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_jn, title: "전남 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^전남$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_gb, title: "경북 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^경북$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_gn, title: "경남 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^경남$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_e_jj, title: "제주 바이오가스 에너지 생산량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^에너지생산량$", "^제주$"], unit: toe, survey: 신재생에너지 보급통계}
+      - {id: bgs_p_kr, title: "전국 바이오가스 발전량", tbl: DT_337001N_A008, org: "337", periods: 3, itm: "^바이오가스$", want: ["^발전량$", "^전국$"], unit: MWh, survey: 신재생에너지 보급통계}
+      - {id: lvc_n, title: "가축 사육 농업법인 수", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: lvc_hw, title: "농업법인 한육우 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^한육우$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_dc, title: "농업법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_pig, title: "농업법인 돼지 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^돼지$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_chk, title: "농업법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: lvc_bee, title: "농업법인 꿀벌 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^꿀벌$"], unit: 통, survey: 농업법인조사}
+      - {id: lvc_duck, title: "농업법인 오리 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^오리$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_deer, title: "농업법인 사슴 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^계$", "^사슴$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_c_n, title: "가축 사육 농업회사법인 수", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^농업회사법인$", "^법인수$"], unit: 개, survey: 농업법인조사}
+      - {id: lvc_c_hw, title: "농업회사법인 한육우 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^농업회사법인$", "^한육우$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_c_dc, title: "농업회사법인 젖소 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^농업회사법인$", "^젖소$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_c_pig, title: "농업회사법인 돼지 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^농업회사법인$", "^돼지$"], unit: 마리, survey: 농업법인조사}
+      - {id: lvc_c_chk, title: "농업회사법인 닭 사육 두수(연평균)", tbl: DT_1E5213A, org: "114", periods: 3, itm: "^가축 사육 두수\\(연평균\\)$", want: ["^전국$", "^농업회사법인$", "^닭$"], unit: 백마리, survey: 농업법인조사}
+      - {id: bgw_kr, title: "한국 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^(한국|대한민국)$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_de, title: "독일 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^독일$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_us, title: "미국 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^미국$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_gb, title: "영국 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^영국$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_it, title: "이탈리아 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^이탈리아$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_fr, title: "프랑스 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^프랑스$"], unit: TJ, survey: 국제통계(에너지)}
+      - {id: bgw_dk, title: "덴마크 바이오가스 생산량", tbl: DT_2AFF005, periods: 3, itm: "^바이오가스$", want: ["^생산량$", "^덴마크$"], unit: TJ, survey: 국제통계(에너지)}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

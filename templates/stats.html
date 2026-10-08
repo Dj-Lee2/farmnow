@@ -17,7 +17,7 @@
  </section>{% endif %}{% endif %}{% endmacro %}
 {% macro qcard(title, a, b, uid, note, mult, unit, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * mult) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set p = ((r[-1] - r[-2]) / r[-2] * 100) if r|length > 1 and r[-2] else none %}
  <section class="kp4 sg-c"><div class="t">{{ title }}{{ link(a) }}</div>
-  <div class="v">{{ '{:,.0f}'.format(r[-1]) }}<small>{{ unit }}</small> {% if p is not none %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}</div>
+  <div class="v">{{ ('{:,.1f}' if r[-1]|abs < 10 else '{:,.0f}').format(r[-1]) }}<small>{{ unit }}</small> {% if p is not none %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}</div>
   <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
   <div class="sg-ch">{{ r|mini(uid, col, rl, unit) }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
  </section>{% endif %}{% endif %}{% endmacro %}

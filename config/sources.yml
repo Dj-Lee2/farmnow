@@ -14192,6 +14192,42 @@ sources:
       - {id: cxd_2, title: "부채 1억~5억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^1억∼5억 미만$"], codes: {C3: "^T32$"}, unit: 개, survey: 농업법인조사}
       - {id: cxd_3, title: "부채 5억~10억 미만 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^5억∼10억 미만$"], codes: {C3: "^T33$"}, unit: 개, survey: 농업법인조사}
       - {id: cxd_4, title: "부채 10억 이상 농업법인 수", tbl: DT_1E5219, org: "114", itm: "^법인수$", want: ["^10억 이상$"], codes: {C3: "^T34$"}, unit: 개, survey: 농업법인조사}
+      - {id: ypl_rev_gg, title: "경기 임가 임업총수입", tbl: DT_136023_9516, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133713125$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_gw, title: "강원 임가 임업총수입", tbl: DT_136023_11490, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136320142$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_cb, title: "충북 임가 임업총수입", tbl: DT_136023_9489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133689125$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_cn, title: "충남 임가 임업총수입", tbl: DT_136023_9518, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133694142$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_jb, title: "전북 임가 임업총수입", tbl: DT_136023_11489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136321125$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_jn, title: "전남 임가 임업총수입", tbl: DT_136023_9520, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133701142$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_gb, title: "경북 임가 임업총수입", tbl: DT_136023_9521, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133695130$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_gn, title: "경남 임가 임업총수입", tbl: DT_136023_9522, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133696142$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_rev_me, title: "특·광역시 임가 임업총수입", tbl: DT_136023_9523, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133732125$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_gg, title: "경기 임가 임업소득", tbl: DT_136023_9516, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133713128$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_gw, title: "강원 임가 임업소득", tbl: DT_136023_11490, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136320139$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_cb, title: "충북 임가 임업소득", tbl: DT_136023_9489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133689128$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_cn, title: "충남 임가 임업소득", tbl: DT_136023_9518, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133694139$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_jb, title: "전북 임가 임업소득", tbl: DT_136023_11489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102136321128$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_jn, title: "전남 임가 임업소득", tbl: DT_136023_9520, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133701139$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_gb, title: "경북 임가 임업소득", tbl: DT_136023_9521, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133695132$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_gn, title: "경남 임가 임업소득", tbl: DT_136023_9522, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133696139$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_inc_me, title: "특·광역시 임가 임업소득", tbl: DT_136023_9523, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^13102133732128$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_gg, title: "경기 임가 임업용 비료비", tbl: DT_136023_9516, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213371372$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_gw, title: "강원 임가 임업용 비료비", tbl: DT_136023_11490, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632072$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_cb, title: "충북 임가 임업용 비료비", tbl: DT_136023_9489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213368972$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_cn, title: "충남 임가 임업용 비료비", tbl: DT_136023_9518, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369472$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_jb, title: "전북 임가 임업용 비료비", tbl: DT_136023_11489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632172$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_jn, title: "전남 임가 임업용 비료비", tbl: DT_136023_9520, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213370172$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_gb, title: "경북 임가 임업용 비료비", tbl: DT_136023_9521, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369572$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_gn, title: "경남 임가 임업용 비료비", tbl: DT_136023_9522, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369672$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_fer_me, title: "특·광역시 임가 임업용 비료비", tbl: DT_136023_9523, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213373272$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_gg, title: "경기 임가 임업용 농약비", tbl: DT_136023_9516, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213371373$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_gw, title: "강원 임가 임업용 농약비", tbl: DT_136023_11490, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632073$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_cb, title: "충북 임가 임업용 농약비", tbl: DT_136023_9489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213368973$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_cn, title: "충남 임가 임업용 농약비", tbl: DT_136023_9518, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369473$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_jb, title: "전북 임가 임업용 농약비", tbl: DT_136023_11489, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632173$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_jn, title: "전남 임가 임업용 농약비", tbl: DT_136023_9520, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213370173$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_gb, title: "경북 임가 임업용 농약비", tbl: DT_136023_9521, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369573$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_gn, title: "경남 임가 임업용 농약비", tbl: DT_136023_9522, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213369673$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ypl_pes_me, title: "특·광역시 임가 임업용 농약비", tbl: DT_136023_9523, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213373273$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

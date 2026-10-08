@@ -15454,6 +15454,44 @@ sources:
       - {id: sge_ta_area, title: "태안군 친환경 농산물 출하 면적", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C2: "^I_12$"}, unit: ha, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
       - {id: sge_ta_org, title: "태안군 유기농산물 출하 면적", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C2: "^I_16$"}, unit: ha, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
       - {id: sge_ta_farm, title: "태안군 친환경 농산물 출하 농가", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C2: "^I_11$"}, unit: 가구, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
+      - {id: ftg_t_jeju, title: "제주시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^제주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_cj, title: "청주시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^청주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_sj, title: "상주시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^상주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_cw, title: "창원시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^창원시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_ph, title: "포항시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^포항시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_sgp, title: "서귀포시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^서귀포시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_nh, title: "남해군 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^남해군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_t_iks, title: "익산시 농가", tbl: DT_1EA1045, periods: 3, itm: "^계$", want: ["^익산시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_iks, title: "익산시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^익산시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_gj, title: "경주시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^경주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_cj, title: "청주시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^청주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_ph, title: "포항시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^포항시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_nj, title: "나주시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^나주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_r_ns, title: "논산시 논벼 농가", tbl: DT_1EA1045, periods: 3, itm: "^논벼$", want: ["^논산시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_nh, title: "남해군 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^남해군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_jeju, title: "제주시 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^제주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_ys, title: "여수시 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^여수시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_jj, title: "진주시 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^진주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_sa, title: "신안군 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^신안군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_v_cn, title: "창녕군 채소·산나물 농가", tbl: DT_1EA1045, periods: 3, itm: "^채소·산나물$", want: ["^창녕군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_sgp, title: "서귀포시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^서귀포시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_jeju, title: "제주시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^제주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_gc, title: "김천시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^김천시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_cw, title: "창원시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^창원시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_gs, title: "경산시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^경산시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_f_sj, title: "상주시 과수 농가", tbl: DT_1EA1045, periods: 3, itm: "^과수$", want: ["^상주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_cj, title: "청주시 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^청주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_gs, title: "금산군 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^금산군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_cc, title: "춘천시 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^춘천시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_wj, title: "원주시 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^원주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_sc, title: "순천시 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^순천시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_o_jy, title: "정읍시 기타작물 농가", tbl: DT_1EA1045, periods: 3, itm: "^기타작물$", want: ["^정읍시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_hs, title: "홍성군 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^홍성군$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_gj, title: "경주시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^경주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_gjn, title: "공주시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^공주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_sj, title: "상주시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^상주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_cj, title: "청주시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^청주시$"], unit: 가구, survey: 농림어업조사}
+      - {id: ftg_l_jy, title: "정읍시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^정읍시$"], unit: 가구, survey: 농림어업조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

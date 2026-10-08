@@ -111,7 +111,7 @@ def test_f_prd():
 
 def test_f_big():
     from farmnow.build import f_big
-    assert f_big(201271652) == "2.01억" and f_big(3153897) == "315.4만" and f_big(72389) == "72,389"
+    assert f_big(201271652) == "2.01억" and f_big(3153897) == "315.4만" and f_big(72389) == "72,389" and f_big(1.31) == "1.3" and f_big(4.0) == "4"
 
 
 def test_pick_series_total_sums_matching_items():

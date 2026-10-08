@@ -112,6 +112,8 @@ def f_big(v) -> str:
         return "–"
     if abs(v) >= 1e8:
         return f"{v / 1e8:,.2f}억"
+    if abs(v) < 10 and v != int(v):
+        return f"{v:,.1f}"  # 평균 건수 등 10 미만 소수는 반올림하면 1.31→1, 2.7→3으로 틀어짐
     return f"{v / 1e4:,.1f}만" if abs(v) >= 1e5 else f"{v:,.0f}"
 
 

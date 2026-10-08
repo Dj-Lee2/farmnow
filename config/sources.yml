@@ -14863,6 +14863,35 @@ sources:
       - {id: jdr_dem, title: "잣·기타유실수 생산 감소 이유 — 수요 감소로 규모 축소", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^수요감소로 인한 규모 축소$"], unit: "%", survey: 임업경영실태조사}
       - {id: jdr_labor, title: "잣·기타유실수 생산 감소 이유 — 노동력 부족으로 규모 축소", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^노동력 부족으로 규모 축소$"], unit: "%", survey: 임업경영실태조사}
       - {id: jdr_pest, title: "잣·기타유실수 생산 감소 이유 — 나무 고사·병해충", tbl: DT_136022_10161, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^(나무고사 및 병해충 피해|뿌리 병해충으로 인한 작물 피해|나무 고사)$"], sum: true, unit: "%", survey: 임업경영실태조사}
+      - {id: omf_full, title: "관상산림식물 재배업 경영 형태 — 전업", tbl: DT_136022_9723, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^전업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: omf_main, title: "관상산림식물 재배업 경영 형태 — 주업", tbl: DT_136022_9723, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^주업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: omf_side, title: "관상산림식물 재배업 경영 형태 — 부업", tbl: DT_136022_9723, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^부업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oow_yes, title: "관상산림식물 재배 임가 — 산림을 소유함", tbl: DT_136022_9747, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_none, title: "관상산림식물 재배 임가 소유 산림 면적 — 미소유", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^미소유$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_s1, title: "관상산림식물 재배 임가 소유 산림 면적 — 1ha 미만", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_s2, title: "관상산림식물 재배 임가 소유 산림 면적 — 1~3ha", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^1~3ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_s3, title: "관상산림식물 재배 임가 소유 산림 면적 — 3~10ha", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^3~10ha 미만$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_s4, title: "관상산림식물 재배 임가 소유 산림 면적 — 10ha 이상", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^10ha 이상$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oar_avg, title: "관상산림식물 재배 임가 소유 산림 면적 — 평균", tbl: DT_136022_9726, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균$"], unit: "ha", survey: 임업경영실태조사}
+      - {id: olr_exp, title: "관상산림식물 재배기술 학습 경로 — 재배 기술자에게", tbl: DT_136022_9989, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배 기술자로부터$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olr_edu, title: "관상산림식물 재배기술 학습 경로 — 기술 교육", tbl: DT_136022_9989, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^관련 기술 교육을 통하여$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olr_self, title: "관상산림식물 재배기술 학습 경로 — 스스로 터득", tbl: DT_136022_9989, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^스스로 학습하여 터득함$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oin_hi, title: "다른 업종 대비 관상산림식물 재배업 소득 — 높다(매우+높은 편)", tbl: DT_136022_9990, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oin_same, title: "다른 업종 대비 관상산림식물 재배업 소득 — 비슷하다", tbl: DT_136022_9990, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 비슷하다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oin_lo, title: "다른 업종 대비 관상산림식물 재배업 소득 — 낮다(낮은 편+매우)", tbl: DT_136022_9990, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④\\+⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oin_s100, title: "다른 업종 대비 관상산림식물 재배업 소득 인식 — 100점 환산", tbl: DT_136022_9990, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(100점\\)$"], unit: "점", survey: 임업경영실태조사}
+      - {id: opp_use, title: "조경수 판매 때 조달청 가격정보 활용 — 활용한다(항상+편)", tbl: DT_136022_9991, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^①\\+②$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opp_mid, title: "조경수 판매 때 조달청 가격정보 활용 — 보통", tbl: DT_136022_9991, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^③ 보통이다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opp_no, title: "조경수 판매 때 조달청 가격정보 활용 — 활용 안 한다", tbl: DT_136022_9991, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^④\\+⑤$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opp_s100, title: "조경수 판매 때 조달청 가격정보 활용 — 100점 환산", tbl: DT_136022_9991, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^평균\\(100점\\)$"], unit: "점", survey: 임업경영실태조사}
+      - {id: opr_var, title: "관상산림식물 재배업 활성화를 위한 공공부문 역할 — 품종 등록제도 강화", tbl: DT_136022_9993, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^품종 등록제도 강화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opr_fund, title: "관상산림식물 재배업 활성화를 위한 공공부문 역할 — 지원금·융자 확대", tbl: DT_136022_9993, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정부지원금\\(융자 등\\) 확대$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opr_mkt, title: "관상산림식물 재배업 활성화를 위한 공공부문 역할 — 안정적인 판로 확보", tbl: DT_136022_9993, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^안정적인 판로 확보$"], unit: "%", survey: 임업경영실태조사}
+      - {id: opr_edu, title: "관상산림식물 재배업 활성화를 위한 공공부문 역할 — 재배기술 교육", tbl: DT_136022_9993, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배기술 교육$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olc_none, title: "조경수 재배 임가 조경공사 — 재배·판매만, 공사 안 함", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^재배와 판매만 하고 공사는 하지 않는다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olc_spec, title: "조경수 재배 임가 조경공사 — 조경공사업(특수공사)", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^조경공사업\\(특수공사\\)에 의거 공사한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olc_pro, title: "조경수 재배 임가 조경공사 — 조경식재공사업(전문공사)", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^조경식재공사업\\(전문공사\\)에 의거 공사한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: olc_gen, title: "조경수 재배 임가 조경공사 — 일반 사업자등록으로", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^일반사업의 사업자등록에 의거 공사를 시행한다$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

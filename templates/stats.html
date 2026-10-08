@@ -873,7 +873,7 @@
  <h3 class="sg-sub">귀산촌 가구주는 몇 살인가 — 나이와 여성 가구주 <small>귀농어귀촌인통계 · 산촌으로 옮겨 온 가구의 가구주 · 오른쪽은 전년 대비</small></h3>
  <div class="sg-g">
   {% set gsy_all = K.gsy_ta20.vals[-1] + K.gsy_ta30.vals[-1] + K.gsy_ta40.vals[-1] + K.gsy_ta50.vals[-1] + K.gsy_ta60.vals[-1] + K.gsy_ta70.vals[-1] if K.gsy_ta20 and K.gsy_ta30 and K.gsy_ta40 and K.gsy_ta50 and K.gsy_ta60 and K.gsy_ta70 else none %}
-  {{ rcard('귀산촌 가구주 중 60세 이상 비율', K.gsy_ta60, K.gsp_hh, 'gsy1', ('60대 ' ~ K.gsy_ta60.vals[-1]|big ~ ' · 70세 이상 ' ~ K.gsy_ta70.vals[-1]|big ~ ' 명 · 비율은 60대만') if K.gsy_ta60 and K.gsy_ta70 else '', '#e0a03a') }}
+  {{ rcard('귀산촌 가구주 중 60대 비율', K.gsy_ta60, K.gsp_hh, 'gsy1', ('60대 ' ~ K.gsy_ta60.vals[-1]|big ~ ' · 70세 이상 ' ~ K.gsy_ta70.vals[-1]|big ~ ' 명') if K.gsy_ta60 and K.gsy_ta70 else '', '#e0a03a') }}
   {{ rcard('귀산촌 가구주 중 30세 미만 비율', K.gsy_ta20, K.gsp_hh, 'gsy2', ('29세 이하 ' ~ K.gsy_ta20.vals[-1]|big ~ ' · 30대 ' ~ K.gsy_ta30.vals[-1]|big ~ ' 명') if K.gsy_ta20 and K.gsy_ta30 else '', '#2458d6') }}
   {{ rcard('70세 이상 귀산촌 가구주 중 여성 비율', K.gsy_fa70, K.gsy_ta70, 'gsy3', ('여성 ' ~ K.gsy_fa70.vals[-1]|big ~ ' · 전체 ' ~ K.gsy_ta70.vals[-1]|big ~ ' 명') if K.gsy_fa70 and K.gsy_ta70 else '', '#7a5cc2') }}
   {{ hcard('연령대별 귀산촌 가구주', [('29세 이하', K.gsy_ta20), ('30대', K.gsy_ta30), ('40대', K.gsy_ta40), ('50대', K.gsy_ta50), ('60대', K.gsy_ta60), ('70세 이상', K.gsy_ta70)], '명', '괄호는 비중 · 오른쪽은 전년 대비', gsy_all, '#e0a03a') }}

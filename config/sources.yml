@@ -13967,6 +13967,38 @@ sources:
       - {id: fqd_emp_s3, title: "식품제조업 종사자 10~49인 고용 현황지수", tbl: DT_114057_D03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqd_emp_s4, title: "식품제조업 종사자 50~299인 고용 현황지수", tbl: DT_114057_D04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqd_emp_s5, title: "식품제조업 종사자 300인 이상 고용 현황지수", tbl: DT_114057_D05, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^고용$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: kpp_kw, title: "농어촌공사 관리 양·배수장 총동력", tbl: DT_311001_012, org: "311", periods: 4, itm: "^총동력$", want: ["^전체$"], unit: kW, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n, title: "농어촌공사 관리 양·배수장 펌프 대수", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^전체$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h, title: "농어촌공사 관리 양·배수장 가동시간", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^전체$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh, title: "농어촌공사 관리 양·배수장 전기 사용량", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^전체$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_won, title: "농어촌공사 관리 양·배수장 전기요금", tbl: DT_311001_012, org: "311", periods: 4, itm: "^금액$", want: ["^전체$"], unit: 천원, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_gg, title: "양·배수장 전기 사용량 · 경기지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^경기지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_gw, title: "양·배수장 전기 사용량 · 강원지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^강원지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_cb, title: "양·배수장 전기 사용량 · 충북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^충북지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_cn, title: "양·배수장 전기 사용량 · 충남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^충남지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_jb, title: "양·배수장 전기 사용량 · 전북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^전북지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_jn, title: "양·배수장 전기 사용량 · 전남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^전남지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_gb, title: "양·배수장 전기 사용량 · 경북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^경북지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_gn, title: "양·배수장 전기 사용량 · 경남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^경남지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_kwh_jj, title: "양·배수장 전기 사용량 · 제주지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^전기사용량$", want: ["^제주지역본부$"], unit: kWh, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_gg, title: "양·배수장 가동시간 · 경기지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^경기지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_gw, title: "양·배수장 가동시간 · 강원지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^강원지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_cb, title: "양·배수장 가동시간 · 충북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^충북지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_cn, title: "양·배수장 가동시간 · 충남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^충남지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_jb, title: "양·배수장 가동시간 · 전북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^전북지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_jn, title: "양·배수장 가동시간 · 전남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^전남지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_gb, title: "양·배수장 가동시간 · 경북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^경북지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_gn, title: "양·배수장 가동시간 · 경남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^경남지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_h_jj, title: "양·배수장 가동시간 · 제주지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^가동시간$", want: ["^제주지역본부$"], unit: 시간, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_gg, title: "양·배수장 펌프 대수 · 경기지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^경기지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_gw, title: "양·배수장 펌프 대수 · 강원지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^강원지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_cb, title: "양·배수장 펌프 대수 · 충북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^충북지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_cn, title: "양·배수장 펌프 대수 · 충남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^충남지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_jb, title: "양·배수장 펌프 대수 · 전북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^전북지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_jn, title: "양·배수장 펌프 대수 · 전남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^전남지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_gb, title: "양·배수장 펌프 대수 · 경북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^경북지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_gn, title: "양·배수장 펌프 대수 · 경남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^경남지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: kpp_n_jj, title: "양·배수장 펌프 대수 · 제주지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^제주지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

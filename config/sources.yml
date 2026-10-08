@@ -13999,6 +13999,30 @@ sources:
       - {id: kpp_n_gb, title: "양·배수장 펌프 대수 · 경북지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^경북지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
       - {id: kpp_n_gn, title: "양·배수장 펌프 대수 · 경남지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^경남지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
       - {id: kpp_n_jj, title: "양·배수장 펌프 대수 · 제주지역본부", tbl: DT_311001_012, org: "311", periods: 4, itm: "^대수$", want: ["^제주지역본부$"], unit: 대, survey: 농업생산기반정비사업 통계}
+      - {id: dmh_n, title: "농업용 저수지 수(제당높이별 표)", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^총 저수량$"], codes: {C3: "^B01$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap, title: "농업용 저수지 총저수량(제당높이별 표)", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_eff, title: "농업용 저수지 유효저수량(제당높이별 표)", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^유효 저수량$"], codes: {C3: "^B02$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h1, title: "제당 높이 10m 미만 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^10m 미만$"], codes: {C3: "^B0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h2, title: "제당 높이 10~15m 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 15m 미만$"], codes: {C3: "^B0102$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h3, title: "제당 높이 15~20m 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 20m 미만$"], codes: {C3: "^B0103$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h4, title: "제당 높이 20~30m 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 30m 미만$"], codes: {C3: "^B0104$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h5, title: "제당 높이 30~40m 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^~ 40m 미만$"], codes: {C3: "^B0105$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_n_h6, title: "제당 높이 40m 이상 저수지 수", tbl: DT_311001_010, org: "311", periods: 3, itm: "^시설수$", want: ["^40m 이상$"], codes: {C3: "^B0106$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h1, title: "제당 높이 10m 미만 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^10m 미만$"], codes: {C3: "^B0101$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h2, title: "제당 높이 10~15m 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^~ 15m 미만$"], codes: {C3: "^B0102$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h3, title: "제당 높이 15~20m 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^~ 20m 미만$"], codes: {C3: "^B0103$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h4, title: "제당 높이 20~30m 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^~ 30m 미만$"], codes: {C3: "^B0104$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h5, title: "제당 높이 30~40m 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^~ 40m 미만$"], codes: {C3: "^B0105$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_c_h6, title: "제당 높이 40m 이상 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^40m 이상$"], codes: {C3: "^B0106$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_gg, title: "경기 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^경기도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_gw, title: "강원 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^강원", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_cb, title: "충북 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^(충청북도|충북)$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_cn, title: "충남 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^(충청남도|충남)$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_jb, title: "전북 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^(전라북도|전북특별자치도)$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_jn, title: "전남 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^전라남도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_gb, title: "경북 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^경상북도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_gn, title: "경남 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^경상남도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: dmh_cap_jj, title: "제주 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^제주", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

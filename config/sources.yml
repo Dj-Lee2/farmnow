@@ -14094,6 +14094,36 @@ sources:
       - {id: sbw_area_jb, title: "전북 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^(전라북도|전북특별자치도)$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
       - {id: sbw_area_jn, title: "전남 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^전라남도$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
       - {id: sbw_area_gn, title: "경남 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^경상남도$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: rmo_cap, title: "쌀가루 업체 연간 평균 생산능력", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^전체$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_u05, title: "쌀가루 업체 생산능력 500톤 미만 비중", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^5백\\s*톤\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_u1k, title: "쌀가루 업체 생산능력 500~1천 톤 비중", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^5백\\s*톤\\s*~\\s*1천\\s*톤\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_u5k, title: "쌀가루 업체 생산능력 1천~5천 톤 비중", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^1천\\s*톤\\s*~\\s*5천\\s*톤\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_o5k, title: "쌀가루 업체 생산능력 5천 톤 이상 비중", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^5천\\s*톤\\s*이상$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_s1, title: "쌀가루 업체 평균 생산능력 종사자 1~4인", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^1~4인$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_s5, title: "쌀가루 업체 평균 생산능력 종사자 5~9인", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^5~9인$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_s10, title: "쌀가루 업체 평균 생산능력 종사자 10~19인", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^10~19인$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_s20, title: "쌀가루 업체 평균 생산능력 종사자 20~49인", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^20~49인$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_cap_s50, title: "쌀가루 업체 평균 생산능력 종사자 50인 이상", tbl: DT_446001_A029, org: "466", periods: 2, itm: "^연간 평균 생산능력$", want: ["^50인 이상$"], unit: 톤, survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op, title: "쌀가루 업체 연간 평균 가동률", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_l30, title: "쌀가루 업체 가동률 30% 미만 비중", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^30%\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_l50, title: "쌀가루 업체 가동률 30~50% 비중", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^30\\s*~\\s*50%\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_l80, title: "쌀가루 업체 가동률 50~80% 비중", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^50\\s*~\\s*80%\\s*미만$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_g80, title: "쌀가루 업체 가동률 80% 이상 비중", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^80%\\s*이상$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_s1, title: "쌀가루 업체 평균 가동률 종사자 1~4인", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^1~4인$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_s5, title: "쌀가루 업체 평균 가동률 종사자 5~9인", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^5~9인$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_s10, title: "쌀가루 업체 평균 가동률 종사자 10~19인", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^10~19인$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_s20, title: "쌀가루 업체 평균 가동률 종사자 20~49인", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^20~49인$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmo_op_s50, title: "쌀가루 업체 평균 가동률 종사자 50인 이상", tbl: DT_446001_A030, org: "466", periods: 2, itm: "^평균$", want: ["^50인 이상$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_dom, title: "쌀가공업체 내국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^전체$", "^내국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for, title: "쌀가공업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^전체$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for_tteok, title: "쌀떡류 업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^쌀떡류$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for_snack, title: "쌀과자류 업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^쌀과자류$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for_noodle, title: "면류 업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^면류$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for_liquor, title: "주류 업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^주류$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmw_for_rice, title: "가공밥류 업체 외국인 종사자", tbl: DT_446001_A010, org: "466", periods: 2, itm: "^종사자 수$", want: ["^가공밥류$", "^외국인$"], unit: 명, survey: 쌀가공식품산업 실태조사}
+      - {id: rmp_org, title: "쌀가공업체 원재료 구매 전담 조직 있음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^전담조직 존재$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmp_staff, title: "쌀가공업체 원재료 구매 전담 인력만 있음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^전담조직은 없으나 전담인력은 있음$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: rmp_none, title: "쌀가공업체 원재료 구매 전담 조직·인력 없음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^원재료 구매 전담하는 조직과 인력 없음$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

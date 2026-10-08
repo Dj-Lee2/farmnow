@@ -14943,6 +14943,28 @@ sources:
       - {id: kmc_all, title: "절임·조림류 국내 판매액(계)", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: kmc_kim, title: "김치 국내 판매액", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^김치$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: kmc_ginseng, title: "인삼·홍삼 당절임 국내 판매액", tbl: DT_145003_A018, org: "145", periods: 3, itm: "^국내판매액$", want: ["^당절임\\((인삼|홍삼)\\)$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_all, title: "조미식품 국내 판매액(합계)", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^합계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_gcg, title: "고춧가루 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^고춧가루$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_cie, title: "천일염 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^천일염$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_salt, title: "소금 국내 판매액(천일염·재제·태움용융·정제·가공 등 합계)", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^천일염$|소금"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_vfr, title: "발효식초(과실) 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^발효식초\\(과실\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_vgr, title: "발효식초(곡물) 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^발효식초\\(곡물\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_cplx, title: "복합조미식품 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^복합조미식품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_sauce, title: "소스 국내 판매액", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^소스$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: jmr_curry, title: "카레 국내 판매액(카레분 포함)", tbl: TX_14503_A062, org: "145", periods: 3, itm: "^국내판매액$", want: ["^카레"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_all, title: "음료류 국내 판매액(합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["^합계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_gin, title: "인삼·홍삼 차 국내 판매액(침출·액상·고형 합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["\\((인삼|홍삼)\\)$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_green, title: "녹차 국내 판매액(침출·고형 합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["\\(녹차\\)$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_grain, title: "가공곡류차(침출차) 국내 판매액", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["^침출차\\(가공곡류차\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_juice, title: "과·채주스 국내 판매액(가열·비가열 합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과.채주스"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_fbev, title: "과·채음료 국내 판매액(가열·비가열 합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과.채음료"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bvr_coffee, title: "커피 국내 판매액(볶은·인스턴트·조제·액상 합계)", tbl: TX_14503_A058, org: "145", periods: 3, itm: "^국내판매액$", want: ["커피$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_all, title: "과자·빵·떡류 국내 판매액(계)", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_tteok, title: "떡류 국내 판매액", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^떡류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_hangwa, title: "한과류 국내 판매액", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과자\\(한과류\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_yg, title: "양갱 국내 판매액", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^캔디류\\(양갱\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_bread, title: "빵류 국내 판매액(합계)", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^빵류"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: bkr_snack, title: "과자 국내 판매액(한과 포함 합계)", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과자\\("], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

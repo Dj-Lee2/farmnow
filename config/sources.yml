@@ -14576,6 +14576,35 @@ sources:
       - {id: izp_fo_d28, title: "임업 사업장 재해 정도 — 요양 15~28일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^15~28일$"], unit: "명", survey: 산업재해현황}
       - {id: izp_fo_d14, title: "임업 사업장 재해 정도 — 요양 8~14일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^8~14일$"], unit: "명", survey: 산업재해현황}
       - {id: izp_fo_d7, title: "임업 사업장 재해 정도 — 요양 4~7일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^4~7일$"], unit: "명", survey: 산업재해현황}
+      - {id: mcf_farm, title: "전체 농가(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가$", want: ["^(전국)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_pop, title: "전체 농가인구(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가인구$", want: ["^(전국)$"], unit: "명", survey: 농림어업조사}
+      - {id: mcf_hh, title: "다문화 농가", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(전국)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hpop, title: "다문화 농가 인구", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가 인구$", want: ["^(전국)$"], unit: "명", survey: 농림어업조사}
+      - {id: mcf_hh_gg, title: "다문화 농가 · 경기도", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(경기도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_gw, title: "다문화 농가 · 강원", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(강원도|강원특별자치도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_cb, title: "다문화 농가 · 충북", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(충청북도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_cn, title: "다문화 농가 · 충남", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(충청남도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_jb, title: "다문화 농가 · 전북", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(전라북도|전북특별자치도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_jn, title: "다문화 농가 · 전남", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(전라남도|전남광주통합특별시)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_gb, title: "다문화 농가 · 경북", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(경상북도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_gn, title: "다문화 농가 · 경남", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(경상남도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_hh_jj, title: "다문화 농가 · 제주", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^다문화농가$", want: ["^(제주특별자치도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_f_cb, title: "전체 농가 · 충북(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가$", want: ["^(충청북도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_f_jb, title: "전체 농가 · 전북(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가$", want: ["^(전라북도|전북특별자치도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_f_jn, title: "전체 농가 · 전남(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가$", want: ["^(전라남도|전남광주통합특별시)$"], unit: "가구", survey: 농림어업조사}
+      - {id: mcf_f_gn, title: "전체 농가 · 경남(다문화 비교 기준)", tbl: DT_1EA1012, org: "101", periods: 3, itm: "^농가$", want: ["^(경상남도)$"], unit: "가구", survey: 농림어업조사}
+      - {id: drc_all, title: "자연재난 총 복구액 · 전체", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^총계$"], unit: 천원, survey: 재해연보}
+      - {id: drc_maf, title: "자연재난 총 복구액 · 농림축산식품부", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^농림축산식품부$"], unit: 천원, survey: 재해연보}
+      - {id: drc_irr, title: "자연재난 총 복구액 · 수리시설", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^수리시설$"], unit: 천원, survey: 재해연보}
+      - {id: drc_fo, title: "자연재난 총 복구액 · 산림청", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^산림청$"], unit: 천원, survey: 재해연보}
+      - {id: drc_ls, title: "자연재난 총 복구액 · 산사태", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^산사태$"], unit: 천원, survey: 재해연보}
+      - {id: drc_frd, title: "자연재난 총 복구액 · 임도", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^임도$"], unit: 천원, survey: 재해연보}
+      - {id: drc_rv, title: "자연재난 총 복구액 · 하천기본시설", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^하천기본시설$"], unit: 천원, survey: 재해연보}
+      - {id: drc_smr, title: "자연재난 총 복구액 · 소하천", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^소하천$"], unit: 천원, survey: 재해연보}
+      - {id: drc_rrd, title: "자연재난 총 복구액 · 농어촌도로", tbl: DT_156003_007, org: "110", periods: 3, itm: "^총 복구액$", want: ["^농어촌도로$"], unit: 천원, survey: 재해연보}
+      - {id: drc_all_g, title: "자연재난 지원복구비(국고·지방비) · 전체", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^총계$"], unit: 천원, survey: 재해연보}
+      - {id: drc_maf_g, title: "자연재난 지원복구비 · 농림축산식품부", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^농림축산식품부$"], unit: 천원, survey: 재해연보}
+      - {id: drc_fo_g, title: "자연재난 지원복구비 · 산림청", tbl: DT_156003_007, org: "110", periods: 3, itm: "^지원복구비$", want: ["^산림청$"], unit: 천원, survey: 재해연보}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

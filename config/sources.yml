@@ -13904,6 +13904,39 @@ sources:
       - {id: ybz_int, title: "임가 이자·배당", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.9$"}, unit: 천원, survey: 임가경제조사}
       - {id: ybz_lr, title: "임가 임지 임대료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.11$"}, unit: 천원, survey: 임가경제조사}
       - {id: ybz_rent, title: "임가 기타 임대료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.12$"}, unit: 천원, survey: 임가경제조사}
+      - {id: fqi_size, title: "식품산업 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqi_util, title: "식품산업 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqo_util, title: "식품산업 생산설비 가동률 전망지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^전망지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqi_stock, title: "식품산업 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqi_fac, title: "식품산업 생산설비 현황지수", tbl: DT_114057_B13, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqi_rnd, title: "식품산업 R&D투자 현황지수", tbl: DT_114057_B15, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^전체$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_meat, title: "육류 가공 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_fv, title: "과실·채소 가공 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_dairy, title: "낙농제품·빙과 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_grain, title: "곡물가공품·전분 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_bake, title: "떡·빵·과자 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_meal, title: "도시락·조리식품 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_brew, title: "발효주 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_spir, title: "증류주·합성주 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqz_bev, title: "비알코올 음료 생산규모 현황지수", tbl: DT_114057_B02, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_meat, title: "육류 가공 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_fv, title: "과실·채소 가공 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_dairy, title: "낙농제품·빙과 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_grain, title: "곡물가공품·전분 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_bake, title: "떡·빵·과자 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_meal, title: "도시락·조리식품 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_brew, title: "발효주 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_spir, title: "증류주·합성주 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqu_bev, title: "비알코올 음료 생산설비 가동률 현황지수", tbl: DT_114057_B03, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_meat, title: "육류 가공 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_fv, title: "과실·채소 가공 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_dairy, title: "낙농제품·빙과 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_grain, title: "곡물가공품·전분 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_bake, title: "떡·빵·과자 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_meal, title: "도시락·조리식품 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_brew, title: "발효주 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_spir, title: "증류주·합성주 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqk_bev, title: "비알코올 음료 제품재고 현황지수", tbl: DT_114057_B12, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

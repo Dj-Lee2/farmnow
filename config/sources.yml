@@ -15433,6 +15433,27 @@ sources:
       - {id: bzi_inp, title: "지식재산권을 보유한 농축산식품 사업체 비율(농산업 투입재)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzi_mfg, title: "지식재산권을 보유한 농축산식품 사업체 비율(농식품 제조)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농식품 및 관련 제품 제조업$"], unit: "%", survey: 농축산식품산업 실태조사}
       - {id: bzi_svc, title: "지식재산권을 보유한 농축산식품 사업체 비율(농산업 기타 서비스)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농산업 관련 기타 서비스업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: sge_sa_area, title: "신안군 친환경 농산물 출하 면적", tbl: DT_75201_E001066, org: "752", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_12$"}, unit: ha, survey: 전남광주통합특별시 신안군 친환경 농·축산물 출하현황}
+      - {id: sge_sa_org, title: "신안군 유기농산물 출하 면적", tbl: DT_75201_E001066, org: "752", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_16$"}, unit: ha, survey: 전남광주통합특별시 신안군 친환경 농·축산물 출하현황}
+      - {id: sge_sa_farm, title: "신안군 친환경 농산물 출하 농가", tbl: DT_75201_E001066, org: "752", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C1: "^I_11$"}, unit: 가구, survey: 전남광주통합특별시 신안군 친환경 농·축산물 출하현황}
+      - {id: sge_js_area, title: "장성군 친환경 농산물 출하 면적", tbl: DT_74901_E001066, org: "749", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_12$"}, unit: ha, survey: 전남광주통합특별시 장성군 친환경 농·축산물 출하현황}
+      - {id: sge_js_org, title: "장성군 유기농산물 출하 면적", tbl: DT_74901_E001066, org: "749", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_16$"}, unit: ha, survey: 전남광주통합특별시 장성군 친환경 농·축산물 출하현황}
+      - {id: sge_js_farm, title: "장성군 친환경 농산물 출하 농가", tbl: DT_74901_E001066, org: "749", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C1: "^I_11$"}, unit: 가구, survey: 전남광주통합특별시 장성군 친환경 농·축산물 출하현황}
+      - {id: sge_yc_area, title: "예천군 친환경 농산물 출하 면적", tbl: DT_78001_E001066, org: "780", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_12$"}, unit: ha, survey: 경상북도 예천군 친환경 농·축산물 출하현황}
+      - {id: sge_yc_org, title: "예천군 유기농산물 출하 면적", tbl: DT_78001_E001066, org: "780", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_16$"}, unit: ha, survey: 경상북도 예천군 친환경 농·축산물 출하현황}
+      - {id: sge_yc_farm, title: "예천군 친환경 농산물 출하 농가", tbl: DT_78001_E001066, org: "780", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C1: "^I_11$"}, unit: 가구, survey: 경상북도 예천군 친환경 농·축산물 출하현황}
+      - {id: sge_jju_area, title: "진주시 친환경 농산물 출하 면적", tbl: DT_79302_E042, org: "793", periods: 5, itm: "^면적$", codes: {C1: "^I_3$"}, unit: ha, survey: 경상남도 진주시 친환경 농·축산물 출하현황}
+      - {id: sge_jju_org, title: "진주시 유기농산물 출하 면적", tbl: DT_79302_E042, org: "793", periods: 5, itm: "^면적$", want: ["^유기 농산물$"], codes: {C1: "^I_4$"}, unit: ha, survey: 경상남도 진주시 친환경 농·축산물 출하현황}
+      - {id: sge_jju_farm, title: "진주시 친환경 농산물 출하 농가", tbl: DT_79302_E042, org: "793", periods: 5, itm: "^농가수$", codes: {C1: "^I_3$"}, unit: 가구, survey: 경상남도 진주시 친환경 농·축산물 출하현황}
+      - {id: sge_my_area, title: "밀양시 친환경 농산물 출하 면적", tbl: DT_79801_E016, org: "798", periods: 5, itm: "^면적$", want: ["^농산물$"], unit: ha, survey: 경상남도 밀양시 친환경 농·축산물 출하현황}
+      - {id: sge_my_org, title: "밀양시 유기농산물 출하 면적", tbl: DT_79801_E016, org: "798", periods: 5, itm: "^면적$", want: ["^유기농산물$"], unit: ha, survey: 경상남도 밀양시 친환경 농·축산물 출하현황}
+      - {id: sge_my_farm, title: "밀양시 친환경 농산물 출하 농가", tbl: DT_79801_E016, org: "798", periods: 5, itm: "^농가수$", want: ["^농산물$"], unit: 가구, survey: 경상남도 밀양시 친환경 농·축산물 출하현황}
+      - {id: sge_gjj_area, title: "거제시 친환경 농산물 출하 면적", tbl: DT_79901_E053, org: "799", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_9$"}, unit: ha, survey: 경상남도 거제시 친환경 농·축산물 출하현황}
+      - {id: sge_gjj_org, title: "거제시 유기농산물 출하 면적", tbl: DT_79901_E053, org: "799", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C1: "^I_13$"}, unit: ha, survey: 경상남도 거제시 친환경 농·축산물 출하현황}
+      - {id: sge_gjj_farm, title: "거제시 친환경 농산물 출하 농가", tbl: DT_79901_E053, org: "799", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C1: "^I_8$"}, unit: 가구, survey: 경상남도 거제시 친환경 농·축산물 출하현황}
+      - {id: sge_ta_area, title: "태안군 친환경 농산물 출하 면적", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C2: "^I_12$"}, unit: ha, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
+      - {id: sge_ta_org, title: "태안군 유기농산물 출하 면적", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^면적$"], codes: {C2: "^I_16$"}, unit: ha, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
+      - {id: sge_ta_farm, title: "태안군 친환경 농산물 출하 농가", tbl: DT_70401_E000066, org: "704", periods: 5, itm: "친환경", want: ["^농가수$"], codes: {C2: "^I_11$"}, unit: 가구, survey: 충청남도 태안군 친환경 농·축산물 출하현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -14653,6 +14653,35 @@ sources:
       - {id: ks_rdn_risk, title: "한식 식품제조업체 연구개발 안 한 이유 성공 보장 없음", tbl: DT_114058_F056, org: "114", periods: 3, itm: "하지 않은 이유$", want: ["^전체$", "^연구개발에 대한 성공 보장이 없어서$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_rdn_enough, title: "한식 식품제조업체 연구개발 안 한 이유 기존 제품으로 충분", tbl: DT_114058_F056, org: "114", periods: 3, itm: "하지 않은 이유$", want: ["^전체$", "^이미 개발된 제품으로 충분"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_rdn_etc, title: "한식 식품제조업체 연구개발 안 한 이유 기타", tbl: DT_114058_F056, org: "114", periods: 3, itm: "하지 않은 이유$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_50m, title: "한식 식품제조업체 연구개발 비용 5천만 원 미만", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^5천만 원 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_100m, title: "한식 식품제조업체 연구개발 비용 5천만~1억 원", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^5천만-1억 원 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_150m, title: "한식 식품제조업체 연구개발 비용 1억~1억5천만 원", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^1억-1억5천만 원 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_200m, title: "한식 식품제조업체 연구개발 비용 1억5천만~2억 원", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^1억5천만 ?-2억 원 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_300m, title: "한식 식품제조업체 연구개발 비용 2억~3억 원", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^2억-3억 원 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_over, title: "한식 식품제조업체 연구개발 비용 3억 원 이상", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^3억 원 이상$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdc_avg, title: "한식 식품제조업체 연구개발 비용 평균", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^R＆D활동 비용$"], unit: "만원", survey: 한식산업 실태조사}
+      - {id: ks_rdc_kr, title: "한식 식품제조업체 연구개발 중 한식 제품 비율", tbl: DT_114058_F049, org: "114", periods: 3, itm: "연구개발 비율$", want: ["^전체$", "^한식제품 R＆D 비율$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_new, title: "한식 제품 연구개발 목적 신제품 개발", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^신제품 개발$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_imp, title: "한식 제품 연구개발 목적 제품 개선", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^제품 개선$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_qa, title: "한식 제품 연구개발 목적 품질·안전관리", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^품질/안전관리$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_cost, title: "한식 제품 연구개발 목적 원가절감", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^원가절감$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_base, title: "한식 제품 연구개발 목적 기초연구", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^기초연구$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdp_test, title: "한식 제품 연구개발 목적 시험·분석", tbl: DT_114058_F050, org: "114", periods: 3, itm: "목적별 비율$", want: ["^전체$", "^시험/분석$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_np_try, title: "한식 신제품 최근 3년 개발 시도 평균 건수", tbl: DT_114058_F051, org: "114", periods: 3, itm: "평균 건수$", want: ["^전체$", "^3년간 개발 시도 건수$"], unit: "건", survey: 한식산업 실태조사}
+      - {id: ks_np_done, title: "한식 신제품 최근 3년 개발 완료 평균 건수", tbl: DT_114058_F051, org: "114", periods: 3, itm: "평균 건수$", want: ["^전체$", "^3년간 개발 완료 건수$"], unit: "건", survey: 한식산업 실태조사}
+      - {id: ks_np_rel, title: "한식 신제품 최근 3년 개발 시장 출시 평균 건수", tbl: DT_114058_F051, org: "114", periods: 3, itm: "평균 건수$", want: ["^전체$", "^개발 완료된 신제품 시장 출시 건수$"], unit: "건", survey: 한식산업 실태조사}
+      - {id: ks_rdu_weak, title: "한식 연구개발 후 미출시 이유 제품력이 낮음", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^제품력이 낮음$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_mkt, title: "한식 연구개발 후 미출시 이유 영업·마케팅 능력 부족", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^영업/마케팅 능력 부족$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_info, title: "한식 연구개발 후 미출시 이유 시장 정보 부족", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^시장 정보의 부족"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_fund, title: "한식 연구개발 후 미출시 이유 상품화 자금 부족", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^상품화 자금부족$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_tech, title: "한식 연구개발 후 미출시 이유 생산기술 부족", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^생산기술 부족$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_dist, title: "한식 연구개발 후 미출시 이유 유통 단계의 어려움", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^유통 단계에서의 어려움$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_raw, title: "한식 연구개발 후 미출시 이유 원료 확보의 어려움", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^원료 확보의 어려움$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_copy, title: "한식 연구개발 후 미출시 이유 타사 유사 제품 출시", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^제품 출시 후 타사의 유사 제품 출시$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_rdu_etc, title: "한식 연구개발 후 미출시 이유 기타", tbl: DT_114058_F052, org: "114", periods: 3, itm: "미출시 이유\\(1순위\\)$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ip_pat, title: "한식 식품제조업체 보유 지식재산권 국내 특허권 평균", tbl: DT_114058_F057, org: "114", periods: 3, itm: "지식재산권 현황$", want: ["^전체$", "^국내_특허권$"], unit: "건", survey: 한식산업 실태조사}
+      - {id: ks_ip_des, title: "한식 식품제조업체 보유 지식재산권 국내 디자인권 평균", tbl: DT_114058_F057, org: "114", periods: 3, itm: "지식재산권 현황$", want: ["^전체$", "^국내_디자인권$"], unit: "건", survey: 한식산업 실태조사}
+      - {id: ks_ip_tm, title: "한식 식품제조업체 보유 지식재산권 국내 상표권 평균", tbl: DT_114058_F057, org: "114", periods: 3, itm: "지식재산권 현황$", want: ["^전체$", "^국내_상표권$"], unit: "건", survey: 한식산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

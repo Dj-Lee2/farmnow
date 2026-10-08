@@ -14124,6 +14124,34 @@ sources:
       - {id: rmp_org, title: "쌀가공업체 원재료 구매 전담 조직 있음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^전담조직 존재$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rmp_staff, title: "쌀가공업체 원재료 구매 전담 인력만 있음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^전담조직은 없으나 전담인력은 있음$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
       - {id: rmp_none, title: "쌀가공업체 원재료 구매 전담 조직·인력 없음", tbl: DT_446001_A034, org: "466", periods: 2, itm: "^원재료 구매 전담하는 조직과 인력 없음$", want: ["^전체$"], unit: "%", survey: 쌀가공식품산업 실태조사}
+      - {id: sno_gom_f, title: "곰취(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sno_gom_g, title: "곰취(시설재배) 1ha당 유기질 비료비", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sno_cnm_f, title: "참나물(노지재배) 1ha당 유기질 비료비", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sno_wch_g, title: "원추리(시설재배) 1ha당 유기질 비료비", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^유기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snm_gom_f, title: "곰취(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snm_gom_g, title: "곰취(시설재배) 1ha당 무기질 비료비", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snm_cnm_f, title: "참나물(노지재배) 1ha당 무기질 비료비", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snm_wch_g, title: "원추리(시설재배) 1ha당 무기질 비료비", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^무기질 비료비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snp_gom_f, title: "곰취(노지재배) 1ha당 농약비", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snp_gom_g, title: "곰취(시설재배) 1ha당 농약비", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snp_cnm_f, title: "참나물(노지재배) 1ha당 농약비", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snp_wch_g, title: "원추리(시설재배) 1ha당 농약비", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^농약비$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sni_gom_f, title: "곰취(노지재배) 1ha당 소득", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sni_gom_g, title: "곰취(시설재배) 1ha당 소득", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sni_cnm_f, title: "참나물(노지재배) 1ha당 소득", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: sni_wch_g, title: "원추리(시설재배) 1ha당 소득", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^소득$", "^금액[(]원/ha[)]$"], unit: 원, survey: 임산물생산조사}
+      - {id: snr_gom_f, title: "곰취(노지재배) 소득률", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^소득률[(]%[)]$", "^금액[(]원/ha[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: snr_gom_g, title: "곰취(시설재배) 소득률", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^소득률[(]%[)]$", "^금액[(]원/ha[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: snr_cnm_f, title: "참나물(노지재배) 소득률", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^소득률[(]%[)]$", "^금액[(]원/ha[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: snr_wch_g, title: "원추리(시설재배) 소득률", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^소득률[(]%[)]$", "^금액[(]원/ha[)]$"], unit: "%", survey: 임산물생산조사}
+      - {id: sny_gom_f, title: "곰취(노지재배) 1ha당 생물 생산량", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
+      - {id: sny_gom_g, title: "곰취(시설재배) 1ha당 생물 생산량", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
+      - {id: sny_cnm_f, title: "참나물(노지재배) 1ha당 생물 생산량", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
+      - {id: sny_wch_g, title: "원추리(시설재배) 1ha당 생물 생산량", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^생물$", "^생산·투입량$"], unit: kg, survey: 임산물생산조사}
+      - {id: snu_gom_f, title: "곰취(노지재배) 생물 kg당 단가", tbl: DT_136036_11619, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
+      - {id: snu_gom_g, title: "곰취(시설재배) 생물 kg당 단가", tbl: DT_136036_11620, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
+      - {id: snu_cnm_f, title: "참나물(노지재배) 생물 kg당 단가", tbl: DT_136036_11585, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
+      - {id: snu_wch_g, title: "원추리(시설재배) 생물 kg당 단가", tbl: DT_136036_11569, org: "136", itm: "^값$", want: ["^생물$", "^단가$"], unit: 원, survey: 임산물생산조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

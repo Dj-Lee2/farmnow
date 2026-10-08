@@ -15406,6 +15406,33 @@ sources:
       - {id: fct_pep_bad, title: "식품 등 수거검사 — 고춧가루·실고추 부적합 건수", tbl: DT_14505_2018, org: "145", periods: 3, itm: "^부적합$", want: ["^고춧가루 또는 실고추$"], unit: "건", survey: 식품 등의 수거검사 현황}
       - {id: hcw_mon, title: "건강기능식품 제조업체 감시 건수", tbl: DT_145010_019, org: "145", periods: 3, itm: "^감시및위반건수$", want: ["^감시$", "^계$"], unit: "건", survey: 건강기능식품 제조업체 감시 및 위반 현황}
       - {id: hcw_vio, title: "건강기능식품 제조업체 위반 건수", tbl: DT_145010_019, org: "145", periods: 3, itm: "^감시및위반건수$", want: ["^위반$", "^계$"], unit: "건", survey: 건강기능식품 제조업체 감시 및 위반 현황}
+      # 농축산식품산업 실태조사 2024 추가: 고용형태별 종사자(1년 이상·미만), 외국인 종사자, 전문인력(박사·기술사), 지식재산권 보유
+      - {id: bze_self, title: "농축산식품산업 1년 이상 종사자 — 자영업자", tbl: DT_114056_2024_0012, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^자영업자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bze_fam, title: "농축산식품산업 1년 이상 종사자 — 무급 가족 종사자", tbl: DT_114056_2024_0012, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^무급 가족 종사자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bze_reg, title: "농축산식품산업 1년 이상 종사자 — 상용 근로자", tbl: DT_114056_2024_0012, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^상용 근로자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bze_all, title: "농축산식품산업 1년 이상 종사자 — 합계", tbl: DT_114056_2024_0012, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzu_fam, title: "농축산식품산업 1년 미만 종사자 — 무급 가족 종사자", tbl: DT_114056_2024_0015, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^무급가족 종사자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzu_temp, title: "농축산식품산업 1년 미만 종사자 — 임시근로자", tbl: DT_114056_2024_0015, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^임시근로자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzu_day, title: "농축산식품산업 1년 미만 종사자 — 일용근로자", tbl: DT_114056_2024_0015, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^일용근로자$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzu_all, title: "농축산식품산업 1년 미만 종사자 — 합계", tbl: DT_114056_2024_0015, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_all, title: "농축산식품산업 1년 이상 외국인 종사자(전체)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^전체$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_inp, title: "농축산식품산업 1년 이상 외국인 종사자(농산업 투입재)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^농산업 투입재 산업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_prod, title: "농축산식품산업 1년 이상 외국인 종사자(작물재배·축산)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^작물재배 및 축산업 동물 생산업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_mfg, title: "농축산식품산업 1년 이상 외국인 종사자(농식품 제조)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^농식품 및 관련 제품 제조업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_trade, title: "농축산식품산업 1년 이상 외국인 종사자(농식품 도소매)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^농식품 동물 및 관련 도소매업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_rest, title: "농축산식품산업 1년 이상 외국인 종사자(음식점·주점)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^음식점 및 주점업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzg_svc, title: "농축산식품산업 1년 이상 외국인 종사자(농산업 기타 서비스)", tbl: DT_114056_2024_0017, org: "114", se: F, periods: 1, itm: "^고용형태별 종사자$", want: ["^농산업 관련 기타 서비스업$", "^합계$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_phd, title: "농축산식품산업 전문인력 — 박사", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^박사$", want: ["^전체$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_pe, title: "농축산식품산업 전문인력 — 기술사", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^기술사$", want: ["^전체$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_all, title: "농축산식품산업 전문인력 — 합계", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^합계$", want: ["^전체$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_inp, title: "농축산식품산업 전문인력(농산업 투입재)", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^합계$", want: ["^농산업 투입재 산업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_prod, title: "농축산식품산업 전문인력(작물재배·축산)", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^합계$", want: ["^작물재배 및 축산업 동물 생산업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_mfg, title: "농축산식품산업 전문인력(농식품 제조)", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^합계$", want: ["^농식품 및 관련 제품 제조업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzh_svc, title: "농축산식품산업 전문인력(농산업 기타 서비스)", tbl: DT_114056_2024_0027, org: "114", se: F, periods: 1, itm: "^합계$", want: ["^농산업 관련 기타 서비스업$"], unit: "명", survey: 농축산식품산업 실태조사}
+      - {id: bzi_all, title: "지식재산권을 보유한 농축산식품 사업체 비율(전체)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^전체$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzi_inp, title: "지식재산권을 보유한 농축산식품 사업체 비율(농산업 투입재)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농산업 투입재 산업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzi_mfg, title: "지식재산권을 보유한 농축산식품 사업체 비율(농식품 제조)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농식품 및 관련 제품 제조업$"], unit: "%", survey: 농축산식품산업 실태조사}
+      - {id: bzi_svc, title: "지식재산권을 보유한 농축산식품 사업체 비율(농산업 기타 서비스)", tbl: DT_114056_2024_0031, org: "114", se: F, periods: 1, itm: "^예$", want: ["^농산업 관련 기타 서비스업$"], unit: "%", survey: 농축산식품산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

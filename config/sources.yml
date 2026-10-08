@@ -15340,6 +15340,41 @@ sources:
       - {id: ifk_site_n, title: "검사종류별 수입식품 부적합 건수 — 현장검사", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^현장검사$"], unit: "건", survey: 수입식품 통계}
       - {id: ifk_lab_n, title: "검사종류별 수입식품 부적합 건수 — 정밀검사", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^정밀검사$"], unit: "건", survey: 수입식품 통계}
       - {id: ifk_rand_n, title: "검사종류별 수입식품 부적합 건수 — 무작위표본", tbl: DT_145_2012_H007, org: "145", periods: 3, itm: "^건수$", want: ["^무작위표본$"], unit: "건", survey: 수입식품 통계}
+      - {id: hiv_all_v, title: "건강기능식품 수입액", tbl: DT_145010_013, org: "145", periods: 3, itm: "^금액$", want: ["^전체$"], unit: "천달러", survey: 건강기능식품 수입현황}
+      - {id: hiv_top_v, title: "건강기능식품 수입액 — 상위 10개 품목", tbl: DT_145010_013, org: "145", periods: 3, itm: "^금액$", want: ["^상위 10개$"], unit: "천달러", survey: 건강기능식품 수입현황}
+      - {id: hik_all_n, title: "수입 건강기능식품 검사건수", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^합계$", "^계$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_all_bad, title: "수입 건강기능식품 부적합 건수", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^합계$", "^부적합$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_doc_n, title: "수입 건강기능식품 검사건수 — 서류검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^서류검사$", "^계$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_doc_bad, title: "수입 건강기능식품 부적합 건수 — 서류검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^서류검사$", "^부적합$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_site_n, title: "수입 건강기능식품 검사건수 — 현장검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^현장검사$", "^계$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_site_bad, title: "수입 건강기능식품 부적합 건수 — 현장검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^현장검사$", "^부적합$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_lab_n, title: "수입 건강기능식품 검사건수 — 정밀검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^정밀검사$", "^계$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_lab_bad, title: "수입 건강기능식품 부적합 건수 — 정밀검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^정밀검사$", "^부적합$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_rand_n, title: "수입 건강기능식품 검사건수 — 무작위검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^무작위검사$", "^계$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: hik_rand_bad, title: "수입 건강기능식품 부적합 건수 — 무작위검사", tbl: DT_145010_016, org: "145", periods: 3, itm: "^검사건수$", want: ["^무작위검사$", "^부적합$"], unit: "건", survey: 건강기능식품 수입현황}
+      - {id: fck_all_n, title: "식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^계$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_all_bad, title: "식품 등 수거검사 부적합 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^부적합$", want: ["^계$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_mfds_n, title: "식품 등 수거검사 건수 — 식약처", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^식약처$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_mfds_bad, title: "식품 등 수거검사 부적합 건수 — 식약처", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^부적합$", want: ["^식약처$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_loc_n, title: "식품 등 수거검사 건수 — 지자체", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^지자체$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_loc_bad, title: "식품 등 수거검사 부적합 건수 — 지자체", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^부적합$", want: ["^지자체$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_seoul, title: "서울 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^서울특별시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_busan, title: "부산 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^부산광역시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_daegu, title: "대구 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^대구광역시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_incheon, title: "인천 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^인천광역시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_gwangju, title: "광주 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^광주광역시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_daejeon, title: "대전 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^대전광역시\\s*$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_ulsan, title: "울산 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^울산광역시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_sejong, title: "세종 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^세종특별자치시$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_gg, title: "경기 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^경기도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_gw, title: "강원 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^(강원도|강원특별자치도)$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_cb, title: "충북 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^충청북도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_cn, title: "충남 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^충청남도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_jb, title: "전북 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^(전라북도|전북특별자치도)$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_jn, title: "전남 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^(전라남도|전남광주통합특별시)$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_gb, title: "경북 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^경상북도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_gn, title: "경남 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^경상남도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
+      - {id: fck_r_jj, title: "제주 식품 등 수거검사 건수", tbl: TX_145_2009_H2007, org: "145", periods: 3, itm: "^검사건수$", want: ["^제주특별자치도$"], unit: "건", survey: 식품의약품안전처 수거검사 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

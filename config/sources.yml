@@ -14892,6 +14892,28 @@ sources:
       - {id: olc_spec, title: "조경수 재배 임가 조경공사 — 조경공사업(특수공사)", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^조경공사업\\(특수공사\\)에 의거 공사한다$"], unit: "%", survey: 임업경영실태조사}
       - {id: olc_pro, title: "조경수 재배 임가 조경공사 — 조경식재공사업(전문공사)", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^조경식재공사업\\(전문공사\\)에 의거 공사한다$"], unit: "%", survey: 임업경영실태조사}
       - {id: olc_gen, title: "조경수 재배 임가 조경공사 — 일반 사업자등록으로", tbl: DT_136022_9992, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^일반사업의 사업자등록에 의거 공사를 시행한다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_peer, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 다른 재배업자", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^다른 재배업자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_mkt, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 시장에서 조사", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^시장에서 조사$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_mid, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 중간상인", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^중간상인$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_assoc, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 관련 협회·단체", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^관련 협회 또는 단체$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_web, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 온라인(블로그 등)", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^온라인에서\\(웹 블로그 등\\)$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_pub, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 연구기관·수목원·전문서적", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^(정부 또는 지자체 산하 연구기관|수목원 또는 식물원|관련 전문 서적)$"], sum: true, unit: "%", survey: 임업경영실태조사}
+      - {id: oif_none, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 정보를 얻지 못함", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^정보를 얻지 못하고 있음$"], unit: "%", survey: 임업경영실태조사}
+      - {id: oif_news, title: "관상산림식물 재배 임가 사업 정보 획득 경로 — 신문·매스컴", tbl: DT_136022_9995, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^신문 매스컴 등을 통해서$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ybn_yes, title: "영림·목재수확 임가 — 산림경영계획 수립 혜택을 알고 있음", tbl: DT_136022_10127, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^있다$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ycs_road, title: "숲가꾸기(육림) 비용을 줄이는 데 중요한 것 — 임도 개설·정비", tbl: DT_136022_10131, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임도개설 및 정비$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ycs_mech, title: "숲가꾸기(육림) 비용을 줄이는 데 중요한 것 — 임업기계화 확대", tbl: DT_136022_10131, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^임업기계화 확대$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ycs_tech, title: "숲가꾸기(육림) 비용을 줄이는 데 중요한 것 — 숲가꾸기 기술 개발", tbl: DT_136022_10131, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^숲가꾸기\\(육림\\)기술 개발$"], unit: "%", survey: 임업경영실태조사}
+      - {id: ycs_unit, title: "숲가꾸기(육림) 비용을 줄이는 데 중요한 것 — 산림경영 규모 단지화", tbl: DT_136022_10131, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림경영규모의 단지화$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yyr_guide, title: "숲가꾸기(육림) 작업 시기를 정하는 방법 — 지침·매뉴얼 기준", tbl: DT_136022_9958, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^관련지침 및 매뉴얼기준$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yyr_plan, title: "숲가꾸기(육림) 작업 시기를 정하는 방법 — 산림경영계획 기준", tbl: DT_136022_9958, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^산림경영계획기준$"], unit: "%", survey: 임업경영실태조사}
+      - {id: yyr_self, title: "숲가꾸기(육림) 작업 시기를 정하는 방법 — 개인적인 판단", tbl: DT_136022_9958, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^개인적인 판단$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsj_agri, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 농업", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^농업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsj_live, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 축산업", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^축산업$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsj_wage, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 월급 근로자", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^회사원 등 월급근로자$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsj_forest, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 다른 임업 분야", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^다른 임업분야 종사$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jsj_self, title: "기타 산림수실류(잣·대추·호두 등) 겸업 임가의 주 업종 — 자영업 등 기타", tbl: DT_136022_10110, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^자영업 등 기타$"], unit: "%", survey: 임업경영실태조사}
+      - {id: jag_yes, title: "기타유실수 재배 임가 — 나무 수령을 조절함", tbl: DT_136022_10143, org: "136", periods: 3, itm: "^값$", want: ["^전체$", "^예$"], unit: "%", survey: 임업경영실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

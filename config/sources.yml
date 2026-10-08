@@ -13824,6 +13824,42 @@ sources:
       - {id: fqr_brew, title: "발효주 원자재 구입가격 현황지수", tbl: DT_114057_B09, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqr_spir, title: "증류주·합성주 원자재 구입가격 현황지수", tbl: DT_114057_B09, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqr_bev, title: "비알코올 음료 원자재 구입가격 현황지수", tbl: DT_114057_B09, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_meat, title: "육류 가공 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_fv, title: "과실·채소 가공 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_dairy, title: "낙농제품·빙과 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_grain, title: "곡물가공품·전분 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_bake, title: "떡·빵·과자 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_meal, title: "도시락·조리식품 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_brew, title: "발효주 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_spir, title: "증류주·합성주 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqs_bev, title: "비알코올 음료 매출액 현황지수", tbl: DT_114057_B04, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_meat, title: "육류 가공 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_fv, title: "과실·채소 가공 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_dairy, title: "낙농제품·빙과 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_grain, title: "곡물가공품·전분 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_bake, title: "떡·빵·과자 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_meal, title: "도시락·조리식품 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_brew, title: "발효주 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_spir, title: "증류주·합성주 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqp_bev, title: "비알코올 음료 영업이익 현황지수", tbl: DT_114057_B07, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_meat, title: "육류 가공 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_fv, title: "과실·채소 가공 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_dairy, title: "낙농제품·빙과 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_grain, title: "곡물가공품·전분 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_bake, title: "떡·빵·과자 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_meal, title: "도시락·조리식품 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_brew, title: "발효주 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_spir, title: "증류주·합성주 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqf_bev, title: "비알코올 음료 자금사정 현황지수", tbl: DT_114057_B08, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_meat, title: "육류 가공 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^육류 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_fv, title: "과실·채소 가공 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^과실·채소 가공"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_dairy, title: "낙농제품·빙과 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^낙농제품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_grain, title: "곡물가공품·전분 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^곡물가공품"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_bake, title: "떡·빵·과자 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^떡·빵"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_meal, title: "도시락·조리식품 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^도시락"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_brew, title: "발효주 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^발효주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_spir, title: "증류주·합성주 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^증류주"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: fqc_bev, title: "비알코올 음료 제품 출고가격 현황지수", tbl: DT_114057_B10, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^비알코올"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqi_s1, title: "종사자 5명 미만 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^5명 미만$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqi_s2, title: "종사자 5~9명 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^5~9명$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqi_s3, title: "종사자 10~49명 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^10~49명$"], unit: 점, survey: 식품산업경기동향조사}

@@ -14542,6 +14542,40 @@ sources:
       - {id: izd_body, title: "농업 사업장 업무상질병자 — 신체부담작업", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^신체부담작업$"], unit: "명", survey: 산업재해현황}
       - {id: izd_back, title: "농업 사업장 업무상질병자 — 요통", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^요통$"], unit: "명", survey: 산업재해현황}
       - {id: izd_cv, title: "농업 사업장 업무상질병자 — 뇌심혈관질환", tbl: DT_11806_N037, org: "118", periods: 3, itm: "질병종류별", want: ["^농업$", "^뇌심혈관질환$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_all, title: "농업 사업장 재해자 근속기간 — 계", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^계$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_m6, title: "농업 사업장 재해자 근속기간 — 6개월 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^6개월 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y1, title: "농업 사업장 재해자 근속기간 — 6개월~1년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^6개월~1년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y2, title: "농업 사업장 재해자 근속기간 — 1~2년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^1~2년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y3, title: "농업 사업장 재해자 근속기간 — 2~3년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^2~3년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y4, title: "농업 사업장 재해자 근속기간 — 3~4년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^3~4년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y5, title: "농업 사업장 재해자 근속기간 — 4~5년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^4~5년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y10, title: "농업 사업장 재해자 근속기간 — 5~10년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^5~10년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_ag_y10p, title: "농업 사업장 재해자 근속기간 — 10년 이상", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^농업$", "^10년 이상$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_all, title: "임업 사업장 재해자 근속기간 — 계", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^계$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_m6, title: "임업 사업장 재해자 근속기간 — 6개월 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^6개월 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y1, title: "임업 사업장 재해자 근속기간 — 6개월~1년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^6개월~1년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y2, title: "임업 사업장 재해자 근속기간 — 1~2년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^1~2년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y3, title: "임업 사업장 재해자 근속기간 — 2~3년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^2~3년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y4, title: "임업 사업장 재해자 근속기간 — 3~4년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^3~4년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y5, title: "임업 사업장 재해자 근속기간 — 4~5년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^4~5년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y10, title: "임업 사업장 재해자 근속기간 — 5~10년 미만", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^5~10년 미만$"], unit: "명", survey: 산업재해현황}
+      - {id: izc_fo_y10p, title: "임업 사업장 재해자 근속기간 — 10년 이상", tbl: DT_11806_N004, org: "118", periods: 3, itm: "근속기간별", want: ["^임업$", "^10년 이상$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_n, title: "농업 사업장 재해 정도 — 재해자", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^재해자$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_dead, title: "농업 사업장 재해 정도 — 사망자", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^사망자$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_m6, title: "농업 사업장 재해 정도 — 요양 6개월 이상", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^6개월 이상$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_d180, title: "농업 사업장 재해 정도 — 요양 91~180일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^91~180일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_d90, title: "농업 사업장 재해 정도 — 요양 29~90일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^29~90일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_d28, title: "농업 사업장 재해 정도 — 요양 15~28일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^15~28일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_d14, title: "농업 사업장 재해 정도 — 요양 8~14일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^8~14일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_ag_d7, title: "농업 사업장 재해 정도 — 요양 4~7일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^농업$", "^4~7일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_n, title: "임업 사업장 재해 정도 — 재해자", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^재해자$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_dead, title: "임업 사업장 재해 정도 — 사망자", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^사망자$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_m6, title: "임업 사업장 재해 정도 — 요양 6개월 이상", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^6개월 이상$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_d180, title: "임업 사업장 재해 정도 — 요양 91~180일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^91~180일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_d90, title: "임업 사업장 재해 정도 — 요양 29~90일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^29~90일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_d28, title: "임업 사업장 재해 정도 — 요양 15~28일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^15~28일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_d14, title: "임업 사업장 재해 정도 — 요양 8~14일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^8~14일$"], unit: "명", survey: 산업재해현황}
+      - {id: izp_fo_d7, title: "임업 사업장 재해 정도 — 요양 4~7일", tbl: DT_11806_N005, org: "118", periods: 3, itm: "요양기간", want: ["^임업$", "^4~7일$"], unit: "명", survey: 산업재해현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

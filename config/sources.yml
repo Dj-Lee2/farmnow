@@ -14774,6 +14774,29 @@ sources:
       - {id: ks_fgs_seat, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 온돌·좌식 구조 개선", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^온돌/좌식 구조 개선 지원$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_fgs_wc, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 화장실·내부 인테리어 개선", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^화장실 및 내부 인테리어 개선 지원$"], unit: "%", survey: 한식산업 실태조사}
       - {id: ks_fgs_etc, title: "한식 음식점 외국인 고객 유치에 필요한 정부 지원 1순위 기타", tbl: DT_114058_2023_E003, org: "114", periods: 3, itm: "정부 지원 분야\\(1순위\\)$", want: ["^전체$", "^기타$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ceo_m, title: "한식 음식점 대표자 성별 남성", tbl: DT_114058_2023_A001, org: "114", periods: 3, itm: "^남성$", want: ["^전체$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_ceo_f, title: "한식 음식점 대표자 성별 여성", tbl: DT_114058_2023_A001, org: "114", periods: 3, itm: "^여성$", want: ["^전체$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_gen, title: "한식 음식점 세부 업종 한식 일반 음식점업", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^한식 일반 음식점업$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_noodle, title: "한식 음식점 세부 업종 한식 면요리 전문점", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^한식 면요리 전문점$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_meat, title: "한식 음식점 세부 업종 한식 육류요리 전문점", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^한식 육류요리 전문점$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_sea, title: "한식 음식점 세부 업종 한식 해산물요리 전문점", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^한식 해산물요리 전문점$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_bake, title: "한식 음식점 세부 업종 제과점업", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^제과점업$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_chick, title: "한식 음식점 세부 업종 치킨 전문점", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^치킨 전문점$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_kimbap, title: "한식 음식점 세부 업종 김밥·기타 간이음식점업", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^김밥 및 기타 간이음식점업$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_pack, title: "한식 음식점 세부 업종 간이음식 포장판매 전문점", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^간이음식 포장판매 전문점$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_pub, title: "한식 음식점 세부 업종 기타 주점업", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^기타주점업$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_biz_bev, title: "한식 음식점 세부 업종 기타 비알코올 음료점업", tbl: DT_114058_2023_A002, org: "114", periods: 3, itm: "사업장 업종$", want: ["^전체$", "^기타 비알코올 음료점업$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_menu_5, title: "한식 음식점 제공 메뉴 개수 5개 미만", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^5개 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_menu_10, title: "한식 음식점 제공 메뉴 개수 5~10개", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^5-10개 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_menu_15, title: "한식 음식점 제공 메뉴 개수 10~15개", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^10-15개 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_menu_over, title: "한식 음식점 제공 메뉴 개수 15개 이상", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^15개 이상$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_menu_avg, title: "한식 음식점 제공 메뉴 개수 평균", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^평균$"], unit: "개", survey: 한식산업 실태조사}
+      - {id: ks_menu_kr, title: "한식 음식점 제공 메뉴 개수 중 한식 비중", tbl: DT_114058_2023_A003, org: "114", periods: 3, itm: "제공하는 메뉴 개수 및 한식 비중$", want: ["^전체$", "^한식 비중$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_kit_30, title: "한식 음식점 주방 면적 30㎡ 미만", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^30m²? 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_kit_50, title: "한식 음식점 주방 면적 30~50㎡", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^30m²-50m² 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_kit_100, title: "한식 음식점 주방 면적 50~100㎡", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^50m²-100m² 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_kit_300, title: "한식 음식점 주방 면적 100~300㎡", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^100m²-300m² 미만$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_kit_avg, title: "한식 음식점 주방 면적 평균", tbl: DT_114058_2023_A004, org: "114", periods: 3, itm: "사업장 주방 면적$", want: ["^전체$", "^평균$"], unit: "㎡", survey: 한식산업 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -13829,6 +13829,45 @@ sources:
       - {id: fqi_s3, title: "종사자 10~49명 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^10~49명$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqi_s4, title: "종사자 50~299명 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^50~299명$"], unit: 점, survey: 식품산업경기동향조사}
       - {id: fqi_s5, title: "종사자 300명 이상 식품업체 경기 현황지수", tbl: DT_114057_B01, org: "114", se: Q, periods: 12, itm: "^현황지수$", want: ["^300명 이상$"], unit: 점, survey: 식품산업경기동향조사}
+      - {id: yip_va, title: "임가 임업부가가치", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363254$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_lprod, title: "임업노동 1시간당 부가가치(노동생산성)", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632514$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_hinc, title: "임업노동 1시간당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363256$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_hrev, title: "임업노동 1시간당 임업총수입", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^131021363257$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_ainc, title: "임지 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_arev, title: "임지 1ha당 임업총수입", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632511$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_tprod, title: "임지 1ha당 부가가치(토지생산성)", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632515$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_lint, title: "임지 1ha당 임업노동시간(노동집약도)", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632517$", C2: "^13102136325X\\.90$"}, unit: 시간, survey: 임가경제조사}
+      - {id: yip_kint, title: "임지 1ha당 임업자본(자본집약도)", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632518$", C2: "^13102136325X\\.90$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_ktool, title: "임업기구자본비율", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632528$", C2: "^13102136325X\\.90$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_fix, title: "임가 고정비율", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632526$", C2: "^13102136325X\\.90$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_cur, title: "임가 유동비율", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632522$", C2: "^13102136325X\\.90$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_tmb, title: "육림·목재수확업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.(53|94)$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_gat, title: "채취업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.54$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_chs, title: "밤 재배업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.55$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_nut, title: "수실류 재배업(밤·감 제외) 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.56$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_msh, title: "버섯 재배업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.57$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_oth, title: "기타 재배업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.58$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_lsc, title: "조경재업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.59$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_m_prs, title: "감 재배업 임업소득이익률", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632512$", C2: "^13102136325X\\.60$"}, unit: "%", survey: 임가경제조사}
+      - {id: yip_a_s1, title: "임지 1ha 미만 임가 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.61$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_a_s2, title: "임지 1~5ha 임가 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.62$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_a_s3, title: "임지 5~10ha 임가 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.63$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_a_s4, title: "임지 10~20ha 임가 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.64$"}, unit: 천원, survey: 임가경제조사}
+      - {id: yip_a_s5, title: "임지 20ha 이상 임가 1ha당 임업소득", tbl: DT_136023_11486, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213632510$", C2: "^13102136325X\\.65$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_pub, title: "임가 공적보조금", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.50$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_pri, title: "임가 사적보조금", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_for, title: "임가 임업보조금", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.5$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_oth, title: "임가 기타보조금", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.6$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_pen, title: "임가 연금 수입", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_ss, title: "임가 기타사회보장수혜", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.8$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ytr_rel, title: "임가 친인척 보조금", tbl: DT_136023_11471, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213640948$", C2: "^13102136409X\\.11$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_rev, title: "임가 사업외수입", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.57$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_wage, title: "임가 근로수입", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.51$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_ofw, title: "임가 타임업 급료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.6$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_nfw, title: "임가 임업외 급료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.7$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_int, title: "임가 이자·배당", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.9$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_lr, title: "임가 임지 임대료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.11$"}, unit: 천원, survey: 임가경제조사}
+      - {id: ybz_rent, title: "임가 기타 임대료", tbl: DT_136023_11491, org: "136", periods: 3, itm: "^값$", want: ["."], codes: {C1: "^1310213631848$", C2: "^13102136318X\\.12$"}, unit: 천원, survey: 임가경제조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

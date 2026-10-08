@@ -15054,9 +15054,9 @@ sources:
       - {id: hgs_all, title: "건강기능식품 제조업체(매출 규모 계)", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: [], unit: "개", survey: 건강기능식품 생산실적}
       - {id: hgs_v1000, title: "매출 1000억원 이상 업체의 매출액", tbl: DT_145010_002, org: "145", periods: 3, itm: "^매출액$", want: ["^1000억원 이상$"], unit: "천원", survey: 건강기능식품 생산실적}
       - {id: hgs_vall, title: "건강기능식품 제조업체 매출액(계)", tbl: DT_145010_002, org: "145", periods: 3, itm: "^매출액$", want: [], unit: "천원", survey: 건강기능식품 생산실적}
-      - {id: hgi_all, title: "건강기능식품 수입 금액(계)", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: [], unit: "천 달러", survey: 건강기능식품 생산실적}
-      - {id: hgi_ind, title: "수입 — 개별인정형건강기능식품", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^개별인정형건강기능식품$"], unit: "천 달러", survey: 건강기능식품 생산실적}
-      - {id: hgi_epa, title: "수입 — EPA 및 DHA 함유 유지", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^EPA 및 DHA 함유 유지$"], unit: "천 달러", survey: 건강기능식품 생산실적}
+      - {id: hgi_all, title: "건강기능식품 수입 금액(계)", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: [], unit: "천달러", survey: 건강기능식품 생산실적}
+      - {id: hgi_ind, title: "수입 — 개별인정형건강기능식품", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^개별인정형건강기능식품$"], unit: "천달러", survey: 건강기능식품 생산실적}
+      - {id: hgi_epa, title: "수입 — EPA 및 DHA 함유 유지", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^EPA 및 DHA 함유 유지$"], unit: "천달러", survey: 건강기능식품 생산실적}
       - {id: lic_all, title: "주류 제조면허(합계)", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: [], unit: "개", survey: 국세통계}
       - {id: lic_tak, title: "주류 제조면허 — 탁주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^탁주$"], unit: "개", survey: 국세통계}
       - {id: lic_yak, title: "주류 제조면허 — 약주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^약주$"], unit: "개", survey: 국세통계}

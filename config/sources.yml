@@ -15525,6 +15525,33 @@ sources:
       - {id: hgz_jj_ft, title: "시도별 한우 농장 수 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^제주", "^합계$"], unit: 농장, survey: 가축동향조사}
       - {id: hgz_jj_ht, title: "시도별 한우 마릿수(규모별 표) 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_jj_h3, title: "시도별 한우 100두 이상 농장 마릿수 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gg_ft, title: "시도별 돼지 농장 수 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^경기", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_gg_ht, title: "시도별 돼지 마릿수(규모별 표) 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gg_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gw_ft, title: "시도별 돼지 농장 수 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^강원", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_gw_ht, title: "시도별 돼지 마릿수(규모별 표) 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gw_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cb_ft, title: "시도별 돼지 농장 수 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청북도|충북)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_cb_ht, title: "시도별 돼지 마릿수(규모별 표) 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cn_ft, title: "시도별 돼지 농장 수 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청남도|충남)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_cn_ht, title: "시도별 돼지 마릿수(규모별 표) 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jb_ft, title: "시도별 돼지 농장 수 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(전북|전라북도)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_jb_ht, title: "시도별 돼지 마릿수(규모별 표) 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jn_ft, title: "시도별 돼지 농장 수 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(전라남도|전남)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_jn_ht, title: "시도별 돼지 마릿수(규모별 표) 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gb_ft, title: "시도별 돼지 농장 수 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상북도|경북)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_gb_ht, title: "시도별 돼지 마릿수(규모별 표) 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gn_ft, title: "시도별 돼지 농장 수 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상남도|경남)", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_gn_ht, title: "시도별 돼지 마릿수(규모별 표) 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jj_ft, title: "시도별 돼지 농장 수 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^제주", "^합계$"], unit: 농장, survey: 가축동향조사}
+      - {id: pgz_jj_ht, title: "시도별 돼지 마릿수(규모별 표) 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jj_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

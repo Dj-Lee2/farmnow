@@ -14993,6 +14993,46 @@ sources:
       - {id: fgr_liquor, title: "품목군별 국내 판매액 — 주류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^주류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: fgr_sugar, title: "품목군별 국내 판매액 — 당류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^당류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: fgr_jam, title: "품목군별 국내 판매액 — 잼류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^잼류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: tsj_amt, title: "지역특산주 출고 금액(합계)", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^합계$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_qty, title: "지역특산주 출고량(합계)", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고량$", want: ["^합계$"], unit: ㎘, survey: 국세통계}
+      - {id: tsj_tak, title: "지역특산주 출고 금액 — 탁주", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^탁주$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_yak, title: "지역특산주 출고 금액 — 약주", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^약주$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_fruit, title: "지역특산주 출고 금액 — 과실주", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^과실주$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_so, title: "지역특산주 출고 금액 — 증류식소주", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^증류식소주$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rgg, title: "지역특산주 출고 금액 — 경기", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^경기$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rgw, title: "지역특산주 출고 금액 — 강원", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^강원$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rcn, title: "지역특산주 출고 금액 — 충남", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^충남$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rjb, title: "지역특산주 출고 금액 — 전북", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^전북$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rjn, title: "지역특산주 출고 금액 — 전남", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^전남$"], unit: 백만원, survey: 국세통계}
+      - {id: tsj_rgb, title: "지역특산주 출고 금액 — 경북", tbl: TX_13301_A197, org: "133", periods: 3, itm: "^출고금액$", want: ["^경북$"], unit: 백만원, survey: 국세통계}
+      - {id: msj_amt, title: "민속주 출고 금액(합계)", tbl: TX_13301_A196, org: "133", periods: 3, itm: "^출고금액$", want: ["^합계$"], unit: 백만원, survey: 국세통계}
+      - {id: msj_qty, title: "민속주 출고량(합계)", tbl: TX_13301_A196, org: "133", periods: 3, itm: "^출고량$", want: ["^합계$"], unit: ㎘, survey: 국세통계}
+      - {id: msj_tak, title: "민속주 출고 금액 — 탁주", tbl: TX_13301_A196, org: "133", periods: 3, itm: "^출고금액$", want: ["^탁주$"], unit: 백만원, survey: 국세통계}
+      - {id: msj_yak, title: "민속주 출고 금액 — 약주", tbl: TX_13301_A196, org: "133", periods: 3, itm: "^출고금액$", want: ["^약주$"], unit: 백만원, survey: 국세통계}
+      - {id: msj_so, title: "민속주 출고 금액 — 증류식소주", tbl: TX_13301_A196, org: "133", periods: 3, itm: "^출고금액$", want: ["^증류식소주$"], unit: 백만원, survey: 국세통계}
+      - {id: ssj_amt, title: "소규모주류 출고 금액(합계)", tbl: DT_13301_A1023, org: "133", periods: 3, itm: "^출고금액$", want: ["^합계$"], unit: 백만원, survey: 국세통계}
+      - {id: ssj_qty, title: "소규모주류 출고량(합계)", tbl: DT_13301_A1023, org: "133", periods: 3, itm: "^출고량$", want: ["^합계$"], unit: ㎘, survey: 국세통계}
+      - {id: ssj_beer, title: "소규모주류 출고 금액 — 맥주", tbl: DT_13301_A1023, org: "133", periods: 3, itm: "^출고금액$", want: ["^맥주$"], unit: 백만원, survey: 국세통계}
+      - {id: ssj_tak, title: "소규모주류 출고 금액 — 탁주", tbl: DT_13301_A1023, org: "133", periods: 3, itm: "^출고금액$", want: ["^탁주$"], unit: 백만원, survey: 국세통계}
+      - {id: apk_all, title: "농산가공식품류 국내 판매액(계)", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_starch, title: "농산가공식품류 — 전분·전분가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^전분"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_flour, title: "농산가공식품류 — 밀가루", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["밀가루$"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_nut, title: "농산가공식품류 — 땅콩·견과류 가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^땅콩"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_cereal, title: "농산가공식품류 — 시리얼류", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^시리얼류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_enzyme, title: "농산가공식품류 — 효소식품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^효소식품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_fv, title: "농산가공식품류 — 과·채가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과·채가공품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_grain, title: "농산가공식품류 — 곡류가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^곡류가공품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_bean, title: "농산가공식품류 — 두류가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^두류가공품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: apk_tuber, title: "농산가공식품류 — 서류가공품", tbl: DT_145003_A019, org: "145", periods: 3, itm: "^국내판매액$", want: ["^서류가공품$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_sesame, title: "식용유지류 — 참기름(추출·압착·초임계 합)", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^참기름"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_perilla, title: "식용유지류 — 들기름(추출·압착·초임계 합)", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^들기름"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_soy, title: "식용유지류 — 콩기름(대두유)", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^콩기름"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_corn, title: "식용유지류 — 옥수수기름(옥배유)", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^옥수수기름"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_canola, title: "식용유지류 — 채종유(카놀라유)", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^채종유"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: eoil_olive, title: "식용유지류 — 올리브유", tbl: TX_14503_A055, org: "145", periods: 3, itm: "^국내판매액$", want: ["^올리브유$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: tofu_tofu, title: "두부류·묵류 — 두부", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^두부$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: tofu_proc, title: "두부류·묵류 — 가공두부", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^가공두부$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: tofu_muk, title: "두부류·묵류 — 묵류", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^묵류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

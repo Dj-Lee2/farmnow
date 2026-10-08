@@ -14061,6 +14061,39 @@ sources:
       - {id: fsf_pre_nf, title: "외식업 비프랜차이즈 구매형태 전처리", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^전처리$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fsf_proc_fc, title: "외식업 프랜차이즈 구매형태 가공", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^가공$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
       - {id: fsf_proc_nf, title: "외식업 비프랜차이즈 구매형태 가공", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^가공$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: sbw_n, title: "방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area, title: "방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_tide, title: "방조제 포용조수량", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^포용조수량$"], codes: {C2: "^A0103$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: sbw_dam, title: "방조제 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^조$"], codes: {C2: "^A010401$"}, unit: 조, survey: 농업생산기반시설 현황}
+      - {id: sbw_len, title: "방조제 길이", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^연장$"], codes: {C2: "^A010402$"}, unit: km, survey: 농업생산기반시설 현황}
+      - {id: sbw_gate, title: "방조제 배수갑문 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^시설수$"], codes: {C2: "^A010501$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_ren, title: "방조제 배수갑문 문(련) 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^련수$"], codes: {C2: "^A010502$"}, unit: 련, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_kr, title: "방조제 지구 수 · 농어촌공사 관할", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^지구수$", "^공사관할$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_kr, title: "방조제 지구 면적 · 농어촌공사 관할", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^면적$", "^공사관할$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_len_kr, title: "방조제 길이 · 농어촌공사 관할", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^연장$", "^공사관할$"], codes: {C2: "^A010402$"}, unit: km, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_nat, title: "방조제 지구 수 · 국가", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^지구수$"], codes: {C2: "^A0201$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_nat, title: "방조제 지구 면적 · 국가", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^면적$"], codes: {C2: "^A0202$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_len_nat, title: "방조제 길이 · 국가", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^연장$"], codes: {C2: "^A020402$"}, unit: km, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_loc, title: "방조제 지구 수 · 지방", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^지구수$"], codes: {C2: "^A0301$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_loc, title: "방조제 지구 면적 · 지방", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^면적$"], codes: {C2: "^A0302$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_len_loc, title: "방조제 길이 · 지방", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^연장$"], codes: {C2: "^A030402$"}, unit: km, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_etc, title: "방조제 지구 수 · 관리대행자 미지정", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^지구수$"], codes: {C2: "^A0401$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_etc, title: "방조제 지구 면적 · 관리대행자 미지정", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^면적$"], codes: {C2: "^A0402$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_len_etc, title: "방조제 길이 · 관리대행자 미지정", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^연장$"], codes: {C2: "^A040402$"}, unit: km, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_bs, title: "부산 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^부산광역시$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_ic, title: "인천 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^인천광역시$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_gg, title: "경기 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^경기도$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_cn, title: "충남 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^(충청남도|충남)$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_jb, title: "전북 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^(전라북도|전북특별자치도)$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_jn, title: "전남 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^전라남도$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_gn, title: "경남 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^경상남도$", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_n_jj, title: "제주 방조제 지구 수", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^제주", "^지구수$"], codes: {C2: "^A0101$"}, unit: 곳, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_ic, title: "인천 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^인천광역시$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_gg, title: "경기 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^경기도$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_cn, title: "충남 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^(충청남도|충남)$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_jb, title: "전북 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^(전라북도|전북특별자치도)$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_jn, title: "전남 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^전라남도$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
+      - {id: sbw_area_gn, title: "경남 방조제 지구 면적", tbl: DT_311001_016, org: "311", periods: 3, itm: "^방조제 현황$", want: ["^경상남도$", "^면적$"], codes: {C2: "^A0102$"}, unit: 천ha, survey: 농업생산기반시설 현황}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

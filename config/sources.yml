@@ -14965,6 +14965,34 @@ sources:
       - {id: bkr_yg, title: "양갱 국내 판매액", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^캔디류\\(양갱\\)$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: bkr_bread, title: "빵류 국내 판매액(합계)", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^빵류"], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: bkr_snack, title: "과자 국내 판매액(한과 포함 합계)", tbl: DT_145003_A015, org: "145", periods: 3, itm: "^국내판매액$", want: ["^과자\\("], sum: true, unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: ks_vq_hi, title: "한식 음식점 채소류 구입 주기 — 주 5회 이상(매일 포함)", tbl: DT_114058_2023_D009, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^(매일|주 5-6회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_vq_mid, title: "한식 음식점 채소류 구입 주기 — 주 1~4회", tbl: DT_114058_2023_D009, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^주 (3-4|1-2)회$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_vq_lo, title: "한식 음식점 채소류 구입 주기 — 월 1~3회", tbl: DT_114058_2023_D009, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^월 (2-3회|1회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jq_hi, title: "한식 음식점 장류 구입 주기 — 주 5회 이상(매일 포함)", tbl: DT_114058_2023_D012, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^(매일|주 5-6회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jq_mid, title: "한식 음식점 장류 구입 주기 — 주 1~4회", tbl: DT_114058_2023_D012, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^주 (3-4|1-2)회$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_jq_lo, title: "한식 음식점 장류 구입 주기 — 월 1~3회", tbl: DT_114058_2023_D012, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^월 (2-3회|1회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_gq_hi, title: "한식 음식점 곡류 구입 주기 — 주 5회 이상(매일 포함)", tbl: DT_114058_2023_D015, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^(매일|주 5-6회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_gq_mid, title: "한식 음식점 곡류 구입 주기 — 주 1~4회", tbl: DT_114058_2023_D015, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^주 (3-4|1-2)회$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_gq_lo, title: "한식 음식점 곡류 구입 주기 — 월 1~3회", tbl: DT_114058_2023_D015, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^월 (2-3회|1회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pq_hi, title: "한식 음식점 가공식품류 구입 주기 — 주 5회 이상(매일 포함)", tbl: DT_114058_2023_D018, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^(매일|주 5-6회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pq_mid, title: "한식 음식점 가공식품류 구입 주기 — 주 1~4회", tbl: DT_114058_2023_D018, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^주 (3-4|1-2)회$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pq_lo, title: "한식 음식점 가공식품류 구입 주기 — 월 1~3회", tbl: DT_114058_2023_D018, org: "114", periods: 3, itm: "구입하는 주기$", want: ["^전체$", "^월 (2-3회|1회)$"], sum: true, unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_whl, title: "한식 음식점 가공식품류 구입처 — 도매상", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^도매상$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_nsm, title: "한식 음식점 가공식품류 구입처 — 농수산물 시장", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^농수산물 시장$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_mkt, title: "한식 음식점 가공식품류 구입처 — 식자재 마트", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^식자재 마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_big, title: "한식 음식점 가공식품류 구입처 — 일반 대형마트", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^일반 대형마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_farm, title: "한식 음식점 가공식품류 구입처 — 산지 직거래", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^산지 직거래$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: ks_pb_web, title: "한식 음식점 가공식품류 구입처 — 온라인 마트", tbl: DT_114058_2023_D017, org: "114", periods: 3, itm: "구입하는 곳$", want: ["^전체$", "^온라인 마트$"], unit: "%", survey: 한식산업 실태조사}
+      - {id: fgr_all, title: "품목군별 국내 판매액 — 식품 전체(계)", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^계$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_agp, title: "품목군별 국내 판매액 — 농산가공식품류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^농산가공식품류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_tofu, title: "품목군별 국내 판매액 — 두부류·묵류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^두부류 또는 묵류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_oil, title: "품목군별 국내 판매액 — 식용유지류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식용유지류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_noodle, title: "품목군별 국내 판매액 — 면류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^면류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_instant, title: "품목군별 국내 판매액 — 즉석식품류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^즉석식품류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_honey, title: "품목군별 국내 판매액 — 벌꿀·화분가공품류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^벌꿀 및 화분가공품류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_liquor, title: "품목군별 국내 판매액 — 주류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^주류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_sugar, title: "품목군별 국내 판매액 — 당류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^당류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: fgr_jam, title: "품목군별 국내 판매액 — 잼류", tbl: TX_14503_A048, org: "145", periods: 3, itm: "^국내판매액$", want: ["^잼류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

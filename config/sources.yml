@@ -14023,6 +14023,44 @@ sources:
       - {id: dmh_cap_gb, title: "경북 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^경상북도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
       - {id: dmh_cap_gn, title: "경남 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^경상남도$", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
       - {id: dmh_cap_jj, title: "제주 농업용 저수지 총저수량", tbl: DT_311001_010, org: "311", periods: 3, itm: "^저수량$", want: ["^제주", "^총 저수량$"], codes: {C3: "^B01$"}, unit: 천㎥, survey: 농업생산기반시설 현황}
+      - {id: fsf_qty_fc, title: "외식업 프랜차이즈 월평균 구매량", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^월평균 구매량$", "^프랜차이즈$"], unit: kg, survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_qty_nf, title: "외식업 비프랜차이즈 월평균 구매량", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^월평균 구매량$", "^비프랜차이즈$"], unit: kg, survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_amt_fc, title: "외식업 프랜차이즈 월평균 구매금액", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^월평균 구매금액$", "^프랜차이즈$"], unit: 만원, survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_amt_nf, title: "외식업 비프랜차이즈 월평균 구매금액", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^월평균 구매금액$", "^비프랜차이즈$"], unit: 만원, survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_big_fc, title: "외식업 프랜차이즈 구매경로 식재료 유통 대기업", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^식재료 유통 대기업$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_big_nf, title: "외식업 비프랜차이즈 구매경로 식재료 유통 대기업", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^식재료 유통 대기업$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_corp_fc, title: "외식업 프랜차이즈 구매경로 식재료 유통법인(대기업 외)", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^대기업이 아닌 식재료 유통법인$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_corp_nf, title: "외식업 비프랜차이즈 구매경로 식재료 유통법인(대기업 외)", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^대기업이 아닌 식재료 유통법인$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_whs_fc, title: "외식업 프랜차이즈 구매경로 개인 도매상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^개인 도매상$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_whs_nf, title: "외식업 비프랜차이즈 구매경로 개인 도매상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^개인 도매상$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_mart_fc, title: "외식업 프랜차이즈 구매경로 식자재 마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^식자재 마트$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_mart_nf, title: "외식업 비프랜차이즈 구매경로 식자재 마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^식자재 마트$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_hyp_fc, title: "외식업 프랜차이즈 구매경로 일반 대형마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^일반 대형마트$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_hyp_nf, title: "외식업 비프랜차이즈 구매경로 일반 대형마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^일반 대형마트$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_wmk_fc, title: "외식업 프랜차이즈 구매경로 농수산물 도매시장", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^농수산물 도매시장$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_wmk_nf, title: "외식업 비프랜차이즈 구매경로 농수산물 도매시장", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^농수산물 도매시장$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_local_fc, title: "외식업 프랜차이즈 구매경로 산지직거래·로컬푸드매장", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^산지직거래 및 로컬푸드매장$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_local_nf, title: "외식업 비프랜차이즈 구매경로 산지직거래·로컬푸드매장", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^산지직거래 및 로컬푸드매장$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_hq_fc, title: "외식업 프랜차이즈 구매경로 프랜차이즈 본사 공급", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^프랜차이즈 본사 공급$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_hq_nf, title: "외식업 비프랜차이즈 구매경로 프랜차이즈 본사 공급", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^프랜차이즈 본사 공급$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_onl_fc, title: "외식업 프랜차이즈 구매경로 온라인마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^온라인마트$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_onl_nf, title: "외식업 비프랜차이즈 구매경로 온라인마트", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^온라인마트$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_ret_fc, title: "외식업 프랜차이즈 구매경로 소매상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^소매상$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_ret_nf, title: "외식업 비프랜차이즈 구매경로 소매상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^소매상$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_self_fc, title: "외식업 프랜차이즈 구매경로 직접 생산", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^직접 생산$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_self_nf, title: "외식업 비프랜차이즈 구매경로 직접 생산", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^직접 생산$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_imp_fc, title: "외식업 프랜차이즈 구매경로 수입상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^수입상$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_imp_nf, title: "외식업 비프랜차이즈 구매경로 수입상", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^수입상$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_etc_fc, title: "외식업 프랜차이즈 구매경로 기타", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^기타$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_etc_nf, title: "외식업 비프랜차이즈 구매경로 기타", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^기타$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_day_fc, title: "외식업 프랜차이즈 주재료 매일 구매", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^매일$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_day_nf, title: "외식업 비프랜차이즈 주재료 매일 구매", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^매일$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_raw_fc, title: "외식업 프랜차이즈 구매형태 원물", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^원물$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_raw_nf, title: "외식업 비프랜차이즈 구매형태 원물", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^원물$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_pre_fc, title: "외식업 프랜차이즈 구매형태 전처리", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^전처리$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_pre_nf, title: "외식업 비프랜차이즈 구매형태 전처리", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^전처리$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_proc_fc, title: "외식업 프랜차이즈 구매형태 가공", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^가공$", "^프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
+      - {id: fsf_proc_nf, title: "외식업 비프랜차이즈 구매형태 가공", tbl: DT_114054_123, org: "114", se: F, periods: 3, itm: "^운영형태별식재료 구매 행태$", want: ["^가공$", "^비프랜차이즈$"], unit: "%", survey: 외식업체 식재료 구매 실태조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

@@ -15033,6 +15033,46 @@ sources:
       - {id: tofu_tofu, title: "두부류·묵류 — 두부", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^두부$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: tofu_proc, title: "두부류·묵류 — 가공두부", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^가공두부$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
       - {id: tofu_muk, title: "두부류·묵류 — 묵류", tbl: TX_14503_A054, org: "145", periods: 3, itm: "^국내판매액$", want: ["^묵류$"], unit: 천원, survey: 식품 및 식품첨가물 생산실적}
+      - {id: hgp_prodv, title: "건강기능식품 생산액", tbl: DT_145010_008, org: "145", periods: 3, itm: "^생산·출하현황$", want: ["^생산액$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hgp_shipv, title: "건강기능식품 출하액", tbl: DT_145010_008, org: "145", periods: 3, itm: "^생산·출하현황$", want: ["^출하액$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hgp_expv, title: "건강기능식품 수출액", tbl: DT_145010_008, org: "145", periods: 3, itm: "^생산·출하현황$", want: ["^수출액$"], unit: "달러", survey: 건강기능식품 생산실적}
+      - {id: hgp_prodq, title: "건강기능식품 생산량", tbl: DT_145010_008, org: "145", periods: 3, itm: "^생산·출하현황$", want: ["^생산량$"], unit: "톤", survey: 건강기능식품 생산실적}
+      - {id: hgp_expq, title: "건강기능식품 수출량", tbl: DT_145010_008, org: "145", periods: 3, itm: "^생산·출하현황$", want: ["^수출량$"], unit: "톤", survey: 건강기능식품 생산실적}
+      - {id: hgb_all, title: "건강기능식품 관련 업체(계)", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: [], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_mfg, title: "건강기능식품 제조업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^건강기능식품 제조업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_smfg, title: "건강기능식품 전문제조업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^전문제조업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_vmfg, title: "건강기능식품 벤처제조업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^벤처제조업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_sale, title: "건강기능식품 판매업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^건강기능식품 판매업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_gen, title: "건강기능식품 일반판매업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^일반판매업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_dist, title: "건강기능식품 유통전문판매업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^유통전문판매업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgb_cust, title: "맞춤형건강기능식품판매업", tbl: DT_145010_001, org: "145", periods: 3, itm: "^관련업체 현황$", want: ["^맞춤형건강기능식품판매업$"], unit: "개소", survey: 건강기능식품 생산실적}
+      - {id: hgs_lt10, title: "매출 10억원 미만 업체", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: ["^10억원 미만$"], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_10, title: "매출 10~50억원 업체", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: ["^10~50억원 미만$"], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_50, title: "매출 50~100억원 업체", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: ["^50~100억원 미만$"], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_100, title: "매출 100~300억원 업체", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: ["^100~300억원 미만$"], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_300, title: "매출 300억원 이상 업체", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: ["^(300~500억원 미만|500~1000억원 미만|1000억원 이상)$"], sum: true, unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_all, title: "건강기능식품 제조업체(매출 규모 계)", tbl: DT_145010_002, org: "145", periods: 3, itm: "^업체수$", want: [], unit: "개", survey: 건강기능식품 생산실적}
+      - {id: hgs_v1000, title: "매출 1000억원 이상 업체의 매출액", tbl: DT_145010_002, org: "145", periods: 3, itm: "^매출액$", want: ["^1000억원 이상$"], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hgs_vall, title: "건강기능식품 제조업체 매출액(계)", tbl: DT_145010_002, org: "145", periods: 3, itm: "^매출액$", want: [], unit: "천원", survey: 건강기능식품 생산실적}
+      - {id: hgi_all, title: "건강기능식품 수입 금액(계)", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: [], unit: "천 달러", survey: 건강기능식품 생산실적}
+      - {id: hgi_ind, title: "수입 — 개별인정형건강기능식품", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^개별인정형건강기능식품$"], unit: "천 달러", survey: 건강기능식품 생산실적}
+      - {id: hgi_epa, title: "수입 — EPA 및 DHA 함유 유지", tbl: DT_145010_012, org: "145", periods: 3, itm: "^금액$", want: ["^EPA 및 DHA 함유 유지$"], unit: "천 달러", survey: 건강기능식품 생산실적}
+      - {id: lic_all, title: "주류 제조면허(합계)", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: [], unit: "개", survey: 국세통계}
+      - {id: lic_tak, title: "주류 제조면허 — 탁주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^탁주$"], unit: "개", survey: 국세통계}
+      - {id: lic_yak, title: "주류 제조면허 — 약주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^약주$"], unit: "개", survey: 국세통계}
+      - {id: lic_fruit, title: "주류 제조면허 — 과실주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^과실주$"], unit: "개", survey: 국세통계}
+      - {id: lic_beer, title: "주류 제조면허 — 맥주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^맥주$"], unit: "개", survey: 국세통계}
+      - {id: lic_dso, title: "주류 제조면허 — 증류식소주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^증류식소주$"], unit: "개", survey: 국세통계}
+      - {id: lic_gen, title: "주류 제조면허 — 일반증류주", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^일반증류주$"], unit: "개", survey: 국세통계}
+      - {id: lic_liq, title: "주류 제조면허 — 리큐르", tbl: TX_13301_A201, org: "133", periods: 3, itm: "^주류별·지역별 제조면허 현황$", want: ["^리큐르$"], unit: "개", survey: 국세통계}
+      - {id: tsl_folk, title: "민속주 제조면허", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^민속주$"], unit: "개", survey: 국세통계}
+      - {id: tsl_reg, title: "지역특산주 제조면허", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^지역특산주$"], unit: "개", survey: 국세통계}
+      - {id: tsl_rtak, title: "지역특산주 제조면허 — 탁주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^탁주$"], codes: {C2: "^A008$"}, unit: "개", survey: 국세통계}
+      - {id: tsl_ryak, title: "지역특산주 제조면허 — 약주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^약주$"], codes: {C2: "^A009$"}, unit: "개", survey: 국세통계}
+      - {id: tsl_rfruit, title: "지역특산주 제조면허 — 과실주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^과실주$"], codes: {C2: "^A011$"}, unit: "개", survey: 국세통계}
+      - {id: tsl_rdso, title: "지역특산주 제조면허 — 증류식소주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^증류식소주$"], codes: {C2: "^A012$"}, unit: "개", survey: 국세통계}
+      - {id: tsl_rgen, title: "지역특산주 제조면허 — 일반증류주", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^일반증류주$"], codes: {C2: "^A014$"}, unit: "개", survey: 국세통계}
+      - {id: tsl_rliq, title: "지역특산주 제조면허 — 리큐르", tbl: TX_13301_A202, org: "133", periods: 3, itm: "^민속주지역특산주 제조면허 종류별·지역별 현황$", want: ["^리큐르$"], codes: {C2: "^A015$"}, unit: "개", survey: 국세통계}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

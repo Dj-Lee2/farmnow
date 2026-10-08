@@ -15278,6 +15278,38 @@ sources:
       - {id: hfw_gb, title: "건강기능식품 제조업체 종업원 — 경북", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^경상북도$"], unit: "명", survey: 건강기능식품 생산실적}
       - {id: hfw_gn, title: "건강기능식품 제조업체 종업원 — 경남", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^경상남도$"], unit: "명", survey: 건강기능식품 생산실적}
       - {id: hfw_jj, title: "건강기능식품 제조업체 종업원 — 제주", tbl: DT_145010_007, org: "145", periods: 3, itm: "^종업원수$", want: ["^제주(특별자치)?도$"], unit: "명", survey: 건강기능식품 생산실적}
+      - {id: fes_all, title: "식품 제조업 종업원 규모별 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s5, title: "식품 제조업 종업원 규모별 매출액 — 1~5인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^1-5인$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s10, title: "식품 제조업 종업원 규모별 매출액 — 6~10인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^6-10인$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s20, title: "식품 제조업 종업원 규모별 매출액 — 11~20인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^11-20인$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s50, title: "식품 제조업 종업원 규모별 매출액 — 21~50인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^(21-30인|31-50인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s100, title: "식품 제조업 종업원 규모별 매출액 — 51~100인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^(51-80인|81-100인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_s300, title: "식품 제조업 종업원 규모별 매출액 — 101~300인", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^(101-150인|151-200인|201-300인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_big, title: "식품 제조업 종업원 규모별 매출액 — 301인 이상", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^합계$", "^(301-500인|501-1000인|1001인 이상)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_agp_all, title: "농산가공식품류 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^농산가공식품류$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_agp_sm, title: "농산가공식품류 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^농산가공식품류$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_bake_all, title: "과자류·빵류·떡류 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^과자류 빵류 또는 떡류$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_bake_sm, title: "과자류·빵류·떡류 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^과자류 빵류 또는 떡류$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_inst_all, title: "즉석식품류 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^즉석식품류$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_inst_sm, title: "즉석식품류 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^즉석식품류$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_bev_all, title: "음료류 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^음료류$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_bev_sm, title: "음료류 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^음료류$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_seas_all, title: "조미식품 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^조미식품$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_seas_sm, title: "조미식품 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^조미식품$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_fish_all, title: "수산가공식품류 매출액 — 계", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^수산가공식품류$", "^계$"], unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fes_fish_sm, title: "수산가공식품류 매출액 — 종업원 1~10인 업체", tbl: TX_14503_A015, org: "145", periods: 3, itm: "^품목별/종업원 규모별 매출액 현황$", want: ["^수산가공식품류$", "^(1-5인|6-10인)$"], sum: true, unit: "억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_food_n, title: "식품 생산실적 — 업체수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^업체수$", want: ["^식품$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_food_item, title: "식품 생산실적 — 품목수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^품목수$", want: ["^식품$"], unit: "개", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_food_dom, title: "식품 생산실적 — 국내판매액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식품$"], unit: "십억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_food_exp, title: "식품 생산실적 — 수출액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^수출액$", want: ["^식품$"], unit: "백만달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_add_n, title: "식품첨가물 생산실적 — 업체수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^업체수$", want: ["^식품첨가물$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_add_item, title: "식품첨가물 생산실적 — 품목수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^품목수$", want: ["^식품첨가물$"], unit: "개", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_add_dom, title: "식품첨가물 생산실적 — 국내판매액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^국내판매액$", want: ["^식품첨가물$"], unit: "십억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_add_exp, title: "식품첨가물 생산실적 — 수출액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^수출액$", want: ["^식품첨가물$"], unit: "백만달러", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_pkg_n, title: "기구·용기·포장지 생산실적 — 업체수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^업체수$", want: ["^기구·용기·포장지$"], unit: "개소", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_pkg_item, title: "기구·용기·포장지 생산실적 — 품목수", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^품목수$", want: ["^기구·용기·포장지$"], unit: "개", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_pkg_dom, title: "기구·용기·포장지 생산실적 — 국내판매액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^국내판매액$", want: ["^기구·용기·포장지$"], unit: "십억원", survey: 식품 및 식품첨가물 생산실적}
+      - {id: fai_pkg_exp, title: "기구·용기·포장지 생산실적 — 수출액", tbl: TX_14503_A009, org: "145", periods: 3, itm: "^수출액$", want: ["^기구·용기·포장지$"], unit: "백만달러", survey: 식품 및 식품첨가물 생산실적}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

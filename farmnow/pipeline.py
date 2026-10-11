@@ -10,7 +10,7 @@ from pathlib import Path
 
 import yaml
 
-from .collectors import kamis, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
+from .collectors import kamis, kamis_season, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
 from .model import NewsItem, gate
 from .rules import tag
 from .util import now_kst
@@ -75,6 +75,11 @@ def run(build: bool = True) -> int:
                 got = mafra_rss.collect(src, store, keep_days)
             elif src["adapter"] == "kamis":
                 got, tickers = kamis.collect(src, cfg["site"]["surge_threshold_pct"])
+                if src.get("season_items"):
+                    try:  # 평년 범위는 덧붙이는 정보 — 실패해도 시세는 그대로 낸다
+                        kamis_season.attach(tickers, kamis_season.refresh(src["season_items"], DATA, src, now))
+                    except Exception as e:
+                        print(f"[warn] kamis_season: {type(e).__name__}: {e}"[:160], file=sys.stderr)
             elif src["adapter"] == "nongsaro_list":
                 got = nongsaro_list.collect(src)
             elif src["adapter"] == "naver_market":

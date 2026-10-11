@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block rows %}{{ tickers.all|tojson }}{% endblock %}
+{% block rows %}{{ tickers.all|lite|tojson }}{% endblock %}
 {% macro kcard(title, href, price, unit, pct, sub, basis, vals, uid, labels=none, tunit='') %}{% set col = '#d23a32' if pct > 0 else '#2458d6' if pct < 0 else '#8a90a0' %}<section class="kp4"><div class="t">{{ title }}{{ go(href, title ~ ' 자세히') }}</div>
    <div class="v">{{ price }}<small>{{ unit }}</small> <em class="{{ 'up' if pct>0 else 'down' if pct<0 else '' }}">{{ pct|pct }}</em></div>
    <div class="s"><span>{{ sub }}</span><span>{{ basis }}</span></div>{{ vals|mini(uid, col, labels, tunit) }}</section>{% endmacro %}
@@ -44,7 +44,7 @@
    <div class="ptab"><button class="on" type="button" onclick="setP('all',this)">전체</button><button type="button" onclick="setP('retail',this)">소매</button><button type="button" onclick="setP('whole',this)">도매</button></div>
    <table class="mvt">
    {% for key,rows in (('all',tickers.top10),('retail',tickers.top10_retail),('whole',tickers.top10_whole)) %}{% set am = [rows|map(attribute='pct')|map('abs')|max if rows else 1, tickers.threshold or 10]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}<tbody data-ptab="{{ key }}"{% if key != 'all' %} hidden{% endif %}>
-   {% for r in rows[:8] %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm"><b>{{ r.disp }}</b> <small>{{ r.cls }} · {{ r.price|won }}원/{{ r.unit }}</small></td><td class="hb">{{ dv(r.pct, mx, tickers.threshold) }}</td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
+   {% for r in rows[:8]|sort(attribute='pct', reverse=true) %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm"><b>{{ r.disp }}</b> <small>{{ r.cls }} · {{ r.price|won }}원/{{ r.unit }}</small></td><td class="hb">{{ dv(r.pct, mx, tickers.threshold) }}</td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
    <tr class="ax"><td></td><td class="hb">{{ dax(mx) }}</td><td></td></tr>
    </tbody>{% endfor %}</table>
    <p class="lg"><i class="lg-th"></i>급변 기준 ±{{ tickers.threshold|int }}%</p>

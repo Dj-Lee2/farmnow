@@ -144,7 +144,7 @@ def cat_tab(it: NewsItem) -> str:
 
 def make_env() -> Environment:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html", "xml"]))
-    env.filters.update(big=f_big, prd=f_prd, mini=f_mini, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp, ratio=f_ratio)
+    env.filters.update(big=f_big, prd=f_prd, mini=f_mini, line=f_line, lite=f_lite, sparkc=f_sparkc, px=f_px, chg=f_chg, spark=f_spark, num=f_num, eok=f_eok, pct=f_pct, won=f_won, man=f_man, ftime=f_time, fdt=f_dt, tab=cat_tab, hp=f_hp, ratio=f_ratio)
     env.policies["json.dumps_kwargs"] = {"ensure_ascii": False, "separators": (",", ":")}
     return env
 
@@ -201,6 +201,39 @@ def f_mini(vals, uid: str, col: str, labels=None, unit: str = "", w: int = 240, 
     if neg:
         out.append(f'<line x1="0" x2="{w}" y1="{zy:.1f}" y2="{zy:.1f}" stroke="#999" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>')
     return Markup("".join(out) + "</svg>")
+
+
+def f_line(vals, uid: str, col: str, labels=None, unit: str = "", w: int = 240, h: int = 64) -> str:
+    """통계 카드용 추이선(스파크라인): 옅은 면 + 선 + 마지막 점. 칸마다 보이지 않는 막대(rect.b)를 깔아 값 말풍선을 띄운다."""
+    pairs = [(x, (labels or [None] * len(vals))[i]) for i, x in enumerate(vals or []) if x is not None]
+    v = [x for x, _ in pairs]
+    if len(v) < 2:
+        return ""
+    lo, hi = min(v), max(v)
+    span = (hi - lo) or (abs(hi) * 0.1) or 1
+    lo, hi = lo - span * 0.12, hi + span * 0.12
+    n = len(v)
+    X = lambda i: 4 + i * (w - 8) / (n - 1)
+    Y = lambda x: 4 + (hi - x) * (h - 8) / (hi - lo)
+    pts = " ".join(f"{X(i):.1f},{Y(x):.1f}" for i, x in enumerate(v))
+    out = [f'<svg class="msv sline" viewBox="0 0 {w} {h}" preserveAspectRatio="none" aria-hidden="true">']
+    if lo < 0 < hi:                 # 0을 지나면 기준선(예: 한우 순수익 적자)
+        out.append(f'<line x1="0" x2="{w}" y1="{Y(0):.1f}" y2="{Y(0):.1f}" stroke="#999" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>')
+    out.append(f'<polygon points="{X(0):.1f},{h} {pts} {X(n - 1):.1f},{h}" fill="{col}" fill-opacity=".09"/>'
+               f'<polyline points="{pts}" fill="none" stroke="{col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'
+               f'<line x1="{X(n - 1):.1f}" y1="{Y(v[-1]):.1f}" x2="{X(n - 1):.1f}" y2="{Y(v[-1]):.1f}" stroke="{col}" stroke-width="7" stroke-linecap="round" vector-effect="non-scaling-stroke"/>')
+    cw = (w - 8) / (n - 1)
+    for i, x in enumerate(v):
+        lab = pairs[i][1]
+        num = f"{x:,.0f}" if abs(x) >= 1000 else f"{x:,.2f}"
+        tip = f"{lab} · {num}{unit}" if lab else f"{num}{unit}"
+        out.append(f'<rect class="b" data-t="{tip}" x="{max(0, X(i) - cw / 2):.1f}" y="0" width="{cw:.1f}" height="{h}" fill="transparent"/>')
+    return Markup("".join(out) + "</svg>")
+
+
+def f_lite(rows) -> list:
+    """홈처럼 평년 범위를 쓰지 않는 쪽에 넣을 시세 행(season 뺌)."""
+    return [{k: v for k, v in r.items() if k != "season"} for r in rows or []]
 
 
 CUR_UNIT = {"KRW": "원", "USD": "달러", "JPY": "엔"}

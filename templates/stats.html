@@ -7,19 +7,19 @@
  <section class="kp4 sg-c"><div class="t">{{ s.title }}{{ link(s) }}</div>
   <div class="v">{{ num(s.vals[-1], s.unit) }} {{ dv if dv is not none else delta(s) }}</div>
   <div class="s"><span>{{ note or (s.survey ~ ' · ' ~ ('전 분기 대비' if s.se == 'Q' else '전월 대비' if s.se == 'M' else '2년 전 대비' if s.se == 'F' else '전년 대비')) }}</span><span>{{ lab[-1] }}</span></div>
-  <div class="sg-ch">{{ s.vals|mini(uid, col, lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div>
+  <div class="sg-ch">{{ s.vals|line(uid, col, lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div>
  </section>{% endif %}{% endmacro %}
 {% macro rcard(title, a, b, uid, note, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * 100) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set d = ((r[-1] - r[-2])|round(1) + 0.0) if r|length > 1 else none %}
  <section class="kp4 sg-c"><div class="t">{{ title }}{{ link(a) }}</div>
   <div class="v">{{ '{:.1f}'.format(r[-1]) }}<small>%</small> {% if d is not none %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ ('+' if d > 0 else '') ~ '{:.1f}'.format(d) }}p</em>{% endif %}</div>
   <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
-  <div class="sg-ch">{{ r|mini(uid, col, rl, '%') }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
+  <div class="sg-ch">{{ r|line(uid, col, rl, '%') }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
  </section>{% endif %}{% endif %}{% endmacro %}
 {% macro qcard(title, a, b, uid, note, mult, unit, col='#1c7a45') %}{% if a and b %}{% set r = [] %}{% set rl = [] %}{% for y in a.years %}{% if y in b.years and b.vals[b.years.index(y)] %}{% set _ = r.append(a.vals[loop.index0] / b.vals[b.years.index(y)] * mult) %}{% set _ = rl.append(y|prd) %}{% endif %}{% endfor %}{% if r %}{% set p = ((r[-1] - r[-2]) / r[-2] * 100) if r|length > 1 and r[-2] else none %}
  <section class="kp4 sg-c"><div class="t">{{ title }}{{ link(a) }}</div>
   <div class="v">{{ ('{:,.1f}' if r[-1]|abs < 10 else '{:,.0f}').format(r[-1]) }}<small>{{ unit }}</small> {% if p is not none %}<em class="{{ 'up' if p > 0 else 'down' if p < 0 else '' }}">{{ p|pct }}</em>{% endif %}</div>
   <div class="s"><span>{{ note }}</span><span>{{ rl[-1] }}</span></div>
-  <div class="sg-ch">{{ r|mini(uid, col, rl, unit) }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
+  <div class="sg-ch">{{ r|line(uid, col, rl, unit) }}<div class="sg-ax"><span>{{ rl[0] }}</span><span>{{ rl[-1] }}</span></div></div>
  </section>{% endif %}{% endif %}{% endmacro %}
 {% macro hcard(title, grp, unit, note, share=none, col='#7cbf95') %}{% set grp = grp|selectattr('1')|list %}{% if grp %}{% set gmax = [grp|map(attribute='1')|map(attribute='vals')|map('last')|map('abs')|max, 1e-9]|max %}{% set yr = grp|map(attribute='1')|map(attribute='years')|map('last')|min %}
  <section class="kp4 sg-c sg-w"><div class="t">{{ title }}{{ link(grp[0][1]) }}</div>
@@ -52,7 +52,7 @@
  <h3 class="sg-sub">농가</h3>
  <div class="sg-g">{{ card('farms', 'g1') }}{{ card('farm_pop', 'g2') }}{% if hh %}
   <section class="kp4 sg-c"><div class="t">농가당 가구원 수{{ link(K.farm_pop) }}</div><div class="v">{{ '{:.2f}'.format(hh[-1]) }}<small>명</small></div><div class="s"><span>농가인구 ÷ 농가 수</span><span>{{ K.farms.years[-1]|prd }}</span></div>
-   <div class="sg-ch">{{ hh|mini('g3', '#1c7a45', K.farms.years|map('prd')|list, '명') }}<div class="sg-ax"><span>{{ K.farms.years[0]|prd }}</span><span>{{ K.farms.years[-1]|prd }}</span></div></div></section>{% endif %}
+   <div class="sg-ch">{{ hh|line('g3', '#1c7a45', K.farms.years|map('prd')|list, '명') }}<div class="sg-ax"><span>{{ K.farms.years[0]|prd }}</span><span>{{ K.farms.years[-1]|prd }}</span></div></div></section>{% endif %}
   {{ hcard('도별 농가 수', [('경북', K.fd_gb), ('전남', K.fd_jn), ('충남', K.fd_cn), ('전북', K.fd_jb), ('경기', K.fd_gg), ('경남', K.fd_gn), ('강원', K.fd_gw), ('충북', K.fd_cb), ('제주', K.fd_jj)], '가구', ('괄호는 전국 농가 중 비중 · 특별시·광역시 제외 · 오른쪽은 전년 대비') if K.farms else '', K.farms.vals[-1] if K.farms else none) }}</div>
  <h3 class="sg-sub">판매처 <small>농축산물을 가장 많이 판 곳 · 농가 수</small></h3>
  <div class="sg-g">
@@ -65,7 +65,7 @@
    <div class="v">{{ num(s.vals[-1], s.unit) }} {{ delta(s) }}</div>
    {% if parts %}<div class="mix" aria-hidden="true">{% for n, ser in parts %}<i class="m{{ loop.index }}" style="flex:{{ ser.vals[-1] }}"></i>{% endfor %}</div>
    <div class="s">{% for n, ser in parts %}<span><b class="dot m{{ loop.index }}"></b>{{ n }} {{ '{:,.0f}'.format(ser.vals[-1] / 10) }}만 ({{ '{:.0f}'.format(ser.vals[-1] / s.vals[-1] * 100) }}%)</span>{% endfor %}<span class="yr">{{ lab[-1] }}</span></div>{% endif %}
-   <div class="sg-ch">{{ s.vals|mini('g4', '#1c7a45', lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}
+   <div class="sg-ch">{{ s.vals|line('g4', '#1c7a45', lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}
   {{ card('agri_ratio', 'g5', '농업소득 ÷ 농업총수입') }}{{ card('disposable', 'g6') }}{{ card('spending', 'g7') }}{{ card('assets', 'g8') }}{{ card('debt', 'g9', none, '#b04a07') }}
  </div>
 
@@ -4050,7 +4050,7 @@
   {% if tr %}{% set d = trd %}
   <section class="kp4 sg-c"><div class="t">농가 교역조건{{ link(K.sell_idx) }}</div><div class="v">{{ '{:.1f}'.format(tr[-1]) }} <em class="{{ 'up' if d and d > 0 else 'down' if d and d < 0 else '' }}">{{ ('+' if d and d > 0 else '') ~ ('{:.1f}'.format(d) if d is not none else '–') }}p</em></div>
    <div class="s"><span>판매가격지수 ÷ 구입가격지수 × 100 · {{ '100 미만이면 사는 값이 더 올랐음' if tr[-1] < 100 else '100 초과면 파는 값이 더 올랐음' }}</span><span>{{ tl[-1] }}</span></div>
-   <div class="sg-ch">{{ tr|mini('g10', '#2458d6' if tr[-1] < 100 else '#d23a32', tl, '') }}<div class="sg-ax"><span>{{ tl[0] }}</span><span>{{ tl[-1] }}</span></div></div></section>{% endif %}
+   <div class="sg-ch">{{ tr|line('g10', '#2458d6' if tr[-1] < 100 else '#d23a32', tl, '') }}<div class="sg-ax"><span>{{ tl[0] }}</span><span>{{ tl[-1] }}</span></div></div></section>{% endif %}
   {{ card('sell_idx', 'g11', '농산물을 팔 때 받는 값', '#d23a32') }}{{ card('buy_idx', 'g12', '비료·사료·인건비 등 사는 값', '#b04a07') }}
  
   {{ dvcard('농가가 사는 값 · 부문별 1년 전 대비', [('종자종묘', K.b_seed), ('비료', K.b_fert), ('농약', K.b_pest), ('사료', K.b_feed), ('영농자재', K.b_mat), ('인건비', K.b_labor), ('전기·연료', K.b_energy), ('임차료', K.b_rent), ('농기계', K.b_mach)], '막대는 1년 전 같은 분기 대비 · 회색 숫자는 지수(2020=100)') }}
@@ -6117,7 +6117,7 @@
   <section class="kp4 sg-c"><div class="t">{{ c.title }}{{ link(c) }}</div>
    <div class="v">{{ num(c.vals[-1], c.unit) }} {{ yoy(r) }}</div>
    <div class="s"><span>{{ c.years[-1][:4] }}년 1~{{ c.years[-1][5:]|int }}월 · 막대는 전년 같은 기간 대비(%)</span><span>{{ lab[-1] }}</span></div>
-   <div class="sg-ch">{{ r.vals|mini(uid, '#c77b30', lab, '%') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}{% endfor %}</div>
+   <div class="sg-ch">{{ r.vals|line(uid, '#c77b30', lab, '%') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}{% endfor %}</div>
  <h3 class="sg-sub">도축 세부 — 소 품종·닭 종류·시도별 <small>월별 · 숫자 옆은 전년 같은 달 대비</small></h3>
  <div class="sg-g">{{ card('slb_hw', 'dh1', ('암소 ' ~ num(K.slb_hw_f.vals[-1], '두')|striptags ~ ' · 수소 ' ~ num(K.slb_hw_m.vals[-1], '두')|striptags) if K.slb_hw_f and K.slb_hw_m else none, '#c77b30', yoy(K.slb_hw_yoy)) }}{{ card('slb_dy', 'dh2', '우유를 짜다 도태한 젖소 · 축산물 도축실적', '#1f5f8a', yoy(K.slb_dy_yoy)) }}{{ card('slb_yw', 'dh3', '젖소 수소를 고기용으로 기른 소 · 축산물 도축실적', '#7a6a3a', yoy(K.slb_yw_yoy)) }}
   {{ rcard('한우 도축 중 암소 비율', K.slb_hw_f, K.slb_hw, 'dh4', '암소 도축이 늘면 번식 기반이 줄어 몇 해 뒤 송아지가 적어짐', '#b0503a') }}{{ rcard('소 도축 중 한우 비율', K.slb_hw, K.slb_tot, 'dh5', '한우·젖소·육우 합계 중 한우 · 수입 생우 도축은 최근 없음', '#c77b30') }}{{ card('slc_broil', 'dh6', ('닭 도축의 ' ~ '{:.1f}'.format(K.slc_broil.vals[-1] / K.slc_tot.vals[-1] * 100) ~ '% · 치킨·닭고기용') if K.slc_tot else none, '#c77b30', yoy(K.slc_broil_yoy)) }}

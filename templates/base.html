@@ -338,8 +338,8 @@ svg.msv rect.b{transition:opacity 150ms ease-out,transform 180ms var(--ease-out)
 .dv::before{content:"";position:absolute;left:50%;top:-6px;bottom:-6px;border-left:1px solid #cfcfcf}
 .dv .th{position:absolute;top:-6px;bottom:-6px;border-left:1px dashed #e8a3a0}
 .dv i{position:absolute;top:1px;bottom:1px;width:var(--w);border-radius:4px;transition:transform 600ms var(--ease-out)}
-.dv i.p{left:50%;transform-origin:left;border-radius:0 4px 4px 0;background:repeating-linear-gradient(135deg,#e2574f 0 3px,#ee8c86 3px 6px)}
-.dv i.n{right:50%;transform-origin:right;border-radius:4px 0 0 4px;background:repeating-linear-gradient(135deg,#3c6ee0 0 3px,#86a5ee 3px 6px)}
+.dv i.p{left:50%;transform-origin:left;border-radius:0 4px 4px 0;background:#e0524a}
+.dv i.n{right:50%;transform-origin:right;border-radius:4px 0 0 4px;background:#3a6be0}
 html.js .dv:not(.go) i{transform:scaleX(0)}
 .dax{position:relative;display:flex;justify-content:space-between;font-size:0.6875rem;color:var(--mute);font-variant-numeric:tabular-nums}
 .mvt tr.ax td{border-bottom:0;padding-top:2px}
@@ -434,6 +434,17 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 @media(max-width:1100px){.sg-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.sg-g{grid-template-columns:minmax(0,1fr);gap:10px}.sg-ch svg.msv{height:64px}.sg-c.sg-w{grid-column:auto}.sg-grp>summary{grid-template-columns:1fr 18px;gap:12px;padding:16px}.sg-ks{grid-column:1/-1;grid-row:2;gap:14px;justify-content:space-between}.sg-k{min-width:0}.sg-k b{font-size:1rem}.sg-body{padding:2px 10px 12px}.sg-dv td.n:nth-child(2){display:none}.sg-dv td.hb{width:52%}.kp4.sg-c .s span:first-child{display:inline}.sg-h{scroll-margin-top:170px}}
 @media(prefers-reduced-motion:reduce){.tk.run .tk-tr,html.js .dash>.card,.price.flip span{animation:none}.pill .roll.sw{translate:none;filter:none}.btn-blue:active,.btn-line:active,.ico:active,.more:active,.pnav button:active,.ptab button:active,.tabs button:active,.hot a:active,.coin:active,.pill .lens:active,.hd nav a:active{scale:none}html.js .tk{overflow-x:auto}.rot{display:none}td.bar{transition:none}html.js .bc i.on,html.js .dbars i,html.js .kpis>.kp4{animation:none}#svg .tip,#svg .bk .lift,svg.msv rect.b{transition:none}.mvt tr.pick:hover .hbar i{animation:none}.hbar i{transition:none}html.js .hbar:not(.go) i{width:var(--w)}.pnav .pp svg{transition:none}html.js .dv:not(.go) i{transform:none}.dv i{transition:none}}
+/* 평년 범위(시세): 올해 월평균 선 · 평년 점선 · 최근 5년 최저~최고 띠 */
+.sz{margin-top:18px}.sz[hidden]{display:none}.sz .sub{font-size:0.8125rem;color:var(--mute);margin:2px 0 8px}
+.sz-box{position:relative}.sz-box svg{width:100%;height:220px;display:block;touch-action:pan-y}
+.sz-leg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:0.75rem;color:var(--mute);margin:6px 0 0}.sz-leg i{display:inline-block;vertical-align:middle;margin-right:5px}
+.sz-leg .l1{width:16px;height:2px;background:var(--ink)}.sz-leg .l2{width:16px;border-top:2px dashed #8a938b}.sz-leg .l3{width:14px;height:10px;border-radius:3px;background:color-mix(in oklab,var(--acc) 16%,white)}
+.sz-tip{position:absolute;top:0;min-width:150px;background:var(--card);border-radius:10px;padding:7px 10px;font-size:0.75rem;line-height:1.5;box-shadow:0 4px 16px oklch(0 0 0 / .12),0 0 0 1px oklch(0 0 0 / .06);opacity:0;pointer-events:none;transition:opacity 120ms ease-out}
+.sz-tip.on{opacity:1}.sz-tip .m{color:var(--mute)}
+.sz-note{font-size:0.8125rem;margin:8px 0 0;color:#4a5049}
+@media(prefers-reduced-motion:reduce){.sz-tip{transition:none}}
+.sline rect.b:hover{fill:oklch(0 0 0 / .045)}
+.szc .dv{height:12px}
 /* 공통 버튼 효과음: 기존 머리글 안에서 켜기·끄기 */
 .header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
 #soundToggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}
@@ -568,7 +579,37 @@ function draw(i,still){if(i!==undefined)cur=+i;var r=ROWS[cur],svg=$('svg');if(!
  lastPrice=r.price;
  var f=function(a){return a?(r.price-a)/a*100:null},m=f(r.month_ago),yv=f(r.year_ago);
  if($('pdelta'))$('pdelta').innerHTML='전일 대비 <b class="'+cls(r.pct)+'">'+fp(r.pct)+'</b> · 1개월 대비 <b class="'+cls(m)+'">'+fp(m)+'</b> · 1년 대비 <b class="'+cls(yv)+'">'+fp(yv)+'</b>';
+ drawSeason(r);
  document.querySelectorAll('tr.pick').forEach(function(tr){tr.classList.toggle('on',+tr.dataset.i===cur)});}
+/* 평년 범위: 시세 행에 season(올해 월평균·최근 5년 같은 달 최저·최고·평균)이 있으면 그린다 */
+function drawSeason(r){var box=$('season');if(!box)return;var S=r&&r.season;box.hidden=!S;if(!S)return;
+ var svg=$('szv'),W=svg.clientWidth||600,H=svg.clientHeight||220,fs=Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)*0.75),L=fs*3.6,R=12,T=10,B=fs*1.9+4;
+ var all=S.cur.concat(S.lo,S.hi).filter(function(v){return v!=null}),mn=Math.min.apply(null,all),mx=Math.max.apply(null,all),sp=(mx-mn)||mx*.1;mn-=sp*.1;mx+=sp*.1;
+ var x=function(m){return L+(W-L-R)*m/11},y=function(v){return T+(H-T-B)*(mx-v)/(mx-mn)},f=function(v){return Math.round(v).toLocaleString()};
+ svg.setAttribute('viewBox','0 0 '+W+' '+H);
+ var s='',runs=function(arr){var out=[],c=[];arr.forEach(function(v,m){if(v==null){if(c.length)out.push(c);c=[]}else c.push(m)});if(c.length)out.push(c);return out};
+ for(var g=0;g<4;g++){var gv=mn+(mx-mn)*(g+.5)/4,gy=y(gv);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+gy+'" y2="'+gy+'" stroke="#efefef"/><text x="'+(L-6)+'" y="'+(gy+4)+'" font-size="'+fs+'" text-anchor="end" fill="#9a9a9a">'+(gv>=1e4?(gv/1e4).toFixed(1)+'만':f(gv))+'</text>'}
+ runs(S.lo).forEach(function(ms){s+='<polygon points="'+ms.map(function(m){return x(m)+','+y(S.hi[m])}).join(' ')+' '+ms.slice().reverse().map(function(m){return x(m)+','+y(S.lo[m])}).join(' ')+'" fill="#1c7a45" fill-opacity=".12"/>'});
+ runs(S.avg).forEach(function(ms){s+='<polyline fill="none" stroke="#8a938b" stroke-width="1.4" stroke-dasharray="4 3" points="'+ms.map(function(m){return x(m)+','+y(S.avg[m])}).join(' ')+'"/>'});
+ runs(S.cur).forEach(function(ms){s+='<polyline fill="none" stroke="#1d1f1c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="'+ms.map(function(m){return x(m)+','+y(S.cur[m])}).join(' ')+'"/>'});
+ var lm=-1;S.cur.forEach(function(v,m){if(v!=null)lm=m});
+ for(var m=0;m<12;m++)if(W>560||m%2===0)s+='<text x="'+x(m)+'" y="'+(H-4)+'" font-size="'+fs+'" text-anchor="middle" fill="#9a9a9a">'+(m+1)+'월</text>';
+ var d=S.avg[lm]?(S.cur[lm]/S.avg[lm]-1)*100:null,col=d>0?'#d23a32':d<0?'#2458d6':'#6b7280';
+ if(lm>=0)s+='<circle cx="'+x(lm)+'" cy="'+y(S.cur[lm])+'" r="4.5" fill="'+col+'" stroke="#fff" stroke-width="2"/>';
+ s+='<line id="szg" y1="'+T+'" y2="'+(H-B)+'" stroke="#1d1f1c" stroke-opacity=".25" opacity="0"/>';
+ svg.innerHTML=s;
+ $('szSub').textContent=S.year+'년 월평균 · '+(S.kind==='전체'?'품종 전체':S.kind)+' · '+S.unit+' · 평년은 최근 5년 같은 달 평균';
+ var where=S.lo[lm]==null?'':S.cur[lm]>S.hi[lm]?' 최근 5년 같은 달 중 가장 비쌌던 해보다도 높습니다.':S.cur[lm]<S.lo[lm]?' 최근 5년 같은 달 중 가장 쌌던 해보다도 낮습니다.':' 최근 5년 범위 안입니다.';
+ $('szNote').innerHTML=lm<0?'':(lm+1)+'월 평균 <b>'+f(S.cur[lm])+'원</b>'+(d==null?'':', 평년보다 <b class="'+cls(d)+'">'+fp(d)+'</b>')+'.'+where;
+ svg._sz={S:S,x:x,W:W};}
+(function(){var svg=$('szv');if(!svg)return;var tip=$('szTip');
+ function mv(e){var z=svg._sz;if(!z)return;var b=svg.getBoundingClientRect(),cx=((e.touches?e.touches[0].clientX:e.clientX)-b.left)*z.W/b.width,m=Math.max(0,Math.min(11,Math.round((cx-z.x(0))/(z.x(1)-z.x(0))))),S=z.S;
+  var g=$('szg');g.setAttribute('x1',z.x(m));g.setAttribute('x2',z.x(m));g.setAttribute('opacity',1);
+  var f=function(v){return v==null?'–':Math.round(v).toLocaleString()+'원'},d=S.cur[m]!=null&&S.avg[m]?(S.cur[m]/S.avg[m]-1)*100:null;
+  tip.innerHTML='<b>'+(m+1)+'월</b><div>'+S.year+'년 <b>'+f(S.cur[m])+'</b></div><div>평년 '+f(S.avg[m])+(d==null?'':' <b class="'+cls(d)+'">'+fp(d)+'</b>')+'</div><div class="m">5년 범위 '+f(S.lo[m])+' ~ '+f(S.hi[m])+'</div>';
+  tip.classList.add('on');var px=z.x(m)*b.width/z.W;tip.style.left=Math.max(0,Math.min(px-75,b.width-tip.offsetWidth))+'px'}
+ function out(){tip.classList.remove('on');var g=$('szg');if(g)g.setAttribute('opacity',0)}
+ svg.addEventListener('pointermove',mv);svg.addEventListener('pointerleave',out);svg.addEventListener('touchstart',mv,{passive:true});svg.addEventListener('touchend',function(){setTimeout(out,1500)})})();
 function pickIdx(p){if(!p)return -1;for(var k=0;k<ROWS.length;k++)if(ROWS[k].key===p)return k;return -1}
 function setPick(i){stopRot();draw(i);if(history.replaceState&&/market\.html/.test(location.pathname))history.replaceState(null,'','market.html?pick='+ROWS[cur].key)}
 /* 품목 넘기기: 이전·다음 버튼, 좌우 밀기, 방향키. 홈에서는 대표 품목을 5초마다 자동으로 넘긴다 */

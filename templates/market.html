@@ -22,8 +22,12 @@
    <div class="price" id="pprice"></div>
    <div class="delta" id="pdelta"></div>
    <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div>
+   <div class="card sz" id="season" hidden><div class="sec"><h3 style="font-size:1.143rem">평년과 비교</h3></div><div class="sub" id="szSub"></div>
+    <div class="sz-box"><svg id="szv" role="img" aria-label="올해 월평균 가격과 최근 5년 범위"></svg><div class="sz-tip" id="szTip"></div></div>
+    <div class="sz-leg"><span><i class="l1"></i>올해</span><span><i class="l2"></i>평년</span><span><i class="l3"></i>최근 5년 최저~최고</span></div>
+    <p class="sz-note" id="szNote"></p></div>
    <div class="card" style="margin-top:18px"><div class="sec"><h3 style="font-size:1.143rem">급변</h3><small>전일 대비 {{ tickers.threshold|int }}% 이상</small></div>
-    {% for r in tickers.surges %}<table><tbody><tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td>{{ r.disp }} <small>{{ r.cls }}</small></td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr></tbody></table>{% else %}<p class="st">없음</p>{% endfor %}
+    {% set smx = [tickers.surges|map(attribute='pct')|map('abs')|max if tickers.surges else 1, 1]|max %}{% if tickers.surges %}<table class="mvt szc"><tbody>{% for r in tickers.surges|sort(attribute='pct', reverse=true) %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm">{{ r.disp }} <small>{{ r.cls }}</small></td><td class="hb"><div class="dv go" aria-hidden="true"><i class="{{ 'p' if r.pct > 0 else 'n' }}" style="--w:{{ 50 * (r.pct|abs) / smx }}%"></i></div></td><td class="n {{ 'up' if r.pct>0 else 'down' }}">{{ r.pct|pct }}</td></tr>{% endfor %}</tbody></table>{% else %}<p class="st">없음</p>{% endif %}
    </div>
   </div></aside>
  </div>

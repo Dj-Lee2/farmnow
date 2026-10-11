@@ -78,6 +78,62 @@ sources:
     env_id: KAMIS_ID
     exclude_categories: [수산물]
     ticker_items: ["쌀/20kg", "배추/", "무/", "양파/", "파/대파", "사과/", "배/", "계란/특란30구", "돼지/삼겹살", "닭/육계"]
+    # 평년 범위 그래프: 시세 소매 행 이름 → KAMIS 월별 가격 코드(부류, 품목, 품종; 품종 비우면 '전체')
+    season_items:
+      - {name: "쌀/20kg", cat: "100", item: "111", kind: ""}
+      - {name: "찹쌀/일반계", cat: "100", item: "112", kind: ""}
+      - {name: "현미/찰현미", cat: "100", item: "115", kind: ""}
+      - {name: "보리쌀/찰보리", cat: "100", item: "121", kind: ""}
+      - {name: "녹두/국산", cat: "100", item: "143", kind: ""}
+      - {name: "고구마/밤", cat: "100", item: "151", kind: ""}
+      - {name: "감자/수미(노지)", cat: "100", item: "152", kind: ""}
+      - {name: "배추/여름(고랭지)", cat: "200", item: "211", kind: ""}
+      - {name: "양배추/양배추", cat: "200", item: "212", kind: ""}
+      - {name: "시금치/시금치", cat: "200", item: "213", kind: ""}
+      - {name: "상추/적", cat: "200", item: "214", kind: "01"}
+      - {name: "상추/청", cat: "200", item: "214", kind: "02"}
+      - {name: "얼갈이배추/얼갈이배추", cat: "200", item: "215", kind: ""}
+      - {name: "수박/수박", cat: "200", item: "221", kind: ""}
+      - {name: "오이/가시계통", cat: "200", item: "223", kind: "01"}
+      - {name: "오이/다다기계통", cat: "200", item: "223", kind: "02"}
+      - {name: "오이/취청", cat: "200", item: "223", kind: "03"}
+      - {name: "호박/애호박", cat: "200", item: "224", kind: "01"}
+      - {name: "호박/쥬키니", cat: "200", item: "224", kind: "02"}
+      - {name: "토마토/토마토", cat: "200", item: "225", kind: ""}
+      - {name: "무/고랭지", cat: "200", item: "231", kind: ""}
+      - {name: "열무/열무", cat: "200", item: "233", kind: ""}
+      - {name: "풋고추/풋고추(녹광 등)", cat: "200", item: "242", kind: "00"}
+      - {name: "풋고추/꽈리고추", cat: "200", item: "242", kind: "02"}
+      - {name: "풋고추/청양고추", cat: "200", item: "242", kind: "03"}
+      - {name: "풋고추/오이맛고추", cat: "200", item: "242", kind: "04"}
+      - {name: "붉은고추/붉은고추", cat: "200", item: "243", kind: ""}
+      - {name: "양파/양파", cat: "200", item: "245", kind: ""}
+      - {name: "파/대파", cat: "200", item: "246", kind: "00"}
+      - {name: "파/쪽파", cat: "200", item: "246", kind: "02"}
+      - {name: "가지/가지", cat: "200", item: "251", kind: ""}
+      - {name: "미나리/미나리", cat: "200", item: "252", kind: ""}
+      - {name: "깻잎/깻잎", cat: "200", item: "253", kind: ""}
+      - {name: "부추/부추", cat: "200", item: "254", kind: ""}
+      - {name: "피망/청", cat: "200", item: "255", kind: ""}
+      - {name: "파프리카/파프리카", cat: "200", item: "256", kind: ""}
+      - {name: "멜론/멜론", cat: "200", item: "257", kind: ""}
+      - {name: "깐마늘(국산)/깐마늘(국산)", cat: "200", item: "258", kind: ""}
+      - {name: "알배기배추/알배기배추", cat: "200", item: "279", kind: ""}
+      - {name: "브로콜리/브로콜리(국산)", cat: "200", item: "280", kind: ""}
+      - {name: "참깨/백색(국산)", cat: "300", item: "312", kind: ""}
+      - {name: "땅콩/국산", cat: "300", item: "314", kind: ""}
+      - {name: "팽이버섯/팽이버섯", cat: "300", item: "316", kind: ""}
+      - {name: "새송이버섯/새송이버섯", cat: "300", item: "317", kind: ""}
+      - {name: "사과/홍로", cat: "400", item: "411", kind: ""}
+      - {name: "배/신고", cat: "400", item: "412", kind: ""}
+      - {name: "포도/캠벨얼리", cat: "400", item: "414", kind: "01"}
+      - {name: "포도/거봉", cat: "400", item: "414", kind: "02"}
+      - {name: "감귤/시설", cat: "400", item: "415", kind: ""}
+      - {name: "바나나/수입", cat: "400", item: "418", kind: ""}
+      - {name: "파인애플/수입", cat: "400", item: "420", kind: ""}
+      - {name: "레몬/수입", cat: "400", item: "424", kind: ""}
+      - {name: "망고/수입", cat: "400", item: "428", kind: ""}
+      - {name: "키위/골드", cat: "400", item: "437", kind: ""}
   - id: nongsaro_pest
     name: 농사로 병해충발생정보
     org: 농촌진흥청

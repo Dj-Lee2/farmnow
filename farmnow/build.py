@@ -302,6 +302,55 @@ def price_stats(tickers: dict) -> dict:
             "risers": [r for r in one if r["yoy"] > 0][:5], "fallers": [r for r in reversed(one) if r["yoy"] < 0][:5]}
 
 
+SG_GROUPS = [("g-farm", "농가 살림"), ("g-people", "농업인·일손"), ("g-value", "생산액·소득"), ("g-eco", "친환경·비료·농약"),
+             ("g-climate", "기후·토양·온실가스"), ("g-price", "농산물 가격"), ("g-land", "농지·작물·소비"), ("g-live", "축산")]
+_TAG = re.compile(r"<[^>]+>")
+
+
+def _plain(h: str) -> str:
+    return re.sub(r"\s+", " ", _TAG.sub(" ", h)).strip()
+
+
+def stats_pages(env, ctx: dict) -> dict:
+    """통계 묶음마다 한 쪽(stats-g-*.html)을 만들고, 왼쪽 목차와 통계 찾기 색인을 붙인다."""
+    tpl = env.get_template("stats.html")
+    cards, heads = [], []          # 색인: 소제목 [묶음, 소제목, 쪽] · 카드 [제목, 소제목 번호, id]
+    for gid, title in SG_GROUPS:
+        page = f"stats-{gid}.html"
+        html = hangul_only(tpl.render(page="stats.html", only=gid, sg_title=title, **ctx))
+        subs, n = [], [0, 0]
+
+        def sub(m):
+            n[0] += 1
+            sid = f"{gid[2:]}-{n[0]}"
+            subs.append((sid, _plain(re.sub(r"<small>.*?</small>", "", m.group(2)))))
+            return f'<h3 class="sg-sub" id="{sid}"{m.group(1)}>{m.group(2)}</h3>'
+
+        def card(m):
+            n[1] += 1
+            return f'<section id="c-{gid[2:]}-{n[1]}" ' + m.group(0)[len("<section "):]
+
+        def walk(m):  # 소제목과 카드에 문서 순서대로 id를 붙인다
+            return sub(re.match(r'<h3 class="sg-sub"([^>]*)>(.*?)</h3>', m.group(0), re.S)) if m.group(0).startswith("<h3") else card(m)
+        html = re.sub(r'<h3 class="sg-sub"[^>]*>.*?</h3>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
+        label = dict(subs)
+        heads.append([title, title, page])
+        for m in re.finditer(r'<h3 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*<div class="t">(.*?)<a ', html, re.S):
+            if m.group(1):
+                heads.append([title, label.get(m.group(1), title), page])
+            else:
+                cards.append([_plain(m.group(3)), len(heads) - 1, m.group(2)])
+        side = '<nav class="sgp-nav" aria-label="통계 묶음">' + "".join(
+            f'<a href="./stats-{g}.html" class="sgp-g{" on" if g == gid else ""}"{" aria-current=page" if g == gid else ""}>{t}</a>'
+            + ('<div class="sgp-sub">' + "".join(f'<a href="#{i}">{l}</a>' for i, l in subs) + "</div>" if g == gid else "")
+            for g, t in SG_GROUPS) + "</nav>"
+        side += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
+                 + "".join(f'<option value="{i}">{l}</option>' for i, l in subs) + "</select></label>")
+        (SITE / page).write_text(html.replace("<!--SG-SIDE-->", side, 1), encoding="utf-8")
+    (SITE / "stats-index.json").write_text(json.dumps({"heads": heads, "cards": cards}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return {"pages": len(SG_GROUPS), "cards": len(cards)}
+
+
 def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn: dict | None = None) -> None:
     known_ids = {s["id"] for s in cfg["sources"]}
     items = [NewsItem.from_dict(d) for d in records if d.get("source_id") in known_ids]   # 설정에서 빠진 신호원의 옛 항목은 제외
@@ -385,6 +434,10 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     (SITE / "feed.xml").write_text(hangul_only(env.get_template("feed.xml").render(**ctx)), encoding="utf-8")
     for page, _ in NAV:
         (SITE / page).write_text(hangul_only(env.get_template(page).render(page=page, **ctx)), encoding="utf-8")
+    for old in SITE.glob("stats-g-*.html"):
+        old.unlink()
+    if kstat:
+        stats_pages(env, ctx)
     (SITE / "404.html").write_text(hangul_only(env.get_template("404.html").render(page="404.html", **ctx)), encoding="utf-8")
     for old in list(SITE.glob("n-*.html")) + list(SITE.glob("s-*.html")):
         old.unlink()

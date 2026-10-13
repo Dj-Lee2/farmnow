@@ -11,6 +11,8 @@ from itertools import groupby
 from pathlib import Path
 
 from markupsafe import Markup
+
+from . import statviews
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .model import NewsItem
@@ -347,6 +349,16 @@ def stats_pages(env, ctx: dict) -> dict:
         side += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
                  + "".join(f'<option value="{i}">{l}</option>' for i, l in subs) + "</select></label>")
         (SITE / page).write_text(html.replace("<!--SG-SIDE-->", side, 1), encoding="utf-8")
+    # 품목별·지역별 쪽
+    titem = env.get_template("stats_item.html")
+    rows = [r for r in (ctx.get("tickers") or {}).get("all") or [] if r.get("cls") == "소매"]
+    for it in statviews.ITEMS:
+        v = statviews.item_view(ctx["kstat"], it)
+        price = next((r for r in rows if r["name"].startswith(it[4])), None)
+        (SITE / f"stats-i-{it[0]}.html").write_text(hangul_only(titem.render(page="stats.html", v=v, price=price, **ctx)), encoding="utf-8")
+    (SITE / "stats-region.html").write_text(
+        hangul_only(env.get_template("stats_region.html").render(page="stats.html", sv_region=statviews.region_view(ctx["kstat"]), **ctx)),
+        encoding="utf-8")
     (SITE / "stats-index.json").write_text(json.dumps({"heads": heads, "cards": cards}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return {"pages": len(SG_GROUPS), "cards": len(cards)}
 
@@ -423,6 +435,7 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         latest_by_board=latest_by_board, status=status, failed=failed, orgs=orgs,
         sources_cfg={s["id"]: s for s in cfg["sources"]}, shown_ids={s["id"] for s in shown}, base_url=base_url,
         release_cats=RELEASE_CATS, pstat=pstat, kstat=kstat, kstat_at=kstat_at,
+        sv_items=statviews.ITEMS,
         top5_js=[{"h": it.headline, "u": f"n-{it.id}.html"} for it in t5],
     )
     SITE.mkdir(exist_ok=True)
@@ -434,7 +447,7 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     (SITE / "feed.xml").write_text(hangul_only(env.get_template("feed.xml").render(**ctx)), encoding="utf-8")
     for page, _ in NAV:
         (SITE / page).write_text(hangul_only(env.get_template(page).render(page=page, **ctx)), encoding="utf-8")
-    for old in SITE.glob("stats-g-*.html"):
+    for old in list(SITE.glob("stats-g-*.html")) + list(SITE.glob("stats-i-*.html")):
         old.unlink()
     if kstat:
         stats_pages(env, ctx)

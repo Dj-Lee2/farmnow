@@ -14,10 +14,10 @@
  <section class="kp4 rg-prof"><div class="t" id="rgPT"></div><div class="rg-sub">9개 도 평균과 비교 · 순위는 큰 값부터</div><div class="rg-pg" id="rgProf"></div></section>
  <p class="lg sg-src">지도는 실제 경계 대신 도를 칸으로 놓은 그림입니다. 지표마다 9개 도에 공통으로 있는 가장 최근 시점을 씁니다. 출처: 국가데이터처 KOSIS.</p>
 </div>
-<script type="application/json" id="rgData">{{ sv_region|tojson }}</script>
+<div id="rgData" data-j="{{ sv_region|tojson|forceescape }}" hidden></div>
 {% endblock %}
 {% block scripts %}
-(function(){var D=JSON.parse(document.getElementById('rgData').textContent),P=D.provs,I=D.inds;if(!I.length)return;
+(function(){var D=JSON.parse(document.getElementById('rgData').dataset.j),P=D.provs,I=D.inds;if(!I.length)return;
  var name={};P.forEach(function(p){name[p.c]=p.n});
  var ind=I.find(function(x){return x.id==='ir'})||I[0],sel=(location.hash.slice(1)&&name[location.hash.slice(1)])?location.hash.slice(1):'jj';
  function yr(y){y=String(y);return /^\d{6}$/.test(y)?y.slice(2,4)+'년 '+(+y.slice(4))+'월':/^\d{4}\.\d{2}$/.test(y)?y.slice(2,4)+'년 '+(+y.slice(5))+'월':y+'년'}

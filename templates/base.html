@@ -674,7 +674,7 @@ function drawSeason(r){var box=$('season');if(!box)return;var S=r&&r.season;box.
  function out(){tip.classList.remove('on');var g=$('szg');if(g)g.setAttribute('opacity',0)}
  svg.addEventListener('pointermove',mv);svg.addEventListener('pointerleave',out);svg.addEventListener('touchstart',mv,{passive:true});svg.addEventListener('touchend',function(){setTimeout(out,1500)})})();
 function pickIdx(p){if(!p)return -1;for(var k=0;k<ROWS.length;k++)if(ROWS[k].key===p)return k;return -1}
-function setPick(i){stopRot();draw(i);if(history.replaceState&&/market\.html/.test(location.pathname))history.replaceState(null,'','market.html?pick='+ROWS[cur].key)}
+function setPick(i){stopRot();draw(i);if(history.replaceState&&/\/market(\.html)?$/.test(location.pathname))history.replaceState(null,'','market.html?pick='+ROWS[cur].key)}
 /* 품목 넘기기: 이전·다음 버튼, 좌우 밀기, 방향키. 홈에서는 대표 품목을 5초마다 자동으로 넘긴다 */
 var FIXI=FIX.map(pickIdx).filter(function(k){return k>=0}),rotT=0,rotOn=!!$('rot')&&!RM&&FIXI.length>1;
 function step(d,instant){var L=FIXI.indexOf(cur)>=0?FIXI:null,n;if(L){n=L[(L.indexOf(cur)+d+L.length)%L.length]}else n=(cur+d+ROWS.length)%ROWS.length;draw(n,instant)}

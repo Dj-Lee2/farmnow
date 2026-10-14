@@ -16,7 +16,7 @@ from . import statviews
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .model import NewsItem
-from .util import hangul_only
+from .util import clean_urls, hangul_only
 from .rules import top5, tag_trend, overnight_summary, warning_kinds
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -319,7 +319,7 @@ def stats_pages(env, ctx: dict) -> dict:
     cards, heads = [], []          # 색인: 소제목 [묶음, 소제목, 쪽] · 카드 [제목, 소제목 번호, id]
     for gid, title in SG_GROUPS:
         page = f"stats-{gid}.html"
-        html = hangul_only(tpl.render(page="stats.html", only=gid, sg_title=title, **ctx))
+        html = clean_urls(hangul_only(tpl.render(page="stats.html", only=gid, sg_title=title, **ctx)))
         subs, n = [], [0, 0]
 
         def sub(m):
@@ -336,14 +336,14 @@ def stats_pages(env, ctx: dict) -> dict:
             return sub(re.match(r'<h3 class="sg-sub"([^>]*)>(.*?)</h3>', m.group(0), re.S)) if m.group(0).startswith("<h3") else card(m)
         html = re.sub(r'<h3 class="sg-sub"[^>]*>.*?</h3>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
         label = dict(subs)
-        heads.append([title, title, page])
+        heads.append([title, title, page[:-5]])
         for m in re.finditer(r'<h3 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*<div class="t">(.*?)<a ', html, re.S):
             if m.group(1):
-                heads.append([title, label.get(m.group(1), title), page])
+                heads.append([title, label.get(m.group(1), title), page[:-5]])
             else:
                 cards.append([_plain(m.group(3)), len(heads) - 1, m.group(2)])
         side = '<nav class="sgp-nav" aria-label="통계 묶음">' + "".join(
-            f'<a href="./stats-{g}.html" class="sgp-g{" on" if g == gid else ""}"{" aria-current=page" if g == gid else ""}>{t}</a>'
+            f'<a href="./stats-{g}" class="sgp-g{" on" if g == gid else ""}"{" aria-current=page" if g == gid else ""}>{t}</a>'
             + ('<div class="sgp-sub">' + "".join(f'<a href="#{i}">{l}</a>' for i, l in subs) + "</div>" if g == gid else "")
             for g, t in SG_GROUPS) + "</nav>"
         side += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
@@ -355,9 +355,9 @@ def stats_pages(env, ctx: dict) -> dict:
     for it in statviews.ITEMS:
         v = statviews.item_view(ctx["kstat"], it)
         price = next((r for r in rows if r["name"].startswith(it[4])), None)
-        (SITE / f"stats-i-{it[0]}.html").write_text(hangul_only(titem.render(page="stats.html", v=v, price=price, **ctx)), encoding="utf-8")
+        (SITE / f"stats-i-{it[0]}.html").write_text(clean_urls(hangul_only(titem.render(page="stats.html", v=v, price=price, **ctx))), encoding="utf-8")
     (SITE / "stats-region.html").write_text(
-        hangul_only(env.get_template("stats_region.html").render(page="stats.html", sv_region=statviews.region_view(ctx["kstat"]), **ctx)),
+        clean_urls(hangul_only(env.get_template("stats_region.html").render(page="stats.html", sv_region=statviews.region_view(ctx["kstat"]), **ctx))),
         encoding="utf-8")
     (SITE / "stats-index.json").write_text(json.dumps({"heads": heads, "cards": cards}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return {"pages": len(SG_GROUPS), "cards": len(cards)}
@@ -446,12 +446,12 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     ctx["brief_text"] = brief_md
     (SITE / "feed.xml").write_text(hangul_only(env.get_template("feed.xml").render(**ctx)), encoding="utf-8")
     for page, _ in NAV:
-        (SITE / page).write_text(hangul_only(env.get_template(page).render(page=page, **ctx)), encoding="utf-8")
+        (SITE / page).write_text(clean_urls(hangul_only(env.get_template(page).render(page=page, **ctx))), encoding="utf-8")
     for old in list(SITE.glob("stats-g-*.html")) + list(SITE.glob("stats-i-*.html")):
         old.unlink()
     if kstat:
         stats_pages(env, ctx)
-    (SITE / "404.html").write_text(hangul_only(env.get_template("404.html").render(page="404.html", **ctx)), encoding="utf-8")
+    (SITE / "404.html").write_text(clean_urls(hangul_only(env.get_template("404.html").render(page="404.html", **ctx))), encoding="utf-8")
     for old in list(SITE.glob("n-*.html")) + list(SITE.glob("s-*.html")):
         old.unlink()
     if stocks:
@@ -459,11 +459,11 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         for sec, rows in stocks.get("sections", {}).items():
             for r in rows:
                 peers = [o for o in rows if o["group"] == r["group"] and o["code"] != r["code"]]
-                (SITE / r["slug"]).write_text(hangul_only(stpl.render(page="stocks.html", r=r, peers=peers, **ctx)), encoding="utf-8")
+                (SITE / r["slug"]).write_text(clean_urls(hangul_only(stpl.render(page="stocks.html", r=r, peers=peers, **ctx))), encoding="utf-8")
     tpl = env.get_template("item.html")
     for it in items:
         (SITE / f"n-{it.id}.html").write_text(
-            hangul_only(tpl.render(page="news.html", it=it, related=_related(it, items), **ctx)), encoding="utf-8")
+            clean_urls(hangul_only(tpl.render(page="news.html", it=it, related=_related(it, items), **ctx))), encoding="utf-8")
     st = ROOT / "static"                  # 로고·아이콘 같은 고정 파일
     if st.exists():
         shutil.copytree(st, SITE / "static", dirs_exist_ok=True)

@@ -182,7 +182,7 @@ def test_feed_is_wellformed_with_special_chars_and_item_pages_exist(tmp_path, mo
     root = ET.fromstring((site / "feed.xml").read_text(encoding="utf-8"))
     assert root.find("channel/item/title").text == '[발표] 농식품 R&D <2026> "성과" 발표'
     assert (site / f"n-{it.id}.html").exists()
-    assert f'href="n-{it.id}.html"' in (site / "news.html").read_text(encoding="utf-8")
+    assert f'href="n-{it.id}"' in (site / "news.html").read_text(encoding="utf-8")
 
 
 def test_stylesheet_uses_rem_so_large_text_works():

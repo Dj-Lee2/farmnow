@@ -11,3 +11,11 @@ def test_stats_groups_match_template():
 
 def test_plain_strips_tags():
     assert build._plain('농가 <small>단위</small>\n 소득') == "농가 단위 소득"
+
+
+def test_clean_urls():
+    from farmnow.util import clean_urls
+    h = '<a href="./news.html?tag=x">a</a><a href="index.html">h</a><a href="https://kosis.kr/a.html">k</a>'
+    js = "location.href='market.html?pick='+k;go('./stats-g-'+g+'.html#'+h)"
+    assert clean_urls(h) == '<a href="./news?tag=x">a</a><a href="./">h</a><a href="https://kosis.kr/a.html">k</a>'
+    assert clean_urls(js) == "location.href='market?pick='+k;go('./stats-g-'+g+'#'+h)"

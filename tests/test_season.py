@@ -27,3 +27,12 @@ def test_attach_skips_unit_or_price_mismatch():
     season = {"items": {"양파/양파": b, "파/쪽파": b, "무/고랭지": b}}
     assert attach(tk, season) == 1
     assert "season" in tk["all"][0] and "season" not in tk["all"][1] and "season" not in tk["all"][2]
+
+
+def test_kamis_reads_fresh_relay(tmp_path):
+    import json
+    from farmnow.collectors import kamis
+    (tmp_path / "kamis_daily.json").write_text(json.dumps({"error_code": "000", "price": [1]}), encoding="utf-8")
+    src = {"relay_dir": str(tmp_path), "relay_max_hours": 3, "url": "http://127.0.0.1:9/never"}
+    assert kamis.fetch_json(src)["price"] == [1]
+    assert kamis.relay_fresh({"relay_max_hours": 3}, "kamis_daily.json") is None

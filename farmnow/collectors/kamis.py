@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
+import time
+from pathlib import Path
 from datetime import datetime
 
 import requests
@@ -29,12 +32,31 @@ def _disp(name: str) -> str:
     return a if (not b or a == b) else b if a in b else f"{a} {b}"
 
 
-def fetch_rows(src: dict) -> tuple[list[dict], str]:
+def relay_fresh(src: dict, name: str) -> Path | None:
+    """국내 중계 파일: KAMIS가 해외 IP를 막을 때 국내 기기가 받아 서버로 넘겨준 응답(relay_max_hours 안이면 씀)."""
+    d = src.get("relay_dir")
+    if not d:
+        return None
+    p = Path(d) / name
+    if p.exists() and time.time() - p.stat().st_mtime < float(src.get("relay_max_hours", 3)) * 3600:
+        return p
+    return None
+
+
+def fetch_json(src: dict) -> dict:
+    """중계 파일이 새것이면 그것을, 아니면 KAMIS를 직접 부른다."""
+    p = relay_fresh(src, "kamis_daily.json")
+    if p:
+        return json.loads(p.read_text(encoding="utf-8"))
     key = os.environ.get(src.get("env_key", "KAMIS_KEY")) or "111"
     cid = os.environ.get(src.get("env_id", "KAMIS_ID")) or "222"
     r = requests.get(src["url"], params={"p_cert_key": key, "p_cert_id": cid}, timeout=30)
     r.raise_for_status()
-    j = r.json()
+    return r.json()
+
+
+def fetch_rows(src: dict) -> tuple[list[dict], str]:
+    j = fetch_json(src)
     if j.get("error_code") != "000":
         raise RuntimeError(f"KAMIS error_code={j.get('error_code')}")
     skip = set(src.get("exclude_categories") or [])

@@ -76,6 +76,8 @@ sources:
     label: 정기
     env_key: KAMIS_KEY        # 미설정 시 테스트키(111/222) 사용
     env_id: KAMIS_ID
+    relay_dir: data/relay     # KAMIS가 해외 IP를 막으면 국내 기기가 deploy/kamis_relay.py로 받아 여기에 넣는다
+    relay_max_hours: 3
     exclude_categories: [수산물]
     ticker_items: ["쌀/20kg", "배추/", "무/", "양파/", "파/대파", "사과/", "배/", "계란/특란30구", "돼지/삼겹살", "닭/육계"]
     # 평년 범위 그래프: 시세 소매 행 이름 → KAMIS 월별 가격 코드(부류, 품목, 품종; 품종 비우면 '전체')

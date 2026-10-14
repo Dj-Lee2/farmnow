@@ -69,6 +69,9 @@ def refresh(items: list[dict], data_dir: Path, src: dict, now: datetime | None =
     """캐시가 TTL 안이면 그대로, 아니면 다시 받는다. 일부 실패는 이전 값을 유지한다."""
     now = now or now_kst()
     path = data_dir / "season.json"
+    relay = Path(src["relay_dir"]) / "season.json" if src.get("relay_dir") else None
+    if relay and relay.exists() and (not path.exists() or relay.stat().st_mtime > path.stat().st_mtime):
+        path.write_text(relay.read_text(encoding="utf-8"), encoding="utf-8")
     old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     at = old.get("fetched_at")
     if at and (now - datetime.fromisoformat(at)).total_seconds() < TTL_HOURS * 3600 and old.get("items"):
@@ -76,11 +79,14 @@ def refresh(items: list[dict], data_dir: Path, src: dict, now: datetime | None =
     key = os.environ.get(src.get("env_key", "KAMIS_KEY")) or "111"
     cid = os.environ.get(src.get("env_id", "KAMIS_ID")) or "222"
     got = dict(old.get("items") or {})
-    ok = 0
+    ok = fail = 0
     for it in items:
         try:
             b = fetch_one(it, now.year, key, cid)
         except Exception:
+            fail += 1
+            if fail >= 3 and not ok:      # 접속이 막혔으면(해외 IP 차단 등) 54개를 다 기다리지 않는다
+                break
             continue
         if b:
             got[it["name"]] = b

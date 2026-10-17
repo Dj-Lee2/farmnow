@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if preview %}<meta name="robots" content="noindex,nofollow">{% endif %}
 <title>{% block title %}{{ site.name }} — {{ site.tagline }}{% endblock %}</title>
 <meta name="description" content="농림축산식품부·농촌진흥청·기상청·aT 공공데이터로 만드는 농업 속보. 기상특보, 가격, 공고, 입법예고, 병해충 발생정보.">
 <meta name="theme-color" content="#1c7a45">
@@ -573,8 +572,6 @@ a.sg-rl{color:inherit}
 </main>
 <footer class="wrap"><b>{{ site.name }}</b> · 출처: {{ orgs|join(' · ') }} · 갱신 {{ built }} · <a href="about.html">정보</a> · <a href="feed.xml">RSS</a></footer>
 
-{% if variant %}<nav class="pvsw" aria-label="홈 시안 바꾸기"><span>홈 시안</span>{% for n in ['1', '2', '3', '4', '5'] %}<a href="../v{{ n }}/" class="{{ 'on' if n == preview }}">{{ n }}</a>{% endfor %}<a href="../">목록</a></nav>{% elif preview and stats_layout %}<nav class="pvsw" aria-label="통계 시안 바꾸기"><span>통계 시안</span>{% for n, l in [('a', 'A 카드'), ('b', 'B 목록'), ('c', 'C 대표+목록')] %}<a href="../{{ n }}/{{ page|replace('.html', '') if page.startswith('stats') else 'stats' }}" class="{{ 'on' if n == stats_layout }}">{{ l }}</a>{% endfor %}</nav>
-<style>.pvsw{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:4px;background:#14171a;color:#fff;border-radius:999px;padding:5px 6px 5px 14px;font-size:.8125rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}.pvsw span{margin-right:6px;color:#c8ccc8;white-space:nowrap}.pvsw a{white-space:nowrap}.pvsw a{color:#fff;min-width:32px;height:32px;display:grid;place-items:center;border-radius:999px;padding:0 8px}.pvsw a.on{background:#fff;color:#14171a;font-weight:700}@media(max-width:760px){.pvsw{bottom:10px;padding-left:6px}.pvsw span{display:none}}</style>{% endif %}
 {% include '_sound.html' %}
 <script>
 var TOP5={{ top5_js|default([])|tojson }};

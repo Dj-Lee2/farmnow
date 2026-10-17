@@ -521,10 +521,8 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         sv_items=statviews.ITEMS,
         top5_js=[{"h": it.headline, "u": f"n-{it.id}.html"} for it in t5],
     )
-    ctx.update(stats_layout=os.environ.get("FARMNOW_STATS_VARIANT", "a"), stats_today=stats_today(kstat) if kstat else None)
-    variant = os.environ.get("FARMNOW_HOME_VARIANT", "")      # 홈 시안 미리보기(배포 사이트는 비워 둠)
-    ctx.update(home=homeviews.build(tickers, items, stocks, warn), variant=variant,
-               preview=variant or os.environ.get("FARMNOW_PREVIEW", ""))
+    ctx.update(stats_layout="a", stats_today=stats_today(kstat) if kstat else None)
+    ctx.update(home=homeviews.build(tickers, items, stocks, warn))
     SITE.mkdir(exist_ok=True)
     brief_md = env.get_template("brief.md").render(**ctx)
     brief_md = hangul_only(brief_md)
@@ -533,8 +531,7 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     ctx["brief_text"] = brief_md
     (SITE / "feed.xml").write_text(hangul_only(env.get_template("feed.xml").render(**ctx)), encoding="utf-8")
     for page, _ in NAV:
-        tname = f"home_v{variant}.html" if variant and page == "index.html" else page
-        (SITE / page).write_text(clean_urls(hangul_only(env.get_template(tname).render(page=page, **ctx))), encoding="utf-8")
+        (SITE / page).write_text(clean_urls(hangul_only(env.get_template(page).render(page=page, **ctx))), encoding="utf-8")
     for old in list(SITE.glob("stats-g-*.html")) + list(SITE.glob("stats-i-*.html")):
         old.unlink()
     if kstat:

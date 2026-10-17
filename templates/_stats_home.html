@@ -1,4 +1,4 @@
-{# 통계 홈: 자주 찾는 질문(한 줄 답 + 작은 그래프) · 통계 찾기 · 묶음 목록. stats.html에서 only가 비었을 때만 넣는다 #}
+{% from "_stat_macros.html" import num with context %}{# 통계 홈: 자주 찾는 질문(한 줄 답 + 작은 그래프) · 통계 찾기 · 묶음 목록. stats.html에서 only가 비었을 때만 넣는다 #}
 {% macro yr(s) %}{{ s.years[-1]|prd }}{% endmacro %}
 {% macro band(parts) %}{% set tot = parts|map(attribute=1)|sum %}<div class="sq-band" role="img" aria-label="{% for n, v, c in parts %}{{ n }} {{ (v / tot * 100)|round|int }}%{{ ', ' if not loop.last }}{% endfor %}">{% for n, v, c in parts %}<i style="flex:{{ v }};background:{{ c }}" title="{{ n }} {{ (v / tot * 100)|round|int }}%"></i>{% endfor %}</div>
  <div class="sq-leg">{% for n, v, c in parts %}<span><i style="background:{{ c }}"></i>{{ n }} {{ (v / tot * 100)|round|int }}%</span>{% endfor %}</div>{% endmacro %}
@@ -18,6 +18,16 @@
 {% if K.fz_kr_n %}{% set fz = [('한국', K.fz_kr_n.vals[-1]|round|int)] %}{% for n, k in [('중국', 'fz_cn_n'), ('네덜란드', 'fz_nl_n'), ('일본', 'fz_jp_n'), ('미국', 'fz_us_n')] %}{% if K[k] %}{% set _ = fz.append((n, K[k].vals[-1]|round|int)) %}{% endif %}{% endfor %}
 {% set _ = Q.append(('비료는 많이 쓰는 편인가?', '질소비료 1ha당 ', fz[0][1] ~ 'kg', ', 일본·미국의 2배 이상', dots(fz|sort(attribute=1, reverse=true), 'kg', '한국'), 'g-eco', yr(K.fz_kr_n) ~ ' FAO 기반 국제통계')) %}{% endif %}
  <div class="sq-find"><label class="sq-in"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg><input id="sqQ" type="search" placeholder="통계 찾기 — 예: 농가소득, 한우, 귀농, 비료" autocomplete="off" aria-label="통계 찾기"></label><ul id="sqR" class="sq-res" hidden></ul></div>
+ {% if stats_today %}{% set T = stats_today %}{% set ts = T.s %}{% set lab = ts.years|map('prd')|list %}<section class="sq-today"><div><span class="k">오늘의 그래프 · {{ ts.survey }}</span><h2>{{ ts.title }}</h2>
+  <div class="big">{{ num(ts.vals[-1], ts.unit) }}</div>
+  <ul><li>{{ lab[-1] }} 값은 {{ lab[-2] }}보다 <b class="{{ 'up' if T.p > 0 else 'down' }}">{{ '%+.1f'|format(T.p) }}%</b> {{ '늘었습니다' if T.p > 0 else '줄었습니다' }}.</li>{% if T.rank %}<li>{{ T.rank }}입니다.</li>{% endif %}{% if T.long is not none %}<li>{{ lab[0] }}과 비교하면 {{ '%+.0f'|format(T.long) }}% {{ '높습니다' if T.long > 0 else '낮습니다' }}.</li>{% endif %}</ul>
+  <a class="go2" href="./stats-x.html?k={{ T.key }}">그래프 크게 보기 →</a></div><div class="ch">{{ ts.vals|line('today', '#1c7a45', lab, '') }}<div class="sg-ax"><span>{{ lab[0] }}</span><span>{{ lab[-1] }}</span></div></div></section>{% endif %}
  {% if Q %}<h2 class="sq-h">자주 찾는 질문</h2>
  <div class="sq-g">{% for q, a1, a2, a3, viz, g, src in Q %}<a class="sq-c" href="./stats-{{ g }}.html"><b class="sq-q">{{ q }}</b><p>{{ a1 }}<b>{{ a2 }}</b>{{ a3 }}</p><div class="sq-viz">{{ viz }}</div><small>{{ src }} →</small></a>{% endfor %}</div>{% endif %}
  <h2 class="sq-h">주제별로 보기</h2>
+ {% if sg_cards %}{% macro chg(k) %}{% if k and k.vals|length > 1 and k.vals[-2] %}{% if k.unit in ('%', '2020=100') %}{% set d = k.vals[-1] - k.vals[-2] %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ '%+.1f'|format(d) }}{{ 'p' if k.unit == '%' else '' }}</em>{% else %}{% set d = (k.vals[-1] - k.vals[-2]) / (k.vals[-2]|abs) * 100 %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ '%+.1f'|format(d) }}%</em>{% endif %}{% endif %}{% endmacro %}
+ {% if stats_layout == 'a' %}<div class="tc-a">{% for g, t, ic, k, col, inf in sg_cards %}<a class="tc" href="./stats-{{ g }}.html"><div class="th"><span class="ic" style="background:{{ col }}">{{ ic }}</span><b>{{ t }}</b></div>
+   {% if k %}<div class="kv"><small class="lb2">{{ k.title }} · {{ k.years[-1]|prd }}</small><div class="v">{{ num(k.vals[-1], k.unit) }} {{ chg(k) }}</div>{{ k.vals|line('tc' ~ loop.index, '#1c7a45', k.years|map('prd')|list, '') }}</div>{% endif %}
+   <div class="chips">{% for sname in inf.subs[:4] %}<span>{{ sname }}</span>{% endfor %}</div><div class="ft">지표 {{ '{:,}'.format(inf.n) }}개 · 소제목 {{ inf.subs|length }}개 <i>→</i></div></a>{% endfor %}</div>
+ {% endif %}
+ {% endif %}

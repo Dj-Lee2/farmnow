@@ -509,6 +509,25 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 @media(max-width:1000px){.sgp-items .sgp-h{display:none}.sgp-nav{position:relative}}
 .rg-cat small{white-space:nowrap}
 @media(max-width:760px){.rg-pg{grid-template-columns:repeat(2,minmax(0,1fr))}.rg-map{grid-template-rows:repeat(5,60px)}.rg-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.rg-cat{flex-wrap:nowrap}.rg-cat button{white-space:nowrap}.sgl a{padding:7px 12px}}
+/* 통계 카드 → 지표 상세(덮개 링크) */
+.sg-c{position:relative}.sg-go{position:absolute;inset:0;z-index:1;border-radius:inherit}.sg-c .t a,.sg-c .t button{position:relative;z-index:2}
+@media(hover:hover) and (pointer:fine){.sg-c:has(.sg-go):hover{box-shadow:var(--shadow-border-hover)}.sg-c:has(.sg-go):hover .t{color:var(--acc)}a.sg-rl:hover b{text-decoration:underline;text-underline-offset:3px}}
+a.sg-rl{color:inherit}
+/* 통계 홈: 오늘의 그래프 */
+.sq-today{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;background:var(--card);border-radius:var(--r,16px);padding:20px 22px;margin-bottom:26px;color:var(--txt)}
+.sq-today .k{font-size:.8125rem;color:var(--acc);font-weight:600}.sq-today h2{margin:4px 0 6px;font-size:1.375rem;font-weight:400;color:var(--ink)}.sq-today .big{font-size:2.2rem;color:var(--ink)}.sq-today .big small{font-size:.875rem;color:var(--mute);margin-left:4px}
+.sq-today ul{margin:10px 0 0;padding-left:18px;font-size:.9rem;line-height:1.7}.sq-today .ch svg.msv{height:190px}.sq-today a.go2{display:inline-block;margin-top:10px;color:var(--acc);font-weight:600;font-size:.875rem}
+@media(max-width:900px){.sq-today{grid-template-columns:minmax(0,1fr)}.sq-today .ch svg.msv{height:130px}}
+/* 통계 홈 묶음 카드(타일) */
+.tc-a{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:28px}
+.tc-a .tc{display:flex;flex-direction:column;gap:10px;background:var(--card);border-radius:var(--r,16px);padding:18px;color:var(--txt);min-width:0}
+.tc-a .th{display:flex;align-items:center;gap:10px}.tc-a .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}.tc-a .th b{font-size:1.125rem;font-weight:400;color:var(--ink)}
+.tc .kv .lb2{display:block;font-size:.75rem;color:var(--mute)}.tc .kv small:not(.lb2){font-size:.78rem;color:var(--mute);margin-left:2px}.tc-a .kv .v{font-size:1.5rem;color:var(--ink);font-variant-numeric:tabular-nums}.tc-a .kv .v small{display:inline;font-size:.8125rem}.tc-a .kv em{font-style:normal;font-size:.8125rem}
+.tc-a svg.msv{height:46px;margin-top:4px}.tc-a .chips{display:flex;flex-wrap:wrap;gap:4px}.tc-a .chips span{font-size:.72rem;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--txt)}
+.tc-a .ft{margin-top:auto;font-size:.78rem;color:var(--mute);display:flex;justify-content:space-between}.tc-a .ft i{font-style:normal;color:var(--acc)}
+@media(hover:hover) and (pointer:fine){.tc-a .tc:hover{box-shadow:var(--shadow-border-hover)}.tc-a .tc:hover .th b{color:var(--acc)}}
+@media(max-width:1100px){.tc-a{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.tc-a{grid-template-columns:minmax(0,1fr)}}
 /* 공통 버튼 효과음: 기존 머리글 안에서 켜기·끄기 */
 .header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
 #soundToggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}
@@ -554,7 +573,7 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 </main>
 <footer class="wrap"><b>{{ site.name }}</b> · 출처: {{ orgs|join(' · ') }} · 갱신 {{ built }} · <a href="about.html">정보</a> · <a href="feed.xml">RSS</a></footer>
 
-{% if variant %}<nav class="pvsw" aria-label="홈 시안 바꾸기"><span>홈 시안</span>{% for n in ['1', '2', '3', '4', '5'] %}<a href="../v{{ n }}/" class="{{ 'on' if n == preview }}">{{ n }}</a>{% endfor %}<a href="../">목록</a></nav>
+{% if variant %}<nav class="pvsw" aria-label="홈 시안 바꾸기"><span>홈 시안</span>{% for n in ['1', '2', '3', '4', '5'] %}<a href="../v{{ n }}/" class="{{ 'on' if n == preview }}">{{ n }}</a>{% endfor %}<a href="../">목록</a></nav>{% elif preview and stats_layout %}<nav class="pvsw" aria-label="통계 시안 바꾸기"><span>통계 시안</span>{% for n, l in [('a', 'A 카드'), ('b', 'B 목록'), ('c', 'C 대표+목록')] %}<a href="../{{ n }}/{{ page|replace('.html', '') if page.startswith('stats') else 'stats' }}" class="{{ 'on' if n == stats_layout }}">{{ l }}</a>{% endfor %}</nav>
 <style>.pvsw{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:4px;background:#14171a;color:#fff;border-radius:999px;padding:5px 6px 5px 14px;font-size:.8125rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}.pvsw span{margin-right:6px;color:#c8ccc8;white-space:nowrap}.pvsw a{white-space:nowrap}.pvsw a{color:#fff;min-width:32px;height:32px;display:grid;place-items:center;border-radius:999px;padding:0 8px}.pvsw a.on{background:#fff;color:#14171a;font-weight:700}@media(max-width:760px){.pvsw{bottom:10px;padding-left:6px}.pvsw span{display:none}}</style>{% endif %}
 {% include '_sound.html' %}
 <script>

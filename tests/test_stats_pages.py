@@ -19,3 +19,10 @@ def test_clean_urls():
     js = "location.href='market.html?pick='+k;go('./stats-g-'+g+'.html#'+h)"
     assert clean_urls(h) == '<a href="./news?tag=x">a</a><a href="./">h</a><a href="https://kosis.kr/a.html">k</a>'
     assert clean_urls(js) == "location.href='market?pick='+k;go('./stats-g-'+g+'#'+h)"
+
+
+def test_stats_today_picks_biggest_change():
+    def s(v):
+        return {"title": "x", "unit": "명", "se": "Y", "years": [str(2020 + i) for i in range(len(v))], "vals": v}
+    t = build.stats_today({"farms": s([10, 10, 10, 10, 11]), "farm_pop": s([10, 10, 10, 10, 20])})
+    assert t["key"] == "farm_pop" and round(t["p"]) == 100 and "가장 높은" in t["rank"]

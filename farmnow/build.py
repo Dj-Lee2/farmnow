@@ -304,6 +304,10 @@ def price_stats(tickers: dict) -> dict:
             "risers": [r for r in one if r["yoy"] > 0][:5], "fallers": [r for r in reversed(one) if r["yoy"] < 0][:5]}
 
 
+# 통계 홈 묶음 카드: 아이콘·대표 지표·색
+SG_META = {"g-farm": ("🏡", "farm_income", "#e8f3ec"), "g-people": ("👩‍🌾", "farm_pop", "#fdf0e3"), "g-value": ("💰", "pv_total", "#fff6d9"),
+           "g-eco": ("🌱", "eco_area", "#e6f4e1"), "g-climate": ("🌡️", "ghg_agri", "#e6eefb"), "g-price": ("📈", "sell_idx", "#fbe9ea"),
+           "g-land": ("🌾", "area", "#f3efe0"), "g-live": ("🐄", "hanwoo", "#eef0f3")}
 SG_GROUPS = [("g-farm", "농가 살림"), ("g-people", "농업인·일손"), ("g-value", "생산액·소득"), ("g-eco", "친환경·비료·농약"),
              ("g-climate", "기후·토양·온실가스"), ("g-price", "농산물 가격"), ("g-land", "농지·작물·소비"), ("g-live", "축산")]
 _TAG = re.compile(r"<[^>]+>")
@@ -337,7 +341,7 @@ def stats_pages(env, ctx: dict) -> dict:
         html = re.sub(r'<h3 class="sg-sub"[^>]*>.*?</h3>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
         label = dict(subs)
         heads.append([title, title, page[:-5]])
-        for m in re.finditer(r'<h3 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*<div class="t">(.*?)<a ', html, re.S):
+        for m in re.finditer(r'<h3 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*(?:<a class="sg-go"[^>]*></a>)?<div class="t">(.*?)<a ', html, re.S):
             if m.group(1):
                 heads.append([title, label.get(m.group(1), title), page[:-5]])
             else:
@@ -349,6 +353,23 @@ def stats_pages(env, ctx: dict) -> dict:
         side += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
                  + "".join(f'<option value="{i}">{l}</option>' for i, l in subs) + "</select></label>")
         (SITE / page).write_text(html.replace("<!--SG-SIDE-->", side, 1), encoding="utf-8")
+    # 통계 홈을 묶음별 카드 수·소제목을 넣어 다시 그린다(묶음 카드 시안)
+    if ctx.get("stats_layout"):
+        info = {}
+        for h in heads:
+            g = "g-" + h[2].split("stats-g-")[1] if "stats-g-" in h[2] else None
+            if g:
+                info.setdefault(g, {"subs": [], "n": 0})
+                if h[1] != h[0]:
+                    info[g]["subs"].append(h[1])
+        for c in cards:
+            g = "g-" + heads[c[1]][2].split("stats-g-")[1]
+            info[g]["n"] += 1
+        meta = [(g, t, SG_META[g][0], ctx["kstat"].get(SG_META[g][1]), SG_META[g][2], info.get(g, {"subs": [], "n": 0})) for g, t in SG_GROUPS]
+        (SITE / "stats.html").write_text(clean_urls(hangul_only(tpl.render(page="stats.html", sg_cards=meta, **ctx))), encoding="utf-8")
+    # 지표 상세(한 쪽이 ?k=로 자료를 읽음)
+    series_export(ctx["kstat"])
+    (SITE / "stats-x.html").write_text(clean_urls(hangul_only(env.get_template("stats_x.html").render(page="stats.html", **ctx))), encoding="utf-8")
     # 품목별·지역별 쪽
     titem = env.get_template("stats_item.html")
     rows = [r for r in (ctx.get("tickers") or {}).get("all") or [] if r.get("cls") == "소매"]
@@ -361,6 +382,66 @@ def stats_pages(env, ctx: dict) -> dict:
         encoding="utf-8")
     (SITE / "stats-index.json").write_text(json.dumps({"heads": heads, "cards": cards}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return {"pages": len(SG_GROUPS), "cards": len(cards)}
+
+
+FAM_RE = re.compile(r"^(.+)_(gg|gw|cb|cn|jb|jn|gb|gn|jj)$")
+TODAY_KEYS = ["farm_income", "agri_income", "farms", "farm_pop", "fp_65", "debt", "area", "rice", "rice_cons", "hanwoo", "returnee",
+              "me_total", "me_feed", "agri_ratio", "nonagri_income", "transfer_income", "fz_kr_n", "ci_garlic_inc", "rice_inc", "dairy_net", "hw_net"]
+
+
+def series_export(kstat: dict) -> None:
+    """지표 상세 쪽이 읽는 계열별 작은 JSON(site/stats-data/<key>.json): 값·출처·같은 통계표의 관련 지표·도별 값."""
+    final = SITE / "stats-data"
+    out = SITE / "stats-data.new"
+    shutil.rmtree(out, ignore_errors=True)
+    out.mkdir(parents=True)
+    by_tbl: dict[str, list] = {}
+    fams: dict[str, dict] = {}
+    for k, s in kstat.items():
+        by_tbl.setdefault(s.get("tbl") or "", []).append(k)
+        m = FAM_RE.match(k)
+        if m:
+            fams.setdefault(m.group(1), {})[m.group(2)] = k
+    for k, s in kstat.items():
+        rel = [[r, kstat[r]["title"]] for r in sorted(by_tbl.get(s.get("tbl") or "", []), key=lambda r: kstat[r]["title"]) if r != k][:14]
+        d = {"k": k, "t": s.get("title"), "u": s.get("unit"), "y": s.get("years"), "v": s.get("vals"), "sv": s.get("survey"),
+             "tb": s.get("tbl"), "tn": s.get("tbl_nm"), "org": s.get("org") or ("114" if str(s.get("tbl", "")).startswith("DT_114") else "101"), "se": s.get("se"), "rel": rel}
+        m = FAM_RE.match(k)
+        if m and len(fams.get(m.group(1), {})) >= 8:
+            reg = {}
+            for c, rk in fams[m.group(1)].items():
+                r = kstat[rk]
+                if r.get("vals"):
+                    reg[c] = [rk, r["vals"][-1], r["years"][-1]]
+            d["reg"] = reg
+        (out / f"{k}.json").write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    old = SITE / "stats-data.old"
+    shutil.rmtree(old, ignore_errors=True)
+    if final.exists():
+        final.rename(old)
+    out.rename(final)
+    shutil.rmtree(old, ignore_errors=True)
+
+
+def stats_today(kstat: dict) -> dict | None:
+    """'오늘의 그래프': 핵심 지표 중 최근 1년 변화가 가장 큰 것 하나와 해설 세 문장."""
+    best = None
+    for k in TODAY_KEYS:
+        s = kstat.get(k)
+        if not s or s.get("se") != "Y" or len(s.get("vals") or []) < 5 or not s["vals"][-2]:
+            continue
+        p = (s["vals"][-1] - s["vals"][-2]) / abs(s["vals"][-2]) * 100
+        if best is None or abs(p) > abs(best[1]):
+            best = (k, p)
+    if not best:
+        return None
+    k, p = best
+    s = kstat[k]
+    v = s["vals"]
+    hi, lo = max(v), min(v)
+    rank = "최근 %d년 중 가장 높은 값" % len(v) if v[-1] == hi else "최근 %d년 중 가장 낮은 값" % len(v) if v[-1] == lo else ""
+    long_p = (v[-1] - v[0]) / abs(v[0]) * 100 if v[0] else None
+    return {"key": k, "s": s, "p": p, "rank": rank, "long": long_p}
 
 
 def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn: dict | None = None) -> None:
@@ -390,6 +471,8 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     stp = DATA / "stats.json"
     kraw = json.loads(stp.read_text(encoding="utf-8")) if stp.exists() else {}
     kstat = kraw.get("series", {})
+    for k, ser in kstat.items():      # 템플릿에서 지표 상세 쪽(stats-x?k=…) 링크를 만들 때 쓴다
+        ser["key"] = k
     kstat_at = kraw.get("fetched_at", "")[5:10].replace("-", ".") if kraw.get("fetched_at") else ""
     # 시세·통계를 한 번도 받지 못했으면 그 메뉴는 뺀다
     nav = [n for n in NAV if (n[0] != "stocks.html" or stocks) and (n[0] != "stats.html" or kstat)]
@@ -438,6 +521,7 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         sv_items=statviews.ITEMS,
         top5_js=[{"h": it.headline, "u": f"n-{it.id}.html"} for it in t5],
     )
+    ctx.update(stats_layout=os.environ.get("FARMNOW_STATS_VARIANT", "a"), stats_today=stats_today(kstat) if kstat else None)
     variant = os.environ.get("FARMNOW_HOME_VARIANT", "")      # 홈 시안 미리보기(배포 사이트는 비워 둠)
     ctx.update(home=homeviews.build(tickers, items, stocks, warn), variant=variant,
                preview=variant or os.environ.get("FARMNOW_PREVIEW", ""))

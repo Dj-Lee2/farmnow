@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}지표 — 농업 통계 — {{ site.name }}{% endblock %}
+{% block content %}
+<style>
+.sx-g{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+.sx-main,.sx-side .card{background:var(--card);border-radius:var(--r,16px);padding:20px 22px}
+.sx-side{display:flex;flex-direction:column;gap:14px;position:sticky;top:84px}.sx-side .card{margin:0}
+.sx-hd h1{margin:2px 0 6px;font-size:1.625rem;font-weight:400;color:var(--ink)}.sx-hd small{color:var(--mute)}
+.sx-big{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:10px 0 4px}.sx-big b{font-size:2.4rem;font-weight:400;color:var(--ink);font-variant-numeric:tabular-nums}.sx-big em{font-style:normal;font-size:1rem}
+.sx-sum{margin:6px 0 14px;color:var(--txt);font-size:.9375rem;line-height:1.7}
+.sx-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin:10px 0}
+.sx-ch{position:relative}.sx-ch svg{width:100%;height:320px;display:block;touch-action:pan-y}.sx-tip{position:absolute;top:0;min-width:120px;background:var(--card);border-radius:10px;padding:6px 10px;font-size:.78rem;box-shadow:0 4px 16px oklch(0 0 0 / .12),0 0 0 1px oklch(0 0 0 / .06);opacity:0;pointer-events:none;transition:opacity .12s}.sx-tip.on{opacity:1}
+.sx-tbl{max-height:420px;overflow:auto}.sx-tbl table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.sx-tbl td,.sx-tbl th{padding:7px 10px;border-bottom:1px solid var(--soft);text-align:right}.sx-tbl th:first-child,.sx-tbl td:first-child{text-align:left}
+.sx-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(5,66px);gap:6px;max-width:420px}.sx-map a{border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;justify-content:center;color:var(--ink);font-size:.78rem}.sx-map a b{font-size:.9rem}.sx-map a.dk{color:#fff}.sx-map a.on{outline:2.5px solid var(--ink);outline-offset:2px}
+.sx-meta{display:grid;grid-template-columns:96px 1fr;gap:6px 12px;font-size:.84rem;margin:0}.sx-meta dt{color:var(--mute)}.sx-meta dd{margin:0;color:var(--txt)}
+.sx-rel a{display:block;padding:7px 0;border-bottom:1px solid var(--soft);font-size:.875rem;color:var(--txt)}.sx-rel a:last-child{border:0}
+.sx-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.sx-act a,.sx-act button{font:inherit;font-size:.8125rem;padding:6px 12px;border-radius:999px;border:0;background:var(--soft);color:var(--txt);cursor:pointer}
+@media(hover:hover){.sx-rel a:hover{color:var(--acc)}.sx-act a:hover,.sx-act button:hover{background:var(--line)}}
+@media(max-width:1000px){.sx-g{grid-template-columns:minmax(0,1fr)}.sx-side{position:static}.sx-ch svg{height:240px}}
+</style>
+<div class="wrap page" id="sx">
+ <div class="sgp-crumb"><a href="./stats.html">통계</a> › <span id="sxCrumb">지표</span></div>
+ <div class="sx-g"><section class="sx-main"><div class="sx-hd"><h1 id="sxT">지표를 불러오는 중…</h1><small id="sxS"></small></div>
+  <div class="sx-big"><b id="sxV"></b><em id="sxD"></em></div><p class="sx-sum" id="sxSum"></p>
+  <div class="sx-bar"><div class="ptab" id="sxView"><button type="button" class="on" data-v="ch">그래프</button><button type="button" data-v="tb">표</button><button type="button" data-v="mp" hidden>도별 지도</button></div><div class="ptab" id="sxPer"></div></div>
+  <div data-v="ch" class="sx-ch"><svg id="sxSvg" role="img" aria-label="추이 그래프"></svg><div class="sx-tip" id="sxTip"></div></div>
+  <div data-v="tb" class="sx-tbl" hidden><table><thead><tr><th>시점</th><th>값</th><th>전기 대비</th></tr></thead><tbody id="sxTb"></tbody></table></div>
+  <div data-v="mp" hidden><div class="sx-map" id="sxMap"></div><p class="st" id="sxMapN" style="margin-top:10px"></p></div>
+  <div class="sx-act"><button type="button" id="sxCsv">CSV 내려받기</button><a id="sxKosis" target="_blank" rel="noopener">KOSIS 원표 ↗</a><button type="button" id="sxCopy">주소 복사</button></div>
+ </section>
+ <aside class="sx-side"><div class="card"><div class="sec"><h3 style="font-size:1.05rem">이 지표는</h3></div><dl class="sx-meta" id="sxMeta"></dl></div>
+  <div class="card sx-rel"><div class="sec"><h3 style="font-size:1.05rem">관련 지표</h3><small>같은 통계표</small></div><div id="sxRel"></div></div></aside></div>
+</div>
+{% endblock %}
+{% block scripts %}
+(function(){var k=param('k'),$$=function(i){return document.getElementById(i)};if(!k||!/^[a-z0-9_]+$/.test(k)){$$('sxT').textContent='지표를 찾을 수 없습니다';return}
+ var PROV={gg:['경기',1,2],gw:['강원',1,3],cn:['충남',2,1],cb:['충북',2,2],gb:['경북',2,3],jb:['전북',3,1],gn:['경남',3,3],jn:['전남',4,1],jj:['제주',5,1]};
+ function prd(p){p=String(p);if(p.length===7&&p[4]==='.')return p.slice(2,4)+'년 '+(+p.slice(5))+'월';if(p.length===6)return p.slice(2,4)+'년 '+(+p.slice(4))+'분기';return p+'년'}
+ function num(v,u){if(v==null)return '–';var a=Math.abs(v),f=function(x,d){return x.toLocaleString('ko-KR',{maximumFractionDigits:d,minimumFractionDigits:d})};
+  if(u==='천원'){if(a>=1e9)return f(v/1e9,2)+'조 원';if(a>=1e7)return f(v/1e5,0)+'억 원';if(a>=1e5)return f(v/1e5,2)+'억 원';if(a<100)return f(v*1000,0)+'원';return f(v/10,0)+'만 원'}
+  if(u==='원'){if(a>=1e12)return f(v/1e12,2)+'조 원';if(a>=1e10)return f(v/1e8,0)+'억 원';if(a>=1e8)return f(v/1e8,2)+'억 원';if(a>=1e4)return f(v/1e4,1)+'만 원';return f(v,0)+'원'}
+  if(u==='백만원'){if(a>=1e6)return f(v/1e6,2)+'조 원';if(a>=100)return f(v/100,0)+'억 원';return f(v,0)+'백만 원'}
+  if(a>=1e5&&!/%|=|\//.test(u))return f(v/1e4,1)+'만 '+u;return f(v,a<10?2:a<100?1:0)+(u==='%'?'%':' '+u)}
+ var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+ fetch('./stats-data/'+k+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(D){
+  var Y=D.y||[],V=D.v||[],n=V.length,u=D.u||'',isRate=/%|=|지수|℃|pH/.test(u);document.title=D.t+' — 농업 통계 — 팜나우';
+  $$('sxT').textContent=D.t;$$('sxCrumb').textContent=D.t;$$('sxS').textContent=(D.sv||'')+' · '+prd(Y[0])+'~'+prd(Y[n-1])+' · 단위 '+u;
+  $$('sxV').textContent=num(V[n-1],u);
+  var d=n>1&&V[n-2]!=null?(isRate?V[n-1]-V[n-2]:(V[n-2]?(V[n-1]-V[n-2])/Math.abs(V[n-2])*100:null)):null;
+  var lag=D.se==='Q'?'전 분기':D.se==='M'?'전월':D.se==='F'?'직전 조사':'전년';
+  if(d!=null){$$('sxD').className=d>0?'up':d<0?'down':'';$$('sxD').textContent=lag+' 대비 '+(d>0?'+':'')+d.toFixed(1)+(isRate?'p':'%')}
+  var mx=Math.max.apply(null,V),mn=Math.min.apply(null,V),s=prd(Y[n-1])+' '+num(V[n-1],u)+'.';
+  if(n>2){if(V[n-1]===mx)s+=' 자료가 있는 '+n+'개 시점 중 가장 높습니다.';else if(V[n-1]===mn)s+=' 자료가 있는 '+n+'개 시점 중 가장 낮습니다.';
+   var hi=Y[V.indexOf(mx)],lo=Y[V.indexOf(mn)];s+=' 가장 높았던 때는 '+prd(hi)+'('+num(mx,u)+'), 가장 낮았던 때는 '+prd(lo)+'('+num(mn,u)+')입니다.'}
+  $$('sxSum').textContent=s;
+  var per=$$('sxPer'),opts=[];if(n>5)opts.push(['5',5]);if(n>10)opts.push(['10',10]);opts.push(['전체',n]);var cur=opts[opts.length-1][1];
+  per.innerHTML=opts.map(function(o,i){return '<button type="button" data-n="'+o[1]+'" class="'+(i===opts.length-1?'on':'')+'">'+(o[0]==='전체'?'전체':('최근 '+o[0]+(D.se==='Q'?'분기':D.se==='M'?'달':'년')))+'</button>'}).join('');
+  per.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(per.children,function(x){x.classList.toggle('on',x===b)});cur=+b.dataset.n;draw()});
+  var svg=$$('sxSvg'),tip=$$('sxTip'),G=null;
+  function draw(){var ys=Y.slice(n-cur),vs=V.slice(n-cur),m=vs.length,W=svg.clientWidth||700,H=svg.clientHeight||320,L=64,R=34,T=14,B=30;svg.setAttribute('viewBox','0 0 '+W+' '+H);
+   var a=Math.min.apply(null,vs),b=Math.max.apply(null,vs),sp=(b-a)||Math.abs(b)*.1||1;a-=sp*.1;b+=sp*.1;if(a>0&&a<sp*.6)a=0;
+   var x=function(i){return m<2?W/2:L+(W-L-R)*i/(m-1)},y=function(v){return T+(H-T-B)*(b-v)/(b-a)},s='';
+   for(var g=0;g<5;g++){var gv=a+(b-a)*g/4,gy=y(gv);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+gy+'" y2="'+gy+'" stroke="#eee"/><text x="'+(L-8)+'" y="'+(gy+4)+'" font-size="11" text-anchor="end" fill="#999">'+esc(num(gv,u))+'</text>'}
+   if(a<0&&b>0)s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(0)+'" y2="'+y(0)+'" stroke="#bbb" stroke-dasharray="3 3"/>';
+   var step=Math.max(1,Math.ceil(m/(W/90)));for(var i=0;i<m;i+=step)s+='<text x="'+x(i)+'" y="'+(H-8)+'" font-size="11" text-anchor="middle" fill="#999">'+esc(prd(ys[i]))+'</text>';
+   var pts=vs.map(function(v,i){return x(i)+','+y(v)}).join(' ');s+='<polygon points="'+x(0)+','+(H-B)+' '+pts+' '+x(m-1)+','+(H-B)+'" fill="#1c7a45" fill-opacity=".08"/><polyline points="'+pts+'" fill="none" stroke="#1c7a45" stroke-width="2.4" stroke-linejoin="round"/>';
+   vs.forEach(function(v,i){if(m<=24||i===m-1)s+='<circle cx="'+x(i)+'" cy="'+y(v)+'" r="'+(i===m-1?5:3)+'" fill="'+(i===m-1?'#1c7a45':'#fff')+'" stroke="#1c7a45" stroke-width="2"/>'});
+   s+='<line id="sxG" y1="'+T+'" y2="'+(H-B)+'" stroke="#1d1f1c" stroke-opacity=".25" opacity="0"/>';svg.innerHTML=s;G={x:x,ys:ys,vs:vs,W:W}}
+  draw();var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(draw,120)});
+  function mv(e){if(!G)return;var r=svg.getBoundingClientRect(),cx=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*G.W/r.width,best=0,bd=1e9;G.ys.forEach(function(_,i){var dd=Math.abs(G.x(i)-cx);if(dd<bd){bd=dd;best=i}});
+   var g=$$('sxG');g.setAttribute('x1',G.x(best));g.setAttribute('x2',G.x(best));g.setAttribute('opacity',1);tip.innerHTML='<b>'+esc(prd(G.ys[best]))+'</b><br>'+esc(num(G.vs[best],u));tip.classList.add('on');var px=G.x(best)*r.width/G.W;tip.style.left=Math.max(0,Math.min(px-60,r.width-tip.offsetWidth))+'px'}
+  svg.addEventListener('pointermove',mv);svg.addEventListener('touchstart',mv,{passive:true});svg.addEventListener('pointerleave',function(){tip.classList.remove('on');var g=$$('sxG');if(g)g.setAttribute('opacity',0)});
+  $$('sxTb').innerHTML=Y.map(function(p,i){var c=i>0&&V[i-1]!=null?(isRate?V[i]-V[i-1]:(V[i-1]?(V[i]-V[i-1])/Math.abs(V[i-1])*100:null)):null;return '<tr><td>'+esc(prd(p))+'</td><td>'+esc(num(V[i],u))+'</td><td class="'+(c>0?'up':c<0?'down':'')+'">'+(c==null?'–':(c>0?'+':'')+c.toFixed(1)+(isRate?'p':'%'))+'</td></tr>'}).reverse().join('');
+  if(D.reg){var mb=document.querySelector('#sxView [data-v="mp"]');mb.hidden=false;var vals=Object.keys(D.reg).map(function(c){return D.reg[c][1]}),lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals),me=(k.match(/_(gg|gw|cb|cn|jb|jn|gb|gn|jj)$/)||[])[1];
+   $$('sxMap').innerHTML=Object.keys(PROV).map(function(c){var p=PROV[c],o=D.reg[c];if(!o)return '<span style="grid-row:'+p[1]+';grid-column:'+p[2]+'"></span>';var t=hi>lo?(o[1]-lo)/(hi-lo):.5;
+    return '<a href="./stats-x.html?k='+o[0]+'" class="'+(t>.5?'dk ':'')+(c===me?'on':'')+'" style="grid-row:'+p[1]+';grid-column:'+p[2]+';background:color-mix(in oklab,#1c7a45 '+Math.round(12+t*78)+'%,white)"><b>'+p[0]+'</b>'+esc(num(o[1],u))+'</a>'}).join('');
+   $$('sxMapN').textContent='각 도의 가장 최근 값 · 칸을 누르면 그 도의 지표로 갑니다'}
+  $$('sxView').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});[].forEach.call(document.querySelectorAll('.sx-main>[data-v]'),function(el){el.hidden=el.dataset.v!==b.dataset.v});if(b.dataset.v==='ch')draw()});
+  $$('sxKosis').href='https://kosis.kr/statHtml/statHtml.do?orgId='+encodeURIComponent(D.org)+'&tblId='+encodeURIComponent(D.tb||'');
+  $$('sxCsv').onclick=function(){var c='﻿시점,값('+u+')\n'+Y.map(function(p,i){return p+','+V[i]}).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/csv'}));a.download=k+'.csv';a.click()};
+  $$('sxCopy').onclick=function(){try{navigator.clipboard.writeText(location.href);this.textContent='복사했습니다'}catch(e){}};
+  $$('sxMeta').innerHTML='<dt>조사</dt><dd>'+esc(D.sv||'–')+'</dd><dt>통계표</dt><dd>'+esc(D.tn||D.tb||'–')+'</dd><dt>주기</dt><dd>'+({Y:'해마다',Q:'분기마다',M:'달마다',F:'2년마다'}[D.se]||'–')+'</dd><dt>단위</dt><dd>'+esc(u)+'</dd><dt>기간</dt><dd>'+esc(prd(Y[0]))+' ~ '+esc(prd(Y[n-1]))+' ('+n+'개 시점)</dd><dt>출처</dt><dd>국가데이터처 KOSIS</dd>';
+  $$('sxRel').innerHTML=(D.rel||[]).map(function(r){return '<a href="./stats-x.html?k='+r[0]+'">'+esc(r[1])+'</a>'}).join('')||'<p class="st">같은 통계표의 다른 지표가 없습니다.</p>';
+ }).catch(function(){$$('sxT').textContent='지표를 찾을 수 없습니다'})})();
+{% endblock %}

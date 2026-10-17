@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if preview %}<meta name="robots" content="noindex,nofollow">{% endif %}
 <title>{% block title %}{{ site.name }} — {{ site.tagline }}{% endblock %}</title>
 <meta name="description" content="농림축산식품부·농촌진흥청·기상청·aT 공공데이터로 만드는 농업 속보. 기상특보, 가격, 공고, 입법예고, 병해충 발생정보.">
 <meta name="theme-color" content="#1c7a45">
@@ -553,6 +554,8 @@ a.nw{display:block;padding:9px 0;border-bottom:1px solid var(--soft)}a.nw:last-c
 </main>
 <footer class="wrap"><b>{{ site.name }}</b> · 출처: {{ orgs|join(' · ') }} · 갱신 {{ built }} · <a href="about.html">정보</a> · <a href="feed.xml">RSS</a></footer>
 
+{% if variant %}<nav class="pvsw" aria-label="홈 시안 바꾸기"><span>홈 시안</span>{% for n in ['1', '2', '3', '4', '5'] %}<a href="../v{{ n }}/" class="{{ 'on' if n == preview }}">{{ n }}</a>{% endfor %}<a href="../">목록</a></nav>
+<style>.pvsw{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:4px;background:#14171a;color:#fff;border-radius:999px;padding:5px 6px 5px 14px;font-size:.8125rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}.pvsw span{margin-right:6px;color:#c8ccc8;white-space:nowrap}.pvsw a{white-space:nowrap}.pvsw a{color:#fff;min-width:32px;height:32px;display:grid;place-items:center;border-radius:999px;padding:0 8px}.pvsw a.on{background:#fff;color:#14171a;font-weight:700}@media(max-width:760px){.pvsw{bottom:10px;padding-left:6px}.pvsw span{display:none}}</style>{% endif %}
 {% include '_sound.html' %}
 <script>
 var TOP5={{ top5_js|default([])|tojson }};
@@ -574,7 +577,7 @@ var ri=0;function rollIssue(){if(TOP5.length<2)return;ri=(ri+1)%TOP5.length;var 
  var el=$('roll');if(!el||(pill&&pill.classList.contains('edit')))return;el.classList.add('sw');setTimeout(function(){el.textContent=t.h;if(el.tagName==='A')el.href=t.u;el.classList.remove('sw')},150);}
 setInterval(rollIssue,4000);
 /* 검색·필터: 타임라인(#tl)이 있는 쪽에서는 바로 거르고, 없는 쪽에서는 속보로 이동. ?tag= 는 태그 정확 일치 */
-var cat='all',shown=30,q=$('q'),pill=$('pill'),TAG='';
+var cat='all',shown=30,q=$('q'),pill=$('pill'),TAG='',SRC='';
 function param(k){var m=location.search.match(new RegExp('[?&]'+k+'=([^&]*)'));if(!m)return '';try{return decodeURIComponent(m[1].replace(/\+/g,' '))}catch(e){return m[1]}}
 function setUrl(){if(!$('tl')||!history.replaceState)return;var v=q.value.trim();history.replaceState(null,'',TAG?'news.html?tag='+encodeURIComponent(TAG):v?'news.html?q='+encodeURIComponent(v):'news.html')}
 function goQ(){var v=q.value.trim();if(!v){q.focus();return}if($('tl')){TAG='';shown=30;apply();setUrl()}else location.href='news.html?q='+encodeURIComponent(v)}
@@ -586,9 +589,9 @@ if(pill){$('lens').onclick=function(){if(pill.classList.contains('edit'))goQ();e
 function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCase(),n=0,per={};
  document.querySelectorAll('#tl .item').forEach(function(el){var hit=TAG?el.dataset.tags.indexOf('|'+TAG+'|')>=0:(!v||el.dataset.text.indexOf(v)>=0);
   if(hit)per[el.dataset.cat]=(per[el.dataset.cat]||0)+1;
-  var ok=hit&&(cat==='all'||el.dataset.cat===cat);if(ok)n++;el.classList.toggle('hide',!ok||n>shown);});
+  var ok=hit&&(cat==='all'||('|'+cat+'|').indexOf('|'+el.dataset.cat+'|')>=0)&&(!SRC||el.dataset.src===SRC);if(ok)n++;el.classList.toggle('hide',!ok||n>shown);});
  var all=0;for(var k in per)all+=per[k];
- document.querySelectorAll('.tabs button[data-cat]').forEach(function(b){var c=b.dataset.cat,i=b.querySelector('i');if(i)i.textContent=c==='all'?all:(per[c]||0)});
+ document.querySelectorAll('.tabs button[data-cat]').forEach(function(b){var c=b.dataset.cat,i=b.querySelector('i');if(i)i.textContent=c==='all'?all:c.split('|').reduce(function(s,k){return s+(per[k]||0)},0)});
  if($('more')){$('more').style.display=n>shown?'block':'none';$('more').textContent='더보기 ('+(n-shown)+'건)'}
  if($('count'))$('count').textContent=n+'건';
  if($('tl-empty'))$('tl-empty').hidden=n>0;

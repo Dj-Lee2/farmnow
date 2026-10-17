@@ -12,7 +12,7 @@ from pathlib import Path
 
 from markupsafe import Markup
 
-from . import statviews
+from . import homeviews, statviews
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .model import NewsItem
@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 DATA = ROOT / "data"
 WEEKDAY = "월화수목금토일"
-NAV = [("index.html", "홈"), ("news.html", "속보"), ("releases.html", "기관발표"), ("market.html", "시세"), ("stocks.html", "국제·증시"),
+NAV = [("index.html", "홈"), ("news.html", "소식"), ("market.html", "시세"), ("stocks.html", "국제·증시"),
        ("stats.html", "통계"), ("alerts.html", "발령"), ("brief.html", "브리핑"), ("about.html", "정보")]
 CATEGORIES = [("all", "전체"), ("weather", "특보"), ("price", "가격"), ("legislation", "정책·법령"),
               ("subsidy_notice", "공고"), ("org_release", "보도·설명"), ("pest", "병해충"), ("tech_research", "기술")]
@@ -438,6 +438,9 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         sv_items=statviews.ITEMS,
         top5_js=[{"h": it.headline, "u": f"n-{it.id}.html"} for it in t5],
     )
+    variant = os.environ.get("FARMNOW_HOME_VARIANT", "")      # 홈 시안 미리보기(배포 사이트는 비워 둠)
+    ctx.update(home=homeviews.build(tickers, items, stocks, warn), variant=variant,
+               preview=variant or os.environ.get("FARMNOW_PREVIEW", ""))
     SITE.mkdir(exist_ok=True)
     brief_md = env.get_template("brief.md").render(**ctx)
     brief_md = hangul_only(brief_md)
@@ -446,11 +449,16 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     ctx["brief_text"] = brief_md
     (SITE / "feed.xml").write_text(hangul_only(env.get_template("feed.xml").render(**ctx)), encoding="utf-8")
     for page, _ in NAV:
-        (SITE / page).write_text(clean_urls(hangul_only(env.get_template(page).render(page=page, **ctx))), encoding="utf-8")
+        tname = f"home_v{variant}.html" if variant and page == "index.html" else page
+        (SITE / page).write_text(clean_urls(hangul_only(env.get_template(tname).render(page=page, **ctx))), encoding="utf-8")
     for old in list(SITE.glob("stats-g-*.html")) + list(SITE.glob("stats-i-*.html")):
         old.unlink()
     if kstat:
         stats_pages(env, ctx)
+    # 기관발표는 소식에 합쳤다 — 옛 주소는 '정부 발표' 탭으로 넘긴다
+    (SITE / "releases.html").write_text(
+        '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>소식으로 옮겼습니다</title>'
+        '<meta http-equiv="refresh" content="0;url=./news?type=release"><a href="./news?type=release">소식 · 정부 발표로 이동</a>', encoding="utf-8")
     (SITE / "404.html").write_text(clean_urls(hangul_only(env.get_template("404.html").render(page="404.html", **ctx))), encoding="utf-8")
     for old in list(SITE.glob("n-*.html")) + list(SITE.glob("s-*.html")):
         old.unlink()

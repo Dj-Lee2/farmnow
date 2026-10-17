@@ -1,0 +1,24 @@
+{# 홈 시안(home_v1~5) 공통: 작은 그림 매크로와 hv- 접두 스타일 #}
+{% macro sp(vals, w=120, h=30, col='#1c7a45') %}{% set v = vals|select('number')|list %}{% if v|length > 1 %}{% set mn = v|min %}{% set mx = v|max %}{% set rng = (mx - mn) or 1 %}<svg class="hv-sp" viewBox="0 0 {{ w }} {{ h }}" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="{{ col }}" stroke-width="2" vector-effect="non-scaling-stroke" points="{% for x in v %}{{ '%.1f'|format(loop.index0 * w / (v|length - 1)) }},{{ '%.1f'|format(h - 3 - (x - mn) / rng * (h - 6)) }} {% endfor %}"/></svg>{% endif %}{% endmacro %}
+{% macro tone(v) %}{{ 'up' if v and v > 0 else 'down' if v and v < 0 else 'fl' }}{% endmacro %}
+{% macro lbc(it) %}{{ 'al' if it.category == 'weather' else 'pr' if it.category == 'price' else 'no' if it.category in ('subsidy_notice', 'legislation') else 'or' }}{% endmacro %}
+{% macro news(it, cls='hv-ni', body=false) %}<a class="{{ cls }}" href="./n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span><b>{{ it.headline }}</b>{% if body and it.body %}<p>{{ it.body[:110] }}</p>{% endif %}<small>{{ it.source_name }} · {{ it|ftime }}</small></a>{% endmacro %}
+{% macro idx(h) %}<div class="hv-idx">{% for c in h.idx %}<a class="hv-ix" href="./{{ c.href }}"><small>{{ c.name }}</small><b>{{ c.val }}</b><em class="{{ tone(c.pct) }}">{{ c.pct|pct }}</em>{{ sp(c.spark, 120, 30, '#d23a32' if (c.pct or 0) > 0 else '#2458d6') }}</a>{% endfor %}</div>{% endmacro %}
+{% macro watch(h, title='관심 품목') %}<section class="hv-pane"><div class="hv-ph"><h3>{{ title }}</h3><a href="./market.html">시세 →</a></div>{% for r in h.watch %}<a class="hv-wt" href="./market.html?pick={{ r.key }}"><span class="ic">{{ r.e }}</span><span class="nm">{{ r.disp }}</span><span class="pr">{{ r.price|won }}<em class="{{ tone(r.pct) }}">{{ r.pct|pct }}</em></span></a>{% endfor %}</section>{% endmacro %}
+<style>
+.hv{--hv-r:var(--r,16px);--hv-sh:none;--hv-up:var(--up);--hv-dn:var(--down);--hv-acc:var(--acc);--hv-accbg:var(--acc-bg)}
+.hv .up{color:var(--hv-up)}.hv .down{color:var(--hv-dn)}.hv .fl{color:var(--mute)}
+.hv-pane{background:var(--card);border-radius:var(--hv-r);padding:20px;box-shadow:var(--hv-sh);min-width:0}
+.hv-ph{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-bottom:12px}.hv-ph h2{margin:0;font-size:1.25rem;font-weight:400;color:var(--ink)}.hv-ph h3{margin:0;font-size:1.125rem;font-weight:400;color:var(--ink)}.hv-ph small{color:var(--mute);font-size:.8125rem}.hv-ph>a{margin-left:auto;color:var(--mute);font-size:.8125rem}.hv-ph .hv-seg{margin-left:auto}
+.hv-seg{margin-bottom:10px;max-width:100%}
+.hv-lb{display:inline-block;font-size:.6875rem;font-weight:700;padding:2px 7px;border-radius:6px;margin-right:6px;vertical-align:1px;background:var(--hv-accbg);color:var(--hv-acc)}.hv-lb.al{background:#fdebe9;color:#c22a20}.hv-lb.pr{background:#e9eefc;color:#2347a8}.hv-lb.no{background:#fff2de;color:#a05c00}
+.hv-ni{display:block;padding:11px 0;border-bottom:1px solid var(--soft);color:var(--ink)}.hv-ni:last-child{border:0}.hv-ni b{font-weight:500;color:var(--ink)}.hv-ni p{margin:4px 0 0;color:var(--mute);font-size:.84rem;line-height:1.55}.hv-ni small{display:block;color:var(--mute);font-size:.75rem;margin-top:2px}
+.hv-sp{display:block;width:100%}
+.hv-idx{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:4px 0 18px}
+.hv-ix{display:flex;flex-direction:column;background:var(--card);border-radius:var(--hv-r);padding:16px 18px 12px;box-shadow:var(--hv-sh);color:var(--ink)}.hv-ix small{color:var(--mute);font-size:.8125rem}.hv-ix b{font-size:1.5rem;font-weight:400;margin-top:2px;font-variant-numeric:tabular-nums}.hv-ix em{font-style:normal;font-size:.8125rem}.hv-ix .hv-sp{height:30px;margin-top:6px}
+.hv-side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.hv-wt{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--soft);color:var(--ink)}.hv-wt:last-child{border:0}.hv-wt .ic{font-size:1.25rem;text-align:center}.hv-wt .nm{font-weight:500;font-size:.875rem}.hv-wt .pr{text-align:right;font-weight:500;font-size:.875rem;font-variant-numeric:tabular-nums}.hv-wt .pr em{display:block;font-style:normal;font-size:.75rem}
+@media(hover:hover){.hv a.hv-ni:hover b,.hv a.hv-wt:hover .nm{text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:1100px){.hv-idx{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.hv-idx{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px 14px;padding:2px 16px}.hv-ix{flex:0 0 46%;scroll-snap-align:start}.hv-ix b{font-size:1.25rem}}
+</style>

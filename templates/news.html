@@ -1,30 +1,58 @@
 {% extends "base.html" %}
-{% block title %}속보 — {{ site.name }}{% endblock %}
+{% block title %}소식 — {{ site.name }}{% endblock %}
 {% block content %}
+{% set rel_group = 'org_release|stats|legislation|subsidy_notice|tech_research' %}
+{% set ic = {'weather': '🌧️', 'price': '💰', 'legislation': '⚖️', 'subsidy_notice': '📢', 'org_release': '🏛️', 'stats': '📊', 'pest': '🐛', 'tech_research': '🔬'} %}
+<style>
+.px-g{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+.px-brief{background:var(--card);border-radius:var(--r,16px);padding:20px;margin-bottom:16px}
+.px-brief h2{margin:0 0 10px;font-size:1.125rem;font-weight:400;color:var(--ink)}.px-brief h2 i{font-style:normal;color:var(--acc);margin-right:4px}.px-brief h2 small{color:var(--mute);font-weight:400;font-size:.8rem;margin-left:8px}
+.px-brief ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;line-height:1.6}.px-brief li::marker{color:var(--acc)}.px-brief li a{color:var(--ink)}.px-brief li small{color:var(--mute);margin-left:6px;font-size:.75rem}
+.px-brief .cnt{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.px-brief .cnt span{font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--txt)}
+.px-top{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:20px}.px-top>div{display:flex;flex-direction:column;gap:14px}
+.px-hero,.px-sub{display:block;border-radius:var(--r,16px);background:var(--card);overflow:hidden;color:var(--ink)}
+.px-hero .art{height:150px;display:grid;place-items:center;font-size:64px}.px-sub .art{height:64px;display:flex;align-items:center;padding:0 16px;font-size:30px}
+.art.weather{background:linear-gradient(135deg,#dfe9fb,#c7d9f6)}.art.price{background:linear-gradient(135deg,#fde7e5,#f8cfca)}.art.subsidy_notice{background:linear-gradient(135deg,#fff1dc,#fde2b7)}.art.legislation{background:linear-gradient(135deg,#ece8fb,#dad2f6)}.art.org_release,.art.stats,.art.tech_research{background:linear-gradient(135deg,#e2f2e8,#c9e6d4)}.art.pest{background:linear-gradient(135deg,#f0f3d8,#e1e8b6)}
+.px-hero .tx,.px-sub .tx{padding:14px 18px 16px}.px-hero h3{margin:6px 0;font-size:1.25rem;font-weight:400;line-height:1.45}.px-sub h3{margin:6px 0 2px;font-size:1rem;font-weight:500;line-height:1.45}.px-hero p{margin:0;color:var(--txt);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.px-hero small,.px-sub small{color:var(--mute);font-size:.75rem}
+.px-bar{position:sticky;top:64px;z-index:5;background:var(--bg);padding:8px 0;margin-bottom:6px}.px-bar .tabs{margin:0}
+#tl .day{margin:18px 0 8px;font-size:.84rem;color:var(--mute);font-weight:600}
+#tl .px-it{display:block;grid-template-columns:none;background:var(--card);border-radius:var(--r,16px);padding:16px 20px;margin:0 0 10px;border:0;box-shadow:none}#tl .px-it.hide{display:none}#tl .px-it>*{grid-column:auto;min-width:0}
+.px-src{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--mute);margin-bottom:6px}.px-src b{color:var(--txt);font-weight:500}.px-src time{margin-left:auto}.px-av{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--soft);font-size:.8rem}
+.px-h{display:block;font-weight:500;font-size:1rem;line-height:1.45;color:var(--ink)}.px-b{margin:6px 0 0;color:var(--txt);font-size:.88rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.px-meta{display:flex;gap:12px;margin-top:8px;font-size:.78rem;color:var(--mute)}.px-meta a{color:var(--acc);font-weight:500}.px-it .tags{margin-top:8px}
+.px-side{position:sticky;top:84px;display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 100px);overflow-y:auto}
+.px-side .card{margin:0}.px-srcl button{display:flex;width:100%;justify-content:space-between;align-items:center;border:0;background:none;padding:8px 10px;border-radius:10px;font:inherit;font-size:.875rem;color:var(--txt);cursor:pointer;text-align:left}.px-srcl button.on{background:var(--acc-bg);color:var(--acc);font-weight:600}.px-srcl button i{font-style:normal;color:var(--mute);font-size:.75rem}
+.px-srcl small{display:block;margin:8px 10px 0;font-size:.72rem;color:var(--mute)}.px-srcl small a{color:var(--mute);text-decoration:underline}
+.px-w{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--soft);font-size:.86rem;color:var(--ink)}.px-w:last-child{border:0}.px-w em{font-style:normal;font-weight:500;font-size:.78rem;text-align:right}
+@media(hover:hover){.px-h:hover,.px-hero:hover h3,.px-sub:hover h3{text-decoration:underline;text-underline-offset:3px}.px-srcl button:not(.on):hover{background:var(--soft)}}
+@media(max-width:760px){.px-bar .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}.px-bar .tabs button{flex:0 0 auto}}
+@media(max-width:1000px){.px-g{grid-template-columns:minmax(0,1fr)}.px-side{position:static;max-height:none}.px-top{grid-template-columns:1fr}}
+</style>
 <div class="wrap page">
- <div class="page-hd"><h1>속보</h1><small id="count">{{ items|length }}건</small></div>
- <div class="two">
-  <section>
-   <div class="tabs">{% for k,v in categories %}{% if k=='all' or tab_counts[k] %}<button type="button" data-cat="{{ k }}" class="{{ 'on' if k=='all' }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div>
-   <div id="tl">
-   {% for d in days %}
-    <div class="day" data-date="{{ d.date }}">{{ d.label }}</div>
-    {% for it in d['items'] %}{% include "_item.html" %}{% endfor %}
-   {% endfor %}
-   </div>
-   <p class="empty" id="tl-empty" hidden>검색 결과 없음 · <a href="#" onclick="return clearQ()">전체 보기</a></p>
-   <button class="more" id="more" type="button" onclick="showMore()">더보기</button>
-  </section>
-  <aside>
-   <div class="card">
-    <div class="sec"><h3 style="font-size:1.143rem">오늘의 핵심</h3></div>
-    {% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}
-   </div>
-   {% if trend %}<div class="card"><div class="sec"><h3 style="font-size:1.143rem">태그</h3><small>최근 {{ trend_hours }}시간</small></div>
-    <div class="tags">{% for t in trend %}<a class="coin ev" href="news.html?tag={{ t.q|urlencode }}"><i>#</i>{{ t.label[1:] }} <span class="u">{{ t.n }}</span></a>{% endfor %}</div>
-   </div>{% endif %}
-   <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a></div></div>
-  </aside>
- </div>
+ <div class="page-hd"><h1>소식</h1><small id="count">{{ items|length }}건</small><small>정부 발표·공고·특보·시세·병해충을 한곳에</small></div>
+ <div class="px-g"><section>
+  <div class="px-brief"><h2><i>✦</i>오늘의 핵심<small>중요도·최신순으로 고른 {{ top5|length }}건</small></h2><ol>{% for it in top5 %}<li><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></li>{% endfor %}</ol>
+   <div class="cnt"><span>특보 {{ tab_counts['weather'] or 0 }}</span><span>정부 발표 {{ (tab_counts['org_release'] or 0) + (tab_counts['legislation'] or 0) + (tab_counts['tech_research'] or 0) }}</span><span>공고 {{ tab_counts['subsidy_notice'] or 0 }}</span><span>가격 {{ tab_counts['price'] or 0 }}</span><span>병해충 {{ tab_counts['pest'] or 0 }}</span></div></div>
+  {% set feat = top5[:3] %}{% if feat %}<div class="px-top">
+   {% set it = feat[0] %}<a class="px-hero" href="n-{{ it.id }}.html"><div class="art {{ it.category }}">{{ ic.get(it.category, '📰') }}</div><div class="tx"><span class="lb {{ it.severity }}">{{ it.label }}</span><h3>{{ it.headline }}</h3>{% if it.body %}<p>{{ it.body }}</p>{% endif %}<small>{{ it.source_name }} · {{ it|ftime }}</small></div></a>
+   <div>{% for it in feat[1:] %}<a class="px-sub" href="n-{{ it.id }}.html"><div class="art {{ it.category }}">{{ ic.get(it.category, '📰') }}</div><div class="tx"><span class="lb {{ it.severity }}">{{ it.label }}</span><h3>{{ it.headline }}</h3><small>{{ it.source_name }} · {{ it|ftime }}</small></div></a>{% endfor %}</div></div>{% endif %}
+  <div class="px-bar"><div class="tabs" id="pxTabs"><button type="button" data-cat="all" class="on" onclick="setCat('all',this)">전체<i>{{ tab_counts['all'] }}</i></button><button type="button" data-cat="{{ rel_group }}" data-k="release" onclick="setCat(this.dataset.cat,this)">정부 발표<i></i></button>{% for k,v in categories %}{% if k != 'all' and tab_counts[k] %}<button type="button" data-cat="{{ k }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div></div>
+  <div id="tl">{% for d in days %}<div class="day" data-date="{{ d.date }}">{{ d.label }}</div>{% for it in d['items'] %}{% include "_item_px.html" %}{% endfor %}{% endfor %}</div>
+  <p class="empty" id="tl-empty" hidden>찾는 소식이 없습니다 · <a href="#" onclick="SRC='';return clearQ()">전체 보기</a></p>
+  <button class="more" id="more" type="button" onclick="showMore()">더보기</button>
+ </section>
+ <aside class="px-side">
+  {% set srcs = items|map(attribute='source_id')|unique|list %}
+  <div class="card px-srcl"><div class="sec"><h3 style="font-size:1.05rem">출처</h3></div><button type="button" class="on" data-src="">전체<i>{{ items|length }}</i></button>{% for sid in srcs %}<button type="button" data-src="{{ sid }}">{{ sources_cfg[sid].name if sources_cfg[sid] else sid }}<i>{{ items|selectattr('source_id','equalto',sid)|list|length }}</i></button>{% endfor %}
+   <small>원래 게시판: {% for sid in srcs if sources_cfg[sid] and (sources_cfg[sid].home_url or sources_cfg[sid].url) %}<a href="https://{{ (sources_cfg[sid].home_url or sources_cfg[sid].url)|hp }}" target="_blank" rel="noopener">{{ sources_cfg[sid].name }}</a>{{ ' · ' if not loop.last }}{% endfor %}</small></div>
+  {% if trend %}<div class="card"><div class="sec"><h3 style="font-size:1.05rem">많이 나온 태그</h3><small>최근 {{ trend_hours }}시간</small></div><div class="tags">{% for t in trend %}<a class="coin ev" href="news.html?tag={{ t.q|urlencode }}"><i>#</i>{{ t.label[1:] }} <span class="u">{{ t.n }}</span></a>{% endfor %}</div></div>{% endif %}
+  {% if home %}<div class="card"><div class="sec"><h3 style="font-size:1.05rem">오늘 시세</h3><small><a href="market.html">시세 →</a></small></div>{% for r in home.watch %}<a class="px-w" href="market.html?pick={{ r.key }}"><span>{{ r.e }}</span><span>{{ r.disp }}</span><em class="{{ 'up' if r.pct > 0 else 'down' if r.pct < 0 else '' }}">{{ r.price|won }}원<br>{{ r.pct|pct }}</em></a>{% endfor %}</div>{% endif %}
+  <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a></div></div>
+ </aside></div>
 </div>
+{% endblock %}
+{% block scripts %}
+(function(){var L=document.querySelector('.px-srcl');if(!L)return;function setSrc(s){SRC=s;[].forEach.call(L.querySelectorAll('button'),function(b){b.classList.toggle('on',b.dataset.src===s)});shown=30;apply()}
+ L.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setSrc(b.dataset.src)});
+ var t=param('type'),s=param('src');if(t==='release'){var b=document.querySelector('#pxTabs button[data-k="release"]');if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s)})();
 {% endblock %}

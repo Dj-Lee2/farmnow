@@ -170,7 +170,7 @@
     </tbody></table>
    </div>{% endif %}
    {% if latest_by_board %}<div class="card">
-    <div class="sec"><h3>기관 발표</h3><a class="go" href="releases.html">전체 →</a></div>
+    <div class="sec"><h3>기관 발표</h3><a class="go" href="news.html?type=release">전체 →</a></div>
     <div class="org-l">{% for it in latest_by_board %}<a href="n-{{ it.id }}.html"><span class="org">{{ it.source_name }}</span><div class="h">{{ it.headline }}</div><span class="d">{{ it|ftime }}</span></a>{% endfor %}</div>
    </div>{% endif %}
    {% if failed %}<p class="st"><span class="bad">수집 실패</span> {{ failed|join(', ') }}</p>{% endif %}

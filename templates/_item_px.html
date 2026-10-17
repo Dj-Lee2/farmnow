@@ -1,0 +1,9 @@
+{# 소식 쪽 카드(Perplexity 스타일). data-* 는 base.html의 거르기·검색이 쓴다 #}
+{% set ic = {'weather': '🌧️', 'price': '💰', 'legislation': '⚖️', 'subsidy_notice': '📢', 'org_release': '🏛️', 'stats': '📊', 'pest': '🐛', 'tech_research': '🔬'} %}
+<article class="item px-it" id="i-{{ it.id }}" data-cat="{{ it|tab }}" data-src="{{ it.source_id }}" data-tags="|{{ (it.tags_items + it.tags_events + it.tags_regions)|join('|') }}|" data-text="{{ (it.headline ~ ' ' ~ it.body ~ ' ' ~ (it.tags_items|join(' ')) ~ ' ' ~ (it.tags_events|join(' ')) ~ ' ' ~ (it.tags_regions|join(' ')) ~ ' ' ~ it.source_name ~ ' ' ~ it.label)|lower }}">
+ <div class="px-src"><span class="px-av">{{ ic.get(it.category, '📰') }}</span><b>{{ it.source_name }}</b><time datetime="{{ it.event_time.isoformat() }}">{{ it|ftime }}</time></div>
+ <a class="px-h" href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a>
+ {% if it.body %}<p class="px-b">{{ it.body }}</p>{% endif %}
+ {% include "_tags.html" %}
+ <div class="px-meta">{% if it.expires_at %}<span>{{ it.expires_at.strftime('%m.%d') }}까지</span>{% endif %}{% if it.extra.market_key %}<a href="market.html?pick={{ it.extra.market_key }}">시세 보기</a>{% endif %}<a href="https://{{ it.url|hp }}" target="_blank" rel="noopener">원문 ↗</a></div>
+</article>

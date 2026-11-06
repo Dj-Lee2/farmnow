@@ -188,9 +188,9 @@ sources:
       - {id: transfer_income, title: 이전소득, tbl: DT_1EA1201, itm: "^이전소득$", want: ["^평균$"], survey: 농가경제조사}
       - {id: sell_idx, title: 농가판매가격지수, tbl: DT_1J60, se: Q, periods: 12, itm: "^농가판매가격지수$", want: ["^총지수$"], unit: "2020=100", survey: 농가판매및구입가격조사}
       - {id: buy_idx, title: 농가구입가격지수, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^총지수$"], unit: "2020=100", survey: 농가판매및구입가격조사}
-      - {id: hanwoo, title: 한우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^한우:마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: hanwoo, title: 한우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^한우:마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
       - {id: hanwoo_farms, title: 한우 농장 수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^한우:농장수$", unit: 농장, survey: 가축동향조사}
-      - {id: dairy, title: 젖소 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^젖소:마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: dairy, title: 젖소 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^젖소:마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
       - {id: rice_cons, title: 1인당 쌀 소비량, tbl: DT_1ED0001, itm: "^전가구$", want: ["^쌀$"], survey: 양곡소비량조사}
       - {id: pig_net, title: 비육돈 두당 순수익, tbl: DT_1EE307, itm: "^평균$", want: ["^순수익"], survey: 축산물생산비조사}
       - {id: pig_rev, title: 비육돈 두당 총수입, tbl: DT_1EE307, itm: "^평균$", want: ["^총수입"], survey: 축산물생산비조사}
@@ -207,8 +207,8 @@ sources:
       - {id: area_veg, title: 채소 재배면적, tbl: DT_1ET0040, itm: "^채소$", unit: 헥타르, survey: 농작물생산조사}
       - {id: area_fruit, title: 과수 재배면적, tbl: DT_1ET0040, itm: "^과수$", unit: 헥타르, survey: 농작물생산조사}
       - {id: area_green, title: 시설작물 재배면적, tbl: DT_1ET0040, itm: "^시설작물$", unit: 헥타르, survey: 농작물생산조사}
-      - {id: beef, title: 육우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^육우:마리수$", unit: 마리, survey: 가축동향조사}
-      - {id: chicken, title: 닭 사육 마릿수, tbl: DT_1EO061, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: beef, title: 육우 사육 마릿수, tbl: DT_1EO200, se: Q, periods: 12, itm: "^육우:마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
+      - {id: chicken, title: 닭 사육 마릿수, tbl: DT_1EO061, se: Q, periods: 12, itm: "^마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
       - {id: eggs, title: 하루 평균 계란 생산량, tbl: DT_1EO091, se: Q, periods: 12, itm: "^생산량$", unit: 개, survey: 가축동향조사}
       - {id: calf_cost, title: 송아지 두당 생산비, tbl: DT_1EE014, itm: "^평균$", want: ["^생산비$"], survey: 축산물생산비조사}
       - {id: dairy_net, title: 젖소 두당 순수익, tbl: DT_2EE303, itm: "^수익성$", want: ["^순수익", "^평균$"], survey: 축산물생산비조사}
@@ -226,7 +226,7 @@ sources:
       - {id: ty_fruit, title: 과수 농가, tbl: DT_1EA1018, itm: "^과수$", unit: 가구, survey: 농림어업조사}
       - {id: ty_spec, title: 특용작물·버섯 농가, tbl: DT_1EA1018, itm: "^특용작물·버섯$", unit: 가구, survey: 농림어업조사}
       - {id: ty_live, title: 축산 농가, tbl: DT_1EA1018, itm: "^축산$", unit: 가구, survey: 농림어업조사}
-      - {id: pig, title: 돼지 사육 마릿수, tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: pig, title: 돼지 사육 마릿수, tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
       - {id: pig_farms, title: 돼지 농장 수, tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", unit: 농장, survey: 가축동향조사}
       # 가격지수 부문별
       - {id: b_seed, title: 종자종묘, tbl: DT_1J62, se: Q, periods: 12, itm: "^농가구입가격지수$", want: ["^종자종묘$"], unit: "2020=100", survey: 농가판매및구입가격조사}
@@ -440,7 +440,7 @@ sources:
       - {id: biz_proc, title: 가공업 농가, tbl: DT_1EA1028, itm: "^농축산물가공업$", unit: 가구, survey: 농림어업조사}
       - {id: biz_work, title: 농기계 작업대행 농가, tbl: DT_1EA1028, itm: "^농기계작업대행$", unit: 가구, survey: 농림어업조사}
       - {id: biz_tour, title: 농촌관광 농가, tbl: DT_1EA1028, itm: "^농촌관광사업$", unit: 가구, survey: 농림어업조사}
-      - {id: duck, title: 오리 사육 마릿수, tbl: DT_1EO111, se: Q, periods: 12, itm: "^마리수$", unit: 마리, survey: 가축동향조사}
+      - {id: duck, title: 오리 사육 마릿수, tbl: DT_1EO111, se: Q, periods: 12, itm: "^마(?:리|릿)수$", unit: 마리, survey: 가축동향조사}
       - {id: duck_farms, title: 오리 농가 수, tbl: DT_1EO111, se: Q, periods: 12, itm: "^가구수$", unit: 가구, survey: 가축동향조사}
       - {id: cow_net, title: 한우 번식우 두당 순수익, tbl: DT_1EE016, itm: "^평균$", want: ["^순수익"], unit: 원, survey: 축산물생산비조사}
       - {id: cow_inc, title: 한우 번식우 두당 소득, tbl: DT_1EE016, itm: "^평균$", want: ["^소득"], unit: 원, survey: 축산물생산비조사}
@@ -3483,7 +3483,7 @@ sources:
       - {id: lt_stbh, title: "시설딸기(수경) 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설딸기\\(수경\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
       - {id: lt_tom, title: "시설토마토 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설토마토$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
       - {id: lt_tomh, title: "시설토마토(수경) 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설토마토\\(수경\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
-      - {id: lt_pap, title: "시설 파프리카 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설착색단고추\\(파프리카\\)$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
+      - {id: lt_pap, title: "시설 파프리카 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
       - {id: lt_cuc, title: "시설오이 노동투입 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설오이$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
       - {id: lt_stb_hire, title: "시설딸기 고용노동 시간", tbl: DT_143002_E008, org: "143", periods: 3, itm: "^노동투입표$", want: ["^시설딸기$", "^고용노동$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
       - {id: lt_apl, title: "사과 노동투입 시간", tbl: DT_143002_E009, org: "143", periods: 3, itm: "^노동투입표$", want: ["^사과$", "^합계$", "^합계$", "^계$"], unit: 시간, survey: 농산물소득조사}
@@ -3511,7 +3511,7 @@ sources:
       - {id: ia_inc_blu, title: "블루베리 10a당 소득", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^블루베리$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_stb, title: "시설 딸기 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_tom, title: "시설 토마토 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설토마토$"], unit: 원, survey: 농산물소득조사}
-      - {id: ia_inc_pap, title: "시설 파프리카 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설착색단고추\\(파프리카\\)$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_inc_pap, title: "시설 파프리카 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_mel, title: "시설 참외 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설참외$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_acab, title: "노지 가을배추 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지가을배추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_wel, title: "노지 대파 10a당 소득", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^노지대파$"], unit: 원, survey: 농산물소득조사}
@@ -3538,7 +3538,7 @@ sources:
       - {id: ia_pe_ctr, title: "노지 감귤 10a당 농약비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^노지감귤$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_pe_stb, title: "시설 딸기 10a당 농약비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_pe_tom, title: "시설 토마토 10a당 농약비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^시설토마토$"], unit: 원, survey: 농산물소득조사}
-      - {id: ia_pe_pap, title: "시설 파프리카 10a당 농약비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^시설착색단고추\\(파프리카\\)$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_pe_pap, title: "시설 파프리카 10a당 농약비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_pe_acab, title: "노지 가을배추 10a당 농약비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^노지가을배추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_pe_wel, title: "노지 대파 10a당 농약비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^노지대파$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_pe_swp, title: "고구마 10a당 농약비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농약비$", "^고구마$"], unit: 원, survey: 농산물소득조사}
@@ -3548,7 +3548,7 @@ sources:
       - {id: ia_mc_ctr, title: "노지 감귤 10a당 경영비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지감귤$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_stb, title: "시설 딸기 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_tom, title: "시설 토마토 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설토마토$"], unit: 원, survey: 농산물소득조사}
-      - {id: ia_mc_pap, title: "시설 파프리카 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설착색단고추\\(파프리카\\)$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_mc_pap, title: "시설 파프리카 10a당 경영비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_acab, title: "노지 가을배추 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지가을배추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_wel, title: "노지 대파 10a당 경영비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^노지대파$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_mc_swp, title: "고구마 10a당 경영비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^경영비$", "^고구마$"], unit: 원, survey: 농산물소득조사}
@@ -3560,7 +3560,7 @@ sources:
       - {id: ia_inc_hpep, title: "시설 고추 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설고추$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_hl_stb, title: "시설 딸기 10a당 수도광열비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^수도광열비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_hl_tom, title: "시설 토마토 10a당 수도광열비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^수도광열비$", "^시설토마토$"], unit: 원, survey: 농산물소득조사}
-      - {id: ia_hl_pap, title: "시설 파프리카 10a당 수도광열비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^수도광열비$", "^시설착색단고추\\(파프리카\\)$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_hl_pap, title: "시설 파프리카 10a당 수도광열비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^수도광열비$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_hw_apl, title: "사과 10a당 고용노동비", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^고용노동비$", "^사과$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_hw_stb, title: "시설 딸기 10a당 고용노동비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^고용노동비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_inc_stbh, title: "시설 딸기(수경) 10a당 소득", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^소득$", "^시설딸기\\(수경\\)$"], unit: 원, survey: 농산물소득조사}
@@ -3576,18 +3576,18 @@ sources:
       - {id: ia_yd_tom, title: "시설 토마토 10a당 수량", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^시설토마토$"], unit: kg, survey: 농산물소득조사}
       - {id: ia_yd_tomh, title: "시설 토마토(수경) 10a당 수량", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^시설토마토\\(수경\\)$"], unit: kg, survey: 농산물소득조사}
       - {id: ia_yd_apl, title: "사과 10a당 수량", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^사과$"], unit: kg, survey: 농산물소득조사}
-      - {id: ia_yd_pap, title: "시설 파프리카 10a당 수량", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^시설착색단고추\\(파프리카\\)$"], unit: kg, survey: 농산물소득조사}
+      - {id: ia_yd_pap, title: "시설 파프리카 10a당 수량", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: kg, survey: 농산물소득조사}
       - {id: ia_yd_gin, title: "인삼(4년근) 10a당 수량", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^인삼\\(4년근\\)$"], unit: kg, survey: 농산물소득조사}
       - {id: ia_yd_acab, title: "노지 가을배추 10a당 수량", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^주산물수량$", "^노지가을배추$"], unit: kg, survey: 농산물소득조사}
       - {id: ia_pr_stb, title: "시설 딸기 농가수취가격", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^시설딸기$"], unit: 원/kg, survey: 농산물소득조사}
       - {id: ia_pr_tom, title: "시설 토마토 농가수취가격", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^시설토마토$"], unit: 원/kg, survey: 농산물소득조사}
       - {id: ia_pr_apl, title: "사과 농가수취가격", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^사과$"], unit: 원/kg, survey: 농산물소득조사}
-      - {id: ia_pr_pap, title: "시설 파프리카 농가수취가격", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^시설착색단고추\\(파프리카\\)$"], unit: 원/kg, survey: 농산물소득조사}
+      - {id: ia_pr_pap, title: "시설 파프리카 농가수취가격", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원/kg, survey: 농산물소득조사}
       - {id: ia_pr_gin, title: "인삼(4년근) 농가수취가격", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^인삼\\(4년근\\)$"], unit: 원/kg, survey: 농산물소득조사}
       - {id: ia_pr_acab, title: "노지 가을배추 농가수취가격", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^농가수취가격$", "^노지가을배추$"], unit: 원/kg, survey: 농산물소득조사}
       - {id: ia_sd_stb, title: "시설 딸기 10a당 종자·종묘비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sd_tom, title: "시설 토마토 10a당 종자·종묘비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^시설토마토$"], unit: 원, survey: 농산물소득조사}
-      - {id: ia_sd_pap, title: "시설 파프리카 10a당 종자·종묘비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^시설착색단고추\\(파프리카\\)$"], unit: 원, survey: 농산물소득조사}
+      - {id: ia_sd_pap, title: "시설 파프리카 10a당 종자·종묘비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sd_swp, title: "고구마 10a당 종자·종묘비", tbl: DT_143002_E001, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^고구마$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sd_wel, title: "노지 대파 10a당 종자·종묘비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^노지대파$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_sd_acab, title: "노지 가을배추 10a당 종자·종묘비", tbl: DT_143002_E002, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^종자·종묘비$", "^노지가을배추$"], unit: 원, survey: 농산물소득조사}
@@ -3618,7 +3618,7 @@ sources:
       - {id: ia_va_apl, title: "사과 부가가치율", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^사과$"], unit: "%", survey: 농산물소득조사}
       - {id: ia_va_stb, title: "시설 딸기 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설딸기$"], unit: "%", survey: 농산물소득조사}
       - {id: ia_va_tom, title: "시설 토마토 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설토마토$"], unit: "%", survey: 농산물소득조사}
-      - {id: ia_va_pap, title: "시설 파프리카 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설착색단고추\\(파프리카\\)$"], unit: "%", survey: 농산물소득조사}
+      - {id: ia_va_pap, title: "시설 파프리카 부가가치율", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부가가치율$", "^시설(착색단고추\\(파프리카\\)|파프리카\\(착색단고추\\))$"], unit: "%", survey: 농산물소득조사}
       - {id: ia_lr_stb, title: "시설 딸기 10a당 토지임차료", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^시설딸기$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_lr_apl, title: "사과 10a당 토지임차료", tbl: DT_143002_E004, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^토지임차료$", "^사과$"], unit: 원, survey: 농산물소득조사}
       - {id: ia_of_let, title: "시설 상추 10a당 유기질비료비", tbl: DT_143002_E003, org: "143", periods: 3, itm: "^금액/수량/비율$", want: ["^부산물\\(유기질\\)비료비$", "^시설상추$"], unit: 원, survey: 농산물소득조사}
@@ -5442,9 +5442,9 @@ sources:
       - {id: rpc_epm_jn, title: 전남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^전라남|^전남"], unit: 개, survey: 농작물생산조사}
       - {id: rpc_epm_gb, title: 경북 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상북"], unit: 개, survey: 농작물생산조사}
       - {id: rpc_epm_gn, title: 경남 논벼 1㎡당 유효이삭 수, tbl: DT_1ET0031, periods: 3, itm: "^논벼:1㎡당유효이삭수$", want: ["^경상남"], unit: 개, survey: 농작물생산조사}
-      - {id: fpb_soy, title: 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fpb_soy_y, title: 콩 10a당 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fpb_soy_a, title: 콩 재배면적, tbl: DT_1ET0025, periods: 5, itm: "^콩:면적$", want: ["^계$"], unit: ha, survey: 농작물생산조사}
+      - {id: fpb_soy, title: 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpb_soy_y, title: 콩 10a당 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fpb_soy_a, title: 콩 재배면적, tbl: DT_1ET0025, periods: 5, itm: "^콩:면적$", want: ["^(계|전국)$"], unit: ha, survey: 농작물생산조사}
       - {id: fpb_soy_gg, title: 경기 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
       - {id: fpb_soy_gw, title: 강원 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
       - {id: fpb_soy_cb, title: 충북 콩 생산량, tbl: DT_1ET0025, periods: 5, itm: "^콩:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
@@ -5464,9 +5464,9 @@ sources:
       - {id: fpm_malt, title: 맥주보리 생산량, tbl: DT_1ET0231, periods: 5, itm: "^맥주보리:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
       - {id: fpm_wht, title: 밀 생산량, tbl: DT_1ET0231, periods: 5, itm: "^밀:생산량$", want: ["^전국$"], unit: 톤, survey: 농작물생산조사}
       - {id: fpm_wht_a, title: 밀 재배면적, tbl: DT_1ET0231, periods: 5, itm: "^밀:면적$", want: ["^전국$"], unit: ha, survey: 농작물생산조사}
-      - {id: fpo_sesa, title: 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fpo_peri, title: 들깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^들깨:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fpo_pnut, title: 땅콩 생산량, tbl: DT_1ET0293, periods: 5, itm: "^땅콩:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_sesa, title: 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_peri, title: 들깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^들깨:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fpo_pnut, title: 땅콩 생산량, tbl: DT_1ET0293, periods: 5, itm: "^땅콩:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: fpo_sesa_gg, title: 경기 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
       - {id: fpo_sesa_gw, title: 강원 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
       - {id: fpo_sesa_cb, title: 충북 참깨 생산량, tbl: DT_1ET0293, periods: 5, itm: "^참깨:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
@@ -8808,77 +8808,77 @@ sources:
       - {id: dhs_cost_2, title: "젖소 70~99두 두당 사육비", tbl: DT_2EE302, itm: "^사육비$", want: ["^비용합계$", "^70~99두$"], unit: 원, survey: 축산물생산비조사}
       - {id: dhs_cost_3, title: "젖소 100두 이상 두당 사육비", tbl: DT_2EE302, itm: "^사육비$", want: ["^비용합계$", "^100두이상$"], unit: 원, survey: 축산물생산비조사}
       - {id: lsz_hw_ft, title: "한육우 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_hw_ht, title: "한육우 사육 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_ht, title: "한육우 사육 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_hw_f0, title: "한육우 20두 미만 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_hw_f1, title: "한육우 20~49두 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20~50 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_hw_f2, title: "한육우 50~99두 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^50~100 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_hw_f3, title: "한육우 100두 이상 농장 수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_hw_h0, title: "한육우 20두 미만 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_hw_h1, title: "한육우 20~49두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_hw_h2, title: "한육우 50~99두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_hw_h3, title: "한육우 100두 이상 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h0, title: "한육우 20두 미만 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h1, title: "한육우 20~49두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h2, title: "한육우 50~99두 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_hw_h3, title: "한육우 100두 이상 농장 마릿수", tbl: DT_1EO211, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_dy_ft, title: "젖소 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_dy_ht, title: "젖소 사육 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_ht, title: "젖소 사육 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_dy_f0, title: "젖소 20두 미만 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_dy_f1, title: "젖소 20~49두 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20~50 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_dy_f2, title: "젖소 50~99두 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^50~100 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_dy_f3, title: "젖소 100두 이상 농장 수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_dy_h0, title: "젖소 20두 미만 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dy_h1, title: "젖소 20~49두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dy_h2, title: "젖소 50~99두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dy_h3, title: "젖소 100두 이상 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h0, title: "젖소 20두 미만 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h1, title: "젖소 20~49두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h2, title: "젖소 50~99두 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dy_h3, title: "젖소 100두 이상 농장 마릿수", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_pg_f0, title: "돼지 1천 두 미만 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^1000 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_pg_f1, title: "돼지 1천~5천 두 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^1000~5000 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_pg_f2, title: "돼지 5천~1만 두 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^5000~10000 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_pg_f3, title: "돼지 1만 두 이상 농장 수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^10000 이상$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_pg_h0, title: "돼지 1천 두 미만 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^1000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_pg_h1, title: "돼지 1천~5천 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^1000~5000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_pg_h2, title: "돼지 5천~1만 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^5000~10000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_pg_h3, title: "돼지 1만 두 이상 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h0, title: "돼지 1천 두 미만 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^1000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h1, title: "돼지 1천~5천 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^1000~5000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h2, title: "돼지 5천~1만 두 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^5000~10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_pg_h3, title: "돼지 1만 두 이상 농장 마릿수", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_ly_ft, title: "산란계 사육 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_ly_ht, title: "산란계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_ht, title: "산란계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_br_ft, title: "육용계 사육 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_br_ht, title: "육용계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_ht, title: "육용계 사육 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_ly_f0, title: "산란계 1만 수 미만 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^10000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_ly_f1, title: "산란계 1만~3만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^10000~30000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_ly_f2, title: "산란계 3만~5만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^30000~50000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_ly_f3, title: "산란계 5만 수 이상 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:가구수$", want: ["^전국$", "^50000 이상$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_ly_h0, title: "산란계 1만 수 미만 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^10000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_ly_h1, title: "산란계 1만~3만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_ly_h2, title: "산란계 3만~5만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_ly_h3, title: "산란계 5만 수 이상 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마리수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h0, title: "산란계 1만 수 미만 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마(?:리|릿)수$", want: ["^전국$", "^10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h1, title: "산란계 1만~3만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마(?:리|릿)수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h2, title: "산란계 3만~5만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마(?:리|릿)수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_ly_h3, title: "산란계 5만 수 이상 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^산란계:마(?:리|릿)수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_br_f0, title: "육용계 1만 수 미만 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^10000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_br_f1, title: "육용계 1만~3만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^10000~30000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_br_f2, title: "육용계 3만~5만 수 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^30000~50000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_br_f3, title: "육용계 5만 수 이상 가구 수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:가구수$", want: ["^전국$", "^50000 이상$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_br_h0, title: "육용계 1만 수 미만 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^10000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_br_h1, title: "육용계 1만~3만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_br_h2, title: "육용계 3만~5만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_br_h3, title: "육용계 5만 수 이상 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마리수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_h0, title: "육용계 1만 수 미만 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마(?:리|릿)수$", want: ["^전국$", "^10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_h1, title: "육용계 1만~3만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마(?:리|릿)수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_h2, title: "육용계 3만~5만 수 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마(?:리|릿)수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_br_h3, title: "육용계 5만 수 이상 가구 마릿수", tbl: DT_1EO071, se: Q, periods: 12, itm: "^육용계:마(?:리|릿)수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_dkb_ft, title: "종오리 사육 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^종오리 가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_dkb_ht, title: "종오리 사육 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^종오리 마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkb_ht, title: "종오리 사육 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^종오리 마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_dkm_ft, title: "육용오리 사육 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^합계$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_dkm_ht, title: "육용오리 사육 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_ht, title: "육용오리 사육 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_dkm_f0, title: "육용오리 5천 수 미만 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^5000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_dkm_f1, title: "육용오리 5천~1만 수 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^5000~10000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_dkm_f2, title: "육용오리 1만~3만 수 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^10000~30000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_dkm_f3, title: "육용오리 3만~5만 수 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^30000~50000 미만$"], unit: 가구, survey: 가축동향조사}
       - {id: lsz_dkm_f4, title: "육용오리 5만 수 이상 가구 수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 가구수$", want: ["^전국$", "^50000 이상$"], unit: 가구, survey: 가축동향조사}
-      - {id: lsz_dkm_h0, title: "육용오리 5천 수 미만 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^5000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dkm_h1, title: "육용오리 5천~1만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^5000~10000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dkm_h2, title: "육용오리 1만~3만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dkm_h3, title: "육용오리 3만~5만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_dkm_h4, title: "육용오리 5만 수 이상 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마리수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_h0, title: "육용오리 5천 수 미만 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^5000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_h1, title: "육용오리 5천~1만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^5000~10000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_h2, title: "육용오리 1만~3만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^10000~30000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_h3, title: "육용오리 3만~5만 수 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^30000~50000 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_dkm_h4, title: "육용오리 5만 수 이상 가구 마릿수", tbl: DT_1EO113, se: Q, periods: 12, itm: "^육용오리 마(?:리|릿)수$", want: ["^전국$", "^50000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_bf_ft, title: "육우 농장 수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_bf_ht, title: "육우 사육 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_bf_ht, title: "육우 사육 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: lsz_bf_f0, title: "육우 20두 미만 농장 수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_bf_f1, title: "육우 20~49두 농장 수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20~50 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_bf_f2, title: "육우 50~99두 농장 수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^50~100 미만$"], unit: 농장, survey: 가축동향조사}
       - {id: lsz_bf_f3, title: "육우 100두 이상 농장 수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
-      - {id: lsz_bf_h0, title: "육우 20두 미만 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_bf_h1, title: "육우 20~49두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_bf_h2, title: "육우 50~99두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
-      - {id: lsz_bf_h3, title: "육우 100두 이상 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_bf_h0, title: "육우 20두 미만 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_bf_h1, title: "육우 20~49두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20~50 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_bf_h2, title: "육우 50~99두 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^50~100 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: lsz_bf_h3, title: "육우 100두 이상 농장 마릿수", tbl: DT_1EO231, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: cdt_st_cw, title: "한우 거세우 평균 도체중", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^도체중$"], unit: "kg", survey: 축산물 등급판정 통계}
       - {id: cdt_st_bf, title: "한우 거세우 평균 등지방두께", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^등지방$"], unit: "㎜", survey: 축산물 등급판정 통계}
       - {id: cdt_st_ea, title: "한우 거세우 평균 등심단면적", tbl: DT_APGS_011, org: "323", se: M, periods: 24, itm: "^성적$", want: ["^한우$", "^거세$", "^등심면적$"], unit: "㎠", survey: 축산물 등급판정 통계}
@@ -9643,21 +9643,21 @@ sources:
       - {id: xcr_tob_gb, title: "경북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^경상북|^경북"], unit: ha, survey: 농작물생산조사}
       - {id: xcr_tob_jn, title: "전남 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라남|^전남"], unit: ha, survey: 농작물생산조사}
       - {id: xcr_tob_jb, title: "전북 담배 재배면적", tbl: DT_1ET0016, itm: "^담배$", want: ["^전라북|^전북"], unit: ha, survey: 농작물생산조사}
-      - {id: fvy_wm_o, title: "노지 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지수박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_wm_g, title: "시설 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설수박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_om_o, title: "노지 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^노지참외:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_om_g, title: "시설 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^시설참외:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_stb_o, title: "노지 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^노지딸기:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_stb_g, title: "시설 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^시설딸기:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_cuc_o, title: "노지 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^노지오이:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_cuc_g, title: "시설 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^시설오이:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_pmk_o, title: "노지 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지호박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_pmk_g, title: "시설 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설호박:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvy_tom_g, title: "시설 토마토 10a당 생산량", tbl: DT_1ET0027, itm: "^시설토마토:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: fvr_stb, title: "딸기 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fvr_wm, title: "수박 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fvr_om, title: "참외 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^참외:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
-      - {id: fvr_tom, title: "토마토 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvy_wm_o, title: "노지 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지수박:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_wm_g, title: "시설 수박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설수박:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_om_o, title: "노지 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^노지참외:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_om_g, title: "시설 참외 10a당 생산량", tbl: DT_1ET0027, itm: "^시설참외:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_stb_o, title: "노지 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^노지딸기:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_stb_g, title: "시설 딸기 10a당 생산량", tbl: DT_1ET0027, itm: "^시설딸기:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_cuc_o, title: "노지 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^노지오이:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_cuc_g, title: "시설 오이 10a당 생산량", tbl: DT_1ET0027, itm: "^시설오이:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_pmk_o, title: "노지 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^노지호박:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_pmk_g, title: "시설 호박 10a당 생산량", tbl: DT_1ET0027, itm: "^시설호박:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvy_tom_g, title: "시설 토마토 10a당 생산량", tbl: DT_1ET0027, itm: "^시설토마토:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: fvr_stb, title: "딸기 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_wm, title: "수박 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^수박:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_om, title: "참외 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^참외:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
+      - {id: fvr_tom, title: "토마토 생산량(농작물생산조사)", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_stb_gn, title: "경남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_stb_cn, title: "충남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_stb_jn, title: "전남 딸기 생산량", tbl: DT_1ET0027, itm: "^딸기:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
@@ -9675,24 +9675,24 @@ sources:
       - {id: fvr_tom_jb, title: "전북 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_tom_gw, title: "강원 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
       - {id: fvr_tom_gn, title: "경남 토마토 생산량", tbl: DT_1ET0027, itm: "^토마토:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
-      - {id: lfy_spr, title: "봄배추(일반) 10a당 생산량", tbl: DT_1ET0028, itm: "^일반봄배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_hl, title: "고랭지 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^고랭지배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_aut, title: "노지 가을배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_win, title: "노지 겨울배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지겨울배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_gh, title: "시설 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_cab, title: "양배추 10a당 생산량", tbl: DT_1ET0028, itm: "^양배추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_spn_o, title: "노지 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^노지시금치:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_spn_g, title: "시설 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^시설시금치:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_let_o, title: "노지 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지상추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfy_let_g, title: "시설 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설상추:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_spr, title: "봄무(일반) 10a당 생산량", tbl: DT_1ET0029, itm: "^일반봄무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_hl, title: "고랭지 무 10a당 생산량", tbl: DT_1ET0029, itm: "^고랭지무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_aut, title: "가을 일반무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을일반무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_yng, title: "가을 총각무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을총각무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_win, title: "노지 겨울무 10a당 생산량", tbl: DT_1ET0029, itm: "^노지겨울무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_gh, title: "시설 무 10a당 생산량", tbl: DT_1ET0029, itm: "^시설무:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: rfy_car, title: "당근 10a당 생산량", tbl: DT_1ET0029, itm: "^당근:10a당 생산량$", want: ["^계$"], unit: kg, survey: 농작물생산조사}
-      - {id: lfp_aut, title: "노지 가을배추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfy_spr, title: "봄배추(일반) 10a당 생산량", tbl: DT_1ET0028, itm: "^일반봄배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_hl, title: "고랭지 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^고랭지배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_aut, title: "노지 가을배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_win, title: "노지 겨울배추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지겨울배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_gh, title: "시설 배추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_cab, title: "양배추 10a당 생산량", tbl: DT_1ET0028, itm: "^양배추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_spn_o, title: "노지 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^노지시금치:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_spn_g, title: "시설 시금치 10a당 생산량", tbl: DT_1ET0028, itm: "^시설시금치:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_let_o, title: "노지 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^노지상추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfy_let_g, title: "시설 상추 10a당 생산량", tbl: DT_1ET0028, itm: "^시설상추:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_spr, title: "봄무(일반) 10a당 생산량", tbl: DT_1ET0029, itm: "^일반봄무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_hl, title: "고랭지 무 10a당 생산량", tbl: DT_1ET0029, itm: "^고랭지무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_aut, title: "가을 일반무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을일반무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_yng, title: "가을 총각무 10a당 생산량", tbl: DT_1ET0029, itm: "^가을총각무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_win, title: "노지 겨울무 10a당 생산량", tbl: DT_1ET0029, itm: "^노지겨울무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_gh, title: "시설 무 10a당 생산량", tbl: DT_1ET0029, itm: "^시설무:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: rfy_car, title: "당근 10a당 생산량", tbl: DT_1ET0029, itm: "^당근:10a당 생산량$", want: ["^(계|전국)$"], unit: kg, survey: 농작물생산조사}
+      - {id: lfp_aut, title: "노지 가을배추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_aut_jn, title: "전남 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_aut_cb, title: "충북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_aut_gb, title: "경북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^경상북|^경북"], unit: 톤, survey: 농작물생산조사}
@@ -9700,18 +9700,18 @@ sources:
       - {id: lfp_aut_jb, title: "전북 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_aut_cn, title: "충남 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_aut_gg, title: "경기 노지 가을배추 생산량", tbl: DT_1ET0028, itm: "^노지가을배추:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
-      - {id: lfp_letg, title: "시설 상추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: lfp_letg, title: "시설 상추 생산량(농작물생산조사)", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_letg_jb, title: "전북 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_letg_cn, title: "충남 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
       - {id: lfp_letg_gg, title: "경기 시설 상추 생산량", tbl: DT_1ET0028, itm: "^시설상추:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
-      - {id: rfp_aut, title: "노지 가을무 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_aut, title: "노지 가을무 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_jb, title: "전북 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^전라북|^전북"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_jn, title: "전남 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^전라남|^전남"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_gg, title: "경기 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^경기"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_cn, title: "충남 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^충청남|^충남"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_gw, title: "강원 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_aut_cb, title: "충북 노지 가을무 생산량", tbl: DT_1ET0029, itm: "^노지가을무:생산량$", want: ["^충청북|^충북"], unit: 톤, survey: 농작물생산조사}
-      - {id: rfp_car, title: "당근 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^계$"], unit: 톤, survey: 농작물생산조사}
+      - {id: rfp_car, title: "당근 생산량(농작물생산조사)", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^(계|전국)$"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_car_jj, title: "제주 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^제주"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_car_gn, title: "경남 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^경상남|^경남"], unit: 톤, survey: 농작물생산조사}
       - {id: rfp_car_gw, title: "강원 당근 생산량", tbl: DT_1ET0029, itm: "^당근:생산량$", want: ["^강원"], unit: 톤, survey: 농작물생산조사}
@@ -12315,7 +12315,7 @@ sources:
       - {id: hkm_all, title: "건강기능식품 만족도 — 전반적 만족도(5점 만점)", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^전반적인 만족도$", "^평균$"], unit: "점", survey: 가공식품소비자태도조사}
       - {id: hkm_ok, title: "건강기능식품 전반적으로 만족한다", tbl: DT_114053_078, org: "114", periods: 3, itm: ".", want: ["^전체$", "^전반적인 만족도$", "^(만족하는 편이다|매우 만족한다)$"], sum: true, unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkn_need, title: "건강기능식품을 먹지 않는 이유 — 필요를 느끼지 못해서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^필요를 느끼지"], unit: "%", survey: 가공식품소비자태도조사}
-      - {id: hkn_trust, title: "건강기능식품을 먹지 않는 이유 — 효과·효능을 믿을 수 없어서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^품질\\(효과"], unit: "%", survey: 가공식품소비자태도조사}
+      - {id: hkn_trust, title: "건강기능식품을 먹지 않는 이유 — 효과·효능을 믿을 수 없어서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^(품질|기능성)\\(효과"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkn_info, title: "건강기능식품을 먹지 않는 이유 — 정보가 부족해서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^건강기능식품 및 건강 식품에 대한 정보"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkn_store, title: "건강기능식품을 먹지 않는 이유 — 주위에 파는 곳이 없어서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^주위에 파는"], unit: "%", survey: 가공식품소비자태도조사}
       - {id: hkn_price, title: "건강기능식품을 먹지 않는 이유 — 값이 비싸서", tbl: DT_114053_077, org: "114", periods: 3, itm: ".", want: ["^전체$", "^가격이 비싸서"], unit: "%", survey: 가공식품소비자태도조사}
@@ -15551,92 +15551,92 @@ sources:
       - {id: ftg_l_cj, title: "청주시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^청주시$"], unit: 가구, survey: 농림어업조사}
       - {id: ftg_l_jy, title: "정읍시 축산 농가", tbl: DT_1EA1045, periods: 3, itm: "^축산$", want: ["^정읍시$"], unit: 가구, survey: 농림어업조사}
       - {id: hgz_ft, title: "한우 농장 수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_ht, title: "한우 사육 마릿수(규모별 표)", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_ht, title: "한우 사육 마릿수(규모별 표)", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^합계$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_f0, title: "한우 20두 미만 농장 수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^20 미만$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_h0, title: "한우 20두 미만 농장 마릿수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_h0, title: "한우 20두 미만 농장 마릿수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^20 미만$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_f3, title: "한우 100두 이상 농장 수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^전국$", "^100 이상$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_h3, title: "한우 100두 이상 농장 마릿수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_h3, title: "한우 100두 이상 농장 마릿수", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^전국$", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_gg_ft, title: "시도별 한우 농장 수 경기", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^경기", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_gg_ht, title: "시도별 한우 마릿수(규모별 표) 경기", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_gg_h3, title: "시도별 한우 100두 이상 농장 마릿수 경기", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gg_ht, title: "시도별 한우 마릿수(규모별 표) 경기", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gg_h3, title: "시도별 한우 100두 이상 농장 마릿수 경기", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_gw_ft, title: "시도별 한우 농장 수 강원", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^강원", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_gw_ht, title: "시도별 한우 마릿수(규모별 표) 강원", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_gw_h3, title: "시도별 한우 100두 이상 농장 마릿수 강원", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gw_ht, title: "시도별 한우 마릿수(규모별 표) 강원", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gw_h3, title: "시도별 한우 100두 이상 농장 마릿수 강원", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_cb_ft, title: "시도별 한우 농장 수 충북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청북도|충북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_cb_ht, title: "시도별 한우 마릿수(규모별 표) 충북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_cb_h3, title: "시도별 한우 100두 이상 농장 마릿수 충북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_cb_ht, title: "시도별 한우 마릿수(규모별 표) 충북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_cb_h3, title: "시도별 한우 100두 이상 농장 마릿수 충북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_cn_ft, title: "시도별 한우 농장 수 충남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청남도|충남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_cn_ht, title: "시도별 한우 마릿수(규모별 표) 충남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_cn_h3, title: "시도별 한우 100두 이상 농장 마릿수 충남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_cn_ht, title: "시도별 한우 마릿수(규모별 표) 충남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_cn_h3, title: "시도별 한우 100두 이상 농장 마릿수 충남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_jb_ft, title: "시도별 한우 농장 수 전북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(전북|전라북도)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_jb_ht, title: "시도별 한우 마릿수(규모별 표) 전북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_jb_h3, title: "시도별 한우 100두 이상 농장 마릿수 전북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jb_ht, title: "시도별 한우 마릿수(규모별 표) 전북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jb_h3, title: "시도별 한우 100두 이상 농장 마릿수 전북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_jn_ft, title: "시도별 한우 농장 수 전남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(전라남도|전남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_jn_ht, title: "시도별 한우 마릿수(규모별 표) 전남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_jn_h3, title: "시도별 한우 100두 이상 농장 마릿수 전남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jn_ht, title: "시도별 한우 마릿수(규모별 표) 전남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jn_h3, title: "시도별 한우 100두 이상 농장 마릿수 전남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_gb_ft, title: "시도별 한우 농장 수 경북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상북도|경북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_gb_ht, title: "시도별 한우 마릿수(규모별 표) 경북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_gb_h3, title: "시도별 한우 100두 이상 농장 마릿수 경북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gb_ht, title: "시도별 한우 마릿수(규모별 표) 경북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gb_h3, title: "시도별 한우 100두 이상 농장 마릿수 경북", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_gn_ft, title: "시도별 한우 농장 수 경남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상남도|경남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_gn_ht, title: "시도별 한우 마릿수(규모별 표) 경남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_gn_h3, title: "시도별 한우 100두 이상 농장 마릿수 경남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gn_ht, title: "시도별 한우 마릿수(규모별 표) 경남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_gn_h3, title: "시도별 한우 100두 이상 농장 마릿수 경남", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: hgz_jj_ft, title: "시도별 한우 농장 수 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^농장수$", want: ["^제주", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: hgz_jj_ht, title: "시도별 한우 마릿수(규모별 표) 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: hgz_jj_h3, title: "시도별 한우 100두 이상 농장 마릿수 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jj_ht, title: "시도별 한우 마릿수(규모별 표) 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: hgz_jj_h3, title: "시도별 한우 100두 이상 농장 마릿수 제주", tbl: DT_1EO221, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_gg_ft, title: "시도별 돼지 농장 수 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^경기", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_gg_ht, title: "시도별 돼지 마릿수(규모별 표) 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_gg_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gg_ht, title: "시도별 돼지 마릿수(규모별 표) 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gg_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경기", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_gw_ft, title: "시도별 돼지 농장 수 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^강원", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_gw_ht, title: "시도별 돼지 마릿수(규모별 표) 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_gw_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gw_ht, title: "시도별 돼지 마릿수(규모별 표) 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gw_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 강원", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_cb_ft, title: "시도별 돼지 농장 수 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청북도|충북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_cb_ht, title: "시도별 돼지 마릿수(규모별 표) 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_cb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cb_ht, title: "시도별 돼지 마릿수(규모별 표) 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_cn_ft, title: "시도별 돼지 농장 수 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청남도|충남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_cn_ht, title: "시도별 돼지 마릿수(규모별 표) 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_cn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cn_ht, title: "시도별 돼지 마릿수(규모별 표) 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_cn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 충남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_jb_ft, title: "시도별 돼지 농장 수 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(전북|전라북도)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_jb_ht, title: "시도별 돼지 마릿수(규모별 표) 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_jb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jb_ht, title: "시도별 돼지 마릿수(규모별 표) 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_jn_ft, title: "시도별 돼지 농장 수 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(전라남도|전남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_jn_ht, title: "시도별 돼지 마릿수(규모별 표) 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_jn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jn_ht, title: "시도별 돼지 마릿수(규모별 표) 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 전남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_gb_ft, title: "시도별 돼지 농장 수 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상북도|경북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_gb_ht, title: "시도별 돼지 마릿수(규모별 표) 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_gb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gb_ht, title: "시도별 돼지 마릿수(규모별 표) 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gb_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경북", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_gn_ft, title: "시도별 돼지 농장 수 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상남도|경남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_gn_ht, title: "시도별 돼지 마릿수(규모별 표) 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_gn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gn_ht, title: "시도별 돼지 마릿수(규모별 표) 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_gn_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 경남", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: pgz_jj_ft, title: "시도별 돼지 농장 수 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^농장수$", want: ["^제주", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: pgz_jj_ht, title: "시도별 돼지 마릿수(규모별 표) 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: pgz_jj_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jj_ht, title: "시도별 돼지 마릿수(규모별 표) 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: pgz_jj_h3, title: "시도별 돼지 1만 두 이상 농장 마릿수 제주", tbl: DT_1EO311, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^10000 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_gg_ft, title: "시도별 젖소 농장 수 경기", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^경기", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_gg_ht, title: "시도별 젖소 마릿수(규모별 표) 경기", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_gg_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경기", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^경기", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gg_ht, title: "시도별 젖소 마릿수(규모별 표) 경기", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gg_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경기", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^경기", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_gw_ft, title: "시도별 젖소 농장 수 강원", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^강원", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_gw_ht, title: "시도별 젖소 마릿수(규모별 표) 강원", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_gw_h3, title: "시도별 젖소 100두 이상 농장 마릿수 강원", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^강원", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gw_ht, title: "시도별 젖소 마릿수(규모별 표) 강원", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gw_h3, title: "시도별 젖소 100두 이상 농장 마릿수 강원", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^강원", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_cb_ft, title: "시도별 젖소 농장 수 충북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청북도|충북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_cb_ht, title: "시도별 젖소 마릿수(규모별 표) 충북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_cb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 충북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청북도|충북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_cb_ht, title: "시도별 젖소 마릿수(규모별 표) 충북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_cb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 충북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청북도|충북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_cn_ft, title: "시도별 젖소 농장 수 충남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(충청남도|충남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_cn_ht, title: "시도별 젖소 마릿수(규모별 표) 충남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_cn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 충남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(충청남도|충남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_cn_ht, title: "시도별 젖소 마릿수(규모별 표) 충남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_cn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 충남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(충청남도|충남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_jb_ft, title: "시도별 젖소 농장 수 전북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(전북|전라북도)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_jb_ht, title: "시도별 젖소 마릿수(규모별 표) 전북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_jb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 전북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(전북|전라북도)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jb_ht, title: "시도별 젖소 마릿수(규모별 표) 전북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 전북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전북|전라북도)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_jn_ft, title: "시도별 젖소 농장 수 전남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(전라남도|전남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_jn_ht, title: "시도별 젖소 마릿수(규모별 표) 전남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_jn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 전남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(전라남도|전남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jn_ht, title: "시도별 젖소 마릿수(규모별 표) 전남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 전남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(전라남도|전남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_gb_ft, title: "시도별 젖소 농장 수 경북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상북도|경북)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_gb_ht, title: "시도별 젖소 마릿수(규모별 표) 경북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_gb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상북도|경북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gb_ht, title: "시도별 젖소 마릿수(규모별 표) 경북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gb_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경북", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상북도|경북)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_gn_ft, title: "시도별 젖소 농장 수 경남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^(경상남도|경남)", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_gn_ht, title: "시도별 젖소 마릿수(규모별 표) 경남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_gn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^(경상남도|경남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gn_ht, title: "시도별 젖소 마릿수(규모별 표) 경남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_gn_h3, title: "시도별 젖소 100두 이상 농장 마릿수 경남", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^(경상남도|경남)", "^100 이상$"], unit: 마리, survey: 가축동향조사}
       - {id: dgz_jj_ft, title: "시도별 젖소 농장 수 제주", tbl: DT_1EO241, se: Q, periods: 12, itm: "^농장수$", want: ["^제주", "^합계$"], unit: 농장, survey: 가축동향조사}
-      - {id: dgz_jj_ht, title: "시도별 젖소 마릿수(규모별 표) 제주", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
-      - {id: dgz_jj_h3, title: "시도별 젖소 100두 이상 농장 마릿수 제주", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마리수$", want: ["^제주", "^100 이상$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jj_ht, title: "시도별 젖소 마릿수(규모별 표) 제주", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^합계$"], unit: 마리, survey: 가축동향조사}
+      - {id: dgz_jj_h3, title: "시도별 젖소 100두 이상 농장 마릿수 제주", tbl: DT_1EO241, se: Q, periods: 12, itm: "^마(?:리|릿)수$", want: ["^제주", "^100 이상$"], unit: 마리, survey: 가축동향조사}
   - id: naver_market
     name: 네이버 증권 시세
     org: 네이버 증권

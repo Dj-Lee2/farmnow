@@ -26,3 +26,11 @@ def test_stats_today_picks_biggest_change():
         return {"title": "x", "unit": "명", "se": "Y", "years": [str(2020 + i) for i in range(len(v))], "vals": v}
     t = build.stats_today({"farms": s([10, 10, 10, 10, 11]), "farm_pop": s([10, 10, 10, 10, 20])})
     assert t["key"] == "farm_pop" and round(t["p"]) == 100 and "가장 높은" in t["rank"]
+
+
+def test_stats_today_skips_values_below_zero():
+    def s(v):
+        return {"title": "x", "unit": "만 원", "se": "Y", "years": [str(2016 + i) for i in range(len(v))], "vals": v}
+    k1, k2 = build.TODAY_KEYS[:2]
+    t = build.stats_today({k1: s([98, -50, -60, -160, -100]), k2: s([10, 10, 10, 10, 12])})
+    assert t["key"] == k2                                   # 순수익이 0 아래인 계열은 증감률로 고르지 않는다

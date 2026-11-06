@@ -73,7 +73,59 @@ def test_collect_fetches_and_keeps_prev_on_partial_failure(tmp_path, monkeypatch
     _, st = kosis.collect(src, tmp_path)
     assert st["series"]["farms"]["vals"] == [974245.0] and st["series"]["farms"]["survey"] == "농림어업조사"
     assert st["series"]["rice"] == prev["series"]["rice"]
-    assert st["fetched_at"] == prev["fetched_at"]            # 일부 실패면 다음 회차에 다시 받는다
+    assert st["fetched_at"] != prev["fetched_at"] and "rice" in st["failed"]   # 실패한 계열만 따로 기억
+
+
+def test_collect_retries_only_failed_series(tmp_path, monkeypatch):
+    monkeypatch.setenv("KOSIS_TEST_KEY", "x")
+    src = {"id": "k", "env_key": "KOSIS_TEST_KEY", "retry_hours": 6, "series": [
+        {"id": "farms", "title": "농가 수", "tbl": "A", "itm": "^농가$"},
+        {"id": "rice", "title": "쌀 생산량", "tbl": "B", "itm": "생산량", "want": ["미곡"]},
+        {"id": "new", "title": "새 계열", "tbl": "C", "itm": "^농가$"}]}
+    calls = []
+
+    def fake(key, tbl, org="101", years=10, max_dims=4, se="Y"):
+        calls.append(tbl)
+        if tbl == "B":
+            return [_r("2024", "생산량", "5", "톤", C1_NM="계", C2_NM="미곡")]
+        return [_r("2024", "농가", "7", "가구", C1_NM="전국")]
+    monkeypatch.setattr(kosis, "fetch_table", fake)
+    now = now_kst()
+    base = {"fetched_at": (now - timedelta(hours=2)).isoformat(),
+            "series": {"farms": {"vals": [1.0]}, "rice": {"vals": [9.0]}, "new": {"vals": [3.0]}},
+            "failed": {"rice": (now - timedelta(hours=1)).isoformat()}}
+    (tmp_path / "stats.json").write_text(json.dumps(base), encoding="utf-8")
+    assert kosis.collect(src, tmp_path)[1] == base and calls == []      # 실패한 지 1시간: 아무것도 안 받음
+
+    base["failed"]["rice"] = (now - timedelta(hours=7)).isoformat()
+    del base["series"]["new"]
+    (tmp_path / "stats.json").write_text(json.dumps(base), encoding="utf-8")
+    _, st = kosis.collect(src, tmp_path)
+    assert sorted(calls) == ["B", "C"]                                  # 실패 계열과 새 계열의 표만
+    assert st["series"]["rice"]["vals"] == [5.0] and st["series"]["farms"] == {"vals": [1.0]}
+    assert st["at"]["farms"] == base["fetched_at"] and "failed" not in st
+
+
+def test_collect_refreshes_oldest_tables_within_budget(tmp_path, monkeypatch):
+    monkeypatch.setenv("KOSIS_TEST_KEY", "x")
+    src = {"id": "k", "env_key": "KOSIS_TEST_KEY", "max_tables": 1, "series": [
+        {"id": "a", "title": "가", "tbl": "A", "itm": "^농가$"},
+        {"id": "b", "title": "나", "tbl": "B", "itm": "^농가$"},
+        {"id": "c", "title": "다", "tbl": "C", "itm": "^농가$"}]}
+    calls = []
+
+    def fake(key, tbl, org="101", years=10, max_dims=4, se="Y"):
+        calls.append(tbl)
+        return [_r("2024", "농가", "7", "가구", C1_NM="전국")]
+    monkeypatch.setattr(kosis, "fetch_table", fake)
+    now = now_kst()
+    iso = lambda h: (now - timedelta(hours=h)).isoformat()
+    base = {"fetched_at": iso(1), "series": {k: {"vals": [1.0]} for k in "abc"}, "at": {"a": iso(30), "b": iso(50), "c": iso(1)}}
+    (tmp_path / "stats.json").write_text(json.dumps(base), encoding="utf-8")
+    _, st = kosis.collect(src, tmp_path)
+    assert calls == ["B"]                                               # 낡은 표 둘 중 더 오래된 것 하나만
+    assert st["series"]["b"]["vals"] == [7.0] and st["series"]["a"] == {"vals": [1.0]}
+    assert st["at"]["a"] == iso(30) and st["fetched_at"] == st["at"]["b"]
 
 
 def test_price_stats_year_over_year():

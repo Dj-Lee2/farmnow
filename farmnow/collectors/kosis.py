@@ -100,6 +100,9 @@ def _labels_sample(rows: list[dict], n: int = 6) -> str:
 
 
 def collect(src: dict, data_dir: Path) -> tuple[list, dict]:
+    """계열마다 마지막으로 받은 시각(at)을 두고, refresh_hours(기본 24시간)가 지난 계열의 통계표를 오래된 것부터
+    한 회차에 max_tables개(기본 150)·max_seconds초(기본 420)까지만 다시 받는다. 실패한 계열은 retry_hours(기본 6시간) 뒤에
+    그 표만 다시 받는다 — 통계표 2천 개를 한 회차에 몰아 받으면 갱신 한 번이 두 시간 넘게 걸려 시세·소식 갱신까지 밀린다."""
     path = data_dir / "stats.json"
     prev = {}
     if path.exists():
@@ -108,39 +111,69 @@ def collect(src: dict, data_dir: Path) -> tuple[list, dict]:
         except ValueError:
             prev = {}
     now = now_kst()
-    ids = [s["id"] for s in src["series"]]
     fresh_until = timedelta(hours=src.get("refresh_hours", 24))
-    if prev.get("fetched_at") and set(ids) <= set(prev.get("series", {})) \
-            and now - datetime.fromisoformat(prev["fetched_at"]) < fresh_until:
+    retry_after = timedelta(hours=src.get("retry_hours", 6))
+    prev_series = prev.get("series", {})
+    prev_failed = prev.get("failed", {})
+    legacy = prev.get("fetched_at")          # 계열별 시각이 없던 예전 파일은 전체 수집 시각을 쓴다
+    at = {k: prev.get("at", {}).get(k) or legacy for k in prev_series if prev.get("at", {}).get(k) or legacy}
+
+    def due(s: dict) -> bool:
+        i = s["id"]
+        if i in prev_failed:
+            return now - datetime.fromisoformat(prev_failed[i]) >= retry_after
+        if i not in prev_series or i not in at:
+            return True
+        return now - datetime.fromisoformat(at[i]) >= fresh_until
+
+    todo = [s for s in src["series"] if due(s)]
+    if not todo:
         return [], prev
     key = os.environ.get(src.get("env_key", "KOSIS_API_KEY"))
     if not key:
-        if prev.get("series"):
+        if prev_series:
             return [], prev
         raise RuntimeError("no_api_key")
 
-    tables: dict[str, list[dict]] = {}
-    out, errors = {}, []
-    for s in src["series"]:
+    groups: dict[tuple, list[dict]] = {}
+    for s in todo:
+        groups.setdefault((s["tbl"], s.get("se", "Y"), str(s.get("org", "101"))), []).append(s)
+    order = sorted(groups, key=lambda tk: min(at.get(s["id"]) or "" for s in groups[tk]))   # 오래된 표부터
+    max_tables, max_seconds = src.get("max_tables", 150), src.get("max_seconds", 420)
+
+    ids = {s["id"] for s in src["series"]}
+    out = {k: v for k, v in prev_series.items() if k in ids}   # 이번에 안 받는 계열·실패한 계열은 지난 값
+    failed = {k: v for k, v in prev_failed.items() if k in ids}
+    errors = []
+    started = datetime.now()
+    for n, tk in enumerate(order):
+        if n >= max_tables or (datetime.now() - started).total_seconds() > max_seconds:
+            break
+        tbl, se, org = tk
         try:
-            se = s.get("se", "Y")
-            tk = (s["tbl"], se)
-            if tk not in tables:
-                tables[tk] = fetch_table(key, s["tbl"], s.get("org", "101"), s.get("periods", src.get("years", 10)), se=se)
-            got = pick_series(tables[tk], s["itm"], s.get("want"), se, s.get("sum", False), s.get("codes"))
-            if not got:
-                raise RuntimeError(f"맞는 행 없음 ({_labels_sample(tables[tk])})")
-            out[s["id"]] = {"title": s["title"], "tbl": s["tbl"], "org": str(s.get("org", "101")), "survey": s.get("survey", ""), "se": se,
-                            **got, "unit": s.get("unit") or got["unit"]}
-        except Exception as e:  # 한 계열이 실패해도 지난 값을 쓴다
-            errors.append(f"{s['id']}: {type(e).__name__}: {e}"[:200])
-            if s["id"] in prev.get("series", {}):
-                out[s["id"]] = prev["series"][s["id"]]
+            rows = fetch_table(key, tbl, org, groups[tk][0].get("periods", src.get("years", 10)), se=se)
+        except Exception as e:
+            rows, err = None, e
+        for s in groups[tk]:
+            try:
+                if rows is None:
+                    raise err
+                got = pick_series(rows, s["itm"], s.get("want"), se, s.get("sum", False), s.get("codes"))
+                if not got:
+                    raise RuntimeError(f"맞는 행 없음 ({_labels_sample(rows)})")
+                out[s["id"]] = {"title": s["title"], "tbl": s["tbl"], "org": str(s.get("org", "101")), "survey": s.get("survey", ""),
+                                "se": se, **got, "unit": s.get("unit") or got["unit"]}
+                at[s["id"]] = now.isoformat()
+                failed.pop(s["id"], None)
+            except Exception as e:  # 한 계열이 실패해도 지난 값을 쓰고, retry_hours 뒤에 그 계열만 다시 받는다
+                errors.append(f"{s['id']}: {type(e).__name__}: {e}"[:200])
+                failed[s["id"]] = now.isoformat()
     for e in errors:
         print(f"[warn] kosis {e}", file=sys.stderr)
     if not out:
         raise RuntimeError(errors[0] if errors else "KOSIS empty")
-    stats = {"fetched_at": now.isoformat(), "series": out}
-    if errors:          # 일부 실패면 다음 회차에 다시 시도하도록 이전 수집 시각을 남긴다
-        stats["fetched_at"] = prev.get("fetched_at") or (now - fresh_until).isoformat()
+    at = {k: v for k, v in at.items() if k in out}
+    stats = {"fetched_at": max(at.values()) if at else now.isoformat(), "series": out, "at": at}
+    if failed:
+        stats["failed"] = failed
     return [], stats

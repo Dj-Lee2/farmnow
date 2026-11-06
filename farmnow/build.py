@@ -428,8 +428,8 @@ def stats_today(kstat: dict) -> dict | None:
     best = None
     for k in TODAY_KEYS:
         s = kstat.get(k)
-        if not s or s.get("se") != "Y" or len(s.get("vals") or []) < 5 or not s["vals"][-2]:
-            continue
+        if not s or s.get("se") != "Y" or len(s.get("vals") or []) < 5 or min(s["vals"][0], s["vals"][-2], s["vals"][-1]) <= 0:
+            continue    # 순수익처럼 0 아래로 내려가는 값은 증감률이 뜻이 없다(-99만 원이 '+38% 늘었다', '-201% 낮다')
         p = (s["vals"][-1] - s["vals"][-2]) / abs(s["vals"][-2]) * 100
         if best is None or abs(p) > abs(best[1]):
             best = (k, p)

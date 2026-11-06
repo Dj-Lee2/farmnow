@@ -12,14 +12,14 @@
     <div><small>급변{% if overnight.surge_day %} ({{ overnight.surge_day[5:]|replace('-', '.') }}){% endif %}</small><b>{{ overnight.surge }}</b></div>
    </div>
    <h3>오늘의 핵심</h3>
-   <ol>{% for it in top5 %}<li>[{{ it.label }}] {{ it.headline }} <span class="u">{{ it.source_name }} · {{ it|ftime }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ol>
+   <ol>{% for it in top5 %}<li><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }} <span class="u">{{ it.source_name }} · {{ it|ftime }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ol>
    <h3>기상특보</h3>
    <ul>{% if warn is none %}<li>확인 불가</li>{% elif active %}{% for a in active %}<li>{{ a.kind }}: {{ a.regions }}</li>{% endfor %}{% else %}<li>발효 중인 특보 없음 <span class="u">{{ warn.as_of|fdt }} 기준</span></li>{% endif %}</ul>
    {% if tickers.day %}<h3>시세 <span class="u">KAMIS {{ tickers.day }}</span></h3>
    <ul>{% for r in tickers.fixed %}<li>{{ r.disp }} {{ r.cls }} {{ r.price|won }}원/{{ r.unit }} ({{ r.pct|pct }}){% if r.day != tickers.day %} <span class="u">{{ r.day[5:]|replace('-', '.') }} 조사</span>{% endif %}</li>{% endfor %}
-    {% for r in tickers.surges %}<li>[급변] {{ r.disp }} {{ r.cls }} {{ r.price|won }}원/{{ r.unit }} ({{ r.pct|pct }})</li>{% endfor %}</ul>{% endif %}
+    {% for r in tickers.surges %}<li><span class="lb warning">급변</span>{{ r.disp }} {{ r.cls }} {{ r.price|won }}원/{{ r.unit }} ({{ r.pct|pct }})</li>{% endfor %}</ul>{% endif %}
    <h3>최근 24시간</h3>
-   <ul>{% for it in items if (now - it.event_time).total_seconds() <= 86400 %}<li>{{ it|ftime }} [{{ it.label }}] {{ it.headline }} <span class="u">{{ it.source_name }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ul>
+   <ul>{% for it in items if (now - it.event_time).total_seconds() <= 86400 %}<li>{{ it|ftime }} <span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }} <span class="u">{{ it.source_name }}</span><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">원문 ↗</a></li>{% else %}<li>없음</li>{% endfor %}</ul>
   </section>
   <aside class="first"><div class="sticky">
    <div class="card center">

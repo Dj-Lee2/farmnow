@@ -2,21 +2,16 @@
 {% block title %}소식 — {{ site.name }}{% endblock %}
 {% block content %}
 {% set rel_group = 'org_release|stats|legislation|subsidy_notice|tech_research' %}
-{% set ic = {'weather': '🌧️', 'price': '💰', 'legislation': '⚖️', 'subsidy_notice': '📢', 'org_release': '🏛️', 'stats': '📊', 'pest': '🐛', 'tech_research': '🔬'} %}
 <style>
 .px-g{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
 .px-brief{background:var(--card);border-radius:var(--r,16px);padding:20px;margin-bottom:16px}
 .px-brief h2{margin:0 0 10px;font-size:1.125rem;font-weight:400;color:var(--ink)}.px-brief h2 i{font-style:normal;color:var(--acc);margin-right:4px}.px-brief h2 small{color:var(--mute);font-weight:400;font-size:.8rem;margin-left:8px}
 .px-brief ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;line-height:1.6}.px-brief li::marker{color:var(--acc)}.px-brief li a{color:var(--ink)}.px-brief li small{color:var(--mute);margin-left:6px;font-size:.75rem}
 .px-brief .cnt{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.px-brief .cnt span{font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--txt)}
-.px-top{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:20px}.px-top>div{display:flex;flex-direction:column;gap:14px}
-.px-hero,.px-sub{display:block;border-radius:var(--r,16px);background:var(--card);overflow:hidden;color:var(--ink)}
-.px-hero .art{height:150px;display:grid;place-items:center;font-size:64px}.px-sub .art{height:64px;display:flex;align-items:center;padding:0 16px;font-size:30px}
-.art.weather{background:linear-gradient(135deg,#dfe9fb,#c7d9f6)}.art.price{background:linear-gradient(135deg,#fde7e5,#f8cfca)}.art.subsidy_notice{background:linear-gradient(135deg,#fff1dc,#fde2b7)}.art.legislation{background:linear-gradient(135deg,#ece8fb,#dad2f6)}.art.org_release,.art.stats,.art.tech_research{background:linear-gradient(135deg,#e2f2e8,#c9e6d4)}.art.pest{background:linear-gradient(135deg,#f0f3d8,#e1e8b6)}
-.px-hero .tx,.px-sub .tx{padding:14px 18px 16px}.px-hero h3{margin:6px 0;font-size:1.25rem;font-weight:400;line-height:1.45}.px-sub h3{margin:6px 0 2px;font-size:1rem;font-weight:500;line-height:1.45}.px-hero p{margin:0;color:var(--txt);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.px-hero small,.px-sub small{color:var(--mute);font-size:.75rem}
 .px-bar{position:sticky;top:64px;z-index:5;background:var(--bg);padding:8px 0;margin-bottom:6px}.px-bar .tabs{margin:0}
-#tl .day{margin:18px 0 8px;font-size:.84rem;color:var(--mute);font-weight:600}
-#tl .px-it{display:block;grid-template-columns:none;background:var(--card);border-radius:var(--r,16px);padding:16px 20px;margin:0 0 10px;border:0;box-shadow:none}#tl .px-it.hide{display:none}#tl .px-it>*{grid-column:auto;min-width:0}
+#tl .day{margin:0 -20px;padding:14px 20px 6px;font-size:.8125rem;color:var(--mute);font-weight:600;border-top:1px solid var(--line);position:static;background:none}#tl .day:first-child{border-top:0}#tl .day+.px-it{border-top:0}
+#tl{background:var(--card);border-radius:var(--r,16px);box-shadow:var(--ring,none);padding:0 20px}
+#tl .px-it{display:block;grid-template-columns:none;background:none;border-radius:0;padding:16px 0;margin:0;border:0;border-top:1px solid var(--line);box-shadow:none}#tl .px-it.hide{display:none}#tl .px-it>*{grid-column:auto;min-width:0}
 .px-src{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--mute);margin-bottom:6px}.px-src b{color:var(--txt);font-weight:500}.px-src time{margin-left:auto}.px-av{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--soft);font-size:.8rem}
 .px-h{display:block;font-weight:500;font-size:1rem;line-height:1.45;color:var(--ink)}.px-b{margin:6px 0 0;color:var(--txt);font-size:.88rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .px-meta{display:flex;gap:12px;margin-top:8px;font-size:.78rem;color:var(--mute)}.px-meta a{color:var(--acc);font-weight:500}.px-it .tags{margin-top:8px}
@@ -24,18 +19,15 @@
 .px-side .card{margin:0}.px-srcl button{display:flex;width:100%;justify-content:space-between;align-items:center;border:0;background:none;padding:8px 10px;border-radius:10px;font:inherit;font-size:.875rem;color:var(--txt);cursor:pointer;text-align:left}.px-srcl button.on{background:var(--acc-bg);color:var(--acc);font-weight:600}.px-srcl button i{font-style:normal;color:var(--mute);font-size:.75rem}
 .px-srcl small{display:block;margin:8px 10px 0;font-size:.72rem;color:var(--mute)}.px-srcl small a{color:var(--mute);text-decoration:underline}
 .px-w{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--soft);font-size:.86rem;color:var(--ink)}.px-w:last-child{border:0}.px-w em{font-style:normal;font-weight:500;font-size:.78rem;text-align:right}
-@media(hover:hover){.px-h:hover,.px-hero:hover h3,.px-sub:hover h3{text-decoration:underline;text-underline-offset:3px}.px-srcl button:not(.on):hover{background:var(--soft)}}
+@media(hover:hover){.px-h:hover{text-decoration:underline;text-underline-offset:3px}.px-srcl button:not(.on):hover{background:var(--soft)}}
 @media(max-width:760px){.px-bar .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}.px-bar .tabs button{flex:0 0 auto}}
-@media(max-width:1000px){.px-g{grid-template-columns:minmax(0,1fr)}.px-side{position:static;max-height:none}.px-top{grid-template-columns:1fr}}
+@media(max-width:1000px){.px-g{grid-template-columns:minmax(0,1fr)}.px-side{position:static;max-height:none}}
 </style>
 <div class="wrap page">
  <div class="page-hd"><h1>소식</h1><small id="count">{{ items|length }}건</small><small>정부 발표·공고·특보·시세·병해충을 한곳에</small></div>
  <div class="px-g"><section>
   <div class="px-brief"><h2><i>✦</i>오늘의 핵심<small>중요도·최신순으로 고른 {{ top5|length }}건</small></h2><ol>{% for it in top5 %}<li><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></li>{% endfor %}</ol>
    <div class="cnt"><span>특보 {{ tab_counts['weather'] or 0 }}</span><span>정부 발표 {{ (tab_counts['org_release'] or 0) + (tab_counts['legislation'] or 0) + (tab_counts['tech_research'] or 0) }}</span><span>공고 {{ tab_counts['subsidy_notice'] or 0 }}</span><span>가격 {{ tab_counts['price'] or 0 }}</span><span>병해충 {{ tab_counts['pest'] or 0 }}</span></div></div>
-  {% set feat = top5[:3] %}{% if feat %}<div class="px-top">
-   {% set it = feat[0] %}<a class="px-hero" href="n-{{ it.id }}.html"><div class="art {{ it.category }}">{{ ic.get(it.category, '📰') }}</div><div class="tx"><span class="lb {{ it.severity }}">{{ it.label }}</span><h3>{{ it.headline }}</h3>{% if it.body %}<p>{{ it.body }}</p>{% endif %}<small>{{ it.source_name }} · {{ it|ftime }}</small></div></a>
-   <div>{% for it in feat[1:] %}<a class="px-sub" href="n-{{ it.id }}.html"><div class="art {{ it.category }}">{{ ic.get(it.category, '📰') }}</div><div class="tx"><span class="lb {{ it.severity }}">{{ it.label }}</span><h3>{{ it.headline }}</h3><small>{{ it.source_name }} · {{ it|ftime }}</small></div></a>{% endfor %}</div></div>{% endif %}
   <div class="px-bar"><div class="tabs" id="pxTabs"><button type="button" data-cat="all" class="on" onclick="setCat('all',this)">전체<i>{{ tab_counts['all'] }}</i></button><button type="button" data-cat="{{ rel_group }}" data-k="release" onclick="setCat(this.dataset.cat,this)">정부 발표<i></i></button>{% for k,v in categories %}{% if k != 'all' and tab_counts[k] %}<button type="button" data-cat="{{ k }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div></div>
   <div id="tl">{% for d in days %}<div class="day" data-date="{{ d.date }}">{{ d.label }}</div>{% for it in d['items'] %}{% include "_item_px.html" %}{% endfor %}{% endfor %}</div>
   <p class="empty" id="tl-empty" hidden>찾는 소식이 없습니다 · <a href="#" onclick="SRC='';return clearQ()">전체 보기</a></p>

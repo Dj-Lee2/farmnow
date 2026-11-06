@@ -542,6 +542,10 @@ a.sg-rl{color:inherit}
 .row2.st2{grid-template-columns:repeat(2,minmax(0,1fr))}.st2 .sum-b{margin-top:auto;padding-top:14px}.st2 .sum-b b.up{color:#d23a32}.st2 .sum-b b.down{color:#2458d6}
 @media(max-width:1000px){.row2.st2{grid-template-columns:minmax(0,1fr)}}@media(max-width:760px){.st2 .sec small{display:none}}
 </style>
+<link rel="stylesheet" href="static/fonts/pretendard/pretendard.css">
+<style>
+{% include "_ui.css" %}
+</style>
 </head>
 <body data-built="{{ built_iso }}" data-stale="{{ site.stale_minutes or 180 }}">
 <header class="hd"><div class="wrap hd-in">
@@ -580,6 +584,7 @@ var DEF={{ tickers.default_idx or 0 }};
 var FIX={{ (tickers.fixed or [])|map(attribute='key')|list|tojson }};
 var $=function(id){return document.getElementById(id)};
 /* 큰글씨 */
+(function(){var n=document.querySelector('.hd nav'),a=n&&n.querySelector('a.on');if(a&&n.scrollWidth>n.clientWidth)n.scrollLeft=a.offsetLeft-(n.clientWidth-a.offsetWidth)/2})();   // 휴대폰: 지금 쪽 메뉴가 보이게
 (function(){var b=$('bigBtn'),h=document.documentElement;b.setAttribute('aria-pressed',h.classList.contains('big'));
  b.onclick=function(){var on=h.classList.toggle('big');b.setAttribute('aria-pressed',on);try{localStorage.setItem('big',on?'1':'')}catch(e){}if(window.draw&&$('svg'))draw()}})();
 /* 갱신 시각·오늘/어제 (KST 기준, 1분마다 다시 계산) */

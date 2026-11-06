@@ -89,3 +89,14 @@ html .day{top:var(--hd-h,64px)}html .px-bar{top:var(--hd-h,64px)}
  .hd .upd{order:1;margin-left:auto}.hd .header-actions{order:3}.hd nav{order:5;flex:0 0 100%}
  .mvt td.hb{width:30%;padding-left:6px;padding-right:6px}
 }
+
+/* 5차: 기사 상세 읽기 폭·단추, 통계 왼쪽 목차 지금 위치를 머리 메뉴와 같은 모양, 발령 오른쪽 목록을 한 상자로 */
+.art h1{font-size:1.625rem;font-weight:700;letter-spacing:-0.03em;line-height:1.4}
+.art .lead{max-width:68ch}
+.art .btn-blue{display:inline-flex;align-items:center;width:auto;height:44px;padding:0 20px}
+.art .btn-line{height:44px;padding:0 18px}
+.sgp-g.on{background:var(--card);color:var(--ink);font-weight:600;box-shadow:var(--ring)}
+.wlist{background:var(--card);border-radius:var(--r);box-shadow:var(--ring);overflow:hidden}
+.wlist .wcard{margin:0;border-radius:0;box-shadow:none;border:0;border-top:1px solid var(--line)}
+.wlist .wcard:first-child{border-top:0}
+.wlist>.st{padding:14px 18px;margin:0}

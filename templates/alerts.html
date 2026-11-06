@@ -23,11 +23,11 @@
   </section>
   <aside>
    <div class="sec"><h3 style="font-size:1.143rem">병해충발생정보</h3></div>
-   {% for it in pests %}<div class="wcard"><div class="h"><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">{{ it.extra.no }} · {{ it.extra.period }} ↗</a></div><div class="d">{{ it.event_time.strftime('%m.%d') }} 등록{% if it.expires_at and it.expires_at < now %} · 기간 종료{% endif %}</div></div>{% else %}<p class="st">없음</p>{% endfor %}
+   <div class="wlist">{% for it in pests %}<div class="wcard"><div class="h"><a href="https://{{ (it.url)|hp }}" target="_blank" rel="noopener">{{ it.extra.no }} · {{ it.extra.period }} ↗</a></div><div class="d">{{ it.event_time.strftime('%m.%d') }} 등록{% if it.expires_at and it.expires_at < now %} · 기간 종료{% endif %}</div></div>{% else %}<p class="st">없음</p>{% endfor %}</div>
    {% if weekly %}<div class="sec" style="margin-top:22px"><h3 style="font-size:1.143rem">주간농사정보</h3></div>
-   <div class="wcard"><div class="h"><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">{{ weekly.extra.no }} · {{ weekly.extra.period }} ↗</a></div><div class="d">{{ weekly.event_time.strftime('%m.%d') }} 등록</div></div>{% endif %}
+   <div class="wlist"><div class="wcard"><div class="h"><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">{{ weekly.extra.no }} · {{ weekly.extra.period }} ↗</a></div><div class="d">{{ weekly.event_time.strftime('%m.%d') }} 등록</div></div></div>{% endif %}
    <div class="sec" style="margin-top:22px"><h3 style="font-size:1.143rem">공고 · 입법예고</h3></div>
-   {% for it in notices %}<div class="wcard"><div class="h"><span class="lb {{ it.severity }}">{{ it.label }}</span><a href="n-{{ it.id }}.html">{{ it.headline }}</a></div><div class="d">{{ it.source_name }} · {{ it|ftime }}</div></div>{% else %}<p class="st">없음</p>{% endfor %}
+   <div class="wlist">{% for it in notices %}<div class="wcard"><div class="h"><span class="lb {{ it.severity }}">{{ it.label }}</span><a href="n-{{ it.id }}.html">{{ it.headline }}</a></div><div class="d">{{ it.source_name }} · {{ it|ftime }}</div></div>{% else %}<p class="st">없음</p>{% endfor %}</div>
   </aside>
  </div>
 </div>

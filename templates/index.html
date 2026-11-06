@@ -153,13 +153,13 @@
 
  <div class="body2">
   <section class="card feed">
-   <div class="sec" style="margin:14px 0 2px"><h3>속보</h3><small>최신 {{ home_days|sum(attribute='items', start=[])|length }}건</small><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
+   <div class="sec" style="margin:14px 0 2px"><h3>소식</h3><small>최신 {{ home_days|sum(attribute='items', start=[])|length }}건</small><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
    {% set ns = namespace(n=0) %}
    {% for d in home_days %}
     <div class="day{{ ' xm' if ns.n >= 8 }}" data-date="{{ d.date }}">{{ d.label }}</div>
     {% for it in d['items'] %}{% set ns.n = ns.n + 1 %}{% set xm = ns.n > 8 %}{% include "_item.html" %}{% endfor %}
    {% else %}<p class="empty">수집된 항목이 없습니다.</p>{% endfor %}
-   <a class="more" href="news.html">속보 전체 보기</a>
+   <a class="more" href="news.html">소식 전체 보기</a>
   </section>
 
   <aside class="side">

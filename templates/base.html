@@ -584,6 +584,10 @@ var DEF={{ tickers.default_idx or 0 }};
 var FIX={{ (tickers.fixed or [])|map(attribute='key')|list|tojson }};
 var $=function(id){return document.getElementById(id)};
 /* 큰글씨 */
+(function(){var hd=document.querySelector('.hd'),p=$('pill'),l=$('lens'),q=$('q'),mq=matchMedia('(max-width:760px)');if(!hd)return;
+ function setH(){document.documentElement.style.setProperty('--hd-h',hd.offsetHeight+'px')}setH();addEventListener('resize',setH);   // 붙박이 머리 높이 → 날짜·탭 줄 top
+ if(p&&l&&q){l.addEventListener('click',function(e){if(mq.matches&&!p.classList.contains('open')){e.stopImmediatePropagation();p.classList.add('open');setH();q.focus()}});   // 휴대폰: 돋보기를 누르면 검색칸이 펼쳐진다
+  q.addEventListener('blur',function(){setTimeout(function(){if(!q.value){p.classList.remove('open');setH()}},150)});setTimeout(function(){if(q.value){p.classList.add('open');setH()}},0)}})();
 (function(){var n=document.querySelector('.hd nav'),a=n&&n.querySelector('a.on');if(a&&n.scrollWidth>n.clientWidth)n.scrollLeft=a.offsetLeft-(n.clientWidth-a.offsetWidth)/2})();   // 휴대폰: 지금 쪽 메뉴가 보이게
 (function(){var b=$('bigBtn'),h=document.documentElement;b.setAttribute('aria-pressed',h.classList.contains('big'));
  b.onclick=function(){var on=h.classList.toggle('big');b.setAttribute('aria-pressed',on);try{localStorage.setItem('big',on?'1':'')}catch(e){}if(window.draw&&$('svg'))draw()}})();

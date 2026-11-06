@@ -76,3 +76,16 @@ html .sq-wf i.on{background:var(--acc)}
 html .hv-pane,html .hv-ix{box-shadow:var(--ring)}
 /* 켜짐 상태인 소리 단추가 검정 덩어리로 보이지 않게 */
 #soundToggle[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:var(--ring)}
+
+/* 3차: 소리 단추 켜짐 테두리, 붙박이 머리 높이에 맞춘 날짜·탭 줄, 휴대폰 머리 한 줄(검색은 돋보기로 펼침), 많이 움직인 품목 이름 칸 */
+.ico[aria-pressed=true]{border-color:transparent}
+html .day{top:var(--hd-h,64px)}html .px-bar{top:var(--hd-h,64px)}
+@media(max-width:760px){
+ .hd-in{flex-wrap:wrap}
+ .hd .hsearch{order:2;flex:0 0 40px;width:40px;max-width:none;padding:0;justify-content:center}
+ .hd .hsearch input,.hd .hsearch kbd{display:none!important}
+ .hd .hsearch.open{order:6;flex:0 0 100%;width:auto;padding:0 10px 0 6px;justify-content:flex-start}
+ .hd .hsearch.open input{display:block!important}
+ .hd .upd{order:1;margin-left:auto}.hd .header-actions{order:3}.hd nav{order:5;flex:0 0 100%}
+ .mvt td.hb{width:30%;padding-left:6px;padding-right:6px}
+}

@@ -100,3 +100,12 @@ html .day{top:var(--hd-h,64px)}html .px-bar{top:var(--hd-h,64px)}
 .wlist .wcard{margin:0;border-radius:0;box-shadow:none;border:0;border-top:1px solid var(--line)}
 .wlist .wcard:first-child{border-top:0}
 .wlist>.st{padding:14px 18px;margin:0}
+
+/* 6차: 휴대폰 홈 — 소식이 화면 7장 아래(5,563px)에 묻혀 있었다. 시세 요약·그래프 다음으로 올리고, 통계 묶음은 그 뒤로 */
+@media(max-width:760px){
+ .home{display:flex;flex-direction:column}
+ .home>*{order:3;min-width:0}
+ .home>.kpis.dash{order:0}.home>.row2:not(.st2){order:1}.home>.body2{order:2;margin-top:16px}
+ .home>.sec.st-h{margin-top:24px}
+ .c-move .mvt tr.pick:nth-child(n+7):not(.ax){display:none}
+}

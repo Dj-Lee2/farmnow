@@ -65,3 +65,14 @@ table th{font-weight:500;color:var(--mute);font-size:0.8125rem}
  .strip{margin-top:10px}
 }
 @media(prefers-reduced-transparency:reduce){.hd{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}}
+
+/* 2차: 쪽 안 <style>(시세·홈 부품)이 머리의 규칙을 이기므로 html을 붙여 한 단계 높인다 */
+html .hv-ph h2{font-size:1.25rem;font-weight:600;letter-spacing:-0.02em}html .hv-ph h3{font-weight:600;letter-spacing:-0.02em}
+html .hv-ix b{font-weight:700;letter-spacing:-0.03em}html .hv-ix small{color:var(--mute)}
+html .sq-today h2{font-weight:600;letter-spacing:-0.02em}html .sq-today .big{font-weight:700;letter-spacing:-0.03em}
+html .sq-today .k{color:var(--mute);font-weight:500}
+html .sq-q{font-weight:600}html .sq-c p{color:var(--txt)}
+html .sq-wf i.on{background:var(--acc)}
+html .hv-pane,html .hv-ix{box-shadow:var(--ring)}
+/* 켜짐 상태인 소리 단추가 검정 덩어리로 보이지 않게 */
+#soundToggle[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:var(--ring)}

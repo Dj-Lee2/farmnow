@@ -34,3 +34,8 @@ def test_stats_today_skips_values_below_zero():
     k1, k2 = build.TODAY_KEYS[:2]
     t = build.stats_today({k1: s([98, -50, -60, -160, -100]), k2: s([10, 10, 10, 10, 12])})
     assert t["key"] == k2                                   # 순수익이 0 아래인 계열은 증감률로 고르지 않는다
+
+
+def test_nav_merges_alerts_and_brief_into_news():
+    pages = [p for p, _ in build.NAV]
+    assert "alerts.html" not in pages and "brief.html" not in pages and "news.html" in pages   # 옛 주소는 소식으로 넘기는 쪽만 만든다

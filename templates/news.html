@@ -4,10 +4,12 @@
 {% set rel_group = 'org_release|stats|legislation|subsidy_notice|tech_research' %}
 <style>
 .px-g{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
-.px-brief{background:var(--card);border-radius:var(--r,16px);padding:20px;margin-bottom:16px}
+.px-brief{background:var(--card);border-radius:var(--r,16px);padding:20px;margin-bottom:16px;scroll-margin-top:calc(var(--hd-h,64px) + 12px)}
+.px-bh{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:10px}.px-bh h2{margin:0!important}.px-bt{margin-left:auto;display:flex;gap:6px}.px-bt .btn-line{height:34px;padding:0 12px;font-size:.8125rem;border-radius:10px}
+.px-warn{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;background:var(--card);border-radius:var(--r,16px);box-shadow:var(--ring,none);padding:12px 18px;margin-bottom:12px;font-size:.875rem;color:var(--txt)}.px-warn b{color:var(--ink);font-weight:600}.px-warn em{margin-left:auto;font-style:normal;color:var(--mute);font-size:.75rem}.px-warn .lb{margin-right:4px}
+.px-doc{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--ink)}.px-doc:first-of-type{border-top:0}.px-doc small{display:block;color:var(--mute);font-size:.75rem}.px-doc i{font-style:normal;color:var(--mute);font-size:.8125rem;white-space:nowrap}
 .px-brief h2{margin:0 0 10px;font-size:1.125rem;font-weight:400;color:var(--ink)}.px-brief h2 i{font-style:normal;color:var(--acc);margin-right:4px}.px-brief h2 small{color:var(--mute);font-weight:400;font-size:.8rem;margin-left:8px}
 .px-brief ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;line-height:1.6}.px-brief li::marker{color:var(--acc)}.px-brief li a{color:var(--ink)}.px-brief li small{color:var(--mute);margin-left:6px;font-size:.75rem}
-.px-brief .cnt{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.px-brief .cnt span{font-size:.75rem;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--txt)}
 .px-bar{position:sticky;top:64px;z-index:5;background:var(--bg);padding:8px 0;margin-bottom:6px}.px-bar .tabs{margin:0}
 #tl .day{margin:0 -20px;padding:14px 20px 6px;font-size:.8125rem;color:var(--mute);font-weight:600;border-top:1px solid var(--line);position:static;background:none}#tl .day:first-child{border-top:0}#tl .day+.px-it{border-top:0}
 #tl{background:var(--card);border-radius:var(--r,16px);box-shadow:var(--ring,none);padding:0 20px}
@@ -26,8 +28,11 @@
 <div class="wrap page">
  <div class="page-hd"><h1>소식</h1><small id="count">{{ items|length }}건</small><small>정부 발표·공고·특보·시세·병해충을 한곳에</small></div>
  <div class="px-g"><section>
-  <div class="px-brief"><h2><i>✦</i>오늘의 핵심<small>중요도·최신순으로 고른 {{ top5|length }}건</small></h2><ol>{% for it in top5 %}<li><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></li>{% endfor %}</ol>
-   <div class="cnt"><span>특보 {{ tab_counts['weather'] or 0 }}</span><span>정부 발표 {{ (tab_counts['org_release'] or 0) + (tab_counts['legislation'] or 0) + (tab_counts['tech_research'] or 0) }}</span><span>공고 {{ tab_counts['subsidy_notice'] or 0 }}</span><span>가격 {{ tab_counts['price'] or 0 }}</span><span>병해충 {{ tab_counts['pest'] or 0 }}</span></div></div>
+  {% if warn is none %}<a class="px-warn" href="./news?type=alert"><b>기상특보</b><span>확인 불가</span></a>
+  {% elif active %}<a class="px-warn on" href="./news?type=alert"><b>발효 중 특보 {{ active|length }}</b>{% for a in active %}<span><span class="lb {{ 'alert' if '경보' in a.kind else 'warning' }}">{{ a.kind }}</span>{{ a.short|join('·') if a.short else a.regions }}</span>{% endfor %}<em>{{ warn.as_of|fdt }} 기준</em></a>
+  {% else %}<div class="px-warn"><b>발효 중 특보 없음</b><em>{{ warn.as_of|fdt }} 기준</em></div>{% endif %}
+  <div class="px-brief" id="brief"><div class="px-bh"><h2><i>✦</i>오늘의 핵심<small>중요도·최신순으로 고른 {{ top5|length }}건</small></h2><span class="px-bt"><button type="button" class="btn-line" id="briefCopy" title="최근 24시간 소식·시세 요약을 글자로 복사">글자로 복사</button><a class="btn-line" href="./brief.txt" download>텍스트 받기</a></span></div><textarea id="briefText" hidden readonly aria-hidden="true" style="position:fixed;left:-9999px">{{ brief_text }}</textarea><ol>{% for it in top5 %}<li><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></li>{% endfor %}</ol>
+</div>
   <div class="px-bar"><div class="tabs" id="pxTabs"><button type="button" data-cat="all" class="on" onclick="setCat('all',this)">전체<i>{{ tab_counts['all'] }}</i></button><button type="button" data-cat="{{ rel_group }}" data-k="release" onclick="setCat(this.dataset.cat,this)">정부 발표<i></i></button>{% for k,v in categories %}{% if k != 'all' and tab_counts[k] %}<button type="button" data-cat="{{ k }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div></div>
   <div id="tl">{% for d in days %}<div class="day" data-date="{{ d.date }}">{{ d.label }}</div>{% for it in d['items'] %}{% include "_item_px.html" %}{% endfor %}{% endfor %}</div>
   <p class="empty" id="tl-empty" hidden>찾는 소식이 없습니다 · <a href="#" onclick="SRC='';return clearQ()">전체 보기</a></p>
@@ -39,12 +44,17 @@
    <small>원래 게시판: {% for sid in srcs if sources_cfg[sid] and (sources_cfg[sid].home_url or sources_cfg[sid].url) %}<a href="https://{{ (sources_cfg[sid].home_url or sources_cfg[sid].url)|hp }}" target="_blank" rel="noopener">{{ sources_cfg[sid].name }}</a>{{ ' · ' if not loop.last }}{% endfor %}</small></div>
   {% if trend %}<div class="card"><div class="sec"><h3 style="font-size:1.05rem">많이 나온 태그</h3><small>최근 {{ trend_hours }}시간</small></div><div class="tags">{% for t in trend %}<a class="coin ev" href="news.html?tag={{ t.q|urlencode }}"><i>#</i>{{ t.label[1:] }} <span class="u">{{ t.n }}</span></a>{% endfor %}</div></div>{% endif %}
   {% if home %}<div class="card"><div class="sec"><h3 style="font-size:1.05rem">오늘 시세</h3><small><a href="market.html">시세 →</a></small></div>{% for r in home.watch %}<a class="px-w" href="market.html?pick={{ r.key }}"><span>{{ r.e }}</span><span>{{ r.disp }}</span><em class="{{ 'up' if r.pct > 0 else 'down' if r.pct < 0 else '' }}">{{ r.price|won }}원<br>{{ r.pct|pct }}</em></a>{% endfor %}</div>{% endif %}
-  <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.html">브리핑</a></div></div>
+  {% if pest or weekly %}<div class="card"><div class="sec"><h3 style="font-size:1.05rem">이번 주 문서</h3></div>{% for d, nm in ((pest, '병해충발생정보'), (weekly, '주간농사정보')) if d %}<a class="px-doc" href="https://{{ d.url|hp }}" target="_blank" rel="noopener"><span>{{ nm }} {{ d.extra.no }}<small>{{ d.extra.period }}{% if d.expires_at and d.expires_at < now %} · 기간 종료{% endif %}</small></span><i>문서 ↗</i></a>{% endfor %}</div>{% endif %}
+  <div class="card"><div class="links" style="border:0;margin:0;padding:0"><a href="feed.xml">RSS</a><a href="brief.txt" download>텍스트 브리핑</a></div></div>
  </aside></div>
 </div>
 {% endblock %}
 {% block scripts %}
 (function(){var L=document.querySelector('.px-srcl');if(!L)return;function setSrc(s){SRC=s;[].forEach.call(L.querySelectorAll('button'),function(b){b.classList.toggle('on',b.dataset.src===s)});shown=30;apply()}
  L.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setSrc(b.dataset.src)});
- var t=param('type'),s=param('src');if(t==='release'){var b=document.querySelector('#pxTabs button[data-k="release"]');if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s)})();
+ var t=param('type'),s=param('src');if(t==='release'||t==='alert'){var b=document.querySelector(t==='release'?'#pxTabs button[data-k="release"]':'#pxTabs button[data-cat="weather"]');if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s)})();
+(function(){var b=document.getElementById('briefCopy'),ta=document.getElementById('briefText');if(!b||!ta)return;   // 누른 순간 바로 복사(가져오기를 기다리면 사파리가 막는다)
+ function done(ok){b.textContent=ok?'복사했습니다':'복사 안 됨 — 텍스트 받기를 쓰세요';setTimeout(function(){b.textContent='글자로 복사'},2000)}
+ function legacy(){ta.hidden=false;ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.hidden=true;done(ok)}
+ b.addEventListener('click',function(){if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(ta.value).then(function(){done(true)},legacy);else legacy()})})();
 {% endblock %}

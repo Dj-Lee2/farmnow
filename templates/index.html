@@ -123,12 +123,12 @@
 
  <div class="row3">
   <section class="card">
-   <div class="sec"><h3>오늘의 핵심</h3><a class="go" href="brief.html">브리핑 →</a></div>
+   <div class="sec"><h3>오늘의 핵심</h3><a class="go" href="news.html#brief">소식 →</a></div>
    <div class="t5l">{% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}</div>
   </section>
 
   <section class="card c-sum">
-   <div class="sec"><h3>발령·문서</h3><a class="go" href="alerts.html">전체 →</a></div>
+   <div class="sec"><h3>발령·문서</h3><a class="go" href="news.html?type=alert">특보 전체 →</a></div>
    <div class="alerts">
     {% if warn is none %}<div class="row"><span>기상특보</span><b>확인 불가</b></div>
     {% elif active %}{% for a in active[:3] %}<div class="row"><span>{{ a.kind }}<br><small>{{ a.regions }}</small></span><b class="up">발효 중</b></div>{% endfor %}
@@ -137,7 +137,7 @@
     {% if weekly %}<div class="row"><span>주간농사정보 {{ weekly.extra.no }}<br><small><a href="n-{{ weekly.id }}.html">{{ weekly.extra.period }}</a></small></span><b><a href="https://{{ (weekly.url)|hp }}" target="_blank" rel="noopener">문서 ↗</a></b></div>{% endif %}
    </div>
    <div class="sum-b"><span>특보 <b>{{ overnight.weather }}</b></span><span>공고·예고 <b>{{ overnight.notice }}</b></span><span>기관발표 <b>{{ overnight.release }}</b></span><span>가격 <b>{{ overnight.price }}</b></span></div>
-   <a class="btn-blue" href="brief.html">브리핑 보기</a>
+   <a class="btn-blue" href="news.html">소식 보기</a>
   </section>
 
   <section class="card{{ ' stale' if stocks and stocks.stale }}">

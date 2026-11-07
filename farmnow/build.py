@@ -24,7 +24,7 @@ SITE = ROOT / "site"
 DATA = ROOT / "data"
 WEEKDAY = "월화수목금토일"
 NAV = [("index.html", "홈"), ("news.html", "소식"), ("market.html", "시세"), ("stocks.html", "국제·증시"),
-       ("stats.html", "통계"), ("alerts.html", "발령"), ("brief.html", "브리핑"), ("about.html", "정보")]
+       ("stats.html", "통계"), ("about.html", "정보")]
 CATEGORIES = [("all", "전체"), ("weather", "특보"), ("price", "가격"), ("legislation", "정책·법령"),
               ("subsidy_notice", "공고"), ("org_release", "보도·설명"), ("pest", "병해충"), ("tech_research", "기술")]
 TAB_OF = {"stats": "org_release"}          # 탭이 따로 없는 카테고리가 속할 탭
@@ -536,10 +536,12 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         old.unlink()
     if kstat:
         stats_pages(env, ctx)
-    # 기관발표는 소식에 합쳤다 — 옛 주소는 '정부 발표' 탭으로 넘긴다
-    (SITE / "releases.html").write_text(
-        '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>소식으로 옮겼습니다</title>'
-        '<meta http-equiv="refresh" content="0;url=./news?type=release"><a href="./news?type=release">소식 · 정부 발표로 이동</a>', encoding="utf-8")
+    # 기관발표·발령·브리핑은 소식에 합쳤다 — 옛 주소는 소식의 해당 자리로 넘긴다
+    for old, to, label in (("releases.html", "./news?type=release", "소식 · 정부 발표"), ("alerts.html", "./news?type=alert", "소식 · 특보"),
+                           ("brief.html", "./news#brief", "소식 · 오늘의 핵심")):
+        (SITE / old).write_text(
+            '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>소식으로 옮겼습니다</title>'
+            f'<meta http-equiv="refresh" content="0;url={to}"><a href="{to}">{label}로 이동</a>', encoding="utf-8")
     (SITE / "404.html").write_text(clean_urls(hangul_only(env.get_template("404.html").render(page="404.html", **ctx))), encoding="utf-8")
     for old in list(SITE.glob("n-*.html")) + list(SITE.glob("s-*.html")):
         old.unlink()

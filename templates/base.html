@@ -580,6 +580,7 @@ a.sg-rl{color:inherit}
 <script>
 var TOP5={{ top5_js|default([])|tojson }};
 var ROWS={% block rows %}[]{% endblock %};
+var SI={{ stat_si|tojson }};   // 시세 품목 → 품목별 통계(stats-i-*)
 var DEF={{ tickers.default_idx or 0 }};
 var FIX={{ (tickers.fixed or [])|map(attribute='key')|list|tojson }};
 var $=function(id){return document.getElementById(id)};
@@ -604,7 +605,10 @@ setInterval(rollIssue,4000);
 /* 검색·필터: 타임라인(#tl)이 있는 쪽에서는 바로 거르고, 없는 쪽에서는 속보로 이동. ?tag= 는 태그 정확 일치 */
 var cat='all',shown=30,q=$('q'),pill=$('pill'),TAG='',SRC='';
 function param(k){var m=location.search.match(new RegExp('[?&]'+k+'=([^&]*)'));if(!m)return '';try{return decodeURIComponent(m[1].replace(/\+/g,' '))}catch(e){return m[1]}}
-function setUrl(){if(!$('tl')||!history.replaceState)return;var v=q.value.trim();history.replaceState(null,'',TAG?'news.html?tag='+encodeURIComponent(TAG):v?'news.html?q='+encodeURIComponent(v):'news.html')}
+function tabKey(b){return b?(b.dataset.k||(b.dataset.cat==='weather'?'alert':b.dataset.cat)):''}   // 주소의 ?type= 값(특보는 옛 주소와 같게 alert)
+function setUrl(){if(!$('tl')||!history.replaceState)return;var v=q.value.trim(),p=[],t=tabKey(document.querySelector('#pxTabs button.on'));   // 검색어·탭·출처를 주소에 남겨 새로고침·공유해도 같은 목록
+ if(TAG)p.push('tag='+encodeURIComponent(TAG));else if(v)p.push('q='+encodeURIComponent(v));if(t&&t!=='all')p.push('type='+encodeURIComponent(t));if(SRC)p.push('src='+encodeURIComponent(SRC));
+ history.replaceState(null,'',location.pathname.replace(/\.html$/,'')+(p.length?'?'+p.join('&'):''))}
 function goQ(){var v=q.value.trim();if(!v){q.focus();return}if($('tl')){TAG='';shown=30;apply();setUrl()}else location.href='news.html?q='+encodeURIComponent(v)}
 document.addEventListener('keydown',function(e){if(e.key==='/'&&q&&document.activeElement!==q&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();q.focus()}});
 if(pill){$('lens').onclick=function(){if(pill.classList.contains('edit'))goQ();else{pill.classList.add('edit');q.focus()}};
@@ -621,7 +625,7 @@ function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCa
  if($('count'))$('count').textContent=n+'건';
  if($('tl-empty'))$('tl-empty').hidden=n>0;
  document.querySelectorAll('#tl .day').forEach(function(h){var e=h.nextElementSibling,vis=false;while(e&&!e.classList.contains('day')){if(e.classList.contains('item')&&!e.classList.contains('hide')){vis=true;break}e=e.nextElementSibling}h.style.display=vis?'':'none'});}
-function setCat(c,btn){cat=c;shown=30;document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();}
+function setCat(c,btn){cat=c;shown=30;document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
 function showMore(){shown+=30;apply();}
 function clearQ(){q.value='';TAG='';pill.classList.remove('edit');cat='all';document.querySelectorAll('.tabs button').forEach(function(b,i){b.classList.toggle('on',i===0)});shown=30;apply();setUrl();return false}
 if(q&&$('tl')){TAG=param('tag');var q0=TAG?(TAG.charAt(0)==='#'?TAG:'#'+TAG):param('q');if(q0){pill.classList.add('edit');q.value=q0}}
@@ -669,7 +673,9 @@ function draw(i,still){if(i!==undefined)cur=+i;var r=ROWS[cur],svg=$('svg');if(!
   if(!still&&!RM){pp.classList.remove('flip');void pp.offsetWidth;pp.classList.add('flip')}}
  lastPrice=r.price;
  var f=function(a){return a?(r.price-a)/a*100:null},m=f(r.month_ago),yv=f(r.year_ago);
- if($('pdelta'))$('pdelta').innerHTML='전일 대비 <b class="'+cls(r.pct)+'">'+fp(r.pct)+'</b> · 1개월 대비 <b class="'+cls(m)+'">'+fp(m)+'</b> · 1년 대비 <b class="'+cls(yv)+'">'+fp(yv)+'</b>';
+ var fq=function(v,w){return v==null?'<span class="na" title="KAMIS가 이 품목의 '+w+' 조사값을 주지 않았습니다">자료 없음</span>':'<b class="'+cls(v)+'">'+fp(v)+'</b>'};   // – 대신 이유를 쓴다
+ if($('pdelta'))$('pdelta').innerHTML='전일 대비 '+fq(r.pct,'전일')+' · 1개월 대비 '+fq(m,'1개월 전')+' · 1년 대비 '+fq(yv,'1년 전');
+ var ps=$('pstat'),si=SI[r.base]||SI[(r.disp||'').split(' ')[0]];if(ps){ps.innerHTML=si?'<a href="./stats-i-'+si[0]+'">'+si[1]+' 통계에서 긴 추이 보기 →</a>':'';ps.hidden=!si}
  drawSeason(r);
  document.querySelectorAll('tr.pick').forEach(function(tr){tr.classList.toggle('on',+tr.dataset.i===cur)});}
 /* 평년 범위: 시세 행에 season(올해 월평균·최근 5년 같은 달 최저·최고·평균)이 있으면 그린다 */

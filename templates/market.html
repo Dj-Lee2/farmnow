@@ -48,7 +48,7 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
   </section>
   <aside class="mk-side" id="mkSide">
    <section class="hv-pane"><div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label><span class="pnav"><button type="button" id="pPrev" aria-label="이전 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="pNext" aria-label="다음 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span></div>
-    <div class="price" id="pprice"></div><div class="delta" id="pdelta"></div>
+    <div class="price" id="pprice"></div><div class="delta" id="pdelta"></div><p class="pstat" id="pstat" hidden></p>
     <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div></section>
    <div class="card sz" id="season" hidden><div class="sec"><h3 style="font-size:1.05rem">평년과 비교</h3></div><div class="sub" id="szSub"></div>
     <div class="sz-box"><svg id="szv" role="img" aria-label="올해 월평균 가격과 최근 5년 범위"></svg><div class="sz-tip" id="szTip"></div></div>

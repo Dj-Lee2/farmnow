@@ -509,7 +509,13 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     base_url = (os.environ.get("SITE_BASE_URL") or os.environ.get("CI_PAGES_URL") or cfg["site"].get("base_url") or "").rstrip("/")
 
     env = make_env()
+    # 시세 품목 → 품목별 통계 쪽(긴 추이). KAMIS 품목명(base)·통계 별칭 모두로 찾는다
+    stat_si = {}
+    for it in statviews.ITEMS:
+        for nm in [it[1], *it[3], it[4].split("/")[0]]:
+            stat_si.setdefault(nm, [it[0], it[1]])
     ctx = dict(
+        stat_si=stat_si,
         site=cfg["site"], now=now, built=now.strftime("%Y.%m.%d %H:%M"), built_iso=now.isoformat(),
         nav=nav, stocks=stocks, categories=CATEGORIES, tab_counts=tab_counts, license_label=LICENSE_LABEL,
         items=items, days=days, home_days=home_days, top5=t5, trend=trend, trend_hours=trend_hours,

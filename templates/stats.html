@@ -6278,7 +6278,8 @@
  const run=()=>{const v=q.value.trim().toLowerCase();if(!v||!I){R.hidden=true;return}const ws=v.split(/\s+/);
   const hit=I.cards.filter(c=>{const H=I.heads[c[1]],t=(c[0]+' '+H[1]+' '+H[0]).toLowerCase();return ws.every(w=>t.includes(w))}).slice(0,30);
   R.innerHTML=hit.length?hit.map(c=>{const H=I.heads[c[1]];return '<li><a href="./'+H[2]+'#'+c[2]+'"><b>'+esc(c[0])+'</b><small>'+esc(H[0]+' › '+H[1])+'</small></a></li>'}).join(''):'<li class="none">찾는 통계가 없습니다</li>';R.hidden=false};
- q.addEventListener('input',()=>{if(I)return run();if(busy)return;busy=true;fetch('./stats-index.json').then(r=>r.json()).then(j=>{I=j;run()}).catch(()=>{busy=false})})})()</script>
+ q.addEventListener('input',()=>{if(I)return run();if(busy)return;busy=true;fetch('./stats-index.json').then(r=>r.json()).then(j=>{I=j;run()}).catch(()=>{busy=false})});
+ const q0=new URLSearchParams(location.search).get('q');if(q0){q.value=q0;q.dispatchEvent(new Event('input'));q.scrollIntoView({block:'center'})}})()</script>
  <p class="lg sg-src">출처: 국가데이터처 KOSIS(농림어업조사·농가경제조사·농업면적조사·농작물생산조사·농가판매및구입가격조사·가축동향조사·축산물생산비조사·양곡소비량조사·귀농어귀촌인통계·농산물생산비조사·경제활동인구조사·친환경농축산물인증현황·소비자물가조사), 농림축산식품부(농림업생산지수·농업기계보유현황·원유생산실적·배합사료 생산실적·시설채소 온실현황·축산물 도축실적), 축산물품질평가원(축산물 등급판정), 한국농어촌공사(수리답), 국제통계(비료·농약 사용량 FAO 기반, 온실가스 배출), 기상청(기온·강수량). 카드 오른쪽 위 버튼을 누르면 원래 통계표가 열립니다.</p>
  {% else %}<p class="empty">통계 미수집</p>{% endif %}
  {% if only %}</div></div>{% endif %}

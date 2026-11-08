@@ -34,7 +34,7 @@
    <div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label></div>
    <div class="rot" id="rot" aria-hidden="true"><i></i></div>
    <div class="price" id="pprice"></div>
-   <div class="delta" id="pdelta"></div>
+   <div class="delta" id="pdelta"></div><p class="pstat" id="pstat" hidden></p>
    <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div>
    {% else %}<p class="empty">시세 미수집</p>{% endif %}
   </section>

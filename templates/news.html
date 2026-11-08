@@ -6,6 +6,8 @@
 .px-g{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
 .px-brief{background:var(--card);border-radius:var(--r,16px);padding:20px;margin-bottom:16px;scroll-margin-top:calc(var(--hd-h,64px) + 12px)}
 .px-bh{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:10px}.px-bh h2{margin:0!important}.px-bt{margin-left:auto;display:flex;gap:6px}.px-bt .btn-line{height:34px;padding:0 12px;font-size:.8125rem;border-radius:10px}
+.px-also{background:var(--card);border-radius:var(--r,16px);box-shadow:var(--ring,none);padding:14px 18px;margin-bottom:12px;display:flex;flex-direction:column;gap:8px;font-size:.875rem}.px-also-h{margin:0;color:var(--mute);font-size:.8125rem}.px-also div{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}.px-also b{color:var(--ink);font-weight:600;margin-right:4px;min-width:6.5em}.px-also a{display:inline-flex;align-items:center;gap:4px;min-height:28px;padding:0 10px;border-radius:999px;background:var(--soft);color:var(--ink)}.px-also a small{color:var(--mute)}
+.searching #brief{display:none}
 .px-warn{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;background:var(--card);border-radius:var(--r,16px);box-shadow:var(--ring,none);padding:12px 18px;margin-bottom:12px;font-size:.875rem;color:var(--txt)}.px-warn b{color:var(--ink);font-weight:600}.px-warn em{margin-left:auto;font-style:normal;color:var(--mute);font-size:.75rem}.px-warn .lb{margin-right:4px}
 .px-doc{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--ink)}.px-doc:first-of-type{border-top:0}.px-doc small{display:block;color:var(--mute);font-size:.75rem}.px-doc i{font-style:normal;color:var(--mute);font-size:.8125rem;white-space:nowrap}
 .px-brief h2{margin:0 0 10px;font-size:1.125rem;font-weight:400;color:var(--ink)}.px-brief h2 i{font-style:normal;color:var(--acc);margin-right:4px}.px-brief h2 small{color:var(--mute);font-weight:400;font-size:.8rem;margin-left:8px}
@@ -31,11 +33,12 @@
   {% if warn is none %}<a class="px-warn" href="./news?type=alert"><b>기상특보</b><span>확인 불가</span></a>
   {% elif active %}<a class="px-warn on" href="./news?type=alert"><b>발효 중 특보 {{ active|length }}</b>{% for a in active %}<span><span class="lb {{ 'alert' if '경보' in a.kind else 'warning' }}">{{ a.kind }}</span>{{ a.short|join('·') if a.short else a.regions }}</span>{% endfor %}<em>{{ warn.as_of|fdt }} 기준</em></a>
   {% else %}<div class="px-warn"><b>발효 중 특보 없음</b><em>{{ warn.as_of|fdt }} 기준</em></div>{% endif %}
+  <div class="px-also" id="pxAlso" hidden></div>
   <div class="px-brief" id="brief"><div class="px-bh"><h2><i>✦</i>오늘의 핵심<small>중요도·최신순으로 고른 {{ top5|length }}건</small></h2><span class="px-bt"><button type="button" class="btn-line" id="briefCopy" title="최근 24시간 소식·시세 요약을 글자로 복사">글자로 복사</button><a class="btn-line" href="./brief.txt" download>텍스트 받기</a></span></div><textarea id="briefText" hidden readonly aria-hidden="true" style="position:fixed;left:-9999px">{{ brief_text }}</textarea><ol>{% for it in top5 %}<li><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></li>{% endfor %}</ol>
 </div>
   <div class="px-bar"><div class="tabs" id="pxTabs"><button type="button" data-cat="all" class="on" onclick="setCat('all',this)">전체<i>{{ tab_counts['all'] }}</i></button><button type="button" data-cat="{{ rel_group }}" data-k="release" onclick="setCat(this.dataset.cat,this)">정부 발표<i></i></button>{% for k,v in categories %}{% if k != 'all' and tab_counts[k] %}<button type="button" data-cat="{{ k }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div></div>
   <div id="tl">{% for d in days %}<div class="day" data-date="{{ d.date }}">{{ d.label }}</div>{% for it in d['items'] %}{% include "_item_px.html" %}{% endfor %}{% endfor %}</div>
-  <p class="empty" id="tl-empty" hidden>찾는 소식이 없습니다 · <a href="#" onclick="SRC='';return clearQ()">전체 보기</a></p>
+  <p class="empty" id="tl-empty" hidden>조건에 맞는 소식이 없습니다. 검색어를 줄이거나 다른 탭을 골라 보세요 · <a href="#" onclick="SRC='';document.querySelectorAll('.px-srcl button').forEach(function(b){b.classList.toggle('on',!b.dataset.src)});return clearQ()">조건 모두 지우기</a> · <a id="emptyStats" href="./stats">통계에서 찾기</a></p>
   <button class="more" id="more" type="button" onclick="showMore()">더보기</button>
  </section>
  <aside class="px-side">
@@ -50,9 +53,26 @@
 </div>
 {% endblock %}
 {% block scripts %}
-(function(){var L=document.querySelector('.px-srcl');if(!L)return;function setSrc(s){SRC=s;[].forEach.call(L.querySelectorAll('button'),function(b){b.classList.toggle('on',b.dataset.src===s)});shown=30;apply()}
+{% set mk = [] %}{% for r in tickers.all or [] %}{% set _ = mk.append([r.disp, r.cls, r.key, r.base]) %}{% endfor %}
+/* 검색하면 소식 말고 시세 품목·품목 통계·통계 지표도 맨 위에 묶어 보여 준다(머리 검색칸이 '품목·지역·기관 검색'이라서) */
+(function(){var box=document.getElementById('pxAlso');if(!box||!q)return;var MK={{ mk|tojson }},I=null,busy=false,G=document.querySelector('.px-g');
+ function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+ function run(){var v=(TAG?'':q.value).trim().toLowerCase();if(G)G.classList.toggle('searching',!!(v||TAG));if(!v){box.hidden=true;return}
+  var ws=v.split(/\s+/),has=function(t){t=t.toLowerCase();return ws.every(function(w){return t.indexOf(w)>=0})};
+  var si=[],seen={};
+  for(var k in SI){var kl=k.toLowerCase();if((kl.indexOf(v)>=0||(k.length>1&&v.indexOf(kl)>=0))&&!seen[SI[k][0]]){seen[SI[k][0]]=1;si.push(SI[k])}}
+  var mk=MK.filter(function(r){var x=SI[r[3]];return has(r[0])||(x&&seen[x[0]])});   // '한우'로 찾으면 KAMIS의 '소' 품목도
+  var st=I?I.cards.filter(function(c){var H=I.heads[c[1]];return has(c[0]+' '+H[1]+' '+H[0])}).sort(function(a,b){return has(b[0])-has(a[0])}):null,out=[];   // 지표 이름에 든 것을 먼저
+  if(mk.length)out.push('<div><b>시세 품목 '+mk.length+'</b>'+mk.slice(0,4).map(function(r){return '<a href="./market?pick='+r[2]+'">'+esc(r[0])+' <small>'+esc(r[1])+'</small></a>'}).join('')+(mk.length>4?'<a href="./market">더 보기</a>':'')+'</div>');
+  if(si.length)out.push('<div><b>품목 통계</b>'+si.slice(0,4).map(function(x){return '<a href="./stats-i-'+x[0]+'">'+esc(x[1])+'</a>'}).join('')+'</div>');
+  if(st&&st.length)out.push('<div><b>통계 지표 '+st.length+'</b>'+st.slice(0,3).map(function(c){var H=I.heads[c[1]];return '<a href="./'+H[2]+'#'+c[2]+'">'+esc(c[0])+'</a>'}).join('')+'<a href="./stats?q='+encodeURIComponent(v)+'">모두 보기</a></div>');
+  var es=document.getElementById('emptyStats');if(es)es.href='./stats?q='+encodeURIComponent(v);
+  box.innerHTML=out.length?'<p class="px-also-h">“'+esc(v)+'” 소식 밖에서도 찾았습니다</p>'+out.join(''):'';box.hidden=!out.length;
+  if(!I&&!busy){busy=true;fetch('./stats-index.json').then(function(r){return r.json()}).then(function(j){I=j;run()}).catch(function(){busy=false})}}
+ q.addEventListener('input',run);run()})();
+(function(){var L=document.querySelector('.px-srcl');if(!L)return;function setSrc(s){SRC=s;[].forEach.call(L.querySelectorAll('button'),function(b){b.classList.toggle('on',b.dataset.src===s)});shown=30;apply();setUrl()}
  L.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setSrc(b.dataset.src)});
- var t=param('type'),s=param('src');if(t==='release'||t==='alert'){var b=document.querySelector(t==='release'?'#pxTabs button[data-k="release"]':'#pxTabs button[data-cat="weather"]');if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s)})();
+ var t=param('type'),s=param('src');if(t){var b=[].filter.call(document.querySelectorAll('#pxTabs button'),function(x){return tabKey(x)===t})[0];if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s)})();
 (function(){var b=document.getElementById('briefCopy'),ta=document.getElementById('briefText');if(!b||!ta)return;   // 누른 순간 바로 복사(가져오기를 기다리면 사파리가 막는다)
  function done(ok){b.textContent=ok?'복사했습니다':'복사 안 됨 — 텍스트 받기를 쓰세요';setTimeout(function(){b.textContent='글자로 복사'},2000)}
  function legacy(){ta.hidden=false;ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.hidden=true;done(ok)}

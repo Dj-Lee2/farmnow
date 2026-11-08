@@ -143,3 +143,10 @@ main:focus{outline:none}
 .kp4 .s small{font-size:0.75rem}
 .px-meta a{min-height:24px;display:inline-flex;align-items:center}
 .t5 a{display:block;padding:1px 0;min-height:24px}
+/* UX 1회차: 시세 상세의 '자료 없음'·통계 잇기, 검색해서 도착한 통계 카드 표시 */
+.delta .na{color:var(--mute);text-decoration:underline dotted;text-underline-offset:3px;cursor:help}
+.pstat{margin:4px 0 0;font-size:.875rem}.pstat a{color:var(--acc);font-weight:600}
+[id^="c-"]{scroll-margin-top:calc(var(--hd-h,64px) + 16px)}
+[id^="c-"]:target{box-shadow:0 0 0 2px var(--acc),var(--ring)}
+@media(prefers-reduced-motion:no-preference){[id^="c-"]:target{animation:tgt 1.6s ease-out 1}}
+@keyframes tgt{from{box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 35%,transparent),var(--ring)}}

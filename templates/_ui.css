@@ -180,3 +180,8 @@ h1 .sg-of{font-size:.6em;font-weight:500;color:var(--muted,#5f6670);margin-left:
 /* UX 9회차 */
 .wk-help{margin:6px 0 2px;font-size:.857rem;color:var(--muted,#5f6670);line-height:1.5}.wk-help b{color:var(--ink);font-weight:600}
 .sx-unit-h{display:block;margin-top:2px;font-size:.857rem;color:var(--muted,#5f6670);line-height:1.45}
+.tabs button.zero,#pxWk button.zero{opacity:.5}
+.sg-dh{font-size:1.05rem;font-weight:600;margin:20px 0 10px}.sg-dh small{font-size:.857rem;font-weight:500;color:var(--muted,#5f6670);margin-left:4px}
+.sg-df{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px;max-width:420px}.sg-df span{font-size:.929rem;color:var(--muted,#5f6670);white-space:nowrap}
+.sg-df input{flex:1 1 200px;min-width:0;width:100%;min-height:44px;padding:0 12px;border:1px solid var(--line,#d9dde3);border-radius:10px;font:inherit;font-size:16px;background:#fff}
+.sg-dfn{margin:-4px 0 10px;font-size:.929rem;color:var(--muted,#5f6670)}

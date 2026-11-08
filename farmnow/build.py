@@ -323,6 +323,14 @@ SG_KEEP = 4   # 큰 소제목에서 묶음 쪽에 남기는 대표 카드 수
 SG_DIR_MIN = 12   # 소제목이 이만큼 이상이면 묶음 쪽을 소제목 목록으로
 
 
+_SG_CLUSTERS = (("세계와 비교", r"^세계|세계 속|주요국|OECD|FAO|북한|북녘"), ("숲·임업", r"숲|산림|임가|임산|임업|목재|버섯|임야|휴양림"))
+
+
+def _sg_cluster(name: str):
+    """안내판에서 따로 묶을 소제목 갈래(없으면 None = 우리 농업)."""
+    return next((k for k, p in _SG_CLUSTERS if re.search(p, name)), None)
+
+
 def _sg_segments(html: str) -> list:
     """묶음 쪽의 소제목 덩어리: (소제목 id, 시작, 끝, 카드 id들). 모양이 예상과 다르면 빈 목록(나누지 않음)."""
     hs = list(re.finditer(r'<h2 class="sg-sub" id="([^"]+)"', html))
@@ -394,13 +402,27 @@ def stats_pages(env, ctx: dict) -> dict:
             return s
         whole = html
         if dir_mode:
-            tiles = []
+            seen = Counter(label[sid] for sid, *_ in segs)
+            nth: Counter = Counter()
+            groups: dict = {}
             for sid, a, b, cs in segs:
                 names = [_plain(t) for t in re.findall(r'<div class="t">(.*?)<a ', whole[a:b], re.S)]
-                tiles.append(f'<a class="sg-dt" id="{sid}" href="./{split[sid]}"><b>{escape(label[sid])}</b>'
-                             f'<small>카드 {len(cs)}장 · {escape(", ".join(names[:3]))}{" 외" if len(names) > 3 else ""}</small></a>')
+                nm = label[sid]
+                if seen[nm] > 1:                    # 이름이 같은 소제목은 (1/2)처럼 구분
+                    nth[nm] += 1
+                    nm = f"{nm} ({nth[nm]}/{seen[nm]})"
+                tile = (f'<a class="sg-dt" id="{sid}" href="./{split[sid]}" data-k="{escape(" ".join(names))}"><b>{escape(nm)}</b>'
+                        f'<small>카드 {len(cs)}장 · {escape(", ".join(names[:3]))}{" 외" if len(names) > 3 else ""}</small></a>')
+                groups.setdefault(_sg_cluster(label[sid]), []).append(tile)
+            main = [t for k, v in groups.items() if k is None or len(v) < 3 for t in v]
+            rest = [(k, v) for k, v in groups.items() if k is not None and len(v) >= 3]
+            body = '<div class="sg-dir">' + "".join(main) + "</div>"
+            if rest:   # 세계 비교·숲·임업처럼 결이 다른 소제목은 따로 묶는다
+                body = (f'<h2 class="sg-dh">우리 농업 <small>{len(main)}</small></h2>' + body
+                        + "".join(f'<h2 class="sg-dh">{k} <small>{len(v)}</small></h2><div class="sg-dir">' + "".join(v) + "</div>" for k, v in rest))
             html = (whole[:segs[0][1]] + '<p class="sg-dir-h">소제목을 고르면 그 카드를 모두 볼 수 있습니다. 지표 이름을 알면 <a href="./stats">통계 찾기</a>가 빠릅니다.</p>'
-                    '<div class="sg-dir">' + "".join(tiles) + "</div>" + whole[segs[-1][2]:])
+                    '<label class="sg-df"><span>소제목 거르기</span><input id="sgDf" type="search" autocomplete="off" placeholder="예: 쌀, 사과, 소득"></label>'
+                    '<p class="sg-dfn" id="sgDfN" aria-live="polite" hidden></p>' + body + whole[segs[-1][2]:])
         for sid, a, b, cs in reversed(segs if not dir_mode else []):   # 묶음 쪽: 큰 소제목은 앞 카드만 + 전체 보기
             if sid in split:
                 seg = whole[a:b]

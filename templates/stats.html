@@ -6268,6 +6268,11 @@
  <script>(()=>{const P=document.querySelector('.sgp');
  if(P){document.querySelectorAll('.sgp .sg-grp>summary').forEach(s=>s.addEventListener('click',e=>{if(!e.target.closest('a'))e.preventDefault()}));
   const L=[...document.querySelectorAll('.sgp-side .sgp-sub a')],sel=document.getElementById('sgpJump');
+  const df=document.getElementById('sgDf');   // 안내판: 소제목 이름·카드 이름으로 거르기
+  if(df)df.addEventListener('input',()=>{const w=df.value.trim().toLowerCase().split(/\s+/).filter(Boolean),T=[...document.querySelectorAll('.sg-dt')];let n=0;
+   T.forEach(t=>{const ok=!w.length||w.every(x=>(t.textContent+' '+(t.dataset.k||'')).toLowerCase().includes(x));t.hidden=!ok;if(ok)n++});
+   document.querySelectorAll('.sg-dir').forEach(d=>{const v=[...d.children].some(c=>!c.hidden);d.hidden=!v;const h=d.previousElementSibling;if(h&&h.classList.contains('sg-dh'))h.hidden=!v});
+   const N=document.getElementById('sgDfN');N.hidden=!w.length;N.textContent=n?'소제목 '+n+'개':'맞는 소제목이 없습니다. 통계 찾기에서 지표 이름으로 찾아보세요.'});
   if(sel)sel.addEventListener('change',()=>{const v=sel.value;if(!v)return;if(v[0]==='#')location.hash=v;else location.href=v});
   const sp=document.getElementById('sgSplit'),hh=location.hash.slice(1),hn=hh.match(/^c-[a-z]+-(\d+)$/);   // 옛 카드 주소 → 소제목 쪽
   if(sp&&hn&&!document.getElementById(hh)){const r=JSON.parse(sp.dataset.r).find(x=>+hn[1]>=x[1]&&+hn[1]<=x[2]);if(r){location.replace('./'+r[0]+'#'+hh);return}}

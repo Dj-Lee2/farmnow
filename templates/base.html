@@ -617,13 +617,14 @@ if(pill){$('lens').onclick=function(){if(pill.classList.contains('edit'))goQ();e
  q.addEventListener('blur',function(){if(!q.value)pill.classList.remove('edit')});
  q.addEventListener('keydown',function(e){if(e.key==='Enter')goQ()});
  q.addEventListener('input',function(){if($('tl')){TAG='';shown=30;apply();setUrl()}});}
-function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCase(),n=0,per={},sper={},sall=0;
+function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCase(),n=0,per={},sper={},sall=0,wper={},wall=0;
  document.querySelectorAll('#tl .item').forEach(function(el){var hit=TAG?el.dataset.tags.indexOf('|'+TAG+'|')>=0:(!v||el.dataset.text.indexOf(v)>=0);
   var cok=cat==='all'||('|'+cat+'|').indexOf('|'+el.dataset.cat+'|')>=0,sok=!SRC||el.dataset.src===SRC,wok=!WK||el.dataset.wk===WK;   // 탭 수는 출처 거르기까지, 출처 수는 탭·검색까지 반영
-  if(hit&&sok)per[el.dataset.cat]=(per[el.dataset.cat]||0)+1;if(hit&&cok&&wok){sper[el.dataset.src]=(sper[el.dataset.src]||0)+1;sall++}
+  if(hit&&sok){per[el.dataset.cat]=(per[el.dataset.cat]||0)+1;if(el.dataset.cat==='weather'){wper[el.dataset.wk]=(wper[el.dataset.wk]||0)+1;wall++}}if(hit&&cok&&wok){sper[el.dataset.src]=(sper[el.dataset.src]||0)+1;sall++}
   var ok=hit&&cok&&sok&&wok;if(ok)n++;el.classList.toggle('hide',!ok||n>shown);});
  var all=0;for(var k in per)all+=per[k];
- document.querySelectorAll('.tabs button[data-cat]').forEach(function(b){var c=b.dataset.cat,i=b.querySelector('i');if(i)i.textContent=c==='all'?all:c.split('|').reduce(function(s,k){return s+(per[k]||0)},0)});
+ document.querySelectorAll('.tabs button[data-cat]').forEach(function(b){var c=b.dataset.cat,i=b.querySelector('i'),k=c==='all'?all:c.split('|').reduce(function(s,k){return s+(per[k]||0)},0);if(i)i.textContent=k;b.classList.toggle('zero',!k&&c!=='all')});   // 0인 탭은 흐리게
+ var WB=$('pxWk');if(WB)[].forEach.call(WB.children,function(b){if(!b.dataset.nm)b.dataset.nm=b.textContent.replace(/\s\d+$/,'');var k=b.dataset.wk?(wper[b.dataset.wk]||0):wall;b.textContent=b.dataset.nm+' '+k;b.classList.toggle('zero',!k&&!!b.dataset.wk)});
  document.querySelectorAll('.px-srcl button[data-src]').forEach(function(b){var c=b.dataset.src?(sper[b.dataset.src]||0):sall,i=b.querySelector('i');if(i)i.textContent=c;b.classList.toggle('zero',!c&&!!b.dataset.src)});
  var ss=$('srcSel');if(ss)[].forEach.call(ss.options,function(o){if(!o.dataset.nm)o.dataset.nm=o.textContent.replace(/\s\d+$/,'');o.textContent=o.dataset.nm+' '+(o.value?(sper[o.value]||0):sall)});
  var G=document.querySelector('.px-g');if(G)G.classList.toggle('filtering',cat!=='all'||!!SRC||!!WK);
@@ -635,6 +636,8 @@ function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCa
 function setCat(c,btn){cat=c;shown=30;var W=$('pxWk');if(W){W.hidden=c!=='weather';if($('pxWkH'))$('pxWkH').hidden=c!=='weather';if(c!=='weather'){WK='';[].forEach.call(W.children,function(b){b.classList.toggle('on',!b.dataset.wk)})}}document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
 function showMore(){shown+=30;apply();}
 function clearQ(){q.value='';TAG='';WK='';pill.classList.remove('edit');cat='all';document.querySelectorAll('.tabs button').forEach(function(b,i){b.classList.toggle('on',i===0)});shown=30;apply();setUrl();return false}
+if(q&&$('tl'))document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.coin[href*="tag="]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.button)return;   // 소식 쪽 태그는 걸어 둔 탭·출처를 지우지 않고 더한다
+ var t=decodeURIComponent(((a.getAttribute('href').split('tag=')[1]||'').split('&')[0]).replace(/\+/g,' '));if(!t)return;e.preventDefault();TAG=t;q.value=t.charAt(0)==='#'?t:'#'+t;pill.classList.add('edit');shown=30;apply();setUrl();var tl=$('tl'),y=tl.getBoundingClientRect().top;if(y<0||y>innerHeight*0.6)tl.scrollIntoView({block:'start'})});
 if(q&&$('tl')){TAG=param('tag');var q0=TAG?(TAG.charAt(0)==='#'?TAG:'#'+TAG):param('q');if(q0){pill.classList.add('edit');q.value=q0}}
 /* 4시점 비교 차트(1년 전·1개월 전·전일·당일 조사값) */
 var sel=$('pick'),cur=DEF;

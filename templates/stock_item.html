@@ -16,7 +16,7 @@
 
  <div class="two">
   <section class="card sd-chart">
-   <div class="chd"><div class="ptab" id="per"><button type="button" data-d="30">1개월</button><button type="button" data-d="91" class="on">3개월</button><button type="button" data-d="182">6개월</button><button type="button" data-d="366">1년</button></div>
+   <div class="chd"><div class="ptab" id="per" role="group" aria-label="기간"><button type="button" data-d="30" aria-pressed="false">1개월</button><button type="button" data-d="91" class="on" aria-pressed="true">3개월</button><button type="button" data-d="182" aria-pressed="false">6개월</button><button type="button" data-d="366" aria-pressed="false">1년</button></div>
     <div class="sd-ret" id="ret"></div>
     {% if ohlc %}<div class="ptab" id="kind" role="group" aria-label="차트 종류"><button type="button" data-k="line" class="on" aria-pressed="true">선</button><button type="button" data-k="candle" aria-pressed="false">캔들</button></div>{% endif %}</div>
    <div class="sd-plot"><svg id="pc" role="img" aria-label="{{ r.name }} 가격 추이"></svg><div class="sd-tip" id="ptip"></div></div>
@@ -102,7 +102,7 @@ var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')
   kb.forEach(function(bt){bt.onclick=function(){setKind(bt.dataset.k);try{localStorage.setItem('chart',mode)}catch(e){}out();draw()}})}
  pc.addEventListener('pointermove',hover);pc.addEventListener('pointerdown',hover);pc.addEventListener('pointerleave',out);
  var RK={30:'1m',91:'3m',182:'6m',366:'1y'};   // 고른 기간을 주소(?r=)에 남겨 새로고침·공유해도 그대로
- document.querySelectorAll('#per button').forEach(function(bt){bt.onclick=function(){days=+bt.dataset.d;document.querySelectorAll('#per button').forEach(function(o){o.classList.toggle('on',o===bt)});out();draw();if(history.replaceState)history.replaceState(null,'',location.pathname.replace(/\.html$/,'')+(days===91?'':'?r='+RK[days])+location.hash)}});
+ document.querySelectorAll('#per button').forEach(function(bt){bt.onclick=function(){days=+bt.dataset.d;document.querySelectorAll('#per button').forEach(function(o){o.classList.toggle('on',o===bt);o.setAttribute('aria-pressed',o===bt)});out();draw();if(history.replaceState)history.replaceState(null,'',location.pathname.replace(/\.html$/,'')+(days===91?'':'?r='+RK[days])+location.hash)}});
  var r0=(location.search.match(/[?&]r=(1m|3m|6m|1y)/)||[])[1],b0=r0&&document.querySelector('#per button[data-d="'+Object.keys(RK).find(function(k){return RK[k]===r0})+'"]');
  if(b0)b0.click();else if(C.length<70){document.querySelector('#per button[data-d="366"]').click()}else draw();
  var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(draw,150)})})();

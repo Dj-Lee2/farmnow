@@ -573,6 +573,7 @@ a.sg-rl{color:inherit}
  <button type="button" class="tk-pp pp" id="tkPause" aria-pressed="false" aria-label="시세 띠 멈춤" title="시세 띠 멈춤" hidden><svg class="i-pause" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button>
 </div></div>
 
+<div id="srLive" class="sr-only" role="status" aria-live="polite"></div>
 {% block content %}{% endblock %}
 </main>
 <footer class="wrap"><b>{{ site.name }}</b> · 출처: {{ orgs|join(' · ') }} · 갱신 {{ built }} · <a href="about.html">정보</a> · <a href="feed.xml">RSS</a></footer>
@@ -628,9 +629,10 @@ function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCa
  var G=document.querySelector('.px-g');if(G)G.classList.toggle('filtering',cat!=='all'||!!SRC||!!WK);
  if($('more')){$('more').style.display=n>shown?'block':'none';$('more').textContent='더보기 ('+(n-shown)+'건)'}
  if($('count'))$('count').textContent=n+'건';
- if($('tl-empty'))$('tl-empty').hidden=n>0;
+ if($('tl-empty')){$('tl-empty').hidden=n>0;var et=$('tlEmptyT');if(et&&!n){var qv=TAG||(q?q.value.trim():''),w=qv?'‘'+qv+'’에 맞는 소식이 ':'조건에 맞는 소식이 ';   // 0건: 무엇을 찾았는지와 다음 할 일
+  et.textContent=all&&(cat!=='all'||WK)?w+'이 탭에는 없습니다. 전체 탭에 '+all+'건 있습니다.':w+'없습니다.'+(qv?' 검색어를 줄이거나 통계에서 찾아보세요.':' 조건을 지워 보세요.')}}
  document.querySelectorAll('#tl .day').forEach(function(h){var e=h.nextElementSibling,vis=false;while(e&&!e.classList.contains('day')){if(e.classList.contains('item')&&!e.classList.contains('hide')){vis=true;break}e=e.nextElementSibling}h.style.display=vis?'':'none'});}
-function setCat(c,btn){cat=c;shown=30;var W=$('pxWk');if(W){W.hidden=c!=='weather';if(c!=='weather'){WK='';[].forEach.call(W.children,function(b){b.classList.toggle('on',!b.dataset.wk)})}}document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
+function setCat(c,btn){cat=c;shown=30;var W=$('pxWk');if(W){W.hidden=c!=='weather';if($('pxWkH'))$('pxWkH').hidden=c!=='weather';if(c!=='weather'){WK='';[].forEach.call(W.children,function(b){b.classList.toggle('on',!b.dataset.wk)})}}document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
 function showMore(){shown+=30;apply();}
 function clearQ(){q.value='';TAG='';WK='';pill.classList.remove('edit');cat='all';document.querySelectorAll('.tabs button').forEach(function(b,i){b.classList.toggle('on',i===0)});shown=30;apply();setUrl();return false}
 if(q&&$('tl')){TAG=param('tag');var q0=TAG?(TAG.charAt(0)==='#'?TAG:'#'+TAG):param('q');if(q0){pill.classList.add('edit');q.value=q0}}

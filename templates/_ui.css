@@ -177,3 +177,6 @@ h1 .sg-of{font-size:.6em;font-weight:500;color:var(--muted,#5f6670);margin-left:
 .sg-dt b{font-size:1rem;font-weight:600;line-height:1.4}
 .sg-dt small{font-size:.857rem;color:var(--muted,#5f6670);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sg-dt:target{box-shadow:0 0 0 2px var(--acc,#1d5fd1)}
+/* UX 9회차 */
+.wk-help{margin:6px 0 2px;font-size:.857rem;color:var(--muted,#5f6670);line-height:1.5}.wk-help b{color:var(--ink);font-weight:600}
+.sx-unit-h{display:block;margin-top:2px;font-size:.857rem;color:var(--muted,#5f6670);line-height:1.45}

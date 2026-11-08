@@ -82,7 +82,7 @@
   $$('sxKosis').href='https://kosis.kr/statHtml/statHtml.do?orgId='+encodeURIComponent(D.org)+'&tblId='+encodeURIComponent(D.tb||'');
   $$('sxCsv').onclick=function(){var c='﻿시점,값('+u+')\n'+Y.map(function(p,i){return p+','+V[i]}).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/csv'}));a.download=k+'.csv';a.click()};
   $$('sxCopy').onclick=function(){try{navigator.clipboard.writeText(location.href);this.textContent='복사했습니다'}catch(e){}};
-  $$('sxMeta').innerHTML='<dt>조사</dt><dd>'+esc(D.sv||'–')+'</dd><dt>통계표</dt><dd>'+esc(D.tn||D.tb||'–')+'</dd><dt>주기</dt><dd>'+({Y:'해마다',Q:'분기마다',M:'달마다',F:'2년마다'}[D.se]||'–')+'</dd><dt>단위</dt><dd>'+esc(u)+'</dd><dt>기간</dt><dd>'+esc(prd(Y[0]))+' ~ '+esc(prd(Y[n-1]))+' ('+n+'개 시점)</dd><dt>출처</dt><dd>국가데이터처 KOSIS</dd>';
+  $$('sxMeta').innerHTML='<dt>조사</dt><dd>'+esc(D.sv||'–')+'</dd><dt>통계표</dt><dd>'+esc(D.tn||D.tb||'–')+'</dd><dt>주기</dt><dd>'+({Y:'해마다',Q:'분기마다',M:'달마다',F:'2년마다'}[D.se]||'–')+'</dd><dt>단위</dt><dd>'+esc(u)+(function(){var t=(D.t||'')+' '+u,h=[];if(/10a/.test(t))h.push('10a = 1,000㎡(약 300평)');if(/=\s*100|지수/.test(t))h.push('기준 해 값을 100으로 놓은 지수 — 100보다 크면 기준 해보다 높음');return h.length?'<small class="sx-unit-h">'+h.join('<br>')+'</small>':''})()+'</dd><dt>기간</dt><dd>'+esc(prd(Y[0]))+' ~ '+esc(prd(Y[n-1]))+' ('+n+'개 시점)</dd><dt>출처</dt><dd>국가데이터처 KOSIS</dd>';
   $$('sxRel').innerHTML=(D.rel||[]).map(function(r){return '<a href="./stats-x.html?k='+r[0]+'">'+esc(r[1])+'</a>'}).join('')||'<p class="st">같은 통계표의 다른 지표가 없습니다.</p>';
  }).catch(nf)})();
 {% endblock %}

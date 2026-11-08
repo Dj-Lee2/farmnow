@@ -42,7 +42,8 @@
 </div>
   <div class="px-bar"><div class="tabs" id="pxTabs"><button type="button" data-cat="all" class="on" onclick="setCat('all',this)">전체<i>{{ tab_counts['all'] }}</i></button><button type="button" data-cat="{{ rel_group }}" data-k="release" onclick="setCat(this.dataset.cat,this)">정부 발표<i></i></button>{% for k,v in categories %}{% if k != 'all' and tab_counts[k] %}<button type="button" data-cat="{{ k }}" onclick="setCat('{{ k }}',this)">{{ v }}<i>{{ tab_counts[k] }}</i></button>{% endif %}{% endfor %}</div>{% set srcs0 = items|map(attribute='source_id')|unique|list %}{% set wx = items|selectattr('category','equalto','weather')|list %}<div class="px-wk ptab" id="pxWk" hidden role="group" aria-label="특보 종류"><button type="button" data-wk="" class="on">전체 {{ wx|length }}</button><button type="button" data-wk="on">발표·변경 {{ wx|selectattr('label','equalto','특보')|list|length }}</button><button type="button" data-wk="pre">해제 예고 {{ wx|selectattr('label','equalto','해제 예고')|list|length }}</button><button type="button" data-wk="off">해제 {{ wx|selectattr('label','equalto','특보 해제')|list|length }}</button></div><label class="px-srcsel">출처 <select id="srcSel" aria-label="출처로 거르기"><option value="">전체 {{ items|length }}</option>{% for sid in srcs0 %}<option value="{{ sid }}">{{ sources_cfg[sid].name if sources_cfg[sid] else sid }} {{ items|selectattr('source_id','equalto',sid)|list|length }}</option>{% endfor %}</select></label></div>
   <div id="tl">{% for d in days %}<div class="day" data-date="{{ d.date }}">{{ d.label }}</div>{% for it in d['items'] %}{% include "_item_px.html" %}{% endfor %}{% endfor %}</div>
-  <p class="empty" id="tl-empty" hidden>조건에 맞는 소식이 없습니다. 검색어를 줄이거나 다른 탭을 골라 보세요 · <a href="#" onclick="SRC='';document.querySelectorAll('.px-srcl button').forEach(function(b){b.classList.toggle('on',!b.dataset.src)});return clearQ()">조건 모두 지우기</a> · <a id="emptyStats" href="./stats">통계에서 찾기</a></p>
+  <p class="wk-help" id="pxWkH" hidden><b>발표·변경</b> 새로 내리거나 지역·단계를 바꾼 특보 · <b>해제 예고</b> 곧 풀릴 예정인 특보 · <b>해제</b> 풀린 특보</p>
+  <p class="empty" id="tl-empty" hidden><span id="tlEmptyT">조건에 맞는 소식이 없습니다.</span> · <a href="#" onclick="SRC='';document.querySelectorAll('.px-srcl button').forEach(function(b){b.classList.toggle('on',!b.dataset.src)});return clearQ()">조건 모두 지우기</a> · <a id="emptyStats" href="./stats">통계에서 찾기</a></p>
   <button class="more" id="more" type="button" onclick="showMore()">더보기</button>
  </section>
  <aside class="px-side">
@@ -81,7 +82,7 @@
  if(Wk)Wk.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setWk(b.dataset.wk)});
  var t=param('type'),s=param('src'),wk=param('wk');if(t){var b=[].filter.call(document.querySelectorAll('#pxTabs button'),function(x){return tabKey(x)===t})[0];if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s);if(wk&&Wk&&t==='alert')setWk(wk)})();
 (function(){var b=document.getElementById('briefCopy'),ta=document.getElementById('briefText');if(!b||!ta)return;   // 누른 순간 바로 복사(가져오기를 기다리면 사파리가 막는다)
- function done(ok){b.textContent=ok?'복사했습니다':'복사 안 됨 · 텍스트 받기를 쓰세요';setTimeout(function(){b.textContent='글자로 복사'},ok?2000:4000)}
+ function done(ok){b.textContent=ok?'복사했습니다':'복사 안 됨 · 텍스트 받기를 쓰세요';var L=document.getElementById('srLive');if(L)L.textContent=b.textContent;setTimeout(function(){b.textContent='글자로 복사'},ok?2000:4000)}
  function legacy(){ta.hidden=false;ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.hidden=true;done(ok)}
  b.addEventListener('click',function(){if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(ta.value).then(function(){done(true)},legacy);else legacy()})})();
 {% endblock %}

@@ -1,4 +1,5 @@
 import json
+import json
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -183,6 +184,21 @@ def test_feed_is_wellformed_with_special_chars_and_item_pages_exist(tmp_path, mo
     assert root.find("channel/item/title").text == '[발표] 농식품 R&D <2026> "성과" 발표'
     assert (site / f"n-{it.id}.html").exists()
     assert f'href="n-{it.id}"' in (site / "news.html").read_text(encoding="utf-8")
+
+
+def test_archived_items_keep_a_thin_page_without_overwriting_live_ones(tmp_path, monkeypatch):
+    it = _item(headline="살아 있는 소식", uid="7")
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "archive.json").write_text(json.dumps([
+        {"id": "0123456789ab", "headline": "지난 소식 제목", "source_id": "s", "source_name": "테스트", "url": "https://example.org/a", "event_time": "2026-10-01T09:00:00+09:00"},
+        {"id": it.id, "headline": "덮어쓰면 안 됨"}, {"id": "../x", "headline": "경로 공격"}], ensure_ascii=False), encoding="utf-8")
+    monkeypatch.setattr(build, "SITE", tmp_path / "site")
+    monkeypatch.setattr(build, "DATA", tmp_path / "data")
+    build.build_site(CFG, [it.to_dict()], {"s": {"name": "테스트", "ok": True, "count": 1, "published": 1}}, NOW, None)
+    gone = (tmp_path / "site" / "n-0123456789ab.html").read_text(encoding="utf-8")
+    assert "지난 소식 제목" in gone and 'content="noindex"' in gone and "https://example.org/a" in gone
+    assert "덮어쓰면 안 됨" not in (tmp_path / "site" / f"n-{it.id}.html").read_text(encoding="utf-8")
+    assert not (tmp_path / "x.html").exists() and len(list((tmp_path / "site").glob("n-*.html"))) == 2
 
 
 def test_stylesheet_uses_rem_so_large_text_works():

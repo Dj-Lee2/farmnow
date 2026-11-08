@@ -19,14 +19,15 @@
 {% block scripts %}
 (function(){var D=JSON.parse(document.getElementById('rgData').dataset.j),P=D.provs,I=D.inds;if(!I.length)return;
  var name={};P.forEach(function(p){name[p.c]=p.n});
- var ind=I.find(function(x){return x.id==='ir'})||I[0],sel=(location.hash.slice(1)&&name[location.hash.slice(1)])?location.hash.slice(1):'jj';
+ var qm=new URLSearchParams(location.search).get('m'),ind=(qm&&I.find(function(x){return x.id===qm}))||I.find(function(x){return x.id==='ir'})||I[0],sel=(location.hash.slice(1)&&name[location.hash.slice(1)])?location.hash.slice(1):'jj';
  function yr(y){y=String(y);return /^\d{6}$/.test(y)?y.slice(2,4)+'년 '+(+y.slice(4))+'월':/^\d{4}\.\d{2}$/.test(y)?y.slice(2,4)+'년 '+(+y.slice(5))+'월':y+'년'}
  function f(v,u){if(v==null)return '–';if(u==='천원')return Math.round(v/10).toLocaleString()+'만 원';if(u==='천명')return (v*1000).toLocaleString()+'명';
   var a=Math.abs(v);if(a>=1e4&&!/%|\/|mg/.test(u))return (v/1e4).toFixed(a>=1e5?0:1)+'만 '+u;return (a<10?v.toFixed(1):Math.round(v).toLocaleString())+(u==='%'?'%':' '+u)}
  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
  var tabs=document.getElementById('rgTabs'),cats=[];I.forEach(function(x){if(cats.indexOf(x.cat)<0)cats.push(x.cat)});
  tabs.innerHTML=cats.map(function(c){return '<div class="rg-cat"><small>'+esc(c)+'</small>'+I.filter(function(x){return x.cat===c}).map(function(x){return '<button type="button" role="tab" data-id="'+x.id+'">'+esc(x.label)+'</button>'}).join('')+'</div>'}).join('');
- tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;ind=I.find(function(x){return x.id===b.dataset.id});draw()});
+ function keep(){if(history.replaceState)history.replaceState(null,'','?m='+encodeURIComponent(ind.id)+'#'+sel)}   // 지표·지역을 주소에 남겨 새로고침·공유해도 그대로
+ tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;ind=I.find(function(x){return x.id===b.dataset.id});keep();draw()});
  function avg(x){var vs=Object.keys(x.vals).map(function(k){return x.vals[k].v});return vs.reduce(function(a,b){return a+b},0)/vs.length}
  function rank(x,c){var vs=Object.keys(x.vals).map(function(k){return x.vals[k].v}).sort(function(a,b){return b-a});return vs.indexOf(x.vals[c].v)+1}
  function spark(t){if(!t||t.length<2)return '';var mn=Math.min.apply(null,t),mx=Math.max.apply(null,t),sp=(mx-mn)||1;return '<svg viewBox="0 0 80 22" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="#1c7a45" stroke-width="1.6" vector-effect="non-scaling-stroke" points="'+t.map(function(v,i){return (i*80/(t.length-1)).toFixed(1)+','+(20-(v-mn)/sp*18).toFixed(1)}).join(' ')+'"/></svg>'}
@@ -44,7 +45,7 @@
  function prof(){document.getElementById('rgPT').textContent=name[sel]+' 농업 프로필';
   document.getElementById('rgProf').innerHTML=I.map(function(x){var o=x.vals[sel];if(!o)return '';var a=avg(x),d=(o.v-a)/Math.abs(a)*100;
    return '<button type="button" class="rg-pc'+(x.id===ind.id?' on':'')+'" data-id="'+x.id+'"><small>'+esc(x.label)+' · '+yr(x.year)+'</small><b>'+f(o.v,x.unit)+'</b><span><em>'+rank(x,sel)+'위</em>/9 · 평균 대비 <i class="'+(d>0?'up':d<0?'down':'')+'">'+(d>0?'+':'')+d.toFixed(0)+'%</i></span>'+spark(o.t)+'</button>'}).join('')}
- document.querySelector('.wrap.sg').addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(b&&!b.closest('#rgTabs')){sel=b.dataset.c;if(history.replaceState)history.replaceState(null,'','#'+sel);draw();if(b.closest('#rgRank,#rgMap')&&innerWidth<1000)document.getElementById('rgPT').scrollIntoView({behavior:'smooth',block:'start'});return}
-  var c=e.target.closest('.rg-pc');if(c){ind=I.find(function(x){return x.id===c.dataset.id});draw();window.scrollTo({top:tabs.getBoundingClientRect().top+scrollY-90,behavior:'smooth'})}});
+ document.querySelector('.wrap.sg').addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(b&&!b.closest('#rgTabs')){sel=b.dataset.c;keep();draw();if(b.closest('#rgRank,#rgMap')&&innerWidth<1000)document.getElementById('rgPT').scrollIntoView({behavior:'smooth',block:'start'});return}
+  var c=e.target.closest('.rg-pc');if(c){ind=I.find(function(x){return x.id===c.dataset.id});keep();draw();window.scrollTo({top:tabs.getBoundingClientRect().top+scrollY-90,behavior:'smooth'})}});
  draw()})();
 {% endblock %}

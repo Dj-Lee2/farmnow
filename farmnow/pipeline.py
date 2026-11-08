@@ -19,6 +19,8 @@ from .build import build_site
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 GRACE_DAYS = 7      # 적용 기간이 끝난 문서(병해충·주간농사정보)를 다음 호가 나올 때까지 남겨 두는 기간
+ARCHIVE_DAYS = 365          # 지난 소식 주소를 살려 두는 기간
+ARCHIVE_KEYS = ("id", "headline", "source_id", "source_name", "org", "url", "event_time", "label")
 
 
 def _load_dotenv(path: Path = ROOT / ".env") -> None:
@@ -125,6 +127,16 @@ def run(build: bool = True) -> int:
         return bool(d.get("expires_at")) and datetime.fromisoformat(d["expires_at"]) >= now - timedelta(days=GRACE_DAYS)
 
     kept = sorted((d for d in store.values() if alive(d)), key=lambda d: d["event_time"], reverse=True)
+    # 보관 기간이 지난 소식은 제목·출처·원문 주소만 1년 남긴다 — 공유된 n-*.html 주소가 깨지지 않게
+    kept_ids = {d["id"] for d in kept}
+    arch = {a["id"]: a for a in _read(DATA / "archive.json", []) if isinstance(a, dict) and a.get("id")}
+    for d in store.values():
+        if d["id"] not in kept_ids:
+            arch.setdefault(d["id"], {k: d.get(k) for k in ARCHIVE_KEYS})
+    arch_cut = now - timedelta(days=ARCHIVE_DAYS)
+    _write(DATA / "archive.json", sorted((a for a in arch.values() if a["id"] not in kept_ids and a.get("event_time")
+                                         and datetime.fromisoformat(a["event_time"]) >= arch_cut),
+                                        key=lambda a: a["event_time"], reverse=True))
     published = Counter(d["source_id"] for d in kept)
     for sid, st in status.items():
         st["published"] = published.get(sid, 0)

@@ -566,6 +566,19 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
     for it in items:
         (SITE / f"n-{it.id}.html").write_text(
             clean_urls(hangul_only(tpl.render(page="news.html", it=it, related=_related(it, items), **ctx))), encoding="utf-8")
+    # 보관 기간이 지난 소식: 원문으로 가는 얇은 쪽만(검색엔진 제외)
+    live_ids = {it.id for it in items}
+    ap = DATA / "archive.json"
+    try:
+        arch = json.loads(ap.read_text(encoding="utf-8")) if ap.exists() else []
+    except ValueError:
+        arch = []
+    gtpl = env.get_template("item_gone.html")
+    for a in arch:
+        aid = str(a.get("id") or "")
+        if re.fullmatch(r"[0-9a-f]{6,40}", aid) and aid not in live_ids and a.get("headline"):
+            (SITE / f"n-{aid}.html").write_text(
+                clean_urls(hangul_only(gtpl.render(page="news.html", a=a, **ctx))), encoding="utf-8")
     st = ROOT / "static"                  # 로고·아이콘 같은 고정 파일
     if st.exists():
         shutil.copytree(st, SITE / "static", dirs_exist_ok=True)

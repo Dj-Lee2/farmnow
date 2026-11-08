@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ a.headline }} (지난 소식) — {{ site.name }}{% endblock %}
+{% block head %}<meta name="robots" content="noindex">{% endblock %}
+{% block hero %}{% endblock %}
+{% block content %}
+<div class="wrap page">
+ <article class="art">
+  <div class="src"><a href="news.html">소식</a>{% if a.source_id %} › <a href="news.html?src={{ a.source_id }}">{{ a.source_name }}</a>{% endif %}</div>
+  <h1>{% if a.label %}<span class="lb">{{ a.label }}</span>{% endif %}{{ a.headline }}</h1>
+  <div class="src">{{ a.org or a.source_name }}{% if a.event_time %} · <time datetime="{{ a.event_time }}">{{ a.event_time[:10]|replace('-', '.') }}</time>{% endif %}</div>
+  <p class="pnote">보관 기간({{ site.keep_days }}일)이 지나 팜나우에서는 요약을 내렸습니다. 원문은 발표 기관 누리집에서 볼 수 있습니다.</p>
+  <p>{% if a.url and a.url.startswith('https://') %}<a class="btn-blue" href="https://{{ a.url|hp }}" target="_blank" rel="noopener">원문 보기 ↗</a> {% endif %}<a class="btn-line" href="news.html{% if a.source_id %}?src={{ a.source_id }}{% endif %}">최근 소식 보기</a></p>
+ </article>
+</div>
+{% endblock %}

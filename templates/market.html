@@ -3,14 +3,14 @@
 {% block title %}시세 — {{ site.name }}{% endblock %}
 {% block rows %}{{ tickers.all|tojson }}{% endblock %}
 {% block content %}{% set h = home %}{% include "_home_parts.html" %}
-{% macro heat(v) %}{% if v is none %}#c9cdd3{% elif v == 0 %}#5f6670{% else %}color-mix(in oklab,{{ '#e5484d' if v > 0 else '#3e63dd' }} {{ (30 + 70 * [v|abs / 8, 1]|min)|int }}%,#5f6670){% endif %}{% endmacro %}
+{% macro heat(v) %}{% if v is none %}#c9cdd3{% elif v == 0 %}#5f6670{% else %}color-mix(in oklab,{{ '#cd2b31' if v > 0 else '#3e63dd' }} {{ (30 + 70 * [v|abs / 8, 1]|min)|int }}%,#5f6670){% endif %}{% endmacro %}
 <style>
 .mk-map{position:relative;overflow-x:auto;overflow-y:hidden;border-radius:16px;background:#1f2329;box-shadow:none}.mk-tm{position:relative;transform-origin:0 0}
 .mk-c{position:absolute;border:1px solid #1f2329}.mk-c>span{position:absolute;left:6px;top:1px;color:#c9cdd3;font-size:12px;font-weight:600}
 .mk-t{position:absolute;border:2px solid #1f2329;border-radius:6px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;overflow:hidden;transition:filter .15s,background .3s;cursor:pointer}
 .mk-t i{font-style:normal;font-size:20px;line-height:1.1}.mk-t b{font-size:13px;font-weight:700;line-height:1.15;padding:0 3px;text-shadow:0 1px 1px rgba(0,0,0,.25)}.mk-t span{font-size:12px;font-weight:600}.mk-t.on{outline:3px solid #fff;z-index:3}
 @media(hover:hover){.mk-t:hover{filter:brightness(1.18);z-index:2;outline:2px solid #fff}}
-.mk-sc{display:flex;align-items:center;gap:6px;justify-content:flex-end;font-size:.72rem;color:var(--mute);margin:8px 0 20px}.mk-sc i{width:80px;height:8px;border-radius:4px;background:linear-gradient(90deg,#3e63dd,#5f6670)}.mk-sc i.u{background:linear-gradient(90deg,#5f6670,#e5484d)}
+.mk-sc{display:flex;align-items:center;gap:6px;justify-content:flex-end;font-size:.72rem;color:var(--mute);margin:8px 0 20px}.mk-sc i{width:80px;height:8px;border-radius:4px;background:linear-gradient(90deg,#3e63dd,#5f6670)}.mk-sc i.u{background:linear-gradient(90deg,#5f6670,#cd2b31)}
 .mk-g{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:20px;align-items:start}
 .mk .hv-seg{margin-bottom:10px}
 table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color:var(--mute);font-size:.75rem;font-weight:500;text-align:right;padding:6px 8px;border-bottom:1px solid var(--line)}.mk-rk th:nth-child(-n+3){text-align:left}
@@ -62,7 +62,7 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
 {% block scripts %}
 function setM(m,btn){document.querySelectorAll('#mtabs button').forEach(function(b){b.classList.toggle('on',b===btn)});document.querySelectorAll('#mtable tbody tr').forEach(function(tr){tr.style.display=(m==='all'||tr.dataset.cls===m||tr.dataset.cat===m)?'':'none'});}
 (function(){var tm=document.getElementById('mkTm');if(!tm)return;var wr=tm.parentNode;function fit(){var s=Math.max(.62,Math.min(1.3,wr.clientWidth/tm.offsetWidth));tm.style.transform='scale('+s+')';tm.style.marginRight=(tm.offsetWidth*(s-1))+'px';wr.style.height=(tm.offsetHeight*s)+'px'}fit();addEventListener('resize',fit);
- function col(v){if(v===''||isNaN(v))return '#c9cdd3';v=+v;if(!v)return '#5f6670';var k=Math.min(Math.abs(v)/8,1);return 'color-mix(in oklab,'+(v>0?'#e5484d':'#3e63dd')+' '+Math.round(30+70*k)+'%,#5f6670)'}
+ function col(v){if(v===''||isNaN(v))return '#c9cdd3';v=+v;if(!v)return '#5f6670';var k=Math.min(Math.abs(v)/8,1);return 'color-mix(in oklab,'+(v>0?'#cd2b31':'#3e63dd')+' '+Math.round(30+70*k)+'%,#5f6670)'}
  document.getElementById('mkPer').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});[].forEach.call(tm.querySelectorAll('.mk-t'),function(a){var v=a.dataset[b.dataset.k];a.style.background=col(v);var s=a.querySelector('span');if(s)s.textContent=v===''?'–':((+v>0?'+':'')+(+v).toFixed(1)+'%')})});
  function mark(){var i=String(cur);[].forEach.call(tm.querySelectorAll('.mk-t'),function(a){a.classList.toggle('on',a.dataset.i===i)})}
  tm.addEventListener('click',function(e){var a=e.target.closest('.mk-t');if(!a)return;e.preventDefault();setPick(+a.dataset.i);mark();if(innerWidth<1100)document.getElementById('mkSide').scrollIntoView({behavior:'smooth',block:'start'})});

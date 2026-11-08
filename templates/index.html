@@ -15,7 +15,7 @@
 {% set S = stocks.sections if stocks else {} %}
 {% set cm = S.commodities or [] %}
 {% set cm_up = cm|selectattr('pct', 'gt', 0)|list|length %}
-<div class="wrap home">
+<div class="wrap home"><h1 class="sr-only">팜나우 — 오늘의 농업 시세·소식·통계</h1>
  {% set fx = stocks.usdkrw if stocks else none %}
  {% set corn = (cm|selectattr('code', 'equalto', 'Ccv1')|first) if cm else none %}
  <div class="kpis dash">

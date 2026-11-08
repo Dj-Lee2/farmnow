@@ -35,7 +35,7 @@
   document.getElementById('rgTitle').textContent=ind.label;document.getElementById('rgSub').textContent=yr(ind.year)+' · 색이 진할수록 큼 · 도를 누르면 아래에 프로필';
   document.getElementById('rgLo').textContent=f(lo,ind.unit);document.getElementById('rgHi').textContent=f(hi,ind.unit);
   document.getElementById('rgMap').innerHTML=P.map(function(p){var o=ind.vals[p.c],t=o?(hi>lo?(o.v-lo)/(hi-lo):.5):null;
-   var bg=t==null?'#eef0ec':'color-mix(in oklab,#1c7a45 '+Math.round(12+t*78)+'%,white)',dark=t!=null&&t>.5;
+   var bg=t==null?'#eef0ec':'color-mix(in oklab,#17683a '+Math.round(12+t*78)+'%,white)',dark=t!=null&&t>.6;   // 흰 글자는 4.5:1이 나오는 진한 칸에만
    return '<button type="button" data-c="'+p.c+'" class="'+(p.c===sel?'on ':'')+(dark?'dk':'')+'" style="grid-row:'+p.r+';grid-column:'+p.k+';background:'+bg+'"><b>'+p.n+'</b><span>'+(o?f(o.v,ind.unit):'–')+'</span></button>'}).join('');
   var rows=P.filter(function(p){return ind.vals[p.c]}).sort(function(x,y){return ind.vals[y.c].v-ind.vals[x.c].v}),pad=(hi-lo)*.12||Math.abs(hi)*.1||1,mn=lo-pad,sp=(hi+pad-mn),ap=(a-mn)/sp*100;
   document.getElementById('rgRank').innerHTML=rows.map(function(p){var o=ind.vals[p.c],w=(o.v-mn)/sp*100,up=o.v>=a;

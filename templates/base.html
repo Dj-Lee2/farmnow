@@ -546,6 +546,7 @@ a.sg-rl{color:inherit}
 </style>
 </head>
 <body data-built="{{ built_iso }}" data-stale="{{ site.stale_minutes or 180 }}">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="hd"><div class="wrap hd-in">
  <a class="logo" href="index.html"><picture><source media="(prefers-reduced-motion: reduce)" srcset="static/logo.png"><img src="static/logo.webp?v=2s" alt="" width="58" height="40"></picture>{{ site.name }}</a>
  <nav aria-label="주 메뉴">{% for href,name in nav %}<a class="{{ 'on' if page==href }}" href="./{{ href }}"{% if page==href %} aria-current="page"{% endif %}>{{ name }}</a>{% endfor %}</nav>
@@ -555,11 +556,11 @@ a.sg-rl{color:inherit}
  <div class="header-actions"><button class="ico" id="soundToggle" type="button" title="버튼 소리 끄기" aria-label="버튼 소리" aria-pressed="true" hidden>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><g class="sound-on"><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></g><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg>
  </button>
- <button class="ico" id="bigBtn" type="button" title="큰글씨" aria-label="큰글씨" aria-pressed="false">가+</button>
+ <button class="ico" id="bigBtn" type="button" title="큰글씨" aria-label="가+ 큰글씨" aria-pressed="false">가+</button>
  </div>
 </div></header>
 
-<main>
+<main id="main" tabindex="-1">
 {% block hero %}{% endblock %}
 <div class="wrap strip"><div class="in{{ ' stale' if tickers.stale }}">
  {% if tickers.day %}<span class="day">KAMIS {{ tickers.day[5:]|replace('-', '.') }}{{ ' · 갱신 실패' if tickers.stale }}</span>{% endif %}
@@ -568,6 +569,7 @@ a.sg-rl{color:inherit}
  {% if stocks %}{% set S = stocks.sections %}{% if stocks.usdkrw %}<a href="stocks.html"><span class="k">원/달러</span> {{ '{:,.1f}'.format(stocks.usdkrw.price) }} <span class="{{ 'up' if stocks.usdkrw.pct>0 else 'down' if stocks.usdkrw.pct<0 else '' }}">{{ '▲' if stocks.usdkrw.pct>0 else '▼' if stocks.usdkrw.pct<0 else '' }}{{ stocks.usdkrw.pct|pct }}</span></a>{% endif %}{% for r in (S.commodities or [])[:4] + (S.kr_etfs or [])[:1] + (S.world_etfs or [])[:1] + stocks.movers[:3] %}<a href="stocks.html"><span class="k">{{ r.name }}</span> {{ r|px }}<span class="u">{{ ' ' ~ r.unit if r.unit else ('원' if r.cur == 'KRW' else ' 달러') }}</span> <span class="{{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ '▲' if r.pct>0 else '▼' if r.pct<0 else '' }}{{ r.pct|pct }}</span></a>{% endfor %}{% endif %}
  <a href="news.html?type=alert"><span class="k">특보</span> {% if warn is none %}<span class="u">확인 불가</span>{% else %}<span class="{{ 'up' if active else 'v' }}">{{ active|length }}건</span>{% endif %}</a>
  </div></div></div>
+ <button type="button" class="tk-pp pp" id="tkPause" aria-pressed="false" aria-label="시세 띠 멈춤" title="시세 띠 멈춤" hidden><svg class="i-pause" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button>
 </div></div>
 
 {% block content %}{% endblock %}
@@ -732,7 +734,11 @@ function setP(id,btn){btn.parentNode.querySelectorAll('button').forEach(function
  function fit(){var w=set.offsetWidth;if(w<tk.clientWidth*0.9){tk.classList.remove('run');if(tr.children.length>1)tr.removeChild(tr.lastElementChild);return}
   if(tr.children.length<2){var c=set.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('a').forEach(function(a){a.tabIndex=-1});tr.appendChild(c)}
   tk.style.setProperty('--dur',Math.round(w/45)+'s');tk.classList.add('run')}
- fit();var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fit,200)});
+ var pb=$('tkPause'),off=false;try{off=localStorage.getItem('tkoff')==='1'}catch(e){}
+ function setOff(v){off=v;tk.classList.toggle('stop',v);if(!pb)return;pb.setAttribute('aria-pressed',v);var l=v?'시세 띠 다시 흐르기':'시세 띠 멈춤';pb.setAttribute('aria-label',l);pb.title=l;try{localStorage.setItem('tkoff',v?'1':'0')}catch(e){}}
+ function showBtn(){if(pb)pb.hidden=!tk.classList.contains('run')}
+ fit();showBtn();setOff(off);var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){fit();showBtn()},200)});
+ if(pb)pb.addEventListener('click',function(){setOff(!off)});   // 계속 흐르는 띠는 멈출 수 있어야 한다(WCAG 2.2.2)
  tk.addEventListener('touchstart',function(){tk.classList.add('hold')},{passive:true});tk.addEventListener('touchend',function(){setTimeout(function(){tk.classList.remove('hold')},1500)});})();
 /* 숫자 올라가기 */
 document.querySelectorAll('[data-count]').forEach(function(el){var n=parseInt(el.textContent.replace(/[^0-9]/g,''),10);if(isNaN(n)||RM)return;el.textContent='0';setTimeout(function(){tween(el,0,n,800,function(v){return Math.round(v).toLocaleString()})},150)});

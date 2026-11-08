@@ -73,17 +73,17 @@ var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')
   var s=cnd?'':'<defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+col+'" stop-opacity=".18"/><stop offset="1" stop-color="'+col+'" stop-opacity="0"/></linearGradient></defs>';
   // 눈금은 1·2·2.5·5×10ⁿ 간격의 반듯한 값으로(539.11 같은 값 대신 540)
   var raw=(mx-mn)/4,p10=Math.pow(10,Math.floor(Math.log(raw)/Math.LN10)),st=[1,2,2.5,5,10].map(function(m){return m*p10}).filter(function(v){return v>=raw})[0]||raw;
-  for(var q=Math.ceil(mn/st)*st;q<=mx;q+=st){var yy=y(q).toFixed(1);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#eef0f2"/><text x="'+(W-R+8)+'" y="'+(+yy+4)+'" font-size="11" fill="#646b75">'+(+q.toFixed(6)).toLocaleString(undefined,{maximumFractionDigits:DEC})+'</text>'}
+  for(var q=Math.ceil(mn/st)*st;q<=mx;q+=st){var yy=y(q).toFixed(1);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#eef0f2"/><text x="'+(W-R+8)+'" y="'+(+yy+4)+'" font-size="12" fill="#646b75">'+(+q.toFixed(6)).toLocaleString(undefined,{maximumFractionDigits:DEC})+'</text>'}
   if(cnd){var bw=Math.max(1,Math.min(sl*.62,14)),cs='';
    for(var k=0;k<n;k++){var j=i0+k,cl=dir(j),xx=x(k).toFixed(1),y1=y(Math.max(OP[j],C[j]));
     cs+='<line x1="'+xx+'" x2="'+xx+'" y1="'+y(top[k]).toFixed(1)+'" y2="'+y(bot[k]).toFixed(1)+'" stroke="'+cl+'"/><rect x="'+(x(k)-bw/2).toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+Math.max(1,y(Math.min(OP[j],C[j]))-y1).toFixed(1)+'" fill="'+cl+'"/>'}
    s+='<g shape-rendering="crispEdges">'+cs+'</g>'}
   else{var line=c.map(function(q,k){return (k?'L':'M')+x(k).toFixed(1)+','+y(q).toFixed(1)}).join('');
    s+='<path d="'+line+'L'+x(n-1)+','+(Hh-B)+'L'+x(0)+','+(Hh-B)+'Z" fill="url(#ga)"/><path d="'+line+'" fill="none" stroke="'+col+'" stroke-width="1.8" stroke-linejoin="round"/>'}
-  [0,Math.round((n-1)/3),Math.round((n-1)*2/3),n-1].forEach(function(k,j){s+='<text x="'+x(k)+'" y="'+(Hh-8)+'" font-size="11" fill="#646b75" text-anchor="'+(j==0?'start':j==3?'end':'middle')+'">'+d[k].slice(2).replace(/-/g,'.')+'</text>'});
+  [0,Math.round((n-1)/3),Math.round((n-1)*2/3),n-1].forEach(function(k,j){s+='<text x="'+x(k)+'" y="'+(Hh-8)+'" font-size="12" fill="#646b75" text-anchor="'+(j==0?'start':j==3?'end':'middle')+'">'+d[k].slice(2).replace(/-/g,'.')+'</text>'});
   // 기간 최고·최저(캔들은 고가·저가 기준). 양 끝이면 글자가 축 밖으로 나가지 않게 정렬을 바꾼다
   var imx=top.indexOf(Math.max.apply(null,top)),imn=bot.indexOf(Math.min.apply(null,bot)),an=function(k){return x(k)<L+40?'start':x(k)>W-R-40?'end':'middle'};
-  s+='<text x="'+x(imx)+'" y="'+(y(top[imx])-6)+'" font-size="11" fill="'+UP+'" text-anchor="'+an(imx)+'">최고 '+f(top[imx])+'</text><text x="'+x(imn)+'" y="'+(y(bot[imn])+14)+'" font-size="11" fill="'+DN+'" text-anchor="'+an(imn)+'">최저 '+f(bot[imn])+'</text>';
+  s+='<text x="'+x(imx)+'" y="'+(y(top[imx])-6)+'" font-size="12" fill="'+UP+'" text-anchor="'+an(imx)+'">최고 '+f(top[imx])+'</text><text x="'+x(imn)+'" y="'+(y(bot[imn])+14)+'" font-size="12" fill="'+DN+'" text-anchor="'+an(imn)+'">최저 '+f(bot[imn])+'</text>';
   s+='<g id="xh" opacity="0"><line id="xl" y1="'+T+'" y2="'+(Hh-B)+'" stroke="#1d1d1f" stroke-dasharray="3 3" stroke-width="1"/>'+(cnd?'':'<circle id="xd" r="4" fill="'+col+'" stroke="#fff" stroke-width="2"/>')+'</g>';
   pc.setAttribute('viewBox','0 0 '+W+' '+Hh);pc.setAttribute('aria-label',AL+(cnd?' (캔들: 시가·고가·저가·종가)':''));pc.innerHTML=s;
   var ch=(c[n-1]-c[0])/c[0]*100;$('ret').innerHTML=['1개월','3개월','6개월','1년'][[30,91,182,366].indexOf(days)]+' <b class="'+(ch>0?'up':ch<0?'down':'')+'">'+(ch>0?'+':'')+ch.toFixed(2)+'%</b>';

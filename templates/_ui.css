@@ -5,6 +5,7 @@
  --ring:0 0 0 1px rgb(17 20 24 / .06);--ring-hover:0 0 0 1px rgb(17 20 24 / .12);
  --shadow-border:var(--ring);--shadow-border-hover:var(--ring-hover);
  --r:16px;--r-sm:10px;
+ --up:#c42f28;   /* 오름 빨강: 바탕 #f4f5f7 위 5.09:1(예전 #d23a32 4.38:1) */
  --font:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
 }
 body{font-family:var(--font);letter-spacing:-0.011em;color:var(--txt);background:var(--bg);font-feature-settings:"ss06"}
@@ -42,7 +43,7 @@ b,td.n{font-weight:600}
 .tabs{gap:20px;border-bottom:1px solid var(--line)}
 .tabs button{font-weight:500;color:var(--mute);padding:10px 0 9px;font-size:0.9375rem}
 .tabs button.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
-.tabs button i{color:#8b919a;font-weight:500}
+.tabs button i{color:var(--mute);font-weight:500}
 .ptab button,.rg-cat button,.sg-all{height:32px;padding:0 12px;border:0;border-radius:999px;background:var(--card);box-shadow:var(--ring);color:#4b525c;font-weight:500;font-size:0.8125rem}
 .ptab button.on,.rg-cat button.on{background:var(--ink);color:#fff;box-shadow:none}
 .sec .go{background:var(--soft);color:var(--txt);font-weight:500;border-radius:999px;padding:5px 12px}
@@ -105,3 +106,36 @@ html .day{top:var(--hd-h,64px)}html .px-bar{top:var(--hd-h,64px)}
  .home>.sec.st-h{margin-top:24px}
  .c-move .mvt tr.pick:nth-child(n+7):not(.ax){display:none}
 }
+
+/* 디자인 점검(11-07) 반영 */
+/* 시세 띠 멈춤 단추 */
+.tk.stop .tk-tr{animation-play-state:paused}
+.tk-pp{flex-shrink:0;width:32px;height:32px;border:0;border-radius:8px;background:var(--soft);color:var(--txt);cursor:pointer;position:relative;display:inline-flex;align-items:center;justify-content:center}
+.tk-pp[hidden]{display:none}.tk-pp svg{position:absolute;inset:0;margin:auto;transition-property:opacity,scale,filter;transition-duration:200ms;transition-timing-function:cubic-bezier(0.2,0,0,1)}
+.tk-pp .i-play{opacity:0;scale:.25;filter:blur(4px)}.tk-pp[aria-pressed=true] .i-play{opacity:1;scale:1;filter:none}.tk-pp[aria-pressed=true] .i-pause{opacity:0;scale:.25;filter:blur(4px)}
+@media(prefers-reduced-motion:reduce){.tk-pp svg{transition:none}}
+/* 본문으로 건너뛰기, 화면에만 안 보이는 제목 */
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}.skip:focus{top:10px}
+main:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* 12px 미만 글자 올리기 */
+.lb,html .hv-lb,.dax,html .sg-bars td.nm .sg-yr,html .tc-a .chips span,html .px-srcl small,html .mk-sc{font-size:0.75rem}
+/* 누름 대상 24px 이상 */
+.tags .coin{min-height:24px;display:inline-flex;align-items:center}
+.kp4 .t a{flex-shrink:0;min-width:24px}
+@media(max-width:760px){
+ .hd .upd{white-space:nowrap;flex:0 0 auto;min-width:auto}
+ .hd .hsearch input,.sel select,.sgp-jump select,.sq-in input,html .sgp-jump select{font-size:16px}
+}
+/* 좁은 폭 넘침: 펼친 검색칸(입력칸 기본 폭), 통계 막대표(이름 줄바꿈 금지) */
+.hsearch input{width:100%;min-width:0}
+@media(max-width:760px){
+ .hd .hsearch.open{min-width:0;max-width:100%}
+ .sg-bars{width:100%}
+ .sg-bars td.nm{white-space:normal;overflow-wrap:anywhere;width:auto}
+ .sg-bars td.nm .sg-yr{display:block;margin-left:0}
+ .sg-bars td.hb{width:28%}.sg-bars td.n .u{display:block}
+}
+.px-meta a{padding:2px 0}
+#tl .px-h{line-height:1.5}
+@media(max-width:360px){.hd .upd{display:none}}   /* 좁은 폰: 머리 한 줄 유지(갱신 시각은 아래 꼬리말에도 있다) */

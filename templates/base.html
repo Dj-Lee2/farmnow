@@ -603,11 +603,11 @@ var ri=0;function rollIssue(){if(TOP5.length<2)return;ri=(ri+1)%TOP5.length;var 
  var el=$('roll');if(!el||(pill&&pill.classList.contains('edit')))return;el.classList.add('sw');setTimeout(function(){el.textContent=t.h;if(el.tagName==='A')el.href=t.u;el.classList.remove('sw')},150);}
 setInterval(rollIssue,4000);
 /* 검색·필터: 타임라인(#tl)이 있는 쪽에서는 바로 거르고, 없는 쪽에서는 속보로 이동. ?tag= 는 태그 정확 일치 */
-var cat='all',shown=30,q=$('q'),pill=$('pill'),TAG='',SRC='';
+var cat='all',shown=30,q=$('q'),pill=$('pill'),TAG='',SRC='',WK='';
 function param(k){var m=location.search.match(new RegExp('[?&]'+k+'=([^&]*)'));if(!m)return '';try{return decodeURIComponent(m[1].replace(/\+/g,' '))}catch(e){return m[1]}}
 function tabKey(b){return b?(b.dataset.k||(b.dataset.cat==='weather'?'alert':b.dataset.cat)):''}   // 주소의 ?type= 값(특보는 옛 주소와 같게 alert)
 function setUrl(){if(!$('tl')||!history.replaceState)return;var v=q.value.trim(),p=[],t=tabKey(document.querySelector('#pxTabs button.on'));   // 검색어·탭·출처를 주소에 남겨 새로고침·공유해도 같은 목록
- if(TAG)p.push('tag='+encodeURIComponent(TAG));else if(v)p.push('q='+encodeURIComponent(v));if(t&&t!=='all')p.push('type='+encodeURIComponent(t));if(SRC)p.push('src='+encodeURIComponent(SRC));
+ if(TAG)p.push('tag='+encodeURIComponent(TAG));else if(v)p.push('q='+encodeURIComponent(v));if(t&&t!=='all')p.push('type='+encodeURIComponent(t));if(SRC)p.push('src='+encodeURIComponent(SRC));if(WK)p.push('wk='+WK);
  history.replaceState(null,'',location.pathname.replace(/\.html$/,'')+(p.length?'?'+p.join('&'):''))}
 function goQ(){var v=q.value.trim();if(!v){q.focus();return}if($('tl')){TAG='';shown=30;apply();setUrl()}else location.href='news.html?q='+encodeURIComponent(v)}
 document.addEventListener('keydown',function(e){if(e.key==='/'&&q&&document.activeElement!==q&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();q.focus()}});
@@ -618,16 +618,16 @@ if(pill){$('lens').onclick=function(){if(pill.classList.contains('edit'))goQ();e
 function apply(){if(!$('tl'))return;var v=TAG?'':(q?q.value:'').trim().toLowerCase(),n=0,per={};
  document.querySelectorAll('#tl .item').forEach(function(el){var hit=TAG?el.dataset.tags.indexOf('|'+TAG+'|')>=0:(!v||el.dataset.text.indexOf(v)>=0);
   if(hit)per[el.dataset.cat]=(per[el.dataset.cat]||0)+1;
-  var ok=hit&&(cat==='all'||('|'+cat+'|').indexOf('|'+el.dataset.cat+'|')>=0)&&(!SRC||el.dataset.src===SRC);if(ok)n++;el.classList.toggle('hide',!ok||n>shown);});
+  var ok=hit&&(cat==='all'||('|'+cat+'|').indexOf('|'+el.dataset.cat+'|')>=0)&&(!SRC||el.dataset.src===SRC)&&(!WK||el.dataset.wk===WK);if(ok)n++;el.classList.toggle('hide',!ok||n>shown);});
  var all=0;for(var k in per)all+=per[k];
  document.querySelectorAll('.tabs button[data-cat]').forEach(function(b){var c=b.dataset.cat,i=b.querySelector('i');if(i)i.textContent=c==='all'?all:c.split('|').reduce(function(s,k){return s+(per[k]||0)},0)});
  if($('more')){$('more').style.display=n>shown?'block':'none';$('more').textContent='더보기 ('+(n-shown)+'건)'}
  if($('count'))$('count').textContent=n+'건';
  if($('tl-empty'))$('tl-empty').hidden=n>0;
  document.querySelectorAll('#tl .day').forEach(function(h){var e=h.nextElementSibling,vis=false;while(e&&!e.classList.contains('day')){if(e.classList.contains('item')&&!e.classList.contains('hide')){vis=true;break}e=e.nextElementSibling}h.style.display=vis?'':'none'});}
-function setCat(c,btn){cat=c;shown=30;document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
+function setCat(c,btn){cat=c;shown=30;var W=$('pxWk');if(W){W.hidden=c!=='weather';if(c!=='weather'){WK='';[].forEach.call(W.children,function(b){b.classList.toggle('on',!b.dataset.wk)})}}document.querySelectorAll('.tabs button').forEach(function(b){b.classList.toggle('on',b===btn)});apply();setUrl()}
 function showMore(){shown+=30;apply();}
-function clearQ(){q.value='';TAG='';pill.classList.remove('edit');cat='all';document.querySelectorAll('.tabs button').forEach(function(b,i){b.classList.toggle('on',i===0)});shown=30;apply();setUrl();return false}
+function clearQ(){q.value='';TAG='';WK='';pill.classList.remove('edit');cat='all';document.querySelectorAll('.tabs button').forEach(function(b,i){b.classList.toggle('on',i===0)});shown=30;apply();setUrl();return false}
 if(q&&$('tl')){TAG=param('tag');var q0=TAG?(TAG.charAt(0)==='#'?TAG:'#'+TAG):param('q');if(q0){pill.classList.add('edit');q.value=q0}}
 /* 4시점 비교 차트(1년 전·1개월 전·전일·당일 조사값) */
 var sel=$('pick'),cur=DEF;

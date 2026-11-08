@@ -157,3 +157,4 @@ main:focus{outline:none}
 html.js .sgp-main .sg-g:not(.all)>.sg-c:nth-child(n+7){display:none}
 .sg-more{display:block;margin:10px 0 4px;height:40px;padding:0 16px;border:0;border-radius:999px;background:var(--card);box-shadow:var(--ring);color:var(--ink);font:inherit;font-size:.875rem;font-weight:500;cursor:pointer}
 @media(hover:hover){.sg-more:hover{box-shadow:var(--ring-hover)}}
+[hidden]{display:none!important}   /* display를 준 규칙이 hidden 속성을 이기지 않게(빈 상자가 보이던 원인) */

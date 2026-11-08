@@ -2,7 +2,9 @@
 {% import "_home_parts.html" as hp %}
 {% block title %}시세 — {{ site.name }}{% endblock %}
 {% block rows %}{{ tickers.all|tojson }}{% endblock %}
-{% block content %}{% set h = home %}{% include "_home_parts.html" %}
+{% block content %}{% set h = home %}{% macro tmap(tm, cls, tid) %} <div class="mk-map {{ cls }}"><div class="mk-tm" id="{{ tid }}" style="width:{{ tm.W }}px;height:{{ tm.H }}px">{% for g in tm.groups %}<div class="mk-c" style="left:{{ '%.1f'|format(g.x) }}px;top:{{ '%.1f'|format(g.y) }}px;width:{{ '%.1f'|format(g.w) }}px;height:{{ '%.1f'|format(g.h) }}px"><span>{{ g.name }}</span></div>
+  {% for t in g.tiles %}{% set r = t.r %}<a class="mk-t" href="market.html?pick={{ r.key }}" data-i="{{ r.idx }}" data-d="{{ r.pct }}" data-m="{{ '' if r.m is none else '%.1f'|format(r.m) }}" data-y="{{ '' if r.y is none else '%.1f'|format(r.y) }}" title="{{ r.disp }} {{ r.price|won }}원 · 전일 {{ r.pct|pct }}" style="left:{{ '%.1f'|format(t.x) }}px;top:{{ '%.1f'|format(t.y) }}px;width:{{ '%.1f'|format(t.w) }}px;height:{{ '%.1f'|format(t.h) }}px;background:{{ heat(r.pct) }}">{% if t.w > 60 and t.h > 56 %}<i>{{ r.e }}</i><b>{{ r.base }}</b><span>{{ r.pct|pct }}</span>{% elif t.w > 34 and t.h > 30 %}<b>{{ r.e }}</b><span>{{ '%+.0f%%'|format(r.pct) }}</span>{% else %}<b>{{ r.e }}</b>{% endif %}</a>{% endfor %}{% endfor %}</div></div>{% endmacro %}
+{% include "_home_parts.html" %}
 {% macro heat(v) %}{% if v is none %}#c9cdd3{% elif v == 0 %}#5f6670{% else %}color-mix(in oklab,{{ '#cd2b31' if v > 0 else '#3e63dd' }} {{ (30 + 70 * [v|abs / 8, 1]|min)|int }}%,#5f6670){% endif %}{% endmacro %}
 <style>
 .mk-map{position:relative;overflow-x:auto;overflow-y:hidden;border-radius:16px;background:#1f2329;box-shadow:none}.mk-tm{position:relative;transform-origin:0 0}
@@ -22,20 +24,20 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
 .mk-side .price{font-size:2rem;font-weight:700;letter-spacing:-0.03em;margin-top:6px}.mk-side .chart svg{height:230px}
 .mk-all .ptab{margin-bottom:8px}.mk-all table{width:100%}
 @media(max-width:1100px){.mk-g{grid-template-columns:minmax(0,1fr)}.mk-side{position:static;max-height:none;order:-1}}
-@media(max-width:760px){.mk-rk .mn,.mk-rk th:last-child{display:none}.mk-rk .ic{width:38px}.mk-rk .ic span{width:34px;height:34px;font-size:1.15rem}.mk-rk td{padding:8px 4px}.mk-rk .nm b{font-size:.9rem}}
+.mk-m{display:none}.at-b{display:none}
+@media(max-width:1099px){.at-r{display:none}.at-b{display:inline}}
+@media(max-width:760px){.mk-d{display:none}.mk-m{display:block}.mk-rk .mn,.mk-rk th:last-child{display:none}.mk-rk .ic{width:38px}.mk-rk .ic span{width:34px;height:34px;font-size:1.15rem}.mk-rk td{padding:8px 4px}.mk-rk .nm b{font-size:.9rem}}
 </style>
 <div class="wrap page hv mk">
  <div class="page-hd"><h1>시세</h1><small>{% if tickers.day %}KAMIS {{ tickers.day }} 조사 · {{ tickers.rows_count }}개{{ ' · 갱신 실패' if tickers.stale }}{% else %}시세 미수집{% endif %}</small></div>
  {% if tickers.all %}
  {{ hp.idx(h) }}
- {% set tm = h.tm %}
- <div class="hv-ph"><h2>오늘의 농산물 지도</h2><small>칸 크기 = 장바구니 비중 · 색 = 등락 · 칸을 누르면 오른쪽에 자세히</small><div class="hv-seg ptab" id="mkPer"><button type="button" data-k="d" class="on">전일 대비</button><button type="button" data-k="m">1개월</button><button type="button" data-k="y">1년</button></div></div>
- <div class="mk-map"><div class="mk-tm" id="mkTm" style="width:{{ tm.W }}px;height:{{ tm.H }}px">{% for g in tm.groups %}<div class="mk-c" style="left:{{ '%.1f'|format(g.x) }}px;top:{{ '%.1f'|format(g.y) }}px;width:{{ '%.1f'|format(g.w) }}px;height:{{ '%.1f'|format(g.h) }}px"><span>{{ g.name }}</span></div>
-  {% for t in g.tiles %}{% set r = t.r %}<a class="mk-t" href="market.html?pick={{ r.key }}" data-i="{{ r.idx }}" data-d="{{ r.pct }}" data-m="{{ '' if r.m is none else '%.1f'|format(r.m) }}" data-y="{{ '' if r.y is none else '%.1f'|format(r.y) }}" title="{{ r.disp }} {{ r.price|won }}원 · 전일 {{ r.pct|pct }}" style="left:{{ '%.1f'|format(t.x) }}px;top:{{ '%.1f'|format(t.y) }}px;width:{{ '%.1f'|format(t.w) }}px;height:{{ '%.1f'|format(t.h) }}px;background:{{ heat(r.pct) }}">{% if t.w > 60 and t.h > 56 %}<i>{{ r.e }}</i><b>{{ r.base }}</b><span>{{ r.pct|pct }}</span>{% elif t.w > 34 and t.h > 30 %}<b>{{ r.e }}</b><span>{{ '%+.0f%%'|format(r.pct) }}</span>{% else %}<b>{{ r.e }}</b>{% endif %}</a>{% endfor %}{% endfor %}</div></div>
+ <div class="hv-ph"><h2>오늘의 농산물 지도</h2><small>칸 크기 = 장바구니 비중 · 색 = 등락 · 칸을 누르면 <span class="at-r">오른쪽에</span><span class="at-b">아래에</span> 자세히</small><div class="hv-seg ptab" id="mkPer"><button type="button" data-k="d" class="on">전일 대비</button><button type="button" data-k="m">1개월</button><button type="button" data-k="y">1년</button></div></div>
+ {{ tmap(h.tm, "mk-d", "mkTm") }}{{ tmap(h.tm_m, "mk-m", "mkTmM") }}
  <div class="mk-sc"><span>-8%</span><i></i><span>0</span><i class="u"></i><span>+8%</span></div>
  <div class="mk-g">
   <section class="hv-pane">
-   <div class="hv-ph"><h2>순위</h2><small>소매 · 줄을 누르면 오른쪽에 자세히</small></div>
+   <div class="hv-ph"><h2>순위</h2><small>소매 · 줄을 누르면 <span class="at-r">오른쪽에</span><span class="at-b">아래에</span> 자세히</small></div>
    <div class="hv-seg ptab" id="mkSeg">{% for k, n, rows, key, col in h.ranks %}<button type="button" data-t="{{ k }}" class="{{ 'on' if loop.first }}">{{ n }}</button>{% endfor %}<button type="button" data-t="all">전체 품목</button></div>
    {% for k, n, rows, key, col in h.ranks %}<div class="mk-l" data-t="{{ k }}"{% if not loop.first %} hidden{% endif %}><table class="mk-rk"><thead><tr><th>순위</th><th></th><th>품목</th><th>가격</th><th>{{ col }}</th><th>추이</th></tr></thead><tbody>
     {% for r in rows[:20] %}{% set v = r[key] %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="no">{{ loop.index }}</td><td class="ic"><span>{{ r.e }}</span></td><td class="nm"><b>{{ r.disp }}</b><small>{{ r.category }} · {{ r.unit }}</small></td><td class="pr">{{ r.price|won }}원</td><td class="ch {{ hp.tone(v) }}">{{ v|pct }}</td><td class="mn">{{ hp.sp(r.four, 70, 24, '#d23a32' if (v or 0) > 0 else '#2458d6') }}</td></tr>{% else %}<tr><td colspan="6" class="st">해당 품목이 없습니다.</td></tr>{% endfor %}</tbody></table></div>{% endfor %}
@@ -61,11 +63,13 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
 {% endblock %}
 {% block scripts %}
 function setM(m,btn){document.querySelectorAll('#mtabs button').forEach(function(b){b.classList.toggle('on',b===btn)});document.querySelectorAll('#mtable tbody tr').forEach(function(tr){tr.style.display=(m==='all'||tr.dataset.cls===m||tr.dataset.cat===m)?'':'none'});}
-(function(){var tm=document.getElementById('mkTm');if(!tm)return;var wr=tm.parentNode;function fit(){var s=Math.max(.62,Math.min(1.3,wr.clientWidth/tm.offsetWidth));tm.style.transform='scale('+s+')';tm.style.marginRight=(tm.offsetWidth*(s-1))+'px';wr.style.height=(tm.offsetHeight*s)+'px'}fit();addEventListener('resize',fit);
+(function(){var TM=[].slice.call(document.querySelectorAll('.mk-tm'));if(!TM.length)return;var tm=document.getElementById('mkTm');
+ function fit(){TM.forEach(function(t){var wr=t.parentNode;if(!wr.offsetParent)return;var s=Math.max(t.id==='mkTmM'?.6:.62,Math.min(1.3,wr.clientWidth/t.offsetWidth));t.style.transform='scale('+s+')';t.style.marginRight=(t.offsetWidth*(s-1))+'px';wr.style.height=(t.offsetHeight*s)+'px'})}fit();addEventListener('resize',fit);
+ function tiles(){return [].concat.apply([],TM.map(function(t){return [].slice.call(t.querySelectorAll('.mk-t'))}))}
  function col(v){if(v===''||isNaN(v))return '#c9cdd3';v=+v;if(!v)return '#5f6670';var k=Math.min(Math.abs(v)/8,1);return 'color-mix(in oklab,'+(v>0?'#cd2b31':'#3e63dd')+' '+Math.round(30+70*k)+'%,#5f6670)'}
- document.getElementById('mkPer').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});[].forEach.call(tm.querySelectorAll('.mk-t'),function(a){var v=a.dataset[b.dataset.k];a.style.background=col(v);var s=a.querySelector('span');if(s)s.textContent=v===''?'–':((+v>0?'+':'')+(+v).toFixed(1)+'%')})});
- function mark(){var i=String(cur);[].forEach.call(tm.querySelectorAll('.mk-t'),function(a){a.classList.toggle('on',a.dataset.i===i)})}
- tm.addEventListener('click',function(e){var a=e.target.closest('.mk-t');if(!a)return;e.preventDefault();setPick(+a.dataset.i);mark();if(innerWidth<1100)document.getElementById('mkSide').scrollIntoView({behavior:'smooth',block:'start'})});
+ document.getElementById('mkPer').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});tiles().forEach(function(a){var v=a.dataset[b.dataset.k];a.style.background=col(v);var s=a.querySelector('span');if(s)s.textContent=v===''?'–':((+v>0?'+':'')+(+v).toFixed(1)+'%')})});
+ function mark(){var i=String(cur);tiles().forEach(function(a){a.classList.toggle('on',a.dataset.i===i)})}
+ TM.forEach(function(t){t.addEventListener('click',function(e){var a=e.target.closest('.mk-t');if(!a)return;e.preventDefault();setPick(+a.dataset.i);mark();if(innerWidth<1100)document.getElementById('mkSide').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})})});
  var od=window.draw;window.draw=function(i,s){od(i,s);mark()};mark();
  var sg=document.getElementById('mkSeg');sg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(sg.children,function(x){x.classList.toggle('on',x===b)});[].forEach.call(document.querySelectorAll('.mk-l'),function(l){l.hidden=l.dataset.t!==b.dataset.t})})})();
 {% endblock %}

@@ -133,5 +133,6 @@ def build(tickers: dict, items: list, stocks: dict, warn: dict | None) -> dict:
         if r["category"] not in cats:
             cats.append(r["category"])
     return {"rows": rows, "fixed": fixed, "news": news, "orgs": orgs, "notices": notices, "active": active, "comm": comm,
-            "idx": idx, "watch": watch, "ranks": ranks, "tm": treemap(rows), "summary": summary(rows, tickers.get("fixed") or [], news, notices, active),
+            "idx": idx, "watch": watch, "ranks": ranks, "tm": treemap(rows), "tm_m": treemap(rows, W=360, H=760),   # 휴대폰용 세로 지도(가로 지도를 줄이면 넘치거나 칸이 너무 작다)
+            "summary": summary(rows, tickers.get("fixed") or [], news, notices, active),
             "cats": cats, "day": tickers.get("day") or "", "now": datetime.now()}

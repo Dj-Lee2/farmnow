@@ -758,6 +758,18 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.querySelector
  sv.querySelectorAll('rect.b').forEach(function(r){r.addEventListener('pointerenter',function(){var cb=card.getBoundingClientRect(),rb=r.getBoundingClientRect();tip.textContent=r.dataset.t;tip.classList.add('on');
   var w=tip.offsetWidth,x=Math.min(Math.max(rb.left-cb.left+rb.width/2-w/2,8),cb.width-w-8);tip.style.translate=x+'px '+(rb.top-cb.top-30)+'px'})});
  sv.addEventListener('pointerleave',function(){tip.classList.remove('on')})});
+/* 통계 묶음 쪽: 소제목마다 카드 6장만 먼저 보이고 나머지는 '더 보기'로(쪽 하나에 카드 1,700장 — 휴대폰에서 35만 px). 주소의 #카드로 오면 그 칸을 펼친다 */
+(function(){var M=document.querySelector('.sgp-main');if(!M)return;var N=6;
+ M.querySelectorAll('.sg-g').forEach(function(g){var n=g.querySelectorAll(':scope>.sg-c').length;if(n<=N+1){g.classList.add('all');return}var b=document.createElement('button');b.type='button';b.className='sg-more';b.textContent='나머지 '+(n-N)+'개 더 보기';b.addEventListener('click',function(){g.classList.add('all');b.remove()});g.after(b)});
+ function open(){var id=location.hash.slice(1),t=id&&document.getElementById(id);if(!t)return;var g=t.closest('.sg-g');if(g&&!g.classList.contains('all')){g.classList.add('all');var b=g.nextElementSibling;if(b&&b.classList.contains('sg-more'))b.remove()}requestAnimationFrame(function(){t.scrollIntoView({block:'start'})})}
+ open();addEventListener('hashchange',open)})();
+/* 통계 추이선: data-tips 하나로 포인터 위치의 해 값을 보여 준다 */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.addEventListener('pointermove',function(e){var sv=e.target.closest&&e.target.closest('svg.sline[data-tips]'),T=window._slT;
+ if(T&&T.sv!==sv){T.tip.classList.remove('on');T.hl.setAttribute('stroke-opacity','0');window._slT=null;T=null}if(!sv)return;var card=sv.closest('.kp4,.mks,.sq-today,.tc,.sg-c')||sv.parentNode;
+ if(!T){var tip=card.querySelector(':scope>.mtip');if(!tip){tip=document.createElement('span');tip.className='mtip';card.appendChild(tip);if(getComputedStyle(card).position==='static')card.style.position='relative'}T=window._slT={sv:sv,tip:tip,hl:sv.querySelector('.hl'),L:sv.dataset.tips.split('|')}}
+ var r=sv.getBoundingClientRect(),vb=sv.viewBox.baseVal,n=T.L.length,k=Math.max(0,Math.min(n-1,Math.round(((e.clientX-r.left)/r.width*vb.width-4)/(vb.width-8)*(n-1)))),xv=4+k*(vb.width-8)/(n-1);
+ if(T.hl){T.hl.setAttribute('x1',xv);T.hl.setAttribute('x2',xv);T.hl.setAttribute('stroke-opacity','.25')}
+ var cb=card.getBoundingClientRect();T.tip.textContent=T.L[k];T.tip.classList.add('on');var w=T.tip.offsetWidth,px=r.left-cb.left+xv/vb.width*r.width;T.tip.style.translate=Math.min(Math.max(px-w/2,8),cb.width-w-8)+'px '+(r.top-cb.top-30)+'px'},{passive:true});
 /* 통계 카드 띠: 보이는 장수만큼 앞쪽 카드를 뒤에 복제해 끝없이 한 장씩 넘긴다 */
 (function(){var tr=$('stcTr');if(!tr)return;var vp=tr.parentNode,cards=[].slice.call(tr.children),n=cards.length;if(n<2)return;
  var dots=$('stcDots'),pb=$('cPause'),idx=0,timer=0,on=!RM,hov=false,busy=false;

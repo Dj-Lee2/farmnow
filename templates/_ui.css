@@ -150,3 +150,10 @@ main:focus{outline:none}
 [id^="c-"]:target{box-shadow:0 0 0 2px var(--acc),var(--ring)}
 @media(prefers-reduced-motion:no-preference){[id^="c-"]:target{animation:tgt 1.6s ease-out 1}}
 @keyframes tgt{from{box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 35%,transparent),var(--ring)}}
+/* UX 2회차: 통계 묶음 쪽 무게 — 외부 링크 아이콘은 CSS 한 벌, 화면 밖 카드는 그리지 않음 */
+.ix{display:inline-block;width:16px;height:16px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E") center/16px no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E") center/16px no-repeat}
+@media(forced-colors:active){.ix{background:CanvasText}}
+.sg-c{content-visibility:auto;contain-intrinsic-size:auto 230px}
+html.js .sgp-main .sg-g:not(.all)>.sg-c:nth-child(n+7){display:none}
+.sg-more{display:block;margin:10px 0 4px;height:40px;padding:0 16px;border:0;border-radius:999px;background:var(--card);box-shadow:var(--ring);color:var(--ink);font:inherit;font-size:.875rem;font-weight:500;cursor:pointer}
+@media(hover:hover){.sg-more:hover{box-shadow:var(--ring-hover)}}

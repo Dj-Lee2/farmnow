@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 from itertools import groupby
 from pathlib import Path
 
-from markupsafe import Markup
+from markupsafe import Markup, escape
 
 from . import homeviews, statviews
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -224,12 +224,14 @@ def f_line(vals, uid: str, col: str, labels=None, unit: str = "", w: int = 240, 
     out.append(f'<polygon points="{X(0):.1f},{h} {pts} {X(n - 1):.1f},{h}" fill="{col}" fill-opacity=".09"/>'
                f'<polyline points="{pts}" fill="none" stroke="{col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>'
                f'<line x1="{X(n - 1):.1f}" y1="{Y(v[-1]):.1f}" x2="{X(n - 1):.1f}" y2="{Y(v[-1]):.1f}" stroke="{col}" stroke-width="7" stroke-linecap="round" vector-effect="non-scaling-stroke"/>')
-    cw = (w - 8) / (n - 1)
+    # 값 말풍선 글은 점마다 rect를 까는 대신 svg 속성 하나에 '|'로 묶는다(통계 묶음 쪽 하나에 카드 1,700장 — 쪽 무게의 큰 몫이었다)
+    tips = []
     for i, x in enumerate(v):
         lab = pairs[i][1]
         num = f"{x:,.0f}" if abs(x) >= 1000 else f"{x:,.2f}"
-        tip = f"{lab} · {num}{unit}" if lab else f"{num}{unit}"
-        out.append(f'<rect class="b" data-t="{tip}" x="{max(0, X(i) - cw / 2):.1f}" y="0" width="{cw:.1f}" height="{h}" fill="transparent"/>')
+        tips.append((f"{lab} · {num}{unit}" if lab else f"{num}{unit}").replace("|", "/"))
+    out[0] = out[0][:-1] + f' data-tips="{escape("|".join(tips))}">'
+    out.append(f'<line class="hl" x1="0" x2="0" y1="0" y2="{h}" stroke="#14171a" stroke-opacity="0" stroke-width="1" vector-effect="non-scaling-stroke"/>')
     return Markup("".join(out) + "</svg>")
 
 

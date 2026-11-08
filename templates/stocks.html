@@ -25,21 +25,21 @@
  <div class="tabs" id="mtab"><button type="button" class="on" data-s="cm">국제 농산물</button><button type="button" data-s="kr">국내 주식</button><button type="button" data-s="wd">해외 주식</button><button type="button" data-s="etf">ETF</button></div>
  <div class="two">
   <section>
-   <div data-sec="cm"><div class="sec"><h3>국제 농산물 선물</h3></div>{{ tbl(S.commodities or [], '품목', true, false, 'g_cm') }}</div>
-   <div data-sec="kr"><div class="sec"><h3>국내 농업 관련주</h3><small>원</small></div>{{ tbl(S.kr_stocks or [], '종목', true, true, 'g_kr') }}</div>
-   <div data-sec="wd"><div class="sec"><h3>해외 농업 관련주</h3><small>달러 · 구보다는 엔</small></div>{{ tbl(S.world_stocks or [], '종목', true, true, 'g_wd') }}</div>
-   <div data-sec="etf"><div class="sec"><h3>국내 ETF</h3><small>원</small></div>{{ tbl(S.kr_etfs or [], '종목', false, true, '', false) }}
-    <div class="sec" style="margin-top:22px"><h3>해외 ETF</h3><small>달러</small></div>{{ tbl(S.world_etfs or [], '종목', false, true, '', false) }}</div>
+   <div data-sec="cm"><div class="sec"><h2>국제 농산물 선물</h2></div>{{ tbl(S.commodities or [], '품목', true, false, 'g_cm') }}</div>
+   <div data-sec="kr"><div class="sec"><h2>국내 농업 관련주</h2><small>원</small></div>{{ tbl(S.kr_stocks or [], '종목', true, true, 'g_kr') }}</div>
+   <div data-sec="wd"><div class="sec"><h2>해외 농업 관련주</h2><small>달러 · 구보다는 엔</small></div>{{ tbl(S.world_stocks or [], '종목', true, true, 'g_wd') }}</div>
+   <div data-sec="etf"><div class="sec"><h2>국내 ETF</h2><small>원</small></div>{{ tbl(S.kr_etfs or [], '종목', false, true, '', false) }}
+    <div class="sec" style="margin-top:22px"><h2>해외 ETF</h2><small>달러</small></div>{{ tbl(S.world_etfs or [], '종목', false, true, '', false) }}</div>
   </section>
   <aside>
    {% set all = (S.kr_stocks or []) + (S.world_stocks or []) %}
-   <div class="card"><div class="sec"><h3>상승 상위</h3></div>
+   <div class="card"><div class="sec"><h2>상승 상위</h2></div>
     {% for r in (all|sort(attribute='pct', reverse=true))[:6] %}<a class="row" href="./{{ r.slug }}"><span>{{ r.name }} <small>{{ r.group }}</small></span><b class="{{ 'up' if r.pct>0 else '' }}">{{ r.pct|pct }}</b></a>{% endfor %}
    </div>
-   <div class="card"><div class="sec"><h3>하락 상위</h3></div>
+   <div class="card"><div class="sec"><h2>하락 상위</h2></div>
     {% for r in (all|sort(attribute='pct'))[:6] %}<a class="row" href="./{{ r.slug }}"><span>{{ r.name }} <small>{{ r.group }}</small></span><b class="{{ 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</b></a>{% endfor %}
    </div>
-   <div class="card"><div class="sec"><h3>분류별 평균</h3><small>국내·해외 주식</small></div>
+   <div class="card"><div class="sec"><h2>분류별 평균</h2><small>국내·해외 주식</small></div>
     {% for g in all|map(attribute='group')|unique %}{% set rs = all|selectattr('group','equalto',g)|list %}{% set avg = (rs|sum(attribute='pct')) / (rs|length) %}<div class="row"><span>{{ g }} <small>{{ rs|length }}종목</small></span><b class="{{ 'up' if avg>0 else 'down' if avg<0 else '' }}">{{ avg|pct }}</b></div>{% endfor %}
    </div>
   </aside>

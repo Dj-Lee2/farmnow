@@ -17,7 +17,7 @@ button,input,select,textarea{font-family:inherit}
 /* 굵기 위계: 쪽 제목 > 카드 제목 > 본문. 큰 숫자는 굵게, 단위는 흐리게 */
 .page-hd h1,.sd-hd h1{font-weight:700;font-size:1.75rem;letter-spacing:-0.03em;color:var(--ink)}
 .page-hd small{font-size:0.8125rem}
-.sec h3,.stc-hd h4,.kp4 .t,.sg-tt b,html body .px-brief h2,.sq-h,.sq-today h2{font-weight:600;letter-spacing:-0.02em}
+.sec :is(h2,h3),.stc-hd :is(h3,h4),.kp4 .t,.sg-tt b,html body .px-brief h2,.sq-h,.sq-today h2{font-weight:600;letter-spacing:-0.02em}
 .kp4 .t{font-size:1rem}
 .kp4 .v,.mks b,.sd-px b,.c-chart .price,.c-chart .price b{font-weight:700;letter-spacing:-0.03em}
 .kp4 .v small,.mks b small{font-weight:400;letter-spacing:0}
@@ -159,3 +159,9 @@ html.js .sgp-main .sg-g:not(.all)>.sg-c:nth-child(n+7){display:none}
 @media(hover:hover){.sg-more:hover{box-shadow:var(--ring-hover)}}
 [hidden]{display:none!important}   /* display를 준 규칙이 hidden 속성을 이기지 않게(빈 상자가 보이던 원인) */
 .pnote{margin:4px 0 8px;padding:8px 12px;border-radius:10px;background:var(--soft);color:var(--txt);font-size:.8125rem}
+/* UX 6회차 */
+.mk-t b.nm{font-size:12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 3px}
+#mkSide{scroll-margin-top:calc(var(--hd-h,64px) + 8px)}
+.pstat a{display:inline-block;margin-right:2px}
+.filtering #brief{display:none}
+.px-srcl button.zero{opacity:.45}

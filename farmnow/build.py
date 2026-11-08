@@ -332,18 +332,18 @@ def stats_pages(env, ctx: dict) -> dict:
             n[0] += 1
             sid = f"{gid[2:]}-{n[0]}"
             subs.append((sid, _plain(re.sub(r"<small>.*?</small>", "", m.group(2)))))
-            return f'<h3 class="sg-sub" id="{sid}"{m.group(1)}>{m.group(2)}</h3>'
+            return f'<h2 class="sg-sub" id="{sid}"{m.group(1)}>{m.group(2)}</h2>'
 
         def card(m):
             n[1] += 1
             return f'<section id="c-{gid[2:]}-{n[1]}" ' + m.group(0)[len("<section "):]
 
         def walk(m):  # 소제목과 카드에 문서 순서대로 id를 붙인다
-            return sub(re.match(r'<h3 class="sg-sub"([^>]*)>(.*?)</h3>', m.group(0), re.S)) if m.group(0).startswith("<h3") else card(m)
-        html = re.sub(r'<h3 class="sg-sub"[^>]*>.*?</h3>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
+            return sub(re.match(r'<h2 class="sg-sub"([^>]*)>(.*?)</h2>', m.group(0), re.S)) if m.group(0).startswith("<h2") else card(m)
+        html = re.sub(r'<h2 class="sg-sub"[^>]*>.*?</h2>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
         label = dict(subs)
         heads.append([title, title, page[:-5]])
-        for m in re.finditer(r'<h3 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*(?:<a class="sg-go"[^>]*></a>)?<div class="t">(.*?)<a ', html, re.S):
+        for m in re.finditer(r'<h2 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*(?:<a class="sg-go"[^>]*></a>)?<div class="t">(.*?)<a ', html, re.S):
             if m.group(1):
                 heads.append([title, label.get(m.group(1), title), page[:-5]])
             else:
@@ -518,6 +518,9 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
             stat_si.setdefault(nm, [it[0], it[1]])
     ctx = dict(
         stat_si=stat_si,
+        # 시세 품목 → 소비자물가 품목 지수(월별, 긴 가격 추이). KAMIS 이름과 다른 것은 별칭
+        stat_cpi={**{(s.get("title") or "").replace("소비자물가 ", ""): k for k, s in (kstat or {}).items() if k.startswith("cfx_") and k != "cfx_xfr"},
+                  **{a: b for a, b in (("감귤", "cfx_tang"), ("대파", "cfx_wel"), ("깐마늘(국산)", "cfx_gar"), ("단감", "cfx_pers"), ("방울토마토", "cfx_tom"), ("풋고추", "cfx_gpep")) if (kstat or {}).get(b)}},
         site=cfg["site"], now=now, built=now.strftime("%Y.%m.%d %H:%M"), built_iso=now.isoformat(),
         nav=nav, stocks=stocks, categories=CATEGORIES, tab_counts=tab_counts, license_label=LICENSE_LABEL,
         items=items, days=days, home_days=home_days, top5=t5, trend=trend, trend_hours=trend_hours,

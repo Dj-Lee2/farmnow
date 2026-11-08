@@ -28,7 +28,7 @@
 
  <div class="row2">
   <section class="card c-chart">
-   <div class="chd"><div class="sec"><h3>국내 농산물 가격 비교</h3><small>KAMIS 조사값</small></div>
+   <div class="chd"><div class="sec"><h2>국내 농산물 가격 비교</h2><small>KAMIS 조사값</small></div>
     <div class="tools">{% if tickers.all %}<span class="pnav"><button type="button" id="pPrev" aria-label="이전 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="pPause" class="pp" aria-pressed="false" aria-label="자동 넘김 멈춤" title="자동 넘김 멈춤"><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button><button type="button" id="pNext" aria-label="다음 품목"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span>{% endif %}<a class="sq" href="market.html" aria-label="시세표"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 3h4M3 3v4M13 13H9M13 13V9M3 3l4 4M13 13 9 9"/></svg></a></div></div>
    {% if tickers.all %}
    <div class="chart-hd"><label class="sel"><select id="pick" aria-label="품목 선택"></select></label></div>
@@ -40,7 +40,7 @@
   </section>
 
   <section class="card c-move{{ ' stale' if tickers.stale }}">
-   <div class="chd"><div class="sec"><h3>많이 움직인 품목</h3><small>전일 대비</small></div></div>
+   <div class="chd"><div class="sec"><h2>많이 움직인 품목</h2><small>전일 대비</small></div></div>
    <div class="ptab"><button class="on" type="button" onclick="setP('all',this)">전체</button><button type="button" onclick="setP('retail',this)">소매</button><button type="button" onclick="setP('whole',this)">도매</button></div>
    <table class="mvt">
    {% for key,rows in (('all',tickers.top10),('retail',tickers.top10_retail),('whole',tickers.top10_whole)) %}{% set am = [rows|map(attribute='pct')|map('abs')|max if rows else 1, tickers.threshold or 10]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}<tbody data-ptab="{{ key }}"{% if key != 'all' %} hidden{% endif %}>
@@ -62,7 +62,7 @@
 {% set K = kstat %}{% set tot_ok = K.sell_idx and K.buy_idx %}
  {% if K.farm_income or tot_ok or K.hanwoo or K.rice_cons or K.pig_net %}
  <div class="stc" id="stc" aria-roledescription="carousel" aria-label="농가경제·축산·소비 통계">
-  <div class="stc-hd"><h4>농가경제·축산·소비</h4><span class="pnav"><button type="button" id="cPrev" aria-label="이전 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="cPause" class="pp" aria-pressed="false" aria-label="카드 자동 넘김 멈춤" title="카드 자동 넘김 멈춤"><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button><button type="button" id="cNext" aria-label="다음 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span></div>
+  <div class="stc-hd"><h3>농가경제·축산·소비</h3><span class="pnav"><button type="button" id="cPrev" aria-label="이전 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button type="button" id="cPause" class="pp" aria-pressed="false" aria-label="카드 자동 넘김 멈춤" title="카드 자동 넘김 멈춤"><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.3v9.4a.8.8 0 0 0 1.2.7l7.3-4.7a.8.8 0 0 0 0-1.4L6.2 2.6A.8.8 0 0 0 5 3.3Z"/></svg></button><button type="button" id="cNext" aria-label="다음 카드"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></span></div>
   <div class="stc-vp"><div class="stc-tr" id="stcTr">
   {% if K.farm_income %}{% set v = K.farm_income.vals %}{% set yp = ((v[-1] - v[-2]) / v[-2] * 100) if v|length > 1 and v[-2] else none %}
    <section class="kp4 stc-c"><div class="t">농가소득 <small>농가 평균</small>{{ go('https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=' ~ K.farm_income.tbl, '농가소득 KOSIS 통계표') }}</div>
@@ -102,7 +102,7 @@
  {% set mv = pstat.risers[:3] + pstat.fallers[:3] %}{% set am2 = [mv|map(attribute='yoy')|map('abs')|max if mv else 5, 5]|max %}{% set mx2 = [5, 10, 20, 30, 40, 50, 60, 80, 100]|select('ge', am2)|first or 100 %}
  <div class="row2 st2">
   <section class="card">
-   <div class="sec"><h3>부류별 소매가, 1년 전 대비</h3><small>품목 평균</small><a class="go" href="market.html">시세표 →</a></div>
+   <div class="sec"><h2>부류별 소매가, 1년 전 대비</h2><small>품목 평균</small><a class="go" href="market.html">시세표 →</a></div>
    <table class="mvt"><tbody>
    {% for c in pstat.cats %}<tr><td class="nm"><b>{{ c.name }}</b> <small>{{ c.n }}개 품목·규격</small></td><td class="hb">{{ dv(c.pct, mx) }}</td><td class="n {{ 'up' if c.pct>0 else 'down' if c.pct<0 else '' }}">{{ c.pct|pct }}</td></tr>{% endfor %}
    <tr class="ax"><td></td><td class="hb">{{ dax(mx) }}</td><td></td></tr>
@@ -111,7 +111,7 @@
    <p class="lg">출처: aT KAMIS 일별 소매가격 · {{ pstat.day[5:]|replace('-', '.') }} 조사와 1년 전 같은 날 비교</p>
   </section>
   <section class="card">
-   <div class="sec"><h3>1년 전보다 많이 오른·내린 품목</h3><small>소매</small></div>
+   <div class="sec"><h2>1년 전보다 많이 오른·내린 품목</h2><small>소매</small></div>
    <table class="mvt"><tbody>
    {% for r in mv %}<tr class="pick" data-i="{{ r.idx }}" data-key="{{ r.key }}"><td class="nm"><b>{{ r.disp }}</b> <small>{{ r.price|won }}원/{{ r.unit }} · 1년 전 {{ r.year_ago|won }}원</small></td><td class="hb">{{ dv(r.yoy, mx2) }}</td><td class="n {{ 'up' if r.yoy>0 else 'down' }}">{{ r.yoy|pct }}</td></tr>{% endfor %}
    <tr class="ax"><td></td><td class="hb">{{ dax(mx2) }}</td><td></td></tr>
@@ -123,12 +123,12 @@
 
  <div class="row3">
   <section class="card">
-   <div class="sec"><h3>오늘의 핵심</h3><a class="go" href="news.html#brief">소식 →</a></div>
+   <div class="sec"><h2>오늘의 핵심</h2><a class="go" href="news.html#brief">소식 →</a></div>
    <div class="t5l">{% for it in top5 %}<div class="t5"><span class="n">{{ loop.index }}</span><div><a href="n-{{ it.id }}.html"><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</a><small>{{ it.source_name }} · {{ it|ftime }}</small></div></div>{% else %}<p class="st">최근 48시간 항목 없음</p>{% endfor %}</div>
   </section>
 
   <section class="card c-sum">
-   <div class="sec"><h3>발령·문서</h3><a class="go" href="news.html?type=alert">특보 전체 →</a></div>
+   <div class="sec"><h2>발령·문서</h2><a class="go" href="news.html?type=alert">특보 전체 →</a></div>
    <div class="alerts">
     {% if warn is none %}<div class="row"><span>기상특보</span><b>확인 불가</b></div>
     {% elif active %}{% for a in active[:3] %}<div class="row"><span>{{ a.kind }}<br><small>{{ a.regions }}</small></span><b class="up">발효 중</b></div>{% endfor %}
@@ -141,7 +141,7 @@
   </section>
 
   <section class="card{{ ' stale' if stocks and stocks.stale }}">
-   <div class="sec"><h3>국제 농산물</h3><small>전일 대비</small><a class="go" href="stocks.html#cm">전체 →</a></div>
+   <div class="sec"><h2>국제 농산물</h2><small>전일 대비</small><a class="go" href="stocks.html#cm">전체 →</a></div>
    {% if cm %}{% set am = [cm|map(attribute='pct')|map('abs')|max, 0.5]|max %}{% set mx = NICE|select('ge', am)|first or 100 %}
    <table class="mvt cmt"><tbody>
    {% for r in cm|sort(attribute='pct', reverse=true) %}<tr><td class="nm" title="{{ r|px }} {{ r.unit }}"><b>{{ r.name }}</b> <small>{{ r|px }}</small></td><td class="hb">{{ dv(r.pct, mx) }}</td><td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
@@ -153,7 +153,7 @@
 
  <div class="body2">
   <section class="card feed">
-   <div class="sec" style="margin:14px 0 2px"><h3>소식</h3><small>최신 {{ home_days|sum(attribute='items', start=[])|length }}건</small><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
+   <div class="sec" style="margin:14px 0 2px"><h2>소식</h2><small>최신 {{ home_days|sum(attribute='items', start=[])|length }}건</small><a class="go" href="news.html">전체 {{ items|length }}건 →</a></div>
    {% set ns = namespace(n=0) %}
    {% for d in home_days %}
     <div class="day{{ ' xm' if ns.n >= 8 }}" data-date="{{ d.date }}">{{ d.label }}</div>
@@ -164,13 +164,13 @@
 
   <aside class="side">
    {% if stocks %}<div class="card{{ ' stale' if stocks.stale }}">
-    <div class="sec"><h3>농업 관련주·ETF</h3><a class="go" href="stocks.html#kr">전체 →</a></div>
+    <div class="sec"><h2>농업 관련주·ETF</h2><a class="go" href="stocks.html#kr">전체 →</a></div>
     <table class="stk"><tbody>
     {% for r in (stocks.movers[:5] + (S.kr_etfs or [])[:1] + (S.world_etfs or [])[:1]) %}<tr><td class="nm"><b class="sn">{{ r.name }}</b> <small>{{ '원' if r.cur == 'KRW' else '달러' }}</small></td><td class="sp">{{ spark(r) }}</td><td class="n">{{ r|px }}</td><td class="n {{ 'up' if r.pct>0 else 'down' if r.pct<0 else '' }}">{{ r.pct|pct }}</td></tr>{% endfor %}
     </tbody></table>
    </div>{% endif %}
    {% if latest_by_board %}<div class="card">
-    <div class="sec"><h3>기관 발표</h3><a class="go" href="news.html?type=release">전체 →</a></div>
+    <div class="sec"><h2>기관 발표</h2><a class="go" href="news.html?type=release">전체 →</a></div>
     <div class="org-l">{% for it in latest_by_board %}<a href="n-{{ it.id }}.html"><span class="org">{{ it.source_name }}</span><div class="h">{{ it.headline }}</div><span class="d">{{ it|ftime }}</span></a>{% endfor %}</div>
    </div>{% endif %}
    {% if failed %}<p class="st"><span class="bad">수집 실패</span> {{ failed|join(', ') }}</p>{% endif %}

@@ -319,6 +319,29 @@ def _plain(h: str) -> str:
     return re.sub(r"\s+", " ", _TAG.sub(" ", h)).strip()
 
 
+SG_KEEP = 4   # 큰 소제목에서 묶음 쪽에 남기는 대표 카드 수
+SG_DIR_MIN = 12   # 소제목이 이만큼 이상이면 묶음 쪽을 소제목 목록으로
+
+
+def _sg_segments(html: str) -> list:
+    """묶음 쪽의 소제목 덩어리: (소제목 id, 시작, 끝, 카드 id들). 모양이 예상과 다르면 빈 목록(나누지 않음)."""
+    hs = list(re.finditer(r'<h2 class="sg-sub" id="([^"]+)"', html))
+    out = []
+    for k, h in enumerate(hs):
+        stop = hs[k + 1].start() if k + 1 < len(hs) else len(html)
+        cs = list(re.finditer(r'<section id="(c-[^"]+)".*?</section>', html[h.start():stop], re.S))
+        if not cs:
+            return []
+        end = html.index("</div>", h.start() + cs[-1].end()) + len("</div>")
+        rest = re.sub(r'<section id="c-[^"]+".*?</section>', "", html[h.start():end], flags=re.S)
+        if not re.fullmatch(r'<h2 class="sg-sub"[^>]*>.*?</h2>(?:\s*<div class="sg-g"[^>]*>\s*</div>)+', rest, re.S):
+            return []
+        if k + 1 < len(hs) and not re.fullmatch(r"(?:\s*</div>)*\s*", html[end:stop]):   # 사이에 다른 내용이 있으면 나누지 않음
+            return []
+        out.append((h.group(1), h.start(), end, [c.group(1) for c in cs]))
+    return out
+
+
 def stats_pages(env, ctx: dict) -> dict:
     """통계 묶음마다 한 쪽(stats-g-*.html)을 만들고, 왼쪽 목차와 통계 찾기 색인을 붙인다."""
     tpl = env.get_template("stats.html")
@@ -342,30 +365,72 @@ def stats_pages(env, ctx: dict) -> dict:
             return sub(re.match(r'<h2 class="sg-sub"([^>]*)>(.*?)</h2>', m.group(0), re.S)) if m.group(0).startswith("<h2") else card(m)
         html = re.sub(r'<h2 class="sg-sub"[^>]*>.*?</h2>|<section class="kp4 sg-c[^"]*"', walk, html, flags=re.S)
         label = dict(subs)
+        # 카드가 많은 소제목은 대표 SG_KEEP장만 묶음 쪽에 두고, 전체는 소제목 쪽(stats-g-land-3)으로 나눈다
+        segs = _sg_segments(html)
+        dir_mode = len(segs) >= SG_DIR_MIN   # 소제목이 많으면 묶음 쪽은 소제목 목록(안내판)만, 카드는 소제목 쪽에
+        split = {sid: f"{page[:-5]}-{sid.rsplit('-', 1)[1]}" for sid, a, b, cs in segs if dir_mode or len(cs) > SG_KEEP + 1}
         heads.append([title, title, page[:-5]])
         for m in re.finditer(r'<h2 class="sg-sub" id="([^"]+)"|<section id="(c-[^"]+)"[^>]*>\s*(?:<a class="sg-go"[^>]*></a>)?<div class="t">(.*?)<a ', html, re.S):
             if m.group(1):
-                heads.append([title, label.get(m.group(1), title), page[:-5]])
+                heads.append([title, label.get(m.group(1), title), split.get(m.group(1), page[:-5])])
             else:
                 cards.append([_plain(m.group(3)), len(heads) - 1, m.group(2)])
-        side = '<nav class="sgp-nav" aria-label="통계 묶음">' + "".join(
-            f'<a href="./stats-{g}" class="sgp-g{" on" if g == gid else ""}"{" aria-current=page" if g == gid else ""}>{t}</a>'
-            + ('<div class="sgp-sub">' + "".join(f'<a href="#{i}">{l}</a>' for i, l in subs) + "</div>" if g == gid else "")
-            for g, t in SG_GROUPS) + "</nav>"
-        side += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
-                 + "".join(f'<option value="{i}">{l}</option>' for i, l in subs) + "</select></label>")
-        (SITE / page).write_text(html.replace("<!--SG-SIDE-->", side, 1), encoding="utf-8")
+        def side(cur=None):  # cur: 소제목 쪽이면 그 소제목 id — 다른 소제목은 묶음 쪽으로
+            def ref(i):
+                if i == cur:
+                    return "#" + i
+                if dir_mode:
+                    return "./" + split[i]
+                return "#" + i if cur is None else f"./{page[:-5]}#{i}"
+            s = '<nav class="sgp-nav" aria-label="통계 묶음">' + "".join(
+                f'<a href="./stats-{g}" class="sgp-g{" on" if g == gid else ""}"{" aria-current=page" if g == gid and cur is None else ""}>{t}</a>'
+                + ('<div class="sgp-sub">' + "".join(f'<a href="{ref(i)}"{" class=on aria-current=page" if i == cur else ""}>{l}</a>' for i, l in subs) + "</div>" if g == gid else "")
+                for g, t in SG_GROUPS) + "</nav>"
+            s += ('<label class="sgp-jump"><span>바로 가기</span><select id="sgpJump"><option value="">소제목 고르기</option>'
+                  + "".join(f'<option value="{ref(i)}"{" selected" if i == cur else ""}>{l}</option>' for i, l in subs) + "</select></label>")
+            if cur is None and split:   # 옛 공유 주소(#c-land-17)가 소제목 쪽으로 가도록 카드 번호 범위
+                rng = [[split[sid], int(cs[0].rsplit("-", 1)[1]), int(cs[-1].rsplit("-", 1)[1])] for sid, a, b, cs in segs if sid in split]
+                s += f'<div hidden id="sgSplit" data-r="{escape(json.dumps(rng))}"></div>'
+            return s
+        whole = html
+        if dir_mode:
+            tiles = []
+            for sid, a, b, cs in segs:
+                names = [_plain(t) for t in re.findall(r'<div class="t">(.*?)<a ', whole[a:b], re.S)]
+                tiles.append(f'<a class="sg-dt" id="{sid}" href="./{split[sid]}"><b>{escape(label[sid])}</b>'
+                             f'<small>카드 {len(cs)}장 · {escape(", ".join(names[:3]))}{" 외" if len(names) > 3 else ""}</small></a>')
+            html = (whole[:segs[0][1]] + '<p class="sg-dir-h">소제목을 고르면 그 카드를 모두 볼 수 있습니다. 지표 이름을 알면 위 <b>통계 찾기</b>가 빠릅니다.</p>'
+                    '<div class="sg-dir">' + "".join(tiles) + "</div>" + whole[segs[-1][2]:])
+        for sid, a, b, cs in reversed(segs if not dir_mode else []):   # 묶음 쪽: 큰 소제목은 앞 카드만 + 전체 보기
+            if sid in split:
+                seg = whole[a:b]
+                cut = seg.index(f'<section id="{cs[SG_KEEP]}"')
+                more = (f'<a class="sg-allsub" href="./{split[sid]}">{escape(label[sid])} 카드 {len(cs)}장 모두 보기 '
+                        '<span aria-hidden="true">→</span></a></div>')
+                html = html[:a] + seg[:cut] + more + html[b:]
+        (SITE / page).write_text(html.replace("<!--SG-SIDE-->", side(), 1), encoding="utf-8")
+        for sid, a, b, cs in segs:              # 소제목 쪽: 그 소제목 카드 전부
+            if sid not in split:
+                continue
+            nm = escape(label[sid])
+            one = (whole[:segs[0][1]] + f'<p class="sg-back"><a href="./{page[:-5]}">← {escape(title)} 한눈에 보기</a></p>'
+                   + whole[a:b] + whole[segs[-1][2]:])
+            one = one.replace(f'<div class="sgp-crumb"><a href="./stats">통계</a> › {escape(title)}</div>',
+                              f'<div class="sgp-crumb"><a href="./stats">통계</a> › <a href="./{page[:-5]}">{escape(title)}</a> › {nm}</div>', 1)
+            one = one.replace(f"<title>{escape(title)} — ", f"<title>{nm} · {escape(title)} — ", 1)
+            one = one.replace(f"<h1>{escape(title)}</h1>", f"<h1>{nm} <small class=\"sg-of\">{escape(title)}</small></h1>", 1)
+            (SITE / f"{split[sid]}.html").write_text(one.replace("<!--SG-SIDE-->", side(sid), 1), encoding="utf-8")
     # 통계 홈을 묶음별 카드 수·소제목을 넣어 다시 그린다(묶음 카드 시안)
     if ctx.get("stats_layout"):
         info = {}
         for h in heads:
-            g = "g-" + h[2].split("stats-g-")[1] if "stats-g-" in h[2] else None
+            g = "g-" + re.sub(r"-\d+$", "", h[2].split("stats-g-")[1]) if "stats-g-" in h[2] else None
             if g:
                 info.setdefault(g, {"subs": [], "n": 0})
                 if h[1] != h[0]:
                     info[g]["subs"].append(h[1])
         for c in cards:
-            g = "g-" + heads[c[1]][2].split("stats-g-")[1]
+            g = "g-" + re.sub(r"-\d+$", "", heads[c[1]][2].split("stats-g-")[1])
             info[g]["n"] += 1
         meta = [(g, t, SG_META[g][0], ctx["kstat"].get(SG_META[g][1]), SG_META[g][2], info.get(g, {"subs": [], "n": 0})) for g, t in SG_GROUPS]
         (SITE / "stats.html").write_text(clean_urls(hangul_only(tpl.render(page="stats.html", sg_cards=meta, **ctx))), encoding="utf-8")

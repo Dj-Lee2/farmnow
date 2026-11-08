@@ -6268,7 +6268,9 @@
  <script>(()=>{const P=document.querySelector('.sgp');
  if(P){document.querySelectorAll('.sgp .sg-grp>summary').forEach(s=>s.addEventListener('click',e=>{if(!e.target.closest('a'))e.preventDefault()}));
   const L=[...document.querySelectorAll('.sgp-side .sgp-sub a')],sel=document.getElementById('sgpJump');
-  if(sel)sel.addEventListener('change',()=>{if(sel.value)location.hash=sel.value});
+  if(sel)sel.addEventListener('change',()=>{const v=sel.value;if(!v)return;if(v[0]==='#')location.hash=v;else location.href=v});
+  const sp=document.getElementById('sgSplit'),hh=location.hash.slice(1),hn=hh.match(/^c-[a-z]+-(\d+)$/);   // 옛 카드 주소 → 소제목 쪽
+  if(sp&&hn&&!document.getElementById(hh)){const r=JSON.parse(sp.dataset.r).find(x=>+hn[1]>=x[1]&&+hn[1]<=x[2]);if(r){location.replace('./'+r[0]+'#'+hh);return}}
   if(L.length&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;L.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));const on=L.find(a=>a.classList.contains('on'));if(on&&on.scrollIntoViewIfNeeded)on.scrollIntoViewIfNeeded(false)}})},{rootMargin:'-120px 0px -70% 0px'});
    document.querySelectorAll('.sgp-main .sg-sub[id],.sgp-main .sg-h[id]').forEach(h=>io.observe(h))}
   return}

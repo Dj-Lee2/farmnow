@@ -554,7 +554,7 @@ a.sg-rl{color:inherit}
  <span class="sp"></span>
  <div class="pill edit hsearch" id="pill"><button class="lens" id="lens" type="button" aria-label="검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg></button><input id="q" type="search" placeholder="품목·지역·기관 검색" aria-label="검색"><kbd>/</kbd></div>
  <span class="upd" id="upd" title="마지막 갱신 {{ built }}">갱신 {{ now.strftime('%H:%M') }}</span>
- <div class="header-actions"><button class="ico" id="soundToggle" type="button" title="버튼 소리 끄기" aria-label="버튼 소리" aria-pressed="true" hidden>
+ <div class="header-actions"><button class="ico" id="soundToggle" type="button" title="버튼 소리 켜기" aria-label="버튼 소리" aria-pressed="false" hidden>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><g class="sound-on"><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></g><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg>
  </button>
  <button class="ico" id="bigBtn" type="button" title="큰글씨" aria-label="가+ 큰글씨" aria-pressed="false">가+</button>
@@ -683,7 +683,7 @@ function draw(i,still){if(i!==undefined)cur=+i;var r=ROWS[cur],svg=$('svg');if(!
  var fq=function(v,w){return v==null?'<span class="na" title="KAMIS가 이 품목의 '+w+' 조사값을 주지 않았습니다">자료 없음</span>':'<b class="'+cls(v)+'">'+fp(v)+'</b>'};   // – 대신 이유를 쓴다
  if($('pdelta'))$('pdelta').innerHTML='전일 대비 '+fq(r.pct,'전일')+' · 1개월 대비 '+fq(m,'1개월 전')+' · 1년 대비 '+fq(yv,'1년 전');
  var ps=$('pstat'),b0=(r.disp||'').split(' ')[0],si=SI[r.base]||SI[b0],cp=CPI[r.base]||CPI[b0];   // KAMIS는 오늘·전일·1개월·1년 전 값만 → 긴 가격 추이는 소비자물가 지수로
- if(ps){var L=[];if(cp)L.push('<a href="./stats-x?k='+cp+'">'+(r.base||b0)+' 소비자물가 월별 추이 →</a>');if(si)L.push('<a href="./stats-i-'+si[0]+'">'+si[1]+' 생산·소비 통계 →</a>');ps.innerHTML=L.join('<span aria-hidden="true"> · </span>');ps.hidden=!L.length}
+ if(ps){var PL=[];if(cp)PL.push('<a href="./stats-x?k='+cp+'">'+(b0||r.base)+' 소비자물가지수 월별 추이(가격 아님) →</a>');if(si)PL.push('<a href="./stats-i-'+si[0]+'">'+si[1]+' 생산·소비 통계 →</a>');ps.innerHTML=PL.join('<span aria-hidden="true"> · </span>');ps.hidden=!PL.length}
  drawSeason(r);
  document.querySelectorAll('tr.pick').forEach(function(tr){tr.classList.toggle('on',+tr.dataset.i===cur)});}
 /* 평년 범위: 시세 행에 season(올해 월평균·최근 5년 같은 달 최저·최고·평균)이 있으면 그린다 */

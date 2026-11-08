@@ -32,7 +32,7 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
  <div class="page-hd"><h1>시세</h1><small>{% if tickers.day %}KAMIS {{ tickers.day }} 조사 · {{ tickers.rows_count }}개{{ ' · 갱신 실패' if tickers.stale }}{% else %}시세 미수집{% endif %}</small></div>
  {% if tickers.all %}
  {{ hp.idx(h) }}
- <div class="hv-ph"><h2>오늘의 농산물 지도</h2><small>칸 크기 = 장바구니 비중 · 색 = 등락 · 칸을 누르면 <span class="at-r">오른쪽에</span><span class="at-b">아래에</span> 자세히</small><div class="hv-seg ptab" id="mkPer"><button type="button" data-k="d" class="on">전일 대비</button><button type="button" data-k="m">1개월</button><button type="button" data-k="y">1년</button></div></div>
+ <div class="hv-ph"><h2>오늘의 농산물 지도</h2><small>칸 크기 = 장바구니 비중 · 색 = 등락 · 칸을 누르면 아래에 자세히</small><div class="hv-seg ptab" id="mkPer"><button type="button" data-k="d" class="on">전일 대비</button><button type="button" data-k="m">1개월</button><button type="button" data-k="y">1년</button></div></div>
  {{ tmap(h.tm, "mk-d", "mkTm") }}{{ tmap(h.tm_m, "mk-m", "mkTmM") }}
  <div class="mk-sc"><span>-8%</span><i></i><span>0</span><i class="u"></i><span>+8%</span></div>
  <div class="mk-g">
@@ -69,7 +69,7 @@ function setM(m,btn){document.querySelectorAll('#mtabs button').forEach(function
  function col(v){if(v===''||isNaN(v))return '#c9cdd3';v=+v;if(!v)return '#5f6670';var k=Math.min(Math.abs(v)/8,1);return 'color-mix(in oklab,'+(v>0?'#cd2b31':'#3e63dd')+' '+Math.round(30+70*k)+'%,#5f6670)'}
  document.getElementById('mkPer').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});tiles().forEach(function(a){var v=a.dataset[b.dataset.k];a.style.background=col(v);var s=a.querySelector('span');if(s)s.textContent=v===''?'–':((+v>0?'+':'')+(+v).toFixed(1)+'%')})});
  function mark(){var i=String(cur);tiles().forEach(function(a){a.classList.toggle('on',a.dataset.i===i)})}
- TM.forEach(function(t){t.addEventListener('click',function(e){var a=e.target.closest('.mk-t');if(!a)return;e.preventDefault();setPick(+a.dataset.i,true);mark();if(innerWidth<1100)document.getElementById('mkSide').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})})});
+ TM.forEach(function(t){t.addEventListener('click',function(e){var a=e.target.closest('.mk-t');if(!a)return;e.preventDefault();setPick(+a.dataset.i,true);mark();var sd=document.getElementById('mkSide'),rc=sd.getBoundingClientRect();if(innerWidth<1100||rc.top>innerHeight*0.5||rc.bottom<120)sd.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})})});   // PC도 상세가 지도 아래라 화면 밖이면 내려 준다
  var od=window.draw;window.draw=function(i,s){od(i,s);mark()};mark();
  var sg=document.getElementById('mkSeg');sg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(sg.children,function(x){x.classList.toggle('on',x===b)});[].forEach.call(document.querySelectorAll('.mk-l'),function(l){l.hidden=l.dataset.t!==b.dataset.t})})})();
 {% endblock %}

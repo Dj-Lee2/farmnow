@@ -15,8 +15,8 @@
   var controls = 'button, [role="button"], [role="tab"], input[type="button"], input[type="submit"], input[type="reset"], a.btn-line, a.btn-blue, a.more, a.sq, .hd nav a, .logo';
 
   function readPreference() {
-    try { return localStorage.getItem(STORAGE_KEY) !== "off"; }
-    catch (_) { return true; }
+    try { return localStorage.getItem(STORAGE_KEY) === "on"; }   // 기본은 끔 — 켠 사람만 소리
+    catch (_) { return false; }
   }
 
   function updateToggle() {

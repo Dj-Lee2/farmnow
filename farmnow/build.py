@@ -399,7 +399,7 @@ def stats_pages(env, ctx: dict) -> dict:
                 names = [_plain(t) for t in re.findall(r'<div class="t">(.*?)<a ', whole[a:b], re.S)]
                 tiles.append(f'<a class="sg-dt" id="{sid}" href="./{split[sid]}"><b>{escape(label[sid])}</b>'
                              f'<small>카드 {len(cs)}장 · {escape(", ".join(names[:3]))}{" 외" if len(names) > 3 else ""}</small></a>')
-            html = (whole[:segs[0][1]] + '<p class="sg-dir-h">소제목을 고르면 그 카드를 모두 볼 수 있습니다. 지표 이름을 알면 위 <b>통계 찾기</b>가 빠릅니다.</p>'
+            html = (whole[:segs[0][1]] + '<p class="sg-dir-h">소제목을 고르면 그 카드를 모두 볼 수 있습니다. 지표 이름을 알면 <a href="./stats">통계 찾기</a>가 빠릅니다.</p>'
                     '<div class="sg-dir">' + "".join(tiles) + "</div>" + whole[segs[-1][2]:])
         for sid, a, b, cs in reversed(segs if not dir_mode else []):   # 묶음 쪽: 큰 소제목은 앞 카드만 + 전체 보기
             if sid in split:

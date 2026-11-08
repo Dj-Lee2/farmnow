@@ -30,4 +30,9 @@ def clean_urls(text: str) -> str:
         if m.group(2) != "index":
             return m.group(1) + m.group(2)
         return m.group(1) if m.group(1).endswith("./") else m.group(1) + "./"
-    return _HTML_REF.sub(sub, text).replace("+'.html", "+'")
+    text = _HTML_REF.sub(sub, text).replace("+'.html", "+'")
+    # 지수 단위(2020=100)는 숫자에 붙으면 '121.52020=100'처럼 읽힌다 — 괄호로 떼어 쓴다
+    return _IDX_UNIT.sub(lambda m: f"{m.group(1)}({m.group(2)}){m.group(3)}", text)
+
+
+_IDX_UNIT = re.compile(r'(<small>|<span class="u"> ?)(\d{4}(?:~\d{2,4})?=100)(</small>|</span>)')

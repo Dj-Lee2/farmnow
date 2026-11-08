@@ -139,3 +139,7 @@ main:focus{outline:none}
 .px-meta a{padding:2px 0}
 #tl .px-h{line-height:1.5}
 @media(max-width:360px){.hd .upd{display:none}}   /* 좁은 폰: 머리 한 줄 유지(갱신 시각은 아래 꼬리말에도 있다) */
+/* 점검 남은 것: 12px 미만 작은 글자 1곳, 24px에 못 미치던 링크 */
+.kp4 .s small{font-size:0.75rem}
+.px-meta a{min-height:24px;display:inline-flex;align-items:center}
+.t5 a{display:block;padding:1px 0;min-height:24px}

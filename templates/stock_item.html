@@ -35,7 +35,7 @@
      {% for k, v in r.info.items() if k not in ('업종',) %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}
     {% endif %}
     </dl>
-    {% if r.pos52 is not none %}<div class="r52 big" title="52주 범위"><i style="left:{{ [[r.pos52, 0]|max, 100]|min }}%"></i></div><div class="r52l"><span>52주 최저</span><span>52주 최고</span></div>{% endif %}
+    {% if r.pos52 is not none %}<div class="r52 big" title="52주 범위"><i style="left:{{ [[r.pos52, 0]|max, 100]|min }}%"></i></div><div class="r52l"><span>{{ '{:,.2f}'.format(r.lo52) if r.lo52 else '' }}</span><span>52주 범위</span><span>{{ '{:,.2f}'.format(r.hi52) if r.hi52 else '' }}</span></div>{% endif %}
    </div>
    {% if peers %}<div class="card"><div class="sec"><h3>같은 분류</h3><small>{{ r.group }}</small></div>
     {% for o in peers[:8] %}<a class="row" href="./{{ o.slug }}"><span>{{ o.name }}</span><b><span class="pp">{{ o|px }}</span> <span class="{{ 'up' if o.pct>0 else 'down' if o.pct<0 else '' }}">{{ o.pct|pct }}</span></b></a>{% endfor %}
@@ -83,7 +83,7 @@ var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')
   [0,Math.round((n-1)/3),Math.round((n-1)*2/3),n-1].forEach(function(k,j){s+='<text x="'+x(k)+'" y="'+(Hh-8)+'" font-size="12" fill="#646b75" text-anchor="'+(j==0?'start':j==3?'end':'middle')+'">'+d[k].slice(2).replace(/-/g,'.')+'</text>'});
   // 기간 최고·최저(캔들은 고가·저가 기준). 양 끝이면 글자가 축 밖으로 나가지 않게 정렬을 바꾼다
   var imx=top.indexOf(Math.max.apply(null,top)),imn=bot.indexOf(Math.min.apply(null,bot)),an=function(k){return x(k)<L+40?'start':x(k)>W-R-40?'end':'middle'};
-  s+='<text x="'+x(imx)+'" y="'+(y(top[imx])-6)+'" font-size="12" fill="'+UP+'" text-anchor="'+an(imx)+'">최고 '+f(top[imx])+'</text><text x="'+x(imn)+'" y="'+(y(bot[imn])+14)+'" font-size="12" fill="'+DN+'" text-anchor="'+an(imn)+'">최저 '+f(bot[imn])+'</text>';
+  s+='<text x="'+x(imx)+'" y="'+(y(top[imx])-6)+'" font-size="12" fill="'+UP+'" text-anchor="'+an(imx)+'">기간 최고 '+f(top[imx])+(cnd?'':' (종가)')+'</text><text x="'+x(imn)+'" y="'+(y(bot[imn])+14)+'" font-size="12" fill="'+DN+'" text-anchor="'+an(imn)+'">기간 최저 '+f(bot[imn])+(cnd?'':' (종가)')+'</text>';   // 아래 52주 최고·최저(장중 값)와 헷갈리지 않게
   s+='<g id="xh" opacity="0"><line id="xl" y1="'+T+'" y2="'+(Hh-B)+'" stroke="#1d1d1f" stroke-dasharray="3 3" stroke-width="1"/>'+(cnd?'':'<circle id="xd" r="4" fill="'+col+'" stroke="#fff" stroke-width="2"/>')+'</g>';
   pc.setAttribute('viewBox','0 0 '+W+' '+Hh);pc.setAttribute('aria-label',AL+(cnd?' (캔들: 시가·고가·저가·종가)':''));pc.innerHTML=s;
   var ch=(c[n-1]-c[0])/c[0]*100;$('ret').innerHTML=['1개월','3개월','6개월','1년'][[30,91,182,366].indexOf(days)]+' <b class="'+(ch>0?'up':ch<0?'down':'')+'">'+(ch>0?'+':'')+ch.toFixed(2)+'%</b>';
@@ -101,7 +101,9 @@ var H={{ r.hist|map(attribute='d')|list|tojson }},C={{ r.hist|map(attribute='c')
  if(kb.length){try{if(localStorage.getItem('chart')==='candle')setKind('candle')}catch(e){}
   kb.forEach(function(bt){bt.onclick=function(){setKind(bt.dataset.k);try{localStorage.setItem('chart',mode)}catch(e){}out();draw()}})}
  pc.addEventListener('pointermove',hover);pc.addEventListener('pointerdown',hover);pc.addEventListener('pointerleave',out);
- document.querySelectorAll('#per button').forEach(function(bt){bt.onclick=function(){days=+bt.dataset.d;document.querySelectorAll('#per button').forEach(function(o){o.classList.toggle('on',o===bt)});out();draw()}});
- if(C.length<70){document.querySelector('#per button[data-d="366"]').click()}else draw();
+ var RK={30:'1m',91:'3m',182:'6m',366:'1y'};   // 고른 기간을 주소(?r=)에 남겨 새로고침·공유해도 그대로
+ document.querySelectorAll('#per button').forEach(function(bt){bt.onclick=function(){days=+bt.dataset.d;document.querySelectorAll('#per button').forEach(function(o){o.classList.toggle('on',o===bt)});out();draw();if(history.replaceState)history.replaceState(null,'',location.pathname.replace(/\.html$/,'')+(days===91?'':'?r='+RK[days])+location.hash)}});
+ var r0=(location.search.match(/[?&]r=(1m|3m|6m|1y)/)||[])[1],b0=r0&&document.querySelector('#per button[data-d="'+Object.keys(RK).find(function(k){return RK[k]===r0})+'"]');
+ if(b0)b0.click();else if(C.length<70){document.querySelector('#per button[data-d="366"]').click()}else draw();
  var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(draw,150)})})();
 {% endblock %}

@@ -5,7 +5,7 @@
 <div class="wrap page">
  <div class="two">
   <article class="art">
-   <div class="src"><a href="news.html">소식</a> › {{ it.source_name }}</div>
+   <div class="src"><a href="news.html">소식</a> › <a href="news.html?src={{ it.source_id }}">{{ it.source_name }}</a></div>
    <h1><span class="lb {{ it.severity }}">{{ it.label }}</span>{{ it.headline }}</h1>
    <div class="src">{{ it.org }} · <time datetime="{{ it.event_time.isoformat() }}">{{ it.event_time.strftime('%Y.%m.%d %H:%M') if it.time_precision=='minute' else it.event_time.strftime('%Y.%m.%d') ~ (' 조사' if it.time_source == 'survey' else ' 등록') }}</time>{% if it.extra.no %} · {{ it.extra.no }}{% endif %}{% if it.expires_at %} · {{ it.expires_at.strftime('%m.%d') }}까지{% endif %}{% if it.license != 'unknown' %} · <span class="badge">{{ license_label.get(it.license, it.license) }}</span>{% endif %}</div>
    {% if it.body %}<p class="lead">{{ it.body }}</p>{% endif %}

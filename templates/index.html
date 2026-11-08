@@ -22,7 +22,7 @@
   {% for r in tickers.fixed[:2] %}{% set m = ((r.price - r.month_ago) / r.month_ago * 100) if r.month_ago else none %}
   {{ kcard(r.disp ~ ' ' ~ r.cls, 'market.html?pick=' ~ r.key, r.price|won, '원/' ~ r.unit, r.pct, '1개월 ' ~ m|pct ~ ' · 1년 ' ~ (((r.price - r.year_ago) / r.year_ago * 100) if r.year_ago else none)|pct, r.day[5:]|replace('-', '.') ~ ' 조사', [r.year_ago, r.month_ago, r.prev, r.price], 'k' ~ loop.index, ['1년 전', '1개월 전', '전일', '당일'], '원') }}
   {% endfor %}
-  {% if corn %}{% set c0 = corn.spark[0] %}{{ kcard('국제 옥수수 선물', 'stocks.html#cm', corn|px, corn.unit, corn.pct, '10일 ' ~ (((corn.price - c0) / c0 * 100) if c0 else none)|pct, corn.day[5:]|replace('-', '.') ~ ' 종가', corn.spark, 'kc', corn.sdays, '') }}{% endif %}
+  {% if corn %}{% set c0 = corn.spark[0] %}{{ kcard('국제 옥수수 선물', corn.slug or 'stocks.html#cm', corn|px, corn.unit, corn.pct, '10일 ' ~ (((corn.price - c0) / c0 * 100) if c0 else none)|pct, corn.day[5:]|replace('-', '.') ~ ' 종가', corn.spark, 'kc', corn.sdays, '') }}{% endif %}
   {% if fx %}{% set f0 = fx.spark[0] %}{{ kcard('원/달러 환율', 'stocks.html', '{:,.1f}'.format(fx.price), '원', fx.pct, '10일 ' ~ (((fx.price - f0) / f0 * 100) if f0 else none)|pct, fx.day[5:]|replace('-', '.') ~ ' 고시', fx.spark, 'kf', fx.sdays, '원') }}{% endif %}
  </div>
 

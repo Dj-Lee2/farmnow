@@ -15,11 +15,11 @@ button,input,select,textarea{font-family:inherit}
 .kp4 .v,.price,.sum-n,td.n,.mks b,.sd-px b,.sg-k b,.big,.strip,.mvt td,table td,.dist .n,.px-w em{font-variant-numeric:tabular-nums}
 
 /* 굵기 위계: 쪽 제목 > 카드 제목 > 본문. 큰 숫자는 굵게, 단위는 흐리게 */
-.page-hd h1,.sd-hd h1{font-weight:700;font-size:1.75rem;letter-spacing:-0.03em;color:var(--ink)}
+.page-hd h1,.sd-hd h1{font-weight:600;font-size:1.75rem;letter-spacing:-0.03em;color:var(--ink)}
 .page-hd small{font-size:0.8125rem}
 .sec :is(h2,h3),.stc-hd :is(h3,h4),.kp4 .t,.sg-tt b,html body .px-brief h2,.sq-h,.sq-today h2{font-weight:600;letter-spacing:-0.02em}
 .kp4 .t{font-size:1rem}
-.kp4 .v,.mks b,.sd-px b,.c-chart .price,.c-chart .price b{font-weight:700;letter-spacing:-0.03em}
+.kp4 .v,.mks b,.sd-px b,.c-chart .price,.c-chart .price b{font-weight:600;letter-spacing:-0.03em}
 .kp4 .v small,.mks b small{font-weight:400;letter-spacing:0}
 .item .h,.rel .h,.t5 a,.org-l .h,.wcard .h,table.stk .sn,.px-h,.mvt .nm b,.mv .nm b{font-weight:600}
 b,td.n{font-weight:600}
@@ -31,8 +31,8 @@ b,td.n{font-weight:600}
 /* 머리 띠: 반투명 + 흐림, 아래 한 줄 */
 .hd{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgb(17 20 24 / .06)}
 .hd-in{height:64px}
-.logo{font-weight:700;letter-spacing:-0.02em;font-size:1.125rem}
-.hd nav a{font-weight:500;color:#4b525c;font-size:0.9375rem;padding:7px 12px}
+.logo{font-weight:600;letter-spacing:-0.02em;font-size:1.125rem}
+.hd nav a{font-weight:500;color:#4b525c;font-size:0.9375rem;padding:8px 12px}
 .hd nav a.on{color:var(--ink);font-weight:600;background:var(--card);box-shadow:var(--ring)}
 .hsearch{height:40px;border-radius:12px;box-shadow:var(--ring)}
 .ico,.btn-line{height:40px;min-width:40px;border-radius:12px;box-shadow:var(--ring)}
@@ -41,12 +41,12 @@ b,td.n{font-weight:600}
 
 /* 탭·알약: 밑줄 탭 하나, 알약 하나 */
 .tabs{gap:20px;border-bottom:1px solid var(--line)}
-.tabs button{font-weight:500;color:var(--mute);padding:10px 0 9px;font-size:0.9375rem}
+.tabs button{font-weight:500;color:var(--mute);padding:10px 0 8px;font-size:0.9375rem}
 .tabs button.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
 .tabs button i{color:var(--mute);font-weight:500}
 .ptab button,.rg-cat button,.sg-all{height:32px;padding:0 12px;border:0;border-radius:999px;background:var(--card);box-shadow:var(--ring);color:#4b525c;font-weight:500;font-size:0.8125rem}
 .ptab button.on,.rg-cat button.on{background:var(--ink);color:#fff;box-shadow:none}
-.sec .go{background:var(--soft);color:var(--txt);font-weight:500;border-radius:999px;padding:5px 12px}
+.sec .go{background:var(--soft);color:var(--txt);font-weight:500;border-radius:999px;padding:4px 12px}
 
 /* 표 머리 */
 table th{font-weight:500;color:var(--mute);font-size:0.8125rem}
@@ -59,7 +59,7 @@ table th{font-weight:500;color:var(--mute);font-size:0.8125rem}
  .hd-in{height:auto;padding-top:8px;padding-bottom:6px}
  .hd nav{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);padding-right:24px}
  .hd nav::-webkit-scrollbar{display:none}
- .hd nav a{padding:7px 11px;font-size:0.9375rem}
+ .hd nav a{padding:8px 12px;font-size:0.9375rem}
  .page-hd h1{font-size:1.5rem}
  .sec{flex-wrap:wrap;row-gap:2px}.sec small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
  .kp4 .v{font-size:1.5rem}.kp4 .v em{display:block;margin:2px 0 0;font-size:0.9375rem}
@@ -69,8 +69,8 @@ table th{font-weight:500;color:var(--mute);font-size:0.8125rem}
 
 /* 2차: 쪽 안 <style>(시세·홈 부품)이 머리의 규칙을 이기므로 html을 붙여 한 단계 높인다 */
 html .hv-ph h2{font-size:1.25rem;font-weight:600;letter-spacing:-0.02em}html .hv-ph h3{font-weight:600;letter-spacing:-0.02em}
-html .hv-ix b{font-weight:700;letter-spacing:-0.03em}html .hv-ix small{color:var(--mute)}
-html .sq-today h2{font-weight:600;letter-spacing:-0.02em}html .sq-today .big{font-weight:700;letter-spacing:-0.03em}
+html .hv-ix b{font-weight:600;letter-spacing:-0.03em}html .hv-ix small{color:var(--mute)}
+html .sq-today h2{font-weight:600;letter-spacing:-0.02em}html .sq-today .big{font-weight:600;letter-spacing:-0.03em}
 html .sq-today .k{color:var(--mute);font-weight:500}
 html .sq-q{font-weight:600}html .sq-c p{color:var(--txt)}
 html .sq-wf i.on{background:var(--acc)}
@@ -92,7 +92,7 @@ html .day{top:var(--hd-h,64px)}html .px-bar{top:var(--hd-h,64px)}
 }
 
 /* 5차: 기사 상세 읽기 폭·단추, 통계 왼쪽 목차 지금 위치를 머리 메뉴와 같은 모양 */
-.art h1{font-size:1.625rem;font-weight:700;letter-spacing:-0.03em;line-height:1.4}
+.art h1{font-size:1.625rem;font-weight:600;letter-spacing:-0.03em;line-height:1.4}
 .art .lead{max-width:68ch}
 .art .btn-blue{display:inline-flex;align-items:center;width:auto;height:44px;padding:0 20px}
 .art .btn-line{height:44px;padding:0 18px}
@@ -160,7 +160,7 @@ html.js .sgp-main .sg-g:not(.all)>.sg-c:nth-child(n+7){display:none}
 [hidden]{display:none!important}   /* display를 준 규칙이 hidden 속성을 이기지 않게(빈 상자가 보이던 원인) */
 .pnote{margin:4px 0 8px;padding:8px 12px;border-radius:10px;background:var(--soft);color:var(--txt);font-size:.8125rem}
 /* UX 6회차 */
-.mk-t b.nm{font-size:12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 3px}
+.mk-t b.nm{font-size:12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 4px}
 #mkSide{scroll-margin-top:calc(var(--hd-h,64px) + 8px)}
 .pstat a{display:inline-block;margin-right:2px}
 .filtering #brief{display:none}
@@ -185,3 +185,14 @@ h1 .sg-of{font-size:.6em;font-weight:500;color:var(--muted,#5f6670);margin-left:
 .sg-df{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 0 12px;max-width:420px}.sg-df span{font-size:.929rem;color:var(--muted,#5f6670);white-space:nowrap}
 .sg-df input{flex:1 1 200px;min-width:0;width:100%;min-height:44px;padding:0 12px;border:1px solid var(--line,#d9dde3);border-radius:10px;font:inherit;font-size:16px;background:#fff}
 .sg-dfn{margin:-4px 0 10px;font-size:.929rem;color:var(--muted,#5f6670)}
+
+/* unslop 다듬기(2026-11-12): 굵기 3단계·고른 숫자·장식 줄이기 */
+b,strong,th{font-weight:600}
+body{font-variant-numeric:tabular-nums}
+.r52{background:var(--soft)!important}
+.r52 i{background:var(--ink)}
+.hbar i{background:var(--c)!important;animation:none!important}
+.stamp{display:inline-flex;align-items:center;height:20px;padding:0 6px;border:1px solid var(--line);border-radius:4px;font-size:.857rem;line-height:1;color:var(--mute);white-space:nowrap}
+.px-src{gap:8px}
+.sec small a,a.go{color:var(--txt)}.sec small a:hover,a.go:hover{color:var(--acc)}
+.kp4 .s{align-items:center}

@@ -118,11 +118,11 @@ def build(tickers: dict, items: list, stocks: dict, warn: dict | None) -> dict:
     active = (warn or {}).get("active") or []
     comm = (stocks.get("sections") or {}).get("commodities") or []
     fx = stocks.get("usdkrw")
-    idx = [{"name": f"{r['e']} {r['disp']}", "val": f"{r['price']:,.0f}원", "pct": r["pct"], "spark": r["four"], "href": f"market?pick={r['key']}"} for r in fixed[:3]]
+    idx = [{"name": r["disp"], "val": f"{r['price']:,.0f}원", "pct": r["pct"], "spark": r["four"], "href": f"market?pick={r['key']}"} for r in fixed[:3]]
     if comm:
-        idx.append({"name": "🌽 국제 옥수수", "val": f"{comm[0]['price']:,.2f}", "pct": comm[0].get("pct"), "spark": comm[0].get("spark") or [], "href": "stocks"})
+        idx.append({"name": "국제 옥수수", "val": f"{comm[0]['price']:,.2f}", "pct": comm[0].get("pct"), "spark": comm[0].get("spark") or [], "href": "stocks"})
     if fx:
-        idx.append({"name": "💱 원/달러", "val": f"{fx['price']:,.1f}원", "pct": fx.get("pct"), "spark": fx.get("spark") or [], "href": "stocks"})
+        idx.append({"name": "원/달러", "val": f"{fx['price']:,.1f}원", "pct": fx.get("pct"), "spark": fx.get("spark") or [], "href": "stocks"})
     watch = [r for r in (next((x for x in rows if x["base"] == b), None) for b in WATCH) if r]
     ranks = [("up", "많이 오른", sorted([r for r in rows if r["pct"] > 0], key=lambda r: -r["pct"]), "pct", "전일 대비"),
              ("dn", "많이 내린", sorted([r for r in rows if r["pct"] < 0], key=lambda r: r["pct"]), "pct", "전일 대비"),

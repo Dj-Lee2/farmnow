@@ -25,7 +25,7 @@
  <div class="sq-g">{% for q, a1, a2, a3, viz, g, src in Q %}<a class="sq-c" href="./stats-{{ g }}.html"><b class="sq-q">{{ q }}</b><p>{{ a1 }}<b>{{ a2 }}</b>{{ a3 }}</p><div class="sq-viz">{{ viz }}</div><small>{{ src }} →</small></a>{% endfor %}</div>{% endif %}
  <h2 class="sq-h">주제별로 보기</h2>
  {% if sg_cards %}{% macro chg(k) %}{% if k and k.vals|length > 1 and k.vals[-2] %}{% if k.unit in ('%', '2020=100') %}{% set d = k.vals[-1] - k.vals[-2] %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ '%+.1f'|format(d) }}{{ 'p' if k.unit == '%' else '' }}</em>{% else %}{% set d = (k.vals[-1] - k.vals[-2]) / (k.vals[-2]|abs) * 100 %}<em class="{{ 'up' if d > 0 else 'down' if d < 0 else '' }}">{{ '%+.1f'|format(d) }}%</em>{% endif %}{% endif %}{% endmacro %}
- {% if stats_layout == 'a' %}<div class="tc-a">{% for g, t, ic, k, col, inf in sg_cards %}<a class="tc" href="./stats-{{ g }}.html"><div class="th"><span class="ic" style="background:{{ col }}">{{ ic }}</span><b>{{ t }}</b></div>
+ {% if stats_layout == 'a' %}<div class="tc-a">{% for g, t, ic, k, col, inf in sg_cards %}<a class="tc" href="./stats-{{ g }}.html"><div class="th"><b>{{ t }}</b></div>
    {% if k %}<div class="kv"><small class="lb2">{{ k.title }} · {{ k.years[-1]|prd }}</small><div class="v">{{ num(k.vals[-1], k.unit) }} {{ chg(k) }}</div>{{ k.vals|line('tc' ~ loop.index, '#1c7a45', k.years|map('prd')|list, '') }}</div>{% endif %}
    <div class="chips">{% for sname in inf.subs[:4] %}<span>{{ sname }}</span>{% endfor %}</div><div class="ft">지표 {{ '{:,}'.format(inf.n) }}개 · 소제목 {{ inf.subs|length }}개 <i>→</i></div></a>{% endfor %}</div>
  {% endif %}

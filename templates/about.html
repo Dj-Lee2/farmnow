@@ -6,9 +6,10 @@
  <div class="two">
   <section>
    <div class="sec"><h2>자료 출처</h2></div>
-   <div class="scroll-x"><table style="min-width:620px"><thead><tr><th>출처</th><th>기관</th><th>이용조건</th><th class="n">수집</th><th class="n">게시</th><th style="padding-left:18px">마지막 성공</th></tr></thead><tbody>
+   <div class="scroll-x"><table class="srct" style="min-width:620px"><thead><tr><th>출처</th><th>기관</th><th>이용조건</th><th class="n">수집</th><th class="n">게시</th><th style="padding-left:18px">마지막 성공</th></tr></thead><tbody>
    {% for k,s in sources_cfg.items() if k in shown_ids %}{% set st = status.get(k) %}<tr><td><a href="https://{{ (s.home_url or s.url)|hp }}" target="_blank" rel="noopener">{{ s.name }} ↗</a></td><td>{{ s.org }}</td><td>{% if s.license != 'unknown' %}<span class="badge">{{ license_label.get(s.license, s.license) }}</span>{% else %}게시물별{% endif %}</td>
-    <td class="n">{% if st and st.ok %}{{ st.count }}{% elif st %}<span class="bad">{{ st.error }}</span>{% else %}–{% endif %}</td><td class="n">{{ st.published if st else '–' }}</td><td style="white-space:nowrap;padding-left:18px"><small>{{ st.last_ok|fdt if st else '–' }}</small></td></tr>{% endfor %}
+    <td class="n">{% if st and st.ok %}{{ st.count }}{% elif st %}<span class="bad">실패</span>{% else %}–{% endif %}</td><td class="n">{{ st.published if st else '–' }}</td><td style="white-space:nowrap;padding-left:18px"><small>{{ st.last_ok|fdt if st else '–' }}</small></td></tr>
+    {% if st and not st.ok %}{% set e = (st.error or '')|string %}{% set ek = e.split(':')[0] %}<tr class="src-err"><td colspan="6"><small><span class="bad">{{ s.name }} 수집 실패</span> · {{ {'ConnectTimeout': '상대 서버가 응답하지 않습니다(접속 시간 초과)', 'ReadTimeout': '상대 서버 응답이 너무 늦습니다', 'ConnectionError': '상대 서버에 연결되지 않습니다', 'HTTPError': '상대 서버가 오류를 돌려줬습니다'}.get(ek, e[:120]) }}. 마지막 성공 자료를 그대로 보여 줍니다</small></td></tr>{% endif %}{% endfor %}
    </tbody></table></div>
    <div class="rule"><h3>계산 방법</h3><ul>
     <li>전일 대비(%) = (당일 − 전일) ÷ 전일 × 100, KAMIS 조사값 기준. 급변 = 절대값 {{ site.surge_threshold_pct }}% 이상, 같은 품목은 변동이 가장 큰 규격 1건</li>

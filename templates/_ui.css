@@ -196,3 +196,5 @@ body{font-variant-numeric:tabular-nums}
 .px-src{gap:8px}
 .sec small a,a.go{color:var(--txt)}.sec small a:hover,a.go:hover{color:var(--acc)}
 .kp4 .s{align-items:center}
+.src-err td{padding-top:0;white-space:normal;color:var(--mute)}.src-err .bad{font-weight:500}
+table.srct tr:not(.src-err) td:nth-child(-n+2),table.srct th{white-space:nowrap}

@@ -5,7 +5,9 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import sys
 import time
+from urllib.parse import unquote
 from pathlib import Path
 from datetime import datetime
 
@@ -43,8 +45,62 @@ def relay_fresh(src: dict, name: str) -> Path | None:
     return None
 
 
+_SE = {"소매": "소매", "중도매": "도매"}   # 공공데이터포털 '중도매인 판매가격' = KAMIS 화면의 도매
+
+
+def _datago_key(src: dict) -> str | None:
+    key = os.environ.get(src.get("datago_key", "DATA_GO_KR_KEY"))
+    if not key:
+        return None
+    return unquote(key) if "%" in key else key  # 포털의 Encoding 키를 넣은 경우 원래 값으로
+
+
+def from_datago(items: list[dict]) -> dict:
+    """공공데이터포털 aT '최근일자 도·소매가격정보'(B552845/recent) 응답을 KAMIS dailySalesList 모양으로 바꾼다.
+    가장 최근 조사일 행만, 같은 품목·품종·구분·단위는 상품 등급을 쓴다(KAMIS 일별 화면과 같은 기준)."""
+    day = max((i.get("exmn_ymd") or "" for i in items), default="")
+    best: dict[tuple, dict] = {}
+    for i in items:
+        se = _SE.get(i.get("se_nm") or "")
+        if not se or i.get("exmn_ymd") != day:
+            continue
+        sz = (i.get("unit_sz") or "").strip()
+        sz = sz[:-2] if sz.endswith(".0") else sz
+        name = f"{i.get('item_nm', '')}/{i.get('vrty_nm', '')}"
+        k = (name, se, f"{sz}{i.get('unit') or ''}")
+        if k in best and best[k].get("grd_nm") == "상품":
+            continue
+        best[k] = dict(i, _se=se)
+    price = []
+    for (name, se, unit), i in best.items():
+        price.append({
+            "product_cls_name": se, "category_name": i.get("ctgry_nm"), "productno": f"{i.get('item_cd')}-{i.get('vrty_cd')}",
+            "lastest_day": f"{day[:4]}-{day[4:6]}-{day[6:]}", "productName": name, "item_name": name, "unit": unit,
+            "dpr1": i.get("exmn_dd_prc"), "dpr2": i.get("dd1_bfr_prc"), "dpr3": i.get("mm1_bfr_prc"), "dpr4": i.get("yy1_bfr_prc"),
+        })
+    return {"error_code": "000" if price else "empty", "condition": [[day]], "price": price, "via": "data.go.kr"}
+
+
+def fetch_datago(src: dict) -> dict | None:
+    """KAMIS가 해외·중계 IP를 막아도(2026-11) 공공데이터포털은 열린다 — 같은 aT 자료를 여기서 먼저 받는다."""
+    url, key = src.get("datago_url"), _datago_key(src)
+    if not url or not key:
+        return None
+    r = requests.get(url, params={"serviceKey": key, "pageNo": 1, "numOfRows": 1000, "returnType": "json"}, timeout=40)
+    r.raise_for_status()
+    body = (r.json().get("response") or {}).get("body") or {}
+    items = (body.get("items") or {}).get("item") or []
+    return from_datago(items if isinstance(items, list) else [items])
+
+
 def fetch_json(src: dict) -> dict:
-    """중계 파일이 새것이면 그것을, 아니면 KAMIS를 직접 부른다."""
+    """공공데이터포털 → 국내 중계 파일 → KAMIS 직접 순서로 받는다."""
+    try:
+        j = fetch_datago(src)
+        if j and j.get("error_code") == "000":
+            return j
+    except (requests.RequestException, ValueError) as e:
+        print(f"[warn] {src['id']} data.go.kr: {type(e).__name__}: {e}"[:160], file=sys.stderr)
     p = relay_fresh(src, "kamis_daily.json")
     if p:
         return json.loads(p.read_text(encoding="utf-8"))

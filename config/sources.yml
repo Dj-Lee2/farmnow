@@ -76,6 +76,7 @@ sources:
     label: 정기
     env_key: KAMIS_KEY        # 미설정 시 테스트키(111/222) 사용
     env_id: KAMIS_ID
+    datago_url: https://apis.data.go.kr/B552845/recent/price   # 공공데이터포털 aT 최근일자 도·소매가격(먼저 씀, 키는 DATA_GO_KR_KEY)
     relay_dir: data/relay     # KAMIS가 해외 IP를 막으면 국내 기기가 deploy/kamis_relay.py로 받아 여기에 넣는다
     relay_max_hours: 3
     exclude_categories: [수산물]

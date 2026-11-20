@@ -10,7 +10,7 @@ from pathlib import Path
 
 import yaml
 
-from .collectors import kamis, kamis_season, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
+from .collectors import kamis, kamis_season, price_hist, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
 from .model import NewsItem, gate
 from .rules import tag
 from .util import now_kst
@@ -77,8 +77,19 @@ def run(build: bool = True) -> int:
                 got = mafra_rss.collect(src, store, keep_days)
             elif src["adapter"] == "kamis":
                 got, tickers = kamis.collect(src, cfg["site"]["surge_threshold_pct"])
-                if src.get("season_items"):
-                    try:  # 평년 범위는 덧붙이는 정보 — 실패해도 시세는 그대로 낸다
+                try:  # 일별 기록·평년 범위는 덧붙이는 정보 — 실패해도 시세는 그대로 낸다
+                    hist = price_hist.update(tickers["all"], DATA / "price_hist.json", kamis._datago_key(src), now,
+                                             max_calls=int(src.get("hist_calls", 60)),
+                                             priority=[r["key"] for r in tickers.get("fixed") or []])
+                    tickers["hist_keys"] = price_hist.attach(tickers, hist, now)
+                    sp = DATA / "season.json"   # 기록이 아직 짧은 품목은 예전 KAMIS 월별 평년(11-16까지)을 그대로
+                    if sp.exists():
+                        kamis_season.attach({"all": [r for r in tickers["all"] if not r.get("season")]},
+                                            json.loads(sp.read_text(encoding="utf-8")))
+                except Exception as e:
+                    print(f"[warn] price_hist: {type(e).__name__}: {e}"[:160], file=sys.stderr)
+                if src.get("season_items") and src.get("season_kamis"):
+                    try:  # KAMIS 월별(막혀 있으면 끔 — 막힌 채로 부르면 회차마다 90초를 기다린다)
                         kamis_season.attach(tickers, kamis_season.refresh(src["season_items"], DATA, src, now))
                     except Exception as e:
                         print(f"[warn] kamis_season: {type(e).__name__}: {e}"[:160], file=sys.stderr)

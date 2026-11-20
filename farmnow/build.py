@@ -674,4 +674,14 @@ def build_site(cfg: dict, records: list[dict], status: dict, now: datetime, warn
         p = DATA / name
         if p.exists():
             shutil.copy(p, SITE / "data" / name)
+    hp, hk = DATA / "price_hist.json", set(tickers.get("hist_keys") or [])   # 가격 흐름: 품목별 주 평균(최근 3년)
+    if hp.exists() and hk:
+        from .collectors.price_hist import weekly
+        series = json.loads(hp.read_text(encoding="utf-8")).get("series") or {}
+        hd = SITE / "data" / "hist"
+        hd.mkdir(parents=True, exist_ok=True)
+        since = (now - timedelta(days=3 * 365 + 7)).strftime("%Y%m%d")
+        for k in hk:
+            if k in series and re.fullmatch(r"[0-9a-f]{8}", k):
+                (hd / f"{k}.json").write_text(json.dumps({"w": weekly(series[k]["d"], since)}, separators=(",", ":")), encoding="utf-8")
     print(f"built {len(NAV)} pages + {len(items)} item pages")

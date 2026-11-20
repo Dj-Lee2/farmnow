@@ -77,6 +77,9 @@ def from_datago(items: list[dict]) -> dict:
             "product_cls_name": se, "category_name": i.get("ctgry_nm"), "productno": f"{i.get('item_cd')}-{i.get('vrty_cd')}",
             "lastest_day": f"{day[:4]}-{day[4:6]}-{day[6:]}", "productName": name, "item_name": name, "unit": unit,
             "dpr1": i.get("exmn_dd_prc"), "dpr2": i.get("dd1_bfr_prc"), "dpr3": i.get("mm1_bfr_prc"), "dpr4": i.get("yy1_bfr_prc"),
+            # 일별 기록(price_hist)을 받을 때 쓰는 조회 코드
+            "q": {"ctgry": i.get("ctgry_cd"), "item": i.get("item_cd"), "vrty": i.get("vrty_cd"), "grd": i.get("grd_cd"),
+                  "se": i.get("se_cd"), "unit": unit},
         })
     return {"error_code": "000" if price else "empty", "condition": [[day]], "price": price, "via": "data.go.kr"}
 
@@ -131,6 +134,7 @@ def fetch_rows(src: dict) -> tuple[list[dict], str]:
             "price": cur, "prev": prev, "month_ago": _num(p.get("dpr3")), "year_ago": _num(p.get("dpr4")),
             "pct": round((cur - prev) / prev * 100, 1) + 0.0,   # +0.0: -0.0 방지
             "day": p.get("lastest_day"),
+            **({"q": p["q"]} if p.get("q") else {}),
         })
     day = (j.get("condition") or [[""]])[0][0]
     if not rows or not day:

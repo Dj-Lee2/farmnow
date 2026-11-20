@@ -582,7 +582,7 @@ a.sg-rl{color:inherit}
 <script>
 var TOP5={{ top5_js|default([])|tojson }};
 var ROWS={% block rows %}[]{% endblock %};
-var SI={{ stat_si|tojson }},CPI={{ stat_cpi|tojson }};   // 시세 품목 → 품목별 통계(stats-i-*)·소비자물가 지수(stats-x)
+var SI={{ stat_si|tojson }},CPI={{ stat_cpi|tojson }},HK={};({{ (tickers.hist_keys or [])|tojson }}).forEach(function(k){HK[k]=1});   // 시세 품목 → 품목별 통계(stats-i-*)·소비자물가 지수(stats-x)
 var DEF={{ tickers.default_idx or 0 }};
 var FIX={{ (tickers.fixed or [])|map(attribute='key')|list|tojson }};
 var $=function(id){return document.getElementById(id)};
@@ -686,9 +686,31 @@ function draw(i,still){if(i!==undefined)cur=+i;var r=ROWS[cur],svg=$('svg');if(!
  var fq=function(v,w){return v==null?'<span class="na" title="KAMIS가 이 품목의 '+w+' 조사값을 주지 않았습니다">자료 없음</span>':'<b class="'+cls(v)+'">'+fp(v)+'</b>'};   // – 대신 이유를 쓴다
  if($('pdelta'))$('pdelta').innerHTML='전일 대비 '+fq(r.pct,'전일')+' · 1개월 대비 '+fq(m,'1개월 전')+' · 1년 대비 '+fq(yv,'1년 전');
  var ps=$('pstat'),b0=(r.disp||'').split(' ')[0],si=SI[r.base]||SI[b0],cp=CPI[r.base]||CPI[b0];   // KAMIS는 오늘·전일·1개월·1년 전 값만 → 긴 가격 추이는 소비자물가 지수로
- if(ps){var PL=[];if(cp)PL.push('<a href="./stats-x?k='+cp+'">'+(b0||r.base)+' 소비자물가지수 월별 추이(가격 아님) →</a>');if(si)PL.push('<a href="./stats-i-'+si[0]+'">'+si[1]+' 생산·소비 통계 →</a>');ps.innerHTML=PL.join('<span aria-hidden="true"> · </span>');ps.hidden=!PL.length}
- drawSeason(r);
+ if(ps){var PL=[];if(HK[r.key]&&!$('phist'))PL.push('<a href="./market?pick='+r.key+'#phist">'+(b0||r.base)+' 3년 가격 흐름 →</a>');if(cp&&!HK[r.key])PL.push('<a href="./stats-x?k='+cp+'">'+(b0||r.base)+' 소비자물가지수 월별 추이(가격 아님) →</a>');if(si)PL.push('<a href="./stats-i-'+si[0]+'">'+si[1]+' 생산·소비 통계 →</a>');ps.innerHTML=PL.join('<span aria-hidden="true"> · </span>');ps.hidden=!PL.length}
+ drawSeason(r);drawHist(r);
  document.querySelectorAll('tr.pick').forEach(function(tr){tr.classList.toggle('on',+tr.dataset.i===cur)});}
+/* 가격 흐름: 공공데이터포털 aT 일별 조사의 주 평균(최근 3년). 출하기에만 조사하는 품종은 끊어 그린다 */
+var PH={},phY=3;
+function drawHist(r){var box=$('phist');if(!box)return;if(!r||!HK[r.key]){box.hidden=true;return}
+ if(PH[r.key]){paintHist(r,PH[r.key]);return}
+ fetch('./data/hist/'+r.key+'.json').then(function(x){if(!x.ok)throw 0;return x.json()}).then(function(j){PH[r.key]=j.w||[];if(ROWS[cur]===r)paintHist(r,PH[r.key])}).catch(function(){box.hidden=true})}
+function paintHist(r,W0){var box=$('phist'),svg=$('phv');var lim=new Date(Date.now()-phY*365.25*864e5).toISOString().slice(0,10);
+ var W=W0.filter(function(p){return p[0]>=lim});box.hidden=W.length<8;if(box.hidden)return;
+ var w=svg.clientWidth||600,h=svg.clientHeight||200,fs=Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)*0.75),L=fs*3.8,R=12,T=10,B=fs*1.9+4;
+ var t0=new Date(W[0][0]).getTime(),t1=new Date(W[W.length-1][0]).getTime()||t0+1,vs=W.map(function(p){return p[1]}),mn=Math.min.apply(null,vs),mx=Math.max.apply(null,vs),pad=(mx-mn)*0.12||mx*0.05;mn=Math.max(0,mn-pad);mx+=pad;
+ var X=function(d){return L+(w-L-R)*(new Date(d).getTime()-t0)/Math.max(1,t1-t0)},Y=function(v){return T+(h-T-B)*(mx-v)/(mx-mn)},f=function(v){return Math.round(v).toLocaleString()};
+ var s='',seg='',prev=null;
+ var raw=(mx-mn)/4,p10=Math.pow(10,Math.floor(Math.log10(raw||1))),st=p10*(raw/p10<=1?1:raw/p10<=2?2:raw/p10<=5?5:10);
+ for(var gv=Math.ceil(mn/st)*st;gv<=mx;gv+=st){var gy=Y(gv);s+='<line x1="'+L+'" x2="'+(w-R)+'" y1="'+gy+'" y2="'+gy+'" stroke="#efefef"/><text x="'+(L-6)+'" y="'+(gy+4)+'" font-size="'+fs+'" text-anchor="end" fill="#8a909a">'+f(gv)+'</text>'}
+ var y0=+W[0][0].slice(0,4),y9=+W[W.length-1][0].slice(0,4);for(var yy=y0+1;yy<=y9;yy++){var gx=X(yy+'-01-01');s+='<line x1="'+gx+'" x2="'+gx+'" y1="'+T+'" y2="'+(h-B)+'" stroke="#efefef"/><text x="'+gx+'" y="'+(h-4)+'" font-size="'+fs+'" text-anchor="middle" fill="#8a909a">'+yy+'</text>'}
+ W.forEach(function(p){var x=X(p[0]),y=Y(p[1]),gap=prev&&(new Date(p[0])-new Date(prev[0]))>28*864e5;seg+=(!prev||gap?'M':'L')+x.toFixed(1)+' '+y.toFixed(1);prev=p});
+ var last=W[W.length-1],hi=W.reduce(function(a,p){return p[1]>a[1]?p:a}),lo=W.reduce(function(a,p){return p[1]<a[1]?p:a});
+ s+='<path d="'+seg+'" fill="none" stroke="var(--acc)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="'+X(last[0])+'" cy="'+Y(last[1])+'" r="3.5" fill="var(--acc)"/>';
+ svg.innerHTML=s;if(location.hash==='#phist'&&!PH._s){PH._s=1;box.scrollIntoView({block:'start'})}svg.setAttribute('aria-label',r.disp+' 최근 '+phY+'년 주 평균 가격, 최고 '+f(hi[1])+'원, 최저 '+f(lo[1])+'원');
+ $('phSub').textContent=r.disp+' '+r.cls+(r.disp.indexOf(r.unit)<0?' · '+r.unit:'')+' · 주 평균(원)';
+ var gaps=W.some(function(p,i){return i&&(new Date(p[0])-new Date(W[i-1][0]))>28*864e5});
+ $('phNote').innerHTML='기간 최고 <b>'+f(hi[1])+'원</b>('+hi[0].slice(2,7).replace('-','.')+') · 최저 <b>'+f(lo[1])+'원</b>('+lo[0].slice(2,7).replace('-','.')+'). 공공데이터포털 aT 일별 조사의 전국 평균'+(gaps?' · 끊긴 곳은 이 품종을 조사하지 않은 기간':'')}
+(function(){var pp=$('phPer');if(!pp)return;pp.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;phY=+b.dataset.y;[].forEach.call(pp.children,function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});var r=ROWS[cur];if(r&&PH[r.key])paintHist(r,PH[r.key])})})();
 /* 평년 범위: 시세 행에 season(올해 월평균·최근 5년 같은 달 최저·최고·평균)이 있으면 그린다 */
 function drawSeason(r){var box=$('season');if(!box)return;var S=r&&r.season;box.hidden=!S;if(!S)return;
  var svg=$('szv'),W=svg.clientWidth||600,H=svg.clientHeight||220,fs=Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)*0.75),L=fs*3.6,R=12,T=10,B=fs*1.9+4;

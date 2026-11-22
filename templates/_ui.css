@@ -199,3 +199,10 @@ body{font-variant-numeric:tabular-nums}
 .src-err td{padding-top:0;white-space:normal;color:var(--mute)}.src-err .bad{font-weight:500}
 table.srct tr:not(.src-err) td:nth-child(-n+2),table.srct th{white-space:nowrap}
 .ph .sec{display:flex;align-items:center;justify-content:space-between;gap:8px}.ph-box svg{display:block;width:100%;height:200px}#phist .ptab button{min-height:32px}
+/* 미끄러지는 탭 밑줄(EasyUI Animated Tabs 참고, MIT) */
+.tabs.has-ind{position:relative}
+.tabs.has-ind>button.on{border-bottom-color:transparent}
+.tabs>.slide-ind{position:absolute;left:0;bottom:0;width:1px;height:2px;background:var(--ink);transform-origin:0 0;pointer-events:none;transition:transform .42s cubic-bezier(.22,1,.36,1),opacity .15s}
+@media (prefers-reduced-motion:reduce){.tabs>.slide-ind{transition:none}}
+.ph-read{margin:2px 0 4px;font-size:.929rem;color:var(--mute);min-height:1.6em}.ph-read b{color:var(--ink);font-weight:600}.ph-read b.up{color:var(--up)}.ph-read b.down{color:var(--down)}
+#phv{touch-action:pan-y;cursor:crosshair}#phv:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:6px}

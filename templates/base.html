@@ -706,10 +706,29 @@ function paintHist(r,W0){var box=$('phist'),svg=$('phv');var lim=new Date(Date.n
  W.forEach(function(p){var x=X(p[0]),y=Y(p[1]),gap=prev&&(new Date(p[0])-new Date(prev[0]))>28*864e5;seg+=(!prev||gap?'M':'L')+x.toFixed(1)+' '+y.toFixed(1);prev=p});
  var last=W[W.length-1],hi=W.reduce(function(a,p){return p[1]>a[1]?p:a}),lo=W.reduce(function(a,p){return p[1]<a[1]?p:a});
  s+='<path d="'+seg+'" fill="none" stroke="var(--acc)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="'+X(last[0])+'" cy="'+Y(last[1])+'" r="3.5" fill="var(--acc)"/>';
+ s+='<g id="phCur" opacity="0"><line y1="'+T+'" y2="'+(h-B)+'" stroke="#5f6670" stroke-dasharray="2 3"/><circle r="4" fill="var(--card)" stroke="var(--acc)" stroke-width="2"/></g>';
+ svg._ph={W:W,X:X,Y:Y,f:f,last:last};
  svg.innerHTML=s;if(location.hash==='#phist'&&!PH._s){PH._s=1;box.scrollIntoView({block:'start'})}svg.setAttribute('aria-label',r.disp+' 최근 '+phY+'년 주 평균 가격, 최고 '+f(hi[1])+'원, 최저 '+f(lo[1])+'원');
  $('phSub').textContent=r.disp+' '+r.cls+(r.disp.indexOf(r.unit)<0?' · '+r.unit:'')+' · 주 평균(원)';
  var gaps=W.some(function(p,i){return i&&(new Date(p[0])-new Date(W[i-1][0]))>28*864e5});
+ phRead(null);
  $('phNote').innerHTML='기간 최고 <b>'+f(hi[1])+'원</b>('+hi[0].slice(2,7).replace('-','.')+') · 최저 <b>'+f(lo[1])+'원</b>('+lo[0].slice(2,7).replace('-','.')+'). 공공데이터포털 aT 일별 조사의 전국 평균'+(gaps?' · 끊긴 곳은 이 품종을 조사하지 않은 기간':'')}
+/* 가격 흐름 훑어보기: 그래프 위를 움직이면(손가락으로 끌면) 그 주 값이 위 한 줄에 — EasyUI Earnings·Interactive Area Chart의 scrub 참고(MIT) */
+function phRead(i){var svg=$('phv'),g=svg&&svg._ph,el=$('phRead');if(!g||!el)return;var cur=$('phCur');
+ if(i==null){if(cur)cur.setAttribute('opacity','0');el.innerHTML='최근 주 <b>'+g.f(g.last[1])+'원</b> <span>('+g.last[0].slice(2).replace(/-/g,'.')+' 주)</span>';return}
+ var p=g.W[i],x=g.X(p[0]),y=g.Y(p[1]),d=(g.last[1]-p[1])/p[1]*100;
+ if(cur){cur.setAttribute('opacity','1');cur.querySelector('line').setAttribute('x1',x);cur.querySelector('line').setAttribute('x2',x);cur.querySelector('circle').setAttribute('cx',x);cur.querySelector('circle').setAttribute('cy',y)}
+ el.innerHTML=p[0].slice(2).replace(/-/g,'.')+' 주 <b>'+g.f(p[1])+'원</b>'+(i<g.W.length-1&&isFinite(d)?' <span>· 지금은 이때보다 <b class="'+(d>0?'up':d<0?'down':'')+'">'+(d>0?'+':'')+d.toFixed(1)+'%</b></span>':'')}
+(function(){var svg=$('phv');if(!svg)return;var at=null;
+ function near(cx){var g=svg._ph;if(!g)return null;var b=svg.getBoundingClientRect(),x=cx-b.left,k=0,bd=1e9;g.W.forEach(function(p,i){var dd=Math.abs(g.X(p[0])-x);if(dd<bd){bd=dd;k=i}});return k}
+ function go(e){var k=near(e.clientX);if(k!=null){at=k;phRead(k)}}
+ svg.addEventListener('pointermove',go);svg.addEventListener('pointerdown',go);
+ svg.addEventListener('pointerleave',function(){at=null;phRead(null)});
+ svg.setAttribute('tabindex','0');
+ svg.addEventListener('keydown',function(e){var g=svg._ph;if(!g)return;var n=g.W.length;
+  if(e.key==='ArrowLeft'||e.key==='ArrowRight'){at=Math.max(0,Math.min(n-1,(at==null?n-1:at)+(e.key==='ArrowRight'?1:-1)));phRead(at);e.preventDefault()}
+  else if(e.key==='Escape'||e.key==='End'){at=null;phRead(null)}});
+ svg.addEventListener('blur',function(){at=null;phRead(null)})})();
 (function(){var pp=$('phPer');if(!pp)return;pp.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;phY=+b.dataset.y;[].forEach.call(pp.children,function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});var r=ROWS[cur];if(r&&PH[r.key])paintHist(r,PH[r.key])})})();
 /* 평년 범위: 시세 행에 season(올해 월평균·최근 5년 같은 달 최저·최고·평균)이 있으면 그린다 */
 function drawSeason(r){var box=$('season');if(!box)return;var S=r&&r.season;box.hidden=!S;if(!S)return;
@@ -837,6 +856,20 @@ function hbars(){document.querySelectorAll('.hbar,.dv').forEach(function(h){var 
 /* 통계 목차: 좁은 화면에서는 지금 보는 묶음·품목 칩이 보이게 가로로 옮긴다 */
 (function(){var on=document.querySelector('.sgp-nav .sgp-g.on');if(!on||innerWidth>1000)return;var n=on.parentNode;n.scrollLeft=on.offsetLeft-n.clientWidth/2+on.offsetWidth/2})();
 apply();
+/* 고른 탭 밑줄이 다음 탭으로 미끄러져 옮겨 감 — EasyUI Animated Tabs 참고(MIT, (c) 2026 Suraj Maurya). 옮기는 것은 transform만, 움직임 줄이기면 바로 */
+(function(){var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function setup(box){var bs=box.querySelectorAll(':scope > button');if(bs.length<2||box._ind)return;
+  var ind=document.createElement('i');ind.className='slide-ind';ind.setAttribute('aria-hidden','true');box.appendChild(ind);box._ind=ind;box.classList.add('has-ind');
+  var last=null;
+  function place(anim){var on=box.querySelector(':scope > button.on');if(!on||!box.offsetWidth){ind.style.opacity='0';return}
+   var k=on.offsetLeft+'|'+on.offsetWidth;if(k===last)return;
+   if(!anim||last===null)ind.style.transition='none';
+   ind.style.opacity='1';ind.style.transform='translateX('+on.offsetLeft+'px) scaleX('+on.offsetWidth+')';last=k;
+   if(!anim||ind.style.transition==='none'){void ind.offsetWidth;ind.style.transition=''}}
+  place(false);
+  new MutationObserver(function(){place(!RM)}).observe(box,{subtree:true,attributes:true,attributeFilter:['class']});
+  if(window.ResizeObserver)new ResizeObserver(function(){last=null;place(false)}).observe(box)}
+ document.querySelectorAll('.tabs').forEach(setup)})();
 {% block scripts %}{% endblock %}
 </script>
 </body>

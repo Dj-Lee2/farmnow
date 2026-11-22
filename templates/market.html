@@ -53,7 +53,7 @@ table.mk-rk{width:100%;border-collapse:separate;border-spacing:0}.mk-rk th{color
     <div class="price" id="pprice"></div><div class="delta" id="pdelta"></div><p class="pstat" id="pstat" hidden></p>
     <div class="chart{{ ' stale' if tickers.stale }}"><svg id="svg" role="img" aria-label="가격 비교"></svg></div></section>
    <div class="card ph" id="phist" hidden><div class="sec"><h2 style="font-size:1.05rem">가격 흐름</h2><span class="ptab" id="phPer" role="group" aria-label="기간"><button type="button" data-y="1" aria-pressed="false">1년</button><button type="button" data-y="3" class="on" aria-pressed="true">3년</button></span></div>
-    <div class="sub" id="phSub"></div><div class="ph-box"><svg id="phv" role="img" aria-label="주 평균 가격 흐름"></svg></div><p class="sz-note" id="phNote"></p></div>
+    <div class="sub" id="phSub"></div><p class="ph-read" id="phRead" aria-live="polite"></p><div class="ph-box"><svg id="phv" role="img" aria-label="주 평균 가격 흐름"></svg></div><p class="sz-note" id="phNote"></p></div>
    <div class="card sz" id="season" hidden><div class="sec"><h2 style="font-size:1.05rem">평년과 비교</h2></div><div class="sub" id="szSub"></div>
     <div class="sz-box"><svg id="szv" role="img" aria-label="올해 월평균 가격과 최근 5년 범위"></svg><div class="sz-tip" id="szTip"></div></div>
     <div class="sz-leg"><span><i class="l1"></i>올해</span><span><i class="l2"></i>평년</span><span><i class="l3"></i>최근 5년 최저~최고</span></div><p class="sz-note" id="szNote"></p></div>

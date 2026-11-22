@@ -12,7 +12,7 @@ from pathlib import Path
 
 import requests
 
-from ..util import now_kst
+from ..util import now_kst, redact
 
 URL = "https://kosis.kr/openapi/Param/statisticsParameterData.do"
 TOTALS = {"계", "합계", "총계", "소계", "전국", "전체", "전국계"}
@@ -169,7 +169,7 @@ def collect(src: dict, data_dir: Path) -> tuple[list, dict]:
                 errors.append(f"{s['id']}: {type(e).__name__}: {e}"[:200])
                 failed[s["id"]] = now.isoformat()
     for e in errors:
-        print(f"[warn] kosis {e}", file=sys.stderr)
+        print(redact(f"[warn] kosis {e}"), file=sys.stderr)
     if not out:
         raise RuntimeError(errors[0] if errors else "KOSIS empty")
     at = {k: v for k, v in at.items() if k in out}

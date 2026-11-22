@@ -35,3 +35,10 @@ def test_update_adds_today_and_backfills_within_budget(tmp_path, monkeypatch):
     assert calls[0][1] == "20261119" and s["back"] == calls[-1][0]
     out = ph.update(rows, tmp_path / "h.json", None, now)          # 키가 없으면 오늘 값만
     assert out["progress"]["calls"] == 0
+
+
+def test_redact_hides_keys_in_error_text():
+    from farmnow.util import redact
+    msg = "503 for url: https://apis.data.go.kr/x?serviceKey=abc%2Bdef&pageNo=1 and kosis apiKey=XYZ123' p_cert_key=k1&p_cert_id=7"
+    out = redact(msg)
+    assert "abc" not in out and "XYZ123" not in out and "k1" not in out and "pageNo=1" in out and out.count("***") == 4

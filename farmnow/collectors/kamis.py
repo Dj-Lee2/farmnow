@@ -14,7 +14,7 @@ from datetime import datetime
 import requests
 
 from ..model import NewsItem
-from ..util import now_kst, KST
+from ..util import now_kst, KST, redact
 
 RETAIL_URL = "https://www.kamis.or.kr/customer/price/retail/period.do"
 WHOLE_URL = "https://www.kamis.or.kr/customer/price/wholesale/period.do"
@@ -103,7 +103,7 @@ def fetch_json(src: dict) -> dict:
         if j and j.get("error_code") == "000":
             return j
     except (requests.RequestException, ValueError) as e:
-        print(f"[warn] {src['id']} data.go.kr: {type(e).__name__}: {e}"[:160], file=sys.stderr)
+        print(redact(f"[warn] {src['id']} data.go.kr: {type(e).__name__}: {e}")[:160], file=sys.stderr)
     p = relay_fresh(src, "kamis_daily.json")
     if p:
         return json.loads(p.read_text(encoding="utf-8"))

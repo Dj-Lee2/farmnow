@@ -36,3 +36,11 @@ def clean_urls(text: str) -> str:
 
 
 _IDX_UNIT = re.compile(r'(<small>|<span class="u"> ?)(\d{4}(?:~\d{2,4})?=100)(</small>|</span>)')
+
+
+_SECRET = re.compile(r"((?:serviceKey|apiKey|api_key|p_cert_key|p_cert_id|cert_key|key)=)[^&\s'\")]+", re.I)
+
+
+def redact(text) -> str:
+    """오류 문구 속 주소의 인증키 값을 가린다(로그·상태 파일에 키가 남지 않게)."""
+    return _SECRET.sub(r"\1***", str(text))

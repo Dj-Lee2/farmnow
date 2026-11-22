@@ -15,6 +15,8 @@ from pathlib import Path
 
 import requests
 
+from ..util import redact
+
 URL = "https://apis.data.go.kr/B552845/perDay/price"
 YEARS = 6            # 평년(최근 5년 같은 달) + 올해
 WINDOW_DAYS = 180
@@ -91,7 +93,7 @@ def update(rows: list[dict], path: Path, key: str | None, now: datetime,
                 try:
                     got = fetch_range(s["q"], start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), key, budget)
                 except (requests.RequestException, ValueError) as e:
-                    print(f"[warn] price_hist {s.get('name')}: {type(e).__name__}: {e}"[:160], file=sys.stderr)
+                    print(redact(f"[warn] price_hist {s.get('name')}: {type(e).__name__}: {e}")[:160], file=sys.stderr)
                     budget[0] = 0
                     break
                 if got is None:

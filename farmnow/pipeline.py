@@ -13,7 +13,7 @@ import yaml
 from .collectors import kamis, kamis_season, price_hist, kosis, naver_market, kma_warn, mafra_rss, nongsaro_list
 from .model import NewsItem, gate
 from .rules import tag
-from .util import now_kst
+from .util import now_kst, redact
 from .build import build_site
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -87,12 +87,12 @@ def run(build: bool = True) -> int:
                         kamis_season.attach({"all": [r for r in tickers["all"] if not r.get("season")]},
                                             json.loads(sp.read_text(encoding="utf-8")))
                 except Exception as e:
-                    print(f"[warn] price_hist: {type(e).__name__}: {e}"[:160], file=sys.stderr)
+                    print(redact(f"[warn] price_hist: {type(e).__name__}: {e}")[:160], file=sys.stderr)
                 if src.get("season_items") and src.get("season_kamis"):
                     try:  # KAMIS 월별(막혀 있으면 끔 — 막힌 채로 부르면 회차마다 90초를 기다린다)
                         kamis_season.attach(tickers, kamis_season.refresh(src["season_items"], DATA, src, now))
                     except Exception as e:
-                        print(f"[warn] kamis_season: {type(e).__name__}: {e}"[:160], file=sys.stderr)
+                        print(redact(f"[warn] kamis_season: {type(e).__name__}: {e}")[:160], file=sys.stderr)
             elif src["adapter"] == "nongsaro_list":
                 got = nongsaro_list.collect(src)
             elif src["adapter"] == "naver_market":
@@ -107,9 +107,9 @@ def run(build: bool = True) -> int:
             fresh.extend(got)
         except Exception as e:  # 한 신호원의 실패가 빌드를 막지 않는다
             no_key = str(e) == "no_api_key"
-            st.update(ok=False, skipped=no_key, error="키 없음" if no_key else f"{type(e).__name__}: {e}"[:120],
+            st.update(ok=False, skipped=no_key, error="키 없음" if no_key else redact(f"{type(e).__name__}: {e}")[:120],
                       last_ok=prev_status.get(src["id"], {}).get("last_ok"))
-            print(f"[warn] {src['id']}: {st['error']}", file=sys.stderr)
+            print(redact(f"[warn] {src['id']}: {st['error']}"), file=sys.stderr)
         status[src["id"]] = st
 
     tried = [s for s in status.values() if not s.get("skipped")]

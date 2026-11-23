@@ -82,7 +82,7 @@
  if(Wk)Wk.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setWk(b.dataset.wk)});
  var t=param('type'),s=param('src'),wk=param('wk');if(t){var b=[].filter.call(document.querySelectorAll('#pxTabs button'),function(x){return tabKey(x)===t})[0];if(b)setCat(b.dataset.cat,b)}if(s)setSrc(s);if(wk&&Wk&&t==='alert')setWk(wk)})();
 (function(){var b=document.getElementById('briefCopy'),ta=document.getElementById('briefText');if(!b||!ta)return;   // 누른 순간 바로 복사(가져오기를 기다리면 사파리가 막는다)
- function done(ok){b.textContent=ok?'복사했습니다':'복사 안 됨 · 텍스트 받기를 쓰세요';var L=document.getElementById('srLive');if(L)L.textContent=b.textContent;setTimeout(function(){b.textContent='글자로 복사'},ok?2000:4000)}
+ function done(ok){var t=ok?'복사했습니다':'복사 안 됨 · 텍스트 받기를 쓰세요';b.classList.toggle('cp-ok',ok);b.innerHTML=(ok?'<svg class="cp-ck" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 12.5 4.5"/></svg>':'')+t;var L=document.getElementById('srLive');if(L)L.textContent=t;clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('cp-ok');b.textContent='글자로 복사'},ok?2000:4000)}
  function legacy(){ta.hidden=false;ta.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}ta.hidden=true;done(ok)}
  b.addEventListener('click',function(){if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(ta.value).then(function(){done(true)},legacy);else legacy()})})();
 {% endblock %}

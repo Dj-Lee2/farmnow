@@ -693,8 +693,8 @@ function draw(i,still){if(i!==undefined)cur=+i;var r=ROWS[cur],svg=$('svg');if(!
 var PH={},phY=3;
 function drawHist(r){var box=$('phist');if(!box)return;if(!r||!HK[r.key]){box.hidden=true;return}
  if(PH[r.key]){paintHist(r,PH[r.key]);return}
- fetch('./data/hist/'+r.key+'.json').then(function(x){if(!x.ok)throw 0;return x.json()}).then(function(j){PH[r.key]=j.w||[];if(ROWS[cur]===r)paintHist(r,PH[r.key])}).catch(function(){box.hidden=true})}
-function paintHist(r,W0){var box=$('phist'),svg=$('phv');var lim=new Date(Date.now()-phY*365.25*864e5).toISOString().slice(0,10);
+ box.hidden=false;box.classList.add('is-loading');fetch('./data/hist/'+r.key+'.json').then(function(x){if(!x.ok)throw 0;return x.json()}).then(function(j){PH[r.key]=j.w||[];if(ROWS[cur]===r)paintHist(r,PH[r.key])}).catch(function(){box.classList.remove('is-loading');box.hidden=true})}
+function paintHist(r,W0){var box=$('phist'),svg=$('phv');box.classList.remove('is-loading');var lim=new Date(Date.now()-phY*365.25*864e5).toISOString().slice(0,10);
  var W=W0.filter(function(p){return p[0]>=lim});box.hidden=W.length<8;if(box.hidden)return;
  var w=svg.clientWidth||600,h=svg.clientHeight||200,fs=Math.round(parseFloat(getComputedStyle(document.documentElement).fontSize)*0.75),L=fs*3.8,R=12,T=10,B=fs*1.9+4;
  var t0=new Date(W[0][0]).getTime(),t1=new Date(W[W.length-1][0]).getTime()||t0+1,vs=W.map(function(p){return p[1]}),mn=Math.min.apply(null,vs),mx=Math.max.apply(null,vs),pad=(mx-mn)*0.12||mx*0.05;mn=Math.max(0,mn-pad);mx+=pad;

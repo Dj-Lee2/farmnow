@@ -21,11 +21,11 @@
 </style>
 <div class="wrap page" id="sx">
  <div class="sgp-crumb"><a href="./stats.html">통계</a> › <span id="sxCrumb">지표</span></div>
- <div class="sx-g"><section class="sx-main"><div class="sx-hd"><h1 id="sxT">농업 통계 지표</h1><small id="sxS"></small></div>
-  <div class="sx-big"><b id="sxV"></b><em id="sxD"></em></div><p class="sx-sum" id="sxSum"></p>
+ <div class="sx-g is-loading" aria-busy="true"><section class="sx-main"><div class="sx-hd"><h1 id="sxT">농업 통계 지표</h1><small id="sxS" data-sk></small></div>
+  <div class="sx-big"><b id="sxV" data-sk></b><em id="sxD"></em></div><p class="sx-sum" id="sxSum" data-sk></p>
   <div class="sx-404" id="sx404" hidden><p>주소가 바뀌었거나 없어진 지표입니다. 이름으로 다시 찾아 보세요.</p><form action="./stats" method="get" class="sx-find"><input name="q" type="search" placeholder="예: 쌀 생산량, 한우, 농가소득" aria-label="통계 찾기"><button type="submit" class="btn-line">통계 찾기</button></form><p><a href="./stats">농업 통계 처음으로 →</a></p></div>
   <div class="sx-bar"><div class="ptab" id="sxView"><button type="button" class="on" data-v="ch">그래프</button><button type="button" data-v="tb">표</button><button type="button" data-v="mp" hidden>도별 지도</button></div><div class="ptab" id="sxPer"></div></div>
-  <div data-v="ch" class="sx-ch"><svg id="sxSvg" role="img" aria-label="추이 그래프"></svg><div class="sx-tip" id="sxTip"></div></div>
+  <div data-v="ch" class="sx-ch" data-sk><svg id="sxSvg" role="img" aria-label="추이 그래프"></svg><div class="sx-tip" id="sxTip"></div></div>
   <div data-v="tb" class="sx-tbl" hidden><table><thead><tr><th>시점</th><th>값</th><th>전기 대비</th></tr></thead><tbody id="sxTb"></tbody></table></div>
   <div data-v="mp" hidden><div class="sx-map" id="sxMap"></div><p class="st" id="sxMapN" style="margin-top:10px"></p></div>
   <div class="sx-act"><button type="button" id="sxCsv">CSV 내려받기</button><a id="sxKosis" target="_blank" rel="noopener">KOSIS 원표 ↗</a><button type="button" id="sxCopy">주소 복사</button></div>
@@ -85,5 +85,5 @@
   $$('sxCopy').onclick=function(){try{navigator.clipboard.writeText(location.href);this.textContent='복사했습니다'}catch(e){}};
   $$('sxMeta').innerHTML='<dt>조사</dt><dd>'+esc(D.sv||'–')+'</dd><dt>통계표</dt><dd>'+esc(D.tn||D.tb||'–')+'</dd><dt>주기</dt><dd>'+({Y:'해마다',Q:'분기마다',M:'달마다',F:'2년마다'}[D.se]||'–')+'</dd><dt>단위</dt><dd>'+esc(u)+(function(){var t=(D.t||'')+' '+u,h=[];if(/10a/.test(t))h.push('10a = 1,000㎡(약 300평)');if(/=\s*100|지수/.test(t))h.push('기준 해 값을 100으로 놓은 지수 — 100보다 크면 기준 해보다 높음');return h.length?'<small class="sx-unit-h">'+h.join('<br>')+'</small>':''})()+'</dd><dt>기간</dt><dd>'+esc(prd(Y[0]))+' ~ '+esc(prd(Y[n-1]))+' ('+n+'개 시점)</dd><dt>출처</dt><dd>국가데이터처 KOSIS</dd>';
   $$('sxRel').innerHTML=(D.rel||[]).map(function(r){return '<a href="./stats-x.html?k='+r[0]+'">'+esc(r[1])+'</a>'}).join('')||'<p class="st">같은 통계표의 다른 지표가 없습니다.</p>';
- }).catch(nf)})();
+ }).catch(nf).then(function(){var g=document.querySelector('.sx-g');if(g){g.classList.remove('is-loading');g.removeAttribute('aria-busy')}})})();
 {% endblock %}

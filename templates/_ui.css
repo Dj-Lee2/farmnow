@@ -206,3 +206,15 @@ table.srct tr:not(.src-err) td:nth-child(-n+2),table.srct th{white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.tabs>.slide-ind{transition:none}}
 .ph-read{margin:2px 0 4px;font-size:.929rem;color:var(--mute);min-height:1.6em}.ph-read b{color:var(--ink);font-weight:600}.ph-read b.up{color:var(--up)}.ph-read b.down{color:var(--down)}
 #phv{touch-action:pan-y;cursor:crosshair}#phv:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:6px}
+/* EasyUI 참고 2: 늦게 받는 칸의 자리 표시(Skeleton, MIT) · 복사 성공 표시(Morphing Button, MIT) */
+.is-loading [data-sk]{color:transparent!important;background:linear-gradient(90deg,var(--soft) 0,#eceef1 45%,var(--soft) 90%);background-size:200% 100%;border-radius:6px;animation:sk 1.3s linear infinite;min-height:1.2em}
+.is-loading [data-sk] *{visibility:hidden}
+.is-loading #sxV[data-sk]{display:inline-block;width:9em;min-height:1.6em}.is-loading #sxS[data-sk]{display:inline-block;width:14em}
+.is-loading .sx-ch[data-sk],.is-loading .ph-box[data-sk]{min-height:200px}
+@keyframes sk{from{background-position:100% 0}to{background-position:-100% 0}}
+@media (prefers-reduced-motion:reduce){.is-loading [data-sk]{animation:none}}
+#briefCopy{display:inline-flex;align-items:center;gap:6px}
+#briefCopy.cp-ok{color:var(--acc)}
+.cp-ck path{stroke-dasharray:14;stroke-dashoffset:14;animation:cpd .32s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes cpd{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.cp-ck path{animation:none;stroke-dashoffset:0}}
